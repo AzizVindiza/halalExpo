@@ -1,0 +1,23 @@
+@import "src/sass/base/mixins"
+.about
+  position: relative
+  &__container
+    padding: 48px 0
+    background: #0057BC10
+    text-align: center
+  &__h2
+    @include text(800,30px,36px,#10923E)
+    margin-bottom: 12px
+  &__h3
+    @include text(600,20px,26px,#000)
+    margin-bottom: 2px
+  &__p
+    @include text(400,20px,26.6px,#000)
+    width:  975px / 1440px * 100%
+    margin: 0 auto
+  &__svg
+    position: absolute
+    width: 348px
+    height: 348px
+    top: 20%
+    left: 0
