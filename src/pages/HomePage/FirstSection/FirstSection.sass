@@ -1,0 +1,40 @@
+@import "src/sass/base/mixins"
+
+.first
+  position: relative
+  height: 100vh
+  overflow: hidden
+  &__container
+    position: relative
+    z-index: 1
+    padding-top: 182px
+  &__bg
+    position: absolute
+    top: 0
+    right: 0
+    width: auto
+    height: auto
+    margin: auto
+  &__circle-small
+    position: absolute
+    top: 17px
+    left: 50%
+    width: 227px
+    height: 227px
+    overflow: hidden
+    border-radius: 50%
+  &__circle-big
+    position: absolute
+    top: 0
+    right: 0
+    width: 699px
+    height: 699px
+
+  &__h2
+    @include text(800,70px,110%,#10923E)
+    margin-bottom: 11px
+    span
+      color: #3378C9
+  &__p
+    @include text(400,15px,133%,#000)
+    margin-bottom: 47px
