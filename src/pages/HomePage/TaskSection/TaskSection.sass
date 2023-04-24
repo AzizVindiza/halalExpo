@@ -1,0 +1,22 @@
+@import "src/sass/base/mixins"
+.task
+  position: relative
+  &__container
+    position: relative
+    z-index: 1
+    padding: 200px 0 200px 0
+  &__h2
+    @include text(800,34px,42px,#10923E)
+    margin-bottom: 12px
+  &__p
+    @include text(400,20px,26.6px,#000)
+    width:  513px
+  &__svg
+    position: absolute
+    top: 0
+    left: 0
+  &__wrapper
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    align-items: center
