@@ -1,0 +1,82 @@
+@import "src/sass/base/mixins"
+
+.opportunity
+  overflow: hidden
+  &__container
+    padding: 100px 0
+    position: relative
+    background: linear-gradient(180deg, #001F43 10.32%, #023571 83.24%)
+  &__bg
+    position: absolute
+    top: 500px
+    left: 0
+    right: 0
+    bottom: 0
+    margin: auto
+  &__h2
+    @include text(800,70px,110%,#10923E)
+  &__p
+    @include text(400,15px,133%,#000)
+  .six
+    background: url("./six.svg") center no-repeat
+    width: 100px
+    height: 100px
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative
+  .six-blue
+    position: absolute
+    top: -50px
+    left: 0
+    right: 0
+    bottom: 0
+    margin: auto
+    width: 208px
+    height: 208px
+  .box
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+  .six
+    text-align: center
+    &__img
+      width: 45px
+      height: 45px
+    &__h3
+      margin-top: 8px
+      @include text(400,20px,24px,#fff)
+
+  .row
+    display: flex
+
+    justify-content: space-between
+    margin: 0 auto
+    &__top
+      align-items: flex-end
+      margin-bottom: 80px
+      width: 1000px
+
+      .box__1
+        margin-bottom: 250px
+        margin-left: 90px
+        margin-right: 90px
+      .box__2
+        margin-bottom: 160px
+    &__bot
+      align-items: flex-start
+      width: 1050px
+      .box__1
+        margin-top: 162px+43px
+        margin-left: -50px
+      .box__2
+        margin-top: 162px+43px
+        margin-right: -50px
+      .box__3
+        margin-top: 162px + 162px
+        margin-left: 45px
+        margin-right: 100px
+      .box__4
+        margin-top: 162px + 162px
+        margin-right: 45px

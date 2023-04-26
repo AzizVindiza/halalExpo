@@ -5,6 +5,7 @@ import TargetSection from "./TargetSection/TargetSection";
 import TaskSection from "./TaskSection/TaskSection";
 import TypeSection from "./TypeSection/TypeSection";
 import SectorSection from "./SectorSection/SectorSection";
+import OpportunitySection from "./OpportunitySection/OpportunitySection";
 const HomePage = () => {
     return (
         <>
@@ -14,6 +15,7 @@ const HomePage = () => {
             <TaskSection/>
             <TypeSection/>
             <SectorSection/>
+            <OpportunitySection/>
         </>
     );
 };
