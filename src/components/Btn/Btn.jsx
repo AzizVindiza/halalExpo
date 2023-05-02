@@ -1,8 +1,8 @@
 import React from 'react';
 import "./Btn.sass"
-const Btn = ({text,type}) => {
+const Btn = ({text,type,m}) => {
     return (
-        <button className="btn" type={type}>
+        <button className={`btn${m ? ` btn_${m}` : ""}`} type={type}>
             {text}
         </button>
     );

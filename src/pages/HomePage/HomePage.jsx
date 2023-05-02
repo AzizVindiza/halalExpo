@@ -7,6 +7,7 @@ import TypeSection from "./TypeSection/TypeSection";
 import SectorSection from "./SectorSection/SectorSection";
 import OpportunitySection from "./OpportunitySection/OpportunitySection";
 import MapSection from "./MapSection/MapSection";
+import SpeakersSection from "./SpeakersSection/SpeakersSection";
 const HomePage = () => {
     return (
         <>
@@ -18,6 +19,7 @@ const HomePage = () => {
             <SectorSection/>
             <OpportunitySection/>
             <MapSection/>
+            <SpeakersSection/>
         </>
     );
 };

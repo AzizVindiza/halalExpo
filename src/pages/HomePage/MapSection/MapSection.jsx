@@ -20,7 +20,7 @@ const MapSection = () => {
                         width="600" height="450" allowFullScreen="" loading="lazy"
                         referrerPolicy="no-referrer-when-downgrade"></iframe>
                     <a href="" className="map__a">
-                        <Btn type="button" text="Подробнее"/>
+                        <Btn m={"big"} type="button" text="Подробнее"/>
                     </a>
                 </div>
             </div>

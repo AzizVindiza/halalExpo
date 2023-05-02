@@ -1,0 +1,43 @@
+@import "src/sass/base/mixins"
+
+.speaker
+  &__cards
+    display: flex
+    row-gap: 6px
+    column-gap: 6px
+    flex-wrap: wrap
+    margin-bottom: 60px
+  &__card
+    position: relative
+    padding: 12px 6px 12px 13px
+    background: #DBDBDB
+    border-radius: 8px
+    display: flex
+    align-items: flex-end
+    justify-content: center
+    width: 288px
+    height: 300px
+    overflow: hidden
+  &__bg
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    margin: auto
+  &__txt
+    position: relative
+    z-index: 1
+  &__h3
+    @include text(400,20px,133%,#fff)
+    margin-bottom: 4px
+  &__h2
+    @include text(800,35px,42px,#40A865)
+    margin-bottom: 50px
+  &__p
+    @include text(400,13px,120%,#fff)
+  &__btn
+    display: block
+    text-align: center
