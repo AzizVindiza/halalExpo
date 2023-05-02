@@ -3,7 +3,7 @@ import './SectorCard.sass'
 import Btn from "../../../../components/Btn/Btn";
 const SectorCard = ({img,icon,title,text,link}) => {
     return (
-        <div className="sector-card sector-card_left">
+        <div className="sector-card">
             <div className="sector-card__img">
                 <img src={img} alt=" картинка"/>
             </div>
