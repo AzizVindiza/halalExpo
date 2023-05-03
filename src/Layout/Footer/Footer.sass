@@ -1,1 +1,47 @@
 @import "src/sass/base/mixins"
+
+.footer
+  background: #0057BC
+  &__container
+    padding: 58px 0 27px 0
+    display: flex
+    justify-content: space-between
+  &__p
+    @include text(400,16px,133%,#ffffff)
+    margin-bottom: 17px
+
+
+  &__h2
+    margin-bottom: 6px
+    @include text(400,16px,133%,#ffffff)
+  &__links
+    display: flex
+    column-gap: 20px
+  &__center
+    align-self: flex-end
+  &__txt
+    @include text(400,13px,120%,#fff)
+    width: 154px
+    text-align: center
+  &__label
+    display: flex
+    align-items: center
+    column-gap: 5px
+    @include text(400,22px,133%,#fff)
+    margin-bottom : 17px
+  &__search
+    @include text(400,16px,133%,#000)
+    width: 100%
+    background: transparent
+    border-bottom: 2px solid #fff
+  &__line
+    width: 146px
+    background: #fff
+    height: 1px
+  &__add
+    column-gap: 5px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    background: #fff
+    padding: 17px 18px

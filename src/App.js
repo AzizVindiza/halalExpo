@@ -5,10 +5,13 @@ import {
     createBrowserRouter,
     Route, RouterProvider
 } from "react-router-dom";
-
-import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import Layout from "./Layout/Layout";
 import HomePage from "./pages/HomePage/HomePage";
+import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
+import OrganizationPage from "./pages/OrganizationPage/OrganizationPage";
+import PartnersPage from "./pages/PartnersPage/PartnersPage";
+
+
 
 
 const router = createBrowserRouter(
@@ -16,6 +19,8 @@ const router = createBrowserRouter(
         <Route path="/" element={<Layout/>}>
             <Route index element={<HomePage/>}/>
             <Route path="*" element={<NotFoundPage/>}/>
+            <Route path="organization" element={<OrganizationPage/>}/>
+            <Route path="partner" element={<PartnersPage/>}/>
         </Route>
     )
 );

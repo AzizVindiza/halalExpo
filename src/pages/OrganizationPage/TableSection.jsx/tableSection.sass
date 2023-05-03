@@ -1,0 +1,30 @@
+@import "src/sass/base/mixins"
+.tableSection
+  background: #F5F5F5
+  &__container
+     padding: 68px 0 117px 0
+  &__h2
+    width: 610px
+    @include text(400,20px,133%,#000)
+    margin-bottom: 50px
+  &__h3
+    @include text(400,20px,133%,#000)
+  &__p
+    @include text(400,16px,133%,#000)
+
+  &__wrapper
+    display: flex
+    align-items: center
+    flex-direction: column
+    justify-content: center
+
+  &__block
+    display: flex
+    width: 100%
+    padding: 16px 55px 16px 30px
+    background: #fff
+    justify-content: space-between
+    border-bottom: 2px solid #00000020
+  &__inner
+    display: flex
+    column-gap: 106px
