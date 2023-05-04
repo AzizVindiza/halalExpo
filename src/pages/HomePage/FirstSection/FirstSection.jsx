@@ -1,7 +1,7 @@
 import React from 'react';
 import './FirstSection.sass'
 import bg from './first__line.svg'
-import small from './first__circle-small.svg'
+import small from './first__circle-small.png'
 import big from './first__circle-big.png'
 import Btn from "../../../components/Btn/Btn";
 const FirstSection = () => {
