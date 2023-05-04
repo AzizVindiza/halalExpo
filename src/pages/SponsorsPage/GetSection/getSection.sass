@@ -1,0 +1,41 @@
+@import "src/sass/base/mixins"
+.getSection
+  &__container
+    padding: 120px 0 100px 0
+
+  &__p
+    width: 241px
+    text-align: center
+  &__h2
+    margin-bottom: 24px
+    text-align: center
+    @include text(700,25px,133%,#40A865)
+  &__wrapper
+    display: flex
+    column-gap: 65px
+    flex-wrap: wrap
+
+  &__line
+    border: 1px solid rgba(0, 0, 0, 0.2)
+    margin: 0 auto 67px auto
+
+  &__pic
+    width: 102px
+    height: 102px
+    border: 1px solid #000000
+    border-radius: 5px
+    margin: 0 auto 25px auto
+  &__block
+    position: relative
+  &__block::before
+      content: ''
+      display: block
+      height: 67px
+      width: 1px
+      background: #00000020
+      position: absolute
+      right: 50%
+      top: -67px
+
+
+
