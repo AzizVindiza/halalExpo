@@ -8,6 +8,7 @@ import SectorSection from "./SectorSection/SectorSection";
 import OpportunitySection from "./OpportunitySection/OpportunitySection";
 import MapSection from "./MapSection/MapSection";
 import SpeakersSection from "./SpeakersSection/SpeakersSection";
+import OrganizatorSection from "../OrganizationPage/OrganizatorSection/OrganizatorSection";
 const HomePage = () => {
     return (
         <>
@@ -20,6 +21,7 @@ const HomePage = () => {
             <OpportunitySection/>
             <MapSection/>
             <SpeakersSection/>
+            <OrganizatorSection/>
         </>
     );
 };
