@@ -9,7 +9,6 @@ const Header = () => {
                     <img src={logo} alt="Halal Investment and Trading"/>
                 </h1>
 
-
             </div>
         </header>
     );
