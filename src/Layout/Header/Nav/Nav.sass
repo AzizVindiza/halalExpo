@@ -1,3 +1,23 @@
 @import "src/sass/base/mixins"
+.nav
+
+  &__container
+    display: flex
+    column-gap: 51px
+  &__link
+    @include text(600,15px,133%,#000000)
+    cursor: pointer
+    &_btn
+      position: relative
+      background: transparent
+  &__line
+    position: absolute
+    right: -15px
+    top: 50%
+    transform: translateY(-50%)
+
+
+
+
 
 
