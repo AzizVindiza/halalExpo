@@ -8,11 +8,14 @@ import SectorSection from "./SectorSection/SectorSection";
 import OpportunitySection from "./OpportunitySection/OpportunitySection";
 import MapSection from "./MapSection/MapSection";
 import SpeakersSection from "./SpeakersSection/SpeakersSection";
-import OrganizatorSection from "../OrganizationPage/OrganizatorSection/OrganizatorSection";
+
+import ParticipantSection from "./ParticipantSection/ParticipantSection";
+import OrganizatorSection from "./OrganizatorSection/OrganizatorSection";
 const HomePage = () => {
     return (
         <>
             <FirstSection/>
+            <ParticipantSection/>
             <AboutSection/>
             <TargetSection/>
             <TaskSection/>
