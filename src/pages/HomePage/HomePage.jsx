@@ -11,6 +11,7 @@ import SpeakersSection from "./SpeakersSection/SpeakersSection";
 
 import ParticipantSection from "./ParticipantSection/ParticipantSection";
 import OrganizatorSection from "./OrganizatorSection/OrganizatorSection";
+import VideoSection from "./VideoSection/VideoSection";
 const HomePage = () => {
     return (
         <>
@@ -20,6 +21,7 @@ const HomePage = () => {
             <TargetSection/>
             <TaskSection/>
             <TypeSection/>
+            <VideoSection/>
             <SectorSection/>
             <OpportunitySection/>
             <MapSection/>
