@@ -12,6 +12,7 @@ import SpeakersSection from "./SpeakersSection/SpeakersSection";
 import ParticipantSection from "./ParticipantSection/ParticipantSection";
 import OrganizatorSection from "./OrganizatorSection/OrganizatorSection";
 import VideoSection from "./VideoSection/VideoSection";
+import PartnersSection from "./PartnersSection/PartnersSection";
 const HomePage = () => {
     return (
         <>
@@ -27,6 +28,7 @@ const HomePage = () => {
             <MapSection/>
             <SpeakersSection/>
             <OrganizatorSection/>
+            <PartnersSection/>
         </>
     );
 };

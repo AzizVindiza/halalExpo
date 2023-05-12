@@ -9,7 +9,7 @@
     },
     {
         name: 'Инвесторы',
-        link: ''
+        link: 'investor'
     },
     {
         name: 'Спонсоры ',
