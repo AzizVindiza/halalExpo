@@ -5,7 +5,7 @@
     },
     {
         name: 'Организаторы',
-        link: ''
+        link: 'organization'
     },
     {
         name: 'Инвесторы',
@@ -13,7 +13,7 @@
     },
     {
         name: 'Спонсоры ',
-        link: ''
+        link: 'sponsors'
     },
     {
         name: 'Участники форума',
