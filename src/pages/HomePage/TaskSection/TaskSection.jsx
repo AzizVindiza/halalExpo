@@ -10,10 +10,7 @@ const TaskSection = () => {
             </div>
             <div className="container task__container">
                 <div className="task__title">
-                    <h2 className="task__h2">Задачи</h2>
-                    <p className="task__p">
-                        Lorem Ipsum is simply dummy text of the printing and  typesetting industry. Lorem Ipsum has been
-                    </p>
+                    <h2 className="task__h2">Основные задачи проведения Halal Investment <br/>and Trade Expo 2023</h2>
                 </div>
                 <div className="task__wrapper">
                     <TaskCard number={1} text="Представление и продвижение Halal-продуктов и услуг на мировом рынке, способствование укреплению их позиций на международной арене."/>

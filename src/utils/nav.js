@@ -5,15 +5,15 @@
     },
     {
         name: 'Организаторы',
-        link: ''
+        link: 'organization'
     },
     {
         name: 'Инвесторы',
-        link: ''
+        link: 'investor'
     },
     {
         name: 'Спонсоры ',
-        link: ''
+        link: 'sponsors'
     },
     {
         name: 'Участники форума',

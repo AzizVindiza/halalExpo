@@ -6,8 +6,9 @@ const MapSection = () => {
         <section className={'mapSection'}>
             <div className="container mapsection__conrainer">
                 <div className="mapSection__block">
-                    <h2 className="mapSection__h2">Lorem Ipsum is simply dummy </h2>
+
                     <div className="mapSection__image">
+                        <h2 className="mapSection__h2">Lorem Ipsum is simply dummy </h2>
                         <img src={pic} alt="" className="mapSection__img"/>
                     </div>
                 </div>

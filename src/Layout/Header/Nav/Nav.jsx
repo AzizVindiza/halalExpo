@@ -16,7 +16,7 @@ const Nav = () => {
                 <Dropdown txt={"Посетителям"} arr={arr2}/>
 
 
-                <NavLink className={'nav__link'} to={''}>Партнеры</NavLink>
+                <NavLink className={'nav__link'} to={'partner'}>Партнеры</NavLink>
                 <NavLink className={'nav__link'} to={''}>B2B</NavLink>
                 <NavLink className={'nav__link'} to={''}>Новости</NavLink>
                 <NavLink className={'nav__link'} to={''}>FQA</NavLink>

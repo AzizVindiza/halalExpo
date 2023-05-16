@@ -1,0 +1,27 @@
+@import "src/sass/base/mixins"
+.partners
+  &__container
+    padding: 30px 0 100px 0
+    display: flex
+    column-gap: 90px
+    justify-content: space-between
+    align-items: baseline
+    flex-wrap: wrap
+    row-gap: 85px
+  &__title
+    @include text(800,35px,120%, #10923E)
+    margin-bottom: 55px
+    text-align: center
+  &__h2
+    @include text(500,14px,133%, #000000)
+    text-align: center
+  &__card
+    width: 200px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    img
+      width: auto
+  &__btn
+    padding-bottom: 150px

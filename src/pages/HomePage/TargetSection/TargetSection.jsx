@@ -1,7 +1,6 @@
 import React from 'react';
 import "./TargetSection.sass"
-import img from "./target__img.svg"
-import bg from "./target__svg.svg"
+import img from './img.png'
 const TargetSection = () => {
     return (
         <section className="target">
@@ -14,16 +13,12 @@ const TargetSection = () => {
                         Цель
                     </h2>
                     <p className="target__p">
-                        Развитие халал индустрии, <br/>
-                        ведение бизнеса по исламским<br/>
-                        принципам в странах СНГ и<br/>
-                        улучшение взаимоотношений со<br/>
-                        странами исламского мира.
+                        Содействие развитию экономики стран Центральной Азии, становлению
+                        халяль-индустрии в странах региона
+                        и помощь предпринимателям в презентации и реализации своих
+                        бизнес-проектов по исламски принципам.
                     </p>
                 </div>
-            </div>
-            <div className="target__bg">
-                <img src={bg} alt="lines"/>
             </div>
 
         </section>
