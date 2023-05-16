@@ -1,0 +1,34 @@
+@import "src/sass/base/mixins"
+
+.social
+  background: #F4F4F4
+  &__container
+    padding: 35px 0
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-wrap: wrap
+
+  &__card
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 0 35px
+    height: 70px
+    &::before
+      content: ""
+      position: absolute
+      display: block
+      top: 10px
+      left: 0
+      border-radius: 1px
+      width: 2px
+      height: 50px
+      background: rgba(0, 0, 0, 0.1)
+    &:first-child
+      &:before
+        display: none
+      border: none
+
+

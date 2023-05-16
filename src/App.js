@@ -18,6 +18,8 @@ import NewsPage from "./pages/NewsPage/NewsPage";
 import MeetPage from "./pages/MeetPage/MeetPage";
 
 
+import ForumPage from "./pages/ForumPage/ForumPage";
+
 
 
 const router = createBrowserRouter(
@@ -29,10 +31,14 @@ const router = createBrowserRouter(
             <Route path="partner" element={<PartnersPage/>}/>
             <Route path="investor" element={<Investor/>}/>
             <Route path="sponsors" element={<SponsorsPage/>}/>
+
             <Route path="contacts" element={<ContactsPage/>}/>
             <Route path="question" element={<Question/>}/>
             <Route path="news" element={<NewsPage/>}/>
             <Route path="meet" element={<MeetPage/>}/>
+
+            <Route path="forum" element={<ForumPage/>}/>
+
         </Route>
     )
 );

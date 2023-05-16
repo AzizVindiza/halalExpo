@@ -1,6 +1,6 @@
 import React from 'react';
 import "./TargetSection.sass"
-import img from './img.png'
+import img from './img.svg'
 const TargetSection = () => {
     return (
         <section className="target">
