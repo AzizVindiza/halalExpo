@@ -34,8 +34,8 @@ const OfficeMapSection = () => {
                 <div className="office__map">
                     <iframe
                         title="office"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d774.4550444769704!2d74.59569253142546!3d42.87383760226173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389eb7df2672811b%3A0xc7586dc754bdedc6!2zMyDRg9C7LiDQotC-0LPQvtC70L7QuiDQnNC-0LvQtNC-LCDQkdC40YjQutC10Lo!5e0!3m2!1sru!2skg!4v1684214249035!5m2!1sru!2skg"
-                         allowFullScreen="" loading="lazy"
+                        src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1420.3532011374264!2d74.59631993147053!3d42.87399713525015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDLCsDUyJzI2LjciTiA3NMKwMzUnNDYuOCJF!5e0!3m2!1sru!2skg!4v1684220271865!5m2!1sru!2skg"
+                        allowFullScreen="" loading="lazy"
                         referrerPolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
