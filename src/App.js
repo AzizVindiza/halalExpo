@@ -12,7 +12,7 @@ import OrganizationPage from "./pages/OrganizationPage/OrganizationPage";
 import PartnersPage from "./pages/PartnersPage/PartnersPage";
 import Investor from "./pages/InvestorPage/Investor";
 import SponsorsPage from "./pages/SponsorsPage/SponsorsPage";
-
+import ForumPage from "./pages/ForumPage/ForumPage";
 
 
 
@@ -25,6 +25,7 @@ const router = createBrowserRouter(
             <Route path="partner" element={<PartnersPage/>}/>
             <Route path="investor" element={<Investor/>}/>
             <Route path="sponsors" element={<SponsorsPage/>}/>
+            <Route path="forum" element={<ForumPage/>}/>
         </Route>
     )
 );
