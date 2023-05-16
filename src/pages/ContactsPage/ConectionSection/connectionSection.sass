@@ -1,0 +1,30 @@
+@import "src/sass/base/mixins"
+.connectionSection
+  &__container
+    padding: 56px 0 100px 0
+  &__title
+    @include text(800,30px,133%,#10923E)
+    text-align: center
+    text-transform: uppercase
+    margin-bottom: 45px
+  &__oval
+    width: 60px
+    height: 60px
+    background: #10923E
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+
+  &__block
+    display: flex
+    align-items: center
+    column-gap: 20px
+  &__p
+    @include text(500,25px,120%,#000)
+
+  &__wrapper
+    display: flex
+    column-gap: 87px
+
+

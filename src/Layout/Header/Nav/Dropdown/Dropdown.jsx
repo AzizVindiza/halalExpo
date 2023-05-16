@@ -8,6 +8,7 @@ const Dropdown = ({arr,txt}) => {
 
 
 
+
     useEffect(() => {
         const handleClickOutside = (event) => {
             // Do nothing if clicking ref's element or descendent elements
@@ -29,9 +30,11 @@ const Dropdown = ({arr,txt}) => {
             <button    onClick={(e) => {
                 e.preventDefault();
                 setActive(!active);
-            }}  className={'nav__link nav__link_btn'}>{txt}
-                <span className="nav__line">
-                            <svg width="8" height="4" viewBox="0 0 8 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+
+            }}  className={'nav__link nav__link_btn nav'}>{txt}
+                <span className='nav__line'>
+                            <svg className={`dropdown__rotate ${active ? 'dropdown__rotate_change' : ''}`} width="8" height="4" viewBox="0 0 8 4" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M1 1L4 3L7 1" stroke="black"/>
 </svg>
 
