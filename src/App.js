@@ -13,6 +13,9 @@ import PartnersPage from "./pages/PartnersPage/PartnersPage";
 import Investor from "./pages/InvestorPage/Investor";
 import SponsorsPage from "./pages/SponsorsPage/SponsorsPage";
 import ForumPage from "./pages/ForumPage/ForumPage";
+import BenefitsPage from "./pages/BenefitsPage/BenefitsPage";
+import StandPage from "./pages/StandPage/StandPage";
+
 
 
 
@@ -26,6 +29,8 @@ const router = createBrowserRouter(
             <Route path="investor" element={<Investor/>}/>
             <Route path="sponsors" element={<SponsorsPage/>}/>
             <Route path="forum" element={<ForumPage/>}/>
+            <Route path="benefits" element={<BenefitsPage/>}/>
+            <Route path="stand" element={<StandPage/>}/>
         </Route>
     )
 );
