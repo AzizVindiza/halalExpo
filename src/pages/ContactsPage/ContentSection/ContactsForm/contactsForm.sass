@@ -1,0 +1,41 @@
+@import "src/sass/base/mixins"
+.contactsForm
+  &__container
+    padding-bottom: 100px
+  &__line
+    width: 297px
+    height: 1px
+    background: #40A865
+
+  &__wrapper
+    display: flex
+    column-gap: 8px
+    align-items: center
+    margin-bottom: 15px
+  &__box
+    width: 456px
+
+  &__h2
+    @include text(600, 18px, 133%, #40A865)
+  &__form
+    display: flex
+    flex-direction: column
+    row-gap: 13px
+
+  &__label
+    width: 456px
+    padding: 13px 13px
+    border: 0.5px solid rgba(0, 0, 0, 0.3)
+    border-radius: 2px
+  &__input
+    width: 100%
+    @include text(600,14px,133%,#00000080)
+  &__btn
+    display: flex
+    justify-content: center
+    margin: 20px 0 100px 0
+
+
+
+
+
