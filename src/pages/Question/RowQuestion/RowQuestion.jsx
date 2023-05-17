@@ -2,7 +2,8 @@ import React, {useState} from 'react';
 import "./rowQuestion.sass"
 const RowQuestion = () => {
     const [selected,setSelected] = useState(null)
-    const toggle = (index) => {
+    //function accordion//
+      const toggle = (index) => {
         if (selected === index){
             setSelected(null)
         }else

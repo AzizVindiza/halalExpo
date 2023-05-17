@@ -1,7 +1,7 @@
  export const arr = [
     {
         name: 'Место и время проведения',
-        link: ''
+        link: 'place'
     },
     {
         name: 'Организаторы',
@@ -21,7 +21,7 @@
     },
     {
         name: 'Контакты',
-        link: ''
+        link: 'contacts'
     },
 
 ]

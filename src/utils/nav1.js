@@ -1,7 +1,7 @@
 export const arr1 = [
     {
         name: 'Преимущества для участников',
-        link: ''
+        link: 'benefits'
     },
     {
         name: 'Забронировать стенд',

@@ -1,7 +1,7 @@
  export const arr2 = [
     {
         name: 'Что вас ожидает',
-        link: ''
+        link: 'expect'
     },
     {
         name: 'Как добраться',

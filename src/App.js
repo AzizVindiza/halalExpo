@@ -19,6 +19,9 @@ import MeetPage from "./pages/MeetPage/MeetPage";
 
 
 import ForumPage from "./pages/ForumPage/ForumPage";
+import PlacePage from "./pages/PlacePage/PlacePage";
+import ExpectPage from "./pages/ExpectPage/ExpectPage";
+
 
 
 
@@ -36,8 +39,11 @@ const router = createBrowserRouter(
             <Route path="question" element={<Question/>}/>
             <Route path="news" element={<NewsPage/>}/>
             <Route path="meet" element={<MeetPage/>}/>
-
             <Route path="forum" element={<ForumPage/>}/>
+            <Route path="place" element={<PlacePage/>}/>
+            <Route path="expect" element={<ExpectPage/>}/>
+
+
 
         </Route>
     )
