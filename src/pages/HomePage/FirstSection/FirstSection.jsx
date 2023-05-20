@@ -1,6 +1,7 @@
 import React from 'react';
 import './FirstSection.sass'
 import bg from './first__line.svg'
+import bg339 from './first__line339.svg'
 import small from './first__circle-small.png'
 import big from './first__circle-big.png'
 import Btn from "../../../components/Btn/Btn";
@@ -33,7 +34,10 @@ const FirstSection = () => {
                 <img src={small} alt="small circle"/>
             </div>
             <div className="first__bg">
-                <img src={bg} alt="line bg"/>
+                <picture>
+                    <source media="(max-width:481px)" srcSet={bg339}/>
+                    <img src={bg} alt="line bg"/>
+                </picture>
             </div>
         </section>
     );

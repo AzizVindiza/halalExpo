@@ -13,7 +13,6 @@ import ParticipantSection from "./ParticipantSection/ParticipantSection";
 import OrganizatorSection from "./OrganizatorSection/OrganizatorSection";
 import VideoSection from "./VideoSection/VideoSection";
 import PartnersSection from "./PartnersSection/PartnersSection";
-import SocialSection from "./SocialSection/SocialSection";
 import OfficeMapSection from "./OfficeMapSection/OfficeMapSection";
 
 const HomePage = () => {
@@ -32,7 +31,6 @@ const HomePage = () => {
             <SpeakersSection/>
             <OrganizatorSection/>
             <PartnersSection/>
-            <SocialSection/>
             <OfficeMapSection/>
         </>
     );

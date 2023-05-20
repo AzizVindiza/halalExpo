@@ -43,3 +43,29 @@
   &__btn
     display: block
     text-align: center
+  &__sm-text
+    display: none
+
+
+@media (max-width: 481px )
+  .speaker
+    &__container
+      padding-bottom: 70px
+    &__card
+      width: 162px
+      height: 162px
+    &__txt
+      display: none
+    &__cards
+      row-gap: 32px
+      column-gap: 0
+      justify-content: space-between
+    &__sm-text
+      display: block
+      width: 174px
+      .speaker__h3
+        @include text(600,16px,133%,#000)
+        margin-bottom: 4px
+      .speaker__p
+        @include text(400,12px,120%,#000)
+

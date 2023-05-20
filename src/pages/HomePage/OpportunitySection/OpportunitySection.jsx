@@ -1,6 +1,7 @@
 import React from 'react';
 import './OpportunitySection.sass'
 import bg from './opportunity__bg.svg'
+import bg393 from './opportunity__bg339.svg'
 import six from './six-blue.svg'
 import img from './box__img.svg'
 const OpportunitySection = () => {
@@ -8,7 +9,11 @@ const OpportunitySection = () => {
         <section className="opportunity">
             <div className="opportunity__container container_fluid">
                 <div className="opportunity__bg">
-                    <img src={bg} alt="bg lines"/>
+
+                    <picture>
+                        <source media="(max-width:481px)" srcSet={bg393}/>
+                        <img src={bg} alt="bg lines"/>
+                    </picture>
                 </div>
 
                 <div className="row__top row">
