@@ -1,14 +1,17 @@
 import React from 'react';
 import PartnerSection from "./PartnerSection/PartnerSection";
-import PurpouseSection from "./PurpouseSection/PurpouseSection";
-import TasksSection from "./TasksSection/TasksSection";
+import ApplicationSection from "./ApplicationSection/ApplicationSection";
+import "./ApplicationSection/applicationSection.sass"
+import PlusSection from "./PlusSection/PlusSection";
+import PackagePage from "./PackagePage/PackagePage";
 
 const PartnersPage = () => {
     return (
         <>
             <PartnerSection/>
-            <PurpouseSection/>
-            <TasksSection/>
+            <ApplicationSection/>
+            <PlusSection/>
+            <PackagePage/>
         </>
     );
 };

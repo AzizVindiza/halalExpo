@@ -11,7 +11,7 @@ const Nav = () => {
             <div className="container nav__container">
                 <Dropdown txt={"О ЭКСПО"} arr={arr}/>
 
-                <NavLink className={'nav__link'} to={''}>Программа форума</NavLink>
+                <NavLink className={'nav__link'} to={'forum'}>Программа форума</NavLink>
                 <Dropdown txt={"Участникам"} arr={arr1}/>
                 <Dropdown txt={"Посетителям"} arr={arr2}/>
 

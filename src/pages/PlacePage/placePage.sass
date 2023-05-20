@@ -1,0 +1,25 @@
+@import "src/sass/base/mixins"
+.placePage
+  &__container
+    padding: 73px 0 73px 0
+  &__h2
+    @include text(800,30px,133%,#3378C9)
+    margin-bottom: 37px
+  &__item
+    width: 341px
+    height: 74px
+    background: #40A865
+    padding: 17px 17px 15px
+    @include text(500,30px,133%,#fff)
+    border-radius: 3px
+  &__list
+    display: flex
+    flex-direction: column
+    row-gap: 20px
+  &__wrapper
+    display: flex
+    column-gap: 45px
+  &__map
+    iframe
+      width: 784px
+      height: 537px
