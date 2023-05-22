@@ -25,6 +25,7 @@ import ExpectPage from "./pages/ExpectPage/ExpectPage";
 
 import BenefitsPage from "./pages/BenefitsPage/BenefitsPage";
 import StandPage from "./pages/StandPage/StandPage";
+import RasulPage from "./pages/RasulPage/RasulPage";
 
 
 
@@ -52,6 +53,7 @@ const router = createBrowserRouter(
 
             <Route path="benefits" element={<BenefitsPage/>}/>
             <Route path="stand" element={<StandPage/>}/>
+            <Route path="rasul" element={<RasulPage/>}/>
 
 
         </Route>
