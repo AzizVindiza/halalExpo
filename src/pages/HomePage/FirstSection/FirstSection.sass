@@ -2,10 +2,12 @@
 
 .first
   position: relative
+  overflow: hidden
   &__container
     position: relative
     z-index: 1
     padding: 182px 0
+
   &__bg
     position: absolute
     top: -40px
@@ -21,6 +23,17 @@
     height: 227px
     overflow: hidden
     border-radius: 50%
+    animation-name: circle
+    animation-duration: 5000ms
+    animation-iteration-count: infinite
+    animation-timing-function: linear
+    @keyframes circle
+      from
+         transform: rotate(0deg)
+      to
+        transform: rotate(360deg)
+
+
   &__circle-big
     position: absolute
     top: 0
