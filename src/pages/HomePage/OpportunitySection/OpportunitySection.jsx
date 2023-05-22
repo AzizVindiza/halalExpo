@@ -11,7 +11,7 @@ const OpportunitySection = () => {
                 <div className="opportunity__bg">
 
                     <picture>
-                        <source media="(max-width:481px)" srcSet={bg393}/>
+                        <source media="(max-width:394px)" srcSet={bg393}/>
                         <img src={bg} alt="bg lines"/>
                     </picture>
                 </div>

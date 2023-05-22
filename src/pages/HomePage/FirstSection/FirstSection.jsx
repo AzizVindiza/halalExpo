@@ -35,7 +35,7 @@ const FirstSection = () => {
             </div>
             <div className="first__bg">
                 <picture>
-                    <source media="(max-width:481px)" srcSet={bg339}/>
+                    <source media="(max-width:394px)" srcSet={bg339}/>
                     <img src={bg} alt="line bg"/>
                 </picture>
             </div>
