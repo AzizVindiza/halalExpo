@@ -1,4 +1,4 @@
-import React from 'react';
+    import React from 'react';
 import './TypeSection.sass'
 import icon1 from './type__1.svg'
 import icon2 from './type__2.svg'
@@ -12,9 +12,73 @@ import icon9 from './type__9.svg'
 import icon10 from './type__10.svg'
 import icon11 from './type__11.svg'
 import bg from './type__bg.svg'
-const TypeSection = () => {
+import {motion} from "framer-motion";
+
+
+    const textMotion = {
+        hidden: {
+            x: 100,
+            opacity: 0,
+        },
+        visible: custom => (
+            {
+                x: 0,
+                opacity: 1,
+                transition: {delay: custom * 0.2}
+            }
+        )
+
+    }
+
+    const cartMotion = {
+        hidden: {
+            x: 100,
+            opacity: 0,
+        },
+        visible: custom => (
+            {
+                x: 0,
+                opacity: 1,
+                transition: {delay: custom * 0.8}
+            }
+        )
+
+    }
+    const cartMotion2 = {
+        hidden: {
+            x: 100,
+            opacity: 0,
+        },
+        visible: custom => (
+            {
+                x: 0,
+                opacity: 1,
+                transition: {delay: custom * 1.2}
+            }
+        )
+
+    }
+    const cartMotion3 = {
+        hidden: {
+            x: 100,
+            opacity: 0,
+        },
+        visible: custom => (
+            {
+                x: 0,
+                opacity: 1,
+                transition: {delay: custom * 1.6}
+            }
+        )
+
+    }
+
+    const TypeSection = () => {
     return (
-        <section className="type">
+        <motion.section
+            transion={{duration:0.6}}
+            initial={"hidden"}
+            whileInView={"visible"} className="type">
             <div className="type__container container_fluid">
                 <div className="type__left">
                     <div className="type__cards">
@@ -67,34 +131,34 @@ const TypeSection = () => {
                     </div>
                 </div>
                 <div className="type__right">
-                       <div className="type__row">
+                       <motion.div custom={1} variants={textMotion} className="type__row">
                            <h4 className="type__h4">Компаний</h4>
                            <div className="type__line type__line_middle"></div>
                            <h5 className="type__h5">2000+</h5>
-                       </div>
+                       </motion.div>
 
-                       <div className="type__row">
+                       <motion.div custom={1} variants={cartMotion} className="type__row">
                            <h4 className="type__h4">Стран</h4>
                            <div className="type__line type__line_middle"></div>
                            <h5 className="type__h5">30+</h5>
-                       </div>
-                       <div className="type__row">
+                       </motion.div>
+                       <motion.div custom={1} variants={cartMotion2} className="type__row">
                            <h4 className="type__h4">B2B встречи</h4>
                            <div className="type__line type__line_short"></div>
                            <h5 className="type__h5">300+</h5>
-                       </div>
-                       <div className="type__row">
+                       </motion.div>
+                       <motion.div custom={1} variants={cartMotion3} className="type__row">
                            <h4 className="type__h4">Экспонентов</h4>
                            <div className="type__line type__line_long"></div>
                            <h5 className="type__h5">1500+</h5>
-                       </div>
+                       </motion.div>
 
                     <div className="type__bg">
                         <img src={bg} alt="circle"/>
                     </div>
                 </div>
             </div>
-        </section>
+        </motion.section>
     );
 };
 

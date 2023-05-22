@@ -5,12 +5,31 @@ import bg339 from './first__line339.svg'
 import small from './first__circle-small.png'
 import big from './first__circle-big.png'
 import Btn from "../../../components/Btn/Btn";
+import {motion} from  "framer-motion"
+
+
+
+const textMotion = {
+    hidden: {
+        x: -100,
+        opacity: 0,
+    },
+    visible: custom => (
+        {
+            x: 0,
+            opacity: 1,
+            transition: {delay: custom * 0.2}
+        }
+    )
+
+}
+
 const FirstSection = () => {
     return (
-        <section className="first">
+        <motion.section initial={"hidden"} whileInView={"visible"} className="first">
             <div className="container first__container">
 
-                <div className="first__txt">
+                <motion.div  custom={1} variants={textMotion} className="first__txt">
                     <h2 className="first__h2">
                         <span>2023</span><br/>
                         Halal Investment<br/>
@@ -24,7 +43,7 @@ const FirstSection = () => {
                     <a href="#" className="first__btn">
                         <Btn type="button" text="Оставить заявку"/>
                     </a>
-                </div>
+                </motion.div>
             </div>
             <div className="first__circle-big">
                 <img src={big} alt="big circle"/>
@@ -39,7 +58,7 @@ const FirstSection = () => {
                     <img src={bg} alt="line bg"/>
                 </picture>
             </div>
-        </section>
+        </motion.section>
     );
 };
 

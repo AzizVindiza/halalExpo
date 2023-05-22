@@ -25,7 +25,11 @@ import ExpectPage from "./pages/ExpectPage/ExpectPage";
 
 import BenefitsPage from "./pages/BenefitsPage/BenefitsPage";
 import StandPage from "./pages/StandPage/StandPage";
+
 import RasulPage from "./pages/RasulPage/RasulPage";
+
+import MembersPage from "./pages/MembersPage/MembersPage";
+
 
 
 
@@ -45,15 +49,15 @@ const router = createBrowserRouter(
             <Route path="news" element={<NewsPage/>}/>
             <Route path="meet" element={<MeetPage/>}/>
             <Route path="forum" element={<ForumPage/>}/>
-
             <Route path="place" element={<PlacePage/>}/>
             <Route path="expect" element={<ExpectPage/>}/>
-
-
-
             <Route path="benefits" element={<BenefitsPage/>}/>
             <Route path="stand" element={<StandPage/>}/>
+
             <Route path="rasul" element={<RasulPage/>}/>
+
+            <Route path="members" element={<MembersPage/>}/>
+
 
 
         </Route>

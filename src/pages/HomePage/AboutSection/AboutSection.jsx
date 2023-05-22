@@ -1,10 +1,26 @@
 import React from 'react';
 import './AboutSection.sass'
 import svg from './about__svg.svg'
+import {motion} from "framer-motion";
+
+const textMotion = {
+    hidden: {
+        y: -100,
+        opacity: 0,
+    },
+    visible: custom => (
+        {
+            y: 0,
+            opacity: 1,
+            transition: {delay: custom * 0.2}
+        }
+    )
+
+}
 const AboutSection = () => {
     return (
-        <section className="about">
-            <div className="container_fluid about__container">
+        <motion.section viewport={{amount:0.2, once:true}} initial={"hidden"} whileInView={"visible"} className="about">
+            <motion.div custom={1} variants={textMotion}   className="container_fluid about__container">
                 <h3 className="about__h3">О форуме</h3>
                 <h2 className="about__h2">
                     Halal Investment and Trading 2023
@@ -18,8 +34,8 @@ const AboutSection = () => {
                 <div className="about__svg">
                     <img src={svg} alt="circle about"/>
                 </div>
-            </div>
-        </section>
+            </motion.div>
+        </motion.section>
     );
 };
 
