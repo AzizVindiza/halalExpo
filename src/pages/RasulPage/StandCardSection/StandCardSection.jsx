@@ -12,19 +12,32 @@ const StandCardSection = () => {
                        <div className="stCard__img">
                            <img src={standard} alt=""/>
                        </div>
+                       <div>
+                           <div className="stCard__title"   >
+                               <h4 className="stCard__h4">
+                                   Пакет: Standard
+                               </h4>
+                               <p    className="stCard__span">
+                           2м
+                       </p>
+                           </div>
 
-                       <ul className="stCard__ul">
-                           <li>Lorem ipsum dolor sit amet.</li>
-                           <li>Lorem ipsum dolor sit amet.</li>
-                           <li>Lorem ipsum dolor sit amet.</li>
-                           <li>Lorem ipsum dolor sit amet.</li>
-                           <span>$5298</span>
-                       </ul>
+                           <ul className="stCard__ul">
+                               <li>Lorem ipsum dolor sit amet.</li>
+                               <li>Lorem ipsum dolor sit amet.</li>
+                               <li>Lorem ipsum dolor sit amet.</li>
+                               <li>Lorem ipsum dolor sit amet.</li>
+                               <div className="stCard__price">$5298</div>
+                               <button className="stCard__btn">
+                                   Забронировать стенд
+                               </button>
+                           </ul>
+
+
+                       </div>
 
                    </div>
-                   <button className="stCard__btn">
-                       Забронировать стенд
-                   </button>
+
                </div>
             </div>
         </section>

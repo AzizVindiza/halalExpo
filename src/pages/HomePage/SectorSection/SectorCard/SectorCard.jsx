@@ -1,6 +1,10 @@
 import React from 'react';
 import './SectorCard.sass'
 import Btn from "../../../../components/Btn/Btn";
+
+
+
+
 const SectorCard = ({img,icon,title,text,link}) => {
     return (
         <div className="sector-card">
