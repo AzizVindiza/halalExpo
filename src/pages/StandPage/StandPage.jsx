@@ -2,6 +2,9 @@ import React from 'react';
 import "./StandPage.sass"
 import PackageSection from "./PackageSection/PackageSection";
 
+
+
+
 const StandPage = () => {
     return (
         <section className="stand">
@@ -12,6 +15,7 @@ const StandPage = () => {
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
             </p>
             <div className="container__sdand">
+
                 <PackageSection/>
             </div>
         </section>
