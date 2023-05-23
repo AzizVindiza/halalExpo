@@ -4,11 +4,6 @@ import './BaseForm.sass'
 const BaseForm = () => {
 
     const [close,setClose] = useState(true)
-
-
-
-
-
     return (
         <>
             {
