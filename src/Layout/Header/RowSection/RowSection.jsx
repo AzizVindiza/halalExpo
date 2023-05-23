@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import "./rowSection.sass"
 import MasMediaForm from "../../../components/MasMediaForm/MasMediaForm";
+import RegisterForm from "../../../components/RegisterForm/RegisterForm";
 const RowSection = () => {
     const [open,setOpen] = useState(false)
     return (
@@ -17,7 +18,7 @@ const RowSection = () => {
                         <button className={'rowSection__lang'}>EN</button>
                     </div>
                     {
-                        open ? <MasMediaForm/> : ""
+                        open ? <RegisterForm/> : ""
                     }
                 </div>
             </div>
