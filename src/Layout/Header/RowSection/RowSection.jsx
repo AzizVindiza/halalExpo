@@ -4,12 +4,8 @@ import "./rowSection.sass"
 import MasMediaForm from "../../../components/MasMediaForm/MasMediaForm";
 import RegisterForm from "../../../components/RegisterForm/RegisterForm";
 import {CustomContext} from "../../../Context";
-const RowSection = () => {
-    const {close, setClose} = useContext(CustomContext)
-
-    import RegisterForm from "../../../components/RegisterForm/RegisterForm";
     const RowSection = () => {
-        const [open, setOpen] = useState(false)
+        const {close, setClose} = useContext(CustomContext)
         return (
             <div className={'rowSection'}>
                 <div className="container rowSection__container">
@@ -27,11 +23,11 @@ const RowSection = () => {
                     </div>
                 </div>
                 {
-                    open && <RegisterForm open={open} setOpen={setOpen}/>
+                    close ?  <RegisterForm /> : ''
                 }
             </div>
         );
     };
-}
+
 
 export default RowSection;
