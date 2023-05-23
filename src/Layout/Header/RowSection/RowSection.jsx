@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "./rowSection.sass"
-
+import MasMediaForm from "../../../components/MasMediaForm/MasMediaForm";
 const RowSection = () => {
+    const [open,setOpen] = useState(false)
     return (
         <div className={'rowSection'}>
             <div className="container rowSection__container">
@@ -9,13 +10,15 @@ const RowSection = () => {
                 <div className="rowSection__wrapper">
                     <div className="rowSection__user">
                         <button className={'rowSection__in'}>Вход/</button>
-                        <button className={'rowSection__reg'}>Регистрация</button>
+                        <button onClick={() => setOpen(!open)} className={'rowSection__reg'}>Регистрация</button>
                     </div>
                     <div className="rowSection__change">
                         <button className={'rowSection__lang'}>RU</button>
                         <button className={'rowSection__lang'}>EN</button>
                     </div>
-
+                    {
+                        open ? <MasMediaForm/> : ""
+                    }
                 </div>
             </div>
         </div>
