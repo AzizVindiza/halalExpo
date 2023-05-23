@@ -108,6 +108,19 @@ const BaseForm = () => {
                                     <input type="tel"/>
                                 </label>
 
+                                <div className="baseForm__choose">
+                                    <h2 className="baseForm__h2"> В качестве кого вы хотите посетить HIT EXPO?</h2>
+                                    <div className="baseForm__row">
+                                        <h3 className="baseForm__h3">Представитель государственных органов</h3>
+                                        <div className="baseForm__line">
+                                            <svg width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M11.5 1.66602L6.5 5.33268L1.5 1.66602" stroke="#14181F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                            </svg>
+
+                                        </div>
+                                    </div>
+                                </div>
+
 
                             </form>
 
