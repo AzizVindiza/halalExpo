@@ -1,9 +1,17 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import './BaseForm.sass'
+import Btn from "../../Btn/Btn";
+import {CustomContext} from "../../../Context";
 
 const BaseForm = () => {
+    const {close,setClose} = useContext(CustomContext)
+    const arr = ["Представитель государственных органов","СМИ","Посетитель","Участник","Эксперт"]
 
-    const [close,setClose] = useState(true)
+    const [select,setSelect] = useState('Представитель государственных органов') //choose select
+    const [active,setActive] = useState(false) // open select
+    const chooseItem = (item) => {
+        setSelect(item)
+    }
     return (
         <>
             {
@@ -12,7 +20,7 @@ const BaseForm = () => {
 
 
                         <div className="baseForm__wrapper">
-                            <div onClick={()=>setClose(false)} className="baseForm__close">
+                            <div onClick={()=> setClose(false)} className="baseForm__close">
                                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M1.16663 1.16675L12.8333 12.8334M1.16663 12.8334L12.8333 1.16675" stroke="black" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
@@ -108,18 +116,81 @@ const BaseForm = () => {
                                     <input type="tel"/>
                                 </label>
 
-                                <div className="baseForm__choose">
-                                    <h2 className="baseForm__h2"> В качестве кого вы хотите посетить HIT EXPO?</h2>
+                                <div onClick={() => setActive(!active)} className="baseForm__choose">
+                                    <h4 className="baseForm__h4"> В качестве кого вы хотите посетить HIT EXPO?</h4>
                                     <div className="baseForm__row">
-                                        <h3 className="baseForm__h3">Представитель государственных органов</h3>
-                                        <div className="baseForm__line">
+                                        <h5 className="baseForm__h5">{select}</h5>
+                                        <div  className={`baseForm__tick ${active ? 'baseForm__tick_active' : ''} `}>
                                             <svg width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M11.5 1.66602L6.5 5.33268L1.5 1.66602" stroke="#14181F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                                             </svg>
 
                                         </div>
                                     </div>
+                                    {
+                                        active ?   <ul className="baseForm__select">
+                                            {
+                                                arr.map((item) => (
+                                                    <li onClick={() => chooseItem(item)} className="baseForm__item">{item}</li>
+                                                ))
+                                            }
+
+                                        </ul> : ''
+                                    }
+
                                 </div>
+                                <label className='baseForm__label' htmlFor=""> Электронная почта*
+                                    <input type="tel"/>
+                                </label>
+                                <label className='baseForm__label' htmlFor="">Придумайте пароль*
+                                    <input type="tel"/>
+                                </label>
+                                <label className='baseForm__label' htmlFor="">Подтвердите пароль*
+                                    <input type="tel"/>
+                                </label>
+                                
+                                <div className="baseForm__check">
+                                    <div className="baseForm__choose">
+                                        <h2 className="baseForm__name">Я заинтересован в</h2>
+                                        <label htmlFor="">
+                                            <input type="checkbox"/>
+                                            <span>Посещение на HIT EXPO</span>
+                                        </label>
+                                        <label htmlFor="">
+                                            <input type="checkbox"/>
+                                            <span>Участие на HIT EXPO</span>
+                                        </label>
+                                        <label htmlFor="">
+                                            <input type="checkbox"/>
+                                            <span>Поиске проектов</span>
+                                        </label>
+                                        <label htmlFor="">
+                                            <input type="checkbox"/>
+                                            <span>Другом</span>
+                                        </label>
+                                    </div>
+                                    <div className="baseForm__choose">
+                                        <h2 className="baseForm__name" >Как вы узнали о мероприятие</h2>
+                                        <label htmlFor="">
+                                            <input type="checkbox"/>
+                                            <span>Инстаграм</span>
+                                        </label>
+                                        <label htmlFor="">
+                                            <input type="checkbox"/>
+                                            <span>ТВ, Радио</span>
+                                        </label>
+                                        <label htmlFor="">
+                                            <input type="checkbox"/>
+                                            <span>Новостные порталы</span>
+                                        </label>
+                                        <label htmlFor="">
+                                            <input type="checkbox"/>
+                                            <span>Другое</span>
+                                        </label>
+
+                                    </div>
+                                </div>
+                                <Btn m={"register"} text={"Зарегистрироваться"}/>
 
 
                             </form>

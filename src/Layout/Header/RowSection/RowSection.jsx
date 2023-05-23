@@ -1,8 +1,10 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import "./rowSection.sass"
 import MasMediaForm from "../../../components/MasMediaForm/MasMediaForm";
 import RegisterForm from "../../../components/RegisterForm/RegisterForm";
-const RowSection = ({open,setOpen}) => {
+import {CustomContext} from "../../../Context";
+const RowSection = () => {
+    const {close,setClose} = useContext(CustomContext)
 
     return (
         <div className={'rowSection'}>
@@ -11,7 +13,7 @@ const RowSection = ({open,setOpen}) => {
                 <div className="rowSection__wrapper">
                     <div className="rowSection__user">
                         <button className={'rowSection__in'}>Вход/</button>
-                        <button onClick={() => setOpen(!open)} className={'rowSection__reg'}>Регистрация</button>
+                        <button onClick={() => setClose(true)} className={'rowSection__reg'}>Регистрация</button>
                     </div>
                     <div className="rowSection__change">
                         <button className={'rowSection__lang'}>RU</button>
