@@ -1,14 +1,11 @@
 import React, {useState} from 'react';
 import "./masmediaform.sass"
-import Btn from "../Btn/Btn";
 
 const MasMediaForm = () => {
     return (
         <div className={'masmediaform'}>
-
             <div className="masmediaform__wrapper">
-
-                <div   className="masmediaform__close">
+                <div className="masmediaform__close">
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1.16667 1.16675L12.8333 12.8334M1.16667 12.8334L12.8333 1.16675" stroke="black" strokeOpacity="0.5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
@@ -62,11 +59,8 @@ const MasMediaForm = () => {
                         <span className="masmediaform__span">Подтвердите пароль*</span>
                         <input type="text" className="masmediaform__input"/>
                     </label>
+
                 </form>
-                <Btn text={'Зарегистрироваться'} />
-
-                <p className="masmediaform__text">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных в соответствие с политикой конфиденциальности</p>
-
             </div>
         </div>
     );
