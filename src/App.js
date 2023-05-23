@@ -29,16 +29,21 @@ import StandPage from "./pages/StandPage/StandPage";
 import RasulPage from "./pages/RasulPage/RasulPage";
 
 import MembersPage from "./pages/MembersPage/MembersPage";
+<<<<<<< HEAD
 import MasMediaForm from "./components/MasMediaForm/MasMediaForm";
 
 
 
 
+=======
+import SmoothScroll from "./components/SmoothScroll/SmoothScroll";
+>>>>>>> 15610520c583f7b65c8bb943f5f95242fadedc5d
 
 
 const router = createBrowserRouter(
     createRoutesFromElements(
         <Route path="/" element={<Layout/>}>
+
             <Route index element={<HomePage/>}/>
             <Route path="*" element={<NotFoundPage/>}/>
             <Route path="organization" element={<OrganizationPage/>}/>
@@ -54,13 +59,9 @@ const router = createBrowserRouter(
             <Route path="expect" element={<ExpectPage/>}/>
             <Route path="benefits" element={<BenefitsPage/>}/>
             <Route path="stand" element={<StandPage/>}/>
-
             <Route path="rasul" element={<RasulPage/>}/>
-
             <Route path="members" element={<MembersPage/>}/>
             <Route path="media" element={<MasMediaForm/>}/>
-
-
 
         </Route>
     )
@@ -69,7 +70,9 @@ const router = createBrowserRouter(
 function App() {
     return (
         <>
-            <RouterProvider router={router}/>
+            <SmoothScroll>
+                <RouterProvider router={router}/>
+            </SmoothScroll>
         </>
     );
 }
