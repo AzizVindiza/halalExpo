@@ -2,6 +2,7 @@ import React from 'react';
 import "./MembersPage.sass"
 import SearchSection from "./SearchSection/SearchSection";
 import MembersCard from "./MembercCard/MembersCard";
+import SelectSection from "./SelectSection/SelectSection";
 
 
 
@@ -13,8 +14,17 @@ const MembersPage = () => {
                 Участники
             </h2>
             <div className="container members__container">
-                <SearchSection/>
+                <div className="members__wrapper">
+                    <SelectSection/>
+                    <SearchSection/>
+                    <p className="members__txt">Участников 200 </p>
+                </div>
+
                 <div className="members__cards">
+                    <MembersCard/>
+                    <MembersCard/>
+                    <MembersCard/>
+                    <MembersCard/>
                     <MembersCard/>
                 </div>
             </div>

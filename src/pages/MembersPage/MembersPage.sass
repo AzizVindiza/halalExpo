@@ -1,9 +1,18 @@
 @import "src/sass/base/mixins"
 .members
-  position: relative
-  padding-top: 12px
   &__h2
     background: url("img.png") center/cover no-repeat
     text-align: center
     padding: 45px 0
     @include text(700, 50px, 120%, #ffffff)
+  &__cards
+    display: flex
+    flex-wrap: wrap
+    column-gap: 63px
+  &__wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-top: 70px
+  &__txt
+    @include text(500,18px,180%,#00000070)
