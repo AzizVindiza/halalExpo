@@ -2,7 +2,7 @@ import React from 'react';
 import './FirstSection.sass'
 import bg from './first__line.svg'
 import bg339 from './first__line339.svg'
-import small from './first__circle-small.png'
+import small from './first__circle-small.svg'
 import big from './first__circle-big.png'
 import Btn from "../../../components/Btn/Btn";
 import {motion} from  "framer-motion"
