@@ -16,20 +16,14 @@ import ContactsPage from "./pages/ContactsPage/ContactsPage";
 import Question from "./pages/Question/Question";
 import NewsPage from "./pages/NewsPage/NewsPage";
 import MeetPage from "./pages/MeetPage/MeetPage";
-
-
 import ForumPage from "./pages/ForumPage/ForumPage";
-
 import PlacePage from "./pages/PlacePage/PlacePage";
 import ExpectPage from "./pages/ExpectPage/ExpectPage";
-
 import BenefitsPage from "./pages/BenefitsPage/BenefitsPage";
 import StandPage from "./pages/StandPage/StandPage";
-
-import RasulPage from "./pages/RasulPage/RasulPage";
-
 import MembersPage from "./pages/MembersPage/MembersPage";
 
+import MasMediaForm from "./components/MasMediaForm/MasMediaForm";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -50,8 +44,8 @@ const router = createBrowserRouter(
             <Route path="expect" element={<ExpectPage/>}/>
             <Route path="benefits" element={<BenefitsPage/>}/>
             <Route path="stand" element={<StandPage/>}/>
-            <Route path="rasul" element={<RasulPage/>}/>
             <Route path="members" element={<MembersPage/>}/>
+            <Route path="media" element={<MasMediaForm/>}/>
 
         </Route>
     )

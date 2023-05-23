@@ -16,8 +16,8 @@
         link: 'sponsors'
     },
     {
-        name: 'Участники форума',
-        link: ''
+        name: 'Список участников',
+        link: 'members'
     },
     {
         name: 'Контакты',

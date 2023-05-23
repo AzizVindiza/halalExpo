@@ -1,6 +1,8 @@
 @import "src/sass/base/mixins"
 
 .stCard
+  margin-top: 62px
+  margin-bottom: 100px
   &__container
     display: flex
   &__box
@@ -13,6 +15,31 @@
     background: #9FD3B2
     width: 227px
     @include text(800,36px,133%,#40A865)
+  &__title
+    display: flex
+    align-items: center
+    margin-bottom: 28px
+  &__h4
+    @include text(700,28px,133%,#000000)
+
+
+  &__span
+    @include text(700,24px,133%,#10923E)
+
   &__img
     width: 257px
     height: 273px
+  &__ul
+    display: flex
+    flex-direction: column
+    row-gap: 7px
+    margin-bottom: 30px
+  &__price
+    margin-bottom: 40px
+    padding: 10px
+    @include text(700,18px,133%,#000000)
+    background:  #F5F8FF
+  &__btn
+    padding: 10px 20px
+    background: #0057BC
+    @include text(500,14px,133%,#FFFFFF)
