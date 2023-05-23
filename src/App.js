@@ -29,7 +29,6 @@ import StandPage from "./pages/StandPage/StandPage";
 import RasulPage from "./pages/RasulPage/RasulPage";
 
 import MembersPage from "./pages/MembersPage/MembersPage";
-import SmoothScroll from "./components/SmoothScroll/SmoothScroll";
 
 
 const router = createBrowserRouter(
@@ -61,9 +60,7 @@ const router = createBrowserRouter(
 function App() {
     return (
         <>
-            <SmoothScroll>
-                <RouterProvider router={router}/>
-            </SmoothScroll>
+            <RouterProvider router={router}/>
         </>
     );
 }
