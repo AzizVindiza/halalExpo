@@ -4,10 +4,10 @@ import './Header.sass'
 import Nav from "./Nav/Nav";
 import RowSection from "./RowSection/RowSection";
 import {Link} from "react-router-dom";
-const Header = ({open,setOpen}) => {
+const Header = () => {
     return (
         <header className="header">
-            <RowSection open={open} setOpen={setOpen}/>
+            <RowSection/>
             <div className="container header__container">
                 <h1 className="header__logo">
                     <Link to={"/"}>
