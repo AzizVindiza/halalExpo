@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import "./rowSection.sass"
-import MasMediaForm from "../../../components/MasMediaForm/MasMediaForm";
-import RegisterForm from "../../../components/RegisterForm/RegisterForm";
-const RowSection = ({open,setOpen}) => {
 
+import RegisterForm from "../../../components/RegisterForm/RegisterForm";
+const RowSection = () => {
+    const [open,setOpen] = useState(false)
     return (
         <div className={'rowSection'}>
             <div className="container rowSection__container">
@@ -19,6 +19,9 @@ const RowSection = ({open,setOpen}) => {
                     </div>
                 </div>
             </div>
+            {
+                open && <RegisterForm open={open} setOpen={setOpen}/>
+            }
         </div>
     );
 };
