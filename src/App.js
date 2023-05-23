@@ -29,6 +29,7 @@ import StandPage from "./pages/StandPage/StandPage";
 import RasulPage from "./pages/RasulPage/RasulPage";
 
 import MembersPage from "./pages/MembersPage/MembersPage";
+import LoginPace from "./components/LoginPage/LoginPace";
 
 
 
@@ -53,10 +54,9 @@ const router = createBrowserRouter(
             <Route path="expect" element={<ExpectPage/>}/>
             <Route path="benefits" element={<BenefitsPage/>}/>
             <Route path="stand" element={<StandPage/>}/>
-
             <Route path="rasul" element={<RasulPage/>}/>
-
             <Route path="members" element={<MembersPage/>}/>
+            <Route path="login" element={<LoginPace/>}/>
 
 
 

@@ -1,0 +1,67 @@
+@import "src/sass/base/mixins"
+.login
+  position: fixed
+  right: 0
+  bottom: 0
+  left: 0
+  top: 0
+  background: #00000070
+  display: flex
+  justify-content: center
+  align-items: center
+  z-index: 1000
+  &__h2
+    display: flex
+    align-items: center
+    justify-content: center
+    @include text(600,30px,133%,#000000)
+
+  &__wrapper
+    width: 760px
+    background: #ffff
+    padding: 40px 30px
+  &__close
+    position: absolute
+
+
+
+  &__label
+    input
+      width: 100%
+      padding: 8px 5px
+      border-radius: 4px
+      border: 1px solid #00000080
+    height: 40px
+    @include text(600,16px,130%, #000000)
+    margin-top: 40.5px
+    display: flex
+    flex-direction: column
+  &__form
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+
+
+
+  &__li
+    margin-top: 10px
+    width: 86px
+    height: 15px
+    @include text(600,11px,133%,#0057BC)
+    margin-bottom: 25px
+
+  &__paswword
+    input
+      width: 100%
+      padding: 8px 5px
+      border-radius: 4px
+      border: 1px solid #00000080
+
+    @include text(600,16px,133%,#000000)
+    margin-top: 49.5px
+    display: flex
+    flex-direction: column
+
+
+
