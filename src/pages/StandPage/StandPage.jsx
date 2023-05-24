@@ -14,7 +14,7 @@ const StandPage = () => {
             <p className="stand__p">
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
             </p>
-            <div className="container__sdand">
+            <div className="container__stand">
 
                 <PackageSection/>
             </div>

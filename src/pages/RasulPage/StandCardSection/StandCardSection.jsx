@@ -1,6 +1,7 @@
 import React from 'react';
 import './StandCardSection.sass'
 import standard from './standard.png'
+import Btn from "../../../components/Btn/Btn";
 
 const StandCardSection = () => {
     return (
@@ -28,9 +29,7 @@ const StandCardSection = () => {
                                <li>Lorem ipsum dolor sit amet.</li>
                                <li>Lorem ipsum dolor sit amet.</li>
                                <div className="stCard__price">$5298</div>
-                               <button className="stCard__btn">
-                                   Забронировать стенд
-                               </button>
+                               <Btn type="button" text="Забронировать стенд"/>
                            </ul>
 
 
