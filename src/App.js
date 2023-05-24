@@ -51,7 +51,7 @@ const router = createBrowserRouter(
             <Route path="members" element={<MembersPage/>}/>
             <Route path="members" element={<MembersPage/>}/>
             <Route path="media" element={<MasMediaForm/>}/>
-            <Route path="rasul" element={<ParticipantForm/>}/>
+
 
 
 

@@ -4,9 +4,10 @@ import Btn from "../../Btn/Btn";
 import {CustomContext} from "../../../Context";
 import Stake from "../../Stake/Stake";
 import Branch from "../../Branch/Branch";
+import LoginForm from "../../ParticipantForm/LoginForm/LoginForm";
 
 const BaseForm = () => {
-    const {close,setClose} = useContext(CustomContext)
+    const {close,setClose,changeComponent,setChangeComponent} = useContext(CustomContext)
     const arr = ["Представитель государственных органов","СМИ","Посетитель","Участник","Эксперт"]
 
     const [select,setSelect] = useState('Представитель государственных органов') //choose select
@@ -69,7 +70,7 @@ const BaseForm = () => {
 
 
                                 <label className="baseForm__label" htmlFor="">Дата рождения
-                                    <input type="text"/>
+                                    <input type="date"/>
                                 </label>
 
                                 <div>
@@ -147,15 +148,17 @@ const BaseForm = () => {
 
 
                                 </div>
-                                <label className='baseForm__label' htmlFor=""> Электронная почта*
-                                    <input type="tel"/>
-                                </label>
-                                <label className='baseForm__label' htmlFor="">Придумайте пароль*
-                                    <input type="tel"/>
-                                </label>
-                                <label className='baseForm__label' htmlFor="">Подтвердите пароль*
-                                    <input type="tel"/>
-                                </label>
+                                {
+                                    select === "Участник"?
+                                        <>
+                                            <Branch/>
+                                            <Stake/>
+
+                                        </> :
+                                         select === "СМИ"
+                                       ? "" :  <LoginForm/>
+
+                                }
 
                                 <div className="baseForm__check">
                                     <div className="baseForm__choose">
@@ -198,7 +201,13 @@ const BaseForm = () => {
 
                                     </div>
                                 </div>
-                                <Btn m={"register"} text={"Зарегистрироваться"}/>
+                                {
+                                    select === "СМИ" || select === "Участник" ? <Btn m={"register"} text={  "Продолжить"}/> :  <Btn m={"register"} text={  "Зарегистрироваться"}/>
+                                }
+
+
+
+
 
                             </form>
                             </div>
