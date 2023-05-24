@@ -1,9 +1,9 @@
 import React from 'react';
 import {useForm} from "react-hook-form";
-import "./LoginPace.sass"
+import "./LoginForm.sass"
 import Btn from "../Btn/Btn";
 
-const LoginPace = () => {
+const LoginForm = () => {
     const {
         register,
         formState: {
@@ -41,6 +41,7 @@ const LoginPace = () => {
                         />
                     </label>
                     <label className="login__paswword">
+
                         Ведите пороль*
                         <input type={''}
                                {...register("paswword",{
@@ -62,4 +63,4 @@ const LoginPace = () => {
     );
 };
 
-export default LoginPace;
+export default LoginForm;

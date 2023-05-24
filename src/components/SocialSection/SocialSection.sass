@@ -1,0 +1,52 @@
+@import "src/sass/base/mixins"
+.social
+  display: flex
+  z-index: 1000
+  &__txt
+    @include text(600,20px, 133%,#10923E)
+    margin-bottom: 9.5px
+  &__inst
+    flex-direction: column
+    display: flex
+    width: 215px
+    @include text(600,16px,133%,#000000)
+
+    input
+
+      padding: 8px 5px
+      border-radius: 4px
+      border: 1px solid #00000080
+      height: 40px
+  &__facebbok
+    flex-direction: column
+    display: flex
+    width: 215px
+    @include text(600,16px,133%,#000000)
+
+    input
+
+      padding: 8px 5px
+      border-radius: 4px
+      border: 1px solid #00000080
+      height: 40px
+
+  &__twitter
+    flex-direction: column
+    display: flex
+    width: 215px
+    @include text(600,16px,133%,#000000)
+
+
+
+    input
+
+     padding: 8px 5px
+     border-radius: 4px
+     border: 1px solid #00000080
+     height: 40px
+  &__form
+    display: flex
+    justify-content: space-between
+  &__wrapper
+    width: 100%
+

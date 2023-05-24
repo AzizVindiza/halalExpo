@@ -2,8 +2,10 @@ import React, {useState} from 'react';
 import "./rowSection.sass"
 
 import RegisterForm from "../../../components/RegisterForm/RegisterForm";
+import LoginForm from "../../../components/LoginForm/LoginForm";
 const RowSection = () => {
     const [open,setOpen] = useState(false)
+    const [openLogin,setOpenLogin] = useState(false)
     return (
         <div className={'rowSection'}>
             <div className="container rowSection__container">
@@ -21,6 +23,10 @@ const RowSection = () => {
             </div>
             {
                 open && <RegisterForm open={open} setOpen={setOpen}/>
+
+            }
+            {
+                openLogin && <LoginForm open={open} setOpenLogin={setOpenLogin}/>
             }
         </div>
     );

@@ -22,9 +22,8 @@ import ExpectPage from "./pages/ExpectPage/ExpectPage";
 import BenefitsPage from "./pages/BenefitsPage/BenefitsPage";
 import StandPage from "./pages/StandPage/StandPage";
 import MembersPage from "./pages/MembersPage/MembersPage";
-import LoginPace from "./components/LoginPage/LoginPace";
-
 import MasMediaForm from "./components/MasMediaForm/MasMediaForm";
+import SocialSection from "./components/SocialSection/SocialSection";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -45,15 +44,12 @@ const router = createBrowserRouter(
             <Route path="expect" element={<ExpectPage/>}/>
             <Route path="benefits" element={<BenefitsPage/>}/>
             <Route path="stand" element={<StandPage/>}/>
-
-            <Route path="rasul" element={<RasulPage/>}/>
             <Route path="members" element={<MembersPage/>}/>
-            <Route path="login" element={<LoginPace/>}/>
-
-
-
             <Route path="members" element={<MembersPage/>}/>
             <Route path="media" element={<MasMediaForm/>}/>
+            <Route path="social" element={<SocialSection/>}/>
+
+
 
 
         </Route>
