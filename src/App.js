@@ -22,9 +22,11 @@ import ExpectPage from "./pages/ExpectPage/ExpectPage";
 import BenefitsPage from "./pages/BenefitsPage/BenefitsPage";
 import StandPage from "./pages/StandPage/StandPage";
 import MembersPage from "./pages/MembersPage/MembersPage";
-
 import MasMediaForm from "./components/MasMediaForm/MasMediaForm";
-import BrandForm from "./components/ParticipantForm/BrandForm/BrandForm";
+
+import SocialSection from "./components/SocialSection/SocialSection";
+
+
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -46,7 +48,12 @@ const router = createBrowserRouter(
             <Route path="benefits" element={<BenefitsPage/>}/>
             <Route path="stand" element={<StandPage/>}/>
             <Route path="members" element={<MembersPage/>}/>
+            <Route path="members" element={<MembersPage/>}/>
             <Route path="media" element={<MasMediaForm/>}/>
+            <Route path="social" element={<SocialSection/>}/>
+
+
+
 
 
         </Route>
