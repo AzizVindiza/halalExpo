@@ -5,9 +5,6 @@ const ParticipantForm = () => {
     return (
         <>
             <LoginForm/>
-
-
-
         </>
     );
 };

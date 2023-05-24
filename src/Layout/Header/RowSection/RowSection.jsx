@@ -5,7 +5,7 @@ import MasMediaForm from "../../../components/MasMediaForm/MasMediaForm";
 import RegisterForm from "../../../components/RegisterForm/RegisterForm";
 import {CustomContext} from "../../../Context";
     const RowSection = () => {
-        const {close, setClose} = useContext(CustomContext)
+        const {close, setClose,changeComponent,setChangeComponent} = useContext(CustomContext)
         return (
             <div className={'rowSection'}>
                 <div className="container rowSection__container">
@@ -23,7 +23,9 @@ import {CustomContext} from "../../../Context";
                     </div>
                 </div>
                 {
-                    close ?  <RegisterForm /> : ''
+                    close ? <>
+                        <MasMediaForm/>  <RegisterForm />
+                    </>     : ''
                 }
             </div>
         );
