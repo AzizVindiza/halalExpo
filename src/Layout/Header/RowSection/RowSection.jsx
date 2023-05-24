@@ -2,10 +2,11 @@ import React, {useContext, useState} from 'react';
 import "./rowSection.sass"
 import RegisterForm from "../../../components/RegisterForm/RegisterForm";
 import {CustomContext} from "../../../Context";
+import LoginForm from "../../../components/LoginForm/LoginForm";
 
 
 const RowSection = () => {
-    const {close, setClose} = useContext(CustomContext)
+    const {close, setClose,setLogin,login} = useContext(CustomContext)
     return (
         <div className={'rowSection'}>
             <div className="container rowSection__container">
@@ -13,7 +14,7 @@ const RowSection = () => {
                     Чолпон-Ата</h2>
                 <div className="rowSection__wrapper">
                     <div className="rowSection__user">
-                        <button className={'rowSection__in'}>Вход/</button>
+                        <button onClick={() => setLogin(!login)} className={'rowSection__in'}>Вход/</button>
                         <button onClick={() => setClose(true)} className={'rowSection__reg'}>Регистрация</button>
                     </div>
                     <div className="rowSection__change">
@@ -25,6 +26,9 @@ const RowSection = () => {
             </div>
             {
                 close ?  <RegisterForm /> : ''
+            }
+            {
+                login ? <LoginForm/> : ''
             }
         </div>
     );
