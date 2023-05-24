@@ -2,6 +2,7 @@ import React from 'react';
 import './BrandForm.sass'
 import LoginForm from "../LoginForm/LoginForm";
 import Btn from "../../Btn/Btn";
+import SocialSection from "../../SocialSection/SocialSection";
 
 
 const BrandForm = () => {
@@ -105,6 +106,7 @@ const BrandForm = () => {
                             Email*
                             <input type="text"/>
                         </label>
+                        <SocialSection/>
                         <LoginForm/>
                         <Btn m={"register"} text={"Зарегистрироваться"}/>
 
