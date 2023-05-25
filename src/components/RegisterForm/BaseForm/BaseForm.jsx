@@ -1,11 +1,18 @@
 import React, {useContext, useState} from 'react';
 import './BaseForm.sass'
+
 import {CustomContext} from "../../../Context";
 
 import MasMediaForm from "../../MasMediaForm/MasMediaForm";
+import EmailForm from "../../ParticipantForm/EmailForm/EmailForm";
+import CheckBox from "../../CheckBox/CheckBox";
+import Btn from "../../Btn/Btn";
+import Stake from "../../Stake/Stake";
+import Branch from "../../Branch/Branch";
+import ParticipantForm from "../../ParticipantForm/ParticipantForm";
 
 const BaseForm = () => {
-    const {close,setClose,changeComponent,setChangeComponent} = useContext(CustomContext)
+    const {close,setClose} = useContext(CustomContext)
     const arr = ["Представитель государственных органов","СМИ","Посетитель","Участник","Эксперт"]
 
     const [select,setSelect] = useState('Представитель государственных органов') //choose select
@@ -143,12 +150,17 @@ const BaseForm = () => {
                                 </label>
 
                                 {
-                                         select === "СМИ"  ?  <MasMediaForm/> : ""
+                                         select === "СМИ"  ?  <MasMediaForm/> : select === "Посетитель" ? <><EmailForm/><CheckBox/></> : select === "Участник" ? <><Stake/><Branch/><ParticipantForm/></>: ''
 
                                 }
 
 
                             </form>
+                                <Btn m={'masmedia'} text={'Зарегистрироваться'}/>
+                                <p className="baseForm__tp" >
+                                    Нажимая на кнопку, вы даете согласие на обработку своих персональных данных в соответствие с <span className="masmediaform__tp2">политикой конфиденциальности</span>
+                                </p>
+
                             </div>
 
                         </div>

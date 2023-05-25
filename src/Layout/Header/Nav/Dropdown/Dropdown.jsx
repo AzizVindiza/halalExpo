@@ -43,8 +43,8 @@ const Dropdown = ({arr,txt}) => {
             {
                 active ?    <div className="dropdown__wrapper">
                     {
-                        arr.map((item) => (
-                            <NavLink onClick={() => setActive(false)} className={'dropdown__link'} to={item.link}>
+                        arr.map((item,i) => (
+                            <NavLink key={i} onClick={() => setActive(false)} className={'dropdown__link'} to={item.link}>
                                 {item.name}
                             </NavLink>
                         ))

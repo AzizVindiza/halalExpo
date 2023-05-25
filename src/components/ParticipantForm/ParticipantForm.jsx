@@ -7,10 +7,6 @@ const ParticipantForm = () => {
         <>
 
             <BrandForm/>
-
-
-
-
             <EmailForm/>
 
         </>
