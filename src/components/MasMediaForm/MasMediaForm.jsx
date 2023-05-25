@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import "./masmediaform.sass"
 import EmailForm from "../ParticipantForm/EmailForm/EmailForm";
+import SocialSection from "../SocialSection/SocialSection";
+import Btn from "../Btn/Btn";
 
 const MasMediaForm = () => {
     return (
@@ -49,7 +51,12 @@ const MasMediaForm = () => {
                         <span>Email<span  className="masmediaform__span">*</span></span>
                         <input type="text" className="masmediaform__input"/>
                     </label>
+                    <SocialSection/>
                     <EmailForm/>
+                    <Btn text={'Зарегистрироваться'}/>
+                    <p className="masmediaform__tp" >
+                        Нажимая на кнопку, вы даете согласие на обработку своих персональных данных в соответствие с <span className="masmediaform__tp2">политикой конфиденциальности</span>
+                    </p>
 
 
                 </form>

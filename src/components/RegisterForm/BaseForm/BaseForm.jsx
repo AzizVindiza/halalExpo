@@ -5,6 +5,7 @@ import {CustomContext} from "../../../Context";
 import Stake from "../../Stake/Stake";
 import Branch from "../../Branch/Branch";
 import EmailForm from "../../ParticipantForm/EmailForm/EmailForm";
+import CheckBox from "../../CheckBox/CheckBox";
 
 const BaseForm = () => {
     const {close,setClose,changeComponent,setChangeComponent} = useContext(CustomContext)
@@ -170,47 +171,9 @@ const BaseForm = () => {
 
                                 }
 
-                                <div className="baseForm__check">
-                                    <div className="baseForm__choose">
-                                        <h2 className="baseForm__name">Я заинтересован в</h2>
-                                        <label htmlFor="">
-                                            <input type="checkbox"/>
-                                            <span>Посещение на HIT EXPO</span>
-                                        </label>
-                                        <label htmlFor="">
-                                            <input type="checkbox"/>
-                                            <span>Участие на HIT EXPO</span>
-                                        </label>
-                                        <label htmlFor="">
-                                            <input type="checkbox"/>
-                                            <span>Поиске проектов</span>
-                                        </label>
-                                        <label htmlFor="">
-                                            <input type="checkbox"/>
-                                            <span>Другом</span>
-                                        </label>
-                                    </div>
-                                    <div className="baseForm__choose">
-                                        <h2 className="baseForm__name" >Как вы узнали о мероприятие</h2>
-                                        <label htmlFor="">
-                                            <input type="checkbox"/>
-                                            <span>Инстаграм</span>
-                                        </label>
-                                        <label htmlFor="">
-                                            <input type="checkbox"/>
-                                            <span>ТВ, Радио</span>
-                                        </label>
-                                        <label htmlFor="">
-                                            <input type="checkbox"/>
-                                            <span>Новостные порталы</span>
-                                        </label>
-                                        <label htmlFor="">
-                                            <input type="checkbox"/>
-                                            <span>Другое</span>
-                                        </label>
 
-                                    </div>
-                                </div>
+                                <CheckBox/>
+
                                 {
                                     select === "СМИ" || select === "Участник" ? <Btn m={"register"} text={  "Продолжить"}/> :  <Btn m={"register"} text={  "Зарегистрироваться"}/>
                                 }

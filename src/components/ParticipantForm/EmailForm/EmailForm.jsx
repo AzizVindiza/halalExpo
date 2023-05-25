@@ -8,6 +8,7 @@ const EmailForm = () => {
 
 
     return (
+        
         <section className="emailForm">
             <label htmlFor="" className="emailForm__label">
                 <span>Электронная почта<span  className="emailForm__span">*</span></span>
