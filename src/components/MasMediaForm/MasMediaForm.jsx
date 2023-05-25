@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import "./masmediaform.sass"
+import EmailForm from "../ParticipantForm/EmailForm/EmailForm";
 
 const MasMediaForm = () => {
     return (
@@ -11,9 +12,8 @@ const MasMediaForm = () => {
                     </svg>
 
                 </div>
-                <h2 className="masmediaform__h2">Регистрация</h2>
                 <div className="masmediaform__logo">
-                    <p className="masmediaform__p">Загрузите логотип компании в  png, jpg, pdf*</p>
+                    <span className="masmediaform__p">Загрузите логотип компании в  png, jpg, pdf<span  className="masmediaform__span">*</span></span>
                     <div className="masmediaform__download">
                         <h3 className="masmediaform__h3">Загрузить</h3>
                         <div className="masmediaform__line">
@@ -28,37 +28,29 @@ const MasMediaForm = () => {
                 </div>
                 <form  className="masmediaform__form">
                     <label  className="masmediaform__label">
-                        <span className="masmediaform__span">Полное юридическое наименование организации*</span>
+                        <span>Полное юридическое наименование организации<span  className="masmediaform__span">*</span></span>
                         <input type="text" className="masmediaform__input"/>
                     </label>
                     <label  className="masmediaform__label">
-                        <span className="masmediaform__span">Юридический адрес*</span>
+
+                        <span>Юридический адрес<span  className="masmediaform__span">*</span></span>
                         <input type="text" className="masmediaform__input"/>
                     </label>
                     <label  className="masmediaform__label">
-                        <span className="masmediaform__span">Веб-сайт* </span>
+
+                        <span>Веб-сайт<span  className="masmediaform__span">*</span></span>
                         <input type="text" className="masmediaform__input"/>
                     </label>
                     <label  className="masmediaform__label">
-                        <span className="masmediaform__span">Рабочий телефон*</span>
+                        <span>Рабочий телефон<span  className="masmediaform__span">*</span></span>
                         <input type="text" className="masmediaform__input"/>
                     </label>
                     <label  className="masmediaform__label">
-                        <span className="masmediaform__span">Email*</span>
+                        <span>Email<span  className="masmediaform__span">*</span></span>
                         <input type="text" className="masmediaform__input"/>
                     </label>
-                    <label  className="masmediaform__label">
-                        <span className="masmediaform__span">Электронная почта*</span>
-                        <input type="text" className="masmediaform__input"/>
-                    </label>
-                    <label  className="masmediaform__label">
-                        <span className="masmediaform__span">Придумайте пароль*</span>
-                        <input type="text" className="masmediaform__input"/>
-                    </label>
-                    <label  className="masmediaform__label">
-                        <span className="masmediaform__span">Подтвердите пароль*</span>
-                        <input type="text" className="masmediaform__input"/>
-                    </label>
+                    <EmailForm/>
+
 
                 </form>
             </div>

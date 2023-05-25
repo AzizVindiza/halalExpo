@@ -1,5 +1,5 @@
 import React from 'react';
-import LoginForm from "./LoginForm/LoginForm";
+import EmailForm from "./EmailForm/EmailForm";
 import BrandForm from "./BrandForm/BrandForm";
 
 const ParticipantForm = () => {
@@ -11,7 +11,7 @@ const ParticipantForm = () => {
 
 
 
-            <LoginForm/>
+            <EmailForm/>
 
         </>
     );
