@@ -1,17 +1,10 @@
 @import "src/sass/base/mixins"
 .masmediaform
-  visibility: hidden
   display: flex
   justify-content: center
-  align-items: center
-  position: fixed
-  background: #00000070
-  top: 0
-  left: 0
-  right: 0
-  bottom: 0
-  z-index: 1000
-  overflow-y: scroll
+
+  &__h2
+    @include text(600,20px,133%,#10923E)
   &__close
     position: absolute
     right: 20px
@@ -21,7 +14,6 @@
     margin-top: 370px
     margin-bottom: 50px
     width: 760px
-    //height: 500px
     background: #ffffff
     padding: 80px 30px
 
@@ -60,11 +52,11 @@
     width: 463px
   &__tp
     margin-top: 15px
-    width: 192px
+    width: 392px
     @include text(400,11px,133%,#000000)
-
     span
       border-bottom: 1px solid #000000
+
 
 
 

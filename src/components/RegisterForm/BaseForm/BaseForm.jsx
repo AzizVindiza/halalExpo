@@ -1,11 +1,8 @@
 import React, {useContext, useState} from 'react';
 import './BaseForm.sass'
-import Btn from "../../Btn/Btn";
 import {CustomContext} from "../../../Context";
-import Stake from "../../Stake/Stake";
-import Branch from "../../Branch/Branch";
-import EmailForm from "../../ParticipantForm/EmailForm/EmailForm";
-import CheckBox from "../../CheckBox/CheckBox";
+
+import MasMediaForm from "../../MasMediaForm/MasMediaForm";
 
 const BaseForm = () => {
     const {close,setClose,changeComponent,setChangeComponent} = useContext(CustomContext)
@@ -145,51 +142,10 @@ const BaseForm = () => {
                                     <input type="tel"/>
                                 </label>
 
-                                {/*<div onClick={() => setActive(!active)} className="baseForm__choose">*/}
-                                {/*    <h4 className="baseForm__h4"> В качестве кого вы хотите посетить HIT EXPO?</h4>*/}
-                                {/*    <div className="baseForm__row">*/}
-                                {/*        <h5 className="baseForm__h5">{select}</h5>*/}
-                                {/*        <div  className={`baseForm__tick ${active ? 'baseForm__tick_active' : ''} `}>*/}
-                                {/*            <svg width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">*/}
-                                {/*                <path d="M11.5 1.66602L6.5 5.33268L1.5 1.66602" stroke="#14181F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>*/}
-                                {/*            </svg>*/}
-
-                                {/*        </div>*/}
-                                {/*        {*/}
-                                {/*            active ?   <ul className="baseForm__select">*/}
-                                {/*                {*/}
-                                {/*                    arr.map((item) => (*/}
-                                {/*                        <li onClick={() => chooseItem(item)} className="baseForm__item">{item}</li>*/}
-                                {/*                    ))*/}
-                                {/*                }*/}
-
-                                {/*            </ul> : ''*/}
-                                {/*        }*/}
-                                {/*    </div>*/}
-
-
-                                {/*</div>*/}
                                 {
-                                    select === "Участник"?
-                                        <>
-                                            <Branch/>
-                                            <Stake/>
-
-                                        </> :
-                                         select === "СМИ"
-                                       ? "" :  <EmailForm/>
+                                         select === "СМИ"  ?  <MasMediaForm/> : ""
 
                                 }
-
-
-                                <CheckBox/>
-
-                                {
-                                    select === "СМИ" || select === "Участник" ? <Btn m={"register"} text={  "Продолжить"}/> :  <Btn m={"register"} text={  "Зарегистрироваться"}/>
-                                }
-
-
-
 
 
                             </form>
