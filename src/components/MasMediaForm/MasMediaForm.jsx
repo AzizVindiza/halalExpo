@@ -50,11 +50,6 @@ const MasMediaForm = () => {
                     </label>
                     <SocialSection/>
                     <EmailForm/>
-                    <Btn m={'masmedia'} text={'Зарегистрироваться'}/>
-                    <p className="masmediaform__tp" >
-                        Нажимая на кнопку, вы даете согласие на обработку своих персональных данных в соответствие с <span className="masmediaform__tp2">политикой конфиденциальности</span>
-                    </p>
-
                 </form>
             </div>
         </div>

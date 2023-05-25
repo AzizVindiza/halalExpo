@@ -1,8 +1,8 @@
 import React from 'react';
 import './BrandForm.sass'
-import EmailForm from "../EmailForm/EmailForm";
-import Btn from "../../Btn/Btn";
+
 import SocialSection from "../../SocialSection/SocialSection";
+import ContactFace from "../ContactFace/ContactFace";
 
 
 const BrandForm = () => {
@@ -10,11 +10,6 @@ const BrandForm = () => {
         <section className="brandForm">
             <div className="brandForm__popup">
                 <div className="brandForm__wrapper">
-                    <div className="brandForm__close">
-                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.16663 1.16675L12.8333 12.8334M1.16663 12.8334L12.8333 1.16675" stroke="black" strokeOpacity="0.5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                        </svg>
-                    </div>
                     <form action="" className="brandForm__form">
                         <label htmlFor="" className="brandForm__label">
                             <span>Наимнование бренда<span  className="brandForm__span">*</span></span>
@@ -113,8 +108,8 @@ const BrandForm = () => {
                             <input type="text"/>
                         </label>
                         <SocialSection/>
-                        <EmailForm/>
-                        <Btn m={"register"} text={"Зарегистрироваться"}/>
+                        <ContactFace/>
+
 
 
 

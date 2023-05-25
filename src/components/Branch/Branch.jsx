@@ -29,8 +29,8 @@ const Branch = () => {
                         {
                             branch ? <ul className="branch__select">
                                 {
-                                    items.map((item) => (
-                                        <li  onClick={() => chooseBranchValue(item)} className="baseForm__item">{item}</li>
+                                    items.map((item,i) => (
+                                        <li key={i} onClick={() => chooseBranchValue(item)} className="baseForm__item">{item}</li>
                                     ))
                                 }
 
