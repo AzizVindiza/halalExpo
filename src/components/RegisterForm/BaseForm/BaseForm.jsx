@@ -12,19 +12,28 @@ const BaseForm = () => {
 
     const [select,setSelect] = useState('Представитель государственных органов') //choose select
     const [active,setActive] = useState(false) // open select
-    const chooseItem = (item) => {
+    const [category,setCategory] = useState(0) // open select
+    const clickOnCategory = (item,i) => { //choose category
         setSelect(item)
+        setCategory(i)
     }
     return (
         <>
             {
                 close ?
                     <section className="baseForm">
-
-
-
                         <div className="baseForm__popup">
+
                             <div className="baseForm__wrapper">
+                                <h2 className="baseForm__title">В качестве кого вы хотите посетить HIT EXPO?</h2>
+
+                                <ul className="baseForm__array">
+                                    {
+                                        arr.map((item,i) => (
+                                            <li onClick={() =>  clickOnCategory(item,i)} className={`baseForm__item ${category === i ? "baseForm__item_active" : ''}`}>{item}</li>
+                                        ))
+                                    }
+                                </ul>
                                 <div onClick={()=>setClose(false)} className="baseForm__close">
                                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1.16663 1.16675L12.8333 12.8334M1.16663 12.8334L12.8333 1.16675" stroke="black" strokeOpacity="0.5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -34,8 +43,9 @@ const BaseForm = () => {
                                 </div>
 
 
-                            <h2 className="baseForm__h2">Регистрация</h2>
-                            <p className="baseForm__p">
+                            <h2 className="baseForm__h2">Регистрация {select === "Посетитель" ?  "Посетителя"  : select === "Участник" ? "Участника" : select === "Эксперт" ? "Эксперта"  : select ==="СМИ" ? "СМИ" : <h2 className={'baseForm__gos'}>{select === "Представитель государственных органов" ? "Представителя государственных органов" : ""}</h2> }</h2>
+
+                                <p className="baseForm__p">
                                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when.
                             </p>
                             <form className="baseForm__form">
@@ -124,30 +134,30 @@ const BaseForm = () => {
                                     <input type="tel"/>
                                 </label>
 
-                                <div onClick={() => setActive(!active)} className="baseForm__choose">
-                                    <h4 className="baseForm__h4"> В качестве кого вы хотите посетить HIT EXPO?</h4>
-                                    <div className="baseForm__row">
-                                        <h5 className="baseForm__h5">{select}</h5>
-                                        <div  className={`baseForm__tick ${active ? 'baseForm__tick_active' : ''} `}>
-                                            <svg width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M11.5 1.66602L6.5 5.33268L1.5 1.66602" stroke="#14181F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                            </svg>
+                                {/*<div onClick={() => setActive(!active)} className="baseForm__choose">*/}
+                                {/*    <h4 className="baseForm__h4"> В качестве кого вы хотите посетить HIT EXPO?</h4>*/}
+                                {/*    <div className="baseForm__row">*/}
+                                {/*        <h5 className="baseForm__h5">{select}</h5>*/}
+                                {/*        <div  className={`baseForm__tick ${active ? 'baseForm__tick_active' : ''} `}>*/}
+                                {/*            <svg width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">*/}
+                                {/*                <path d="M11.5 1.66602L6.5 5.33268L1.5 1.66602" stroke="#14181F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>*/}
+                                {/*            </svg>*/}
 
-                                        </div>
-                                        {
-                                            active ?   <ul className="baseForm__select">
-                                                {
-                                                    arr.map((item) => (
-                                                        <li onClick={() => chooseItem(item)} className="baseForm__item">{item}</li>
-                                                    ))
-                                                }
+                                {/*        </div>*/}
+                                {/*        {*/}
+                                {/*            active ?   <ul className="baseForm__select">*/}
+                                {/*                {*/}
+                                {/*                    arr.map((item) => (*/}
+                                {/*                        <li onClick={() => chooseItem(item)} className="baseForm__item">{item}</li>*/}
+                                {/*                    ))*/}
+                                {/*                }*/}
 
-                                            </ul> : ''
-                                        }
-                                    </div>
+                                {/*            </ul> : ''*/}
+                                {/*        }*/}
+                                {/*    </div>*/}
 
 
-                                </div>
+                                {/*</div>*/}
                                 {
                                     select === "Участник"?
                                         <>

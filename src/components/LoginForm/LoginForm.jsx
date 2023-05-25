@@ -6,7 +6,8 @@ import {CustomContext} from "../../Context";
 import { AiOutlineEyeInvisible,AiOutlineEye} from "react-icons/ai";
 
 const LoginForm = () => {
-    const {setLogin,login,passwordShown, setPasswordShown} = useContext(CustomContext)
+    const {setLogin,passwordShown, setPasswordShown} = useContext(CustomContext)
+    //closeLogin and toggle password
 
 
     const {
@@ -34,7 +35,8 @@ const LoginForm = () => {
                 <h2 className="login__h2">Вход</h2>
                 <form className={'login__form'} onSubmit={handleSubmit(onSubmit)}>
                     <label className="login__label">
-                        Электронная почта*
+                        <span>Электронная почта   <span className={'login__star'}>*</span></span>
+
                         <input type={''}
                                {...register("firstName", {
                                    register: "Поле обязательно у заполнению",
@@ -48,7 +50,7 @@ const LoginForm = () => {
                     </label>
                     <label className="login__password">
 
-                        Ведите пороль*
+                       <span>Ведите пороль *</span>
                         <input type={`${passwordShown ? "text" : "password"}`}
                                {...register("password",{
                                    required:"obez",

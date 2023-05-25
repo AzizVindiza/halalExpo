@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import "./masmediaform.sass"
+import SocialSection from "../SocialSection/SocialSection";
 
 const MasMediaForm = () => {
     return (
@@ -47,6 +48,7 @@ const MasMediaForm = () => {
                         <span className="masmediaform__span">Email*</span>
                         <input type="text" className="masmediaform__input"/>
                     </label>
+                    <SocialSection/>
                     <label  className="masmediaform__label">
                         <span className="masmediaform__span">Электронная почта*</span>
                         <input type="text" className="masmediaform__input"/>
