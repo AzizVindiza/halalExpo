@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import "./contanctFace.sass"
+import ContactData from "../ContactData/ContactData";
 const ContactFace = () => {
     const items = ["Да","Нет"]
     const [openContact,setOpenContact] = useState(false)
@@ -32,7 +33,9 @@ const ContactFace = () => {
                         </ul> : ''
                     }
                 </div>
-
+                {
+                    chooseContact === "Нет" ? <ContactData/> : ""
+                }
 
             </div>
 
