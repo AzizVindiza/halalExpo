@@ -25,6 +25,7 @@ import MembersPage from "./pages/MembersPage/MembersPage";
 import MasMediaForm from "./components/MasMediaForm/MasMediaForm";
 
 import SocialSection from "./components/SocialSection/SocialSection";
+import ParticipantForm from "./components/ParticipantForm/ParticipantForm";
 
 
 
@@ -50,7 +51,8 @@ const router = createBrowserRouter(
             <Route path="members" element={<MembersPage/>}/>
             <Route path="members" element={<MembersPage/>}/>
             <Route path="media" element={<MasMediaForm/>}/>
-            <Route path="social" element={<SocialSection/>}/>
+
+
 
 
 

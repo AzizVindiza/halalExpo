@@ -1,7 +1,8 @@
 import React from 'react';
 import './BrandForm.sass'
-import LoginForm from "../LoginForm/LoginForm";
+import EmailForm from "../EmailForm/EmailForm";
 import Btn from "../../Btn/Btn";
+import SocialSection from "../../SocialSection/SocialSection";
 
 
 const BrandForm = () => {
@@ -9,9 +10,6 @@ const BrandForm = () => {
         <section className="brandForm">
             <div className="brandForm__popup">
                 <div className="brandForm__wrapper">
-                    <h2 className="brandForm__h2">
-                        Регистрация
-                    </h2>
                     <div className="brandForm__close">
                         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1.16663 1.16675L12.8333 12.8334M1.16663 12.8334L12.8333 1.16675" stroke="black" strokeOpacity="0.5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -19,14 +17,15 @@ const BrandForm = () => {
                     </div>
                     <form action="" className="brandForm__form">
                         <label htmlFor="" className="brandForm__label">
-                            Наимнование бренда*
+                            <span>Наимнование бренда<span  className="brandForm__span">*</span></span>
+
                             <input type="text"/>
                         </label>
 
 
 
                         <div className="brandForm__logo">
-                            <p className="brandForm__text">Загрузите логотип компании в  png, jpg, pdf*</p>
+                            <span className="brandForm__text">Загрузите логотип компании в  png, jpg, pdf<span  className="brandForm__span">*</span></span>
                             <div className="brandForm__download">
                                 <h3 className="brandForm__h3">Загрузить</h3>
                                 <div className="brandForm__line">
@@ -39,32 +38,38 @@ const BrandForm = () => {
                         </div>
 
                         <label htmlFor="" className="brandForm__label">
-                            Полное юридическое наименование организации*
+                            <span>Полное юридическое наименование организации<span  className="brandForm__span">*</span></span>
+
                             <input type="text"/>
                         </label>
                         <label htmlFor="" className="brandForm__label">
-                            Юридический адрес*
+                            <span>Юридический адрес<span  className="brandForm__span">*</span></span>
+
                             <input type="text"/>
                         </label>
                         <label htmlFor="" className="brandForm__label">
-                            ИНН*
+                            <span> ИНН<span  className="brandForm__span">*</span></span>
+
                             <input type="text"/>
                         </label>
                         <label htmlFor="" className="brandForm__label">
-                            Р/С*
+                            <span>Р/С<span  className="brandForm__span">*</span></span>
+
                             <input type="text"/>
                         </label>
                         <label htmlFor="" className="brandForm__label">
-                            БИК*
+                            <span>БИК<span  className="brandForm__span">*</span></span>
+
                             <input type="text"/>
                         </label>
                         <label htmlFor="" className="brandForm__label">
-                            ОКПО*
+                            <span>ОКПО<span  className="brandForm__span">*</span></span>
+
                             <input type="text"/>
                         </label>
 
                         <div className="brandForm__logo">
-                            <p className="brandForm__text">Загрузите свидетельство регистрации*</p>
+                            <span className="brandForm__text">Загрузите свидетельство регистрации<span  className="brandForm__span">*</span></span>
                             <div className="brandForm__download">
                                 <h3 className="brandForm__h3">Загрузить</h3>
                                 <div className="brandForm__line">
@@ -78,34 +83,37 @@ const BrandForm = () => {
 
 
                         <label htmlFor="" className="brandForm__label">
-                            ФИО руководителя*
+                            <span> ФИО руководителя<span  className="brandForm__span">*</span></span>
+
                             <input type="text"/>
                         </label>
                         <label htmlFor="" className="brandForm__label">
-                            Должность*
+                            <span>Должность<span  className="brandForm__span">*</span></span>
                             <input type="text"/>
                         </label>
                         <label htmlFor="" className="brandForm__label">
-                            Деятельность компании*
+                            <span>Деятельность компании<span  className="brandForm__span">*</span></span>
                             <input type="text"/>
                         </label>
                         <label htmlFor="" className="brandForm__label">
-                            Опишите товары или услуги компании*
+                            <span>Опишите товары или услуги компании<span  className="brandForm__span">*</span></span>
+
                             <textarea  className='brandForm__label-area' name="" id="" cols="10" rows="4"></textarea>
                         </label>
                         <label htmlFor="" className="brandForm__label">
-                            Веб-сайт*
+                            <span>  Веб-сайт<span  className="brandForm__span">*</span></span>
                             <input type="text"/>
                         </label>
                         <label htmlFor="" className="brandForm__label">
-                            Рабочий телефон*
+                            <span>Рабочий телефон<span  className="brandForm__span">*</span></span>
                             <input type="tel"/>
                         </label>
                         <label htmlFor="" className="brandForm__label">
-                            Email*
+                            <span>Email<span  className="brandForm__span">*</span></span>
                             <input type="text"/>
                         </label>
-                        <LoginForm/>
+                        <SocialSection/>
+                        <EmailForm/>
                         <Btn m={"register"} text={"Зарегистрироваться"}/>
 
 

@@ -4,7 +4,8 @@ import Btn from "../../Btn/Btn";
 import {CustomContext} from "../../../Context";
 import Stake from "../../Stake/Stake";
 import Branch from "../../Branch/Branch";
-import LoginForm from "../../ParticipantForm/LoginForm/LoginForm";
+import EmailForm from "../../ParticipantForm/EmailForm/EmailForm";
+import CheckBox from "../../CheckBox/CheckBox";
 
 const BaseForm = () => {
     const {close,setClose,changeComponent,setChangeComponent} = useContext(CustomContext)
@@ -49,43 +50,51 @@ const BaseForm = () => {
                                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when.
                             </p>
                             <form className="baseForm__form">
-                                <label className="baseForm__label" htmlFor="">Имя
+                                <label className="baseForm__label" htmlFor="">
+                                    <span>Имя<span  className="baseForm__span">*</span></span>
+
                                     <input type="text"/>
                                 </label>
 
 
-                                <label className="baseForm__label" htmlFor="">Фамилия
+                                <label className="baseForm__label" htmlFor="">
+                                    <span>Фамилия<span  className="baseForm__span">*</span></span>
                                     <input type="text"/>
                                 </label>
 
 
-                                <label className="baseForm__label" htmlFor="">Отечество
+                                <label className="baseForm__label" htmlFor="">
+                                    <span>Отечество<span  className="baseForm__span">*</span></span>
                                     <input type="text"/>
                                 </label>
 
 
-                                <label className="baseForm__label" htmlFor="">Email
+                                <label className="baseForm__label" htmlFor="">
+                                    <span>Email<span  className="baseForm__span">*</span></span>
                                     <input type="text"/>
                                 </label>
 
 
-                                <label className="baseForm__label" htmlFor="">Страна
+                                <label className="baseForm__label" htmlFor="">
+                                    <span>Страна<span  className="baseForm__span">*</span></span>
                                     <input type="text"/>
                                 </label>
 
 
-                                <label className="baseForm__label" htmlFor="">Город
+                                <label className="baseForm__label" htmlFor="">
+                                    <span>Город<span  className="baseForm__span">*</span></span>
                                     <input type="text"/>
                                 </label>
 
 
-                                <label className="baseForm__label" htmlFor="">Дата рождения
+                                <label className="baseForm__label" htmlFor="">
+                                    <span>Дата рождения<span  className="baseForm__span">*</span></span>
                                     <input type="date"/>
                                 </label>
 
                                 <div>
                                     <div className="baseForm__passport">
-                                        <p className="baseForm__text">Загрузите паспорт с лицевой стороны*</p>
+                                        <span className="baseForm__text">Загрузите паспорт с лицевой стороны<span  className="baseForm__span">*</span></span>
                                         <div className="baseForm__download">
                                             <h3 className="baseForm__h3">Загрузить</h3>
                                             <div className="baseForm__line">
@@ -99,7 +108,7 @@ const BaseForm = () => {
 
                                     </div>
                                     <div className="baseForm__passport2">
-                                        <p className="baseForm__text">Загрузите паспорт с обратной стороны*</p>
+                                        <span className="baseForm__text">Загрузите паспорт с обратной стороны<span  className="baseForm__span">*</span></span>
                                         <div className="baseForm__download">
                                             <h3 className="baseForm__h3">Загрузить</h3>
                                             <div className="baseForm__line">
@@ -113,7 +122,7 @@ const BaseForm = () => {
 
                                     </div>
                                     <div className="baseForm__self">
-                                        <p className="baseForm__text">Сделайте селфи с паспортом*</p>
+                                        <span  className="baseForm__text">Сделайте селфи с паспортом<span  className="baseForm__span">*</span></span>
                                         <div className="baseForm__download">
                                             <h3 className="baseForm__h3">Загрузить</h3>
                                             <div className="baseForm__line">
@@ -127,10 +136,12 @@ const BaseForm = () => {
 
                                     </div>
                                 </div>
-                                <label className='baseForm__label' htmlFor="">Телефон*
+                                <label className='baseForm__label' htmlFor="">
+                                    <span>Телефон<span  className="baseForm__span">*</span></span>
                                     <input type="tel"/>
                                 </label>
-                                <label className='baseForm__label' htmlFor="">WhatsApp*
+                                <label className='baseForm__label' htmlFor="">
+                                    <span>WhatsApp<span  className="baseForm__span">*</span></span>
                                     <input type="tel"/>
                                 </label>
 
@@ -166,51 +177,13 @@ const BaseForm = () => {
 
                                         </> :
                                          select === "СМИ"
-                                       ? "" :  <LoginForm/>
+                                       ? "" :  <EmailForm/>
 
                                 }
 
-                                <div className="baseForm__check">
-                                    <div className="baseForm__choose">
-                                        <h2 className="baseForm__name">Я заинтересован в</h2>
-                                        <label htmlFor="">
-                                            <input type="checkbox"/>
-                                            <span>Посещение на HIT EXPO</span>
-                                        </label>
-                                        <label htmlFor="">
-                                            <input type="checkbox"/>
-                                            <span>Участие на HIT EXPO</span>
-                                        </label>
-                                        <label htmlFor="">
-                                            <input type="checkbox"/>
-                                            <span>Поиске проектов</span>
-                                        </label>
-                                        <label htmlFor="">
-                                            <input type="checkbox"/>
-                                            <span>Другом</span>
-                                        </label>
-                                    </div>
-                                    <div className="baseForm__choose">
-                                        <h2 className="baseForm__name" >Как вы узнали о мероприятие</h2>
-                                        <label htmlFor="">
-                                            <input type="checkbox"/>
-                                            <span>Инстаграм</span>
-                                        </label>
-                                        <label htmlFor="">
-                                            <input type="checkbox"/>
-                                            <span>ТВ, Радио</span>
-                                        </label>
-                                        <label htmlFor="">
-                                            <input type="checkbox"/>
-                                            <span>Новостные порталы</span>
-                                        </label>
-                                        <label htmlFor="">
-                                            <input type="checkbox"/>
-                                            <span>Другое</span>
-                                        </label>
 
-                                    </div>
-                                </div>
+                                <CheckBox/>
+
                                 {
                                     select === "СМИ" || select === "Участник" ? <Btn m={"register"} text={  "Продолжить"}/> :  <Btn m={"register"} text={  "Зарегистрироваться"}/>
                                 }
