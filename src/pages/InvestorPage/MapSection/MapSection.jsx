@@ -8,11 +8,11 @@ const MapSection = () => {
                 <div className="mapSection__block">
 
                     <div className="mapSection__image">
-                        <h2 className="mapSection__h2">Lorem Ipsum is simply dummy </h2>
+                        <h2 className="mapSection__h2">инвесторы hit expo </h2>
                         <img src={pic} alt="" className="mapSection__img"/>
                     </div>
                 </div>
-                <p className="mapSection__p">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen. Lorem Ipsum is simply </p>
+                <p className="mapSection__p">HIT Expo-2023 предоставляет вам возможность ознакомиться с профилями наших инвесторов, чтобы вы могли узнать об их экспертизе, бизнес-подходе и инвестиционной деятельности. Приглашенные инвесторы представляют различные отрасли и области, и их присутствие на нашем мероприятии открывает уникальные возможности для новых связей и партнерств. </p>
             </div>
         </section>
     );
