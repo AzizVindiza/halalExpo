@@ -150,7 +150,7 @@ const BaseForm = () => {
                                 </label>
 
                                 {
-                                         select === "СМИ"  ?  <MasMediaForm/> : select === "Посетитель" ? <><EmailForm/><CheckBox/></> : select === "Участник" ? <><Stake/><Branch/><ParticipantForm/></>: ''
+                                         select === "СМИ"  ?  <MasMediaForm/> : select === "Посетитель" ? <><EmailForm/><CheckBox/></> : select === "Участник" ? <><Stake/><Branch/><ParticipantForm/></>: <><EmailForm/><CheckBox/></>
 
                                 }
 
