@@ -10,7 +10,8 @@ const OfficeMapSection = () => {
                             <circle cx="30" cy="30" r="30" fill="#10923E"/>
                             <path d="M39.125 37.6598C38.8132 37.5942 38.5038 37.522 38.1971 37.4432C38.2383 37.405 38.2789 37.3658 38.3189 37.3258L38.9006 36.7442C38.9752 36.7614 39.05 36.7783 39.125 36.7948V37.6598ZM22.6742 21.6811C22.6342 21.7211 22.595 21.7617 22.5568 21.803C22.478 21.4962 22.4058 21.1868 22.3402 20.875H23.2052C23.2217 20.95 23.2386 21.0248 23.2558 21.0994L22.6742 21.6811Z" stroke="white" strokeWidth="9" strokeLinecap="round" strokeLinejoin="round"/>
                         </svg>
-                        +996 (508) 312 012
+                        {/*+996 (508) 312 012*/}
+                        +996 (502) 022 220
                     </a>
                     <a className={"office__link"} href="mailto:info@ameca.site">
                         <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -19,7 +20,8 @@ const OfficeMapSection = () => {
                             <path d="M42.1667 22.208L30.5 30.958L18.8334 22.208" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                         </svg>
 
-                        info@ameca.site
+                        {/*info@ameca.site*/}
+                        hitexpo2023@gmail.com
                     </a>
                     <a className={"office__link"} href="https://goo.gl/maps/S1gXNZEyAanEQaES8">
                         <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">

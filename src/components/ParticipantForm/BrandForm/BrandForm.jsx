@@ -5,7 +5,8 @@ import SocialSection from "../../SocialSection/SocialSection";
 import ContactFace from "../ContactFace/ContactFace";
 
 
-const BrandForm = () => {
+const
+    BrandForm = () => {
     return (
         <section className="brandForm">
             <div className="brandForm__popup">
@@ -105,6 +106,7 @@ const BrandForm = () => {
                         </label>
                         <label htmlFor="" className="brandForm__label">
                             <span>Email<span  className="brandForm__span">*</span></span>
+
                             <input type="text"/>
                         </label>
                         <SocialSection/>

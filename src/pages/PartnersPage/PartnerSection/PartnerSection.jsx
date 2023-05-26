@@ -8,7 +8,7 @@ const PartnerSection = () => {
                 <div className="partnerSection__content">
                     <div className="partnerSection__inner">
                         <h2 className="partnerSection__h2">Партнеры <span className={'partnerSection__span'}>HIT EXPO</span></h2>
-                        <p className="partnerSection__p">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen. Lorem Ipsum is simply </p>
+                        <p className="partnerSection__p">Стать партнером Halal Investment and Trade Expo 2023 - это возможность установить важные деловые связи в халяльной индустрии и получить целый ряд преимуществ:</p>
                     </div>
                     <div className="partnerSection__pic">
                         <img src={logo} className={'partnerSection__image'} alt=""/>

@@ -10,11 +10,15 @@
     border-radius: 3px
     width: 572px
   &__row
+    padding: 8px 29px 0 11px
     display: flex
     column-gap: 6px
   &__h3
+
+    box-shadow: inset 10px 10px 10px rgba(255, 255, 255, 0.2), inset -4px -4px 10px rgba(0, 0, 0, 0.1)
+    border-radius: 3px
     padding: 13px 21px
-    background: #9FD3B2
+    background: #FFFFFF
     width: 227px
     @include text(800,36px,133%,#40A865)
   &__title
@@ -29,6 +33,7 @@
     @include text(700,24px,133%,#10923E)
 
   &__img
+
     width: 257px
     height: 273px
   &__ul
@@ -36,6 +41,11 @@
     flex-direction: column
     row-gap: 7px
     margin-bottom: 30px
+  &__li
+    @include text(500,15px,133%,#000000)
+    list-style-type: disc
+
+
   &__price
     width: 71px
     margin-bottom: 40px
