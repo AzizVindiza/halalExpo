@@ -13,7 +13,7 @@ export const arr1 = [
     },
     {
         name: 'Гостиницы ',
-        link: ''
+        link: 'hotel'
     }
 ]
 export default arr1

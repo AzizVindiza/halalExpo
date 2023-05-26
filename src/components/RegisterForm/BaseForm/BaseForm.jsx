@@ -1,6 +1,7 @@
 import React, {useContext, useState} from 'react';
 import './BaseForm.sass'
-
+import PhoneInput from "react-phone-input-2"
+import "react-phone-input-2/lib/bootstrap.css";
 import {CustomContext} from "../../../Context";
 
 import MasMediaForm from "../../MasMediaForm/MasMediaForm";
@@ -18,6 +19,8 @@ const BaseForm = () => {
     const [select,setSelect] = useState('Представитель государственных органов') //choose select
     const [active,setActive] = useState(false) // open select
     const [category,setCategory] = useState(0) // open select
+    const [number,setNumber] = useState()
+    const [whatsApp,setWatsApp,] = useState()
     const clickOnCategory = (item,i) => { //choose category
         setSelect(item)
         setCategory(i)
@@ -142,11 +145,11 @@ const BaseForm = () => {
                                 </div>
                                 <label className='baseForm__label' htmlFor="">
                                     <span>Телефон<span  className="baseForm__span">*</span></span>
-                                    <input type="tel"/>
+                                    <PhoneInput country={"eg"}  enableSearch={true}  className={"baseForm__number"} value={number} onChange={() => setNumber(number)}/>
                                 </label>
                                 <label className='baseForm__label' htmlFor="">
                                     <span>WhatsApp<span  className="baseForm__span">*</span></span>
-                                    <input type="tel"/>
+                                    <PhoneInput country={"eg"} enableSearch={true} className={"baseForm__number"} value={whatsApp} onChange={() => setWatsApp(whatsApp)}/>
                                 </label>
 
                                 {

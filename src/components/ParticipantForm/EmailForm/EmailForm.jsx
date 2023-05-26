@@ -12,7 +12,7 @@ const EmailForm = () => {
         <section className="emailForm">
             <label htmlFor="" className="emailForm__label">
                 <span>Электронная почта<span  className="emailForm__span">*</span></span>
-                <input type="text"/>
+                <input type="email"/>
             </label>
 
             <label  htmlFor="" className="emailForm__label">

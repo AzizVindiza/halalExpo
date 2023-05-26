@@ -26,6 +26,7 @@ import MasMediaForm from "./components/MasMediaForm/MasMediaForm";
 
 import SocialSection from "./components/SocialSection/SocialSection";
 import ParticipantForm from "./components/ParticipantForm/ParticipantForm";
+import Hotel from "./components/Hotel/Hotel";
 
 
 
@@ -50,6 +51,7 @@ const router = createBrowserRouter(
             <Route path="stand" element={<StandPage/>}/>
             <Route path="members" element={<MembersPage/>}/>
             <Route path="members" element={<MembersPage/>}/>
+            <Route path="hotel" element={<Hotel/>}/>
 
 
 

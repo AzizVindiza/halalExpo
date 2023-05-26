@@ -9,7 +9,7 @@
     },
     {
         name: 'Гостиницы',
-        link: ''
+        link: 'hotel'
     }
 
 ]
