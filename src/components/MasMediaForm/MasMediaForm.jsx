@@ -16,9 +16,7 @@ const MasMediaForm = () => {
         handleSubmit,
 
     } = useForm();
-    const onSubmit = (data) => {
-        alert(JSON.stringify(data))
-    }
+
 
     return (
         <div className={'masmediaform'}>

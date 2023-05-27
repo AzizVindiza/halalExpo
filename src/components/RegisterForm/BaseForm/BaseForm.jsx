@@ -69,7 +69,7 @@ const BaseForm = () => {
                                 <p className="baseForm__p">
                                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when.
                             </p>
-                            <form className="baseForm__form">
+                            <form onSubmit={handleSubmit(onSubmit)} className="baseForm__form">
                                 <label className="baseForm__label" htmlFor="">
                                     <span>Имя<span  className="baseForm__span">*</span></span>
 
@@ -99,7 +99,7 @@ const BaseForm = () => {
                                         })}
 
                                         type="text"/>
-                                    <span> {errors.login && errors.login.message}</span>
+                                    <span> {errors.lastName && errors.lastName.message}</span>
                                 </label>
 
 
@@ -309,9 +309,9 @@ const BaseForm = () => {
 
                                 }
 
-
-                            </form>
                                 <Btn type={"submit"} m={'masmedia'} text={'Зарегистрироваться'}/>
+                            </form>
+
                                 <p className="baseForm__tp" >
                                     Нажимая на кнопку, вы даете согласие на обработку своих персональных данных в соответствие с <span className="masmediaform__tp2">политикой конфиденциальности</span>
                                 </p>
