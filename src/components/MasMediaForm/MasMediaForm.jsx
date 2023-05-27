@@ -3,9 +3,23 @@ import "./masmediaform.sass"
 import EmailForm from "../ParticipantForm/EmailForm/EmailForm";
 import SocialSection from "../SocialSection/SocialSection";
 import Btn from "../Btn/Btn";
+import {useForm} from "react-hook-form";
 
 
 const MasMediaForm = () => {
+    const {
+        register,
+        formState: {
+            errors
+
+        },
+        handleSubmit,
+
+    } = useForm();
+    const onSubmit = (data) => {
+        alert(JSON.stringify(data))
+    }
+
     return (
         <div className={'masmediaform'}>
             <div className="masmediaform__wrapper">
@@ -27,26 +41,106 @@ const MasMediaForm = () => {
                 <form  className="masmediaform__form">
                     <label  className="masmediaform__label">
                         <span>Полное юридическое наименование организации<span  className="masmediaform__span">*</span></span>
-                        <input type="text" className="masmediaform__input"/>
+                        <input type="text" className="masmediaform__input"
+                               {...register('organization',{
+                                   required:{
+                                       message:"Поле обязателен к заполнению",
+                                       value: true
+                                   },
+                                   minLength: {
+                                       message: "Минимальная длина 3 символа",
+                                       value: 3
+                                   }
+
+
+                               })}
+
+                        />
                     </label>
                     <label  className="masmediaform__label">
 
                         <span>Юридический адрес<span  className="masmediaform__span">*</span></span>
-                        <input type="text" className="masmediaform__input"/>
+                        <input type="text" className="masmediaform__input"
+                               {...register('developmentEmail',{
+                                   required:{
+                                       message:"Поле обязателен к заполнению",
+                                       value: true
+                                   },
+                                   minLength: {
+                                       message: "Минимальная длина 10 символа",
+                                       value: 0
+                                   },
+
+
+
+                               })}
+                        />
                     </label>
                     <label  className="masmediaform__label">
 
                         <span>Веб-сайт<span  className="masmediaform__span">*</span></span>
-                        <input type="text" className="masmediaform__input"/>
+                        <input type="text" className="masmediaform__input"
+                               {...register('website',{
+                                   required:{
+                                       message:"Поле обязателен к заполнению",
+                                       value: true
+                                   },
+                                   minLength: {
+                                       message: "Минимальная длина 10 символа",
+                                       value: 0
+                                   },
+
+
+
+                               })}
+                        />
+                        <span className='form__error'>{errors.website && errors.website.message}</span>
                     </label>
                     <label  className="masmediaform__label">
                         <span>Рабочий телефон<span  className="masmediaform__span">*</span></span>
-                        <input type="text" className="masmediaform__input"/>
+                        <input type="tel" className="masmediaform__input"
+                               {...register('phone',{
+                                   required:{
+                                       message:"Поле обязателено к заполнению",
+                                       value: true
+                                   },
+                                   minLength: {
+                                       message: "Минимальная длина 6 символа",
+                                       value: 0
+                                   },
+                                   pattern:{
+                                       message:"Напишите правильно свой номер",
+
+                                   }
+
+
+                               })}
+                        />
+                        <span className='form__error'>{errors.phone && errors.phone.message}</span>
                     </label>
                     <label  className="masmediaform__label">
 
-                        <span className="masmediaform__span">Email*</span>
-                        <input type="text" className="masmediaform__input"/>
+                        <span >Email</span><span className="masmediaform__span">*</span>
+                        <input type="text" className="masmediaform__input"
+                               {...register('emailMas',{
+                                   required:{
+                                       message:"Поле Email , обязателен к заполнению",
+                                       value: true
+                                   },
+                                   minLength: {
+                                       message: "Минимальная длина 10 символа",
+                                       value: 0
+                                   },
+                                   pattern:{
+                                       message:"Напишите правильно свой email",
+                                       value: /^[^ ]+@[^ ]+\.[a-z]{2,5}$/
+                                   }
+
+
+                               })}
+
+                        />
+                        <span className='form__error'>{errors.emailMas && errors.emailMas.message}</span>
                     </label>
                     <SocialSection/>
                     <EmailForm/>

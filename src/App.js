@@ -44,6 +44,12 @@ const router = createBrowserRouter(
             <Route path="expect" element={<ExpectPage/>}/>
             <Route path="benefits" element={<BenefitsPage/>}/>
             <Route path="members" element={<MembersPage/>}/>
+<<<<<<< HEAD
+
+            <Route path="members" element={<MembersPage/>}/>
+
+=======
+>>>>>>> 6a764003dd0cb06b21666657d44d1a935e2d9e60
             <Route path="hotel" element={<Hotel/>}/>
             <Route path="stand" element={<StandPage/>}/>
         </Route>
