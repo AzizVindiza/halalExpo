@@ -12,8 +12,11 @@ import Stake from "../../Stake/Stake";
 import Branch from "../../Branch/Branch";
 import ParticipantForm from "../../ParticipantForm/ParticipantForm";
 import {useForm} from "react-hook-form";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const BaseForm = () => {
+    const notify = () => toast("Wow so easy!");
     const {
         register,
         formState: {
@@ -25,6 +28,7 @@ const BaseForm = () => {
     } = useForm({mode:"onBlur"});
     const onSubmit = (data) => {
         console.log(data)
+        notify('Ваша форма отпралена')
     }
     const {close,setClose} = useContext(CustomContext)
     const arr = ["Представитель государственных органов","СМИ","Посетитель","Участник","Эксперт"]
@@ -145,7 +149,7 @@ const BaseForm = () => {
 
                                         })}
                                         type="text"/>
-                                    <span> {errors.login && errors.login.message}</span>
+                                    <span> {errors.emailSecond && errors.emailSecond.message}</span>
                                 </label>
 
 
@@ -168,14 +172,14 @@ const BaseForm = () => {
 
                                         })}
                                         type="text"/>
-                                    <span> {errors.login && errors.login.message}</span>
+                                    <span> {errors.country && errors.country.message}</span>
                                 </label>
 
 
                                 <label className="baseForm__label" htmlFor="">
                                     <span>Город<span  className="baseForm__span">*</span></span>
                                     <input
-                                        {...register("сшен",{
+                                        {...register("city",{
                                             required:{
                                                 message:"Заполните город",
                                                 value:true
@@ -191,7 +195,7 @@ const BaseForm = () => {
 
                                         })}
                                         type="text"/>
-                                    <span> {errors.login && errors.login.message}</span>
+                                    <span> {errors.city && errors.city.message}</span>
                                 </label>
 
 
@@ -214,7 +218,7 @@ const BaseForm = () => {
 
                                         })}
                                         type="date"/>
-                                    <span> {errors.login && errors.login.message}</span>
+                                    <span> {errors.date && errors.date.message}</span>
                                 </label>
 
                                 <div>
@@ -261,53 +265,53 @@ const BaseForm = () => {
 
                                     </div>
                                 </div>
-                                <label className='baseForm__label' htmlFor="">
-                                    <span>Телефон<span  className="baseForm__span">*</span></span>
-                                    <PhoneInput
-                                        {...register("number",{
-                                            required:{
-                                                message:"Заполните номер",
-                                                value:true
-                                            },
-                                            maxLength: {
-                                                message: 'Максимальная длинна',
-                                                value: 15
-                                            },
-                                            minLength:{
-                                                message: 'Минимальная длинна',
-                                                value: 3
-                                            }
+                                {/*<label className='baseForm__label' htmlFor="">*/}
+                                {/*    <span>Телефон<span  className="baseForm__span">*</span></span>*/}
+                                {/*    <PhoneInput*/}
+                                {/*        {...register("number",{*/}
+                                {/*            required:{*/}
+                                {/*                message:"Заполните номер",*/}
+                                {/*                value:true*/}
+                                {/*            },*/}
+                                {/*            maxLength: {*/}
+                                {/*                message: 'Максимальная длинна',*/}
+                                {/*                value: 15*/}
+                                {/*            },*/}
+                                {/*            minLength:{*/}
+                                {/*                message: 'Минимальная длинна',*/}
+                                {/*                value: 3*/}
+                                {/*            }*/}
 
-                                        })}
-                                        country={"eg"}  enableSearch={true}  className={"baseForm__number"} value={number} onChange={() => setNumber(number)}/>
-                                    <span> {errors.login && errors.login.message}</span>
-                                </label>
-                                <label className='baseForm__label' htmlFor="">
-                                    <span>WhatsApp<span  className="baseForm__span">*</span></span>
-                                    <PhoneInput
-                                        {...register("whatsApp",{
-                                            required:{
-                                                message:"Заполните поле",
-                                                value:true
-                                            },
-                                            maxLength: {
-                                                message: 'Максимальная длинна',
-                                                value: 15
-                                            },
-                                            minLength:{
-                                                message: 'Минимальная длинна',
-                                                value: 3
-                                            }
+                                {/*        })}*/}
+                                {/*        country={"eg"}  enableSearch={true}  className={"baseForm__number"} value={number} onChange={() => setNumber(number)}/>*/}
+                                {/*    <span> {errors.number && errors.number.message}</span>*/}
+                                {/*</label>*/}
+                                {/*<label className='baseForm__label' htmlFor="">*/}
+                                {/*    <span>WhatsApp<span  className="baseForm__span">*</span></span>*/}
+                                {/*    <PhoneInput*/}
+                                {/*        {...register("whatsApp",{*/}
+                                {/*            required:{*/}
+                                {/*                message:"Заполните поле",*/}
+                                {/*                value:true*/}
+                                {/*            },*/}
+                                {/*            maxLength: {*/}
+                                {/*                message: 'Максимальная длинна',*/}
+                                {/*                value: 15*/}
+                                {/*            },*/}
+                                {/*            minLength:{*/}
+                                {/*                message: 'Минимальная длинна',*/}
+                                {/*                value: 3*/}
+                                {/*            }*/}
 
-                                        })}
-                                        country={"eg"} enableSearch={true} className={"baseForm__number"} value={whatsApp} onChange={() => setWatsApp(whatsApp)}/>
-                                    <span> {errors.login && errors.login.message}</span>
-                                </label>
+                                {/*        })}*/}
+                                {/*        country={"eg"} enableSearch={true} className={"baseForm__number"} value={whatsApp} onChange={() => setWatsApp(whatsApp)}/>*/}
+                                {/*    <span> {errors.whatsApp && errors.whatsApp.message}</span>*/}
+                                {/*</label>*/}
 
-                                {
-                                         select === "СМИ"  ?  <MasMediaForm/> : select === "Посетитель" ? <><EmailForm/><CheckBox/></> : select === "Участник" ? <><Stake/><Branch/><ParticipantForm/></>: <><EmailForm/><CheckBox/></>
+                                {/*{*/}
+                                {/*         select === "СМИ"  ?  <MasMediaForm/> : select === "Посетитель" ? <><EmailForm /><CheckBox/></> : select === "Участник" ? <><Stake/><Branch/><ParticipantForm/></>: <><EmailForm/><CheckBox/></>*/}
 
-                                }
+                                {/*}*/}
 
                                 <Btn type={"submit"} m={'masmedia'} text={'Зарегистрироваться'}/>
                             </form>

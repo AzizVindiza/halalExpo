@@ -15,9 +15,7 @@ const EmailForm = () => {
         handleSubmit,
 
     } = useForm();
-    const onSubmit = (data) => {
-        alert(JSON.stringify(data))
-    }
+
     const {passwordShown, setPasswordShown,passwordShown2,setPasswordShown2} = useContext(CustomContext)
 
 
@@ -35,10 +33,10 @@ const EmailForm = () => {
                         message: "Минимальная длина 10 символа",
                         value: 0
                     },
-                    pattern:{
-                        message:"Напишите правильно свой email",
-                        value: /^[^ ]+@[^ ]+\.[a-z]{2,5}$/
-                    }
+                    // pattern:{
+                    //     message:"Напишите правильно свой email",
+                    //     value: /^[^ ]+@[^ ]+\.[a-z]{2,5}$/
+                    // }
 
 
                 })}/>
@@ -58,10 +56,10 @@ const EmailForm = () => {
                                message: "Минимальная длина 8 символа",
                                value: 0
                            },
-                           pattern:{
-                               value: /(?=.*[0-9])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{8,}/g,
-                               message:'Пароль должен содержать не менее 8 символов'
-                           }
+                           // pattern:{
+                           //     value: /(?=.*[0-9])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{8,}/g,
+                           //     message:'Пароль должен содержать не менее 8 символов'
+                           // }
                        })}
 
                 />
@@ -87,10 +85,10 @@ const EmailForm = () => {
                                message: "Минимальная длина 8 символа",
                                value: 0
                            },
-                           pattern:{
-                               value: /(?=.*[0-9])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{8,}/g,
-                               message:'Пароль должен содержать не менее 8 символов'
-                           }
+                           // pattern:{
+                           //     value: /(?=.*[0-9])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{8,}/g,
+                           //     message:'Пароль должен содержать не менее 8 символов'
+                           // }
                        })}
 
 
