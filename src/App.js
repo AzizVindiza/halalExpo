@@ -20,7 +20,6 @@ import ForumPage from "./pages/ForumPage/ForumPage";
 import PlacePage from "./pages/PlacePage/PlacePage";
 import ExpectPage from "./pages/ExpectPage/ExpectPage";
 import BenefitsPage from "./pages/BenefitsPage/BenefitsPage";
-import StandPage from "./pages/StandPage/StandPage";
 import MembersPage from "./pages/MembersPage/MembersPage";
 import Hotel from "./components/Hotel/Hotel";
 import StandPage from "./pages/RasulPage/StandPage";

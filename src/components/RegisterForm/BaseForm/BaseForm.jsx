@@ -11,8 +11,21 @@ import Btn from "../../Btn/Btn";
 import Stake from "../../Stake/Stake";
 import Branch from "../../Branch/Branch";
 import ParticipantForm from "../../ParticipantForm/ParticipantForm";
+import {useForm} from "react-hook-form";
 
 const BaseForm = () => {
+    const {
+        register,
+        formState: {
+            errors
+
+        },
+        handleSubmit,
+
+    } = useForm({mode:"onBlur"});
+    const onSubmit = (data) => {
+        console.log(data)
+    }
     const {close,setClose} = useContext(CustomContext)
     const arr = ["Представитель государственных органов","СМИ","Посетитель","Участник","Эксперт"]
 
@@ -60,43 +73,148 @@ const BaseForm = () => {
                                 <label className="baseForm__label" htmlFor="">
                                     <span>Имя<span  className="baseForm__span">*</span></span>
 
-                                    <input type="text"/>
+                                    <input
+
+                                        type="text"/>
                                 </label>
 
 
                                 <label className="baseForm__label" htmlFor="">
                                     <span>Фамилия<span  className="baseForm__span">*</span></span>
-                                    <input type="text"/>
+                                    <input
+                                        {...register("lastName",{
+                                            required:{
+                                                message:"Заполните email",
+                                                value:true
+                                            },
+                                            maxLength: {
+                                                message: 'Максимальная длинна',
+                                                value: 15
+                                            },
+                                            minLength:{
+                                                message: 'Минимальная длинна',
+                                                value: 3
+                                            }
+
+                                        })}
+
+                                        type="text"/>
+                                    <span> {errors.login && errors.login.message}</span>
                                 </label>
 
 
                                 <label className="baseForm__label" htmlFor="">
                                     <span>Отечество<span  className="baseForm__span">*</span></span>
-                                    <input type="text"/>
+                                    <input
+                                        {...register("thirdName",{
+                                            required:{
+                                                message:"Заполните email",
+                                                value:true
+                                            },
+                                            maxLength: {
+                                                message: 'Максимальная длинна',
+                                                value: 15
+                                            },
+                                            minLength:{
+                                                message: 'Минимальная длинна',
+                                                value: 3
+                                            }
+
+                                        })}
+                                        type="text"/>
+                                    <span> {errors.login && errors.login.message}</span>
                                 </label>
 
 
                                 <label className="baseForm__label" htmlFor="">
                                     <span>Email<span  className="baseForm__span">*</span></span>
-                                    <input type="text"/>
+                                    <input
+                                        {...register("emailSecond",{
+                                            required:{
+                                                message:"Заполните email",
+                                                value:true
+                                            },
+                                            maxLength: {
+                                                message: 'Максимальная длинна',
+                                                value: 15
+                                            },
+                                            minLength:{
+                                                message: 'Минимальная длинна',
+                                                value: 3
+                                            }
+
+                                        })}
+                                        type="text"/>
+                                    <span> {errors.login && errors.login.message}</span>
                                 </label>
 
 
                                 <label className="baseForm__label" htmlFor="">
                                     <span>Страна<span  className="baseForm__span">*</span></span>
-                                    <input type="text"/>
+                                    <input
+                                        {...register("country",{
+                                            required:{
+                                                message:"Заполните country",
+                                                value:true
+                                            },
+                                            maxLength: {
+                                                message: 'Максимальная длинна',
+                                                value: 15
+                                            },
+                                            minLength:{
+                                                message: 'Минимальная длинна',
+                                                value: 3
+                                            }
+
+                                        })}
+                                        type="text"/>
+                                    <span> {errors.login && errors.login.message}</span>
                                 </label>
 
 
                                 <label className="baseForm__label" htmlFor="">
                                     <span>Город<span  className="baseForm__span">*</span></span>
-                                    <input type="text"/>
+                                    <input
+                                        {...register("сшен",{
+                                            required:{
+                                                message:"Заполните город",
+                                                value:true
+                                            },
+                                            maxLength: {
+                                                message: 'Максимальная длинна',
+                                                value: 15
+                                            },
+                                            minLength:{
+                                                message: 'Минимальная длинна',
+                                                value: 3
+                                            }
+
+                                        })}
+                                        type="text"/>
+                                    <span> {errors.login && errors.login.message}</span>
                                 </label>
 
 
                                 <label className="baseForm__label" htmlFor="">
                                     <span>Дата рождения<span  className="baseForm__span">*</span></span>
-                                    <input type="date"/>
+                                    <input
+                                        {...register("date",{
+                                            required:{
+                                                message:"Заполните дату",
+                                                value:true
+                                            },
+                                            maxLength: {
+                                                message: 'Максимальная длинна',
+                                                value: 15
+                                            },
+                                            minLength:{
+                                                message: 'Минимальная длинна',
+                                                value: 3
+                                            }
+
+                                        })}
+                                        type="date"/>
+                                    <span> {errors.login && errors.login.message}</span>
                                 </label>
 
                                 <div>
@@ -145,11 +263,45 @@ const BaseForm = () => {
                                 </div>
                                 <label className='baseForm__label' htmlFor="">
                                     <span>Телефон<span  className="baseForm__span">*</span></span>
-                                    <PhoneInput country={"eg"}  enableSearch={true}  className={"baseForm__number"} value={number} onChange={() => setNumber(number)}/>
+                                    <PhoneInput
+                                        {...register("number",{
+                                            required:{
+                                                message:"Заполните номер",
+                                                value:true
+                                            },
+                                            maxLength: {
+                                                message: 'Максимальная длинна',
+                                                value: 15
+                                            },
+                                            minLength:{
+                                                message: 'Минимальная длинна',
+                                                value: 3
+                                            }
+
+                                        })}
+                                        country={"eg"}  enableSearch={true}  className={"baseForm__number"} value={number} onChange={() => setNumber(number)}/>
+                                    <span> {errors.login && errors.login.message}</span>
                                 </label>
                                 <label className='baseForm__label' htmlFor="">
                                     <span>WhatsApp<span  className="baseForm__span">*</span></span>
-                                    <PhoneInput country={"eg"} enableSearch={true} className={"baseForm__number"} value={whatsApp} onChange={() => setWatsApp(whatsApp)}/>
+                                    <PhoneInput
+                                        {...register("whatsApp",{
+                                            required:{
+                                                message:"Заполните поле",
+                                                value:true
+                                            },
+                                            maxLength: {
+                                                message: 'Максимальная длинна',
+                                                value: 15
+                                            },
+                                            minLength:{
+                                                message: 'Минимальная длинна',
+                                                value: 3
+                                            }
+
+                                        })}
+                                        country={"eg"} enableSearch={true} className={"baseForm__number"} value={whatsApp} onChange={() => setWatsApp(whatsApp)}/>
+                                    <span> {errors.login && errors.login.message}</span>
                                 </label>
 
                                 {
@@ -159,7 +311,7 @@ const BaseForm = () => {
 
 
                             </form>
-                                <Btn m={'masmedia'} text={'Зарегистрироваться'}/>
+                                <Btn type={"submit"} m={'masmedia'} text={'Зарегистрироваться'}/>
                                 <p className="baseForm__tp" >
                                     Нажимая на кнопку, вы даете согласие на обработку своих персональных данных в соответствие с <span className="masmediaform__tp2">политикой конфиденциальности</span>
                                 </p>

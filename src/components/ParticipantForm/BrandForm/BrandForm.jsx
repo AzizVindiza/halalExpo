@@ -3,19 +3,44 @@ import './BrandForm.sass'
 
 import SocialSection from "../../SocialSection/SocialSection";
 import ContactFace from "../ContactFace/ContactFace";
+import {useForm} from "react-hook-form";
 
 
 const
     BrandForm = () => {
+        const {
+            register,
+            formState: {
+                errors
+
+            },
+            handleSubmit,
+
+        } = useForm({mode:"onBlur"});
     return (
         <section className="brandForm">
             <div className="brandForm__popup">
                 <div className="brandForm__wrapper">
-                    <form action="" className="brandForm__form">
+                    <div className="brandForm__form">
                         <label htmlFor="" className="brandForm__label">
                             <span>Наимнование бренда<span  className="brandForm__span">*</span></span>
+                            <input
+                                {...register("nameBrand",{
+                                    required:{
+                                        message:"Заполните email",
+                                        value:true
+                                    },
+                                    maxLength: {
+                                        message: 'Максимальная длинна',
+                                        value: 15
+                                    },
+                                    minLength:{
+                                        message: 'Минимальная длинна',
+                                        value: 3
+                                    }
 
-                            <input type="text"/>
+                                })}
+                                type="text"/>
                         </label>
 
 
@@ -36,32 +61,128 @@ const
                         <label htmlFor="" className="brandForm__label">
                             <span>Полное юридическое наименование организации<span  className="brandForm__span">*</span></span>
 
-                            <input type="text"/>
+                            <input
+                                {...register("nameOrganisation",{
+                                    required:{
+                                        message:"Заполните email",
+                                        value:true
+                                    },
+                                    maxLength: {
+                                        message: 'Максимальная длинна',
+                                        value: 15
+                                    },
+                                    minLength:{
+                                        message: 'Минимальная длинна',
+                                        value: 3
+                                    }
+
+                                })}
+                                type="text"/>
                         </label>
                         <label htmlFor="" className="brandForm__label">
                             <span>Юридический адрес<span  className="brandForm__span">*</span></span>
 
-                            <input type="text"/>
+                            <input
+                                {...register("developmentAddress",{
+                                    required:{
+                                        message:"Заполните email",
+                                        value:true
+                                    },
+                                    maxLength: {
+                                        message: 'Максимальная длинна',
+                                        value: 15
+                                    },
+                                    minLength:{
+                                        message: 'Минимальная длинна',
+                                        value: 3
+                                    }
+
+                                })}
+                                type="text"/>
                         </label>
                         <label htmlFor="" className="brandForm__label">
                             <span> ИНН<span  className="brandForm__span">*</span></span>
 
-                            <input type="text"/>
+                            <input
+                                {...register("inn",{
+                                    required:{
+                                        message:"Заполните email",
+                                        value:true
+                                    },
+                                    maxLength: {
+                                        message: 'Максимальная длинна',
+                                        value: 15
+                                    },
+                                    minLength:{
+                                        message: 'Минимальная длинна',
+                                        value: 3
+                                    }
+
+                                })}
+                                type="text"/>
                         </label>
                         <label htmlFor="" className="brandForm__label">
                             <span>Р/С<span  className="brandForm__span">*</span></span>
 
-                            <input type="text"/>
+                            <input
+                                {...register("ps",{
+                                    required:{
+                                        message:"Заполните email",
+                                        value:true
+                                    },
+                                    maxLength: {
+                                        message: 'Максимальная длинна',
+                                        value: 15
+                                    },
+                                    minLength:{
+                                        message: 'Минимальная длинна',
+                                        value: 3
+                                    }
+
+                                })}
+                                type="text"/>
                         </label>
                         <label htmlFor="" className="brandForm__label">
                             <span>БИК<span  className="brandForm__span">*</span></span>
 
-                            <input type="text"/>
+                            <input
+                                {...register("bic",{
+                                    required:{
+                                        message:"Заполните email",
+                                        value:true
+                                    },
+                                    maxLength: {
+                                        message: 'Максимальная длинна',
+                                        value: 15
+                                    },
+                                    minLength:{
+                                        message: 'Минимальная длинна',
+                                        value: 3
+                                    }
+
+                                })}
+                                type="text"/>
                         </label>
                         <label htmlFor="" className="brandForm__label">
                             <span>ОКПО<span  className="brandForm__span">*</span></span>
 
-                            <input type="text"/>
+                            <input
+                                {...register("okpo",{
+                                    required:{
+                                        message:"Заполните email",
+                                        value:true
+                                    },
+                                    maxLength: {
+                                        message: 'Максимальная длинна',
+                                        value: 15
+                                    },
+                                    minLength:{
+                                        message: 'Минимальная длинна',
+                                        value: 3
+                                    }
+
+                                })}
+                                type="text"/>
                         </label>
 
                         <div className="brandForm__logo">
@@ -81,33 +202,145 @@ const
                         <label htmlFor="" className="brandForm__label">
                             <span> ФИО руководителя<span  className="brandForm__span">*</span></span>
 
-                            <input type="text"/>
+                            <input
+                                {...register("bos",{
+                                    required:{
+                                        message:"Заполните email",
+                                        value:true
+                                    },
+                                    maxLength: {
+                                        message: 'Максимальная длинна',
+                                        value: 15
+                                    },
+                                    minLength:{
+                                        message: 'Минимальная длинна',
+                                        value: 3
+                                    }
+
+                                })}
+                                type="text"/>
                         </label>
                         <label htmlFor="" className="brandForm__label">
                             <span>Должность<span  className="brandForm__span">*</span></span>
-                            <input type="text"/>
+                            <input
+                                {...register("profession",{
+                                    required:{
+                                        message:"Заполните email",
+                                        value:true
+                                    },
+                                    maxLength: {
+                                        message: 'Максимальная длинна',
+                                        value: 15
+                                    },
+                                    minLength:{
+                                        message: 'Минимальная длинна',
+                                        value: 3
+                                    }
+
+                                })}
+                                type="text"/>
                         </label>
                         <label htmlFor="" className="brandForm__label">
                             <span>Деятельность компании<span  className="brandForm__span">*</span></span>
-                            <input type="text"/>
+                            <input
+                                {...register("company",{
+                                    required:{
+                                        message:"Заполните email",
+                                        value:true
+                                    },
+                                    maxLength: {
+                                        message: 'Максимальная длинна',
+                                        value: 15
+                                    },
+                                    minLength:{
+                                        message: 'Минимальная длинна',
+                                        value: 3
+                                    }
+
+                                })}
+                                type="text"/>
                         </label>
                         <label htmlFor="" className="brandForm__label">
                             <span>Опишите товары или услуги компании<span  className="brandForm__span">*</span></span>
 
-                            <textarea  className='brandForm__label-area' name="" id="" cols="10" rows="4"></textarea>
+                            <textarea
+                                {...register("goods",{
+                                    required:{
+                                        message:"Заполните email",
+                                        value:true
+                                    },
+                                    maxLength: {
+                                        message: 'Максимальная длинна',
+                                        value: 15
+                                    },
+                                    minLength:{
+                                        message: 'Минимальная длинна',
+                                        value: 3
+                                    }
+
+                                })}
+                                className='brandForm__label-area' name="" id="" cols="10" rows="4"></textarea>
                         </label>
                         <label htmlFor="" className="brandForm__label">
                             <span>  Веб-сайт<span  className="brandForm__span">*</span></span>
-                            <input type="text"/>
+                            <input
+                                {...register("lastName",{
+                                    required:{
+                                        message:"Заполните web",
+                                        value:true
+                                    },
+                                    maxLength: {
+                                        message: 'Максимальная длинна',
+                                        value: 15
+                                    },
+                                    minLength:{
+                                        message: 'Минимальная длинна',
+                                        value: 3
+                                    }
+
+                                })}
+                                type="text"/>
                         </label>
                         <label htmlFor="" className="brandForm__label">
                             <span>Рабочий телефон<span  className="brandForm__span">*</span></span>
-                            <input type="tel"/>
+                            <input
+                                {...register("workNumber",{
+                                    required:{
+                                        message:"Заполните email",
+                                        value:true
+                                    },
+                                    maxLength: {
+                                        message: 'Максимальная длинна',
+                                        value: 15
+                                    },
+                                    minLength:{
+                                        message: 'Минимальная длинна',
+                                        value: 3
+                                    }
+
+                                })}
+                                type="tel"/>
                         </label>
                         <label htmlFor="" className="brandForm__label">
                             <span>Email<span  className="brandForm__span">*</span></span>
 
-                            <input type="text"/>
+                            <input
+                                {...register("emailThird",{
+                                    required:{
+                                        message:"Заполните email",
+                                        value:true
+                                    },
+                                    maxLength: {
+                                        message: 'Максимальная длинна',
+                                        value: 15
+                                    },
+                                    minLength:{
+                                        message: 'Минимальная длинна',
+                                        value: 3
+                                    }
+
+                                })}
+                                type="text"/>
                         </label>
                         <SocialSection/>
                         <ContactFace/>
@@ -119,7 +352,7 @@ const
 
 
 
-                    </form>
+                    </div>
 
                 </div>
             </div>
