@@ -2,45 +2,21 @@ import React from 'react';
 import './StandCardSection.sass'
 import standard from './standard.png'
 import Btn from "../../../components/Btn/Btn";
+import StCardBox from "./StCardBox/StCardBox";
 
 const StandCardSection = () => {
     return (
         <section className='stCard'>
             <div className="stCard__container container">
-               <div className="stCard__box">
-                   <h3 className="stCard__h3">STANDARD</h3>
-                   <div className="stCard__row row">
-                       <div className="stCard__img">
-                           <img src={standard} alt=""/>
-                       </div>
-                       <div className="">
-                           <div className="stCard__title"   >
-                               <h4 className="stCard__h4">
-                                   Пакет: Standard
-                               </h4>
-                               <span    className="stCard__span">
-                           2м
-                       </span>
-                           </div>
-
-                           <ul className="stCard__ul">
-                               <li className="stCard__li">Lorem ipsum dolor sit amet.</li>
-                               <li className="stCard__li">Lorem ipsum dolor sit amet.</li>
-                               <li className="stCard__li">Lorem ipsum dolor sit amet.</li>
-                               <li className="stCard__li">Lorem ipsum dolor sit amet.</li>
-
-                           </ul>
-                           <div className="stCard__price">$5298</div>
-
-                           <Btn m={'stand'} type="button" text="Забронировать стенд"/>
-
-
-
-                       </div>
-
-                   </div>
-
-               </div>
+                <StCardBox card={{name: "STANDARD",meter:"2m",pocket: "Пакет: Standard"}}/>
+                <StCardBox card={{name: "STANDARD+",meter:"2m",pocket: 'Пакет: Standard +'}}/>
+                <StCardBox card={{name: "SILVER",meter:"6m", pocket: "Пакет: Silver"}}/>
+                <StCardBox card={{name: "SILVER",meter:"6m", pocket: "Пакет: Silver +"}}/>
+                <StCardBox card={{name: "Gold",meter:"9m", pocket: "Пакет: Gold"}}/>
+                <StCardBox card={{name: "Gold+",meter:"9m", pocket: "Пакет: Gold +"}}/>
+                <StCardBox card={{name: "PLATINUM",meter:"12m", pocket: "Пакет: Platinum"}}/>
+                <StCardBox card={{name: "PLATINUM",meter:"12m", pocket: "Пакет: Platinum +"}}/>
+                <StCardBox card={{name: "PLATINUM",meter:"12m", pocket: "Пакет: Platinum +"}}/>
             </div>
         </section>
     );
