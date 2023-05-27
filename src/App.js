@@ -23,7 +23,7 @@ import BenefitsPage from "./pages/BenefitsPage/BenefitsPage";
 import StandPage from "./pages/StandPage/StandPage";
 import MembersPage from "./pages/MembersPage/MembersPage";
 import Hotel from "./components/Hotel/Hotel";
-import RasulPage from "./pages/RasulPage/RasulPage";
+import StandPage from "./pages/RasulPage/StandPage";
 
 
 const router = createBrowserRouter(
@@ -44,13 +44,9 @@ const router = createBrowserRouter(
             <Route path="place" element={<PlacePage/>}/>
             <Route path="expect" element={<ExpectPage/>}/>
             <Route path="benefits" element={<BenefitsPage/>}/>
-            <Route path="stand" element={<StandPage/>}/>
             <Route path="members" element={<MembersPage/>}/>
-            <Route path="members" element={<MembersPage/>}/>
-
             <Route path="hotel" element={<Hotel/>}/>
-
-            <Route path="rasul" element={<RasulPage/>}/>
+            <Route path="stand" element={<StandPage/>}/>
         </Route>
     )
 );

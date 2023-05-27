@@ -4,8 +4,8 @@ export const arr1 = [
         link: 'benefits'
     },
     {
-        name: 'Забронировать стенд',
-        link: ''
+        name: 'Стенды',
+        link: 'stand'
     },
     {
         name: 'Пакеты',

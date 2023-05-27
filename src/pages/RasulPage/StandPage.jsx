@@ -4,7 +4,7 @@ import StandCardSection from "./StandCardSection/StandCardSection";
 import ExhibitionSection from "./ExhibitionSection/ExhibitionSection";
 import ManagementSection from "./ManagmentSection/ManagementSection";
 
-const RasulPage = () => {
+const StandPage = () => {
     return (
         <>
             <StandSection/>
@@ -18,4 +18,4 @@ const RasulPage = () => {
     );
 };
 
-export default RasulPage;
+export default StandPage;
