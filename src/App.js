@@ -22,7 +22,7 @@ import ExpectPage from "./pages/ExpectPage/ExpectPage";
 import BenefitsPage from "./pages/BenefitsPage/BenefitsPage";
 import MembersPage from "./pages/MembersPage/MembersPage";
 import Hotel from "./components/Hotel/Hotel";
-import RasulPage from "./pages/RasulPage/RasulPage";
+import StandPage from "./pages/RasulPage/StandPage";
 
 
 const router = createBrowserRouter(
@@ -44,12 +44,14 @@ const router = createBrowserRouter(
             <Route path="expect" element={<ExpectPage/>}/>
             <Route path="benefits" element={<BenefitsPage/>}/>
             <Route path="members" element={<MembersPage/>}/>
+<<<<<<< HEAD
 
             <Route path="members" element={<MembersPage/>}/>
 
+=======
+>>>>>>> 6a764003dd0cb06b21666657d44d1a935e2d9e60
             <Route path="hotel" element={<Hotel/>}/>
-
-            <Route path="rasul" element={<RasulPage/>}/>
+            <Route path="stand" element={<StandPage/>}/>
         </Route>
     )
 );
