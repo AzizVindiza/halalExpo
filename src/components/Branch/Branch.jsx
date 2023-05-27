@@ -16,7 +16,7 @@ const Branch = () => {
 
             <>
                 <div className="branch">
-                    <h4 className="branch__h4">Выберите отрасль*</h4>
+                    <h4 className="branch__h4">Выберите отрасль<span className={'branch__span'}>*</span></h4>
                     <div onClick={() => setBranch(!branch)} className="branch__row">
                         <h5 className="branch__h5">{chooseBranch}</h5>
                         <div className={`branch__tick ${branch ? 'branch__tick_active' : ''} `}>

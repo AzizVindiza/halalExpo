@@ -15,7 +15,7 @@ const Stake = () => {
     return (
         <>
             <div className="state">
-                <h4 className="state__h4">Выберите сектор участия (с условиями участия каждого сектора можно ознакомится)*</h4>
+                <h4 className="state__h4">Выберите сектор участия (с условиями участия каждого сектора можно ознакомится)<span className={"state__span"}>*</span></h4>
                 <div onClick={() => setStake(!stake)} className="state__row">
                     <h5 className="state__h5">{value}</h5>
                     <div className={`state__tick ${stake ? 'state__tick_active' : ''} `}>
