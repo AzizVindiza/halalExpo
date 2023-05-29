@@ -5,26 +5,29 @@ const RowQuestion = () => {
     //function accordion//
       const toggle = (index) => {
         if (selected === index){
+
             setSelected(null)
         }else
             setSelected(index)
+
     }
     const  arr = [
         {
-            title: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-            text:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when "
+            title: "Разнообразие халяльных продуктов и услуг",
+            text:"Будучи посетителем, вы сможетеознакомиться с широким ассортиментом халяльных продуктов, услуг и инвестиционных проектов, а также обнаружить новые бренды и идеи, которые соответствуют принципам халяльности. "
         },
         {
-            title: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-            text:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when "
+            title: "Инвестиционные возможности",
+            text:"Выставка предоставит посетителям возможность ознакомиться с инвестиционными проектами и привлекательными предложениями от местных и зарубежных компаний. Вы сможете изучить потенциальные возможности для инвестиций и сотрудничества. "
         },
         {
-            title: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-            text:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when "
+            title: "Бизнес-сеть и партнерство",
+            text:"Бизнес-сеть и партнерство\n" +
+                "Halal Investment and Trade Expo 2023 соберет представителей бизнеса, инвесторов, предпринимателей и профессионалов из разных стран и областей деятельности. Это ваша уникальная возможность установить новые деловые контакты, обменяться опытом и создать ценные партнерства."
         },
         {
-            title: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-            text:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when "
+            title: "Культурное разнообразие",
+            text:"Выставка также представит возможность погрузиться в атмосферу культурного разнообразия народов, проживающих в Центральной Азии. Посетители смогут насладиться вкусными халяльными блюдами, познакомиться с традиционными ремеслами и узнать больше о культуре и искусстве региона. "
         }
 
     ]
@@ -53,10 +56,8 @@ const RowQuestion = () => {
 
                             </div>
                         </div>
-                        {
-                            selected === index ? <p className="rowQuestion__txt">{item.text}</p> : ''
+                        <p className={`rowQuestion__txt ${selected === index ? 'rowQuestion__txt_active' : ''}`}>{item.text}</p>
 
-                        }
 
 
 

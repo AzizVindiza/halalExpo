@@ -10,16 +10,13 @@ const Nav = () => {
         <nav className="nav">
             <div className="container nav__container">
                 <Dropdown txt={"О ЭКСПО"} arr={arr}/>
-
-                <NavLink className={'nav__link'} to={'forum'}>Программа форума</NavLink>
                 <Dropdown txt={"Участникам"} arr={arr1}/>
                 <Dropdown txt={"Посетителям"} arr={arr2}/>
-
-
                 <NavLink className={'nav__link'} to={'partner'}>Партнеры</NavLink>
-                <NavLink className={'nav__link'} to={''}>B2B</NavLink>
-                <NavLink className={'nav__link'} to={''}>Новости</NavLink>
-                <NavLink className={'nav__link'} to={''}>FQA</NavLink>
+                <NavLink className={'nav__link'} to={''}>СМИ</NavLink>
+                <NavLink className={'nav__link'} to={'meet'}>B2B</NavLink>
+                <NavLink className={'nav__link'} to={'news'}>Новости</NavLink>
+                <NavLink className={'nav__link'} to={'question'}>FQA</NavLink>
             </div>
         </nav>
     );

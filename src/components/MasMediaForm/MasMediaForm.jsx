@@ -1,19 +1,29 @@
 import React, {useState} from 'react';
 import "./masmediaform.sass"
+import EmailForm from "../ParticipantForm/EmailForm/EmailForm";
+import SocialSection from "../SocialSection/SocialSection";
+import Btn from "../Btn/Btn";
+import {useForm} from "react-hook-form";
+
 
 const MasMediaForm = () => {
+    const {
+        register,
+        formState: {
+            errors
+
+        },
+        handleSubmit,
+
+    } = useForm();
+
+
     return (
         <div className={'masmediaform'}>
             <div className="masmediaform__wrapper">
-                <div className="masmediaform__close">
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1.16667 1.16675L12.8333 12.8334M1.16667 12.8334L12.8333 1.16675" stroke="black" strokeOpacity="0.5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-
-                </div>
-                <h2 className="masmediaform__h2">Регистрация</h2>
+                 <h2 className="masmediaform__h2">Заполните данные о компании</h2>
                 <div className="masmediaform__logo">
-                    <p className="masmediaform__p">Загрузите логотип компании в  png, jpg, pdf*</p>
+                    <span className="masmediaform__p">Загрузите логотип компании в  png, jpg, pdf<span  className="masmediaform__span">*</span></span>
                     <div className="masmediaform__download">
                         <h3 className="masmediaform__h3">Загрузить</h3>
                         <div className="masmediaform__line">
@@ -28,38 +38,110 @@ const MasMediaForm = () => {
                 </div>
                 <form  className="masmediaform__form">
                     <label  className="masmediaform__label">
-                        <span className="masmediaform__span">Полное юридическое наименование организации*</span>
-                        <input type="text" className="masmediaform__input"/>
-                    </label>
-                    <label  className="masmediaform__label">
-                        <span className="masmediaform__span">Юридический адрес*</span>
-                        <input type="text" className="masmediaform__input"/>
-                    </label>
-                    <label  className="masmediaform__label">
-                        <span className="masmediaform__span">Веб-сайт* </span>
-                        <input type="text" className="masmediaform__input"/>
-                    </label>
-                    <label  className="masmediaform__label">
-                        <span className="masmediaform__span">Рабочий телефон*</span>
-                        <input type="text" className="masmediaform__input"/>
-                    </label>
-                    <label  className="masmediaform__label">
-                        <span className="masmediaform__span">Email*</span>
-                        <input type="text" className="masmediaform__input"/>
-                    </label>
-                    <label  className="masmediaform__label">
-                        <span className="masmediaform__span">Электронная почта*</span>
-                        <input type="text" className="masmediaform__input"/>
-                    </label>
-                    <label  className="masmediaform__label">
-                        <span className="masmediaform__span">Придумайте пароль*</span>
-                        <input type="text" className="masmediaform__input"/>
-                    </label>
-                    <label  className="masmediaform__label">
-                        <span className="masmediaform__span">Подтвердите пароль*</span>
-                        <input type="text" className="masmediaform__input"/>
-                    </label>
+                        <span>Полное юридическое наименование организации<span  className="masmediaform__span">*</span></span>
+                        <input type="text" className="masmediaform__input"
+                               {...register('organization',{
+                                   required:{
+                                       message:"Поле обязателен к заполнению",
+                                       value: true
+                                   },
+                                   minLength: {
+                                       message: "Минимальная длина 3 символа",
+                                       value: 3
+                                   }
 
+
+                               })}
+
+                        />
+                    </label>
+                    <label  className="masmediaform__label">
+
+                        <span>Юридический адрес<span  className="masmediaform__span">*</span></span>
+                        <input type="text" className="masmediaform__input"
+                               {...register('developmentEmail',{
+                                   required:{
+                                       message:"Поле обязателен к заполнению",
+                                       value: true
+                                   },
+                                   minLength: {
+                                       message: "Минимальная длина 10 символа",
+                                       value: 0
+                                   },
+
+
+
+                               })}
+                        />
+                    </label>
+                    <label  className="masmediaform__label">
+
+                        <span>Веб-сайт<span  className="masmediaform__span">*</span></span>
+                        <input type="text" className="masmediaform__input"
+                               {...register('website',{
+                                   required:{
+                                       message:"Поле обязателен к заполнению",
+                                       value: true
+                                   },
+                                   minLength: {
+                                       message: "Минимальная длина 10 символа",
+                                       value: 0
+                                   },
+
+
+
+                               })}
+                        />
+                        <span className='form__error'>{errors.website && errors.website.message}</span>
+                    </label>
+                    <label  className="masmediaform__label">
+                        <span>Рабочий телефон<span  className="masmediaform__span">*</span></span>
+                        <input type="tel" className="masmediaform__input"
+                               {...register('phone',{
+                                   required:{
+                                       message:"Поле обязателено к заполнению",
+                                       value: true
+                                   },
+                                   minLength: {
+                                       message: "Минимальная длина 6 символа",
+                                       value: 0
+                                   },
+                                   pattern:{
+                                       message:"Напишите правильно свой номер",
+
+                                   }
+
+
+                               })}
+                        />
+                        <span className='form__error'>{errors.phone && errors.phone.message}</span>
+                    </label>
+                    <label  className="masmediaform__label">
+
+                        <span >Email</span><span className="masmediaform__span">*</span>
+                        <input type="text" className="masmediaform__input"
+                               {...register('emailMas',{
+                                   required:{
+                                       message:"Поле Email , обязателен к заполнению",
+                                       value: true
+                                   },
+                                   minLength: {
+                                       message: "Минимальная длина 10 символа",
+                                       value: 0
+                                   },
+                                   pattern:{
+                                       message:"Напишите правильно свой email",
+                                       value: /^[^ ]+@[^ ]+\.[a-z]{2,5}$/
+                                   }
+
+
+                               })}
+
+                        />
+                        <span className='form__error'>{errors.emailMas && errors.emailMas.message}</span>
+                    </label>
+                    <SocialSection/>
+                    <EmailForm/>
                 </form>
             </div>
         </div>

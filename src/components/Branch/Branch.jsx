@@ -16,7 +16,7 @@ const Branch = () => {
 
             <>
                 <div className="branch">
-                    <h4 className="branch__h4">Выберите отрасль*</h4>
+                    <h4 className="branch__h4">Выберите отрасль<span className={'branch__span'}>*</span></h4>
                     <div onClick={() => setBranch(!branch)} className="branch__row">
                         <h5 className="branch__h5">{chooseBranch}</h5>
                         <div className={`branch__tick ${branch ? 'branch__tick_active' : ''} `}>
@@ -29,8 +29,8 @@ const Branch = () => {
                         {
                             branch ? <ul className="branch__select">
                                 {
-                                    items.map((item) => (
-                                        <li  onClick={() => chooseBranchValue(item)} className="baseForm__item">{item}</li>
+                                    items.map((item,i) => (
+                                        <li key={i} onClick={() => chooseBranchValue(item)} className="baseForm__item">{item}</li>
                                     ))
                                 }
 

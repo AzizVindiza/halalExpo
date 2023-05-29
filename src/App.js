@@ -20,12 +20,9 @@ import ForumPage from "./pages/ForumPage/ForumPage";
 import PlacePage from "./pages/PlacePage/PlacePage";
 import ExpectPage from "./pages/ExpectPage/ExpectPage";
 import BenefitsPage from "./pages/BenefitsPage/BenefitsPage";
-import StandPage from "./pages/StandPage/StandPage";
 import MembersPage from "./pages/MembersPage/MembersPage";
-import MasMediaForm from "./components/MasMediaForm/MasMediaForm";
-
-import SocialSection from "./components/SocialSection/SocialSection";
-
+import Hotel from "./components/Hotel/Hotel";
+import StandPage from "./pages/RasulPage/StandPage";
 
 
 const router = createBrowserRouter(
@@ -46,16 +43,10 @@ const router = createBrowserRouter(
             <Route path="place" element={<PlacePage/>}/>
             <Route path="expect" element={<ExpectPage/>}/>
             <Route path="benefits" element={<BenefitsPage/>}/>
+            <Route path="members" element={<MembersPage/>}/>
+            <Route path="members" element={<MembersPage/>}/>
+            <Route path="hotel" element={<Hotel/>}/>
             <Route path="stand" element={<StandPage/>}/>
-            <Route path="members" element={<MembersPage/>}/>
-            <Route path="members" element={<MembersPage/>}/>
-            <Route path="media" element={<MasMediaForm/>}/>
-            <Route path="social" element={<SocialSection/>}/>
-
-
-
-
-
         </Route>
     )
 );

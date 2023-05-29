@@ -4,9 +4,13 @@
         link: 'place'
     },
     {
-        name: 'Организаторы',
-        link: 'organization'
+        name: 'Программа форума',
+        link: 'forum'
     },
+     {
+         name: 'Организаторы',
+         link: 'organization'
+     },
     {
         name: 'Инвесторы',
         link: 'investor'

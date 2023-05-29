@@ -36,9 +36,7 @@ const FirstSection = () => {
                         and Trading
                     </h2>
                     <p className="first__p">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum <br/>
-                        has been the industry's standard dummy text ever since the 1500s, when an unknown <br/>
-                        printer took a galley of type and scrambled it to make a type specimen.
+                        Добро пожаловать на Halal Investment and Trade Expo 2023 - одно из самых престижных событий в мире, посвященных халяльному инвестированию и торговле! Присоединяйтесь к нам, чтобы открыть новые возможности в глобальной халяльной экономике и укрепить связи в сообществе международных предпринимателей и инвесторов.
                     </p>
                     <a href="#" className="first__btn">
                         <Btn type="button" text="Оставить заявку"/>

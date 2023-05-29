@@ -8,9 +8,15 @@ const Context = (props) => {
     const [branch,setBranch] = useState(false) // close register
     const [login,setLogin] = useState(false) // close register
     const [passwordShown, setPasswordShown] = useState(false); // active eye
+    const [passwordShown2, setPasswordShown2] = useState(false); // active eye
+    const [value,setValue] = useState('Trade')
+
 
     const valueContext = {
-        close,setClose,stake,setStake,branch,setBranch,login,setLogin,passwordShown, setPasswordShown
+        close,setClose,stake,setStake,branch,setBranch,login,setLogin,passwordShown,
+        setPasswordShown,
+        passwordShown2, setPasswordShown2,
+        value,setValue
     }
     return <CustomContext.Provider value={valueContext}>
         {props.children}

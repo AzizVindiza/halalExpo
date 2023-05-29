@@ -4,12 +4,8 @@
         link: 'expect'
     },
     {
-        name: 'Как добраться',
-        link: ''
-    },
-    {
         name: 'Гостиницы',
-        link: ''
+        link: 'hotel'
     }
 
 ]

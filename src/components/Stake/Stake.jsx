@@ -1,10 +1,13 @@
 import React, {useContext, useState} from 'react';
 import {CustomContext} from "../../Context";
 import "./state.sass"
+import Fashion from "../Fashion/Fashion";
+import Europe from "../Europe/Europe";
+import Branch from "../Branch/Branch";
 const Stake = () => {
-    const array = [" Trade", "СМИ", " Investment", " Fashion", "Food"]
-    const [value,setValue] = useState('Trade')
-    const {stake,setStake} = useContext(CustomContext)
+    const array = ["Trade", "Investment", "Fashion", "Food"]
+
+    const {stake,setStake,setValue,value} = useContext(CustomContext)
 
     const chooseStake = (item) => {
          setValue(item)
@@ -12,7 +15,7 @@ const Stake = () => {
     return (
         <>
             <div className="state">
-                <h4 className="state__h4">Выберите сектор участия (с условиями участия каждого сектора можно ознакомится)*</h4>
+                <h4 className="state__h4">Выберите сектор участия (с условиями участия каждого сектора можно ознакомится)<span className={"state__span"}>*</span></h4>
                 <div onClick={() => setStake(!stake)} className="state__row">
                     <h5 className="state__h5">{value}</h5>
                     <div className={`state__tick ${stake ? 'state__tick_active' : ''} `}>
@@ -25,8 +28,8 @@ const Stake = () => {
                     {
                         stake ? <ul className="state__select">
                             {
-                                array.map((item) => (
-                                    <li onClick={() => chooseStake(item)} className="baseForm__item">{item}</li>
+                                array.map((item,i) => (
+                                    <li key={i} onClick={() => chooseStake(item)} className="baseForm__item">{item}</li>
                                 ))
                             }
 
@@ -36,6 +39,7 @@ const Stake = () => {
 
 
             </div>
+
 
         </>
     );
