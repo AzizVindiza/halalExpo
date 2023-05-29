@@ -11,12 +11,16 @@ import Btn from "../../Btn/Btn";
 import Stake from "../../Stake/Stake";
 import Branch from "../../Branch/Branch";
 import ParticipantForm from "../../ParticipantForm/ParticipantForm";
-import {useForm} from "react-hook-form";
-import { ToastContainer, toast } from 'react-toastify';
+import {FormProvider, useForm} from "react-hook-form";
+import {toast, ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Fashion from "../../Fashion/Fashion";
+import Europe from "../../Europe/Europe";
+import InvestorCheck from "../../InvesntorCheck/InvestorCheck";
 
 const BaseForm = () => {
-    const notify = () => toast("Wow so easy!");
+    const methods = useForm()
+    const notify = () => toast.success("Вы зарегистрированы"); // send form
     const {
         register,
         formState: {
@@ -28,9 +32,9 @@ const BaseForm = () => {
     } = useForm({mode:"onBlur"});
     const onSubmit = (data) => {
         console.log(data)
-        notify('Ваша форма отпралена')
+        notify()
     }
-    const {close,setClose} = useContext(CustomContext)
+    const {close,setClose,value} = useContext(CustomContext)
     const arr = ["Представитель государственных органов","СМИ","Посетитель","Участник","Эксперт"]
 
     const [select,setSelect] = useState('Представитель государственных органов') //choose select
@@ -73,248 +77,252 @@ const BaseForm = () => {
                                 <p className="baseForm__p">
                                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when.
                             </p>
-                            <form onSubmit={handleSubmit(onSubmit)} className="baseForm__form">
-                                <label className="baseForm__label" htmlFor="">
-                                    <span>Имя<span  className="baseForm__span">*</span></span>
+                                <FormProvider {...methods} >
+                                    <form onSubmit={methods.handleSubmit(onSubmit)} className="baseForm__form">
+                                        <label className="baseForm__label" htmlFor="">
+                                            <span>Имя<span  className="baseForm__span">*</span></span>
 
-                                    <input
+                                            <input
 
-                                        type="text"/>
-                                </label>
-
-
-                                <label className="baseForm__label" htmlFor="">
-                                    <span>Фамилия<span  className="baseForm__span">*</span></span>
-                                    <input
-                                        {...register("lastName",{
-                                            required:{
-                                                message:"Заполните email",
-                                                value:true
-                                            },
-                                            maxLength: {
-                                                message: 'Максимальная длинна',
-                                                value: 15
-                                            },
-                                            minLength:{
-                                                message: 'Минимальная длинна',
-                                                value: 3
-                                            }
-
-                                        })}
-
-                                        type="text"/>
-                                    <span> {errors.lastName && errors.lastName.message}</span>
-                                </label>
+                                                type="text"/>
+                                        </label>
 
 
-                                <label className="baseForm__label" htmlFor="">
-                                    <span>Отечество<span  className="baseForm__span">*</span></span>
-                                    <input
-                                        {...register("thirdName",{
-                                            required:{
-                                                message:"Заполните email",
-                                                value:true
-                                            },
-                                            maxLength: {
-                                                message: 'Максимальная длинна',
-                                                value: 15
-                                            },
-                                            minLength:{
-                                                message: 'Минимальная длинна',
-                                                value: 3
-                                            }
+                                        <label className="baseForm__label" htmlFor="">
+                                            <span>Фамилия<span  className="baseForm__span">*</span></span>
+                                            <input
+                                                {...register("lastName",{
+                                                    required:{
+                                                        message:"Заполните email",
+                                                        value:true
+                                                    },
+                                                    maxLength: {
+                                                        message: 'Максимальная длинна',
+                                                        value: 15
+                                                    },
+                                                    minLength:{
+                                                        message: 'Минимальная длинна',
+                                                        value: 3
+                                                    }
 
-                                        })}
-                                        type="text"/>
-                                    <span> {errors.login && errors.login.message}</span>
-                                </label>
+                                                })}
 
-
-                                <label className="baseForm__label" htmlFor="">
-                                    <span>Email<span  className="baseForm__span">*</span></span>
-                                    <input
-                                        {...register("emailSecond",{
-                                            required:{
-                                                message:"Заполните email",
-                                                value:true
-                                            },
-                                            maxLength: {
-                                                message: 'Максимальная длинна',
-                                                value: 15
-                                            },
-                                            minLength:{
-                                                message: 'Минимальная длинна',
-                                                value: 3
-                                            }
-
-                                        })}
-                                        type="text"/>
-                                    <span> {errors.emailSecond && errors.emailSecond.message}</span>
-                                </label>
+                                                type="text"/>
+                                            <span> {errors.lastName && errors.lastName.message}</span>
+                                        </label>
 
 
-                                <label className="baseForm__label" htmlFor="">
-                                    <span>Страна<span  className="baseForm__span">*</span></span>
-                                    <input
-                                        {...register("country",{
-                                            required:{
-                                                message:"Заполните country",
-                                                value:true
-                                            },
-                                            maxLength: {
-                                                message: 'Максимальная длинна',
-                                                value: 15
-                                            },
-                                            minLength:{
-                                                message: 'Минимальная длинна',
-                                                value: 3
-                                            }
+                                        <label className="baseForm__label" htmlFor="">
+                                            <span>Отечество<span  className="baseForm__span">*</span></span>
+                                            <input
+                                                {...register("thirdName",{
+                                                    required:{
+                                                        message:"Заполните email",
+                                                        value:true
+                                                    },
+                                                    maxLength: {
+                                                        message: 'Максимальная длинна',
+                                                        value: 15
+                                                    },
+                                                    minLength:{
+                                                        message: 'Минимальная длинна',
+                                                        value: 3
+                                                    }
 
-                                        })}
-                                        type="text"/>
-                                    <span> {errors.country && errors.country.message}</span>
-                                </label>
-
-
-                                <label className="baseForm__label" htmlFor="">
-                                    <span>Город<span  className="baseForm__span">*</span></span>
-                                    <input
-                                        {...register("city",{
-                                            required:{
-                                                message:"Заполните город",
-                                                value:true
-                                            },
-                                            maxLength: {
-                                                message: 'Максимальная длинна',
-                                                value: 15
-                                            },
-                                            minLength:{
-                                                message: 'Минимальная длинна',
-                                                value: 3
-                                            }
-
-                                        })}
-                                        type="text"/>
-                                    <span> {errors.city && errors.city.message}</span>
-                                </label>
+                                                })}
+                                                type="text"/>
+                                            <span> {errors.login && errors.login.message}</span>
+                                        </label>
 
 
-                                <label className="baseForm__label" htmlFor="">
-                                    <span>Дата рождения<span  className="baseForm__span">*</span></span>
-                                    <input
-                                        {...register("date",{
-                                            required:{
-                                                message:"Заполните дату",
-                                                value:true
-                                            },
-                                            maxLength: {
-                                                message: 'Максимальная длинна',
-                                                value: 15
-                                            },
-                                            minLength:{
-                                                message: 'Минимальная длинна',
-                                                value: 3
-                                            }
+                                        <label className="baseForm__label" htmlFor="">
+                                            <span>Email<span  className="baseForm__span">*</span></span>
+                                            <input
+                                                {...register("emailSecond",{
+                                                    required:{
+                                                        message:"Заполните email",
+                                                        value:true
+                                                    },
+                                                    maxLength: {
+                                                        message: 'Максимальная длинна',
+                                                        value: 15
+                                                    },
+                                                    minLength:{
+                                                        message: 'Минимальная длинна',
+                                                        value: 3
+                                                    }
 
-                                        })}
-                                        type="date"/>
-                                    <span> {errors.date && errors.date.message}</span>
-                                </label>
+                                                })}
+                                                type="text"/>
+                                            <span> {errors.emailSecond && errors.emailSecond.message}</span>
+                                        </label>
 
-                                <div>
-                                    <div className="baseForm__passport">
-                                        <span className="baseForm__text">Загрузите паспорт с лицевой стороны<span  className="baseForm__span">*</span></span>
-                                        <div className="baseForm__download">
-                                            <h3 className="baseForm__h3">Загрузить</h3>
-                                            <div className="baseForm__line">
-                                                <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M6.80554 1C6.80554 0.585786 6.46976 0.25 6.05554 0.25C5.64133 0.25 5.30554 0.585786 5.30554 1H6.80554ZM5.52521 11.6414C5.81811 11.9343 6.29298 11.9343 6.58587 11.6414L11.3588 6.86847C11.6517 6.57558 11.6517 6.1007 11.3588 5.80781C11.0659 5.51492 10.5911 5.51492 10.2982 5.80781L6.05554 10.0505L1.8129 5.80781C1.52001 5.51492 1.04513 5.51492 0.752241 5.80781C0.459348 6.1007 0.459348 6.57558 0.752241 6.86847L5.52521 11.6414ZM5.30554 1L5.30554 11.1111H6.80554L6.80554 1H5.30554Z" fill="#3378C9"/>
-                                                    <path d="M1 14H11.1111" stroke="#3378C9" strokeWidth="1.5" strokeLinecap="square"/>
-                                                </svg>
+
+                                        <label className="baseForm__label" htmlFor="">
+                                            <span>Страна<span  className="baseForm__span">*</span></span>
+                                            <input
+                                                {...register("country",{
+                                                    required:{
+                                                        message:"Заполните country",
+                                                        value:true
+                                                    },
+                                                    maxLength: {
+                                                        message: 'Максимальная длинна',
+                                                        value: 15
+                                                    },
+                                                    minLength:{
+                                                        message: 'Минимальная длинна',
+                                                        value: 3
+                                                    }
+
+                                                })}
+                                                type="text"/>
+                                            <span> {errors.country && errors.country.message}</span>
+                                        </label>
+
+
+                                        <label className="baseForm__label" htmlFor="">
+                                            <span>Город<span  className="baseForm__span">*</span></span>
+                                            <input
+                                                {...register("city",{
+                                                    required:{
+                                                        message:"Заполните город",
+                                                        value:true
+                                                    },
+                                                    maxLength: {
+                                                        message: 'Максимальная длинна',
+                                                        value: 15
+                                                    },
+                                                    minLength:{
+                                                        message: 'Минимальная длинна',
+                                                        value: 3
+                                                    }
+
+                                                })}
+                                                type="text"/>
+                                            <span> {errors.city && errors.city.message}</span>
+                                        </label>
+
+
+                                        <label className="baseForm__label" htmlFor="">
+                                            <span>Дата рождения<span  className="baseForm__span">*</span></span>
+                                            <input
+                                                {...register("date",{
+                                                    required:{
+                                                        message:"Заполните дату",
+                                                        value:true
+                                                    },
+                                                    maxLength: {
+                                                        message: 'Максимальная длинна',
+                                                        value: 15
+                                                    },
+                                                    minLength:{
+                                                        message: 'Минимальная длинна',
+                                                        value: 3
+                                                    }
+
+                                                })}
+                                                type="date"/>
+                                            <span> {errors.date && errors.date.message}</span>
+                                        </label>
+
+                                        <div>
+                                            <div className="baseForm__passport">
+                                                <span className="baseForm__text">Загрузите паспорт с лицевой стороны<span  className="baseForm__span">*</span></span>
+                                                <div className="baseForm__download">
+                                                    <h3 className="baseForm__h3">Загрузить</h3>
+                                                    <div className="baseForm__line">
+                                                        <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M6.80554 1C6.80554 0.585786 6.46976 0.25 6.05554 0.25C5.64133 0.25 5.30554 0.585786 5.30554 1H6.80554ZM5.52521 11.6414C5.81811 11.9343 6.29298 11.9343 6.58587 11.6414L11.3588 6.86847C11.6517 6.57558 11.6517 6.1007 11.3588 5.80781C11.0659 5.51492 10.5911 5.51492 10.2982 5.80781L6.05554 10.0505L1.8129 5.80781C1.52001 5.51492 1.04513 5.51492 0.752241 5.80781C0.459348 6.1007 0.459348 6.57558 0.752241 6.86847L5.52521 11.6414ZM5.30554 1L5.30554 11.1111H6.80554L6.80554 1H5.30554Z" fill="#3378C9"/>
+                                                            <path d="M1 14H11.1111" stroke="#3378C9" strokeWidth="1.5" strokeLinecap="square"/>
+                                                        </svg>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div className="baseForm__passport2">
+                                                <span className="baseForm__text">Загрузите паспорт с обратной стороны<span  className="baseForm__span">*</span></span>
+                                                <div className="baseForm__download">
+                                                    <h3 className="baseForm__h3">Загрузить</h3>
+                                                    <div className="baseForm__line">
+                                                        <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M6.80554 1C6.80554 0.585786 6.46976 0.25 6.05554 0.25C5.64133 0.25 5.30554 0.585786 5.30554 1H6.80554ZM5.52521 11.6414C5.81811 11.9343 6.29298 11.9343 6.58587 11.6414L11.3588 6.86847C11.6517 6.57558 11.6517 6.1007 11.3588 5.80781C11.0659 5.51492 10.5911 5.51492 10.2982 5.80781L6.05554 10.0505L1.8129 5.80781C1.52001 5.51492 1.04513 5.51492 0.752241 5.80781C0.459348 6.1007 0.459348 6.57558 0.752241 6.86847L5.52521 11.6414ZM5.30554 1L5.30554 11.1111H6.80554L6.80554 1H5.30554Z" fill="#3378C9"/>
+                                                            <path d="M1 14H11.1111" stroke="#3378C9" strokeWidth="1.5" strokeLinecap="square"/>
+                                                        </svg>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div className="baseForm__self">
+                                                <span  className="baseForm__text">Сделайте селфи с паспортом<span  className="baseForm__span">*</span></span>
+                                                <div className="baseForm__download">
+                                                    <h3 className="baseForm__h3">Загрузить</h3>
+                                                    <div className="baseForm__line">
+                                                        <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M6.80554 1C6.80554 0.585786 6.46976 0.25 6.05554 0.25C5.64133 0.25 5.30554 0.585786 5.30554 1H6.80554ZM5.52521 11.6414C5.81811 11.9343 6.29298 11.9343 6.58587 11.6414L11.3588 6.86847C11.6517 6.57558 11.6517 6.1007 11.3588 5.80781C11.0659 5.51492 10.5911 5.51492 10.2982 5.80781L6.05554 10.0505L1.8129 5.80781C1.52001 5.51492 1.04513 5.51492 0.752241 5.80781C0.459348 6.1007 0.459348 6.57558 0.752241 6.86847L5.52521 11.6414ZM5.30554 1L5.30554 11.1111H6.80554L6.80554 1H5.30554Z" fill="#3378C9"/>
+                                                            <path d="M1 14H11.1111" stroke="#3378C9" strokeWidth="1.5" strokeLinecap="square"/>
+                                                        </svg>
+
+                                                    </div>
+                                                </div>
 
                                             </div>
                                         </div>
+                                        <label className='baseForm__label' htmlFor="">
+                                            <span>Телефон<span  className="baseForm__span">*</span></span>
+                                            <PhoneInput
+                                                {...register("number",{
+                                                    required:{
+                                                        message:"Заполните номер",
+                                                        value:true
+                                                    },
+                                                    maxLength: {
+                                                        message: 'Максимальная длинна',
+                                                        value: 15
+                                                    },
+                                                    minLength:{
+                                                        message: 'Минимальная длинна',
+                                                        value: 3
+                                                    }
 
-                                    </div>
-                                    <div className="baseForm__passport2">
-                                        <span className="baseForm__text">Загрузите паспорт с обратной стороны<span  className="baseForm__span">*</span></span>
-                                        <div className="baseForm__download">
-                                            <h3 className="baseForm__h3">Загрузить</h3>
-                                            <div className="baseForm__line">
-                                                <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M6.80554 1C6.80554 0.585786 6.46976 0.25 6.05554 0.25C5.64133 0.25 5.30554 0.585786 5.30554 1H6.80554ZM5.52521 11.6414C5.81811 11.9343 6.29298 11.9343 6.58587 11.6414L11.3588 6.86847C11.6517 6.57558 11.6517 6.1007 11.3588 5.80781C11.0659 5.51492 10.5911 5.51492 10.2982 5.80781L6.05554 10.0505L1.8129 5.80781C1.52001 5.51492 1.04513 5.51492 0.752241 5.80781C0.459348 6.1007 0.459348 6.57558 0.752241 6.86847L5.52521 11.6414ZM5.30554 1L5.30554 11.1111H6.80554L6.80554 1H5.30554Z" fill="#3378C9"/>
-                                                    <path d="M1 14H11.1111" stroke="#3378C9" strokeWidth="1.5" strokeLinecap="square"/>
-                                                </svg>
+                                                })}
+                                                country={"eg"}  enableSearch={true}  className={"baseForm__number"} value={number} onChange={() => setNumber(number)}/>
+                                            <span> {errors.number && errors.number.message}</span>
+                                        </label>
+                                        <label className='baseForm__label' htmlFor="">
+                                            <span>WhatsApp<span  className="baseForm__span">*</span></span>
+                                            <PhoneInput
+                                                {...register("whatsApp",{
+                                                    required:{
+                                                        message:"Заполните поле",
+                                                        value:true
+                                                    },
+                                                    maxLength: {
+                                                        message: 'Максимальная длинна',
+                                                        value: 15
+                                                    },
+                                                    minLength:{
+                                                        message: 'Минимальная длинна',
+                                                        value: 3
+                                                    }
 
-                                            </div>
-                                        </div>
+                                                })}
+                                                country={"eg"} enableSearch={true} className={"baseForm__number"} value={whatsApp} onChange={() => setWatsApp(whatsApp)}/>
+                                            <span> {errors.whatsApp && errors.whatsApp.message}</span>
+                                        </label>
 
-                                    </div>
-                                    <div className="baseForm__self">
-                                        <span  className="baseForm__text">Сделайте селфи с паспортом<span  className="baseForm__span">*</span></span>
-                                        <div className="baseForm__download">
-                                            <h3 className="baseForm__h3">Загрузить</h3>
-                                            <div className="baseForm__line">
-                                                <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M6.80554 1C6.80554 0.585786 6.46976 0.25 6.05554 0.25C5.64133 0.25 5.30554 0.585786 5.30554 1H6.80554ZM5.52521 11.6414C5.81811 11.9343 6.29298 11.9343 6.58587 11.6414L11.3588 6.86847C11.6517 6.57558 11.6517 6.1007 11.3588 5.80781C11.0659 5.51492 10.5911 5.51492 10.2982 5.80781L6.05554 10.0505L1.8129 5.80781C1.52001 5.51492 1.04513 5.51492 0.752241 5.80781C0.459348 6.1007 0.459348 6.57558 0.752241 6.86847L5.52521 11.6414ZM5.30554 1L5.30554 11.1111H6.80554L6.80554 1H5.30554Z" fill="#3378C9"/>
-                                                    <path d="M1 14H11.1111" stroke="#3378C9" strokeWidth="1.5" strokeLinecap="square"/>
-                                                </svg>
+                                        {
+                                            select === "СМИ"  ?  <MasMediaForm/> : select === "Посетитель" ? <><EmailForm /><CheckBox/></> : select === "Участник" ? <><Stake/>{value === "Fashion" ? <Fashion/> : value === "Food" ? <Europe/> : value === "Investment" ? <InvestorCheck/> : <Branch/>}<ParticipantForm/></>: <><EmailForm/><CheckBox/></>
 
-                                            </div>
-                                        </div>
+                                        }
 
-                                    </div>
-                                </div>
-                                {/*<label className='baseForm__label' htmlFor="">*/}
-                                {/*    <span>Телефон<span  className="baseForm__span">*</span></span>*/}
-                                {/*    <PhoneInput*/}
-                                {/*        {...register("number",{*/}
-                                {/*            required:{*/}
-                                {/*                message:"Заполните номер",*/}
-                                {/*                value:true*/}
-                                {/*            },*/}
-                                {/*            maxLength: {*/}
-                                {/*                message: 'Максимальная длинна',*/}
-                                {/*                value: 15*/}
-                                {/*            },*/}
-                                {/*            minLength:{*/}
-                                {/*                message: 'Минимальная длинна',*/}
-                                {/*                value: 3*/}
-                                {/*            }*/}
 
-                                {/*        })}*/}
-                                {/*        country={"eg"}  enableSearch={true}  className={"baseForm__number"} value={number} onChange={() => setNumber(number)}/>*/}
-                                {/*    <span> {errors.number && errors.number.message}</span>*/}
-                                {/*</label>*/}
-                                {/*<label className='baseForm__label' htmlFor="">*/}
-                                {/*    <span>WhatsApp<span  className="baseForm__span">*</span></span>*/}
-                                {/*    <PhoneInput*/}
-                                {/*        {...register("whatsApp",{*/}
-                                {/*            required:{*/}
-                                {/*                message:"Заполните поле",*/}
-                                {/*                value:true*/}
-                                {/*            },*/}
-                                {/*            maxLength: {*/}
-                                {/*                message: 'Максимальная длинна',*/}
-                                {/*                value: 15*/}
-                                {/*            },*/}
-                                {/*            minLength:{*/}
-                                {/*                message: 'Минимальная длинна',*/}
-                                {/*                value: 3*/}
-                                {/*            }*/}
+                                        <Btn type={"submit"} m={'masmedia'} text={'Зарегистрироваться'}/>
+                                    </form>
+                                </FormProvider>
 
-                                {/*        })}*/}
-                                {/*        country={"eg"} enableSearch={true} className={"baseForm__number"} value={whatsApp} onChange={() => setWatsApp(whatsApp)}/>*/}
-                                {/*    <span> {errors.whatsApp && errors.whatsApp.message}</span>*/}
-                                {/*</label>*/}
-
-                                {/*{*/}
-                                {/*         select === "СМИ"  ?  <MasMediaForm/> : select === "Посетитель" ? <><EmailForm /><CheckBox/></> : select === "Участник" ? <><Stake/><Branch/><ParticipantForm/></>: <><EmailForm/><CheckBox/></>*/}
-
-                                {/*}*/}
-
-                                <Btn type={"submit"} m={'masmedia'} text={'Зарегистрироваться'}/>
-                            </form>
 
                                 <p className="baseForm__tp" >
                                     Нажимая на кнопку, вы даете согласие на обработку своих персональных данных в соответствие с <span className="masmediaform__tp2">политикой конфиденциальности</span>
@@ -323,6 +331,20 @@ const BaseForm = () => {
                             </div>
 
                         </div>
+                        <ToastContainer
+                            className={'baseForm__toast'}
+                            position="top-center"
+                            autoClose={5000}
+                            hideProgressBar={false}
+                            newestOnTop={false}
+                            closeOnClick
+                            rtl={false}
+                            pauseOnFocusLoss
+                            draggable
+                            pauseOnHover
+                            theme="light"
+                        />
+
                     </section> : ''
             }
 

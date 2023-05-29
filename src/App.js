@@ -27,34 +27,38 @@ import StandPage from "./pages/RasulPage/StandPage";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
-        <Route path="/" element={<Layout/>}>
+        <>
+            <Route path="/" element={<Layout/>}>
+                <Route index element={<HomePage/>}/>
+                <Route path="*" element={<NotFoundPage/>}/>
+                <Route path="organization" element={<OrganizationPage/>}/>
+                <Route path="partner" element={<PartnersPage/>}/>
+                <Route path="investor" element={<Investor/>}/>
+                <Route path="sponsors" element={<SponsorsPage/>}/>
+                <Route path="contacts" element={<ContactsPage/>}/>
+                <Route path="question" element={<Question/>}/>
+                <Route path="news" element={<NewsPage/>}/>
+                <Route path="meet" element={<MeetPage/>}/>
+                <Route path="forum" element={<ForumPage/>}/>
+                <Route path="place" element={<PlacePage/>}/>
+                <Route path="expect" element={<ExpectPage/>}/>
+                <Route path="benefits" element={<BenefitsPage/>}/>
+                <Route path="members" element={<MembersPage/>}/>
+                <Route path="members" element={<MembersPage/>}/>
+                <Route path="hotel" element={<Hotel/>}/>
+                <Route path="stand" element={<StandPage/>}/>
+            </Route>
 
-            <Route index element={<HomePage/>}/>
-            <Route path="*" element={<NotFoundPage/>}/>
-            <Route path="organization" element={<OrganizationPage/>}/>
-            <Route path="partner" element={<PartnersPage/>}/>
-            <Route path="investor" element={<Investor/>}/>
-            <Route path="sponsors" element={<SponsorsPage/>}/>
-            <Route path="contacts" element={<ContactsPage/>}/>
-            <Route path="question" element={<Question/>}/>
-            <Route path="news" element={<NewsPage/>}/>
-            <Route path="meet" element={<MeetPage/>}/>
-            <Route path="forum" element={<ForumPage/>}/>
-            <Route path="place" element={<PlacePage/>}/>
-            <Route path="expect" element={<ExpectPage/>}/>
-            <Route path="benefits" element={<BenefitsPage/>}/>
-            <Route path="members" element={<MembersPage/>}/>
-            <Route path="members" element={<MembersPage/>}/>
-            <Route path="hotel" element={<Hotel/>}/>
-            <Route path="stand" element={<StandPage/>}/>
-        </Route>
+        </>
     )
 );
 
 function App() {
     return (
         <>
+
             <RouterProvider router={router}/>
+
         </>
     );
 }

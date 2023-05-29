@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import './EmailForm.sass'
 import {CustomContext} from "../../../Context";
 import { AiOutlineEyeInvisible,AiOutlineEye} from "react-icons/ai";
-import {useForm} from "react-hook-form";
+import {useForm, useFormContext} from "react-hook-form";
 
 const EmailForm = () => {
 
