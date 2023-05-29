@@ -12,18 +12,12 @@ const SectorCard = ({img,icon,title,text,link}) => {
                 <img src={img} alt=" картинка"/>
             </div>
             <div className="sector-card__txt">
-                <div className="sector-card__icon">
-                    <img src={icon} alt=" иконка"/>
-                </div>
                 <h3 className="sector-card__h3">
                     {title}
                 </h3>
                 <p className="sector-card__p">
                     {text}
                 </p>
-                <a className="sector-card__btn" href={link}>
-                    <Btn type="button" text="Подробнее"/>
-                </a>
             </div>
         </div>
     );
