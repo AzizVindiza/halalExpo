@@ -1,0 +1,50 @@
+@import "src/sass/base/mixins"
+.time
+  position: relative
+  &__container
+
+    background: #FFFFFF
+
+  &__h2
+    @include text(700,30px,120%,#000000)
+    margin-bottom: 31px
+  &__wrapper
+    display: flex
+    justify-content: space-between
+    column-gap: 42px
+    flex-wrap: wrap
+    row-gap: 60px
+
+  &__date
+    display: flex
+    align-items: center
+    margin-bottom: 36px
+    justify-content: space-between
+    width: 100%
+    border-bottom: 1px solid #D9D9D9
+    padding-bottom: 18px
+
+
+  &__block
+
+
+
+    background: #FFFFFF
+    border-radius: 2px
+    display: flex
+    justify-content: center
+    align-items: center
+    @include text(600,22px,120%,#10923E)
+  &__h3
+    @include text(400,22px,120%,#000000)
+  &__txt
+    width: 47%
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1)
+    padding: 30px 21px
+
+
+
+
+
+
+
