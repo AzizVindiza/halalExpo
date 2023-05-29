@@ -1,7 +1,7 @@
  export const arr = [
     {
         name: 'Место и время проведения',
-        link: 'place'
+        link: 'location'
     },
     {
         name: 'Программа форума',
