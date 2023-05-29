@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import "./masmediaform.sass"
 import EmailForm from "../ParticipantForm/EmailForm/EmailForm";
 import SocialSection from "../SocialSection/SocialSection";
+
 import Btn from "../Btn/Btn";
 import {useForm} from "react-hook-form";
 
@@ -15,7 +16,10 @@ const MasMediaForm = () => {
         },
         handleSubmit,
 
-    } = useForm();
+    } = useForm({mode:"onBlur"});
+    const onSubmit = (data) => {
+        console.log(data)
+    }
 
 
     return (
@@ -36,7 +40,7 @@ const MasMediaForm = () => {
                     </div>
 
                 </div>
-                <form  className="masmediaform__form">
+                <div  className="masmediaform__form">
                     <label  className="masmediaform__label">
                         <span>Полное юридическое наименование организации<span  className="masmediaform__span">*</span></span>
                         <input type="text" className="masmediaform__input"
@@ -118,7 +122,7 @@ const MasMediaForm = () => {
                     </label>
                     <label  className="masmediaform__label">
 
-                        <span >Email</span><span className="masmediaform__span">*</span>
+                        <span>Email</span><span className="masmediaform__span">*</span>
                         <input type="text" className="masmediaform__input"
                                {...register('emailMas',{
                                    required:{
@@ -142,7 +146,7 @@ const MasMediaForm = () => {
                     </label>
                     <SocialSection/>
                     <EmailForm/>
-                </form>
+                </div>
             </div>
         </div>
     );
