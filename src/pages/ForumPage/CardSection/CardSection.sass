@@ -2,33 +2,56 @@
 .card
   position: relative
   padding: 75px 0
+
   &__container
+    padding: 30px 22px
+
+    background: #FFFFFF
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1)
+  &__lists
     display: flex
     column-gap: 85px
-  &__img
-    border-radius: 0 50px
-    background: #DFDFDF
-    width: 522px
-    height: 470px
+
+
+
+
   &__block
-    width: 105px
-    height: 51px
+    width: 127px
+    height: 26px
     background: #FFFFFF
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1)
     border-radius: 2px
     display: flex
     justify-content: center
     align-items: center
-    @include text(400, 16px, 180%, #40A865)
-    margin-right: 12px
+    @include text(600, 22px, 180%, #40A865)
+
+
   &__wrapper
     display: flex
     align-items: center
-    margin-bottom: 29px
+    margin-bottom: 36px
+    justify-content: space-between
+    width: 100%
+    border-bottom: 1px solid #D9D9D9
+    padding-bottom: 18px
   &__h2
-    @include text(500, 40px,120%,#000000 )
+    @include text(700, 40px,120%,#000000 )
 
-    margin-bottom: 28px
+    margin-bottom: 31px
+
+  &__p
+    text-align: right
+
+  &__text
+    width: 50%
+    display: flex
+    justify-content: center
+    align-items: flex-start
+    flex-direction: column
+
+
+
+
 
 
 
