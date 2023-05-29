@@ -11,7 +11,7 @@ const Header = () => {
             <div className="container header__container">
                 <h1 className="header__logo">
                     <Link to={"/"}>
-                        <img src={logo} alt="Halal Investment and Trading"/>
+                        <img src={logo} alt="Halal Investment and Trading Expo"/>
                     </Link>
                 </h1>
                 <Nav/>
