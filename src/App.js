@@ -23,6 +23,7 @@ import BenefitsPage from "./pages/BenefitsPage/BenefitsPage";
 import MembersPage from "./pages/MembersPage/MembersPage";
 import Hotel from "./components/Hotel/Hotel";
 import StandPage from "./pages/RasulPage/StandPage";
+import MassPage from "./pages/MassPage/MassPage";
 
 
 const router = createBrowserRouter(
@@ -47,9 +48,12 @@ const router = createBrowserRouter(
                 <Route path="members" element={<MembersPage/>}/>
                 <Route path="hotel" element={<Hotel/>}/>
                 <Route path="stand" element={<StandPage/>}/>
+                <Route path="mass" element={<MassPage/>}/>
             </Route>
 
+
         </>
+
     )
 );
 

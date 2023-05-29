@@ -8,10 +8,6 @@ export const arr1 = [
         link: 'stand'
     },
     {
-        name: 'Пакеты',
-        link: ''
-    },
-    {
         name: 'Гостиницы ',
         link: 'hotel'
     }
