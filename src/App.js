@@ -17,44 +17,56 @@ import Question from "./pages/Question/Question";
 import NewsPage from "./pages/NewsPage/NewsPage";
 import MeetPage from "./pages/MeetPage/MeetPage";
 import ForumPage from "./pages/ForumPage/ForumPage";
-import PlacePage from "./pages/PlacePage/PlacePage";
+// import PlacePage from "./pages/PlacePage/PlacePage";dsads
 import ExpectPage from "./pages/ExpectPage/ExpectPage";
 import BenefitsPage from "./pages/BenefitsPage/BenefitsPage";
 import MembersPage from "./pages/MembersPage/MembersPage";
 import Hotel from "./components/Hotel/Hotel";
 import StandPage from "./pages/RasulPage/StandPage";
 
+import LocationPage from "./pages/LocationPage/LocationPage";
+
+import MassPage from "./pages/MassPage/MassPage";
+
+
 
 const router = createBrowserRouter(
     createRoutesFromElements(
-        <Route path="/" element={<Layout/>}>
+        <>
+            <Route path="/" element={<Layout/>}>
+                <Route index element={<HomePage/>}/>
+                <Route path="*" element={<NotFoundPage/>}/>
+                <Route path="organization" element={<OrganizationPage/>}/>
+                <Route path="partner" element={<PartnersPage/>}/>
+                <Route path="investor" element={<Investor/>}/>
+                <Route path="sponsors" element={<SponsorsPage/>}/>
+                <Route path="contacts" element={<ContactsPage/>}/>
+                <Route path="question" element={<Question/>}/>
+                <Route path="news" element={<NewsPage/>}/>
+                <Route path="meet" element={<MeetPage/>}/>
+                <Route path="forum" element={<ForumPage/>}/>
+                <Route path="expect" element={<ExpectPage/>}/>
+                <Route path="benefits" element={<BenefitsPage/>}/>
+                <Route path="members" element={<MembersPage/>}/>
+                <Route path="members" element={<MembersPage/>}/>
+                <Route path="hotel" element={<Hotel/>}/>
+                <Route path="stand" element={<StandPage/>}/>
+                <Route path="mass" element={<MassPage/>}/>
+                <Route path="location" element={<LocationPage/>}/>
+            </Route>
 
-            <Route index element={<HomePage/>}/>
-            <Route path="*" element={<NotFoundPage/>}/>
-            <Route path="organization" element={<OrganizationPage/>}/>
-            <Route path="partner" element={<PartnersPage/>}/>
-            <Route path="investor" element={<Investor/>}/>
-            <Route path="sponsors" element={<SponsorsPage/>}/>
-            <Route path="contacts" element={<ContactsPage/>}/>
-            <Route path="question" element={<Question/>}/>
-            <Route path="news" element={<NewsPage/>}/>
-            <Route path="meet" element={<MeetPage/>}/>
-            <Route path="forum" element={<ForumPage/>}/>
-            <Route path="place" element={<PlacePage/>}/>
-            <Route path="expect" element={<ExpectPage/>}/>
-            <Route path="benefits" element={<BenefitsPage/>}/>
-            <Route path="members" element={<MembersPage/>}/>
-            <Route path="members" element={<MembersPage/>}/>
-            <Route path="hotel" element={<Hotel/>}/>
-            <Route path="stand" element={<StandPage/>}/>
-        </Route>
+
+        </>
+
     )
 );
 
 function App() {
     return (
         <>
+
             <RouterProvider router={router}/>
+
         </>
     );
 }
