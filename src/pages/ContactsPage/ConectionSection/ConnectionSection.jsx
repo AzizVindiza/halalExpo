@@ -13,7 +13,7 @@ const ConnectionSection = () => {
                            </svg>
 
                        </div>
-                       <p className="connectionSection__p">+996 (508) 312012</p>
+                       <p className="connectionSection__p">+996 (502) 022 220</p>
                    </div>
                    <div className="connectionSection__block">
                        <div className="connectionSection__oval">
@@ -24,7 +24,7 @@ const ConnectionSection = () => {
 
 
                        </div>
-                       <p className="connectionSection__p">info@ameca.site</p>
+                       <p className="connectionSection__p">hitexpo2023@gmail.com</p>
                    </div>
                    <div className="connectionSection__block">
                        <div className="connectionSection__oval">
