@@ -3,37 +3,31 @@ import standard from "../standard.png";
 import Btn from "../../../../components/Btn/Btn";
 
 const StCardBox = ({card}) => {
+
     return (
         <div className="stCard__box">
-            <h3 className="stCard__h3">{card.name}</h3>
+            <div className="stCard__title"><h3 className="stCard__h3">{card.name}</h3><span>{card.meter}</span></div>
+
             <div className="stCard__row">
                 <div className="stCard__img">
                     <img src={standard} alt=""/>
                 </div>
                 <div className="stCard__right">
-                    <div className="stCard__title"   >
-                        <h4 className="stCard__h4">
-                            {card.pocket}
-                        </h4>
-                        <span    className="stCard__span">
-                           {card.meter}
-                       </span>
-                    </div>
 
                     <ul className="stCard__ul">
 
-                        <li className="stCard__li">Стенды по периметру</li>
-                        <li className="stCard__li">Стойка для ресепшн</li>
-                        <li className="stCard__li">Полки</li>
-                        <li className="stCard__li">Логотип</li>
-                        <li className="stCard__li">Логотип компании</li>
+                        {card.li.map((item,idx)=>(
+                            <li key={idx} className="stCard__li">{item}</li>
+                        ))}
+
+
                         {/*{card.list && card.list.map((el,i)=>(*/}
 
                         {/*    <li key={i} className="stCard__li">{el}</li>*/}
                         {/*))}*/}
 
                     </ul>
-                    <div className="stCard__price">$5298</div>
+                    <div className="stCard__price">{card.discount ? <div className={"stCard__price_new"}><span className={"stCard__discount"}>{card.discount}</span ><span className={"stCard__percent"}>-30%</span></div>: ''} {card.price}  </div>
 
                     <Btn m={'stand'} type="button" text="Забронировать стенд"/>
 

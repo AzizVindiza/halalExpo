@@ -9,6 +9,8 @@
     justify-content: center
     column-gap: 20px
     row-gap: 20px
+
+
   &__box
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.12)
     border-radius: 3px
@@ -20,10 +22,10 @@
   &__right
     width: 280px
   &__h3
-    box-shadow: inset 10px 10px 10px rgba(255, 255, 255, 0.2), inset -4px -4px 10px rgba(0, 0, 0, 0.1)
+
     border-radius: 0 0 15px 0
-    padding: 13px 21px
-    background: #FFFFFF
+
+
     width: fit-content
     @include text(800,36px,133%,#40A865)
   &__title
@@ -31,6 +33,10 @@
     justify-content: space-between
     align-items: center
     margin-bottom: 28px
+    @include text(800,36px,133%,#40A865)
+    box-shadow: inset 10px 10px 10px rgba(255, 255, 255, 0.2), inset -4px -4px 10px rgba(0, 0, 0, 0.1)
+    padding: 13px 21px
+
   &__h4
     @include text(700,28px,133%,#000000)
 
@@ -43,19 +49,51 @@
     height: 273px
   &__ul
     display: flex
+    flex-wrap: wrap
     flex-direction: column
     padding-left: 15px
     row-gap: 7px
     margin-bottom: 30px
+    &:last-child
+      height: 200px
+
+
+
+
+
   &__li
     @include text(500,15px,133%,#000000)
     list-style-type: disc
 
+  &__discount
+    @include text(400,15px,133%,#000000)
+    text-decoration: line-through
+  &__percent
+    @include text(500,10px,133%,#000000)
+    padding: 7px 4px
+    position: absolute
+    right: -10px
+    top: -15px
+
+    background: #FFE606
+    border-radius: 50%
+
+
+
+
 
   &__price
-    width: 71px
+    position: relative
+    display: flex
+    width: fit-content
+    align-items: center
+    column-gap: 5px
     margin-bottom: 40px
     padding: 10px
     @include text(700,18px,133%,#000000)
     background:  #F5F8FF
+    &_new
+      display: flex
+      align-items: center
+
 

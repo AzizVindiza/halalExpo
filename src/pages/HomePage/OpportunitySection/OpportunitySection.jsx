@@ -4,6 +4,21 @@ import bg from './opportunity__bg.svg'
 import bg393 from './opportunity__bg339.svg'
 import six from './six-blue.svg'
 import img from './box__img.svg'
+
+import people from './opportunitySvg/people.svg'
+import novator from './opportunitySvg/novator.svg'
+import devel from './opportunitySvg/development.svg'
+import dis from './opportunitySvg/dis.svg'
+import lider from './opportunitySvg/lider.svg'
+import inv from './opportunitySvg/investment.svg'
+import buy from './opportunitySvg/buyers.svg'
+import manu from './opportunitySvg/manufacture.svg'
+import science from './opportunitySvg/science.svg'
+import sales from './opportunitySvg/wholeSales.svg'
+
+
+
+
 const OpportunitySection = () => {
     return (
         <section className="opportunity">
@@ -20,15 +35,15 @@ const OpportunitySection = () => {
                     <div className="box ">
                         <div className="six">
                             <div className="six__img">
-                                <img src={img} alt="box img"/>
+                                <img src={buy} alt="box img"/>
                             </div>
                         </div>
-                        <h3 className="six__h3">Дистрибьюторы</h3>
+                        <h3 className="six__h3">Покупатели</h3>
                     </div>
                     <div className="box box__2">
                         <div className="six">
                             <div className="six__img">
-                                <img src={img} alt="box img"/>
+                                <img src={dis} alt="box img"/>
                             </div>
                         </div>
                         <h3 className="six__h3">Дистрибьюторы</h3>
@@ -39,23 +54,23 @@ const OpportunitySection = () => {
                                 <img src={img} alt="box img"/>
                             </div>
                         </div>
-                        <h3 className="six__h3">Дистрибьюторы</h3>
+                        <h3 className="six__h3">Представители <br/> правительства</h3>
                     </div>
                     <div className="box box__2">
                         <div className="six">
                             <div className="six__img">
-                                <img src={img} alt="box img"/>
+                                <img src={science} alt="box img"/>
                             </div>
                         </div>
-                        <h3 className="six__h3">Дистрибьюторы</h3>
+                        <h3 className="six__h3">Научная среда</h3>
                     </div>
                     <div className="box">
                         <div className="six">
                             <div className="six__img">
-                                <img src={img} alt="box img"/>
+                                <img src={devel} alt="box img"/>
                             </div>
                         </div>
-                        <h3 className="six__h3">Дистрибьюторы</h3>
+                        <h3 className="six__h3">Политики</h3>
                     </div>
 
                 </div>
@@ -63,50 +78,50 @@ const OpportunitySection = () => {
                     <div className="box ">
                         <div className="six">
                             <div className="six__img">
-                                <img src={img} alt="box img"/>
+                                <img src={manu} alt="box img"/>
                             </div>
                         </div>
-                        <h3 className="six__h3">Дистрибьюторы</h3>
+                        <h3 className="six__h3">Производители</h3>
                     </div>
                     <div className="box box__1">
                         <div className="six">
                             <div className="six__img">
-                                <img src={img} alt="box img"/>
+                                <img src={lider} alt="box img"/>
                             </div>
                         </div>
-                        <h3 className="six__h3">Дистрибьюторы</h3>
+                        <h3 className="six__h3">Лидеры мысли</h3>
                     </div>
                     <div className="box box__3">
                         <div className="six">
                             <div className="six__img">
-                                <img src={img} alt="box img"/>
+                                <img src={novator} alt="box img"/>
                             </div>
                         </div>
-                        <h3 className="six__h3">Представители <br/>правительства</h3>
+                        <h3 className="six__h3">Новаторы</h3>
                     </div>
                     <div className="box box__4">
                         <div className="six">
                             <div className="six__img">
-                                <img src={img} alt="box img"/>
+                                <img src={sales} alt="box img"/>
                             </div>
                         </div>
-                        <h3 className="six__h3">Дистрибьюторы</h3>
+                        <h3 className="six__h3">Оптовики и <br/> розничные <br/> торговцы</h3>
                     </div>
                     <div className="box box__2">
                         <div className="six">
                             <div className="six__img">
-                                <img src={img} alt="box img"/>
+                                <img src={inv} alt="box img"/>
                             </div>
                         </div>
-                        <h3 className="six__h3">Дистрибьюторы</h3>
+                        <h3 className="six__h3">Инвесторы</h3>
                     </div>
                     <div className="box">
                         <div className="six">
                             <div className="six__img">
-                                <img src={img} alt="box img"/>
+                                <img src={people} alt="box img"/>
                             </div>
                         </div>
-                        <h3 className="six__h3">Дистрибьюторы</h3>
+                        <h3 className="six__h3">Потребители</h3>
                     </div>
                 </div>
                 <div className="six-blue">
