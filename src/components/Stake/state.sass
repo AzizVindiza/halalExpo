@@ -2,6 +2,8 @@
 .state
 
   @include text(600,16px,133%,#000000)
+  &__h4
+    margin-bottom: 7px
   &__h6
     @include text(500,13px,133%,#000000)
   &__item
@@ -38,5 +40,7 @@
     display: flex
     justify-content: space-between
     border-radius: 4px
+  &__h4
+    @include text(600,16px,133%,#000)
   &__span
     color: red
