@@ -1,0 +1,37 @@
+@import "src/sass/base/mixins"
+.secondCounter
+  margin-top: 60px
+  padding: 22px 20px
+  width: 453px
+  background: radial-gradient(192.16% 1500.71% at -41.06% 139.61%, #2DC25F 8.72%, #3E69EC 97.99%)
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.25)
+  border-radius: 5px
+  &__h2
+    @include text(700,18px,126%,#ffffff)
+    margin-bottom: 11px
+  &__wrapper
+    background: rgba(255, 255, 255, 0.2)
+    backdrop-filter: blur(5px)
+    border-radius: 62px
+    display: flex
+    justify-content: center
+    padding: 10px 40px
+  &__time
+    @include text(600,31px,120%,#ffffff)
+  &__txt
+    @include text(400,14px,120%,#ffffff)
+  &__dock
+    @include text(600,31px,120%,#ffffff)
+    margin: 0 10px 0 10px
+  &__h3
+    @include text(600,18px,120%,#ffffff)
+
+    text-align: right
+  &__h4
+    @include text(600,40px,120%,#ffffff)
+  &__block
+    margin: 13px
+    align-items: center
+    justify-content: right
+    display: flex
+    column-gap: 6px
