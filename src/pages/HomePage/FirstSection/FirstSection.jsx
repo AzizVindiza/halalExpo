@@ -6,6 +6,8 @@ import small from './first__circle-small.svg'
 import big from './first__circle-big.png'
 import Btn from "../../../components/Btn/Btn";
 import {motion} from  "framer-motion"
+import CounterSection from "./CounterSection/CounterSection";
+import SecondCounter from "./SecondCounter/SecondCounter";
 
 
 
@@ -44,6 +46,11 @@ const FirstSection = () => {
                         <Btn type="button" text="Оставить заявку"/>
                     </a>
                 </motion.div>
+                <div className="first__component">
+                    <CounterSection/>
+                    <SecondCounter/>
+                </div>
+
             </div>
             <div className="first__circle-big">
                 <img src={big} alt="big circle"/>
@@ -58,6 +65,7 @@ const FirstSection = () => {
                     <img src={bg} alt="line bg"/>
                 </picture>
             </div>
+
         </motion.section>
     );
 };

@@ -37,15 +37,16 @@ const BaseForm = () => {
     const {close,setClose,value} = useContext(CustomContext)
     const arr = ["Представитель государственных органов","СМИ","Посетитель","Участник","Эксперт"]
 
-    const [select,setSelect] = useState('Представитель государственных органов') //choose select
+    // const [select,setSelect] = useState('Представитель государственных органов') //choose select
     const [active,setActive] = useState(false) // open select
     const [category,setCategory] = useState(0) // open select
+    const [count,setCount] = useState("Представитель государственных органов") //choose select
     const [number,setNumber] = useState()
     const [whatsApp,setWatsApp,] = useState()
-    const clickOnCategory = (item,i) => { //choose category
-        setSelect(item)
-        setCategory(i)
-    }
+    // const clickOnCategory = (item,i) => { //choose category
+    //     setSelect(item)
+    //     setCategory(i)
+    // }
     return (
         <>
             {
@@ -54,15 +55,15 @@ const BaseForm = () => {
                         <div className="baseForm__popup">
 
                             <div className="baseForm__wrapper">
-                                <h2 className="baseForm__title">В качестве кого вы хотите посетить HIT EXPO?</h2>
+                                {/*<h2 className="baseForm__title">В качестве кого вы хотите посетить HIT EXPO?</h2>*/}
 
-                                <ul className="baseForm__array">
-                                    {
-                                        arr.map((item,i) => (
-                                            <li onClick={() =>  clickOnCategory(item,i)} className={`baseForm__item ${category === i ? "baseForm__item_active" : ''}`}>{item}</li>
-                                        ))
-                                    }
-                                </ul>
+                                {/*<ul className="baseForm__array">*/}
+                                {/*    {*/}
+                                {/*        arr.map((item,i) => (*/}
+                                {/*            <li onClick={() =>  clickOnCategory(item,i)} className={`baseForm__item ${category === i ? "baseForm__item_active" : ''}`}>{item}</li>*/}
+                                {/*        ))*/}
+                                {/*    }*/}
+                                {/*</ul>*/}
                                 <div onClick={()=>setClose(false)} className="baseForm__close">
                                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1.16663 1.16675L12.8333 12.8334M1.16663 12.8334L12.8333 1.16675" stroke="black" strokeOpacity="0.5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -70,13 +71,16 @@ const BaseForm = () => {
 
 
                                 </div>
-
-
-                                <h2 className="baseForm__h2">Регистрация {select === "Посетитель" ?  "Посетителя"  : select === "Участник" ? "Участника" : select === "Эксперт" ? "Эксперта"  : select ==="СМИ" ? "СМИ" : <h2 className={'baseForm__gos'}>{select === "Представитель государственных органов" ? "Представителя государственных органов" : ""}</h2> }</h2>
-
+                                <h2 className="baseForm__h2">Регистрация</h2>
                                 <p className="baseForm__p">
                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when.
                                 </p>
+
+
+
+                                {/*<h2 className="baseForm__h2">Регистрация {select === "Посетитель" ?  "Посетителя"  : select === "Участник" ? "Участника" : select === "Эксперт" ? "Эксперта"  : select ==="СМИ" ? "СМИ" : <h2 className={'baseForm__gos'}>{select === "Представитель государственных органов" ? "Представителя государственных органов" : ""}</h2> }</h2>*/}
+
+
                                 <FormProvider {...methods} >
                                     <form onSubmit={methods.handleSubmit(onSubmit)} className="baseForm__form">
                                         <label className="baseForm__label" htmlFor="">
@@ -313,8 +317,19 @@ const BaseForm = () => {
                                             <span> {errors.whatsApp && errors.whatsApp.message}</span>
                                         </label>
 
+
+                                        <h4 className={"baseForm__h4"} >В качестве кого вы хотите посетить HIT EXPO?*</h4>
+                                        <select className="baseForm__select2" value={count} onChange={(e)=>setCount(e.target.value)} name="" id="" >
+                                            <option  className="baseForm__option" value="">Представитель государственных органов</option>
+                                            <option className="baseForm__option" value="СМИ">СМИ</option>
+                                            <option  className="baseForm__option" value="Посетитель">Посетитель</option>
+                                            <option  className="baseForm__option" value="Участник">Участник</option>
+                                            <option  className="baseForm__option" value="Эксперта">Эксперта</option>
+                                        </select>
+
+
                                         {
-                                            select === "СМИ"  ?  <MasMediaForm/> : select === "Посетитель" ? <><EmailForm /><CheckBox/></> : select === "Участник" ? <><Stake/>{value === "Fashion" ? <Fashion/> : value === "Food" ? <Europe/> : value === "Investment" ? <InvestorCheck/> : <Branch/>}<ParticipantForm/></>: <><EmailForm/><CheckBox/></>
+                                            count === "СМИ"  ?  <MasMediaForm/> : count === "Посетитель" ? <><EmailForm /><CheckBox/></> : count === "Участник" ? <><Stake/>{value === "Fashion" ? <Fashion/> : value === "Food" ? <Europe/> : value === "Investment" ? <InvestorCheck/> : <Branch/>}<ParticipantForm/></>: <><EmailForm/><CheckBox/></>
 
                                         }
 

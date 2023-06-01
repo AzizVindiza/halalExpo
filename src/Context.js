@@ -3,6 +3,8 @@ import {createContext} from "react";
 
 export  const CustomContext = createContext()
 const Context = (props) => {
+    const [burger,setBurger] = useState(false)
+
     const [close,setClose] = useState(false) // close register
     const [stake,setStake] = useState(false) // close register
     const [branch,setBranch] = useState(false) // close register
@@ -16,7 +18,7 @@ const Context = (props) => {
         close,setClose,stake,setStake,branch,setBranch,login,setLogin,passwordShown,
         setPasswordShown,
         passwordShown2, setPasswordShown2,
-        value,setValue
+        value,setValue,burger,setBurger
     }
     return <CustomContext.Provider value={valueContext}>
         {props.children}
