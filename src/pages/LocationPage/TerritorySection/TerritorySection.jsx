@@ -56,7 +56,7 @@ const TerritorySection = () => {
 
                             </div>
 
-                            <img src={img} alt=""/>
+                            <img className={"territory__img"} src={img} alt=""/>
                             <div className="territory__square ">
                                 <iframe
                                     className="territory__square_iframe"

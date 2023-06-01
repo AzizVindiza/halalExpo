@@ -2,6 +2,7 @@ import React from 'react';
 import './StandCardSection.sass'
 import StCardBox from "./StCardBox/StCardBox";
 
+
 const StandCardSection = () => {
     return (
         <section className='stCard'>
