@@ -19,10 +19,10 @@ const Nav = () => {
                 <NavLink className={'nav__link'} to={'meet'}>B2B</NavLink>
                 <NavLink className={'nav__link'} to={'news'}>Новости</NavLink>
                 <NavLink className={'nav__link'} to={'question'}>FQA</NavLink>
+                <NavLink className={'nav__link nav__btn'} to={''}>
+                    <Btn type="button" text="Купить Билет" m="border"/>
+                </NavLink>
             </div>
-            <NavLink className={'nav__link nav__btn'} to={''}>
-                <Btn type="button" text="Купить Билет" m="border"/>
-            </NavLink>
             <div className="nav__wrapper">
                 <Link className={'nav__user'} to={''}>Регистрация</Link>
                 <Link className={'nav__user'} to={''}>Войти</Link>
