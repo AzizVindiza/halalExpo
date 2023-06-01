@@ -22,7 +22,7 @@ const AboutSection = () => {
         <motion.section viewport={{amount:0.2, once:true}} initial={"hidden"} whileInView={"visible"} className="about">
             <motion.div custom={1} variants={textMotion}   className="container_fluid about__container">
                 <h2 className="about__h2">
-                    Halal Investment and Trading 2023
+                    Halal Investment and Trade 2023
                 </h2>
                 <p className="about__p">
                     Halal Investment and Trade Expo 2023 – крупнейшая выставка
