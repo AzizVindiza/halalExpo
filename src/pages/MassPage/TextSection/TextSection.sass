@@ -2,25 +2,67 @@
 .textSection
   padding-top: 64px
   &__wrapper
-
-
     border-left: 1px solid #DEDEDE
   &__row
     display: flex
     align-items: center
     position: relative
   &__span
-    width: 20px
-    height: 20px
+    width: 14px
+    height: 14px
     background: #3378C9
     filter: blur(5px)
     border-radius: 50%
-    left: -10px
-
-
+    left: -7px
     position: absolute
-
   &__txt
     padding: 40px
     @include text(500,17px,133%,#000000)
+@media (max-width: 1440px)
+@media (max-width: 1201px)
+@media (max-width: 1025px)
+  .textSection
+    padding-top: 64px
+    &__wrapper
+      border-left: 1px solid #DEDEDE
+    &__row
+      display: flex
+      align-items: center
+      position: relative
+    &__span
+      width: 14px
+      height: 14px
+      background: #3378C9
+      filter: blur(5px)
+      border-radius: 50%
+      left: -7px
+      position: absolute
+    &__txt
+      @include text(500,16px,133%,#000000)
+      padding: 23px
+
+@media (max-width: 769px )
+
+@media (max-width: 394px )
+  .textSection
+    padding-top: 65px
+    &__wrapper
+      border-left: 1px solid #DEDEDE
+    &__row
+      display: flex
+      align-items: center
+      position: relative
+    &__span
+      width: 14px
+      height: 14px
+      background: #3378C9
+      filter: blur(5px)
+      border-radius: 50%
+      left: -7px
+      position: absolute
+    &__txt
+      @include text(500,15px,133%,#000000)
+      padding: 20px
+
+
 
