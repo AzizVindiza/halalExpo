@@ -9,7 +9,6 @@ const CardMembers = ({members}) => {
             </div>
 
             <h2 className="cardMembers__h2">
-                Возможность презентации и продвижения
                 {members.title}
             </h2>
             <p className="cardMembers__h3">

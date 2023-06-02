@@ -15,11 +15,26 @@
     @include text(400, 15px, 133%, #000000)
     height: 120px
     margin-top: 10px
+@media (max-width: 1440px)
+
+@media (max-width: 1201px)
+
 @media (max-width: 1025px)
   .cardMembers
     &__h2
-      @include text(700,20px,133px,#00862D)
-      margin-top: 20px
+      @include text(700,20px,133%,#00862D)
+      margin-top: 32px
+    &__h3
+      @include text(400,15px,133%,#000000)
+      margin-top: 10px
+@media (max-width: 394px )
+  .cardMembers
+    &__h2
+      @include text(700,18px,133%,#00862D)
+      margin-top: 24px
+    &__h3
+      @include text(400,15px,133%,#000000)
+      margin-top: 10px
 
 
 
