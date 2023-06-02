@@ -17,7 +17,7 @@ import Question from "./pages/Question/Question";
 import NewsPage from "./pages/NewsPage/NewsPage";
 import MeetPage from "./pages/MeetPage/MeetPage";
 import ForumPage from "./pages/ForumPage/ForumPage";
-// import PlacePage from "./pages/PlacePage/PlacePage";dsads
+// import PlacePage from "./pages/PlacePage/PlacePage";
 import ExpectPage from "./pages/ExpectPage/ExpectPage";
 import BenefitsPage from "./pages/BenefitsPage/BenefitsPage";
 import MembersPage from "./pages/MembersPage/MembersPage";
