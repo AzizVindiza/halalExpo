@@ -2,8 +2,11 @@
 
 .footer
   background: #0057BC
+  position: relative
+  &__right
+    display: none
   &__container
-    padding: 58px 0 27px 0
+    padding: 58px 0 58px 0
     display: flex
     justify-content: space-between
   &__p
@@ -23,6 +26,7 @@
     @include text(400,13px,120%,#fff)
     width: 154px
     text-align: center
+    opacity: 0.5
   &__label
     display: flex
     align-items: center
@@ -45,5 +49,56 @@
     justify-content: space-between
     background: #fff
     padding: 17px 18px
+  &__btn
+    position: absolute
+    right: 55px
+    bottom: 20px
+    background: #FFFFFF
+    border-radius: 50%
+@media (max-width: 1025px)
+  .footer
+    &__links
+      justify-content: space-between
+      svg
+        width: 32px
+        height: 32px
+    &__socials
+      width: 16px
+      height: 16px
+    &__center
+
+      align-self: inherit
+    &__btn
+      bottom: 5px
+@media (max-width: 394px)
+  .footer
+    &__container
+      position: relative
+      display: flex
+      flex-direction: column-reverse
+      padding: 58px 0 135px 0
+    &__h2
+      margin-top: 36px
+    &__links
+      display: flex
+      flex-wrap: wrap
+      width: 300px
+      column-gap: 50px
+      row-gap: 50px
+      justify-content: inherit
+      svg
+        width: 50px
+        height: 50px
+    &__txt
+      position: absolute
+
+      bottom: 55px
+    &__center
+      display: flex
+      justify-content: center
+    &__btn
+      right: 20px
+      bottom: 40px
+
 
 

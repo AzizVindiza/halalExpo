@@ -5,6 +5,7 @@ import {CustomContext} from "../../../Context";
 import LoginForm from "../../../components/LoginForm/LoginForm";
 
 
+
 const RowSection = () => {
     const {close, setClose,setLogin,login} = useContext(CustomContext)
     return (
@@ -18,6 +19,7 @@ const RowSection = () => {
                         <button onClick={() => setClose(true)} className={'rowSection__reg'}>Регистрация</button>
                     </div>
                     <div className="rowSection__change">
+
                         <button className={'rowSection__lang'}>RU</button>
                         <button className={'rowSection__lang'}>EN</button>
                     </div>

@@ -6,6 +6,8 @@ import small from './first__circle-small.svg'
 import big from './first__circle-big.png'
 import Btn from "../../../components/Btn/Btn";
 import {motion} from  "framer-motion"
+import CounterSection from "./CounterSection/CounterSection";
+import SecondCounter from "./SecondCounter/SecondCounter";
 
 
 
@@ -30,6 +32,9 @@ const FirstSection = () => {
             <div className="container first__container">
 
                 <motion.div  custom={1} variants={textMotion} className="first__txt">
+                    <h3 className="first__h3">
+                        ИННОВАЦИЯ НАЧИНАЕТСЯ ЗДЕСЬ
+                    </h3>
                     <h2 className="first__h2">
                         Halal Investment<br/>
                         and Trade<span>2023</span>
@@ -41,6 +46,11 @@ const FirstSection = () => {
                         <Btn type="button" text="Оставить заявку"/>
                     </a>
                 </motion.div>
+                <div className="first__component">
+                    <CounterSection/>
+                    <SecondCounter/>
+                </div>
+
             </div>
             <div className="first__circle-big">
                 <img src={big} alt="big circle"/>
@@ -55,6 +65,7 @@ const FirstSection = () => {
                     <img src={bg} alt="line bg"/>
                 </picture>
             </div>
+
         </motion.section>
     );
 };
