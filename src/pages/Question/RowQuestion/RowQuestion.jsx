@@ -39,7 +39,7 @@ const RowQuestion = () => {
 
 
                         <div  className="rowQuestion__wrapper">
-                            <p className="rowQuestion__p">{item.title}</p>
+                            <h2 className="rowQuestion__h2">{item.title}</h2>
                             <div  className="rowQuestion__svg">
                                 {
                                     selected === index

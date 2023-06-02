@@ -44,6 +44,7 @@
   &__square
     width: 90%
     margin: 98px auto
+    background: #9FD3B2
     height: 800px
     &_iframe
       text-align: center
@@ -58,8 +59,9 @@
     &__nav
       right: 100px
     &__square
-      width: 921px
+      width: 90%
       margin: 46px auto
+      background: #9FD3B2
       height: 620px
 
     &_iframe
@@ -70,10 +72,29 @@
 
 @media (max-width: 394px)
   .territory
+    &__wrapper
+      position: relative
     &__box
-      top: 315px
-      width: 90%
+      top: 135px
+      width: 95%
       z-index: 2
+    &__h2
+      @include text(700px, 15px, 133%, #3378C9)
+
+    &__p
+      @include text(400px, 13px, 133%, #000000)
+    &__img
+      top: 0
+      position: absolute
+    &__nav
+
+      top: 320px
+      right: 25px
+    &__square
+      width: 90%
+      position: relative
+      top: 130px
+
 
 
 
