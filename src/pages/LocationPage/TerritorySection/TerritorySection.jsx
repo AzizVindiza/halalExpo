@@ -28,7 +28,7 @@ const TerritorySection = () => {
 
 
 
-                <div>
+                <div className={"territory__wrapper"}>
                     <Swiper navigation={
                         {
                             prevEl:prevRef.current,
@@ -85,10 +85,13 @@ const TerritorySection = () => {
 
 
                             </div>
+                            <div className="territory__img">
+                                <img src={img2} alt=""/>
+                            </div>
 
-                            <img src={img2} alt=""/>
+
                             <div className="territory__square">
-                                dsd
+
                             </div>
 
                         </SwiperSlide>
