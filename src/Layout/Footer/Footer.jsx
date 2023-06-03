@@ -2,6 +2,13 @@ import React from 'react';
 import './Footer.sass'
 
 const Footer = () => {
+
+
+    const handleScrollToTop = () => {
+        window.scrollTo({top: 0 , behavior: "smooth"})
+    }
+
+
     return (
         <footer className={'footer'}>
             <div className="footer__container container">
@@ -135,7 +142,7 @@ const Footer = () => {
                         </span>
                     </label>
                 </div>
-                <button className={"footer__btn"}>
+                <button className={"footer__btn"} onClick={()=>handleScrollToTop() }>
                     <svg width="48" height="48" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter="url(#filter0_d_2287_1073)">
                             <circle cx="34" cy="34" r="24" fill="white"/>
