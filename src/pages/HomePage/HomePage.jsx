@@ -8,7 +8,6 @@ import SectorSection from "./SectorSection/SectorSection";
 import OpportunitySection from "./OpportunitySection/OpportunitySection";
 import MapSection from "./MapSection/MapSection";
 import SpeakersSection from "./SpeakersSection/SpeakersSection";
-
 import ParticipantSection from "./ParticipantSection/ParticipantSection";
 import OrganizatorSection from "./OrganizatorSection/OrganizatorSection";
 import VideoSection from "./VideoSection/VideoSection";
@@ -20,8 +19,10 @@ const HomePage = () => {
         <>
             <FirstSection/>
             <ParticipantSection/>
-            <AboutSection/>
-            <TargetSection/>
+            <div className="home__bg">
+                <AboutSection/>
+                <TargetSection/>
+            </div>
             <TaskSection/>
             <TypeSection/>
             <VideoSection/>
