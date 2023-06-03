@@ -5,7 +5,8 @@
     padding: 50px 0 48px 0
   &__h2
     @include text(800,45px,133%,#10923E)
-    width: 670px
+    width: 100%
+    text-align: center
     text-transform: uppercase
     margin: 0 auto 32px auto
     position: absolute
@@ -26,26 +27,25 @@
     column-gap: 88px
     row-gap: 75px
 
-  &__txt
-    @include text(500,18px,133%, #000000)
-    width: 341px
-
-  &__left
-    width: 417px
-    height: 417px
-    position: absolute
-    left: -180px
-    top: -140px
-  &__image
-    width: 100%
 @media (max-width: 1440px)
 @media (max-width: 1201px)
 @media (max-width: 1025px)
   .mapSection
-    position: relative
-    &__container
+    &__h2
+      @include text(800,35px,133%,#40A865)
+
+    &__p
+      width: 921px
+      @include text(500,18px,133%,#000000)
+      margin-bottom: 57px
+
+
+
 
 @media (max-width: 769px )
+  .mapSection
+    &__h2
+      position: relative
 
 @media (max-width: 394px )
 

@@ -8,7 +8,7 @@ const MapSection = () => {
                 <div className="mapSection__block">
 
                     <div className="mapSection__image">
-                        <h2 className="mapSection__h2">инвесторы hit expo </h2>
+                        <h2 className="mapSection__h2">инвесторы hit expo 2023</h2>
                         <img src={pic} alt="" className="mapSection__img"/>
                     </div>
                 </div>
