@@ -10,11 +10,10 @@
     cursor: pointer
   &__line
     position: absolute
-    right: -15px
+    right: -9px
     top: 50%
     transform: translateY(-50%)
-  .btn
-    padding: 9px 25px
+
   &__wrapper
     display: none
   &__txt
@@ -22,23 +21,34 @@
   &__btn_small
     display: none
 
-
-
-
-
-
-
-
-
-
 @media (max-width: 1201px)
-@media (max-width: 1025px)
+
+
   .nav
     &__container
       column-gap: 20px
 
 
+@media (max-width: 770px)
+  .nav
 
+    width: 100%
+    &__container
+      column-gap: 14px
+      display: flex
+      row-gap: 15px
+      align-items: baseline
+
+    &__link
+      @include text(600,12px,133%,#000000)
+
+
+
+@media (max-width: 482px)
+  .nav
+    padding-top: 70px
+    &__container
+      flex-direction: column
 @media (max-width: 393px)
   .nav
     padding-top: 123px
@@ -61,6 +71,11 @@
       text-align: center
       display: flex
       margin: 0 auto
+    &__container
+      column-gap: 13px
+    &__line
+      right: 0
+
 
 
 

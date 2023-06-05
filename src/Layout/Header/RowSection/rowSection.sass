@@ -7,7 +7,7 @@
     align-items: center
     justify-content: space-between
   &__h2
-    @include text(400,14px,133%,#000000)
+    @include text(400,16px,133%,#000000)
   &__wrapper
     display: flex
     column-gap: 41px
@@ -22,6 +22,32 @@
     @include text(400,14px,133%,#000000)
     background: transparent
     cursor: pointer
+
+@media (max-width: 1201px)
+  .rowSection
+    &__h2
+      @include text(400,15px,133%,#000000)
+
+
+
+
+@media (max-width: 1025px)
+@media (max-width: 770px)
+  .rowSection
+    &__h2
+      @include text(400,12px,133%,#000000)
+    &__in, &__reg
+      @include text(500,12px,133%,#000000)
+    &__lang
+      @include text(400,13px,133%,#000000)
+
+
+
+
+
+@media (max-width: 482px)
+  .rowSection
+    display: none
 
 
 @media (max-width: 393px)

@@ -35,7 +35,6 @@ const Header = () => {
                 <div className={`header__menu ${isActiveHamburger ? " header__menu_active" : null} `}>
                     <Nav/>
                 </div>
-
             </div>
 
         </header>

@@ -9,6 +9,7 @@
     @include text(400,20px,133%,#ffffff)
     padding: 16.5px 44.5px
   &_border
+    padding: 9px 18px
     border: 2px solid #0057BC
     color: #0057BC
     background: transparent
@@ -39,9 +40,24 @@
   &_border:hover
     background: #0057BC
     color: #FFFFFF
+@media (max-width: 1201px)
+  .btn
+    &_border
+      @include text(400,11px,133%,#0033CC)
+@media (max-width: 770px)
+
+
+
+
 @media (max-width: 1025px)
   .btn
     &_card
       @include text(400,13px,133%,#0033CC)
       background: #FFFFFF
+
+@media (max-width: 770px)
+  .btn
+    &_border
+      padding: 7px 11px
+
 

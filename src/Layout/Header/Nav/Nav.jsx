@@ -7,10 +7,12 @@ import arr1 from "../../../utils/nav1";
 import arr2 from "../../../utils/nav2";
 import Btn from "../../../components/Btn/Btn";
 import RegisterForm from "../../../components/RegisterForm/RegisterForm";
+import logo from "../header__logo.png";
 const Nav = () => {
     return (
         <nav className="nav">
             <div className="container nav__container">
+
                 <Dropdown txt={"Об ЭКСПО"} arr={arr}/>
                 <Dropdown txt={"Участникам"} arr={arr1}/>
                 <Dropdown txt={"Посетителям"} arr={arr2}/>

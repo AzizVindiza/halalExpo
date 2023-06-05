@@ -1,22 +1,31 @@
 import React from 'react';
+import './CountrySection.sass'
 
 const CountrySection = () => {
+    const data = ["Саудовская Аравия","Турция","Бахрейн","Узбекистан","ОАЭ","Кувейт","Малайзия","Казахстан","Катар",
+    "Оман","Иран","Таджикистан"]
     return (
         <div className={'countrySection'}>
-            <div className="countrySection__conttainer container">
+            <div className="countrySection__container container">
                 <div className="countrySection__wrapper">
-                    <div className="countrySection__block">
-                        <h2 className="countrySection__h2">Саудовская Аравия</h2>
-                        <div className="countrySection__box">
-                             <div className="countrySection__flag">
-                                <img src={''} alt="" className="countrySection__pic"/>
-                                <h3 className="countrySection__h3">Lorem Ipsum is </h3>
+                    {
+                        data.map((item)=> (
+                            <div className="countrySection__box">
+                                <span className="countrySection__span"></span><h3 className="countrySection__h3">{item}</h3>
                             </div>
-                         </div>
-                    </div>
-
-
+                        ))
+                    }
                 </div>
+
+
+
+
+
+
+
+
+
+
             </div>
         </div>
     );
