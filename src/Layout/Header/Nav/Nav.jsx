@@ -21,8 +21,10 @@ const Nav = () => {
                 <NavLink className={'nav__link'} to={'meet'}>B2B</NavLink>
                 <NavLink className={'nav__link'} to={'news'}>Новости</NavLink>
                 <NavLink className={'nav__link'} to={'question'}>FQA</NavLink>
-                <NavLink className={'nav__link nav__btn'} to={''}>
-                    <Btn type="button" text="Купить Билет" m="border"/>
+                <NavLink className={'nav__link nav__btn  '} to={''}>
+                    <button type="button"   className={'nav__btn-second'}>
+                        <span className={'nav__span'}>Купить Билет</span>
+                    </button>
                 </NavLink>
             </div>
             <div className="nav__wrapper">

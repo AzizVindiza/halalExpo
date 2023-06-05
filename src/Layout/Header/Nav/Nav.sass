@@ -20,6 +20,41 @@
     display: none
   &__btn_small
     display: none
+  &__btn-second
+
+    display: block
+    width: 150px
+    font-weight: 700
+    line-height: 40px
+    font-size: 13px
+    font-family: Gilroy,sans-serif
+    text-decoration: none
+    color: #0057BC
+    border: 2px solid #0057BC
+    letter-spacing: 2px
+    text-align: center
+    position: relative
+    transition: all .9s
+    border-radius: 3px
+    cursor: pointer
+    &:after
+      position: absolute
+      content: ""
+      top: 0
+      left: 0
+      width: 0
+      height: 100%
+      background: #0057BC
+      transition: all .9s
+      border-radius: 1px
+
+    &:hover
+      color: #fff
+    &:hover:after
+      width: 100%
+  &__span
+     position: relative
+     z-index: 2
 
 @media (max-width: 1201px)
 
