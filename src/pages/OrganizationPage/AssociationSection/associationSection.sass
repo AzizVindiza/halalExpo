@@ -2,14 +2,34 @@
 .association
   background: url("./bg.png") center/cover no-repeat
   &__container
-    padding: 65px 0
+    padding: 60px
   &__h2
     @include text(800,30px,120%,#fff)
-    margin-bottom: 50px
+    margin-bottom: 17px
     text-align: center
 
   &__p
     @include text(500,22px,133%,#fff)
-    width: 1034px
+    width: 100%
     margin: 0 auto
     text-align: center
+@media (max-width: 1025px)
+  .association
+    &__container
+      padding: 38px 0
+
+    &__h2
+      margin-bottom: 13px
+      @include text(800,25px,120%,#fff)
+    &__p
+      @include text(500,16px,133%,#fff)
+
+@media (max-width: 294px)
+  .association
+    &__h2
+      margin-bottom: 9px
+      @include text(800,20px,120%,#fff)
+    &__p
+      @include text(500,14px,133%,#fff)
+
+
