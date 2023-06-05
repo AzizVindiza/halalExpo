@@ -55,7 +55,11 @@
     bottom: 20px
     background: #FFFFFF
     border-radius: 50%
-@media (max-width: 1025px)
+  &__wrapp
+    column-gap: 65px
+    display: flex
+    justify-content: space-between
+@media (max-width: 1024px)
   .footer
     &__links
       justify-content: space-between
@@ -70,6 +74,8 @@
       align-self: inherit
     &__btn
       bottom: 5px
+    &__center
+      align-self: flex-end
 @media (max-width: 394px)
   .footer
     &__container

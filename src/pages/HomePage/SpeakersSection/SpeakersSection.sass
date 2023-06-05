@@ -3,69 +3,23 @@
 .speaker
   &__container
     padding-bottom: 105px
-  &__cards
-    display: flex
-    row-gap: 6px
-    column-gap: 6px
-    flex-wrap: wrap
-    margin-bottom: 60px
-  &__card
-    position: relative
-    padding: 12px 6px 12px 13px
-    background: #DBDBDB
-    border-radius: 8px
-    display: flex
-    align-items: flex-end
-    justify-content: center
-    width: 288px
-    height: 300px
-    overflow: hidden
-  &__bg
-    position: absolute
-    width: 100%
-    height: 100%
-    top: 0
-    left: 0
-    right: 0
-    bottom: 0
-    margin: auto
-  &__txt
-    position: relative
-    z-index: 1
-  &__h3
-    @include text(400,20px,133%,#fff)
-    margin-bottom: 4px
   &__h2
-    @include text(800,35px,42px,#40A865)
-    margin-bottom: 50px
-  &__p
-    @include text(400,13px,120%,#fff)
+    @include text(800,35px,120%,#00862D)
+    margin:  0 0 35px 0
   &__btn
-    display: block
-    text-align: center
-  &__sm-text
-    display: none
+    display: flex
+    justify-content: center
+    margin: 70px auto 0 auto
+  &__wrapper
+    display: flex
+    column-gap: 48px
+    flex-wrap: wrap
+    row-gap: 25px
 
 
 @media (max-width: 394px )
   .speaker
     &__container
       padding-bottom: 70px
-    &__card
-      width: 162px
-      height: 162px
-    &__txt
-      display: none
-    &__cards
-      row-gap: 32px
-      column-gap: 0
-      justify-content: space-between
-    &__sm-text
-      display: block
-      width: 174px
-      .speaker__h3
-        @include text(600,16px,133%,#000)
-        margin-bottom: 4px
-      .speaker__p
-        @include text(400,12px,120%,#000)
+
 

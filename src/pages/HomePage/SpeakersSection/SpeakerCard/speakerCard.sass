@@ -1,0 +1,24 @@
+@import "src/sass/base/mixins"
+.speakerCard
+  background: url("./Rectangle 180.png")
+  padding-top: 25px
+  width: 358px
+  background: rgba(231, 248, 255, 0.11)
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1)
+  border-radius: 10px
+  &__h3
+    @include text(700,20px,133%,#434343)
+    margin-bottom: 5px
+  &__p
+    @include text(600,15px,120%,#434343)
+    width: 280px
+  &__box
+    border: 1px solid #D8E2FF
+    border-radius: 5px
+    padding: 10px 29px 13px 13px
+    width: 322px
+    margin: 0 auto 25px auto
+  &__pic
+    width: 226px
+    height: 290px
+    margin: 0 0 0 auto
