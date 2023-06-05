@@ -28,24 +28,27 @@
     &__container
       column-gap: 20px
 
+
 @media (max-width: 770px)
   .nav
 
-
-    padding-top: 70px
     width: 100%
     &__container
       column-gap: 14px
       display: flex
       row-gap: 15px
       align-items: baseline
-      flex-direction: column
+
     &__link
       @include text(600,12px,133%,#000000)
 
 
 
-
+@media (max-width: 482px)
+  .nav
+    padding-top: 70px
+    &__container
+      flex-direction: column
 @media (max-width: 393px)
   .nav
     padding-top: 123px
