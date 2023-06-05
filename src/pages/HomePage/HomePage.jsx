@@ -30,10 +30,9 @@ const HomePage = () => {
             <VideoSection/>
             <StartSection/>
             <ZoneSection/>
-
             <OpportunitySection/>
             <MapSection/>
-            {/*<SpeakersSection/>*/}
+            <SpeakersSection/>
             <OrganizatorSection/>
             <PartnersSection/>
             <OfficeMapSection/>
