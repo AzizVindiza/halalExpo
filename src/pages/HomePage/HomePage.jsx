@@ -4,7 +4,7 @@ import AboutSection from "./AboutSection/AboutSection";
 import TargetSection from "./TargetSection/TargetSection";
 import TaskSection from "./TaskSection/TaskSection";
 import TypeSection from "./TypeSection/TypeSection";
-import SectorSection from "./SectorSection/SectorSection";
+
 import OpportunitySection from "./OpportunitySection/OpportunitySection";
 import MapSection from "./MapSection/MapSection";
 import SpeakersSection from "./SpeakersSection/SpeakersSection";
@@ -13,6 +13,8 @@ import OrganizatorSection from "./OrganizatorSection/OrganizatorSection";
 import VideoSection from "./VideoSection/VideoSection";
 import PartnersSection from "./PartnersSection/PartnersSection";
 import OfficeMapSection from "./OfficeMapSection/OfficeMapSection";
+import StartSection from "./StartSection/StartSection";
+import ZoneSection from "./ZoneSection/ZoneSection";
 
 const HomePage = () => {
     return (
@@ -26,7 +28,9 @@ const HomePage = () => {
             <TaskSection/>
             <TypeSection/>
             <VideoSection/>
-            <SectorSection/>
+            <StartSection/>
+            <ZoneSection/>
+
             <OpportunitySection/>
             <MapSection/>
             {/*<SpeakersSection/>*/}

@@ -1,0 +1,56 @@
+@import "src/sass/base/mixins"
+.start
+  position: relative
+  margin: 82px 0 135px 0
+  background: url("./baground.png") center/cover no-repeat
+  height: 496px
+  display: flex
+  align-items: flex-end
+  &__wrapper
+    width: 1170px
+    position: absolute
+    padding: 41px 124px 41px 124px
+    background: rgba(255, 255, 255, 0.51)
+    border: 1px solid rgba(255, 255, 255, 0.5)
+    box-shadow: 0 4px 35px rgba(0, 0, 0, 0.08)
+    backdrop-filter: blur(7.5px)
+    border-radius: 5px
+    bottom: -120px
+    left: 50%
+    transform: translateX(-50%)
+
+  &__content
+    display: flex
+    width: 1000px
+
+  &__h2
+    @include text(800,25px,133%, #FEFEFE)
+    text-align: center
+    margin-bottom: 37px
+  &__svg
+    width: 53px
+    height: 53px
+  &__content
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    row-gap: 30px
+    column-gap: 70px
+  &__block
+    display: flex
+    align-items: center
+    column-gap: 13px
+    border: 2px solid rgba(255, 255, 255, 0.5)
+    border-radius: 66px
+    padding-right: 13px
+  &__h3
+    @include text(500,30px,133%,#000000)
+  &__h4
+    @include text(800,32px,133%, #171717)
+    text-align: center
+    margin: 45px 0 18px 0
+  &__p
+    @include text(500,20px,133%,#171717)
+    text-align: center
+    width: 452px
+    margin:  0 auto
