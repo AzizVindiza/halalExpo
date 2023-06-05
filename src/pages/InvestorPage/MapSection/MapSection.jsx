@@ -4,7 +4,7 @@ import "./mapsection.sass"
 const MapSection = () => {
     return (
         <section className={'mapSection'}>
-            <div className="container mapsection__conrainer">
+            <div className="container mapSection__container">
                 <div className="mapSection__block">
 
                     <div className="mapSection__image">
