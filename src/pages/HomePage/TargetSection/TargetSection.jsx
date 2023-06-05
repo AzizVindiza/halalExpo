@@ -1,6 +1,7 @@
 import React from 'react';
 import "./TargetSection.sass"
 import img from './img.svg'
+import a from './a.svg'
 import {motion} from "framer-motion";
 
 
@@ -37,11 +38,11 @@ const TargetSection = () => {
         <motion.section initial={"hidden"} whileInView={"visible"} className="target">
             <div className="target__container container">
                 <motion.div custom={1} variants={textMotion} className="target__img">
-                    <img src={img} alt="darts"/>
+                    <img src={a} alt="darts"/>
                 </motion.div>
                 <motion.div custom={1} variants={cartMotion} className="target__txt">
                     <h2 className="target__h2">
-                        Цель
+                        Цели
                     </h2>
                     <p className="target__p">
                         Содействие развитию экономики стран<br/>

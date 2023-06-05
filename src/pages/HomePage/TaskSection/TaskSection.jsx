@@ -58,7 +58,7 @@ const cartMotion3 = {
         {
             x: 0,
             opacity: 1,
-            transition: {delay: custom * 1.6}
+            transition: {delay: custom * 1}
         }
     )
 
@@ -72,7 +72,7 @@ const cartMotion4 = {
         {
             x: 0,
             opacity: 1,
-            transition: {delay: custom * 2}
+            transition: {delay: custom * 1}
         }
     )
 

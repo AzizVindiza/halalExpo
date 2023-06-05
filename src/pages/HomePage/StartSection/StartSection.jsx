@@ -11,7 +11,7 @@ const StartSection = () => {
         <section className="start">
             <div className="container start__container">
                 <div className="start__wrapper">
-                    <h2 className="start__h2">ИННОВАЦИИ НАЧИНАЕТСЯ ЗДЕСЬ</h2>
+                    <h2 className="start__h2">ИННОВАЦИИ НАЧИНАЮТСЯ ЗДЕСЬ</h2>
                     <div className="start__content">
                         <div className="start__block">
                             <div className="start__svg">
