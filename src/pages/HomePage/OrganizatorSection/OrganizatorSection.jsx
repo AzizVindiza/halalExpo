@@ -5,7 +5,6 @@ import logo3 from "./image/logo3.png"
 import logo4 from "./image/logo4.png"
 import logo6 from "./image/logo6.png"
 import logo7 from "./image/logo7.png"
-import logo8 from "./image/logo8.png"
 import logo5 from "./image/logo5.png"
 import logo0 from "./image/development.png"
 import "./OrganizatorSection.sass"
@@ -53,7 +52,6 @@ const OrganizatorSection = () => {
                         </div>
                         <div className="organizatorSection__picture">
                             <img src={logo6} alt="" className="organizatorSection__img"/>
-                            <img src={logo7} alt="" className="organizatorSection__img"/>
                             <img src={logo7} alt="" className="organizatorSection__img"/>
                         </div>
 

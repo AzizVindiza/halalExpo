@@ -12,6 +12,7 @@ import icon9 from './type__9.svg'
 import icon10 from './type__10.svg'
 import icon11 from './type__11.svg'
 import bg from './type__bg.svg'
+import right from './right.png'
 import {motion} from "framer-motion";
 
 
@@ -131,31 +132,32 @@ import {motion} from "framer-motion";
                     </div>
                 </div>
                 <div className="type__right">
-                       <motion.div custom={1} variants={textMotion} className="type__row">
-                           <h4 className="type__h4">Компаний</h4>
-                           <div className="type__line type__line_middle"></div>
-                           <h5 className="type__h5">2000+</h5>
-                       </motion.div>
+                    <img src={right} alt=""/>
+                    {/*   <motion.div custom={1} variants={textMotion} className="type__row">*/}
+                    {/*       <h4 className="type__h4">Компаний</h4>*/}
+                    {/*       <div className="type__line type__line_middle"></div>*/}
+                    {/*       <h5 className="type__h5">2000+</h5>*/}
+                    {/*   </motion.div>*/}
 
-                       <motion.div custom={1} variants={cartMotion} className="type__row">
-                           <h4 className="type__h4">Стран</h4>
-                           <div className="type__line type__line_middle"></div>
-                           <h5 className="type__h5">30+</h5>
-                       </motion.div>
-                       <motion.div custom={1} variants={cartMotion2} className="type__row">
-                           <h4 className="type__h4">B2B встречи</h4>
-                           <div className="type__line type__line_short"></div>
-                           <h5 className="type__h5">300+</h5>
-                       </motion.div>
-                       <motion.div custom={1} variants={cartMotion3} className="type__row">
-                           <h4 className="type__h4">Экспонентов</h4>
-                           <div className="type__line type__line_long"></div>
-                           <h5 className="type__h5">1500+</h5>
-                       </motion.div>
+                    {/*   <motion.div custom={1} variants={cartMotion} className="type__row">*/}
+                    {/*       <h4 className="type__h4">Стран</h4>*/}
+                    {/*       <div className="type__line type__line_middle"></div>*/}
+                    {/*       <h5 className="type__h5">30+</h5>*/}
+                    {/*   </motion.div>*/}
+                    {/*   <motion.div custom={1} variants={cartMotion2} className="type__row">*/}
+                    {/*       <h4 className="type__h4">B2B-встречи</h4>*/}
+                    {/*       <div className="type__line type__line_short"></div>*/}
+                    {/*       <h5 className="type__h5">300+</h5>*/}
+                    {/*   </motion.div>*/}
+                    {/*   <motion.div custom={1} variants={cartMotion3} className="type__row">*/}
+                    {/*       <h4 className="type__h4">Экспонентов</h4>*/}
+                    {/*       <div className="type__line type__line_long"></div>*/}
+                    {/*       <h5 className="type__h5">1500+</h5>*/}
+                    {/*   </motion.div>*/}
 
-                    <div className="type__bg">
-                        <img src={bg} alt="circle"/>
-                    </div>
+                    {/*<div className="type__bg">*/}
+                    {/*    <img src={bg} alt="circle"/>*/}
+                    {/*</div>*/}
                 </div>
             </div>
         </motion.section>

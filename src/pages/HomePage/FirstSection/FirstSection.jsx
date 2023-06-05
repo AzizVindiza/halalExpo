@@ -33,7 +33,7 @@ const FirstSection = () => {
 
                 <motion.div  custom={1} variants={textMotion} className="first__txt">
                     <h3 className="first__h3">
-                        ИННОВАЦИЯ НАЧИНАЕТСЯ ЗДЕСЬ
+                        ИННОВАЦИЯ НАЧИНАЮТСЯ ЗДЕСЬ
                     </h3>
                     <h2 className="first__h2">
                         Halal Investment<br/>
