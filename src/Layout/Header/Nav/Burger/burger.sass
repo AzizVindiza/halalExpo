@@ -17,11 +17,7 @@
     .burger
       &__line
         position: absolute
-        top: 0
-        left: 0
-        bottom: 0
-        right: 0
-        margin: auto
+        transition: 0.3s
         &:first-child
           transform: rotate(-45deg)
         &:last-child
@@ -30,7 +26,9 @@
             display: none
 
 
-@media (max-width: 1025px)
+@media (max-width: 769px)
+  .burger
+    display: flex
 @media (max-width: 482px)
   .burger
     display: flex
