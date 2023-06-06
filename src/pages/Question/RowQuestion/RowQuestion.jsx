@@ -58,11 +58,6 @@ const RowQuestion = () => {
                         </div>
                         <p className={`rowQuestion__txt ${selected === index ? 'rowQuestion__txt_active' : ''}`}>{item.text}</p>
 
-
-
-
-
-
                     </div>
 
                 ))

@@ -5,6 +5,7 @@
   &__wrapper
     margin-bottom: 5px
     display: flex
+    column-gap: 35px
   &__pic
     width: 250px
     height: 200px
@@ -25,8 +26,8 @@
     width: 170px
     &:hover .hotelCard__svg
       left: 10px
-  &__box
-    margin: 0 23px 0 35px
+  //&__box
+  //  margin: 0 23px 0 35px
   &__h3
     @include text(700,25px,133%,#000)
     margin-bottom: 10px
@@ -53,7 +54,63 @@
       svg
         width: 16px
         height: 22px
-@media (max-width: 394px)
+    &__pic
+      width: 225px
+      height: 187px
+
+@media (max-width: 1201px)
+  .hotelCard
+    &__pic
+      width: 268px
+      height: 187px
+    &__wrapper
+      column-gap: 59px
+    &__p
+      width: 720px
+    &__h3
+      font-size: 20px
+
+@media (max-width: 1025px)
+  .hotelCard
+    &__p
+      @include text(400,16px,133%, #000)
+      width: 594px
+@media (max-width: 770px)
+  .hotelCard
+    border-bottom: 0
+    &__pic
+      width: 180px
+      height: 180px
+    &__box
+      width: 435px
+    &__p
+      width: 435px
+      margin-bottom: 18px
+    &__h3
+      font-size: 16px
+    &__wrapper
+      column-gap: 15px
+@media (max-width: 482px)
+  .hotelCard
+    border-bottom: 0
+    &__wrapper
+      display: flex
+      flex-direction: column
+    &__pic
+      display: none
+    &__text
+      transform: rotate(0deg)
+      writing-mode: horizontal-tb
+      @include text(400,14px,133%, #000)
+    &__map
+      margin-top: 20px
+      display: flex
+      column-gap: 14px
+      align-items: center
+    &__p
+      width: 428px
+      margin-bottom: 25px
+@media (max-width: 394px )
   .hotelCard
     &__wrapper
       display: flex
@@ -68,7 +125,7 @@
       @include text(700,18px,133%,#000)
     &__p
       @include text(400,15px,133%,#000)
-      width: 100%
+      width: 350px
     &__link
       @include text(500,16px,133%, #0033CC)
     &__map
@@ -77,4 +134,6 @@
     &__text
       transform: rotate(360deg)
       writing-mode: inherit
+
+
 

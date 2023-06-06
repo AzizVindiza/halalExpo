@@ -1,7 +1,13 @@
 @import "src/sass/base/mixins"
+
+
+
 .zona
-  &__container
-    padding: 135px 0 100px 0
+  padding-top: 55px
+  margin-bottom: 45px
+  &:nth-child(even)
+    flex-direction: row-reverse
+
   &__pic
     height: 476px
   &__wrapper
@@ -11,6 +17,7 @@
     padding: 45px 33px
     display: flex
     column-gap: 36px
+
   &__h2
     @include text(700,30px,133%,#000000)
     margin-bottom: 20px
@@ -38,10 +45,23 @@
   &__list
     display: flex
     flex-direction: column
+
+
     row-gap: 17px
     margin-left: 20px
-  &__item
-    list-style-type: decimal
+
+  &__li
+    display: flex
+    column-gap: 10px
+    text-align: center
+  &__circle
+    background: #EEF7FF
+    width: 20px
+    height: 20px
+    border-radius: 50%
+    color: #00000060
+
+
   &__btn
     margin: 52px 0 0 0
     display: flex

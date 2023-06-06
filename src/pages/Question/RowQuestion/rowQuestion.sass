@@ -5,9 +5,11 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08)
     padding: 26px 29px 0  46px
     border-top: 1px solid #00000010
+
     border-bottom: 1px solid #00000010
   &__h2
     @include text(700,20px,133%,#40A865)
+    width: 575px
 
 
   &__wrapper
@@ -47,6 +49,26 @@
       align-items: center
 
 
+
+
+
+@media (max-width: 1201px)
+@media (max-width: 1025px)
+@media (max-width: 770px)
+  .rowQuestion
+    display: flex
+    flex-direction: column
+    align-items: center
+    &__block
+      width: 665px
+@media (max-width: 482px)
+  .rowQuestion
+    &__block
+      width: 430px
+@media (max-width: 394px )
+  .rowQuestion
+    &__block
+      width: 350px
 
 
 
