@@ -8,8 +8,7 @@
     column-gap: 132px
     padding-bottom: 100px
   &__pic
-    width: 389px
-    height: 213px
+
 
     img
       width: 389px
@@ -17,6 +16,8 @@
   &__p
     width: 495px
     @include text(500,20px,133%, #000000)
+    column-gap: 20px
+
   &__content
     display: flex
     column-gap: 140px
@@ -24,7 +25,7 @@
     padding: 58px 0 100px 0
   &__block
     width: 193px
-    height: 116px
+
     background: #D9D9D9
     border-radius: 8px
   &__wrapper
@@ -39,6 +40,16 @@
       @include text(700,25px,133%,#000000)
     &__span
       @include text(700,25px,133%,#40A865)
+    &__p
+      @include text(500,20px,133%,#000000)
+      width: 401px
+    &__pic
+      img
+        width: 388px
+        height: 213px
+    &__wrapper
+      column-gap: 109px
+
 
 
 @media (max-width: 1025px)
@@ -55,12 +66,32 @@
       @include text(500,20px,133%,#000000)
       width: 430px
     &__content
-      padding: 58px 0 80px 0
+      padding: 58px 0
       column-gap: 101px
     &__wrapper
       column-gap: 50px
       padding-bottom: 80px
+
+
 @media (max-width: 769px )
+  .partnerSection
+    &__content
+      column-gap: 36px
+      padding: 60px 0 60px 0
+    &__p
+      @include text(500,16px,133%,#000000)
+      width: 297px
+
+
+    &__pic
+      img
+        width: 328px
+        height: 180px
+    &__wrapper
+      column-gap: 45px
+      padding-bottom: 40px
+      display: flex
+
 
 @media (max-width: 394px )
   .partnerSection
@@ -71,6 +102,7 @@
     &__p
       @include text(500,15px,133%,#000000)
       width: 350px
+      column-gap: 20px
     &__pic
       img
         width: 300px
@@ -81,7 +113,7 @@
       row-gap: 15px
     &__block
       width: 165px
-      height: 116px
+
       border-radius: 5px
 
 
