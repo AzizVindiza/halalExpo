@@ -1,16 +1,19 @@
 @import "src/sass/base/mixins"
 .partnerSection
-  &__container
-    padding: 103px 0 112px 0
   &__h2
     @include text(600,25px,133%, #000000)
     margin-bottom: 15px
   &__wrapper
     display: flex
     column-gap: 132px
+    padding-bottom: 100px
   &__pic
-    width: 200px
-    height: 80px
+    width: 389px
+    height: 213px
+
+    img
+      width: 389px
+      height: 213px
   &__p
     width: 495px
     @include text(500,20px,133%, #000000)
@@ -18,7 +21,7 @@
     display: flex
     column-gap: 140px
     align-items: center
-    margin-bottom: 103px
+    padding: 58px 0 100px 0
   &__block
     width: 193px
     height: 116px
@@ -30,3 +33,58 @@
     flex-wrap: wrap
   &__span
     @include text(400,30px,133%,rgba(64, 168, 101, 1))
+@media (max-width: 1201px)
+  .partnerSection
+    &__h2
+      @include text(700,25px,133%,#000000)
+    &__span
+      @include text(700,25px,133%,#40A865)
+
+
+@media (max-width: 1025px)
+  .partnerSection
+
+    &__h2
+      @include text(700,20px,133%,#000000)
+      margin-bottom: 15px
+      width: 187px
+    &__span
+      @include text(700,20px,133%,#00862D)
+      width: 187px
+    &__p
+      @include text(500,20px,133%,#000000)
+      width: 430px
+    &__content
+      padding: 58px 0 80px 0
+      column-gap: 101px
+    &__wrapper
+      column-gap: 50px
+      padding-bottom: 80px
+@media (max-width: 769px )
+
+@media (max-width: 394px )
+  .partnerSection
+    &__content
+      padding: 60px
+      display: flex
+      flex-direction: column
+    &__p
+      @include text(500,15px,133%,#000000)
+      width: 350px
+    &__pic
+      img
+        width: 300px
+        height: 164px
+      padding: 46px
+    &__wrapper
+      column-gap: 20px
+      row-gap: 15px
+    &__block
+      width: 165px
+      height: 116px
+      border-radius: 5px
+
+
+
+
+
