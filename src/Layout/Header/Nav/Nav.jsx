@@ -5,9 +5,6 @@ import Dropdown from "./Dropdown/Dropdown";
 import arr from "../../../utils/nav";
 import arr1 from "../../../utils/nav1";
 import arr2 from "../../../utils/nav2";
-import Btn from "../../../components/Btn/Btn";
-import RegisterForm from "../../../components/RegisterForm/RegisterForm";
-import logo from "../header__logo.png";
 const Nav = () => {
     return (
         <nav className="nav">

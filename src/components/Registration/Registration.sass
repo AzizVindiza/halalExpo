@@ -1,0 +1,48 @@
+@import "src/sass/base/mixins"
+.registration
+  background: #00000070
+  position: fixed
+  width: 100%
+  height: 100%
+  justify-content: center
+  display: flex
+  z-index: 1000
+  overflow-y: scroll
+  &__form
+    margin: 50px 0
+    position: relative
+    width: 760px
+    background: #FFFFFF
+    padding: 50px 30px
+    -ms-overflow-style: none
+  &__close
+    position: absolute
+    right: 18px
+    top: 18px
+  &__h2
+    text-align: center
+    @include text(600,30px,133%,#000)
+    margin-bottom: 20px
+  &__p
+    width: 678px
+    padding: 10px
+    background: #dcdc4c
+    margin: 0 auto 18px auto
+    @include text(400,10px,133%,#000)
+  &__star
+    color: red
+  &__label
+    display: flex
+    flex-direction: column
+    row-gap: 7px
+    margin-bottom: 15px
+  &__label-title
+    @include text(600,16px,133%,#000)
+  &__error
+    @include text(600,16px,133%,red)
+  &__input
+    width: 100%
+    border: 1px solid #00000080
+    border-radius: 4px
+    padding: 8px 5px
+    @include text(600,16px,133%,#000)

@@ -3,6 +3,7 @@ import "./rowSection.sass"
 import RegisterForm from "../../../components/RegisterForm/RegisterForm";
 import {CustomContext} from "../../../Context";
 import LoginForm from "../../../components/LoginForm/LoginForm";
+import Registration from "../../../components/Registration/Registration";
 
 
 
@@ -29,6 +30,9 @@ const RowSection = () => {
             {
                 close ?  <RegisterForm /> : ''
             }
+            {/*{*/}
+            {/*    close ?  <Registration /> : ''*/}
+            {/*}*/}
             {
                 login ? <LoginForm/> : ''
             }
