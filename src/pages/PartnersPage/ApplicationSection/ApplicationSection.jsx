@@ -1,5 +1,6 @@
 import React from 'react';
 import Btn from "../../../components/Btn/Btn";
+import "./applicationSection.sass"
 
 const ApplicationSection = () => {
     return (
