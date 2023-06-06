@@ -11,7 +11,7 @@ const MassSection = ({item}) => {
                 <div className="massSection__wrapper">
                     <ul className={"massSection__ul"}>
                         <li className={"massSection__li"}><div className={"massSection__circle"}></div><p className={"massSection__item"}>Аккредитация СМИ осуществляется только до 20 июля. Просим вас отправить заявку на аккредитацию до этой даты, чтобы мы могли обработать ее своевременно. Подать заявку можно с помощью формы регистрации по
-                            <a href="">ссылке</a>>> </p></li>
+                             <a href="">ссылке</a>>> </p></li>
                         <li className={"massSection__li"}><div className={"massSection__circle"}></div><p className={"massSection__item"}>Ваша
                             заявка на аккредитацию должна содержать следующую информацию: полное название СМИ, ФИО представителя, контактные данные (телефон, электронная почта) и подробное описание целей и плана вашего освещения мероприятия.</p> </li>
                         <li className={"massSection__li"}><div className={"massSection__circle"}></div><p className={"massSection__item"}>Пожалуйста, предоставьте копию вашего журналистского удостоверения или другого документа, подтверждающего вашу профессиональную принадлежность к СМИ. </p></li>

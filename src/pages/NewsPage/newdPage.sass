@@ -7,15 +7,17 @@
     text-align: center
     @include text(700,50px,120%,#ffffff)
   &__container
+    column-gap: 15px
     padding: 58px 0 135px 0
     display: flex
-    column-gap: 75px
+    justify-content: space-around
     flex-wrap: wrap
     row-gap: 80px
 @media (max-width: 1440px)
 @media (max-width: 1201px)
 @media (max-width: 1025px)
   .newsPage
+
     &__content
       padding: 33.5px
     &__title
@@ -23,8 +25,6 @@
       @include text(700,35px,120%,#ffffff)
     &__container
 
-
-      column-gap: 57px
       row-gap: 60px
       padding: 60px 0 52px 0
 
