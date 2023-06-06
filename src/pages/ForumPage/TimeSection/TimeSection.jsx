@@ -86,7 +86,7 @@ const TimeSection = () => {
 
                     </div>
                     <div className="time__txt">
-                        <h2 className="time__h2">1 Июня</h2>
+                        <h2 className="time__h2">1 Августа</h2>
                         <div className="time__date">
                             <div className="time__block">
                                 10:00-12:00
