@@ -1,0 +1,57 @@
+@import "src/sass/base/mixins"
+.zona
+  &__container
+    padding: 135px 0 100px 0
+  &__pic
+    height: 476px
+  &__wrapper
+    background: #FFFFFF
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1)
+    border-radius: 5px
+    padding: 45px 33px
+    display: flex
+    column-gap: 36px
+  &__h2
+    @include text(700,30px,133%,#000000)
+    margin-bottom: 20px
+  &__inner
+    display: flex
+    column-gap: 47px
+    margin-bottom: 33px
+  &__show
+    display: flex
+    border-radius: 34px
+    align-items: center
+    background: #40A865
+    column-gap: 15px
+    padding: 10px
+  &__svg
+    background: #FFFFFF
+    width: 40px
+    height: 40px
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+  &__h3
+    @include text(500,22px,133%,#ffffff)
+  &__list
+    display: flex
+    flex-direction: column
+    row-gap: 17px
+    margin-left: 20px
+  &__item
+    list-style-type: decimal
+  &__btn
+    margin: 52px 0 0 0
+    display: flex
+    justify-content: center
+    align-items: center
+    column-gap: 10px
+    width: 190px
+    border-radius: 4px
+    height: 45px
+    background: #0033CC
+  &__click
+    @include text(500,18px,133%,#ffffff)
+

@@ -10,42 +10,88 @@
     cursor: pointer
   &__line
     position: absolute
-    right: -15px
+    right: -9px
     top: 50%
     transform: translateY(-50%)
-  .btn
-    padding: 9px 25px
+
   &__wrapper
     display: none
   &__txt
     display: none
   &__btn_small
     display: none
+  &__btn-second
 
+    display: block
+    width: 150px
+    font-weight: 700
+    line-height: 40px
+    font-size: 13px
+    font-family: Gilroy,sans-serif
+    text-decoration: none
+    color: #0057BC
+    border: 2px solid #0057BC
+    letter-spacing: 2px
+    text-align: center
+    position: relative
+    transition: all .9s
+    border-radius: 3px
+    cursor: pointer
+    &:after
+      position: absolute
+      content: ""
+      top: 0
+      left: 0
+      width: 0
+      height: 100%
+      background: #0057BC
+      transition: all .9s
+      border-radius: 1px
 
-
-
-
-
-
-
-
+    &:hover
+      color: #fff
+    &:hover:after
+      width: 100%
+  &__span
+     position: relative
+     z-index: 2
 
 @media (max-width: 1201px)
-@media (max-width: 1025px)
+
+
   .nav
     &__container
       column-gap: 20px
 
 
+@media (max-width: 770px)
+  .nav
 
-@media (max-width: 393px)
+    width: 100%
+    &__container
+      column-gap: 14px
+      display: flex
+      row-gap: 15px
+      align-items: baseline
+
+    &__link
+      @include text(600,12px,133%,#000000)
+
+
+
+@media (max-width: 482px)
+  .nav
+    padding-top: 70px
+    &__container
+      flex-direction: column
+@media (max-width: 768px)
   .nav
     padding-top: 123px
     margin-top: 23px
     width: 100%
     &__container
       flex-direction: column
+      align-items: center
       row-gap: 25px
     &__link
       @include text(600,20px,133%,#000000)
@@ -61,6 +107,11 @@
       text-align: center
       display: flex
       margin: 0 auto
+    &__container
+      column-gap: 13px
+    &__line
+      right: 0
+
 
 
 

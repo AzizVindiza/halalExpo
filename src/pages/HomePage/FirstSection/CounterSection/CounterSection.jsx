@@ -21,6 +21,7 @@ const CounterSection = () => {
 
             if (distance < 0){
                 clearInterval(interval.current)
+                
             }else {
                 setTimerDays(days)
                 setTimerHours(hours)

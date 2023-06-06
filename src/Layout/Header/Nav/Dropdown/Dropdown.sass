@@ -1,5 +1,6 @@
 @import "src/sass/base/mixins"
 .dropdown
+
   position: relative
   button
     background: #FFFFFF
@@ -22,7 +23,18 @@
     &_change
       transform: rotate(0deg)
 
+
+@media (max-width: 770px)
+  .dropdown
+
+    &__wrapper
+      position: absolute
+      top: 20px
+      z-index: 2000
+
+
 @media (max-width: 393px)
   .dropdown
     z-index: 1200
+
 
