@@ -6,17 +6,10 @@ import TxtSection from "./TxtSection/TxtSection";
 
 const MassPage = () => {
     return (
-        <section className="mass">
-            <div className="mass__content">
-                <h2 className="mass__title">СМИ</h2>
-            </div>
-            <div className="container mass__container">
-                <MassSection/>
-                <TextSection/>
-                <div className="txt__h3"><TxtSection/></div>
-            </div>
+        <>
+            <MassSection item={{title:"СМИ",p:"sd",li:['sds','dsds']}}/>
 
-        </section>
+        </>
     );
 };
 
