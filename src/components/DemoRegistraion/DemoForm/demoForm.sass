@@ -1,0 +1,59 @@
+@import "src/sass/base/mixins"
+
+.demoForm
+  &__wrapper
+    margin-top: 50px
+    display: flex
+  &__form
+    position: relative
+    display: flex
+    flex-direction: column
+    row-gap: 25px
+    padding: 38px 77px
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1)
+    margin: 0 auto
+  &__b1
+    width: 80px
+    position: absolute
+    top: 0
+    left: 0
+  &__b2
+    width: 40px
+    position: absolute
+    bottom: 0
+    right: 0
+  &__svg
+    position: absolute
+    right: 10px
+    top: 10px
+  &__h2
+    display: flex
+    justify-content: center
+    @include text(400,20px,133%,#000)
+
+  &__h3
+   @include text(400,13px,133%,#000)
+  &__span
+    color: red
+  &__input
+    border-radius: 4px
+    padding: 8px 5px
+    @include text(600,16px,133%,#000)
+    width: 100%
+    border: 1px solid black
+  &__select
+    width: 100%
+    border-radius: 4px
+    padding: 8px 5px
+    @include text(600,16px,133%,#000)
+    border: 1px solid black
+  &__check
+    display: flex
+    column-gap: 5px
+    span
+      @include text(400,13px,133%,#000)
+
+
+
+
+

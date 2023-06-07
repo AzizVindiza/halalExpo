@@ -24,7 +24,6 @@ const OpportunitySection = () => {
         <section className="opportunity">
             <div className="opportunity__container container_fluid">
                 <div className="opportunity__bg">
-
                     <picture>
                         <source media="(max-width:394px)" srcSet={bg393}/>
                         <img src={bg} alt="bg lines"/>

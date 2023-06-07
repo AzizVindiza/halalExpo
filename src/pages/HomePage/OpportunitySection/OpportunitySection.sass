@@ -41,9 +41,17 @@
     align-items: center
   .six
     text-align: center
+
     &__img
+
       width: 3.125vw
       height: 3.125vw
+      img
+        transition: transform 0.5s
+
+      img:hover
+        transform: scale(1.5)
+
     &__h3
       margin-top: 8px
       @include text(400,20px,24px,#fff)
