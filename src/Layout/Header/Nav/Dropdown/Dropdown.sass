@@ -2,8 +2,10 @@
 .dropdown
 
   position: relative
+
   button
     background: #FFFFFF
+
   &__wrapper
     width: 297px
     background: #FFFFFF
@@ -15,11 +17,17 @@
     display: flex
     flex-direction: column
     row-gap: 22px
+
   &__link
-    @include text(500,15px,110%,#000000)
+    @include text(500, 15px, 110%, #000000)
     width: 500px
+
+    &.active
+      color: #40a865
+
   &__rotate
     transform: rotate(180deg)
+
     &_change
       transform: rotate(0deg)
 
@@ -34,7 +42,5 @@
 
 
 @media (max-width: 393px)
-  .dropdown
-    z-index: 1200
 
 
