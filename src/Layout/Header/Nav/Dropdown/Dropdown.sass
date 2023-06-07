@@ -1,32 +1,43 @@
 @import "src/sass/base/mixins"
 .dropdown
-
   position: relative
+  &__rotate
+    transition: 0.2s
+  &:hover .nav__linkBtn
+    color: #3E69EC
+  &:hover &__rotate
+    transform: rotate(180deg)
+  &:hover &__wrapper
+    display: flex
+  &__link:hover
+    border-bottom: 2px solid #3E69EC
   button
     background: #FFFFFF
+
   &__wrapper
     width: 297px
     background: #FFFFFF
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.1)
     position: absolute
-    top: 40px
+    top: 20px
     left: -70px
     padding: 24px 81px 24px 24px
-    display: flex
+    display: none
     flex-direction: column
     row-gap: 22px
+
   &__link
-    @include text(500,15px,110%,#000000)
-    width: 500px
-  &__rotate
-    transform: rotate(180deg)
-    &_change
-      transform: rotate(0deg)
+    @include text(500, 15px, 110%, #000000)
+    border-bottom: 2px solid #FFFFFF
+    transition: 0.2s
+
+    &.active
+      color: #40a865
+      border-bottom: 2px solid #40A865
 
 
 @media (max-width: 770px)
   .dropdown
-
     &__wrapper
       position: absolute
       top: 20px
@@ -34,7 +45,5 @@
 
 
 @media (max-width: 393px)
-  .dropdown
-    z-index: 1200
 
 

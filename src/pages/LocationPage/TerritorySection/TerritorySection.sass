@@ -10,9 +10,8 @@
     position: relative
     top: 40px
     background: #FFF
-    width: 1170px
+    width: 90%
     margin: 0 auto
-
     padding: 18px 35px 80px 25px
     row-gap: 7px
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15)
@@ -27,7 +26,7 @@
     display: flex
     justify-content: flex-end
     position: absolute
-    right: 200px
+    right: 10%
     column-gap: 5px
     top: 175px
     bottom: 5px
@@ -54,10 +53,9 @@
   .territory
     margin-top: 20px
     &__box
-      width: 921px
+      height: 220px
+      width: 90%
       padding: 18px 35px 60px 25px
-    &__nav
-      right: 100px
     &__square
       width: 90%
       margin: 46px auto
@@ -68,7 +66,40 @@
       text-align: center
       width: 100%
       height: 100%
+    &__nav
+      top: 211px
+@media (max-width: 883px)
+  .territory
+    &__nav
+      top: 218px
 
+@media (max-width: 719px)
+  .territory
+    &__box
+      height: 250px
+    &__nav
+      top: 232px
+
+@media (max-width: 628px)
+  .territory
+    &__box
+      height: 300px
+    &__nav
+      top: 285px
+@media (max-width: 531px)
+  .territory
+    &__box
+      height: 100%
+    &__nav
+      top: 205px
+    &__h2
+      @include text(700px, 15px, 133%, #3378C9)
+    &__p
+      @include text(400px, 13px, 133%, #000000)
+@media (max-width: 430px)
+  .territory
+    &__nav
+      top: 220px
 
 @media (max-width: 394px)
   .territory
