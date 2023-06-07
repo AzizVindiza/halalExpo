@@ -1,6 +1,7 @@
 import React from 'react';
 import "./SocialSection.sass"
 import {useForm} from "react-hook-form";
+import RegistrationInput from "../Registration/RegistrationInput/RegistrationInput";
 
 const SocialSection = () => {
     const {
@@ -12,53 +13,17 @@ const SocialSection = () => {
         handleSubmit,
 
     } = useForm();
-    const onSubmit = (data) => {
-        alert(JSON.stringify(data))
-    }
+
 
     return (
         <section className={'social'}>
            <div className="social__wrapper">
                <h2 className="social__txt">Социальные сети</h2>
-               <form className="social__form" onSubmit={handleSubmit(onSubmit)}>
-                   <label className="social__inst">
-                       Instagram
-                       <input type={''}
-                              {...register("firstName",{
-                                  required: "pole ob",
-                                  minLength:{
-                                      value: '',
-                                      message: ''
-                                  }
-                              })}
-                       />
-                   </label>
-                   <label className="social__facebbok">
-                       Facebook
-                       <input type={''}
-                              {...register("firstName",{
-                                  required: "pole ob",
-                                  minLength:{
-                                      value: '',
-                                      message: ''
-                                  }
-                              })}
-                       />
-                   </label>
-                   <label className="social__twitter">
-                       Twitter
-                       <input type={''}
-                              {...register("firstName",{
-                                  required: "pole ob",
-                                  minLength:{
-                                      value: '',
-                                      message: ''
-                                  }
-                              })}
-                       />
-                   </label>
-
-               </form>
+               <div className="social__form">
+                   <RegistrationInput type={'text'} title={' Instagram*'} name={'Instagram'}/>
+                   <RegistrationInput type={'text'} title={'Facebook'} name={'Facebook'}/>
+                   <RegistrationInput type={'text'} title={'Twitter'} name={'Twitter'}/>
+               </div>
            </div>
             
         </section>

@@ -27,12 +27,12 @@ const RowSection = () => {
                 </div>
 
             </div>
-            {
-                close ?  <RegisterForm /> : ''
-            }
             {/*{*/}
-            {/*    close ?  <Registration /> : ''*/}
+            {/*    close ?  <RegisterForm /> : ''*/}
             {/*}*/}
+            {
+                close ?  <Registration /> : ''
+            }
             {
                 login ? <LoginForm/> : ''
             }

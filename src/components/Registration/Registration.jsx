@@ -6,6 +6,10 @@ import Btn from "../Btn/Btn";
 import RegistrationInput from "./RegistrationInput/RegistrationInput";
 import RegistrationPhoneNumber from "./RegistrationPhoneNumber/RegistrationPhoneNumber";
 import RegistrationSelect from "./RegistrationSelect/RegistrationSelect";
+import MasMediaForm from "../MasMediaForm/MasMediaForm";
+import ParticipantForm from "../ParticipantForm/ParticipantForm";
+import EmailForm from "../ParticipantForm/EmailForm/EmailForm";
+import CheckBox from "../CheckBox/CheckBox";
 
 const Registration = () => {
     const methods = useForm({mode:"onBlur"});
@@ -47,12 +51,22 @@ const Registration = () => {
                         <RegistrationInput type={"date"} title={"Дата рождения"} name={"dateofbirth"}/>
                         <RegistrationPhoneNumber name={"telephone"}/>
                         <RegistrationPhoneNumber name={"whatsapp"}/>
+                        <CheckBox/>
                         <RegistrationSelect title={"В качестве кого вы хотите посетить HIT EXPO?*"} name={"role"}/>
                         {
-                             role === "Посетитель" ? <RegistrationInput type={"text"} title={"Программист"} name={"aibek"}/>
-                                 : role === "Участник" ? <RegistrationInput type={"text"} title={"Разработчик"} name={"rasul"}/>
+                         role === "Посетитель" ?
+                             <>
+                                 <RegistrationInput type={'email'} name={'email_second'} title={'Элктронная почта'}/>
+                                 <RegistrationInput type={'password'} name={'password_second'} title={'Придумайте пароль*'}/>
+                                 <RegistrationInput type={'password'} name={'confirm_password'} title={'Подтвердите пароль*'}/>
+                             </>
+                                 : role === "Участник" ? <ParticipantForm/>
+                                     : role === "СМИ" ? <MasMediaForm/> : role === "Эксперта" ?
+                                     <>
+                                         <EmailForm/>
+                                     </> : role === "Представитель государственных органов" ? <EmailForm/> : ""
 
-                                 : "Айбек"
+
                         }
                         <Btn text={"Зарегистрироваться"} type={"submit"}/>{/*главная кнопка отправки type submit*/}
                     </form>
