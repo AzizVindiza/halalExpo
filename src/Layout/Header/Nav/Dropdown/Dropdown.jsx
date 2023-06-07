@@ -27,12 +27,12 @@ const Dropdown = ({arr,txt}) => {
     return (
         <div ref={ref} className="dropdown">
 
-            <button    onClick={(e) => {
+            <button  onClick={(e) => {
                 e.preventDefault();
                 setActive(!active);
 
 
-            }}  className={'nav__link nav__link_btn'}>{txt}
+            }}  className={'nav__link nav__linkBtn'}>{txt}
                 <span className='nav__line'>
                             <svg className={`dropdown__rotate ${active ? 'dropdown__rotate_change' : ''}`} width="8" height="4" viewBox="0 0 8 4" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M1 1L4 3L7 1" stroke="black"/>
