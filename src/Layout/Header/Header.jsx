@@ -23,11 +23,9 @@ const Header = () => {
             <RowSection/>
             <div className="container header__container">
                 <Link to={"/"}>
-                <h1 className="header__logo">
-
+                <h2 className="header__logo">
                         <img src={logo} alt="HIT Expo - Halal Investment and Trade Expo"/>
-
-                </h1>
+                </h2>
                 </Link>
 
 
