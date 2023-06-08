@@ -25,7 +25,7 @@ const Header = () => {
                 <Link to={"/"}>
                 <h1 className="header__logo">
 
-                        <img src={logo} alt="Halal Investment and Trade Expo"/>
+                        <img src={logo} alt="HIT Expo - Halal Investment and Trade Expo"/>
 
                 </h1>
                 </Link>
