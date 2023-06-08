@@ -34,6 +34,7 @@ import DemoRegistration from "./components/DemoRegistraion/DemoRegistration";
 const router = createBrowserRouter(
     createRoutesFromElements(
         <>
+
             <Route path="/" element={<Layout/>}>
                 <Route index element={<HomePage/>}/>
                 <Route path="*" element={<NotFoundPage/>}/>

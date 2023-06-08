@@ -1,6 +1,5 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext} from 'react';
 import "./rowSection.sass"
-import RegisterForm from "../../../components/RegisterForm/RegisterForm";
 import {CustomContext} from "../../../Context";
 import LoginForm from "../../../components/LoginForm/LoginForm";
 import Registration from "../../../components/Registration/Registration";
@@ -8,7 +7,12 @@ import Registration from "../../../components/Registration/Registration";
 
 
 const RowSection = () => {
-    const {close, setClose,setLogin,login} = useContext(CustomContext)
+    const  changeLanguages = (language) => {
+        i18n.changeLanguage(language)
+    }
+    const {close, setClose,setLogin,login,t,i18n} = useContext(CustomContext)
+
+
     return (
         <div className={'rowSection'}>
             <div className="container rowSection__container">
@@ -16,13 +20,13 @@ const RowSection = () => {
                     Чолпон-Ата</h2>
                 <div className="rowSection__wrapper">
                     <div className="rowSection__user">
-                        <button onClick={() => setLogin(!login)} className={'rowSection__in'}>Вход/</button>
-                        <button onClick={() => setClose(true)} className={'rowSection__reg'}>Регистрация</button>
+                        <button onClick={() => setLogin(!login)} className={'rowSection__in'}>{t('header.login')}</button>
+                        <button onClick={() => setClose(true)} className={'rowSection__reg'}>{t('header.signUp')}</button>
                     </div>
                     <div className="rowSection__change">
 
-                        <button className={'rowSection__lang'}>RU</button>
-                        <button className={'rowSection__lang'}>EN</button>
+                        <button onClick={() => changeLanguages('ru')} className={`rowSection__lang ${i18n.language === "ru" ? 'rowSection__lang_active' : "" }`}>RU</button>
+                        <button onClick={() => changeLanguages('en')} className={`rowSection__lang ${i18n.language === "en" ?  'rowSection__lang_active' : ""}`}>EN</button>
                     </div>
                 </div>
 

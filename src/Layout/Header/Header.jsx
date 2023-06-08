@@ -22,11 +22,11 @@ const Header = () => {
         <header className="header">
             <RowSection/>
             <div className="container header__container">
-                <h1 className="header__logo">
-                    <Link to={"/"}>
-                        <img src={logo} alt="Halal Investment and Trade Expo"/>
-                    </Link>
-                </h1>
+                <Link to={"/"}>
+                <h2 className="header__logo">
+                        <img src={logo} alt="HIT Expo - Halal Investment and Trade Expo"/>
+                </h2>
+                </Link>
 
 
                     <Burger toogleClass={toggleClass} isActiveHamburger={isActiveHamburger}/>
