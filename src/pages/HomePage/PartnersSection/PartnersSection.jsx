@@ -1,14 +1,15 @@
 import React from 'react';
 import Btn from "../../../components/Btn/Btn";
 import './PartnersSection.sass'
-import img1 from './partner1.png'
-import img2 from './partner2.png'
-import img3 from './partner3.png'
-import img4 from './partner4.png'
-import img5 from './partner5.png'
-import img6 from './partner6.png'
-import img7 from './partner7.png'
-import img8 from './partner8.png'
+import trade from './trade.svg'
+import educ from './education.svg'
+import halal from './halal.svg'
+import minist from './ministr.svg'
+import rating from './rating.svg'
+import sanarip from './sanarip.svg'
+import trans from './trans.svg'
+import viliage from './viliage.svg'
+
 const PartnersSection = () => {
     return (
         <section className="partners">
@@ -17,27 +18,27 @@ const PartnersSection = () => {
             </h2>
             <div className="container partners__container">
                 <div className="partners__card">
-                    <img src={img1} alt=""/>
+                    <img src={trade} alt=""/>
                     <h2 className="partners__h2">
                         Торгово-промышленная палата <br/>
                         Кыргызской Республики
                     </h2>
                 </div>
                 <div className="partners__card">
-                    <img src={img2} alt=""/>
+                    <img src={minist} alt=""/>
                     <h2 className="partners__h2">
                         Министерства иностранных дел <br/>
                         Кыргызской Республики
                     </h2>
                 </div>
                 <div className="partners__card">
-                    <img src={img3} alt=""/>
+                    <img src={sanarip} alt=""/>
                     <h2 className="partners__h2">
                         Санарип Кыргызстан
                     </h2>
                 </div>
                 <div className="partners__card">
-                    <img src={img4} alt=""/>
+                    <img src={halal} alt=""/>
                     <h2 className="partners__h2">
                         Государственный центр по <br/>
                         развитию Халал-индустрии <br/>
@@ -45,14 +46,14 @@ const PartnersSection = () => {
                     </h2>
                 </div>
                 <div className="partners__card">
-                    <img src={img5} alt=""/>
+                    <img src={rating} alt=""/>
                     <h2 className="partners__h2">
                         Пресс-служба Минэкономики <br/>
                         Кыргызской Республики
                     </h2>
                 </div>
                 <div className="partners__card">
-                    <img src={img6} alt=""/>
+                    <img src={educ} alt=""/>
                     <h2 className="partners__h2">
                         Министерства образования <br/>
                         Кыргызской Республики
@@ -60,14 +61,14 @@ const PartnersSection = () => {
                     </h2>
                 </div>
                 <div className="partners__card">
-                    <img src={img7} alt=""/>
+                    <img src={viliage} alt=""/>
                     <h2 className="partners__h2">
                         Министерства сельского хозяйства <br/>
                         Кыргызской Республики
                     </h2>
                 </div>
                 <div className="partners__card">
-                    <img src={img8} alt=""/>
+                    <img src={trans} alt=""/>
                     <h2 className="partners__h2">
                         Министерства транспорта <br/>и коммуникаций
                     </h2>

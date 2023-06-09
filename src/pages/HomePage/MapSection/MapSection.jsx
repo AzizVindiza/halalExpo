@@ -36,7 +36,7 @@ const cartMotion = {
 
 const MapSection = () => {
     return (
-        <motion.section initial={"hidden"} whileInView={"visible"} className="map">
+        <motion.section  viewport={{once:true}} initial={"hidden"} whileInView={"visible"} className="map">
 
             <motion.div custom={1} variants={textMotion}>
                 <h2 className="map__title container">Локации</h2>

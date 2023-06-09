@@ -1,15 +1,18 @@
 @import "src/sass/base/mixins"
 .rowQuestion
   &__block
-    background: #FFFFFF
+
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08)
     padding: 26px 29px 0  46px
-    border-top: 1px solid #00000010
+    border-top: 5px solid #FFFFFF
+    background: linear-gradient(267.78deg, #00862D -3.91%, #0033CC 143.03%)
+
 
     border-bottom: 1px solid #00000010
   &__h2
-    @include text(700,20px,133%,#40A865)
+    @include text(700,20px,133%,#FFD400)
     width: 575px
+
 
 
   &__wrapper
@@ -21,7 +24,7 @@
     height: 0
     transition: 0.2s ease-in-out
     margin-bottom: 26px
-    @include text(500,18px,133%,#000)
+    @include text(500,18px,133%,#ffffff)
     opacity: 0
     &_active
       padding-top: 26px
