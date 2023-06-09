@@ -5,7 +5,6 @@ import BrandForm from "./BrandForm/BrandForm";
 const ParticipantForm = () => {
     return (
         <>
-
             <BrandForm/>
         </>
     );

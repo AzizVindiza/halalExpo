@@ -1,52 +1,24 @@
 import React from 'react';
 import './checkBox.sass'
+import InvestorCheck from "../InvesntorCheck/InvestorCheck";
 
 const CheckBox = () => {
     return (
         <div className="checkBox">
             <div className="checkBox__wrapper">
-
                 <div  className="checkBox__box" >
                     <h2 className="checkBox__name" >Я заинтересован в</h2>
-                    <label className="checkBox__label" htmlFor="">
-                        <input type="checkbox"/>
-                        <span>В посещении на HIT EXPO</span>
-                    </label>
-                    <label htmlFor="">
-                        <input type="checkbox"/>
-                        <span>В участии на HIT EXPO</span>
-                    </label>
-                    <label htmlFor="">
-                        <input type="checkbox"/>
-                        <span>В поиске проектов</span>
-                    </label>
-                    <label htmlFor="">
-                        <input type="checkbox"/>
-                        <span>Другое</span>
-                    </label>
-
-
+                    <InvestorCheck title={'Посещение на HIT EXPO'} name={'checkbox'}/>
+                    <InvestorCheck title={'Участие на HIT EXPO'} name={'checkbox2'}/>
+                    <InvestorCheck title={'Поиске проектов'} name={'checkbox3'}/>
+                    <InvestorCheck title={'Другое'} name={'checkbox4'}/>
                 </div>
                 <div  className="checkBox__box" >
-                    <h2 className="checkBox__name" >Как вы узнали о мероприятие</h2>
-                    <label htmlFor="">
-                        <input type="checkbox"/>
-                        <span>Инстаграм</span>
-                    </label>
-                    <label htmlFor="">
-                        <input type="checkbox"/>
-                        <span>ТВ, Радио</span>
-                    </label>
-                    <label htmlFor="">
-                        <input type="checkbox"/>
-                        <span>Новостные порталы</span>
-                    </label>
-                    <label htmlFor="">
-                        <input type="checkbox"/>
-                        <span>Другое</span>
-                    </label>
-
-
+                    <h2 className="checkBox__name" >Как вы узнали о мероприятие?</h2>
+                    <InvestorCheck title={'Инстаграм'} name={'checkbox5'}/>
+                    <InvestorCheck title={'ТВ, Радио'} name={'checkbox6'}/>
+                    <InvestorCheck title={'Новостные порталы'} name={'checkbox7'}/>
+                    <InvestorCheck title={'Другое'} name={'checkbox8'}/>
                 </div>
             </div>
         </div>

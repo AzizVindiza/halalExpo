@@ -1,9 +1,15 @@
 @import "src/sass/base/mixins"
-
 .demoForm
-  &__wrapper
-    margin-top: 50px
-    display: flex
+  background: #00000070
+  position: fixed
+  top: 0
+  width: 100%
+  height: 100%
+  justify-content: center
+  display: flex
+  z-index: 1000
+  overflow-y: scroll
+
   &__form
     position: relative
     display: flex
@@ -11,7 +17,9 @@
     row-gap: 25px
     padding: 38px 77px
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1)
-    margin: 0 auto
+    margin: 50px auto 50px auto
+    background: #fff
+
   &__b1
     width: 80px
     position: absolute

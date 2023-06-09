@@ -6,6 +6,7 @@ import RowSection from "./RowSection/RowSection";
 import {Link} from "react-router-dom";
 import Burger from "./Nav/Burger/Burger";
 import {animateScroll} from "react-scroll"
+import DemoForm from "../../components/DemoRegistraion/DemoForm/DemoForm";
 const Header = () => {
     const [isActiveHamburger, setActiveHamburger] = useState(false);
     const [isActiveHamburgerMenu, setActiveHamburgerMenu] = useState(false);

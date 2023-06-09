@@ -12,6 +12,12 @@ const Context = (props) => {
     const [passwordShown, setPasswordShown] = useState(false); // active eye
     const [passwordShown2, setPasswordShown2] = useState(false); // active eye
     const [value,setValue] = useState('Trade')
+    const [members,setMembers] = useState('') // select members
+    const [industry,setIndustry] = useState('') // select industry
+    const [fashion,setFashion] = useState('') // select fashion
+    const [food,setFood] = useState('') // select food
+    const [checkBox,setCheckBox] = useState('') // getCheckbox
+    const [request,setRequest] = useState(false) //  open request
     const {t,i18n} = useTranslation()
 
 
@@ -19,7 +25,8 @@ const Context = (props) => {
         role,setRole,close,setClose,stake,setStake,branch,setBranch,login,setLogin,passwordShown,
         setPasswordShown,
         passwordShown2, setPasswordShown2,
-        value,setValue,burger,setBurger,t,i18n
+        value,setValue,burger,setBurger,t,i18n,members,setMembers,fashion,setFashion,food,setFood
+        ,checkBox,setCheckBox,request,setRequest
     }
     return <CustomContext.Provider value={valueContext}>
         {props.children}
