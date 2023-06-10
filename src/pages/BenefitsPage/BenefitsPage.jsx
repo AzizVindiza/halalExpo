@@ -1,6 +1,7 @@
 import React from 'react';
 import './BenefitsPage.sass'
 import CardMembers from "./CardMembers/CardMembers";
+import CardPdf from "./CaardPdf/CardPdf";
 
 const BenefitsPage = () => {
     return (
@@ -16,8 +17,8 @@ const BenefitsPage = () => {
                     <CardMembers members={{title:"Международный охват",p:"Halal Investment and Trade Expo 2023 привлечет участников и гостей из разных стран мира. Это даст вам возможность расширить вашу глобальную видимость, установить международные связи и исследовать новые рынки."}}/>
                     <CardMembers members={{title:"Поддержка со стороны организаторов ",p:"Организаторы выставки обеспечат профессиональную поддержку, включая маркетинговую и PR-поддержку, помощь с организационными вопросами, а также предоставление необходимой информации и готовых выставочных стендов."}}/>
 
-
                 </div>
+                <CardPdf />
             </div>
         </section>
     );
