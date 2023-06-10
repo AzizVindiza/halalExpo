@@ -19,6 +19,7 @@ const Context = (props) => {
     const [checkBox,setCheckBox] = useState('') // getCheckbox
     const [request,setRequest] = useState(false) //  open request
     const {t,i18n} = useTranslation()
+    const [demo,setDemo] = useState('')
 
 
     const valueContext = {
@@ -26,7 +27,7 @@ const Context = (props) => {
         setPasswordShown,
         passwordShown2, setPasswordShown2,
         value,setValue,burger,setBurger,t,i18n,members,setMembers,fashion,setFashion,food,setFood
-        ,checkBox,setCheckBox,request,setRequest
+        ,checkBox,setCheckBox,request,setRequest,demo,setDemo
     }
     return <CustomContext.Provider value={valueContext}>
         {props.children}
