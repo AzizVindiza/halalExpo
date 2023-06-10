@@ -3,14 +3,17 @@ import "./rowSection.sass"
 import {CustomContext} from "../../../Context";
 import LoginForm from "../../../components/LoginForm/LoginForm";
 import Registration from "../../../components/Registration/Registration";
+import DemoForm from "../../../components/DemoRegistraion/DemoForm/DemoForm";
 
 
 
 const RowSection = () => {
+
+    const {close, setClose,setLogin,login,t,i18n,request,setRequest} = useContext(CustomContext)
     const  changeLanguages = (language) => {
         i18n.changeLanguage(language)
     }
-    const {close, setClose,setLogin,login,t,i18n} = useContext(CustomContext)
+
 
 
     return (
@@ -24,7 +27,6 @@ const RowSection = () => {
                         <button onClick={() => setClose(true)} className={'rowSection__reg'}>{t('header.signUp')}</button>
                     </div>
                     <div className="rowSection__change">
-
                         <button onClick={() => changeLanguages('ru')} className={`rowSection__lang ${i18n.language === "ru" ? 'rowSection__lang_active' : "" }`}>RU</button>
                         <button onClick={() => changeLanguages('en')} className={`rowSection__lang ${i18n.language === "en" ?  'rowSection__lang_active' : ""}`}>EN</button>
                     </div>
@@ -40,6 +42,10 @@ const RowSection = () => {
             {
                 login ? <LoginForm/> : ''
             }
+            {
+                request ? <DemoForm/> : ""
+            }
+
         </div>
     );
 };

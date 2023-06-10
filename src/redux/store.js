@@ -1,5 +1,7 @@
 import {combineReducers, configureStore} from "@reduxjs/toolkit";
 import storage from 'redux-persist/lib/storage'
+import {apiSlice} from "./ApiSlice";
+
 import {
     persistReducer,
     persistStore,
@@ -11,23 +13,25 @@ import {
     REGISTER,
 } from "redux-persist";
 
+
 const persistConfig = {
     key: 'root',
     storage,
 }
-const rootReducer = combineReducers({})
+const rootReducer = combineReducers({
+    [apiSlice.reducerPath]:apiSlice.reducer
+})
 const persistedReducer = persistReducer(persistConfig, rootReducer)
 
 
 const store = configureStore({
     reducer: persistedReducer,
+
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware({
-            serializableCheck: {
-                ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-                // Ignore these action types
-            },
-        }),
+            serializableCheck: false,
+
+        }).concat(apiSlice.middleware)
 })
 export const persist = persistStore(store)
 export default store

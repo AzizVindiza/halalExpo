@@ -4,6 +4,7 @@ import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
 import SmoothScroll from "../components/SmoothScroll/SmoothScroll";
 import {ScrollRestoration} from "react-router-dom";
+import DemoForm from "../components/DemoRegistraion/DemoForm/DemoForm";
 
 const Layout = () => {
 
@@ -17,8 +18,8 @@ const Layout = () => {
                     <div className="smooth-scroll" style={{padding: '120px'}}></div>
                     <ScrollRestoration/>
                 </SmoothScroll>
-            </main>
 
+            </main>
 
             <Footer/>
         </>
