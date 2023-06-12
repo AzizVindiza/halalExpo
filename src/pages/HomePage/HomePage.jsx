@@ -36,6 +36,7 @@ const HomePage = () => {
             <OrganizatorSection/>
             <PartnersSection/>
             <OfficeMapSection/>
+
         </>
     );
 };

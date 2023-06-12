@@ -1,5 +1,6 @@
 import React from 'react';
 import "./OfficeMapSection.sass"
+
 const OfficeMapSection = () => {
     return (
         <section className="office">
@@ -40,7 +41,10 @@ const OfficeMapSection = () => {
                         allowFullScreen="" loading="lazy"
                         referrerPolicy="no-referrer-when-downgrade"></iframe>
                 </div>
+
             </div>
+
+
         </section>
     );
 };
