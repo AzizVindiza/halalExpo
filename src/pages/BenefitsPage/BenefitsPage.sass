@@ -4,6 +4,16 @@
   padding-top: 71px
   background: url("img.png") no-repeat center/cover
   backdrop-filter: blur(15px)
+  &__svg
+    position: absolute
+    right: -50px
+    top: auto
+    bottom: 263px
+    width: 290px
+    height: 290px
+
+    transform: matrix(-0.64, 0.77, -0.75, -0.66, 0, 0)
+
 
   &::before
     z-index: -1
@@ -30,7 +40,7 @@
     display: flex
     flex-wrap: wrap
     row-gap: 64px
-    justify-content: space-around
+    justify-content: center
     text-align: center
 @media (max-width: 1201px)
   .benefits

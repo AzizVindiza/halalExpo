@@ -2,6 +2,7 @@ import React from 'react';
 import './BenefitsPage.sass'
 import CardMembers from "./CardMembers/CardMembers";
 import CardPdf from "./CaardPdf/CardPdf";
+import svg from "./svg.png"
 
 const BenefitsPage = () => {
     return (
@@ -20,6 +21,10 @@ const BenefitsPage = () => {
                 </div>
                 <CardPdf />
             </div>
+            <div className="benefits__svg">
+                <img src={svg} alt=""/>
+            </div>
+
         </section>
     );
 };
