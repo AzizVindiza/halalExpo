@@ -2,6 +2,7 @@ import React from 'react';
 import "./Advertising.sass"
 import img from "./img.png";
 import img2 from "./img2.png";
+import svg from "../../pages/BenefitsPage/svg.png";
 
 const Advertising = () => {
     return (
@@ -20,7 +21,9 @@ const Advertising = () => {
                 </div>
 
 
+
             </div>
+
 
         </section>
     );
