@@ -15,11 +15,13 @@ import PartnersSection from "./PartnersSection/PartnersSection";
 import OfficeMapSection from "./OfficeMapSection/OfficeMapSection";
 import StartSection from "./StartSection/StartSection";
 import ZoneSection from "./ZoneSection/ZoneSection";
+import DateSection from "./DateSection/DateSection";
 
 const HomePage = () => {
     return (
         <>
             <FirstSection/>
+            <DateSection/>
             <ParticipantSection/>
             <div className="home__bg">
                 <AboutSection/>

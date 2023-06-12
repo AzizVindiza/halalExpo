@@ -11,8 +11,60 @@
     column-gap: 63px
   &__wrapper
     display: flex
-    align-items: center
     justify-content: space-between
     margin-top: 70px
+
   &__txt
     @include text(500,18px,180%,#00000070)
+  &__cards
+    display: flex
+    flex-direction: column
+    row-gap: 11px
+  &__h3
+    @include text(700,18px,180%,#00862D)
+  &__h4
+    @include text(500,18px,180%,#00000080)
+  &__content
+    border-bottom: 1px solid #00000050
+    padding-bottom: 5px
+    margin-bottom: 31px
+    display: flex
+    justify-content: space-between
+  &__wrapp
+    display: flex
+    justify-content: space-between
+    margin-bottom: 11px
+  &__inner
+    display: flex
+    align-items: center
+    column-gap: 40px
+  &__flex
+    display: flex
+    column-gap: 130px
+  &__title
+    @include text(600,16px,180%,#000000)
+  &__btn
+    background: #0033CC
+    border-radius: 3px
+    width: 142px
+    height: 45px
+    color: #fff
+    transition: 0.3s
+    &:hover
+      background: #fff
+      color: #0057BC
+      border: 2px solid #0057BC
+  &__btn2
+    background: #0033CC
+    border-radius: 3px
+    width: 142px
+    height: 45px
+    color: #fff
+    transition: 0.3s
+    &:hover
+      background: #fff
+      color: #0057BC
+      border: 2px solid #0057BC
+  &__txt
+    display: flex
+    column-gap: 10px

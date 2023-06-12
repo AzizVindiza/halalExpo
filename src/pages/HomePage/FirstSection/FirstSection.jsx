@@ -1,5 +1,7 @@
 import React from 'react';
 import './FirstSection.sass'
+import day from "./day.mp4"
+import night from "./nigth.mp4"
 import bg from './first__line.svg'
 import bg339 from './first__line339.svg'
 import small from './first__circle-small.svg'
@@ -8,6 +10,7 @@ import Btn from "../../../components/Btn/Btn";
 import {motion} from  "framer-motion"
 import CounterSection from "./CounterSection/CounterSection";
 import SecondCounter from "./SecondCounter/SecondCounter";
+import ReactPlayer from "react-player";
 
 
 
@@ -27,10 +30,13 @@ const textMotion = {
 }
 
 const FirstSection = () => {
+    const  data = new Date()
+    const  time = data.toLocaleTimeString()
     return (
         <motion.section initial={"hidden"} whileInView={"visible"} className="first">
-            <div className="container first__container">
+            <div className="first__block-player">
 
+                 <video className={'first__player'} src={time.slice(0,2) > 5 && time.slice(0,2) < 17 ? day : night} autoPlay={true} muted={true} loop={true}/>
                 <motion.div  custom={1} variants={textMotion} className="first__txt">
                     <h3 className="first__h3">
                         ИННОВАЦИЯ НАЧИНАЮТСЯ ЗДЕСЬ
@@ -45,29 +51,19 @@ const FirstSection = () => {
                     <a href="#" className="first__btn">
                         <Btn type="button" text="Оставить заявку"/>
                     </a>
+                    <div className="first__circle-small">
+                        <img src={small} alt="small circle"/>
+                    </div>
                 </motion.div>
-                <div className="first__component">
-                    <CounterSection/>
-                    <SecondCounter/>
-                </div>
-
-            </div>
-            <div className="first__circle-big">
-                <img src={big} alt="big circle"/>
             </div>
 
-            <div className="first__circle-small">
-                <img src={small} alt="small circle"/>
-            </div>
-            <div className="first__bg">
-                <picture>
-                    <source media="(max-width:394px)" srcSet={bg339}/>
-                    <img src={bg} alt="line bg"/>
-                </picture>
-            </div>
+
+
+
 
         </motion.section>
     );
+
 };
 
 export default FirstSection;
