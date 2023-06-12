@@ -16,7 +16,7 @@ const Layout = () => {
             <main>
                 <SmoothScroll>
                     <Outlet/>
-                    <Advertising/>
+                    {/*<Advertising/>*/}
                     <div className="smooth-scroll" style={{padding: '120px'}}></div>
                     <ScrollRestoration/>
 

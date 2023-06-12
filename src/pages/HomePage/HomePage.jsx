@@ -22,19 +22,19 @@ const HomePage = () => {
         <>
             <FirstSection/>
             <DateSection/>
-            <ParticipantSection/>
+            {/*<ParticipantSection/>*/}
             <div className="home__bg">
                 <AboutSection/>
                 <TargetSection/>
             </div>
             <TaskSection/>
             <TypeSection/>
-            <VideoSection/>
+            {/*<VideoSection/>*/}
             <StartSection/>
             <ZoneSection/>
             <OpportunitySection/>
             <MapSection/>
-            <SpeakersSection/>
+            {/*<SpeakersSection/>*/}
             <OrganizatorSection/>
             <PartnersSection/>
             <OfficeMapSection/>
