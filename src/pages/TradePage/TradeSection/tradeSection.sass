@@ -1,0 +1,65 @@
+@import "src/sass/base/mixins"
+
+.trade
+  &__h2
+    display: flex
+    padding: 71px 0 41px 0
+    justify-content: center
+    @include text(800,45px,133%,#FFF)
+  &__img
+    display: flex
+    position: relative
+    &_text
+      top: 20%
+      padding: 47px 32px
+      border-radius: 81px
+      background: #A1CB5C
+      @include text(800,30px,133%,#FFFFFF)
+      right: -55px
+      position: absolute
+      writing-mode: vertical-lr
+      transform: rotate(360deg)
+  &__box
+    margin-top: 80px
+    display: flex
+
+  &__left
+    display: flex
+    flex-direction: column
+    margin-right: 180px
+    row-gap: 30px
+  &__item
+
+    width: 395px
+    display: flex
+    align-items: center
+    img
+      width: 66px
+      height: 66px
+  &__span
+    @include text(600,25px,133%,#FFF)
+  &__right
+
+    display: flex
+    flex-wrap: wrap
+    column-gap: 10px
+    row-gap: 25px
+  &__col
+    width: 190px
+    text-align: center
+
+    display: flex
+    flex-direction: column
+    align-items: center
+  &__square
+    width: 108px
+    height: 108px
+    background: #D9D9D9
+  &__span2
+    @include text(600,16px,133%,#FFF)
+
+
+
+
+
+

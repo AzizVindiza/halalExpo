@@ -1,0 +1,53 @@
+@import "src/sass/base/mixins"
+
+
+
+.tradeRegisCard
+
+  &__tooltip
+    position: relative
+    width: 310px
+    display: flex
+    cursor: pointer
+    flex-direction: column
+    &:hover .tradeRegisCard__p
+      margin-top: -229px
+      visibility: visible
+      opacity: 1
+  &__img
+    display: flex
+    margin: 0 auto
+    background: #b0b0b0
+    width: 99px
+    height: 99px
+  &__h3
+    text-align: center
+    @include text(600,30px,133%,#FFF)
+  &__p
+    position: absolute
+    text-align: center
+    @include text(500,13px,133%,#FFF)
+    padding: 30px 20px
+    width: 302px
+    height: 228px
+    background: #00000050
+    backdrop-filter: blur(10px)
+    border-radius: 5px
+    left: 50%
+    top: 0
+    transform: translateX(-50%)
+    visibility: hidden
+    opacity: 0
+    transition: opacity 0.5s ease
+    &::before
+      content: ""
+      position: absolute
+      left: 50%
+      top: 100%
+      border: 15px solid
+      backdrop-filter: blur(10px)
+      transform: translateX(-50%)
+
+      border-color: #00000050 #0000 #0000 #0000
+
+

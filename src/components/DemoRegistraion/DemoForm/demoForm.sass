@@ -41,6 +41,8 @@
 
   &__h3
    @include text(400,13px,133%,#000)
+   display: flex
+   justify-content: space-between
   &__span
     color: red
   &__input
@@ -57,9 +59,19 @@
     border: 1px solid black
   &__check
     display: flex
+    flex-direction: column
     column-gap: 5px
     span
       @include text(400,13px,133%,#000)
+  &__checkbox
+    color: #F23C3C
+  &__check-second
+    height: 50px
+    display: flex
+    flex-direction: column
+  &__wrapp
+    display: flex
+    justify-content: space-between
 
 
 

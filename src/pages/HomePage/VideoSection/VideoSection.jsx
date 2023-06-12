@@ -1,5 +1,7 @@
 import React from 'react';
 import './VideoSection.sass'
+import './VideoBanner/Banner'
+import Banner from "./VideoBanner/Banner";
 const VideoSection = () => {
     return (
         <section className="video">
@@ -12,7 +14,16 @@ const VideoSection = () => {
                                 allowFullScreen></iframe>
                     
                 </div>
+
+
+
+
             </div>
+            <Banner/>
+
+
+
+
         </section>
     );
 };
