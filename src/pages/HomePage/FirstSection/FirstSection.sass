@@ -3,40 +3,44 @@
 .first
   position: relative
   overflow: hidden
+  &__overlay
+    position: absolute
+    top: 0
+    right: 0
+    z-index: 999
   &__container
     position: relative
     z-index: 1
     padding: 66px 0 89px 0
   &__player
-    width: 50%
-    height: 100vh
+    position: absolute
+    width: 1177px
+    height: 570px
+    top: 0
+    right: -284px
     object-fit: cover
+    z-index: 10
   &__block-player
     display: flex
     justify-content: flex-end
     position: relative
   &__txt
-    padding-left: 50px
-    position: absolute
-    left: 0
-    top: 0
+    position: relative
     z-index: 1000
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.6) 58.73%, rgba(255, 255, 255, 0) 114.54%)
-    backdrop-filter: blur(10px)
-    width: 50%
-    height: 100%
+    padding: 102px 135px 0
 
   &__bg
     position: absolute
     top: -40px
     right: 0
+    z-index: 999
     width: auto
     height: auto
     margin: auto
   &__circle-small
     position: absolute
-    bottom: 18px
-    right: 24px
+    top: 22px
+    right: 50%
     overflow: hidden
     border-radius: 50%
     animation-name: circle

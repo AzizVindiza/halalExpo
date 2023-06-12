@@ -6,6 +6,7 @@ import svg3 from "./3.svg"
 import svg4 from "./svg4.png"
 import svg5 from "./svg5.png"
 import svg6 from "./svg6.png"
+import {Link} from "react-router-dom";
 const StartSection = () => {
     return (
         <section className="start">
@@ -22,7 +23,11 @@ const StartSection = () => {
                             <div className="start__svg">
                                 <img src={svg} alt="" className="start__img"/>
                             </div>
-                            <h3 className="start__h3">trade zone</h3>
+                            <h3 className="start__h3">
+                                <Link to={"trade"}>
+                                    trade zone
+                                </Link>
+                            </h3>
                         </div>
                         <div className="start__block">
                             <div className="start__svg">
