@@ -72,23 +72,7 @@ const CardPdf = () => {
 
 
                 </div>
-                <div className="cardPdf__img">
-                    <img src="img.png" alt=""/>
 
-
-                </div>
-                <div className="cardPdf__h3">
-                    <div className="cardPdf__card">
-                        <img src="img1.png" alt=""/>
-
-
-                    </div>
-                    <div className="cardPdf__card">
-                        <img src="img1.png" alt=""/>
-
-
-                    </div>
-                </div>
 
 
             </div>
