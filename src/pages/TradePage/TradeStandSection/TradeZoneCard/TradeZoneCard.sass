@@ -1,0 +1,25 @@
+@import "src/sass/base/mixins"
+
+.tradeZoneCard
+  &__box
+    border: 1px solid rgba(255, 255, 255, 0.12)
+    backdrop-filter: blur(10px)
+    border-radius: 5px
+    width: 520px
+    height: 307px
+    display: flex
+    justify-content: space-around
+    align-items: center
+    background: #00000025
+  &__img
+    width: 250px
+    height: 250px
+    padding: 28px 10px 28px 21px
+
+  &__ul
+    padding: 14px 22px
+    border: 1px solid #FFFFFF12
+
+  &__li
+    list-style: disc
+    @include text(500,15px,133%,#FFF)

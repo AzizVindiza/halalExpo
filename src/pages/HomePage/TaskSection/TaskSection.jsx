@@ -15,7 +15,7 @@ const textMotion = {
         {
             x: 0,
             opacity: 1,
-            transition: {delay: custom * 0.2}
+            transition: {delay: custom * 0.5}
         }
     )
 
@@ -30,7 +30,7 @@ const cartMotion = {
         {
             x: 0,
             opacity: 1,
-            transition: {delay: custom * 0.8}
+            transition: {delay: custom * 0.5}
         }
     )
 
@@ -44,7 +44,7 @@ const cartMotion2 = {
         {
             x: 0,
             opacity: 1,
-            transition: {delay: custom * 1.2}
+            transition: {delay: custom * 0.5}
         }
     )
 
@@ -58,7 +58,7 @@ const cartMotion3 = {
         {
             x: 0,
             opacity: 1,
-            transition: {delay: custom * 1}
+            transition: {delay: custom * 0.5}
         }
     )
 
@@ -72,7 +72,7 @@ const cartMotion4 = {
         {
             x: 0,
             opacity: 1,
-            transition: {delay: custom * 1}
+            transition: {delay: custom * 0.5}
         }
     )
 
@@ -87,6 +87,7 @@ const TaskSection = () => {
             }}
             initial={"hidden"}
             whileInView={"visible"}
+            viewport={{once:true}}
             className="task">
             <div className="task__svg">
                 <img src={svg} alt="dots"/>
@@ -99,19 +100,19 @@ const TaskSection = () => {
                     <motion.div  custom={1} variants={textMotion}>
                         <TaskCard number={1} text="Представление и продвижение Halal-продуктов и услуг на мировом рынке, способствование укреплению их позиций на международной арене."/>
                     </motion.div>
-                    <motion.div  custom={1} variants={cartMotion}>
+                    <motion.div  custom={2} variants={cartMotion}>
                         <TaskCard number={2} text="Содействие в реализации и развитии халал бизнес проектов и Халал продукт в странах СНГ."/>
                     </motion.div>
-                    <motion.div  custom={1} variants={cartMotion2}>
+                    <motion.div  custom={3} variants={cartMotion2}>
                         <TaskCard number={3} text="Раскрыть новые рынки для иностранных партнеров и инвесторов, заинтересованных в торговле и инвестировании в халяльные продукты и услуги в Кыргызстане и других странах Центральной Азии."/>
                     </motion.div>
-                    <motion.div  custom={1} variants={cartMotion3}>
+                    <motion.div  custom={4} variants={cartMotion3}>
                         <TaskCard number={4} text="Распространить высокие стандарты качества и сертификации халяль-продуктов и услуг для повышения доверия со стороны покупателей и инвесторов."/>
                     </motion.div>
-                    <motion.div  custom={1} variants={cartMotion4}>
+                    <motion.div  custom={5} variants={cartMotion4}>
                         <TaskCard number={5} text="Повысить информированность гостей мероприятия и общественности об инвестиционных и торговых возможностях в халяль-индустрии, а также обеспечить информационную поддержку новым тенденциям и разработкам в этой отрасли через проведение ежегодного масштабного мероприятия HIT Expo."/>
                     </motion.div>
-                    <motion.div  custom={1} variants={cartMotion4}>
+                    <motion.div  custom={6} variants={cartMotion4}>
                         <TaskCard number={6} text="Содействие в укреплении международных отношений, предоставление площадки для обмена опытом и знаниями между участниками, развитие бизнес-связей и партнерств между производителями и покупателями из разных стран и регионов."/>
                     </motion.div>
                 </div>

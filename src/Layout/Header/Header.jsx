@@ -6,6 +6,8 @@ import RowSection from "./RowSection/RowSection";
 import {Link} from "react-router-dom";
 import Burger from "./Nav/Burger/Burger";
 import {animateScroll} from "react-scroll"
+import DemoForm from "../../components/DemoRegistraion/DemoForm/DemoForm";
+import {ToastContainer} from "react-toastify";
 const Header = () => {
     const [isActiveHamburger, setActiveHamburger] = useState(false);
     const [isActiveHamburgerMenu, setActiveHamburgerMenu] = useState(false);
@@ -36,7 +38,18 @@ const Header = () => {
                     <Nav/>
                 </div>
             </div>
-
+            <ToastContainer
+                position="top-left"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick={false}
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+            />
         </header>
     );
 };

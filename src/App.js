@@ -27,7 +27,8 @@ import StandPage from "./pages/RasulPage/StandPage";
 import LocationPage from "./pages/LocationPage/LocationPage";
 
 import MassPage from "./pages/MassPage/MassPage";
-import DemoRegistration from "./components/DemoRegistraion/DemoRegistration";
+import TradePage from "./pages/TradePage/TradePage";
+
 
 
 
@@ -55,7 +56,7 @@ const router = createBrowserRouter(
                 <Route path="stand" element={<StandPage/>}/>
                 <Route path="mass" element={<MassPage/>}/>
                 <Route path="location" element={<LocationPage/>}/>
-                <Route path="demo" element={<DemoRegistration/>}/>
+                <Route path="trade" element={<TradePage/>}/>
 
             </Route>
 

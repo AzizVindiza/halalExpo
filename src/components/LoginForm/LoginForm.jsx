@@ -20,7 +20,7 @@ const LoginForm = () => {
 
     } = useForm();
     const onSubmit = (data) => {
-        alert(JSON.stringify(data))
+        console.log(data)
     }
     return (
         <div className="login">
