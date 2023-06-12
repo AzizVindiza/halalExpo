@@ -69,7 +69,7 @@ const DemoForm = () => {
     })
 
 
-    const {setRequest, demo, setDemo} = useContext(CustomContext)
+    const {setRequest} = useContext(CustomContext)
     return (
         <section className={"demoForm"}>
 
