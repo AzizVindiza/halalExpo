@@ -11,7 +11,12 @@ const StartSection = () => {
         <section className="start">
             <div className="container start__container">
                 <div className="start__wrapper">
-                    <h2 className="start__h2">ИННОВАЦИИ НАЧИНАЮТСЯ ЗДЕСЬ</h2>
+
+                    <div className="wrapp">
+                        <h4 className="start__h4">Lorem Ipsum is simply dummy</h4>
+                        <p className="start__p">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+
                     <div className="start__content">
                         <div className="start__block">
                             <div className="start__svg">
@@ -49,10 +54,6 @@ const StartSection = () => {
                             </div>
                             <h3 className="start__h3">halal zone</h3>
                         </div>
-                    </div>
-                    <div className="wrapp">
-                        <h4 className="start__h4">Lorem Ipsum is simply dummy</h4>
-                        <p className="start__p">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                     </div>
                 </div>
 
