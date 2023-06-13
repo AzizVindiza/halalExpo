@@ -14,14 +14,10 @@ const Layout = () => {
             <Header/>
 
             <main>
-                <SmoothScroll>
                     <Outlet/>
                     {/*<Advertising/>*/}
-                    <div className="smooth-scroll" style={{padding: '120px'}}></div>
+                    <div className="smooth-scroll" style={{padding: '100px'}}></div>
                     <ScrollRestoration/>
-
-                </SmoothScroll>
-
             </main>
 
 
