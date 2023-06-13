@@ -35,7 +35,7 @@ const FirstSection = () => {
     return (
         <motion.section initial={"hidden"} whileInView={"visible"} className="first">
             <div className="first__block-player">
-                <video className={'first__player'} src={time.slice(0, 2) > 5 && time.slice(0, 2) < 17 ? day : night}
+                <video className={'first__player'} src={time.slice(0, 2) > 6 && time.slice(0, 2) < 19 ? day : night}
                        autoPlay={true} muted={true} loop={true}/>
             </div>
             <motion.div custom={1} variants={textMotion} className="first__txt">

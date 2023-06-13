@@ -19,7 +19,7 @@ const MembersPage = () => {
             <div className="container members__container">
                 <div className="members__wrapper">
                     <CountryFlag/>
-                     <ChooseZone setZone={setZone} zone={zone} items={arr}/>
+                    <ChooseZone setZone={setZone} zone={zone} items={arr}/>
                     <SelectSection arr={zone === 'Trade zone' ? arr2 : zone === 'Invest zone' ? arr3 : zone === 'Fashion zone' ? arr4 : zone === 'Food zone' ? arr5 : ""} category={category} setCategory={setCategory}/>
                     <div className="members__txt">
                         <button className={'members__btn'}>Искать</button>
