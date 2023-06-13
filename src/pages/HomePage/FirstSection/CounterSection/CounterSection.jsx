@@ -39,7 +39,7 @@ const CounterSection = () => {
     })
     return (
         <section className={'counterSection'}>
-            <h2 className={'counterSection__h2'}>До начало HIT EXPO</h2>
+            <h2 className={'counterSection__h2'}>До начало HIT EXPO 2023</h2>
             <div className="counterSection__wrapper">
                 <div className="counterSection__num">
                     <p className="counterSection__time">{timerDays < 10 ? "0" + timerDays : timerDays}</p>

@@ -31,9 +31,9 @@ const StartSection = () => {
                         </div>
                         <div className="start__block">
                             <div className="start__svg">
-                                <img src={svg2} alt="" className="start__img"/>
+                                <img src={svg4} alt="" className="start__img"/>
                             </div>
-                            <h3 className="start__h3">fashion zone</h3>
+                            <h3 className="start__h3">invest zone</h3>
                         </div>
                         <div className="start__block">
                             <div className="start__svg">
@@ -43,9 +43,9 @@ const StartSection = () => {
                         </div>
                         <div className="start__block">
                             <div className="start__svg">
-                                <img src={svg4} alt="" className="start__img"/>
+                                <img src={svg2} alt="" className="start__img"/>
                             </div>
-                            <h3 className="start__h3">invest zone</h3>
+                            <h3 className="start__h3">fashion zone</h3>
                         </div>
                         <div className="start__block">
                             <div className="start__svg">
@@ -53,12 +53,12 @@ const StartSection = () => {
                             </div>
                             <h3 className="start__h3">national attribute zone</h3>
                         </div>
-                        <div className="start__block">
-                            <div className="start__svg">
-                                <img src={svg6} alt="" className="start__img"/>
-                            </div>
-                            <h3 className="start__h3">halal zone</h3>
-                        </div>
+                        {/*<div className="start__block">*/}
+                        {/*    <div className="start__svg">*/}
+                        {/*        <img src={svg6} alt="" className="start__img"/>*/}
+                        {/*    </div>*/}
+                        {/*    <h3 className="start__h3">halal zone</h3>*/}
+                        {/*</div>*/}
                     </div>
                 </div>
 

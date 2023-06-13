@@ -3,6 +3,26 @@
 
 
 .tradeRegisCard
+  position: relative
+  &:nth-child(3n+2)
+    &::after
+      position: absolute
+      content: ""
+      width: 100px
+      height: 1px
+      background: #FFFFFF
+
+      top: 34%
+      right: -55px
+    &::before
+      bottom: 66%
+      left: -55px
+      position: absolute
+      content: ""
+      width: 100px
+      height: 1px
+      background: #FFFFFF
+
 
   &__tooltip
     position: relative
@@ -39,6 +59,7 @@
     visibility: hidden
     opacity: 0
     transition: opacity 0.5s ease
+
     &::before
       content: ""
       position: absolute
