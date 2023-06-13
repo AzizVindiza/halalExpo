@@ -14,8 +14,8 @@ const StartSection = () => {
                 <div className="start__wrapper">
 
                     <div className="wrapp">
-                        <h4 className="start__h4">Lorem Ipsum is simply dummy</h4>
-                        <p className="start__p">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <h4 className="start__h4">Все о зонах HIT Expo 2023</h4>
+                        <p className="start__p">Выставка представляет уникальные зоны, в которых каждый посетитель найдет для себя что-то интересное. Здесь вы сможете рассмотреть главные зоны выставки и их преимущества:</p>
                     </div>
 
                     <div className="start__content">
@@ -25,7 +25,7 @@ const StartSection = () => {
                             </div>
                             <h3 className="start__h3">
                                 <Link to={"trade"}>
-                                    trade zone
+                                    Trade Zone
                                 </Link>
                             </h3>
                         </div>
@@ -33,25 +33,29 @@ const StartSection = () => {
                             <div className="start__svg">
                                 <img src={svg4} alt="" className="start__img"/>
                             </div>
-                            <h3 className="start__h3">invest zone</h3>
+                            <h3 className="start__h3">
+                                <Link to={"invest"}>
+                                    Invest Zone
+                                </Link>
+                            </h3>
                         </div>
                         <div className="start__block">
                             <div className="start__svg">
                                 <img src={svg3} alt="" className="start__img"/>
                             </div>
-                            <h3 className="start__h3">food zone</h3>
+                            <h3 className="start__h3">Food Zone</h3>
                         </div>
                         <div className="start__block">
                             <div className="start__svg">
                                 <img src={svg2} alt="" className="start__img"/>
                             </div>
-                            <h3 className="start__h3">fashion zone</h3>
+                            <h3 className="start__h3">Fashion Zone</h3>
                         </div>
                         <div className="start__block">
                             <div className="start__svg">
                                 <img src={svg5} alt="" className="start__img"/>
                             </div>
-                            <h3 className="start__h3">national attribute zone</h3>
+                            <h3 className="start__h3">National attribute zone</h3>
                         </div>
                         {/*<div className="start__block">*/}
                         {/*    <div className="start__svg">*/}

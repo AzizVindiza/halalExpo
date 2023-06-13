@@ -1,0 +1,43 @@
+@import "src/sass/base/mixins"
+
+
+
+.investAdvantages
+  &__h2
+    justify-content: center
+    display: flex
+
+    @include text(800,35px,133%,#FFF)
+  &__box
+    margin: 45px 0 150px 0
+    display: flex
+    flex-direction: column
+    row-gap: 60px
+  &__p
+    @include text(500,20px,133%,#FFF)
+    width: 85%
+    &:nth-child(even)
+      display: flex
+      margin-left: auto
+  &__text
+    margin: 0 auto
+    padding: 26px 125px
+    width: 970px
+    background: #EFF3FF
+  &__h3
+    @include text(700,20px,133%,#FFD400)
+    display: flex
+    justify-content: center
+    margin-bottom: 20px
+  &__t
+    display: flex
+    margin: 0 auto
+    text-align: center
+    @include text(700,30px,133%,#3C3C3C)
+  &__wrapper
+    margin-top: 100px
+    display: flex
+    justify-content: space-between
+    row-gap: 70px
+    flex-wrap: wrap
+
