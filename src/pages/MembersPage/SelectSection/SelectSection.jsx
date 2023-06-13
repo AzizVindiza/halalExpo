@@ -43,9 +43,9 @@ const   SelectSection = ({category,setCategory,arr}) => {
                         select ?
                             <ul className="selectSection__list">
                                 {
-                                    arr.map((item) => (
+                                   arr ? arr.map((item) => (
                                         <li onClick={() => setCategory(item)} className="selectSection__item">{item}</li>
-                                    ))
+                                    )) : <li> вы не выбрали зону</li>
                                 }
 
                             </ul>

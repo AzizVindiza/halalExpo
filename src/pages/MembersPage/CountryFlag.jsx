@@ -4,13 +4,15 @@ import "./country.sass"
 const CountryFlag = () =>  {
     const [select, setSelect] = useState("kg");
     const onSelect = (code) => setSelect(code);
-    console.log("SELECT", select);
+
     return (
         <div className="country">
             <ReactFlagsSelect
+                searchable={true}
                 className={'country__flags'}
                 selected={select}
                 onSelect={onSelect}
+
             />
         </div>
     );

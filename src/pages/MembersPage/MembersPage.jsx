@@ -5,9 +5,11 @@ import SelectSection from "./SelectSection/SelectSection";
 import "react-phone-input-2/lib/bootstrap.css";
 import {arr,arr2,arr4,arr3,arr5} from "../../utils/arr";
 import CountryFlag from "./CountryFlag";
+import ChooseZone from "./ZoneSection/ZoneSection";
 const MembersPage = () => {
     const [phoneSelect,setPhoneSelect] = useState('')
     const [category,setCategory] = useState('Выберите') // choose category
+    const [zone,setZone] = useState('Выберите') // choose category
 
     return (
         <section className="members">
@@ -17,8 +19,8 @@ const MembersPage = () => {
             <div className="container members__container">
                 <div className="members__wrapper">
                     <CountryFlag/>
-                    <SelectSection arr={arr} category={category} setCategory={setCategory}/>
-                    <SelectSection arr={category === 'Trade zone' ? arr2 : category === 'Invest zone' ? arr3 : category === 'Fashion zone' ? arr4 : category === 'Food zone' ? arr5 : ""} category={category} setCategory={setCategory}/>
+                     <ChooseZone setZone={setZone} zone={zone} items={arr}/>
+                    <SelectSection arr={zone === 'Trade zone' ? arr2 : zone === 'Invest zone' ? arr3 : zone === 'Fashion zone' ? arr4 : zone === 'Food zone' ? arr5 : ""} category={category} setCategory={setCategory}/>
                     <div className="members__txt">
                         <button className={'members__btn'}>Искать</button>
                         <button className={'members__btn2'}>Сбросить</button>

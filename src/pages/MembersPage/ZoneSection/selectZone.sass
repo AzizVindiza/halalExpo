@@ -1,0 +1,30 @@
+@import "src/sass/base/mixins"
+
+.zone
+  &__category
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 256px
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4)
+    cursor: pointer
+    margin-bottom: 40px
+    background:  #F4F7FF
+    border-radius: 2px
+    padding: 5px
+  &__h2
+    @include text(500,15px,133%,#00000070)
+  &__list
+    display: flex
+    flex-direction: column
+    row-gap: 20px
+    padding: 18px
+    border-radius: 4px
+    position: absolute
+    top: 50px
+    z-index: 10
+    background: #FFFFFF
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15)
+  &__item
+    @include text(600,15px,180%,#000000)
