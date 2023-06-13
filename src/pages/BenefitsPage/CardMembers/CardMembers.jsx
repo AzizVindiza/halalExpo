@@ -7,7 +7,7 @@ const CardMembers = ({members}) => {
 
 
             <div className="cardMembers__img">
-                <svg width="277" height="257" viewBox="0 0 277 257" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="208" height="208" viewBox="0 0 277 257" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g filter="url(#filter0_d_2733_1629)">
                         <path d="M139.596 53.7562C158.514 40.51 184.677 52.71 186.689 75.7161L193.332 151.636C195.344 174.642 171.697 191.2 150.767 181.44L81.6972 149.232C60.7669 139.472 58.251 110.715 77.1685 97.4686L139.596 53.7562Z" fill="white"/>
                     </g>
