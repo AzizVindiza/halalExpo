@@ -21,12 +21,13 @@ const ContactsForm = () => {
                             <input placeholder={'Телефон*'} type="number" className="contactsForm__input"/>
                         </label>
                         <label  className="contactsForm__label">
-                            <textarea placeholder={'Сообщения*'} type="text" className="contactsForm__input"/>
+                            <textarea placeholder={'Сообщение*'} type="text" className="contactsForm__input"/>
                         </label>
+                        <div className="contactsForm__btn">
+                            <Btn text={'ОТПРАВИТЬ'}/>
+                        </div>
                     </form>
-                    <div className="contactsForm__btn">
-                        <Btn text={'ОТПРАВИТЬ'}/>
-                    </div>
+
                 </div>
 
              </div>
