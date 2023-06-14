@@ -3,10 +3,15 @@ import './BenefitsPage.sass'
 import CardMembers from "./CardMembers/CardMembers";
 import CardPdf from "./CaardPdf/CardPdf";
 import svg from "./svg.png"
+import figure from "./figure.png"
 
 const BenefitsPage = () => {
     return (
         <section className="benefits">
+            <div className="benefits__photo">
+                <img src={figure} alt=""/>
+            </div>
+
             <div className="benefits__container container">
                 <h2 className="benefits__h2">
                     Преимущества для участников
