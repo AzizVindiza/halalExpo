@@ -54,7 +54,7 @@ const router = createBrowserRouter(
                 <Route path="members" element={<MembersPage/>}/>
                 <Route path="members" element={<MembersPage/>}/>
                 <Route path="hotel" element={<Hotel/>}/>
-                <Route path="stand" element={<StandPage/>}/>
+                {/*<Route path="stand" element={<StandPage/>}/>*/}
                 <Route path="mass" element={<MassPage/>}/>
                 <Route path="location" element={<LocationPage/>}/>
                 <Route path="trade" element={<TradePage/>}/>
