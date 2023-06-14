@@ -2,6 +2,9 @@
 .connectionSection
   &__container
     padding: 56px 0 100px 0
+  &__box
+    display: flex
+    column-gap: 30px
   &__title
     @include text(800,30px,133%,#10923E)
     text-align: center
@@ -21,10 +24,32 @@
     align-items: center
     column-gap: 20px
   &__p
-    @include text(500,25px,120%,#000)
+    @include text(800,22px,120%,#000)
 
-  &__wrapper
-    display: flex
-    column-gap: 30px
+
+
+@media (max-width: 1025px)
+  .connectionSection
+    &__wrapper
+      display: flex
+      justify-content: center
+    &__box
+      display: flex
+      flex-direction: column
+      row-gap: 33px
+
+@media (max-width: 482px)
+  .connectionSection
+    &__title
+      @include text(800,20px,133%,#00862D)
+    &__oval
+      width: 55px
+      height: 55px
+    &__p
+      @include text(500,23px,120%,#000)
+@media (max-width: 394px)
+  .connectionSection
+    &__p
+      @include text(500,19px,120%,#000)
 
 

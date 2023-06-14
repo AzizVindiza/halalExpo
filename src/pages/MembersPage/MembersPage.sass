@@ -13,6 +13,11 @@
     display: flex
     justify-content: space-between
     margin-top: 70px
+    column-gap: 31px
+
+  &__block-component
+    display: flex
+    column-gap: 24px
   &__txt
     @include text(500,18px,180%,#00000070)
   &__cards
@@ -67,3 +72,21 @@
   &__txt
     display: flex
     column-gap: 10px
+
+
+@media (max-width: 1023px)
+  .members
+    &__wrapper
+      flex-direction: column
+    &__txt
+      margin-bottom: 34px
+@media (max-width: 770px)
+@media (max-width: 482px)
+  .members
+    &__block-component
+      flex-direction: column
+      row-gap: 30px
+      margin-bottom: 30px
+    &__h2
+      font-size: 32px
+@media (max-width: 394px )

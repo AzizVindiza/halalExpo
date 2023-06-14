@@ -8,9 +8,11 @@ import Burger from "./Nav/Burger/Burger";
 import {animateScroll} from "react-scroll"
 import DemoForm from "../../components/DemoRegistraion/DemoForm/DemoForm";
 import {ToastContainer} from "react-toastify";
+import {CustomContext} from "../../Context";
 const Header = () => {
-    const [isActiveHamburger, setActiveHamburger] = useState(false);
-    const [isActiveHamburgerMenu, setActiveHamburgerMenu] = useState(false);
+    const {isActiveHamburger, setActiveHamburger} = useContext(CustomContext)
+    const {isActiveHamburgerMenu, setActiveHamburgerMenu} = useContext(CustomContext)
+
 
     const toggleClass = () => {
         setActiveHamburger(!isActiveHamburger);

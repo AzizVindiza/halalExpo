@@ -1,8 +1,10 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import "./Dropdown.sass"
 import {NavLink} from "react-router-dom";
+import {CustomContext} from "../../../../Context";
 
 const Dropdown = ({arr, txt}) => {
+    const { setActiveHamburger} = useContext(CustomContext)
 
     return (
         <div className="dropdown">
@@ -18,7 +20,7 @@ const Dropdown = ({arr, txt}) => {
             <div className="dropdown__wrapper">
                 {
                     arr.map((item, i) => (
-                        <NavLink key={i} className={'dropdown__link'} to={item.link}>
+                        <NavLink onClick={() => setActiveHamburger(false)} key={i} className={'dropdown__link'} to={item.link}>
                             {item.name}
                         </NavLink>
                     ))
