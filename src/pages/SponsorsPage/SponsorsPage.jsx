@@ -1,14 +1,17 @@
 import React from 'react';
 import AboutSection from "./AboutSection/AboutSection";
 import EdgeSection from "./EdgeSection/EdgeSection";
-import GetSection from "./GetSection/GetSection";
+import EfficiencySection from "./EfficiencySection/EfficiencySection";
+
 
 const SponsorsPage = () => {
     return (
         <>
             <AboutSection/>
+            <EfficiencySection/>
+
             <EdgeSection/>
-            <GetSection/>
+
         </>
     );
 };
