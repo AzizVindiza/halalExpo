@@ -1,0 +1,51 @@
+@import "src/sass/base/mixins"
+.memberModal
+  background: #00000020
+  position: fixed
+  display: flex
+  justify-content: center
+  top: 0
+  right: 0
+  left: 0
+  bottom: 0
+  z-index: 1000
+  padding: 20px 0
+  &__wrapper
+    position: relative
+    padding: 25px 19px
+    width: 516px
+    overflow-y: scroll
+    background: #fff
+  &__heart
+    position: absolute
+    right: 25px
+    top: 24px
+  &__logo
+    width: 80px
+    height: 80px
+    margin-bottom: 23px
+  &__wrapp
+
+    display: flex
+    justify-content: space-between
+    border-bottom: 1px solid #000000
+    padding-bottom: 12px
+    margin-bottom: 28px
+  &__h2
+    @include text(600,20px,180%,#000000)
+  &__socials
+    display: flex
+    column-gap: 12px
+  &__content
+    display: flex
+    justify-content: space-between
+    background: #F4F7FF
+    padding: 8px 14px
+    margin-bottom: 20px
+  &__p
+    @include text(600,16px,150%,#000000)
+  &__title
+    @include text(700,15px,150%,#000000)
+  &__txt
+    @include text(500,15px,150%,#000000)
+    margin-bottom: 20px
