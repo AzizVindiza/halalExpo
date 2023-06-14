@@ -9,7 +9,7 @@ import DemoForm from "../../../components/DemoRegistraion/DemoForm/DemoForm";
 
 const RowSection = () => {
 
-    const {close, setClose,setLogin,login,t,i18n,request,setRequest} = useContext(CustomContext)
+    const {close, setClose,setLogin,login,t,i18n,request} = useContext(CustomContext)
     const  changeLanguages = (language) => {
         i18n.changeLanguage(language)
     }

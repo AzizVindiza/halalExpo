@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import './FirstSection.sass'
 import day from "./day.mp4"
 import night from "./nigth.mp4"
@@ -9,9 +9,7 @@ import big from './first__circle-big.png'
 import Btn from "../../../components/Btn/Btn";
 import {motion} from "framer-motion"
 import svg from './Vector 140.svg'
-import CounterSection from "./CounterSection/CounterSection";
-import SecondCounter from "./SecondCounter/SecondCounter";
-import ReactPlayer from "react-player";
+import {CustomContext} from "../../../Context";
 
 
 const textMotion = {
@@ -30,6 +28,8 @@ const textMotion = {
 }
 
 const FirstSection = () => {
+
+    const {setRequest, request} = useContext(CustomContext)
     const data = new Date()
     const time = data.toLocaleTimeString()
     return (
@@ -52,9 +52,9 @@ const FirstSection = () => {
                     возможности в глобальной халяльной экономике и укрепить связи в сообществе международных
                     предпринимателей и инвесторов.
                 </p>
-                <a href="#" className="first__btn">
+                <div onClick={() => setRequest(true)}  className="first__btn">
                     <Btn type="button" text="Оставить заявку"/>
-                </a>
+                </div>
                 <div className="first__circle-small">
                     <img src={small} alt="small circle"/>
                 </div>
