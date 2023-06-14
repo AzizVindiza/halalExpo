@@ -28,6 +28,7 @@ import LocationPage from "./pages/LocationPage/LocationPage";
 
 import MassPage from "./pages/MassPage/MassPage";
 import TradePage from "./pages/TradePage/TradePage";
+import InvestPage from "./pages/InvestPage/InvestPage";
 
 
 
@@ -57,6 +58,7 @@ const router = createBrowserRouter(
                 <Route path="mass" element={<MassPage/>}/>
                 <Route path="location" element={<LocationPage/>}/>
                 <Route path="trade" element={<TradePage/>}/>
+                <Route path="invest" element={<InvestPage/>}/>
 
             </Route>
 

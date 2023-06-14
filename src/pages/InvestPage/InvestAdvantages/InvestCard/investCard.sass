@@ -1,0 +1,21 @@
+@import "src/sass/base/mixins"
+
+.investCard
+  &__box
+    width: 500px
+    height: 150px
+    display: flex
+    column-gap: 25px
+  &__img
+    width: 114px
+    height: 114px
+    background: #9FD3B2
+  &__column
+    display: flex
+    flex-direction: column
+    row-gap: 15px
+    width: 368px
+  &__h3
+    @include text(700,24px,133%,#FFF)
+  &__p
+    @include text(500,18px,133%,#FFF)
