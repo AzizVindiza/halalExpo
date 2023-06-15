@@ -10,6 +10,18 @@
     "MEDIA" : "MEDIA",
     "News": " News",
     "ticket" : "Buy a ticket"
+  },
+  "firstSection": {
+    "text": "Welcome to Halal Investment and Trade Expo 2023, one of the world's most prestigious halal investment and trade events! Join us to discover new opportunities in the global halal economy and strengthen relationships in the international business and investor community.",
+    "counter": "HIT EXPO begins:",
+    "time": "July 29 2023",
+    "Participants": "Participants are up to date:",
+    "Participate": "Participate"
+  },
+  "aboutSection": {
+    "text": "Halal Investment and Trade Expo 2023 is the largest exhibition of halal investment and infrastructure projects in Kyrgyzstan, held as part of the development of international trade relations and exports. The event brings together professionals from different sectors, demonstrates the latest trends and innovations, and provides a platform for interaction between exhibitors and visitors. The exhibition includes seminars, meetings and cultural events, as well as a special section for Halal industry products.\nIn the future we aim to make Halal Investment and Trade Expo the largest halal platform in Central Asia and CIS, and to establish stable relations with the countries of the Islamic world.",
+    "Exhibition": "Exhibition goal",
+    "Assistance": "Assistance to the development of the economy of Central Asian countries, the formation of the halal industry in the countries of the region and assistance to entrepreneurs in the presentation and implementation of their business projects according to Islamic principles"
   }
 
 }
