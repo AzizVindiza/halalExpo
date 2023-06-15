@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import "./start.sass"
 import svg from "./1.svg"
 import svg2 from "./2.svg"
@@ -7,15 +7,17 @@ import svg4 from "./svg4.png"
 import svg5 from "./svg5.png"
 import svg6 from "./svg6.png"
 import {Link} from "react-router-dom";
+import {CustomContext} from "../../../Context";
 const StartSection = () => {
+    const {t} = useContext(CustomContext)
     return (
         <section className="start">
             <div className="container start__container">
                 <div className="start__wrapper">
 
                     <div className="wrapp">
-                        <h4 className="start__h4">Все о зонах HIT Expo 2023</h4>
-                        <p className="start__p">Выставка представляет уникальные зоны, в которых каждый посетитель найдет для себя что-то интересное. Здесь вы сможете рассмотреть главные зоны выставки и их преимущества:</p>
+                        <h4 className="start__h4">{t("startSection.title")}</h4>
+                        <p className="start__p">{t("startSection.text")}</p>
                     </div>
 
                     <div className="start__content">
