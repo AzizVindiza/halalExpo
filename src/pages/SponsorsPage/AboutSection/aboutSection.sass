@@ -1,6 +1,6 @@
 @import "src/sass/base/mixins"
 .aboutSection
-  background: url("./7854057_1014 1.png") center/cover no-repeat
+  background: url("./7854057_1014 1.png")center/cover no-repeat
   &__container
     padding: 65px 0
   &__h2
@@ -9,7 +9,7 @@
     text-align: center
 
   &__p
-    @include text(500,22px,133%,#fff)
+    @include text(600,21px,133%,#fff)
     width: 1125px
     text-align: center
     margin: 0 auto
@@ -17,4 +17,23 @@
     display: flex
     justify-content: center
     margin-top: 50px
+
+@media (max-width: 1201px)
+  .aboutSection
+    &__p
+      @include text(600,20px,133%,#fff)
+      width: 90%
+
+
+@media (max-width: 770px)
+  .aboutSection
+    &__p
+
+      @include text(600,18px,133%,#fff)
+@media (max-width: 481px)
+  .aboutSection
+    &__h2
+      @include text(700,24px,133%,#fff)
+    &__p
+      @include text(500,14px,133%,#fff)
 

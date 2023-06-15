@@ -1,13 +1,8 @@
 @import "src/sass/base/mixins"
 .edgeSection
-  &__container
-    padding: 65px 0 65px 135px
-    max-width: 100%
-
   &__box
     display: flex
     column-gap: 31px
-
 
   &__image
     width: 123px
@@ -34,4 +29,20 @@
     border: 1px solid #000000
     border-radius: 5px
 
+@media (max-width: 1100px)
+  .edgeSection
+    &__container
+      padding: 0 30px
 
+@media (max-width: 770px)
+  .edgeSection
+    &__h3
+      font-size: 30px
+@media (max-width: 482px)
+  .edgeSection
+    &__h3
+      font-size: 24px
+@media (max-width: 394px)
+  .edgeSection
+    &__container
+      padding: 0
