@@ -1,6 +1,15 @@
 {
   "header" : {
-    "login" : "Login",
-    "signUp" : "Sign up"
+    "login" : "Log in",
+    "signUp" : "Registration",
+    "text" : "July 29 2023 – August 1 2023 Issyk-Kul EXPO, Cholpon-Ata city",
+    "about" : "ABOUT EXPO",
+    "Members" : " Members",
+    "Visitors" : "Visitors",
+    "Partners" : "Partners",
+    "MEDIA" : "MEDIA",
+    "News": " News",
+    "ticket" : "Buy a ticket"
   }
+
 }
