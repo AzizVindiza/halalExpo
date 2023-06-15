@@ -9,16 +9,15 @@
     border-radius: 8px
   &__h2
     @include text(700,30px,120%,#000000)
-    width: 173px
+    width: 163px
     height: 36px
-    margin-bottom: 70px
+    margin-bottom: 51px
   &__wrapper
 
     width: 100%
     display: flex
     justify-content: space-between
   &__card
-    width: 215px
     display: flex
     flex-direction: column
     justify-content: center
@@ -26,6 +25,81 @@
     row-gap: 22px
   &__h3
     @include text(600,22px,120%,#10923E)
+
+@media (max-width: 1201px)
+  .meet
+    &__h2
+      @include text(700,27px,120%,#000000)
+      width: 150px
+      margin-bottom: 46px
+    &__time
+      padding: 27px 20px
+    &__h3
+      @include text(600,20px,120%,#00862D)
+    &__card-svg
+      svg
+        width: 125px
+        height: 74px
+
+
+@media (max-width: 1025px)
+  .meet
+    &__time
+      padding: 26.5px 23.5px
+    &__h2
+      @include text(700,23px,120%,#000000)
+      width: 126px
+      margin-bottom: 40px
+    &__h3
+      @include text(600,17px,120%,#00862D)
+    &__card-svg
+      svg
+        width: 105px
+        height: 62px
+
+@media (max-width: 769px)
+  .meet
+    &__time
+      padding: 18.5px 12.5px
+    &__h2
+      @include text(700,16px,120%,#000000)
+      width: 92px
+      margin-bottom: 29px
+    &__h3
+      @include text(600,12px,120%,#00862D)
+    &__card-svg
+      svg
+        width: 77px
+        height: 45px
+@media (max-width: 481px)
+  .meet
+    &__time
+      padding: 12.5px 8px
+    &__h2
+      @include text(700,11px,120%,#000000)
+      width: 60px
+      margin-bottom: 19px
+    &__h3
+      @include text(600,8px,120%,#00862D)
+    &__card-svg
+      svg
+        width: 50px
+        height: 30px
+@media (max-width: 396px)
+  .meet
+    &__time
+      padding: 10.5px 6.5px
+    &__h2
+      @include text(700,9px,120%,#000000)
+      width: 50px
+      margin-bottom: 15px
+    &__h3
+      @include text(600,6px,120%,#00862D)
+    &__card-svg
+      svg
+        width: 41px
+        height: 24px
+
 
 
 

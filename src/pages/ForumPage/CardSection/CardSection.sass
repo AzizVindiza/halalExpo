@@ -11,10 +11,6 @@
   &__lists
     display: flex
     column-gap: 85px
-
-
-
-
   &__block
     width: 127px
     height: 26px
@@ -24,8 +20,6 @@
     justify-content: center
     align-items: center
     @include text(600, 22px, 180%, #40A865)
-
-
   &__wrapper
     display: flex
     align-items: center
@@ -48,6 +42,66 @@
     justify-content: center
     align-items: flex-start
     flex-direction: column
+@media (max-width: 1201px)
+  .card
+    &__h2
+      @include text(700,27px,120%,#000000)
+      margin-bottom: 28px
+    &__block
+      width: 116px
+      height: 24px
+      @include text(600,20px,120%,#00862D)
+    &__h3
+      @include text(400,20px,120%,#000000)
+@media (max-width: 1025px)
+  .card
+    &__h2
+      @include text(700,23px,120%,#000000)
+      width: 90px
+      height: 28px
+    &__block
+      width: 98px
+      height: 20px
+      @include text(600,17px,120%,#00862D)
+    &__h3
+      @include text(400,17px,120%,#000000)
+@media (max-width: 769px )
+  .card
+    &__h2
+      @include text(700,30px,120%,#000000)
+      width: 116px
+      height: 36px
+    &__block
+      @include text(600,22px,120%,#00862D)
+      width: 127px
+      height: 26px
+    &__h3
+      @include text(400,22px,120%,#000000)
+@media (max-width: 481px )
+  .card
+    &__h2
+      @include text(700,21px,120%,#000000)
+      width: 82px
+      height: 25px
+    &__block
+      @include text(600,16px,120%,#00862D)
+      width: 90px
+      height: 19px
+    &__h3
+      @include text(400,16px,120%,#000000)
+
+@media (max-width: 394px )
+  .card
+    &__h2
+      @include text(700,21px,120%,#000000)
+      width: 67px
+      height: 21px
+    &__block
+      @include text(600,12px,120%,#00862D)
+      width: 73px
+      height: 15px
+    &__h3
+      @include text(400,12px,120%,#000000)
 
 
 

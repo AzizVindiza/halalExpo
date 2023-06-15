@@ -18,6 +18,7 @@
     @include text(600,22px,133%,#000000)
     width: 666px
 
+@media (max-width: 1201px)
 
 
 @media (max-width: 1025px)
@@ -28,25 +29,21 @@
       margin-bottom: 40px
     &__h2
       @include text(800,30px,133%,#10923E)
+    &__p
+      @include text(500,22px,133%,#000000)
 
-@media (max-width: 770px)
+@media (max-width: 769px)
   .expectPage
     &__h2
       @include text(800,25px,133%,#10923E)
       margin-top: 50px
     &__p
+      width: 560px
       @include text(500,18px,133%,#000000)
-@media (max-width: 600px)
-  .expectPage
-    &__container
-      max-width: 450px
 
-@media (max-width: 482px)
+@media (max-width: 481px)
   .expectPage
-    &__container
-
     &__h2
-      @include text(500,20px,133%,#10923E)
       margin-bottom: 40px
     &__p
       width: 370px
@@ -54,14 +51,14 @@
 
 
 
-@media (max-width: 395px)
+@media (max-width: 396px)
   .expectPage
     &__container
       padding: 40px 0 50px 0
     &__h2
       @include text(800,20px,133%,#10923E)
     &__p
-      @include text(600,18px,133%,#000000)
+      @include text(500,18px,133%,#000000)
       margin-bottom: 50px
       width: 350px
 
