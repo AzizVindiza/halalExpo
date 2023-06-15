@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import "./TargetSection.sass"
 
 import {motion} from "framer-motion";
+import {CustomContext} from "../../../Context";
 
 
 const textMotion = {
@@ -47,6 +48,7 @@ const draw = {
     }
 };
 const TargetSection = () => {
+    const {t} = useContext(CustomContext)
     return (
         <motion.section  viewport={{once:true}} initial={"hidden"} whileInView={"visible"} className="target">
             <div className="target__container container">
@@ -134,15 +136,10 @@ const TargetSection = () => {
                 </motion.div>
                 <motion.div custom={1} variants={cartMotion} className="target__txt">
                     <h2 className="target__h2">
-                        Цели
+                        {t("aboutSection.Exhibition")}
                     </h2>
                     <p className="target__p">
-                        Содействие развитию экономики стран<br/>
-                        Центральной Азии, становлению<br/>
-                        халяль-индустрии в странах региона<br/>
-                        и помощь предпринимателям в презентации<br/>
-                        и реализации своих<br/>
-                        бизнес-проектов по исламски принципам.
+                        {t("aboutSection.Assistance")}
                     </p>
                 </motion.div>
             </div>

@@ -29,7 +29,7 @@ const textMotion = {
 
 const FirstSection = () => {
 
-    const {setRequest, request} = useContext(CustomContext)
+    const {setRequest, request,t} = useContext(CustomContext)
     const data = new Date()
     const time = data.toLocaleTimeString()
     return (
@@ -46,12 +46,7 @@ const FirstSection = () => {
                     Halal Investment<br/>
                     and Trade<span>2023</span>
                 </h1>
-                <p className="first__p">
-                    Добро пожаловать на Halal Investment and Trade Expo 2023 - одно из самых престижных событий в мире,
-                    посвященных халяльному инвестированию и торговле! Присоединяйтесь к нам, чтобы открыть новые
-                    возможности в глобальной халяльной экономике и укрепить связи в сообществе международных
-                    предпринимателей и инвесторов.
-                </p>
+                <p className="first__p">{t("firstSection.text")}</p>
                 <div onClick={() => setRequest(true)}  className="first__btn">
                     <Btn type="button" text="Оставить заявку"/>
                 </div>
