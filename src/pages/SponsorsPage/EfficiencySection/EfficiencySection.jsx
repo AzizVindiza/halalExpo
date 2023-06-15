@@ -1,10 +1,13 @@
 import React from 'react';
 import './efficiencySection.sass'
+import {useTranslation} from "react-i18next";
 
 
 
 
 const EfficiencySection = () => {
+    const {t} = useTranslation()
+
     return (
         <section className={"efficiency"}>
             <div className="efficiency__container container">
@@ -13,59 +16,23 @@ const EfficiencySection = () => {
                 </div>
                 <div className="efficiency__wrapper">
                     <div className="efficiency__box">
-                        <h2 className="efficiency__h2">
-                            КАК ВЫ МОЖЕТЕ ПОВЫСИТЬ ЭФФЕКТИВНОСТЬ СВОЕГО УЧАСТИЯ?
-                        </h2>
-                        <p className="efficiency__p">
-                            Участники, использующие спонсорские возможности выставки, получают возможность эффективно презентовать себя перед широкой аудиторией, как во время мероприятия, так и до его начала. Статус спонсора усиливает маркетинговый эффект от участия и предоставляет компаниям дополнительные возможности для продвижения на рынке.
-                            Рекламные возможности, включенные в спонсорские пакеты, тщательно подобраны с целью обеспечить максимальный охват целевой аудитории и информирование о компании и ее участии в выставке с помощью различных коммуникационных каналов.
-                        </p>
+                        <h2 className="efficiency__h2">{t("sponsorsPage.title1")}</h2>
+                        <p className="efficiency__p">{t("sponsorsPage.text1")}</p>
 
                     </div>
                     <div className="efficiency__box">
-                        <h2 className="efficiency__h2">
-                            ИСПОЛЬЗУЙТЕ КОММЕРЧЕСКИЙ ПОТЕНЦИАЛ ВЫСТАВКИ:
-                        </h2>
+                        <h2 className="efficiency__h2">{t("sponsorsPage.title2")}</h2>
                         <ul className="efficiency__ul">
-                            <li className="efficiency__li">
-                                Повысьте конкурентоспособность вашей компании на рынке
-
-                            </li>
-                            <li className="efficiency__li">
-                                Выделите свое участие среди конкурентов и обеспечьте себе преимущество
-
-                            </li>
-                            <li className="efficiency__li">
-                                Увеличьте объемы прямых продаж для вашей компании
-
-                            </li>
-                            <li className="efficiency__li">
-                                Укрепите успешную репутацию вашего бренда
-
-                            </li>
-                            <li className="efficiency__li">
-                                Поднимите статус вашей компании на рынке
-
-                            </li>
-                            <li className="efficiency__li">
-                                Обеспечьте лидерство вашей компании в конкурентной среде
-
-                            </li>
-                            <li className="efficiency__li">
-                                Расширьте вашу клиентскую базу и привлекайте больше покупателе
-
-                            </li>
-                            <li className="efficiency__li">
-                                Повысьте осведомленность о вашей компании и ее достижениях
-
-                            </li>
-                            <li className="efficiency__li">
-                                Стимулируйте рост вашего бизнеса и увеличивайте прибыль
-
-                            </li>
-                            <li className="efficiency__li">
-                                Укрепите доверие клиентов к вашей компании и ее продукции
-                            </li>
+                            <li className="efficiency__li">{t("sponsorsPage.li1")}</li>
+                            <li className="efficiency__li">{t("sponsorsPage.li2")}</li>
+                            <li className="efficiency__li">{t("sponsorsPage.li3")}</li>
+                            <li className="efficiency__li">{t("sponsorsPage.li4")}</li>
+                            <li className="efficiency__li">{t("sponsorsPage.li5")}</li>
+                            <li className="efficiency__li">{t("sponsorsPage.li6")}</li>
+                            <li className="efficiency__li">{t("sponsorsPage.li7")}</li>
+                            <li className="efficiency__li">{t("sponsorsPage.li8")}</li>
+                            <li className="efficiency__li">{t("sponsorsPage.li9")}</li>
+                            <li className="efficiency__li">{t("sponsorsPage.li10")}</li>
                         </ul>
 
                     </div>
