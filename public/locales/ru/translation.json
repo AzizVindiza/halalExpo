@@ -38,6 +38,7 @@
     "text": "В этом блоке вы найдете подробную информацию о зонах, доступных на Halal Investment and Trade Expo 2023. Узнайте, что ждет вас в каждой из этих зон и как они могут внести вклад в ваш опыт на выставке."
   },
   "zoneSection": {
+<<<<<<< HEAD
     "tradeZone": {
       "li1": "4 вида выставочных стендов",
       "li2": "Этностиль",
@@ -64,5 +65,12 @@
     ]
 
 
+=======
+    "trade": {
+      "li": ["4 types of exhibition stands", "Ethno Style"],
+      "time": "",
+      "name": "tradezone"
+    }
+>>>>>>> 33d3e0dcdf225b3149ecfebdf6eab05132a1ffe4
   }
 }
