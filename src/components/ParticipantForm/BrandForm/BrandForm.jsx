@@ -64,7 +64,6 @@ const
                         <RegistrationInput type={'text'} name={'Email_third'} title={'Email'}/>
                         <SocialSection/>
                         <ContactFace/>
-                        <EmailForm/>
                     </div>
 
                 </div>

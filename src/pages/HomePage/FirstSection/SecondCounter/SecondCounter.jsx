@@ -1,17 +1,20 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useContext, useEffect, useRef, useState} from 'react';
 
 import {AiOutlineArrowRight} from "react-icons/ai"
 import "./secondCounter.sass"
+import {CustomContext} from "../../../../Context";
+import {useTranslation} from "react-i18next";
 const SecondCounter = () => {
+    const {t} = useTranslation()
 
     return (
         <section className={'secondCounter'}>
-            <h2 className={'secondCounter__h2'}>Оставшихся мест участников</h2>
+            <h2 className={'secondCounter__h2'}>{t("firstSection.Participants")}</h2>
             <div className="secondCounter__wrapper">
                  <h4 className="secondCounter__h4">1274</h4>
             </div>
             <div className="secondCounter__block">
-                <h3 className="secondCounter__h3">Принять участие</h3>
+                <h3 className="secondCounter__h3">{t("firstSection.Participate")}</h3>
                 <AiOutlineArrowRight color={"#ffffff"}/>
             </div>
 

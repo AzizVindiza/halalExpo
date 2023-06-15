@@ -1,8 +1,10 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import './TaskSection.sass'
 import svg from './task__svg.svg'
 import TaskCard from "./TaskCard/TaskCard";
 import {motion} from "framer-motion";
+import {CustomContext} from "../../../Context";
+import {useTranslation} from "react-i18next";
 
 
 
@@ -78,6 +80,8 @@ const cartMotion4 = {
 
 }
 const TaskSection = () => {
+    const {t} = useTranslation()
+
     return (
         <motion.section
             transition={{ duration: 0.4 }}
@@ -94,26 +98,26 @@ const TaskSection = () => {
             </div>
             <div className="container task__container">
                 <div className="task__title">
-                    <h2 className="task__h2">Основные задачи проведения Halal Investment <br/>and Trade Expo 2023</h2>
+                    <h2 className="task__h2">{t("taskSection.title")}</h2>
                 </div>
                 <div className="task__wrapper">
                     <motion.div  custom={1} variants={textMotion}>
-                        <TaskCard number={1} text="Представление и продвижение Halal-продуктов и услуг на мировом рынке, способствование укреплению их позиций на международной арене."/>
+                        <TaskCard number={1} text={t("taskSection.text1")}/>
                     </motion.div>
                     <motion.div  custom={2} variants={cartMotion}>
-                        <TaskCard number={2} text="Содействие в реализации и развитии халал бизнес проектов и Халал продукт в странах СНГ."/>
+                        <TaskCard number={2} text={t("taskSection.text2")}/>
                     </motion.div>
                     <motion.div  custom={3} variants={cartMotion2}>
-                        <TaskCard number={3} text="Раскрыть новые рынки для иностранных партнеров и инвесторов, заинтересованных в торговле и инвестировании в халяльные продукты и услуги в Кыргызстане и других странах Центральной Азии."/>
+                        <TaskCard number={3} text={t("taskSection.text3")}/>
                     </motion.div>
                     <motion.div  custom={4} variants={cartMotion3}>
-                        <TaskCard number={4} text="Распространить высокие стандарты качества и сертификации халяль-продуктов и услуг для повышения доверия со стороны покупателей и инвесторов."/>
+                        <TaskCard number={4} text={t("taskSection.text4")}/>
                     </motion.div>
                     <motion.div  custom={5} variants={cartMotion4}>
-                        <TaskCard number={5} text="Повысить информированность гостей мероприятия и общественности об инвестиционных и торговых возможностях в халяль-индустрии, а также обеспечить информационную поддержку новым тенденциям и разработкам в этой отрасли через проведение ежегодного масштабного мероприятия HIT Expo."/>
+                        <TaskCard number={5} text={t("taskSection.text5")}/>
                     </motion.div>
                     <motion.div  custom={6} variants={cartMotion4}>
-                        <TaskCard number={6} text="Содействие в укреплении международных отношений, предоставление площадки для обмена опытом и знаниями между участниками, развитие бизнес-связей и партнерств между производителями и покупателями из разных стран и регионов."/>
+                        <TaskCard number={6} text={t("taskSection.text6")}/>
                     </motion.div>
                 </div>
             </div>

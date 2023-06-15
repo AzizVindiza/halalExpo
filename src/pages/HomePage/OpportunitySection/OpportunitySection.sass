@@ -35,10 +35,12 @@
     width: 14.444vw
     height: 14.444vw
   .box
+    text-align: center
     display: flex
     flex-direction: column
     justify-content: center
     align-items: center
+    width: 220px
   .six
     text-align: center
 
@@ -55,6 +57,13 @@
     &__h3
       margin-top: 8px
       @include text(400,20px,24px,#fff)
+    &__title
+      position: absolute
+      left: 50%
+      top: 50%
+      text-align: center
+      transform: translate(-50%,-50%)
+      @include text(800,20px,120%,#fff)
 
   .row
     display: flex

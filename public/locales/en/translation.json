@@ -1,6 +1,135 @@
 {
   "header" : {
-    "login" : "Login",
-    "signUp" : "Sign up"
+    "login" : "Log in",
+    "signUp" : "Registration",
+    "text" : "July 29 2023 – August 1 2023 Issyk-Kul EXPO, Cholpon-Ata city",
+    "about" : "ABOUT EXPO",
+    "Members" : " Members",
+    "Visitors" : "Visitors",
+    "Partners" : "Partners",
+    "MEDIA" : "MEDIA",
+    "News": " News",
+    "ticket" : "Buy a ticket"
+  },
+  "firstSection": {
+    "text": "Welcome to Halal Investment and Trade Expo 2023, one of the world's most prestigious halal investment and trade events! Join us to discover new opportunities in the global halal economy and strengthen relationships in the international business and investor community.",
+    "counter": "HIT EXPO begins:",
+    "time": "July 29 2023",
+    "Participants": "Participants are up to date:",
+    "Participate": "Participate"
+  },
+  "aboutSection": {
+    "text": "Halal Investment and Trade Expo 2023 is the largest exhibition of halal investment and infrastructure projects in Kyrgyzstan, held as part of the development of international trade relations and exports. The event brings together professionals from different sectors, demonstrates the latest trends and innovations, and provides a platform for interaction between exhibitors and visitors. The exhibition includes seminars, meetings and cultural events, as well as a special section for Halal industry products.\nIn the future we aim to make Halal Investment and Trade Expo the largest halal platform in Central Asia and CIS, and to establish stable relations with the countries of the Islamic world.",
+    "Exhibition": "Exhibition goal",
+    "Assistance": "Assistance to the development of the economy of Central Asian countries, the formation of the halal industry in the countries of the region and assistance to entrepreneurs in the presentation and implementation of their business projects according to Islamic principles"
+  },
+  "taskSection": {
+    "title":"Main issues of Halal Investment and Trade Expo 2023",
+    "text1": "Create a platform for entrepreneurs to present their own projects and products",
+    "text2": "Attract the attention of investors interested in financing halal industry and business projects in accordance with Islamic principles;",
+    "text3": "Open up new markets for foreign partners and investors interested in trade and investment in halal products and services in Kyrgyzstan and other Central Asian countries;",
+    "text4": "Distribute high quality standards and certification of halal products and services to increase the confidence of buyers and investors;",
+    "text5": "To increase the awareness of guests and the public about investment and trade opportunities in the halal industry, as well as to provide information support for new trends and developments in this industry through the annual large-scale event HIT Expo.",
+    "text6": "Assistance in strengthening international relations, providing a platform for the exchange of experience and knowledge between participants, the development of business links and partnerships between producers and buyers from different countries and regions."
+  },
+  "startSection": {
+    "title":"Learn more about the Expo zones",
+    "text": "In this block, you'll find details about the zones available at Halal Investment and Trade Expo 2023. Find out what to expect in each of these zones and how they can contribute to your Expo experience."
+  },
+  "zoneSection": {
+    "tradeZone": {
+      "li": ["4 types of exhibition stands", "Ethno Style","Distribution by industry sectors","Open access to all areas","Acquaintance with peoples' cultures.","Communication with business representatives from other countries"],
+      "time": "Days: 29-30 July",
+      "name": "Trade Zone",
+      "participant": "1000+ участников",
+      "btn": "Read more"
+    },
+    "investZone": {
+      "li": ["A platform for project presentations", "Expert Consultation","Strategy Zone","Public access to all areas", "Opportunity to implement projects", "Investments from $100,000"],
+      "time": "Days: 29-30 July",
+      "name": "Invest Zone",
+      "participant": "50+ бизнес идей",
+      "btn": "Read more"
+
+    },
+    "fashionZone": {
+      "li": ["Demonstration of Muslim fashion", "Realization of presented models","Presentation of exclusive models","Participation in HIT EXPO AWARDS","Fully equipped dressing room", "Professional photo session"],
+      "time": "Days: 29-30 July",
+      "name": "Fashion Zone",
+      "participant": "30+ участников",
+      "btn": "Read more"
+    },
+    "foodZone": {
+      "li": ["Participation in HIT EXPO AWARDS", "Presentation of original dishes","Food tasting","Expert opinion in HoReCa","Opportunity to obtain certification from the Halal Center SFDA"],
+      "time": "Days: 29-30 July",
+      "name": "Food Zone",
+      "participant": "50+ участников",
+      "btn": "Read more"
+    },
+    "nationalZone": {
+      "li": ["Presenting the cultures of the peoples", "National games","Participation in HIT EXPO AWARDS","Opportunity to set up a unique stand ","Horseriding","Sport events"],
+      "time": "Days: 29-30 July",
+      "name": "National Attributes Zone",
+      "participant": "6 стран",
+      "btn": "Read more"
+    }
+
+
+  },
+  "opportunitySection": {
+    "title": "Opportunity to meet with:",
+    "Government": "Government representatives",
+    "Scientific": "The scientific community",
+    "Politicians": "Politicians,",
+    "Consumers": "Consumers",
+    "Investors": "Investors",
+    "Retailers": "Retailers and Wholesalers",
+    "Innovators": "Innovators",
+    "Opinion": "Opinion leaders",
+    "Manufacturers": "Manufacturers",
+    "Buyers": "Buyers",
+    "Distributors": "Distributors"
+  },
+  "sponsorsPage": {
+    "title": "SPONSORSHIP",
+    "text": "For the successful organization of Halal Investment and Trade Expo 2023, the organizers received the support of many large companies, which became its sponsors. They have made a significant contribution to the development of the halal industry in Kyrgyzstan and Central Asian countries, and supported the creation of an international platform for investors, entrepreneurs and manufacturers.We thank our sponsors for their support and are confident that their participation in the exhibition will lead to successful results and will be an important step in the development of halal business.",
+    "title1": "PARTICIPATION: КАК ВЫ МОЖЕТЕ ПОВЫСИТЬ ЭФФЕКТИВНОСТЬ СВОЕГО УЧАСТИЯ?",
+    "text1": "Participants using sponsorship opportunities get an ability to effectively present themselves to a wide audience, both during the event and before it begins. Sponsor status enhances the marketing effect of participation and provides companies with additional opportunities for market promotion.Advertising opportunities included in the sponsorship packages are carefully selected to provide maximum coverage of the target audience and inform about the company and its participation in the exhibition with the help of various communication channels.",
+    "title2": "USE THE COMMERCIAL POTENTIAL OF THE EXHIBITION:",
+    "li1": "- Improve your company's competitiveness in the market",
+    "li2": "- Differentiate yourself from your competitors and give yourself an advantage",
+    "li3": "- Increase direct sales for your company",
+    "li4": "- Enhance your brand reputation ",
+    "li5": "- Raise your company's status in the market",
+    "li6": "- Give your company a competitive advantage",
+    "li7": "- Expand your customer base and attract more customers",
+    "li8": "- Raise awareness of your company and its achievements",
+    "li9": "- Stimulate the growth of your business and increase your profits",
+    "li10": "- Strengthen the confidence of your customers in your company and its products",
+    "Benefits": "Benefits of Sponsorship",
+    "EdgeCard": {
+      "Recognition": {
+        "h2": "Recognition",
+        "p": "As a sponsor, you'll gain a wide audience of businesses, investors, manufacturers, and others interested in the halal industry."
+      },
+      "Brand": {
+        "h2": "Brand promotion",
+        "p": "Participating as a sponsor gives you the opportunity to expand your audience and promote your brand as a leading player in halal products and services."
+      },
+      "Networking": {
+        "h2": "Networking opportunities",
+        "p": "Networking opportunity. Our event is a unique opportunity to meet and network with key players in the halal industry, including producers, distributors. As well as to present investment projects to investors from the Arab world."
+      },
+      "Getting": {
+        "h2": "Getting exclusive benefits",
+        "p": "As a sponsor you can get exclusive benefits such as having your logo displayed on the event materials, exhibiting your products and services on the main stage and more."
+      },
+      "Supporting": {
+        "h2": "Supporting the development of the Halal industry",
+        "p": "Participating as a sponsor will help develop the halal industry in the region and support the growing demand for halal products and services."
+      }
+    }
   }
 }
+
+

@@ -5,7 +5,8 @@ import {PersistGate} from "redux-persist/integration/react";
 import store, {persist} from "./redux/store";
 import Context from "./Context";
 import {Provider} from "react-redux";
-import "./i18next/i18next"
+import './i18n'
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <Provider store={store}>

@@ -4,13 +4,14 @@ import './zoneCardSmall.sass'
 import {HiOutlineArrowRight} from "react-icons/hi"
 
 
-const ZoneSection = ({item}) => {
+const ZoneSection = ({item,img}) => {
+    console.log(item)
     return (
         <div className={'zona'}>
             <div className="zona__container container">
                 <div className="zona__wrapper">
                     <div className="zona__pic">
-                        <img src={item.pic} className={'zona__img'} alt=""/>
+                        <img  className={'zona__img'} src={img} alt=""/>
                     </div>
                     <div className="zona__box">
                         <h2 className="zona__h2">{item.name}</h2>
@@ -55,13 +56,12 @@ const ZoneSection = ({item}) => {
                         </div>
                         <ul className="zona__list">
                             {item.li.map((item,idx)=>(
-
                                 <li key={idx} className="zona__li"><div className={'zona__circle'}>{idx+1}</div>{item}</li>
                             ))}
 
                         </ul>
                         <div className="zona__btn">
-                            <span className="zona__click">Подробнее</span>
+                            <span className="zona__click">{item.btn}</span>
                             <HiOutlineArrowRight color={'#ffffff'}/>
                         </div>
                     </div>

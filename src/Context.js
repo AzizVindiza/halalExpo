@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import {createContext} from "react";
-import {useTranslation} from "react-i18next";
 export  const CustomContext = createContext()
 const Context = (props) => {
     const [burger,setBurger] = useState(false)
@@ -18,7 +17,6 @@ const Context = (props) => {
     const [food,setFood] = useState('') // select food
     const [checkBox,setCheckBox] = useState('') // getCheckbox
     const [request,setRequest] = useState(false) //  open request
-    const {t,i18n} = useTranslation()
     const [demo,setDemo] = useState('')
     const [isActiveHamburger, setActiveHamburger] = useState(false); // open and close hamburger
     const [isActiveHamburgerMenu, setActiveHamburgerMenu] = useState(false); //open burger menu
@@ -29,7 +27,7 @@ const Context = (props) => {
         role,setRole,close,setClose,stake,setStake,branch,setBranch,login,setLogin,passwordShown,
         setPasswordShown,
         passwordShown2, setPasswordShown2,
-        value,setValue,burger,setBurger,t,i18n,members,setMembers,fashion,setFashion,food,setFood
+        value,setValue,burger,setBurger,members,setMembers,fashion,setFashion,food,setFood
         ,checkBox,setCheckBox,request,setRequest,demo,setDemo,isActiveHamburger,setActiveHamburger,isActiveHamburgerMenu,
         setActiveHamburgerMenu,openModal,setOpenModal
     }

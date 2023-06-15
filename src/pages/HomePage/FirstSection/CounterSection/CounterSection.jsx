@@ -1,6 +1,10 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useContext, useEffect, useRef, useState} from 'react';
 import "./counterSection.sass"
+import {CustomContext} from "../../../../Context";
+import {useTranslation} from "react-i18next";
 const CounterSection = () => {
+    const {t} = useTranslation()
+
     const [timerDays,setTimerDays] = useState("00")
     const [timerHours,setTimerHours] = useState("00")
     const [timerMinutes,setTimerMinutes] = useState("00")
@@ -39,7 +43,7 @@ const CounterSection = () => {
     })
     return (
         <section className={'counterSection'}>
-            <h2 className={'counterSection__h2'}>До начало HIT EXPO 2023</h2>
+            <h2 className={'counterSection__h2'}>{t("firstSection.counter")}</h2>
             <div className="counterSection__wrapper">
                 <div className="counterSection__num">
                     <p className="counterSection__time">{timerDays < 10 ? "0" + timerDays : timerDays}</p>
@@ -62,7 +66,7 @@ const CounterSection = () => {
                     <p className="counterSection__txt">секунд</p>
                 </div>
             </div>
-            <h3 className="counterSection__h3">29 июля 2023</h3>
+            <h3 className="counterSection__h3">{t("firstSection.time")}</h3>
         </section>
     );
 };
