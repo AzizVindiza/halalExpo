@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from 'react';
+import React, {useContext} from 'react';
 import "./rowSection.sass"
 import {CustomContext} from "../../../Context";
 import LoginForm from "../../../components/LoginForm/LoginForm";
@@ -8,14 +8,11 @@ import DemoForm from "../../../components/DemoRegistraion/DemoForm/DemoForm";
 
 
 const RowSection = () => {
-   const [language,setLanguage] = useState('ru')
+
     const {close, setClose,setLogin,login,t,i18n,request} = useContext(CustomContext)
-    useEffect(() => {
-        i18n.changeLanguage(language)
-    },[])
-    useEffect(() => {
-            i18n.changeLanguage(language)
-    },[language])
+    const  changeLanguages = (language) => {
+        // i18n.changeLanguage(language)
+    }
 
 
 
@@ -29,8 +26,8 @@ const RowSection = () => {
                         <button onClick={() => setClose(true)} className={'rowSection__reg'}>{t("header.login")}</button>
                     </div>
                     <div className="rowSection__change">
-                        <button onClick={() => setLanguage('ru')} className={`rowSection__lang ${i18n.language === "ru" ? 'rowSection__lang_active' : "" }`}>RU</button>
-                        <button onClick={() => setLanguage('en')} className={`rowSection__lang ${i18n.language === "en" ?  'rowSection__lang_active' : ""}`}>EN</button>
+                        <button onClick={() => changeLanguages('ru')} className={`rowSection__lang ${i18n.language === "ru" ? 'rowSection__lang_active' : "" }`}>RU</button>
+                        <button onClick={() => changeLanguages('en')} className={`rowSection__lang ${i18n.language === "en" ?  'rowSection__lang_active' : ""}`}>EN</button>
                     </div>
                 </div>
 
