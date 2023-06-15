@@ -38,17 +38,10 @@
   },
   "zoneSection": {
     "tradeZone": {
-<<<<<<< HEAD
-      "li": ["4 types of exhibition stands", "Ethno Style"],
-      "time": "bvhg",
-      "name": "tradezone"
-=======
       "li": ["4 types of exhibition stands", "Ethno Style","Distribution by industry sectors","Open access to all areas","Acquaintance with peoples' cultures.","Communication with business representatives from other countries"],
       "time": "Days: 29-30 July",
       "name": "TradeZone",
       "participant": "1000+ участников"
->>>>>>> a13b80d91af40f7d4898babf1493cc57cc62ac50
-
     },
     "investZone": {
       "li": ["A platform for project presentations", "Expert Consultation","Strategy Zone","Public access to all areas", "Opportunity to implement projects", "Investments from $100,000"],
