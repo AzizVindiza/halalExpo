@@ -37,30 +37,40 @@
     "text": "In this block, you'll find details about the zones available at Halal Investment and Trade Expo 2023. Find out what to expect in each of these zones and how they can contribute to your Expo experience."
   },
   "zoneSection": {
-
-    "investZone": [
-      "A platform for project presentations",
-      "Expert Consultation",
-      "Strategy Zone",
-      "Public access to all areas",
-      "Opportunity to implement projects",
-      "Investments from $100,000"
-    ],
-    "fashionZone": {
-      "li1": "Demonstration of Muslim fashion",
-      "li2": "Realization of presented models",
-      "li3": "Presentation of exclusive models",
-      "li4": "Participation in HIT EXPO AWARDS",
-      "li5": "Fully equipped dressing room",
-      "li6": "Professional photo session"
-    },
     "tradeZone": {
-      "li": ["4 types of exhibition stands", "Ethno Style"],
-      "time": "",
-      "name": "tradezone"
+      "li": ["4 types of exhibition stands", "Ethno Style","Distribution by industry sectors","Open access to all areas","Acquaintance with peoples' cultures.","Communication with business representatives from other countries"],
+      "time": "Days: 29-30 July",
+      "name": "TradeZone",
+      "participant": "1000+ участников"
 
+    },
+    "investZone": {
+      "li": ["A platform for project presentations", "Expert Consultation","Strategy Zone","Public access to all areas", "Opportunity to implement projects", "Investments from $100,000"],
+      "time": "Days: 29-30 July",
+      "name": "InvestZone",
+      "participant": "50+ бизнес идей"
 
+    },
+    "fashionZone": {
+      "li": ["Demonstration of Muslim fashion", "Realization of presented models","Presentation of exclusive models","Participation in HIT EXPO AWARDS","Fully equipped dressing room", "Professional photo session"],
+      "time": "Days: 29-30 July",
+      "name": "InvestZone",
+      "participant": "30+ участников"
+    },
+    "foodZone": {
+      "li": ["Participation in HIT EXPO AWARDS", "Presentation of original dishes","Food tasting","Expert opinion in HoReCa","Opportunity to obtain certification from the Halal Center SFDA"],
+      "time": "Days: 29-30 July",
+      "name": "InvestZone",
+      "participant": "50+ участников"
+    },
+    "National": {
+      "li": ["Presenting the cultures of the peoples", "National games","Participation in HIT EXPO AWARDS","Opportunity to set up a unique stand ","Horseriding","Sport events"],
+      "time": "Days: 29-30 July",
+      "name": "InvestZone",
+      "participant": "6 стран"
     }
+
+
   },
   "opportunitySection": {
     "title": "Opportunity to meet with:",
@@ -114,15 +124,8 @@
         "h2": "Supporting the development of the Halal industry",
         "p": "Participating as a sponsor will help develop the halal industry in the region and support the growing demand for halal products and services."
       }
-
     }
-
-
-
-
   }
-
-
-  }
+}
 
 
