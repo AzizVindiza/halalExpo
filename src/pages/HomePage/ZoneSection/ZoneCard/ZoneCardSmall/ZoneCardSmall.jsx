@@ -51,7 +51,7 @@ const ZoneSection = ({item,img}) => {
                                     </svg>
 
                                 </div>
-                                <h3 className="zona__h3"></h3>
+                                <h3 className="zona__h3">{item.participant}</h3>
                             </div>
                         </div>
                         <ul className="zona__list">
@@ -61,7 +61,7 @@ const ZoneSection = ({item,img}) => {
 
                         </ul>
                         <div className="zona__btn">
-                            <span className="zona__click">Подробнее</span>
+                            <span className="zona__click">{item.btn}</span>
                             <HiOutlineArrowRight color={'#ffffff'}/>
                         </div>
                     </div>

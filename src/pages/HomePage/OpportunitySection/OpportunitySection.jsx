@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import './OpportunitySection.sass'
 import bg from './opportunity__bg.svg'
 import bg393 from './opportunity__bg339.svg'
-import six from './six.svg'
+import six from "./opportunitySvg/center.svg"
 import img from './box__img.svg'
 
 import people from './opportunitySvg/people.svg'
