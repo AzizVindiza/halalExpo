@@ -40,33 +40,38 @@
     "tradeZone": {
       "li": ["4 types of exhibition stands", "Ethno Style","Distribution by industry sectors","Open access to all areas","Acquaintance with peoples' cultures.","Communication with business representatives from other countries"],
       "time": "Days: 29-30 July",
-      "name": "TradeZone",
-      "participant": "1000+ участников"
+      "name": "Trade Zone",
+      "participant": "1000+ участников",
+      "btn": "Read more"
     },
     "investZone": {
       "li": ["A platform for project presentations", "Expert Consultation","Strategy Zone","Public access to all areas", "Opportunity to implement projects", "Investments from $100,000"],
       "time": "Days: 29-30 July",
-      "name": "InvestZone",
-      "participant": "50+ бизнес идей"
+      "name": "Invest Zone",
+      "participant": "50+ бизнес идей",
+      "btn": "Read more"
 
     },
     "fashionZone": {
       "li": ["Demonstration of Muslim fashion", "Realization of presented models","Presentation of exclusive models","Participation in HIT EXPO AWARDS","Fully equipped dressing room", "Professional photo session"],
       "time": "Days: 29-30 July",
-      "name": "InvestZone",
-      "participant": "30+ участников"
+      "name": "Fashion Zone",
+      "participant": "30+ участников",
+      "btn": "Read more"
     },
     "foodZone": {
       "li": ["Participation in HIT EXPO AWARDS", "Presentation of original dishes","Food tasting","Expert opinion in HoReCa","Opportunity to obtain certification from the Halal Center SFDA"],
       "time": "Days: 29-30 July",
-      "name": "FoodZone",
-      "participant": "50+ участников"
+      "name": "Food Zone",
+      "participant": "50+ участников",
+      "btn": "Read more"
     },
-    "national": {
+    "nationalZone": {
       "li": ["Presenting the cultures of the peoples", "National games","Participation in HIT EXPO AWARDS","Opportunity to set up a unique stand ","Horseriding","Sport events"],
       "time": "Days: 29-30 July",
       "name": "National Attributes Zone",
-      "participant": "6 стран"
+      "participant": "6 стран",
+      "btn": "Read more"
     }
 
 
