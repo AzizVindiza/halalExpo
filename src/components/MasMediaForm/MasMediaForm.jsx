@@ -48,7 +48,6 @@ const MasMediaForm = () => {
                     <RegistrationInput type={'text'} name={'phone'} title={'Рабочий телефон'}/>
                     <RegistrationInput type={'text'} name={'emailMas'} title={'Email'}/>
                     <SocialSection/>
-                    <EmailForm/>
                 </div>
             </div>
         </div>

@@ -16,6 +16,7 @@ import RegistrationSelectFashion from "./RegistrationSelectFashion/RegistrationS
 import RegistrationSelectFood from "./RegistrationSelectFood/RegistrationSelectFood";
 import InvestorCheck from "../InvesntorCheck/InvestorCheck";
 import ChooseIndustry from "./ChooseIndustry/ChooseIndustry";
+import RegistrationUploadInput from "./RegistrationUploadInput/RegistrationUploadInput";
 
 const Registration = () => {
     const methods = useForm({mode: "onBlur"});
@@ -54,26 +55,21 @@ const Registration = () => {
                             when.
                         </p>
 
-                        <RegistrationInput type={"text"} title={"Имя"} name={"name"}/>
-                        <RegistrationInput type={"text"} title={"Фамилия"} name={"lastname"}/>
-                        <RegistrationInput type={"text"} title={"Отчество"} name={"middlename"}/>
-                        <RegistrationInput type={"email"} title={"Email"} name={"email"}/>
+                        <RegistrationInput type={"text"} title={"ФИО"} name={"name"}/>
+
                         <RegistrationInput type={"text"} title={"Страна"} name={"country"}/>
                         <RegistrationInput type={"text"} title={"Город"} name={"city"}/>
-                        <RegistrationInput type={"date"} title={"Дата рождения"} name={"dateofbirth"}/>
-                        <RegistrationPhoneNumber name={"telephone"}/>
-                        <RegistrationPhoneNumber name={"whatsapp"}/>
-                        <CheckBox name={'checkbox2'}/>
-                        <RegistrationSelect title={"В качестве кого вы хотите посетить HIT EXPO?*"} name={"role"}/>
+                        <RegistrationInput type={"date"} title={"Дата рождения"} name={"birth"}/>
+                        <RegistrationUploadInput name={"123"} title={"Загрузите паспорт с лицевой стороны*"}/>
+                        <RegistrationUploadInput name={"123"} title={"Загрузите паспорт с обратной стороны*"}/>
+                        <RegistrationUploadInput name={"123"} title={"Сделайте селфи с паспортом*"}/>
+                        <RegistrationPhoneNumber title={"Телефон"} name={"workPhone"}/>
+                        <RegistrationPhoneNumber title={"WhatsApp"} name={"personalPhone"}/>
+                        <CheckBox/>
+                        <RegistrationSelect title={"В качестве кого вы хотите посетить HIT EXPO?*"} name={"participant_sector"}/>
                         {
                             role === "Посетитель" ?
-                                <>
-                                    <RegistrationInput type={'email'} name={'email_second'} title={'Элктронная почта'}/>
-                                    <RegistrationInput type={'password'} name={'password_second'}
-                                                       title={'Придумайте пароль*'}/>
-                                    <RegistrationInput type={'password'} name={'confirm_password'}
-                                                       title={'Подтвердите пароль*'}/>
-                                </>
+                                ""
                                 : role === "Участник" ?
                                     <>
                                         <RegistrationSelectMember
@@ -96,13 +92,12 @@ const Registration = () => {
                                         }
                                         <ParticipantForm/>
                                     </>
-                                    : role === "СМИ" ? <MasMediaForm/> : role === "Эксперта" ?
-                                        <>
-                                            <EmailForm/>
-                                        </> : role === "Представитель государственных органов" ? <EmailForm/> : ""
+                                    : role === "СМИ" ? <MasMediaForm/> : role === "Эксперта" ? ""
+                                        : role === "Представитель государственных органов" ? <RegistrationInput type={"text"} title={"Должность"} name={"position_main"}/> : ""
 
 
                         }
+                        <RegistrationInput type={"email"} title={"Email"} name={"email"}/>
                         <Btn text={"Зарегистрироваться"} type={"submit"}/>{/*главная кнопка отправки type submit*/}
                     </form>
                 </div>
