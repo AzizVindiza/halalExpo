@@ -8,22 +8,22 @@ import arr2 from "../../../utils/nav2";
 import {CustomContext} from "../../../Context";
 const Nav = () => {
     const { setActiveHamburger} = useContext(CustomContext)
-    const {isActiveHamburgerMenu, setActiveHamburgerMenu} = useContext(CustomContext)
+    const {isActiveHamburgerMenu, setActiveHamburgerMenu,t} = useContext(CustomContext)
     return (
         <nav className="nav">
             <div className="container nav__container">
 
-                <Dropdown  txt={"Об ЭКСПО"} arr={arr}/>
-                <Dropdown  txt={"Участникам"} arr={arr1}/>
-                <Dropdown  txt={"Посетителям"} arr={arr2}/>
-                <NavLink onClick={() => setActiveHamburger(false)}  className={'nav__link'} to={'partner'}>Партнеры</NavLink>
-                <NavLink onClick={() => setActiveHamburger(false)}  className={'nav__link'} to={'mass'}>СМИ</NavLink>
+                <Dropdown  txt={t("header.about")} arr={arr}/>
+                <Dropdown  txt={t("header.Members")} arr={arr1}/>
+                <Dropdown  txt={t("header.Visitors")} arr={arr2}/>
+                <NavLink onClick={() => setActiveHamburger(false)}  className={'nav__link'} to={'partner'}>{t("header.Partners")}</NavLink>
+                <NavLink onClick={() => setActiveHamburger(false)}  className={'nav__link'} to={'mass'}>{t("header.MEDIA")}</NavLink>
                 <NavLink onClick={() => setActiveHamburger(false)}  className={'nav__link'} to={'meet'}>B2B</NavLink>
-                <NavLink onClick={() => setActiveHamburger(false)}  className={'nav__link'} to={'news'}>Новости</NavLink>
+                <NavLink onClick={() => setActiveHamburger(false)}  className={'nav__link'} to={'news'}>{t("header.News")}</NavLink>
                 <NavLink onClick={() => setActiveHamburger(false)}  className={'nav__link'} to={'question'}>FQA</NavLink>
                 <NavLink onClick={() => setActiveHamburger(false)}  className={'nav__link nav__btn  '} to={''}>
                     <button type="button"   className={'nav__btn-second'}>
-                        <span className={'nav__span'}>Купить Билет</span>
+                        <span className={'nav__span'}>{t("header.ticket")}</span>
                     </button>
                 </NavLink>
             </div>
