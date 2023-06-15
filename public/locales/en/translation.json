@@ -44,6 +44,22 @@
       "li4": "Open access to all areas",
       "li5": "Acquaintance with peoples' cultures.",
       "li6": "Communication with business representatives from other countries."
+    },
+    "investZone": [
+      "A platform for project presentations",
+      "Expert Consultation",
+      "Strategy Zone",
+      "Public access to all areas",
+      "Opportunity to implement projects",
+      "Investments from $100,000"
+    ],
+    "fashionZone": {
+      "li1": "Demonstration of Muslim fashion",
+      "li2": "Realization of presented models",
+      "li3": "Presentation of exclusive models",
+      "li4": "Participation in HIT EXPO AWARDS",
+      "li5": "Fully equipped dressing room",
+      "li6": "Professional photo session"
     }
   }
 
