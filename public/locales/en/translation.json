@@ -91,7 +91,34 @@
     "li7": "- Expand your customer base and attract more customers",
     "li8": "- Raise awareness of your company and its achievements",
     "li9": "- Stimulate the growth of your business and increase your profits",
-    "li10": "- Strengthen the confidence of your customers in your company and its products"
+    "li10": "- Strengthen the confidence of your customers in your company and its products",
+    "Benefits": "Benefits of Sponsorship",
+    "EdgeCard": {
+      "Recognition": {
+        "h2": "Recognition",
+        "p": "As a sponsor, you'll gain a wide audience of businesses, investors, manufacturers, and others interested in the halal industry."
+      },
+      "Brand": {
+        "h2": "Brand promotion",
+        "p": "Participating as a sponsor gives you the opportunity to expand your audience and promote your brand as a leading player in halal products and services."
+      },
+      "Networking": {
+        "h2": "Networking opportunities",
+        "p": "Networking opportunity. Our event is a unique opportunity to meet and network with key players in the halal industry, including producers, distributors. As well as to present investment projects to investors from the Arab world."
+      },
+      "Getting": {
+        "h2": "Getting exclusive benefits",
+        "p": "As a sponsor you can get exclusive benefits such as having your logo displayed on the event materials, exhibiting your products and services on the main stage and more."
+      },
+      "Supporting": {
+        "h2": "Supporting the development of the Halal industry",
+        "p": "Participating as a sponsor will help develop the halal industry in the region and support the growing demand for halal products and services."
+      }
+
+    }
+
+
+
 
   }
 
