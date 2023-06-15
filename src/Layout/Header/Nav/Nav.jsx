@@ -6,9 +6,10 @@ import arr from "../../../utils/nav";
 import arr1 from "../../../utils/nav1";
 import arr2 from "../../../utils/nav2";
 import {CustomContext} from "../../../Context";
+import {useTranslation} from "react-i18next";
 const Nav = () => {
-    const { setActiveHamburger} = useContext(CustomContext)
-    const {isActiveHamburgerMenu, setActiveHamburgerMenu,t} = useContext(CustomContext)
+    const {isActiveHamburgerMenu,setActiveHamburger, setActiveHamburgerMenu} = useContext(CustomContext)
+    const {t} = useTranslation()
     return (
         <nav className="nav">
             <div className="container nav__container">

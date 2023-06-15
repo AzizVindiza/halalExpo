@@ -6,6 +6,7 @@ import food from "./foodZone.png"
 import pic from './Rectangle 28.png'
 
 const ZoneCard = () => {
+
     return (
         <section className={"zoneCard"}>
          <ZoneCardSmall item={{pic:pic, name:"Trade Zone",time:"Дни: 29-30 июля",participant:"1000+ участников",li:["4 вида стендов","Этно стиль","Распределение по отраслям","Открытый доступ ко всем зонам","Знакомство с культурами народов","Коммуникации с представителями бизнеса других стран"]}}/>

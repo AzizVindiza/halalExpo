@@ -8,8 +8,10 @@ import svg5 from "./svg5.png"
 import svg6 from "./svg6.png"
 import {Link} from "react-router-dom";
 import {CustomContext} from "../../../Context";
+import {useTranslation} from "react-i18next";
 const StartSection = () => {
-    const {t} = useContext(CustomContext)
+    const {t} = useTranslation()
+
     return (
         <section className="start">
             <div className="container start__container">

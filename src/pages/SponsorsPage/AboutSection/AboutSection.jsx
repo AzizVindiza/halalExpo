@@ -2,8 +2,11 @@ import React, {useContext} from 'react';
 import "./aboutSection.sass"
 import Btn from "../../../components/Btn/Btn";
 import {CustomContext} from "../../../Context";
+import {useTranslation} from "react-i18next";
 const AboutSection = () => {
     const {request,setRequest} = useContext(CustomContext)
+    const {t} = useTranslation()
+
     return (
         <section  className={'aboutSection'}>
             <div className="aboutSection__container container">

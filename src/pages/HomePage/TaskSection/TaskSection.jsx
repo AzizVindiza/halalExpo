@@ -4,6 +4,7 @@ import svg from './task__svg.svg'
 import TaskCard from "./TaskCard/TaskCard";
 import {motion} from "framer-motion";
 import {CustomContext} from "../../../Context";
+import {useTranslation} from "react-i18next";
 
 
 
@@ -79,7 +80,8 @@ const cartMotion4 = {
 
 }
 const TaskSection = () => {
-    const {t} = useContext((CustomContext))
+    const {t} = useTranslation()
+
     return (
         <motion.section
             transition={{ duration: 0.4 }}
@@ -96,7 +98,7 @@ const TaskSection = () => {
             </div>
             <div className="container task__container">
                 <div className="task__title">
-                    <h2 className="task__h2">{t("taskSection")}</h2>
+                    <h2 className="task__h2">{t("taskSection.title")}</h2>
                 </div>
                 <div className="task__wrapper">
                     <motion.div  custom={1} variants={textMotion}>

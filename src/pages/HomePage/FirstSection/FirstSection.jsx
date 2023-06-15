@@ -10,6 +10,7 @@ import Btn from "../../../components/Btn/Btn";
 import {motion} from "framer-motion"
 import svg from './Vector 140.svg'
 import {CustomContext} from "../../../Context";
+import {useTranslation} from "react-i18next";
 
 
 const textMotion = {
@@ -29,7 +30,9 @@ const textMotion = {
 
 const FirstSection = () => {
 
-    const {setRequest, request,t} = useContext(CustomContext)
+    const {setRequest, request} = useContext(CustomContext)
+    const {t} = useTranslation()
+
     const data = new Date()
     const time = data.toLocaleTimeString()
     return (

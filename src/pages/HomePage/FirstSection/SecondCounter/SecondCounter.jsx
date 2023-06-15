@@ -3,8 +3,10 @@ import React, {useContext, useEffect, useRef, useState} from 'react';
 import {AiOutlineArrowRight} from "react-icons/ai"
 import "./secondCounter.sass"
 import {CustomContext} from "../../../../Context";
+import {useTranslation} from "react-i18next";
 const SecondCounter = () => {
-  const {t} = useContext(CustomContext)
+    const {t} = useTranslation()
+
     return (
         <section className={'secondCounter'}>
             <h2 className={'secondCounter__h2'}>{t("firstSection.Participants")}</h2>

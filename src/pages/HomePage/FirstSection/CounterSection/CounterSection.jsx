@@ -1,8 +1,10 @@
 import React, {useContext, useEffect, useRef, useState} from 'react';
 import "./counterSection.sass"
 import {CustomContext} from "../../../../Context";
+import {useTranslation} from "react-i18next";
 const CounterSection = () => {
-    const {t} = useContext(CustomContext)
+    const {t} = useTranslation()
+
     const [timerDays,setTimerDays] = useState("00")
     const [timerHours,setTimerHours] = useState("00")
     const [timerMinutes,setTimerMinutes] = useState("00")

@@ -22,7 +22,7 @@ import {useTranslation} from "react-i18next";
 
 
 const OpportunitySection = () => {
-    const {t,i18n} = useTranslation()
+    const {t} = useTranslation()
     return (
         <section className="opportunity">
             <div className="opportunity__container container_fluid">
@@ -40,7 +40,7 @@ const OpportunitySection = () => {
                                 <img src={buy} alt="box img"/>
                             </div>
                         </div>
-                        <h3 className="six__h3">{t("")}</h3>
+                        <h3 className="six__h3">{t("opportunitySection.Buyers")}</h3>
                     </div>
                     <div className="box box__2">
                         <div className="six">
@@ -48,7 +48,7 @@ const OpportunitySection = () => {
                                 <img src={dis} alt="box img"/>
                             </div>
                         </div>
-                        <h3 className="six__h3">{t("")}</h3>
+                        <h3 className="six__h3">{t("opportunitySection.Distributors")}</h3>
                     </div>
                     <div className="box box__1">
                         <div className="six">
@@ -56,7 +56,7 @@ const OpportunitySection = () => {
                                 <img src={img} alt="box img"/>
                             </div>
                         </div>
-                        <h3 className="six__h3">{t("")}</h3>
+                        <h3 className="six__h3">{t("opportunitySection.Government")}</h3>
                     </div>
                     <div className="box box__2">
                         <div className="six">
@@ -64,7 +64,7 @@ const OpportunitySection = () => {
                                 <img src={science} alt="box img"/>
                             </div>
                         </div>
-                        <h3 className="six__h3">{t("")}</h3>
+                        <h3 className="six__h3">{t("opportunitySection.Scientific")}</h3>
                     </div>
                     <div className="box">
                         <div className="six">
@@ -72,7 +72,7 @@ const OpportunitySection = () => {
                                 <img src={devel} alt="box img"/>
                             </div>
                         </div>
-                        <h3 className="six__h3">{t("")}</h3>
+                        <h3 className="six__h3">{t("opportunitySection.Politicians")}</h3>
                     </div>
 
                 </div>
@@ -83,7 +83,7 @@ const OpportunitySection = () => {
                                 <img src={manu} alt="box img"/>
                             </div>
                         </div>
-                        <h3 className="six__h3">{t("")}</h3>
+                        <h3 className="six__h3">{t("opportunitySection.Consumers")}</h3>
                     </div>
                     <div className="box box__1">
                         <div className="six">
@@ -91,7 +91,7 @@ const OpportunitySection = () => {
                                 <img src={lider} alt="box img"/>
                             </div>
                         </div>
-                        <h3 className="six__h3">{t("")}</h3>
+                        <h3 className="six__h3">{t("opportunitySection.Opinion")}</h3>
                     </div>
                     <div className="box box__3">
                         <div className="six">
@@ -99,7 +99,7 @@ const OpportunitySection = () => {
                                 <img src={novator} alt="box img"/>
                             </div>
                         </div>
-                        <h3 className="six__h3">{t("")}</h3>
+                        <h3 className="six__h3">{t("opportunitySection.Innovators")}</h3>
                     </div>
                     <div className="box box__4">
                         <div className="six">
@@ -107,7 +107,7 @@ const OpportunitySection = () => {
                                 <img src={sales} alt="box img"/>
                             </div>
                         </div>
-                        <h3 className="six__h3">{t("")}</h3>
+                        <h3 className="six__h3">{t("opportunitySection.Retailers")}</h3>
                     </div>
                     <div className="box box__2">
                         <div className="six">
@@ -115,7 +115,7 @@ const OpportunitySection = () => {
                                 <img src={inv} alt="box img"/>
                             </div>
                         </div>
-                        <h3 className="six__h3">{t("")}</h3>
+                        <h3 className="six__h3">{t("opportunitySection.Innovators")}</h3>
                     </div>
                     <div className="box">
                         <div className="six">
@@ -123,12 +123,12 @@ const OpportunitySection = () => {
                                 <img src={people} alt="box img"/>
                             </div>
                         </div>
-                        <h3 className="six__h3">{t("")}</h3>
+                        <h3 className="six__h3">{t("opportunitySection.Consumers")}</h3>
                     </div>
                 </div>
                 <div className="six-blue">
                     <img src={six} alt="polygon"/>
-                    <p className="six__title">{t("")}</p>
+                    <p className="six__title">{t("opportunitySection.title")}</p>
                 </div>
 
             </div>

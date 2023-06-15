@@ -3,6 +3,7 @@ import './AboutSection.sass'
 import svg from './about__svg.svg'
 import {motion} from "framer-motion";
 import {CustomContext} from "../../../Context";
+import {useTranslation} from "react-i18next";
 
 const textMotion = {
     hidden: {
@@ -19,7 +20,8 @@ const textMotion = {
 
 }
 const AboutSection = () => {
-    const {t} = useContext(CustomContext)
+    const {t} = useTranslation()
+
     return (
         <motion.section viewport={{amount:0.2, once:true}} initial={"hidden"} whileInView={"visible"} className="about">
             <motion.div custom={1} variants={textMotion}   className="container_fluid about__container">

@@ -3,6 +3,7 @@ import "./TargetSection.sass"
 
 import {motion} from "framer-motion";
 import {CustomContext} from "../../../Context";
+import {useTranslation} from "react-i18next";
 
 
 const textMotion = {
@@ -48,7 +49,8 @@ const draw = {
     }
 };
 const TargetSection = () => {
-    const {t} = useContext(CustomContext)
+    const {t} = useTranslation()
+
     return (
         <motion.section  viewport={{once:true}} initial={"hidden"} whileInView={"visible"} className="target">
             <div className="target__container container">
