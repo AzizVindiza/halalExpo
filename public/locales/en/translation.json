@@ -63,4 +63,22 @@
     }
   }
 
+  },
+  "opportunitySection": {
+    "title": "Opportunity to meet with:",
+    "Government": "Government representatives",
+    "Scientific": "The scientific community",
+    "Politicians": "Politicians,",
+    "Consumers": "Consumers",
+    "Investors": "Investors",
+    "Retailers": "Retailers and Wholesalers",
+    "Innovators": "Innovators",
+    "Opinion": "Opinion leaders",
+    "Manufacturers": "Manufacturers",
+    "Buyers": "Buyers",
+    "Distributors": "Distributors"
+
+
+  }
+
 }
