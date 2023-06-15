@@ -60,13 +60,13 @@
     "foodZone": {
       "li": ["Participation in HIT EXPO AWARDS", "Presentation of original dishes","Food tasting","Expert opinion in HoReCa","Opportunity to obtain certification from the Halal Center SFDA"],
       "time": "Days: 29-30 July",
-      "name": "InvestZone",
+      "name": "FoodZone",
       "participant": "50+ участников"
     },
-    "National": {
+    "national": {
       "li": ["Presenting the cultures of the peoples", "National games","Participation in HIT EXPO AWARDS","Opportunity to set up a unique stand ","Horseriding","Sport events"],
       "time": "Days: 29-30 July",
-      "name": "InvestZone",
+      "name": "National Attributes Zone",
       "participant": "6 стран"
     }
 
