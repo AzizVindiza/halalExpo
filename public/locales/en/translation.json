@@ -53,7 +53,7 @@
       "li4": "Participation in HIT EXPO AWARDS",
       "li5": "Fully equipped dressing room",
       "li6": "Professional photo session"
-
+    },
     "tradeZone": {
       "li": ["4 types of exhibition stands", "Ethno Style"],
       "time": "",
@@ -61,8 +61,6 @@
 
 
     }
-  }
-
   },
   "opportunitySection": {
     "title": "Opportunity to meet with:",
@@ -77,8 +75,16 @@
     "Manufacturers": "Manufacturers",
     "Buyers": "Buyers",
     "Distributors": "Distributors"
+  },
+  "sponsorsPage": {
+    "title": "SPONSORSHIP",
+    "text": "For the successful organization of Halal Investment and Trade Expo 2023, the organizers received the support of many large companies, which became its sponsors. They have made a significant contribution to the development of the halal industry in Kyrgyzstan and Central Asian countries, and supported the creation of an international platform for investors, entrepreneurs and manufacturers.\n\nWe thank our sponsors for their support and are confident that their participation in the exhibition will lead to successful results and will be an important step in the development of halal business.",
+    "PARTICIPATION": "PARTICIPATION: КАК ВЫ МОЖЕТЕ ПОВЫСИТЬ ЭФФЕКТИВНОСТЬ СВОЕГО УЧАСТИЯ?"
 
 
   }
 
-}
+
+  }
+
+
