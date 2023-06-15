@@ -35,6 +35,16 @@
   "startSection": {
     "title":"Learn more about the Expo zones",
     "text": "In this block, you'll find details about the zones available at Halal Investment and Trade Expo 2023. Find out what to expect in each of these zones and how they can contribute to your Expo experience."
+  },
+  "zoneSection": {
+    "tradeZone": {
+      "li1": "4 types of exhibition stands",
+      "li2": "Ethno Style",
+      "li3": "Distribution by industry sectors",
+      "li4": "Open access to all areas",
+      "li5": "Acquaintance with peoples' cultures.",
+      "li6": "Communication with business representatives from other countries."
+    }
   }
 
 }
