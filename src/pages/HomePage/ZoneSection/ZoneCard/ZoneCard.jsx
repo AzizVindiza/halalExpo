@@ -7,7 +7,7 @@ import pic from './Rectangle 28.png'
 import {useTranslation} from "react-i18next";
 
 const ZoneCard = () => {
-    const {t,i18n} = useTranslation()
+    const {t} = useTranslation()
 
     return (
         <section className={"zoneCard"}>

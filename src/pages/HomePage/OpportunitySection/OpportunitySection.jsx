@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import './OpportunitySection.sass'
 import bg from './opportunity__bg.svg'
 import bg393 from './opportunity__bg339.svg'
@@ -15,7 +15,6 @@ import buy from './opportunitySvg/buyers.svg'
 import manu from './opportunitySvg/manufacture.svg'
 import science from './opportunitySvg/science.svg'
 import sales from './opportunitySvg/wholeSales.svg'
-import {CustomContext} from "../../../Context";
 import {useTranslation} from "react-i18next";
 
 

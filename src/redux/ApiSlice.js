@@ -13,10 +13,18 @@ export const apiSlice = createApi({
             })
 
         }),
+        addUser: builder.mutation({
+            query:(body)=>({
+                url:"registration/",
+                method:"POST",
+                body
+            })
+
+        }),
 
 
     })
 
 })
 
-export const {useAddPartnerMutation} = apiSlice
+export const {useAddPartnerMutation,useAddUserMutation} = apiSlice

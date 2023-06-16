@@ -1,9 +1,6 @@
-import React, {useState} from 'react';
+import React from 'react';
 import "./masmediaform.sass"
-import EmailForm from "../ParticipantForm/EmailForm/EmailForm";
 import SocialSection from "../SocialSection/SocialSection";
-
-import Btn from "../Btn/Btn";
 import {useForm} from "react-hook-form";
 import RegistrationInput from "../Registration/RegistrationInput/RegistrationInput";
 

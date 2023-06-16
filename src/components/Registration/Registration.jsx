@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import './Registration.sass'
-import {useForm, FormProvider, useFormContext} from "react-hook-form";
+import {useForm, FormProvider} from "react-hook-form";
 import {CustomContext} from "../../Context";
 import Btn from "../Btn/Btn";
 import RegistrationInput from "./RegistrationInput/RegistrationInput";
@@ -8,20 +8,23 @@ import RegistrationPhoneNumber from "./RegistrationPhoneNumber/RegistrationPhone
 import RegistrationSelect from "./RegistrationSelect/RegistrationSelect";
 import MasMediaForm from "../MasMediaForm/MasMediaForm";
 import ParticipantForm from "../ParticipantForm/ParticipantForm";
-import EmailForm from "../ParticipantForm/EmailForm/EmailForm";
 import CheckBox from "../CheckBox/CheckBox";
 import RegistrationSelectMember from "./RegistrationSelectMember/RegistrationSelectMember";
 import RegistrationSelectIndustry from "./RegistrationSelectIndustry/RegistrationSelectIndustry";
 import RegistrationSelectFashion from "./RegistrationSelectFashion/RegistrationSelectFashion";
 import RegistrationSelectFood from "./RegistrationSelectFood/RegistrationSelectFood";
-import InvestorCheck from "../InvesntorCheck/InvestorCheck";
 import ChooseIndustry from "./ChooseIndustry/ChooseIndustry";
 import RegistrationUploadInput from "./RegistrationUploadInput/RegistrationUploadInput";
+import {useAddUserMutation} from "../../redux/ApiSlice";
 
 const Registration = () => {
     const methods = useForm({mode: "onBlur"});
     // использую переменную methods чтобы передавать вложенным инпутам
-    const onSubmit = data => console.log(data);
+    const [addUser]= useAddUserMutation()
+    const onSubmit = data => {
+        addUser(data)
+        console.log(data)
+    };
     // функция при отправки формы
     const {setClose, role, members} = useContext(CustomContext)
     // вытаскиваю функцию setClose из контекста чтобы закрывать форму при клике на крестик
@@ -60,43 +63,43 @@ const Registration = () => {
                         <RegistrationInput type={"text"} title={"Страна"} name={"country"}/>
                         <RegistrationInput type={"text"} title={"Город"} name={"city"}/>
                         <RegistrationInput type={"date"} title={"Дата рождения"} name={"birth"}/>
-                        <RegistrationUploadInput name={"123"} title={"Загрузите паспорт с лицевой стороны*"}/>
-                        <RegistrationUploadInput name={"123"} title={"Загрузите паспорт с обратной стороны*"}/>
-                        <RegistrationUploadInput name={"123"} title={"Сделайте селфи с паспортом*"}/>
+                        <RegistrationUploadInput name={"image_id_one"} title={"Загрузите паспорт с лицевой стороны*"}/>
+                        <RegistrationUploadInput name={"image_id_two"} title={"Загрузите паспорт с обратной стороны*"}/>
+                        <RegistrationUploadInput name={"image_id_three"} title={"Сделайте селфи с паспортом*"}/>
                         <RegistrationPhoneNumber title={"Телефон"} name={"workPhone"}/>
                         <RegistrationPhoneNumber title={"WhatsApp"} name={"personalPhone"}/>
                         <CheckBox/>
                         <RegistrationSelect title={"В качестве кого вы хотите посетить HIT EXPO?*"} name={"participant_sector"}/>
-                        {
-                            role === "Посетитель" ?
-                                ""
-                                : role === "Участник" ?
-                                    <>
-                                        <RegistrationSelectMember
-                                            title={'Выберите сектор участия (с условиями участия каждого сектора можно ознакомится)'}
-                                            name={'members'}/>
-                                        {members === 'Trade' ?
-                                            <RegistrationSelectIndustry title={'Выберите отрасль'} name={'industry'}/>
-                                            :
-                                            members === "Fashion" ?
-                                                <RegistrationSelectFashion title={'Выберите направление'} name={'fashion'}/>
-                                                :
-                                                members === 'Food' ?
-                                                    <RegistrationSelectFood title={'Выберите направление'} name={'food'}/>
-                                                    :
-                                                    members === "Investment" ?
-                                                        <ChooseIndustry/>
+                        {/*{*/}
+                        {/*    role === "Посетитель" ?*/}
+                        {/*        ""*/}
+                        {/*        : role === "Участник" ?*/}
+                        {/*            <>*/}
+                        {/*                <RegistrationSelectMember*/}
+                        {/*                    title={'Выберите сектор участия (с условиями участия каждого сектора можно ознакомится)'}*/}
+                        {/*                    name={'members'}/>*/}
+                        {/*                {members === 'Trade' ?*/}
+                        {/*                    <RegistrationSelectIndustry title={'Выберите отрасль'} name={'industry'}/>*/}
+                        {/*                    :*/}
+                        {/*                    members === "Fashion" ?*/}
+                        {/*                        <RegistrationSelectFashion title={'Выберите направление'} name={'fashion'}/>*/}
+                        {/*                        :*/}
+                        {/*                        members === 'Food' ?*/}
+                        {/*                            <RegistrationSelectFood title={'Выберите направление'} name={'food'}/>*/}
+                        {/*                            :*/}
+                        {/*                            members === "Investment" ?*/}
+                        {/*                                <ChooseIndustry/>*/}
 
-                                                        : ""
+                        {/*                                : ""*/}
 
-                                        }
-                                        <ParticipantForm/>
-                                    </>
-                                    : role === "СМИ" ? <MasMediaForm/> : role === "Эксперта" ? ""
-                                        : role === "Представитель государственных органов" ? <RegistrationInput type={"text"} title={"Должность"} name={"position_main"}/> : ""
+                        {/*                }*/}
+                        {/*                <ParticipantForm/>*/}
+                        {/*            </>*/}
+                        {/*            : role === "СМИ" ? <MasMediaForm/> : role === "Эксперта" ? ""*/}
+                        {/*                : role === "Представитель государственных органов" ? <RegistrationInput type={"text"} title={"Должность"} name={"position_main"}/> : ""*/}
 
 
-                        }
+                        {/*}*/}
                         <RegistrationInput type={"email"} title={"Email"} name={"email"}/>
                         <Btn text={"Зарегистрироваться"} type={"submit"}/>{/*главная кнопка отправки type submit*/}
                     </form>
