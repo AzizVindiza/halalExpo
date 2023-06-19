@@ -11,6 +11,14 @@ import icon8 from './type__8.svg'
 import icon9 from './type__9.svg'
 import icon10 from './type__10.svg'
 import icon11 from './type__11.svg'
+import national from "./national.svg"
+import cars from "./cars.svg"
+import innovation from "./innovation.svg"
+import energy from "./energy.svg"
+import flowers from './flowers.svg'
+import special from "./special.svg"
+import cloth from "./clothes.svg"
+
 import bg from './type__bg.svg'
 import right from './right.png'
 import {motion} from "framer-motion";
@@ -80,54 +88,79 @@ import {motion} from "framer-motion";
             transion={{duration:0.6}}
             initial={"hidden"}
             whileInView={"visible"} className="type">
-            <div className="type__container container_fluid">
+            <div className="type__container container">
                 <div className="type__left">
                     <div className="type__cards">
                         <div className="type__card">
                             <img src={icon1} alt="type"/>
-                            <h3 className="type__h3">Производство</h3>
+                            <h3 className="type__h3">Машиностроение и автоматизация производства</h3>
                         </div>
                         <div className="type__card">
                             <img src={icon2} alt="type"/>
-                            <h3 className="type__h3">Строительство </h3>
+                            <h3 className="type__h3">Строительство  и недвижимость</h3>
                         </div>
                         <div className="type__card">
                             <img src={icon3} alt="type"/>
-                            <h3 className="type__h3">Инвестиции </h3>
+                            <h3 className="type__h3">Инвестиционные проекты </h3>
                         </div>
-                        <div className="type__card">
-                            <img src={icon4} alt="type"/>
-                            <h3 className="type__h3">Экопродукты</h3>
-                        </div>
+
                         <div className="type__card">
                             <img src={icon5} alt="type"/>
-                            <h3 className="type__h3">IT</h3>
-                        </div>
-                        <div className="type__card">
-                            <img src={icon6} alt="type"/>
-                            <h3 className="type__h3">Научная <br/>деятельность </h3>
+                            <h3 className="type__h3">Информационные технологии и программное обеспечение</h3>
                         </div>
                         <div className="type__card">
                             <img src={icon7} alt="type"/>
-                            <h3 className="type__h3">Фармацевтика и <br/>
-                                косметические товары</h3>
+                            <h3 className="type__h3">Медицинская и фармацевтическая промышленность</h3>
+                        </div>
+
+
+                        <div className="type__card">
+                            <img src={flowers} alt="type"/>
+                            <h3 className="type__h3">Пищевая и сельскохозяйственная промышленность</h3>
+                        </div>
+                        <div className="type__card">
+                            <img src={icon4} alt="type"/>
+                            <h3 className="type__h3">Экотовары</h3>
                         </div>
                         <div className="type__card">
                             <img src={icon8} alt="type"/>
-                            <h3 className="type__h3">Образование</h3>
+                            <h3 className="type__h3">Образовательные продукты и услуги</h3>
                         </div>
                         <div className="type__card">
                             <img src={icon9} alt="type"/>
-                            <h3 className="type__h3">Этно</h3>
+                            <h3 className="type__h3">Искусство</h3>
                         </div>
                         <div className="type__card">
                             <img src={icon10} alt="type"/>
-                            <h3 className="type__h3">Финансовая и <br/>
-                                банковская деятельность</h3>
+                            <h3 className="type__h3">Финансовые и банковские продукты и услуги</h3>
                         </div>
                         <div className="type__card">
                             <img src={icon11} alt="type"/>
-                            <h3 className="type__h3">Туризм</h3>
+                            <h3 className="type__h3">Туризм и гостеприимство</h3>
+                        </div>
+                        <div className="type__card">
+                            <img src={cars} alt="type"/>
+                            <h3 className="type__h3">Транспорт и логистика.</h3>
+                        </div>
+                        <div className="type__card">
+                            <img src={energy} alt="type"/>
+                            <h3 className="type__h3">Энергетика и альтернативные источники энергии</h3>
+                        </div>
+                        <div className="type__card">
+                            <img src={cloth} alt="type"/>
+                            <h3 className="type__h3">Мода и текстиль</h3>
+                        </div>
+                        <div className="type__card">
+                            <img src={innovation} alt="type"/>
+                            <h3 className="type__h3">Инновации в области экологии и устойчивого развития</h3>
+                        </div>
+                        <div className="type__card">
+                            <img src={special} alt="type"/>
+                            <h3 className="type__h3">Техника и спецтехника</h3>
+                        </div>
+                        <div className="type__card">
+                            <img src={national} alt="type"/>
+                            <h3 className="type__h3">Национальные товары, рукоделие, сувенирная продукция</h3>
                         </div>
                     </div>
                 </div>

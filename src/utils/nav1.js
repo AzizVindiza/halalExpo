@@ -3,10 +3,10 @@ export const arr1 = [
         name: 'Преимущества для участников',
         link: 'benefits'
     },
-    // {
-    //     name: 'Стенды',
-    //     link: 'stand'
-    // },
+    {
+        name: 'Информация для участников',
+        link: '#'
+    },
     {
         name: 'Гостиницы ',
         link: 'hotel'

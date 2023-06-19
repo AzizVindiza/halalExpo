@@ -1,11 +1,11 @@
 import React from 'react';
 import './edgeCard.sass'
 
-const EdgeCard = ({item}) => {
+const EdgeCard = ({item,img}) => {
     return (
         <div className={"edgeCard"}>
             <div className="edgeCard__img">
-                <img src={item.img} alt=""/>
+                <img src={img} alt=""/>
             </div>
             <div className="edgeCard__box">
                 <h2 className="edgeCard__h2">
