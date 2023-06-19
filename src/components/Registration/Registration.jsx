@@ -70,37 +70,34 @@ const Registration = () => {
                         <RegistrationPhoneNumber title={"WhatsApp"} name={"personalPhone"}/>
                         <CheckBox/>
                         <RegistrationSelect title={"В качестве кого вы хотите посетить HIT EXPO?*"} name={"participant_sector"}/>
-                        {/*{*/}
-                        {/*    role === "Посетитель" ?*/}
-                        {/*        ""*/}
-                        {/*        : role === "Участник" ?*/}
-                        {/*            <>*/}
-                        {/*                <RegistrationSelectMember*/}
-                        {/*                    title={'Выберите сектор участия (с условиями участия каждого сектора можно ознакомится)'}*/}
-                        {/*                    name={'members'}/>*/}
-                        {/*                {members === 'Trade' ?*/}
-                        {/*                    <RegistrationSelectIndustry title={'Выберите отрасль'} name={'industry'}/>*/}
-                        {/*                    :*/}
-                        {/*                    members === "Fashion" ?*/}
-                        {/*                        <RegistrationSelectFashion title={'Выберите направление'} name={'fashion'}/>*/}
-                        {/*                        :*/}
-                        {/*                        members === 'Food' ?*/}
-                        {/*                            <RegistrationSelectFood title={'Выберите направление'} name={'food'}/>*/}
-                        {/*                            :*/}
-                        {/*                            members === "Investment" ?*/}
-                        {/*                                <ChooseIndustry/>*/}
+                        {
+                            role === "Посетитель" ?
+                                ""
+                                : role === "Участник" ?
+                                    <>
+                                        <RegistrationSelectMember
+                                            title={'Выберите сектор участия (с условиями участия каждого сектора можно ознакомится)'}
+                                            name={'participation_sector'}/>
+                                        {members === 'Trade' ?
+                                            <RegistrationSelectIndustry title={'Выберите отрасль'} name={'trade'}/>
+                                            :
+                                            members === "Fashion" ?
+                                                <RegistrationSelectFashion title={'Выберите направление'} name={'choose_direction_fashion'}/>
+                                                :
+                                                members === 'Food' ?
+                                                    <RegistrationSelectFood title={'Выберите направление'} name={'choose_direction_food'}/>
+                                                    :
+                                                    members === "Investment" ?
+                                                        <ChooseIndustry/>
 
-                        {/*                                : ""*/}
-
-                        {/*                }*/}
-                        {/*                <ParticipantForm/>*/}
-                        {/*            </>*/}
-                        {/*            : role === "СМИ" ? <MasMediaForm/> : role === "Эксперта" ? ""*/}
-                        {/*                : role === "Представитель государственных органов" ? <RegistrationInput type={"text"} title={"Должность"} name={"position_main"}/> : ""*/}
-
-
-                        {/*}*/}
-                        <RegistrationInput type={"email"} title={"Email"} name={"email"}/>
+                                                        : ""
+                                        }
+                                        <ParticipantForm/>
+                                    </>
+                                    : role === "СМИ" ? <MasMediaForm/> : role === "Эксперта" ? ""
+                                        : role === "Представитель государственных органов" ? <RegistrationInput type={"text"} title={"Должность"} name={"position_main"}/> : ""
+                        }
+                        <RegistrationInput type={"email"} title={"Электронная почта"} name={"email"}/>
                         <Btn text={"Зарегистрироваться"} type={"submit"}/>{/*главная кнопка отправки type submit*/}
                     </form>
                 </div>

@@ -36,7 +36,7 @@ const RegistrationPhoneNumber = ({name,title}) => {
                     />
                 )}
             />
-            <span className="registration__error">{errors[name] && errors[name].message}</span>
+
         </div>
 
     );
