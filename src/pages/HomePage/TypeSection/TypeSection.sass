@@ -1,5 +1,7 @@
 @import "src/sass/base/mixins"
 .type
+  margin: 100px auto
+  position: relative
   overflow: hidden
   &__p
     @include text(500,15px,20px,#000)
@@ -10,24 +12,28 @@
     position: relative
     width: 50%
   &__right
+    position: absolute
     padding-top: 100px
+    right: 0
 
   &__cards
     display: flex
-    padding: 60px 135px 0 135px
     align-items: center
     justify-content: flex-start
     flex-wrap: wrap
-    width: 748px
-    column-gap: 80px
+    width: 638px
+    column-gap: 40px
     row-gap: 80px
   &__h3
     @include text(500,14px,16px,#000)
     margin-top: 20px
     text-align: center
   &__card
-    width: 100px
+    text-align: center
+    width: 130px
     img
+      width: 80px
+      height: 80px
       transition: 0.5s
     img:hover
       transform: scale(1.3)

@@ -9,12 +9,84 @@
     "Partners" : "Partners",
     "MEDIA" : "MEDIA",
     "News": " News",
-    "ticket" : "Buy a ticket"
+    "ticket" : "Buy a ticket",
+    "dropDown": {
+      "title": "About Expo",
+      "arr": [
+        {
+          "name": "Место и время проведения",
+          "link": "location"
+        },
+        {
+          "name": "Программа форума",
+          "link": "forum"
+        },
+        {
+          "name": "Организаторы",
+          "link": "organization"
+        },
+        {
+          "name": "Инвесторы",
+          "link": "investor"
+        },
+        {
+          "name": "Спонсоры",
+          "link": "sponsors"
+        },
+        {
+          "name": "Список участников",
+          "link": "members"
+        },
+        {
+          "name": "Контакты",
+          "link": "contacts"
+        }
+
+      ]
+    },
+    "dropDown1":{
+      "title": "Members",
+      "arr":[
+        {
+          "name": "Преимущества для участников",
+          "link": "benefits"
+        },
+        {
+          "name": "Информация для участников",
+          "link": "#"
+        },
+        {
+          "name": "Преимущества для участников",
+          "link": "hotel"
+        }
+      ]
+    },
+    "dropDown2":{
+      "title": "Visitors",
+      "arr":[
+        {
+          "name": "Купить билет",
+          "link": "expect"
+        },
+        {
+          "name": "Что вас ожидает",
+          "link": "expect"
+        },
+        {
+          "name": "Гостиницы",
+          "link": "hotel"
+        }
+      ]
+    }
   },
   "firstSection": {
     "text": "Welcome to Halal Investment and Trade Expo 2023, one of the world's most prestigious halal investment and trade events! Join us to discover new opportunities in the global halal economy and strengthen relationships in the international business and investor community.",
     "counter": "HIT EXPO begins:",
     "time": "July 29 2023",
+    "days": "days",
+    "hours": "hours",
+    "minutes": "minutes",
+    "seconds": "seconds",
     "Participants": "Participants are up to date:",
     "Participate": "Participate"
   },
@@ -93,7 +165,7 @@
   "sponsorsPage": {
     "title": "SPONSORSHIP",
     "text": "For the successful organization of Halal Investment and Trade Expo 2023, the organizers received the support of many large companies, which became its sponsors. They have made a significant contribution to the development of the halal industry in Kyrgyzstan and Central Asian countries, and supported the creation of an international platform for investors, entrepreneurs and manufacturers.We thank our sponsors for their support and are confident that their participation in the exhibition will lead to successful results and will be an important step in the development of halal business.",
-    "title1": "PARTICIPATION: КАК ВЫ МОЖЕТЕ ПОВЫСИТЬ ЭФФЕКТИВНОСТЬ СВОЕГО УЧАСТИЯ?",
+    "title1": "HOW CAN YOU INCREASE THE EFFECTIVENESS OF YOUR PARTICIPATION?",
     "text1": "Participants using sponsorship opportunities get an ability to effectively present themselves to a wide audience, both during the event and before it begins. Sponsor status enhances the marketing effect of participation and provides companies with additional opportunities for market promotion.Advertising opportunities included in the sponsorship packages are carefully selected to provide maximum coverage of the target audience and inform about the company and its participation in the exhibition with the help of various communication channels.",
     "title2": "USE THE COMMERCIAL POTENTIAL OF THE EXHIBITION:",
     "li1": "- Improve your company's competitiveness in the market",

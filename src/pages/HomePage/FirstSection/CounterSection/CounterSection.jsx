@@ -47,23 +47,23 @@ const CounterSection = () => {
             <div className="counterSection__wrapper">
                 <div className="counterSection__num">
                     <p className="counterSection__time">{timerDays < 10 ? "0" + timerDays : timerDays}</p>
-                    <p className="counterSection__txt">дней</p>
+                    <p className="counterSection__txt">{t("firstSection.days")}</p>
                 </div>
                 <div className="counterSection__dock">:</div>
 
                 <div className="counterSection__num">
                     <p className="counterSection__time">{timerHours < 10 ? "0" + timerHours : timerHours}</p>
-                    <p className="counterSection__txt">часов</p>
+                    <p className="counterSection__txt">{t("firstSection.hours")}</p>
                 </div>
                 <div className="counterSection__dock">:</div>
                 <div className="counterSection__num">
                     <p className="counterSection__time">{timerMinutes < 10 ? "0" + timerMinutes : timerMinutes}</p>
-                    <p className="counterSection__txt">минут</p>
+                    <p className="counterSection__txt">{t("firstSection.minutes")}</p>
                 </div>
                 <div className="counterSection__dock">:</div>
                 <div className="counterSection__num">
                     <p className="counterSection__time">{timerSeconds < 10 ? "0" + timerSeconds : timerSeconds}</p>
-                    <p className="counterSection__txt">секунд</p>
+                    <p className="counterSection__txt">{t("firstSection.seconds")}</p>
                 </div>
             </div>
             <h3 className="counterSection__h3">{t("firstSection.time")}</h3>
