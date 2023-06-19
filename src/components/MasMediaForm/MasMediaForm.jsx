@@ -21,7 +21,7 @@ const MasMediaForm = () => {
         <div className={'masmediaform'}>
             <div className="masmediaform__wrapper">
                  <h2 className="masmediaform__h2">Заполните данные о компании</h2>
-                <RegistrationUploadInput name={'dsds'} title={'Загрузите логотип компании в  png или jpg'}/>
+                {/*<RegistrationUploadInput name={'dsds'} title={'Загрузите логотип компании в  png или jpg'}/>*/}
                 <div  className="masmediaform__form">
                     <RegistrationInput type={'text'} name={'organization_smi'} title={'Полное юридическое наименование организации'}/>
                     <RegistrationInput type={'text'} name={'address'} title={'Юридический адрес'}/>

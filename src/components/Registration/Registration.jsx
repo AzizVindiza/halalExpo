@@ -16,17 +16,62 @@ import RegistrationSelectFood from "./RegistrationSelectFood/RegistrationSelectF
 import ChooseIndustry from "./ChooseIndustry/ChooseIndustry";
 import RegistrationUploadInput from "./RegistrationUploadInput/RegistrationUploadInput";
 import {useAddUserMutation} from "../../redux/ApiSlice";
+import {toast} from "react-toastify";
+
 
 const Registration = () => {
+
     const methods = useForm({mode: "onBlur"});
     // использую переменную methods чтобы передавать вложенным инпутам
     const [addUser]= useAddUserMutation()
-    const onSubmit = data => {
-        addUser(data)
-        console.log(data)
-    };
-    // функция при отправки формы
+
     const {setClose, role, members} = useContext(CustomContext)
+
+    const onSubmit = (data) => {
+        try {
+            addUser(data)
+                .unwrap()
+                .then(() => {
+                    toast.success('Заявка отпралена!', {
+                        position: "top-center",
+                        autoClose: 5000,
+                        hideProgressBar: false,
+                        closeOnClick: false,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "colored",
+                    });
+                    setClose(false)
+                })
+                .catch(() => {
+                    toast.error('Ошибка в сервере!', {
+                        position: "top-center",
+                        autoClose: 5000,
+                        hideProgressBar: false,
+                        closeOnClick: false,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "colored",
+                    });
+                })
+
+        } catch (error) {
+            toast.error('Ошибка в сервере!', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: false,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
+        }
+
+
+    }
     // вытаскиваю функцию setClose из контекста чтобы закрывать форму при клике на крестик
     return (
         <FormProvider {...methods} >{/*передаю все методы из rhf в FormProvider чтобы все вложенные инпуты могли испольозвать*/}
@@ -63,9 +108,9 @@ const Registration = () => {
                         <RegistrationInput type={"text"} title={"Страна"} name={"country"}/>
                         <RegistrationInput type={"text"} title={"Город"} name={"city"}/>
                         <RegistrationInput type={"date"} title={"Дата рождения"} name={"birth"}/>
-                        <RegistrationUploadInput name={"image_id_one"} title={"Загрузите паспорт с лицевой стороны*"}/>
-                        <RegistrationUploadInput name={"image_id_two"} title={"Загрузите паспорт с обратной стороны*"}/>
-                        <RegistrationUploadInput name={"image_id_three"} title={"Сделайте селфи с паспортом*"}/>
+                        {/*<RegistrationUploadInput name={"image_id_one"} title={"Загрузите паспорт с лицевой стороны*"}/>*/}
+                        {/*<RegistrationUploadInput name={"image_id_two"} title={"Загрузите паспорт с обратной стороны*"}/>*/}
+                        {/*<RegistrationUploadInput name={"image_id_three"} title={"Сделайте селфи с паспортом*"}/>*/}
                         <RegistrationPhoneNumber title={"Телефон"} name={"workPhone"}/>
                         <RegistrationPhoneNumber title={"WhatsApp"} name={"personalPhone"}/>
                         <CheckBox/>
