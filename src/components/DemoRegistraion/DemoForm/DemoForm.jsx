@@ -6,7 +6,7 @@ import Btn from "../../Btn/Btn";
 import {CustomContext} from "../../../Context";
 import {useForm} from "react-hook-form";
 import {apiSlice, useAddPartnerMutation} from "../../../redux/ApiSlice";
-import {ToastContainer, toast} from 'react-toastify';
+import {toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const DemoForm = () => {
