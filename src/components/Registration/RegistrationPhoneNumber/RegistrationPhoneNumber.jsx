@@ -4,7 +4,7 @@ import {Controller, useFormContext} from "react-hook-form";
 import "react-phone-input-2/lib/bootstrap.css";
 import "./controller.sass"
 
-const RegistrationPhoneNumber = ({name,title}) => {
+const   RegistrationPhoneNumber = ({name,title}) => {
     const {control,formState :{
         errors
     }}= useFormContext()
@@ -23,6 +23,7 @@ const RegistrationPhoneNumber = ({name,title}) => {
                 }}
                 render={({ field: { ref, ...field } }) => (
                     <ReactPhoneInput
+                        placeholder={'Телефон'}
                         {...field}
                         inputExtraProps={{
                             ref,

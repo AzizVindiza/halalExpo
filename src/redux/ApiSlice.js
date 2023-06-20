@@ -23,8 +23,9 @@ export const apiSlice = createApi({
         }),
 
 
+
     })
 
 })
 
-export const {useAddPartnerMutation,useAddUserMutation} = apiSlice
+export const {useAddPartnerMutation,useAddUserMutation,useAddImageMutation} = apiSlice
