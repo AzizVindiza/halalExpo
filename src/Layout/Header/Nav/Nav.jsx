@@ -11,10 +11,13 @@ import {useTranslation} from "react-i18next";
 const Nav = () => {
     const {isActiveHamburgerMenu,setActiveHamburger,setLogin, setClose ,setActiveHamburgerMenu} = useContext(CustomContext)
     const {t} = useTranslation()
-    const activeBurger = () => {
+    const activeRegister = () => {
         setActiveHamburger(false)
         setClose(true)
-        setLogin(true)
+    }
+    const activeLogin = () => {
+        setActiveHamburger(false)
+         setLogin(true)
     }
     return (
         <nav className="nav">
@@ -35,8 +38,8 @@ const Nav = () => {
                 </NavLink>
             </div>
             <div className="nav__wrapper">
-                <Link onClick={activeBurger} className={'nav__user'} to={''}>Регистрация</Link>
-                <Link onClick={activeBurger} className={'nav__user'} to={''}>Войти</Link>
+                <Link onClick={activeRegister} className={'nav__user'} to={''}>Регистрация</Link>
+                <Link onClick={activeLogin} className={'nav__user'} to={''}>Войти</Link>
             </div>
             <p className="nav__txt">
                 29.07.23 - 01.08.23 Иссык-Кульская область Экспо, МВЦ. г. Чолпон-Ата
