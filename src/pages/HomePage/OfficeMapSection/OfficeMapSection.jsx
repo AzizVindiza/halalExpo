@@ -4,7 +4,7 @@ import "./OfficeMapSection.sass"
 const OfficeMapSection = () => {
     return (
         <section className="office">
-            <div className="office__container container_fluid">
+            <div className="office__container container">
                 <div className="office__txt">
                     <a className={"office__link"} href="tel:+996508312012">
                         <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">

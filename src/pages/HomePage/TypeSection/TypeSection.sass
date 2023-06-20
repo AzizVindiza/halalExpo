@@ -72,3 +72,23 @@
     position: absolute
     top: 0
     right: 0
+
+@media (max-width: 1201px)
+  .type
+    &__card
+      img
+       width: 70px
+@media (max-width: 1025px)
+  .type
+    &__container
+      display: flex
+      flex-direction: column
+    &__left
+      width: 100%
+    &__cards
+      width: 100%
+      justify-content: space-around
+    &__right
+      display: contents
+      position: initial
+

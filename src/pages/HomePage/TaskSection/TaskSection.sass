@@ -18,3 +18,34 @@
     justify-content: space-between
     flex-wrap: wrap
     align-items: center
+
+@media (max-width: 1025px)
+  .task
+    &__container
+      justify-content: space-around
+    &__h2
+      @include text(800,35px,48px,#10923E)
+@media (max-width: 950px)
+  .task
+    &__container
+      padding: 0 30px
+@media (max-width: 770px)
+  .task
+    &__container
+      padding: 0
+    &__wrapper
+      justify-content: initial
+    &__h2
+      @include text(800,30px,48px,#10923E)
+
+@media (max-width: 700px)
+  .task
+    &__container
+      padding: 0 20px
+
+
+@media (max-width: 485px)
+  .task
+    &__h2
+      @include text(800,22px,48px,#10923E)
+

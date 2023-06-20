@@ -18,7 +18,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-import {Autoplay, FreeMode, Pagination} from "swiper";
+import {Autoplay, FreeMode, Grid, Pagination} from "swiper";
+import SupportAdaptive from "./SupportAdaptive/supportAdaptive";
 
 
 
@@ -28,15 +29,27 @@ const OrganizatorSection = () => {
         <section className={'organizatorSection'}>
             <div className="container organizatorSection__container">
                 <h2 className="organizatorSection__h2">Организаторы</h2>
-                <div className={'organizatorSection__img'}>
-                    <img src={ameca} alt=""/>
+                <div className={'organizatorSection__img '}>
+                    <img className={"ameca"} src={ameca} alt=""/>
                 </div>
                 <div className="organizatorSection__line"></div>
                 <h3 className="organizatorSection__h3">ПРИ ПОДДЕРЖКЕ </h3>
+                <SupportAdaptive/>
 
             </div>
             <Swiper
                 slidesPerView={4}
+                breakpoints={{
+                    1025:{
+
+                        slidesPerView:4
+                    },
+                    770:{
+
+                        slidesPerView:3
+
+                    }
+                }}
                 autoplay={{
                     delay: 0,
                     disableOnInteraction: false
@@ -45,6 +58,7 @@ const OrganizatorSection = () => {
                 grabCursor={true}
                 loop={true}
                 freeMode={true}
+
                 modules={[Autoplay]}
                 className="mySwiper"
             >
@@ -122,6 +136,7 @@ const OrganizatorSection = () => {
                 </div></SwiperSlide>
 
             </Swiper>
+
 
         </section>
     );

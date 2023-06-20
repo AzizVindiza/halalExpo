@@ -7,7 +7,6 @@
     margin-bottom: 55px
     text-align: center
   &__img
-    width: 308px
     margin: 0 auto
     display: flex
     justify-content: center
@@ -55,10 +54,6 @@
     display: flex
     flex-direction: column
     row-gap: 50px
-
-
-
-
   &__picture
     display: flex
     justify-content: space-between
@@ -72,6 +67,60 @@
 
   .swiper-wrapper
     transition-timing-function : linear
+
+
+@media (max-width: 1201px)
+  .organizatorSection
+    &__box
+      width: 250px
+      height: 200px
+    &__img
+      img
+        width: 250px
+        height: 70px
+@media (max-width: 770px)
+  .organizatorSection
+    .swiper
+      display: none
+    &__h3
+      @include text(800,30px,120%, #10923E)
+    &__box
+      border: none
+      width: 200px
+      height: 150px
+    &__img
+      img
+        width: 200px
+        height: 70px
+@media (max-width: 482px)
+  .organizatorSection
+    &__h3, h2
+      @include text(800,25px,120%, #10923E)
+    &__box
+      width: 170px
+      height: 150px
+    .ameca
+      width: 200px
+      height: 70px
+    &__img
+      img
+        width: 100px
+        height: 70px
+    &__span
+      @include text(500,13px,120%, #000000)
+
+@media (max-width: 394px)
+  .organizatorSection
+    &__box
+
+      width: 150px
+      height: 140px
+    &__img
+      img
+        width: 90px
+        height: 65px
+    &__span
+      @include text(500,11px,120%, #000000)
 
 
 

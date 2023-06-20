@@ -32,3 +32,29 @@
     align-items: center
     border-radius: 14px
     padding: 15px 18px 16px 26px
+
+
+@media (max-width: 1025px)
+  .task-card
+    &__numb
+      @include text(800,150px,133%,#000)
+    &__p
+      @include text(400,14px,133%,#000)
+      width: 34vw
+@media (max-width: 770px)
+  .task-card
+    &__numb
+      @include text(800,120px,133%,#000)
+    &__p
+      @include text(400,12px,133%,#000)
+      width: 33vw
+      padding: 10px 13px 11px 20px
+@media (max-width: 568px)
+  .task-card
+    &__p
+      @include text(400,15px,133%,#000)
+      width: 100%
+@media (max-width: 482px)
+  .task-card
+    &__p
+      @include text(400,12px,133%,#000)
