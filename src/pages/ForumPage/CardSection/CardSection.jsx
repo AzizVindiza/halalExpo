@@ -6,9 +6,10 @@ const CardSection = () => {
     return (
         <section className="card">
             <div className="container card__container">
+                <h2 className="card__h2">29 июля</h2>
 
                 <div className="card__lists">
-                    <h2 className="card__h2">29 июля</h2>
+
                     <div className="card__text">
 
                         <div className="card__wrapper">
