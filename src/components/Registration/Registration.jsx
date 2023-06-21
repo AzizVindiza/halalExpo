@@ -111,46 +111,46 @@ const Registration = () => {
                             when.
                         </p>
 
-                        {/*<RegistrationInput type={"text"} title={"ФИО"} name={"name"}/>*/}
+                        <RegistrationInput type={"text"} title={"ФИО"} name={"name"}/>
 
-                        {/*<RegistrationInput type={"text"} title={"Страна"} name={"country"}/>*/}
-                        {/*<RegistrationInput type={"text"} title={"Город"} name={"city"}/>*/}
-                        {/*<RegistrationInput type={"date"} title={"Дата рождения"} name={"birth"}/>*/}
+                        <RegistrationInput type={"text"} title={"Страна"} name={"country"}/>
+                        <RegistrationInput type={"text"} title={"Город"} name={"city"}/>
+                        <RegistrationInput type={"date"} title={"Дата рождения"} name={"birth"}/>
                         <RegistrationUploadInput name={"image_id_one"} title={"Загрузите паспорт с лицевой стороны*"}/>
-                        {/*<RegistrationUploadInput name={"image_id_two"} title={"Загрузите паспорт с обратной стороны*"}/>*/}
-                        {/*<RegistrationUploadInput name={"image_id_three"} title={"Сделайте селфи с паспортом*"}/>*/}
-                        {/*<RegistrationPhoneNumber title={"Телефон"} name={"workPhone"}/>*/}
-                        {/*<RegistrationPhoneNumber title={"WhatsApp"} name={"personalPhone"}/>*/}
-                        {/*<CheckBox/>*/}
-                        {/*<RegistrationSelect title={"В качестве кого вы хотите посетить HIT EXPO?*"} name={"participant_sector"}/>*/}
-                        {/*{*/}
-                        {/*    role === "Посетитель" ?*/}
-                        {/*        ""*/}
-                        {/*        : role === "Участник" ?*/}
-                        {/*            <>*/}
-                        {/*                <RegistrationSelectMember*/}
-                        {/*                    title={'Выберите сектор участия (с условиями участия каждого сектора можно ознакомится)'}*/}
-                        {/*                    name={'participation_sector'}/>*/}
-                        {/*                {members === 'Trade' ?*/}
-                        {/*                    <RegistrationSelectIndustry title={'Выберите отрасль'} name={'trade'}/>*/}
-                        {/*                    :*/}
-                        {/*                    members === "Fashion" ?*/}
-                        {/*                        <RegistrationSelectFashion title={'Выберите направление'} name={'choose_direction_fashion'}/>*/}
-                        {/*                        :*/}
-                        {/*                        members === 'Food' ?*/}
-                        {/*                            <RegistrationSelectFood title={'Выберите направление'} name={'choose_direction_food'}/>*/}
-                        {/*                            :*/}
-                        {/*                            members === "Investment" ?*/}
-                        {/*                                <ChooseIndustry/>*/}
+                        <RegistrationUploadInput name={"image_id_two"} title={"Загрузите паспорт с обратной стороны*"}/>
+                        <RegistrationUploadInput name={"image_id_three"} title={"Сделайте селфи с паспортом*"}/>
+                        <RegistrationPhoneNumber title={"Телефон"} name={"workPhone"}/>
+                        <RegistrationPhoneNumber title={"WhatsApp"} name={"personalPhone"}/>
+                        <CheckBox/>
+                        <RegistrationSelect title={"В качестве кого вы хотите посетить HIT EXPO?*"} name={"participant_sector"}/>
+                        {
+                            role === "Посетитель" ?
+                                ""
+                                : role === "Участник" ?
+                                    <>
+                                        <RegistrationSelectMember
+                                            title={'Выберите сектор участия (с условиями участия каждого сектора можно ознакомится)'}
+                                            name={'participation_sector'}/>
+                                        {members === 'Trade' ?
+                                            <RegistrationSelectIndustry title={'Выберите отрасль'} name={'trade'}/>
+                                            :
+                                            members === "Fashion" ?
+                                                <RegistrationSelectFashion title={'Выберите направление'} name={'choose_direction_fashion'}/>
+                                                :
+                                                members === 'Food' ?
+                                                    <RegistrationSelectFood title={'Выберите направление'} name={'choose_direction_food'}/>
+                                                    :
+                                                    members === "Investment" ?
+                                                        <ChooseIndustry/>
 
-                        {/*                                : ""*/}
-                        {/*                }*/}
-                        {/*                <ParticipantForm/>*/}
-                        {/*            </>*/}
-                        {/*            : role === "СМИ" ? <MasMediaForm/> : role === "Эксперта" ? ""*/}
-                        {/*                : role === "Представитель государственных органов" ? <RegistrationInput type={"text"} title={"Должность"} name={"position_main"}/> : ""*/}
-                        {/*}*/}
-                        {/*<RegistrationInput type={"email"} title={"Электронная почта"} name={"email"}/>*/}
+                                                        : ""
+                                        }
+                                        <ParticipantForm/>
+                                    </>
+                                    : role === "СМИ" ? <MasMediaForm/> : role === "Эксперта" ? ""
+                                        : role === "Представитель государственных органов" ? <RegistrationInput type={"text"} title={"Должность"} name={"position_main"}/> : ""
+                        }
+                        <RegistrationInput type={"email"} title={"Электронная почта"} name={"email"}/>
                         <Btn text={"Зарегистрироваться"} type={"submit"}/>{/*главная кнопка отправки type submit*/}
                     </form>
                 </div>
