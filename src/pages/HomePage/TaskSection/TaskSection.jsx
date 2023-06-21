@@ -116,7 +116,7 @@ const TaskSection = () => {
                     <motion.div  custom={5} variants={cartMotion4}>
                         <TaskCard number={5} text={t("taskSection.text5")}/>
                     </motion.div>
-                    <motion.div  custom={6} variants={cartMotion4}>
+                    <motion.div  custom={6} variants={cartMotion}>
                         <TaskCard number={6} text={t("taskSection.text6")}/>
                     </motion.div>
                 </div>
