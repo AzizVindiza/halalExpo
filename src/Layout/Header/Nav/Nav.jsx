@@ -9,8 +9,16 @@ import arr2 from "../../../utils/nav2";
 import {CustomContext} from "../../../Context";
 import {useTranslation} from "react-i18next";
 const Nav = () => {
-    const {isActiveHamburgerMenu,setActiveHamburger, setActiveHamburgerMenu} = useContext(CustomContext)
+    const {isActiveHamburgerMenu,setActiveHamburger,setLogin, setClose ,setActiveHamburgerMenu} = useContext(CustomContext)
     const {t} = useTranslation()
+    const activeRegister = () => {
+        setActiveHamburger(false)
+        setClose(true)
+    }
+    const activeLogin = () => {
+        setActiveHamburger(false)
+         setLogin(true)
+    }
     return (
         <nav className="nav">
             <div className="container nav__container">
@@ -30,8 +38,8 @@ const Nav = () => {
                 </NavLink>
             </div>
             <div className="nav__wrapper">
-                <Link className={'nav__user'} to={''}>Регистрация</Link>
-                <Link className={'nav__user'} to={''}>Войти</Link>
+                <Link onClick={activeRegister} className={'nav__user'} to={''}>Регистрация</Link>
+                <Link onClick={activeLogin} className={'nav__user'} to={''}>Войти</Link>
             </div>
             <p className="nav__txt">
                 29.07.23 - 01.08.23 Иссык-Кульская область Экспо, МВЦ. г. Чолпон-Ата

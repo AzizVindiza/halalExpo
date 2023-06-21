@@ -50,7 +50,6 @@ const draw = {
 };
 const TargetSection = () => {
     const {t} = useTranslation()
-
     return (
         <motion.section  viewport={{once:true}} initial={"hidden"} whileInView={"visible"} className="target">
             <div className="target__container container">

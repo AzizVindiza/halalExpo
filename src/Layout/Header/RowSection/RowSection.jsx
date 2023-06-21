@@ -10,7 +10,7 @@ import {useTranslation} from "react-i18next";
 
 const RowSection = () => {
 
-    const {close, setClose,setLogin,login,request} = useContext(CustomContext)
+    const {setClose,setLogin,login} = useContext(CustomContext)
     const {t,i18n} = useTranslation()
 
     const  changeLanguages = (language) => {
@@ -38,15 +38,6 @@ const RowSection = () => {
             {/*{*/}
             {/*    close ?  <RegisterForm /> : ''*/}
             {/*}*/}
-            {
-                close ?  <Registration /> : ''
-            }
-            {
-                login ? <LoginForm/> : ''
-            }
-            {
-                request ? <DemoForm/> : ""
-            }
 
         </div>
     );

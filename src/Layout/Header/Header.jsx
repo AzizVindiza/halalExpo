@@ -9,9 +9,10 @@ import {animateScroll} from "react-scroll"
 import DemoForm from "../../components/DemoRegistraion/DemoForm/DemoForm";
 import {ToastContainer} from "react-toastify";
 import {CustomContext} from "../../Context";
+import Registration from "../../components/Registration/Registration";
+import LoginForm from "../../components/LoginForm/LoginForm";
 const Header = () => {
-    const {isActiveHamburger, setActiveHamburger} = useContext(CustomContext)
-    const {isActiveHamburgerMenu, setActiveHamburgerMenu} = useContext(CustomContext)
+    const {isActiveHamburger,request,close,login, setActiveHamburger,isActiveHamburgerMenu, setActiveHamburgerMenu} = useContext(CustomContext)
 
 
     const toggleClass = () => {
@@ -52,6 +53,15 @@ const Header = () => {
                 pauseOnHover
                 theme="light"
             />
+            {
+                close ?  <Registration/> : ''
+            }
+            {
+                login ? <LoginForm/> : ''
+            }
+            {
+                request ? <DemoForm/> : ""
+            }
         </header>
     );
 };
