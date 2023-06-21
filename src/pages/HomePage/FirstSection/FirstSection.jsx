@@ -11,6 +11,7 @@ import {motion} from "framer-motion"
 import svg from './Vector 140.svg'
 import {CustomContext} from "../../../Context";
 import {useTranslation} from "react-i18next";
+import shater from './shater.svg'
 
 
 const textMotion = {
@@ -40,6 +41,8 @@ const FirstSection = () => {
             <div className="first__block-player">
                 <video className={'first__player'} src={time.slice(0, 2) > 6 && time.slice(0, 2) < 19 ? day : night}
                        autoPlay={true} muted={true} loop={true}/>
+                <img className={"first__player2"} src={shater} alt=""/>
+
             </div>
             <motion.div custom={1} variants={textMotion} className="first__txt">
                 <h3 className="first__h3">
@@ -64,6 +67,7 @@ const FirstSection = () => {
                 <picture>
                     <source media="(max-width:394px)" srcSet={bg339}/>
                     <img src={bg} alt="line bg"/>
+
                 </picture>
             </div>
         </motion.section>

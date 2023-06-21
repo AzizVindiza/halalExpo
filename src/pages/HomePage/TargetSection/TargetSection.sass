@@ -12,7 +12,7 @@
     align-items: center
     column-gap: 30px
   &__h2
-    @include text(800,35px,42px,#40A865)
+    @include text(800,30px,42px,#40A865)
     margin-bottom: 15px
   &__p
     @include text(400,30px,40px,#000)
@@ -22,3 +22,49 @@
     padding: 50px
     box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.1)
     border-radius: 4px
+
+@media (max-width: 1025px)
+  .target
+    &__img
+      svg
+        width: 300px
+
+    &__p
+      @include text(400,30px,40px,#000)
+      width: 560px
+    &__h2
+      @include text(800,25px,42px,#40A865)
+    &__txt
+      padding: 25px
+
+@media (max-width: 955px)
+  .target
+    padding: 0 0 75px 0
+    &__container
+      display: flex
+      row-gap: 25px
+      flex-direction: column
+
+@media (max-width: 770px)
+  .target
+
+    &__container
+      background: #FFFFFF
+      row-gap: 0
+      width: 90%
+      &__img
+        svg
+          width: 250px
+    &__txt
+      box-shadow: none
+      text-align: center
+      justify-content: center
+      display: flex
+      flex-direction: column
+
+    &__p
+      width: 100%
+      display: flex
+      @include text(400,20px,40px,#000)
+
+      margin:  0 auto

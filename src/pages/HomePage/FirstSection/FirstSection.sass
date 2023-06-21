@@ -5,6 +5,7 @@
   overflow: hidden
   &__overlay
     position: absolute
+
     top: 0
     right: 0
     z-index: 99
@@ -20,6 +21,8 @@
     right: -284px
     object-fit: cover
     z-index: 10
+  &__player2
+    display: none
   &__block-player
     display: flex
     justify-content: flex-end
@@ -84,3 +87,84 @@
     display: flex
     justify-content: center
     column-gap: 84px
+
+@media (max-width: 1201px)
+  .first
+    &__player
+      width: 970px
+    &__overlay
+      right: -70px
+    &__txt
+      padding: 73px 50px 0
+@media (max-width: 1025px)
+  .first
+    &__player
+      width: 900px
+    &__overlay
+      right: -170px
+    &__circle-small
+      right: 41%
+    &__h3
+      @include text(800,18px,133%,#565656)
+    &__h2
+      @include text(700,50px,110%, #00862D)
+    &__p
+      @include text(400,16px,133%,#000)
+      max-width: 500px
+@media (max-width: 770px)
+  .first
+    &__overlay
+      right: -278px
+      top: -56px
+    &__player
+      display: none
+    &__player2
+      display: flex
+      position: absolute
+      width: 387px
+      height: 507px
+    &__txt
+      padding: 30px 30px
+    &__circle-small
+      width: 100px
+    &__h3
+      @include text(800,14px,133%,#565656)
+      padding: 18px 20px
+      width: 300px
+    &__h2
+      @include text(700,40px,110%, #00862D)
+    &__p
+      @include text(400,12px,133%,#000)
+      max-width: 380px
+@media (max-width: 482px)
+  .first
+    &__h3
+      @include text(800,13px,133%,#565656)
+      padding: 18px 20px
+      width: 200px
+    &__h2
+      width: 280px
+
+    &__circle-small
+      width: 65px
+      right: 48%
+    &__player2
+      display: flex
+      position: absolute
+      width: 282px
+      height: 389px
+
+@media (max-width: 394px)
+  .first
+    &__txt
+      padding: 15px
+    &__circle-small
+      display: none
+    &__player2
+      display: flex
+      position: absolute
+      width: 282px
+      height: 355px
+    &__h3
+      padding: 9px 15px
+
