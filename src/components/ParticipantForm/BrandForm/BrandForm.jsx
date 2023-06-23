@@ -27,10 +27,10 @@ const
                 <div className="brandForm__wrapper">
                     <div className="brandForm__form">
                         <RegistrationInput type={'text'} name={'brand'} title={'Наименование бренда'}/>
-                        <div className="brandForm__logo">
-                            <span className="brandForm__text">Загрузите логотип компании в  png, jpg, pdf<span  className="brandForm__span">*</span></span>
-                            <RegistrationUploadInput name={'fddfd'} />
-                        </div>
+                        {/*<div className="brandForm__logo">*/}
+                        {/*    <span className="brandForm__text">Загрузите логотип компании в  png, jpg, pdf<span  className="brandForm__span">*</span></span>*/}
+                        {/*    <RegistrationUploadInput name={'fddfd'} />*/}
+                        {/*</div>*/}
                         <RegistrationInput type={'text'} name={'development_name'} title={'Полное юридическое наименование организации*'}/>
                         <RegistrationInput type={'text'} name={'address_development'} title={'Юридический адрес*'}/>
                         <RegistrationInput type={'text'} name={'inn'} title={'ИНН'}/>
@@ -45,9 +45,9 @@ const
                         <RegistrationInput type={'text'} name={'position_participant'} title={'Должность'}/>
                         <RegistrationInput type={'text'} name={'company'} title={'Деятельность компании'}/>
                         <RegistrationInputTextarea  type={'text'} name={'description'} title={'Опишите товары или услуги компании'}/>
-                        <RegistrationInput type={'text'} name={'email_participant'} title={'Веб-сайт '}/>
+                        <RegistrationInput type={'url'} name={'web_site'} title={'Веб-сайт '}/>
                         <RegistrationInput type={'text'} name={'name_contact_person'} title={'Рабочий телефон'}/>
-                        <RegistrationInput type={'text'} name={'Email_third'} title={'Email'}/>
+                        <RegistrationInput type={'text'} name={'email'} title={'Email'}/>
                         <SocialSection/>
                         <ContactFace/>
                     </div>
