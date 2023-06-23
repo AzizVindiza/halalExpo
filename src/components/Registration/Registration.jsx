@@ -35,6 +35,7 @@ const Registration = () => {
     const onSubmit = (data) => {
         try {
             addUser(data)
+
                 .unwrap()
                 .then(() => {
                     dispatch(fillRegister(data))
@@ -122,7 +123,7 @@ const Registration = () => {
                         <RegistrationPhoneNumber title={"Телефон"} name={"workPhone"}/>
                         <RegistrationPhoneNumber title={"WhatsApp"} name={"personalPhone"}/>
                         <CheckBox/>
-                        <RegistrationSelect title={"В качестве кого вы хотите посетить HIT EXPO?*"} name={"participant_sector"}/>
+                        <RegistrationSelect title={"В качестве кого вы хотите посетить HIT EXPO?"} name={"participant_sector"}/>
                         {
                             role === "Посетитель" ?
                                 ""
@@ -145,7 +146,7 @@ const Registration = () => {
 
                                                         : ""
                                         }
-                                        <ParticipantForm/>
+                                        {<ParticipantForm/>}/
                                     </>
                                     : role === "СМИ" ? <MasMediaForm/> : role === "Эксперта" ? ""
                                         : role === "Представитель государственных органов" ? <RegistrationInput type={"text"} title={"Должность"} name={"position_main"}/> : ""
