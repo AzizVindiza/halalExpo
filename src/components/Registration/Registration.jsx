@@ -20,6 +20,7 @@ import {toast} from "react-toastify";
 import {useDispatch, useSelector} from "react-redux";
 import store from "../../redux/store";
 import {fillRegister} from "../../redux/reducers/userSlice";
+import RegistrationPassword from "./RegistrationPassword/RegistrationPassword";
 
 
 const Registration = () => {
@@ -151,7 +152,10 @@ const Registration = () => {
                                     : role === "СМИ" ? <MasMediaForm/> : role === "Эксперта" ? ""
                                         : role === "Представитель государственных органов" ? <RegistrationInput type={"text"} title={"Должность"} name={"position_main"}/> : ""
                         }
-                        <RegistrationInput type={"email"} title={"Электронная почта"} name={"email"}/>
+
+                            <RegistrationInput type={"email"} title={"Электронная почта"} name={"email"}/>
+
+
                         <Btn text={"Зарегистрироваться"} type={"submit"}/>{/*главная кнопка отправки type submit*/}
                     </form>
                 </div>

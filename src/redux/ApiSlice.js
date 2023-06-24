@@ -22,9 +22,16 @@ export const apiSlice = createApi({
             })
 
         }),
+        login : builder.mutation({
+            query:(body) => ({
+                url : "login/",
+                method : "POST",
+                body
+            })
+        })
 
     })
 
 })
 
-export const {useAddPartnerMutation,useAddUserMutation,useAddImageMutation} = apiSlice
+export const {useAddPartnerMutation,useAddUserMutation,useLoginMutation} = apiSlice
