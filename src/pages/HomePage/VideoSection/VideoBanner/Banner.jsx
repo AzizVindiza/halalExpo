@@ -5,7 +5,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 
 import "swiper/css/effect-creative";
-import ban from './ban.png'
 import banner from './banner.svg'
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -59,9 +58,9 @@ const Banner = () => {
                         onInit={()=> setClickBtn(true)}
 
                     >
-                        <SwiperSlide className={"banner__slide"}><img src={ban} alt=""/></SwiperSlide>
                         <SwiperSlide className={"banner__slide"}><img src={banner} alt=""/></SwiperSlide>
-                        <SwiperSlide className={"banner__slide"}><img src={ban} alt=""/></SwiperSlide>
+                        <SwiperSlide className={"banner__slide"}><img src={banner} alt=""/></SwiperSlide>
+                        <SwiperSlide className={"banner__slide"}><img src={banner} alt=""/></SwiperSlide>
 
 
 

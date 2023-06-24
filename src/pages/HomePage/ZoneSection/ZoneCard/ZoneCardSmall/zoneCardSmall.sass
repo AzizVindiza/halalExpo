@@ -10,11 +10,13 @@
 
   &__pic
     overflow: hidden
-    height: 476px
+
   &__img
     transition: 1s
+    height: 100%
     &:hover
       transform: scale(1.2)
+
   &__wrapper
     background: #FFFFFF
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1)
@@ -22,6 +24,7 @@
     padding: 45px 33px
     display: flex
     column-gap: 36px
+    justify-content: space-between
 
   &__h2
     @include text(700,30px,133%,#0033CC)
@@ -65,6 +68,9 @@
     height: 20px
     border-radius: 50%
     color: #00000060
+  &__span
+    text-align: start
+    @include text(500,19px,133%,#000)
 
 
   &__btn
@@ -80,6 +86,95 @@
   &__click
     @include text(500,18px,133%,#ffffff)
 
+
+@media (max-width: 1201px)
+  .zona
+    &__h3
+      @include text(500,19px,133%,#ffffff)
+    &__span
+      text-align: start
+      @include text(500,19px,133%,#000)
+
+@media (max-width: 1125px)
+  .zona
+    &__container
+      padding: 0 30px
+    &__wrapper
+      padding: 30px 25px
+      column-gap: 25px
+
+    &__inner
+      column-gap: 25px
+    &__pic
+      width: 47%
+
+
+    &__h3
+      @include text(500,17px,133%,#ffffff)
+
 @media (max-width: 1025px)
   .zona
-    display: none
+    &__container
+      padding: 0
+    &__svg
+      svg
+        width: 30px
+    &__pic
+      width: 42%
+
+
+    &__list
+      row-gap: 15px
+    &__span
+      @include text(500,15px,133%,#000)
+    &__btn
+      margin: 28px 0 0 0
+      width: 165px
+      height: 40px
+    &__click
+      @include text(500,16px,133%,#ffffff)
+
+@media (max-width: 960px)
+  .zona
+    &__container
+      padding: 0 15px
+
+@media (max-width: 860px)
+  .zona
+    &__pic
+      width: 47%
+    &__inner
+      column-gap: 15px
+      margin-bottom: 20px
+    &__show
+      padding: 5px
+      column-gap: 5px
+    &__h2
+      @include text(700,25px,133%,#0033CC)
+      margin-bottom: 10px
+    &__h3
+      @include text(500,15px,133%,#ffffff)
+    &__span
+      @include text(500,13px,133%,#000)
+
+@media (max-width: 770px)
+  .zona
+    padding-top: 35px
+    margin-bottom: 0
+    &__container
+      padding: 0
+    &__wrapper
+      padding: 20px 15px
+      column-gap: 13px
+    &__pic
+      width: 41%
+    &__svg
+      width: 30px
+      svg
+        width: 30px
+    &__h2
+      @include text(700,22px,133%,#0033CC)
+    &__list
+      row-gap: 7px
+
+@media (max-width: 482px)
