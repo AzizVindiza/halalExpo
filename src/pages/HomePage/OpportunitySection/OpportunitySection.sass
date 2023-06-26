@@ -13,89 +13,322 @@
     right: 0
     bottom: 0
     margin: auto
+
+  .box
+    width: 100px
+    height: 100px
+    position: relative
+    background: url("./six.svg") center no-repeat
+    display: flex
+    justify-content: center
+    align-items: center
+
   &__h2
     @include text(800,70px,110%,#10923E)
   &__p
     @include text(400,15px,133%,#000)
-  .six
-    background: url("./six.svg") center no-repeat
-    width: 100px
-    height: 100px
+  //.six
+  //  background: url("./six.svg") center no-repeat
+  //  width: 100px
+  //  height: 100px
+  //  display: flex
+  //  justify-content: center
+  //  align-items: center
+  //  position: relative
+  //.six-blue
+  //  position: absolute
+  //  top: -50px
+  //  left: 0
+  //  right: 0
+  //  bottom: 0
+  //  margin: auto
+  //  width: 14.444vw
+  //  height: 14.444vw
+  //.box
+  //  text-align: center
+  //  display: flex
+  //  flex-direction: column
+  //  justify-content: center
+  //  align-items: center
+  //  width: 220px
+  //.six
+  //  text-align: center
+  //
+  //  &__img
+  //
+  //    width: 3.125vw
+  //    height: 3.125vw
+  //    img
+  //      transition: transform 0.5s
+  //
+  //    img:hover
+  //      transform: scale(1.5)
+  //
+  //  &__h3
+  //    margin-top: 8px
+  //    @include text(400,20px,24px,#fff)
+  //  &__title
+  //    position: absolute
+  //    left: 50%
+  //    top: 50%
+  //    text-align: center
+  //    transform: translate(-50%,-50%)
+  //    @include text(800,20px,120%,#fff)
+  //
+  //.row
+  //  display: flex
+  //
+  //  justify-content: space-between
+  //  margin: 0 auto
+  //  &__top
+  //    align-items: flex-end
+  //    margin-bottom: 5.556vw
+  //    width: 69.444vw
+  //
+  //    .box__1
+  //      margin-bottom: 17.361vw
+  //      margin-left: 6.250vw
+  //      margin-right: 6.250vw
+  //    .box__2
+  //      margin-bottom: 11.111vw
+  //  &__bot
+  //    align-items: flex-start
+  //    width: 72.917vw
+  //    .box__1
+  //      margin-top: 14.236vw
+  //      margin-left: -3.472vw
+  //    .box__2
+  //      margin-top: 14.236vw
+  //      margin-right: -3.472vw
+  //    .box__3
+  //      margin-top: 23.889vw
+  //      margin-left: 3.125vw
+  //      margin-right: 6.944vw
+  //    .box__4
+  //      margin-top: 23.889vw
+  //      margin-right: 3.125vw
+  &__wrapper
     display: flex
+    width: 100%
     justify-content: center
-    align-items: center
-    position: relative
-  .six-blue
-    position: absolute
-    top: -50px
-    left: 0
-    right: 0
-    bottom: 0
-    margin: auto
-    width: 14.444vw
-    height: 14.444vw
-  .box
-    text-align: center
-    display: flex
     flex-direction: column
-    justify-content: center
     align-items: center
-    width: 220px
-  .six
+    row-gap: 50px
+  &__center
+    background: url("opportunitySvg/center.svg") center no-repeat
+    width: 100%
+    height: 100%
+    display: flex
+    position: absolute
+    align-items: center
+    justify-content: center
+  &__h3
+    @include text(400,20px,24px,#fff)
     text-align: center
+    display: flex
+    justify-content: center
+  &__span
+    @include text(800,20px,24px,#fff)
 
-    &__img
 
-      width: 3.125vw
-      height: 3.125vw
-      img
-        transition: transform 0.5s
 
-      img:hover
-        transform: scale(1.5)
+
+  &__img
+    position: absolute
+  &__h3
+    position: relative
+    top: 70px
+  &__row
+    display: flex
+    justify-content: space-between
+    width: 38%
+    position: relative
+    top: -80px
+  &__row2
+    display: flex
+    justify-content: space-between
+    width: 60%
+    position: relative
+    top: -90px
+  &__row3
+    display: flex
+    justify-content: space-between
+    width: 62%
+    position: relative
+    top: -62px
+  &__row4
+    display: flex
+    justify-content: space-between
+    width: 54%
+    position: relative
+    top: -20px
+  &__row5
+    display: flex
+    justify-content: space-between
+    width: 25%
+    position: relative
+    top: -30px
+
+
+@media (max-width: 1201px)
+  .opportunity
+    &__h3
+      @include text(400,18px,24px,#fff)
+    &__span
+      @include text(800,18px,24px,#fff)
+    &__center
+      width: 90%
+    &__row
+      width: 44%
+      top: -80px
+    &__row2
+      width: 66%
+      top: -90px
+    &__row3
+      width: 72%
+      top: -62px
+    &__row4
+      width: 60%
+      top: -20px
+    &__row5
+      width: 29%
+      top: -30px
+
+@media (max-width: 1025px)
+  .opportunity
 
     &__h3
-      margin-top: 8px
-      @include text(400,20px,24px,#fff)
-    &__title
-      position: absolute
-      left: 50%
-      top: 50%
-      text-align: center
-      transform: translate(-50%,-50%)
-      @include text(800,20px,120%,#fff)
+      @include text(400,17px,24px,#fff)
+    &__span
+      @include text(800,17px,24px,#fff)
+    &__img
+      width: 38px
+    .box
+      background: url("opportunitySvg/poly2.svg") center no-repeat
+    &__center
+      background: url("opportunitySvg/center2.svg") center no-repeat
+    &__row
+      width: 51%
+      top: -65px
+    &__row2
+      width: 72%
+      top: -65px
+    &__row3
+      width: 75%
+      top: -44px
+    &__row4
+      width: 65%
+      top: -22px
+    &__row5
+      width: 31%
+      top: -48px
 
-  .row
-    display: flex
 
-    justify-content: space-between
-    margin: 0 auto
-    &__top
-      align-items: flex-end
-      margin-bottom: 5.556vw
-      width: 69.444vw
 
-      .box__1
-        margin-bottom: 17.361vw
-        margin-left: 6.250vw
-        margin-right: 6.250vw
-      .box__2
-        margin-bottom: 11.111vw
-    &__bot
-      align-items: flex-start
-      width: 72.917vw
-      .box__1
-        margin-top: 14.236vw
-        margin-left: -3.472vw
-      .box__2
-        margin-top: 14.236vw
-        margin-right: -3.472vw
-      .box__3
-        margin-top: 23.889vw
-        margin-left: 3.125vw
-        margin-right: 6.944vw
-      .box__4
-        margin-top: 23.889vw
-        margin-right: 3.125vw
-@media (max-width: 394px )
+@media (max-width: 770px)
   .opportunity
+
+    &__h3
+      @include text(400,13px,24px,#fff)
+    &__span
+      @include text(800,13px,24px,#fff)
+    &__img
+      width: 28px
+    .box
+      background: url("opportunitySvg/poly3.svg") center no-repeat
+    &__center
+      background: url("opportunitySvg/center3.svg") center no-repeat
+    &__wrapper
+      row-gap: 15px
+    &__row
+      width: 57%
+      top: -65px
+    &__row2
+      width: 80%
+      top: -65px
+    &__row3
+      width: 84%
+      top: -44px
+    &__row4
+      width: 71%
+      top: -22px
+    &__row5
+      width: 34%
+      top: -60px
+
+
+
+@media (max-width: 482px)
+  .opportunity
+    &__h3
+      @include text(400,12px,24px,#fff)
+    &__span
+      @include text(800,12px,24px,#fff)
+    &__img
+      width: 18px
+    .box
+      top: 140px
+      width: 80px
+      background: url("opportunitySvg/poly4.svg") center no-repeat
+    &__center
+      background: url("opportunitySvg/center4.svg") center no-repeat
+    &__box
+      top: 150px
+    &__h3
+      top: 35px
+    &__wrapper
+      row-gap: 15px
+    &__row
+      width: 60%
+      top: -85px
+    &__row2
+      width: 73%
+      top: -124px
+    &__row3
+      width: 76%
+      top: -163px
+
+    &__row4
+      width: 62%
+      top: -205px
+    &__row5
+      width: 34%
+      top: -260px
+
+
+@media (max-width: 370px)
+  .opportunity
+    &__h3
+      @include text(400,10px,24px,#fff)
+    &__span
+      @include text(800,10px,24px,#fff)
+
+
+
+    &__center
+      background: url("opportunitySvg/centerla.svg") center no-repeat
+    .box
+      top: 120px
+      background: url("opportunitySvg/polyla.svg") center no-repeat
+      width: 70px
+
+    .tired
+      top: 150px
+
+    &__row
+      width: 64%
+      top: -52px
+    &__row2
+      width: 83%
+      top: -107px
+    &__row3
+      width: 87%
+      top: -150px
+
+    &__row4
+      width: 76%
+      top: -205px
+    &__row5
+      width: 34%
+      top: -284px
+
