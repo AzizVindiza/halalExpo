@@ -21,8 +21,7 @@ const PartnerSection = () => {
                     <div className="partnerSection__block"></div>
                     <div className="partnerSection__block"></div>
                     <div className="partnerSection__block"></div>
-                    <div className="partnerSection__block"></div>
-                    <div className="partnerSection__block"></div>
+
                 </div>
             </div>
 

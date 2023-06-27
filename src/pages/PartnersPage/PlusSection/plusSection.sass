@@ -8,39 +8,40 @@
     text-align: center
   &__p
     @include text(400,13px,133%,#000000)
-    width: 302px
+    width: 100%
     margin-top: 5px
   &__wrapper
     display: flex
     justify-content: center
-    column-gap: 185px
+
     flex-wrap: wrap
     row-gap: 25px
   &__box
     display: flex
-    column-gap: 22px
-  &__pic
-    width: 78px
-    height: 71px
-    background: #D9D9D9
-    border-radius: 5px
   &__h3
     @include text(700,18px,133%,#40A865)
+  &__block
+    width: 50%
+  &__right
+    margin-left: 20px
 
 @media (max-width: 1201px)
   .plusSection
     &__p
       @include text(400,13px,133%,#000000)
-      width: 400px
-      height: 68px
+
 
     &__wrapper
-      column-gap: 95px
+
       display: flex
       flex-wrap: wrap
       row-gap: 43px
     &__box
       display: flex
+    &__pic
+      svg
+        width: 135px
+        height: 135px
 
 @media (max-width: 1025px)
   .plusSection
@@ -51,11 +52,17 @@
       @include text(700,18px,133%,#40A865)
     &__p
       @include text(400,15px,133%,#000000)
-      width: 821px
+
     &__wrapper
       row-gap: 30px
-    &__box
-      column-gap: 30px
+    &__block
+      width: 100%
+    &__pic
+      svg
+        width: 120px
+        height: 120px
+
+
 
 @media (max-width: 769px )
   .plusSection
@@ -64,12 +71,30 @@
     &__h3
       @include text(700,16px,133%,#40A865)
     &__p
-      width: 590px
-    &__box
-      column-gap: 16px
+      @include text(400,15px,133%,#000000)
+
     &__pic
       width: 60px
       height: 60px
+      svg
+        width: 115px
+        height: 115px
+    &__right
+      margin-left: 50px
+
+@media (max-width: 481px )
+  .plusSection
+    &__h2
+      @include text(800,22px,120%,#00862D)
+    &__p
+      @include text(400,15px,133%,#000000)
+
+    &__h3
+      @include text(700,16px,133%,#40A865)
+    &__pic
+      svg
+        width: 90px
+        height: 90px
 
 @media (max-width: 394px )
   .plusSection
@@ -81,13 +106,15 @@
 
     &__p
       @include text(400,15px,133%,#000000)
-      width: 300px
+
 
       margin-bottom: 3px
     &__pic
       width: 42px
       height: 42px
-    &__box
-      column-gap: 8px
+      svg
+        width: 70px
+        height: 70px
+
     &__wrapper
       row-gap: 100px
