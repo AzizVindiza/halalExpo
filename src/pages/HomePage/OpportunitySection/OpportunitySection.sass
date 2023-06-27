@@ -3,7 +3,7 @@
 .opportunity
   overflow: hidden
   &__container
-    padding: 100px 0
+    height: 1050px
     position: relative
     background: linear-gradient(180deg, #001F43 10.32%, #023571 83.24%)
   &__bg
@@ -14,7 +14,59 @@
     bottom: 0
     margin: auto
 
-  .box
+  &__row
+    align-items: baseline
+    position: absolute
+    top: 99px
+  &__row2
+    align-items: baseline
+    display: flex
+    justify-content: space-between
+    position: absolute
+    width: 536px
+    top: 165px
+
+  &__row3
+    align-items: baseline
+    display: flex
+    justify-content: space-between
+    position: absolute
+    width: 826px
+    top: 311px
+
+  &__row4
+    align-items: baseline
+    display: flex
+    justify-content: space-between
+    position: absolute
+    width: 890px
+    top: 505px
+
+  &__row5
+    align-items: baseline
+    display: flex
+    justify-content: space-between
+    position: absolute
+    width: 750px
+    top: 680px
+
+  &__row6
+    align-items: baseline
+    display: flex
+    justify-content: space-between
+    position: absolute
+    width: 380px
+    top: 793px
+
+  &__box
+    display: flex
+    flex-direction: column
+    text-align: center
+    justify-content: center
+    align-items: center
+    width: 157px
+
+  &__img
     width: 100px
     height: 100px
     position: relative
@@ -22,6 +74,11 @@
     display: flex
     justify-content: center
     align-items: center
+    img
+      width: 45px
+
+
+
 
   &__h2
     @include text(800,70px,110%,#10923E)
@@ -110,7 +167,6 @@
   &__wrapper
     display: flex
     width: 100%
-    justify-content: center
     flex-direction: column
     align-items: center
     row-gap: 50px
@@ -131,204 +187,356 @@
     @include text(800,20px,24px,#fff)
 
 
-
-
-  &__img
-    position: absolute
-  &__h3
-    position: relative
-    top: 70px
-  &__row
-    display: flex
-    justify-content: space-between
-    width: 38%
-    position: relative
-    top: -80px
-  &__row2
-    display: flex
-    justify-content: space-between
-    width: 60%
-    position: relative
-    top: -90px
-  &__row3
-    display: flex
-    justify-content: space-between
-    width: 62%
-    position: relative
-    top: -62px
-  &__row4
-    display: flex
-    justify-content: space-between
-    width: 54%
-    position: relative
-    top: -20px
-  &__row5
-    display: flex
-    justify-content: space-between
-    width: 25%
-    position: relative
-    top: -30px
-
-
 @media (max-width: 1201px)
   .opportunity
+    &__center
+      background: url("opportunitySvg/c1201.svg") center no-repeat
+      width: 100%
+      height: 100%
+      display: flex
+      position: absolute
+      align-items: center
+      justify-content: center
+
+    &__img
+      width: 90px
+      height: 90px
+      position: relative
+      background: url("opportunitySvg/p1201.svg") center no-repeat
+      display: flex
+      justify-content: center
+      align-items: center
+      img
+        width: 38px
+
     &__h3
       @include text(400,18px,24px,#fff)
+      text-align: center
+      display: flex
+      justify-content: center
     &__span
       @include text(800,18px,24px,#fff)
-    &__center
-      width: 90%
+    &__container
+      height: 878px
+
     &__row
-      width: 44%
-      top: -80px
+      top: 42px
     &__row2
-      width: 66%
-      top: -90px
+      width: 536px
+      top: 101px
+
     &__row3
-      width: 72%
-      top: -62px
+      width: 826px
+      top: 233px
+
     &__row4
-      width: 60%
-      top: -20px
+      width: 890px
+      top: 408px
+
     &__row5
-      width: 29%
-      top: -30px
+      width: 750px
+      top: 566px
+
+    &__row6
+      width: 380px
+      top: 688px
+
+    &__box
+      width: 157px
+
+
+
+
 
 @media (max-width: 1025px)
   .opportunity
+    &__center
+      background: url("opportunitySvg/c1025.svg") center no-repeat
+      width: 100%
+      height: 100%
+      display: flex
+      position: absolute
+      align-items: center
+      justify-content: center
+
+    &__img
+      width: 85px
+      height: 85px
+      position: relative
+      background: url("opportunitySvg/p1025.svg") center no-repeat
+      display: flex
+      justify-content: center
+      align-items: center
+      img
+        width: 38px
 
     &__h3
       @include text(400,17px,24px,#fff)
+      text-align: center
+      display: flex
+      justify-content: center
     &__span
       @include text(800,17px,24px,#fff)
-    &__img
-      width: 38px
-    .box
-      background: url("opportunitySvg/poly2.svg") center no-repeat
-    &__center
-      background: url("opportunitySvg/center2.svg") center no-repeat
+    &__container
+      height: 864px
+      padding: 0 15px
+
     &__row
-      width: 51%
-      top: -65px
+      top: 57px
     &__row2
-      width: 72%
-      top: -65px
+      width: 500px
+      top: 112px
+
     &__row3
-      width: 75%
-      top: -44px
+      width: 760px
+      top: 236px
+
     &__row4
-      width: 65%
-      top: -22px
+      width: 790px
+      top: 399px
+
     &__row5
-      width: 31%
-      top: -48px
+      width: 700px
+      top: 547px
 
+    &__row6
+      width: 335px
+      top: 643px
 
+    &__box
+      width: 157px
 
 @media (max-width: 770px)
   .opportunity
+    &__center
+      background: url("opportunitySvg/c770.svg") center no-repeat
+      width: 100%
+      height: 100%
+      display: flex
+      position: absolute
+      align-items: center
+      justify-content: center
+
+    &__img
+      width: 64px
+      height: 64px
+      position: relative
+      background: url("opportunitySvg/p770.svg") center no-repeat
+      display: flex
+      justify-content: center
+      align-items: center
+      img
+        width: 28px
 
     &__h3
-      @include text(400,13px,24px,#fff)
+      @include text(400,13px,133%,#fff)
+      text-align: center
+      display: flex
+      justify-content: center
     &__span
-      @include text(800,13px,24px,#fff)
-    &__img
-      width: 28px
-    .box
-      background: url("opportunitySvg/poly3.svg") center no-repeat
-    &__center
-      background: url("opportunitySvg/center3.svg") center no-repeat
-    &__wrapper
-      row-gap: 15px
+      @include text(800,13px,133%,#fff)
+    &__container
+      height: 648px
+
     &__row
-      width: 57%
-      top: -65px
+      top: 42px
     &__row2
-      width: 80%
-      top: -65px
+      width: 424px
+      top: 84px
+
     &__row3
-      width: 84%
-      top: -44px
+      width: 555px
+      top: 177px
+
     &__row4
-      width: 71%
-      top: -22px
+      width: 602px
+      top: 300px
+
     &__row5
-      width: 34%
-      top: -60px
+      width: 503px
+      top: 411px
+
+    &__row6
+      width: 246px
+      top: 482px
+
+    &__box
+      width: 157px
+
+@media (max-width: 565px)
+  .opportunity
+    &__row
+      top: 42px
+    &__row2
+      width: 364px //
+      top: 84px
+
+    &__row3
+     width: 480px
+     top: 177px
+
+    &__row4
+      width: 500px
+      top: 300px
+
+    &__row5
+      width: 420px
+      top: 411px
+
+    &__row6
+      width: 200px
+      top: 482px
 
 
 
 @media (max-width: 482px)
   .opportunity
-    &__h3
-      @include text(400,12px,24px,#fff)
-    &__span
-      @include text(800,12px,24px,#fff)
-    &__img
-      width: 18px
-    .box
-      top: 140px
-      width: 80px
-      background: url("opportunitySvg/poly4.svg") center no-repeat
     &__center
-      background: url("opportunitySvg/center4.svg") center no-repeat
-    &__box
-      top: 150px
+      background: url("opportunitySvg/c482.svg") center no-repeat
+      width: 100%
+      height: 100%
+      display: flex
+      position: absolute
+      align-items: center
+      justify-content: center
+
+    &__img
+      width: 52px
+      height: 52px
+      position: relative
+      background: url("opportunitySvg/p482.svg") center no-repeat
+      display: flex
+      justify-content: center
+      align-items: center
+      img
+        width: 22px
     &__h3
-      top: 35px
-    &__wrapper
-      row-gap: 15px
+      @include text(400,11px,133%,#fff)
+    &__container
+      height: 603px
     &__row
-      width: 60%
-      top: -85px
+      top: 67px
     &__row2
-      width: 73%
-      top: -124px
+      width: 365px
+      top: 101px
+
     &__row3
-      width: 76%
-      top: -163px
+      width: 480px
+      top: 178px
 
     &__row4
-      width: 62%
-      top: -205px
-    &__row5
-      width: 34%
-      top: -260px
+      width: 500px
+      top: 280px
 
+    &__row5
+      width: 420px
+      top: 371px
+
+    &__row6
+      width: 170px
+      top: 431px
+
+    &__box
+      width: 157px
+
+
+@media (max-width: 437px)
+  .opportunity
+    &__center
+      background: url("opportunitySvg/c482.svg") center no-repeat
+      width: 100%
+      height: 100%
+      display: flex
+      position: absolute
+      align-items: center
+      justify-content: center
+
+    &__img
+      width: 52px
+      height: 52px
+      position: relative
+      background: url("opportunitySvg/p482.svg") center no-repeat
+      display: flex
+      justify-content: center
+      align-items: center
+      img
+        width: 22px
+    &__h3
+      @include text(400,10px,133%,#fff)
+
+    &__container
+      height: 603px
+    &__row
+      top: 67px
+    &__row2
+      width: 300px
+      top: 101px
+
+    &__row3
+      width: 388px
+      top: 178px
+
+    &__row4
+      width: 400px
+      top: 280px
+
+    &__row5
+      width: 333px
+      top: 371px
+
+    &__row6
+      width: 145px
+      top: 431px
+
+    &__box
+      width: 130px
 
 @media (max-width: 370px)
   .opportunity
-    &__h3
-      @include text(400,10px,24px,#fff)
-    &__span
-      @include text(800,10px,24px,#fff)
-
-
-
     &__center
-      background: url("opportunitySvg/centerla.svg") center no-repeat
-    .box
-      top: 120px
-      background: url("opportunitySvg/polyla.svg") center no-repeat
-      width: 70px
+      background: url("opportunitySvg/c370.svg") center no-repeat
+      width: 100%
+      height: 100%
+      display: flex
+      position: absolute
+      align-items: center
+      justify-content: center
 
-    .tired
-      top: 150px
-
+    &__img
+      width: 52px
+      height: 52px
+      position: relative
+      background: url("opportunitySvg/p370.svg") center no-repeat
+      display: flex
+      justify-content: center
+      align-items: center
+      img
+        width: 22px
+    &__h3
+      @include text(400,10px,133%,#fff)
+    &__span
+      @include text(400,10px,133%,#fff)
+    &__container
+      height: 493px
     &__row
-      width: 64%
-      top: -52px
+      top: 54px
     &__row2
-      width: 83%
-      top: -107px
+      width: 320px
+      top: 82px
+
     &__row3
-      width: 87%
-      top: -150px
+      width: 407px
+      top: 145px
 
     &__row4
-      width: 76%
-      top: -205px
+      width: 425px
+      top: 228px
+
     &__row5
-      width: 34%
-      top: -284px
+      width: 345px
+      top: 303px
+
+    &__row6
+      width: 136px
+      top: 352px
 
