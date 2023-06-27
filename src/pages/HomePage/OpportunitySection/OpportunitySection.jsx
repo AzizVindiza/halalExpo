@@ -37,93 +37,189 @@ const OpportunitySection = () => {
                             Возможность <br/> встретиться с
                         </span>
                     </div>
-
-                    <div className="opportunity__box box tired">
-                        <div className="opportunity__img">
-                            <img src={img} alt=""/>
-                        </div>
-                        <h3 className="opportunity__h3 er">{t("opportunitySection.Government")}</h3>
-                    </div>
                     <div className="opportunity__row">
-                        <div className="opportunity__box box">
-                            <div className="opportunity__img">
-                                <img src={dis} alt=""/>
+                        <div className="opportunity__box">
+                            <div className="opportunity__img box">
+                                <img src={img} alt=""/>
                             </div>
-                            <h3 className="opportunity__h3">{t("opportunitySection.Distributors")}</h3>
+                            <h3 className="opportunity__h3 er">{t("opportunitySection.Government")}</h3>
                         </div>
-                        <div className="opportunity__box box">
-                            <div className="opportunity__img">
-                                <img src={science} alt=""/>
-                            </div>
-                            <h3 className="opportunity__h3">{t("opportunitySection.Scientific")}</h3>
-                        </div>
-
-
                     </div>
                     <div className="opportunity__row2">
-                        <div className="opportunity__box box">
-                            <div className="opportunity__img">
-                                <img src={buy} alt=""/>
+                        <div className="opportunity__box">
+                            <div className="opportunity__img box">
+                                <img src={dis} alt=""/>
                             </div>
-                            <h3 className="opportunity__h3">{t("opportunitySection.Buyers")}</h3>
+                            <h3 className="opportunity__h3 er">{t("opportunitySection.Distributors")}</h3>
                         </div>
-                        <div className="opportunity__box box">
-                            <div className="opportunity__img">
-                                <img src={devel} alt=""/>
+                        <div className="opportunity__box">
+                            <div className="opportunity__img box">
+                                <img src={science} alt=""/>
                             </div>
-                            <h3 className="opportunity__h3">{t("opportunitySection.Politicians")}</h3>
+                            <h3 className="opportunity__h3 er">{t("opportunitySection.Scientific")}</h3>
                         </div>
-
-
                     </div>
                     <div className="opportunity__row3">
-                        <div className="opportunity__box box">
-                            <div className="opportunity__img">
-                                <img src={manu} alt=""/>
+                        <div className="opportunity__box">
+                            <div className="opportunity__img box">
+                                <img src={buy} alt=""/>
                             </div>
-                            <h3 className="opportunity__h3">{t("opportunitySection.Manufacturers")}</h3>
+                            <h3 className="opportunity__h3 er">{t("opportunitySection.Buyers")}</h3>
                         </div>
-                        <div className="opportunity__box box">
-                            <div className="opportunity__img">
-                                <img src={people} alt=""/>
+                        <div className="opportunity__box">
+                            <div className="opportunity__img box">
+                                <img src={devel} alt=""/>
                             </div>
-                            <h3 className="opportunity__h3">{t("opportunitySection.Consumers")}</h3>
+                            <h3 className="opportunity__h3 er">{t("opportunitySection.Politicians")}</h3>
                         </div>
-
-
                     </div>
                     <div className="opportunity__row4">
-                        <div className="opportunity__box box">
-                            <div className="opportunity__img">
-                                <img src={lider} alt=""/>
+                        <div className="opportunity__box">
+                            <div className="opportunity__img box">
+                                <img src={manu} alt=""/>
                             </div>
-                            <h3 className="opportunity__h3">{t("opportunitySection.Opinion")}</h3>
+                            <h3 className="opportunity__h3 er">{t("opportunitySection.Manufacturers")}</h3>
                         </div>
-                        <div className="opportunity__box box">
-                            <div className="opportunity__img">
-                                <img src={inv} alt=""/>
+                        <div className="opportunity__box">
+                            <div className="opportunity__img box">
+                                <img src={people} alt=""/>
                             </div>
-                            <h3 className="opportunity__h3">{t("opportunitySection.Investors")}</h3>
+                            <h3 className="opportunity__h3 er">{t("opportunitySection.Consumers")}</h3>
                         </div>
-
-
                     </div>
                     <div className="opportunity__row5">
-                        <div className="opportunity__box box">
-                            <div className="opportunity__img">
+                        <div className="opportunity__box">
+                            <div className="opportunity__img box">
+                                <img src={lider} alt=""/>
+                            </div>
+                            <h3 className="opportunity__h3 er">{t("opportunitySection.Opinion")}</h3>
+                        </div>
+                        <div className="opportunity__box">
+                            <div className="opportunity__img box">
+                                <img src={inv} alt=""/>
+                            </div>
+                            <h3 className="opportunity__h3 er">{t("opportunitySection.Investors")}</h3>
+                        </div>
+                    </div>
+                    <div className="opportunity__row6">
+                        <div className="opportunity__box">
+                            <div className="opportunity__img box">
                                 <img src={novator} alt=""/>
                             </div>
-                            <h3 className="opportunity__h3">{t("opportunitySection.Innovators")}</h3>
+                            <h3 className="opportunity__h3 er">{t("opportunitySection.Innovators")}</h3>
                         </div>
-                        <div className="opportunity__box box">
-                            <div className="opportunity__img">
+                        <div className="opportunity__box">
+                            <div className="opportunity__img box">
                                 <img src={sales} alt=""/>
                             </div>
-                            <h3 className="opportunity__h3">{t("opportunitySection.Retailers")}</h3>
+                            <h3 className="opportunity__h3 er">{t("opportunitySection.Retailers")}</h3>
                         </div>
-
-
                     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    {/*<div className="opportunity__box box tired">*/}
+                    {/*    <div className="opportunity__img">*/}
+                    {/*        <img src={img} alt=""/>*/}
+                    {/*    </div>*/}
+                    {/*    <h3 className="opportunity__h3 er">{t("opportunitySection.Government")}</h3>*/}
+                    {/*</div>*/}
+                    {/*<div className="opportunity__row">*/}
+                    {/*    <div className="opportunity__box box">*/}
+                    {/*        <div className="opportunity__img">*/}
+                    {/*            <img src={dis} alt=""/>*/}
+                    {/*        </div>*/}
+                    {/*        <h3 className="opportunity__h3">{t("opportunitySection.Distributors")}</h3>*/}
+                    {/*    </div>*/}
+                    {/*    <div className="opportunity__box box">*/}
+                    {/*        <div className="opportunity__img">*/}
+                    {/*            <img src={science} alt=""/>*/}
+                    {/*        </div>*/}
+                    {/*        <h3 className="opportunity__h3">{t("opportunitySection.Scientific")}</h3>*/}
+                    {/*    </div>*/}
+
+
+                    {/*</div>*/}
+                    {/*<div className="opportunity__row2">*/}
+                    {/*    <div className="opportunity__box box">*/}
+                    {/*        <div className="opportunity__img">*/}
+                    {/*            <img src={buy} alt=""/>*/}
+                    {/*        </div>*/}
+                    {/*        <h3 className="opportunity__h3">{t("opportunitySection.Buyers")}</h3>*/}
+                    {/*    </div>*/}
+                    {/*    <div className="opportunity__box box">*/}
+                    {/*        <div className="opportunity__img">*/}
+                    {/*            <img src={devel} alt=""/>*/}
+                    {/*        </div>*/}
+                    {/*        <h3 className="opportunity__h3">{t("opportunitySection.Politicians")}</h3>*/}
+                    {/*    </div>*/}
+
+
+                    {/*</div>*/}
+                    {/*<div className="opportunity__row3">*/}
+                    {/*    <div className="opportunity__box box">*/}
+                    {/*        <div className="opportunity__img">*/}
+                    {/*            <img src={manu} alt=""/>*/}
+                    {/*        </div>*/}
+                    {/*        <h3 className="opportunity__h3">{t("opportunitySection.Manufacturers")}</h3>*/}
+                    {/*    </div>*/}
+                    {/*    <div className="opportunity__box box">*/}
+                    {/*        <div className="opportunity__img">*/}
+                    {/*            <img src={people} alt=""/>*/}
+                    {/*        </div>*/}
+                    {/*        <h3 className="opportunity__h3">{t("opportunitySection.Consumers")}</h3>*/}
+                    {/*    </div>*/}
+
+
+                    {/*</div>*/}
+                    {/*<div className="opportunity__row4">*/}
+                    {/*    <div className="opportunity__box box">*/}
+                    {/*        <div className="opportunity__img">*/}
+                    {/*            <img src={lider} alt=""/>*/}
+                    {/*        </div>*/}
+                    {/*        <h3 className="opportunity__h3">{t("opportunitySection.Opinion")}</h3>*/}
+                    {/*    </div>*/}
+                    {/*    <div className="opportunity__box box">*/}
+                    {/*        <div className="opportunity__img">*/}
+                    {/*            <img src={inv} alt=""/>*/}
+                    {/*        </div>*/}
+                    {/*        <h3 className="opportunity__h3">{t("opportunitySection.Investors")}</h3>*/}
+                    {/*    </div>*/}
+
+
+                    {/*</div>*/}
+                    {/*<div className="opportunity__row5">*/}
+                    {/*    <div className="opportunity__box box">*/}
+                    {/*        <div className="opportunity__img">*/}
+                    {/*            <img src={novator} alt=""/>*/}
+                    {/*        </div>*/}
+                    {/*        <h3 className="opportunity__h3">{t("opportunitySection.Innovators")}</h3>*/}
+                    {/*    </div>*/}
+                    {/*    <div className="opportunity__box box">*/}
+                    {/*        <div className="opportunity__img">*/}
+                    {/*            <img src={sales} alt=""/>*/}
+                    {/*        </div>*/}
+                    {/*        <h3 className="opportunity__h3">{t("opportunitySection.Retailers")}</h3>*/}
+                    {/*    </div>*/}
+
+
+                    {/*</div>*/}
 
 
                 </div>
