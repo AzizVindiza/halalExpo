@@ -2,7 +2,7 @@
   margin-top: 100px
   &__wrapper
     position: relative
-    width: 1230px
+    width: 100%
     display: flex
     justify-content: center
     height: 480px
@@ -10,7 +10,7 @@
   img
     display: flex
     margin: 0 auto
-    width: 1170px
+    width: 90%
     height: 450px
   &__slide
     background: #FFFFFF
@@ -44,3 +44,34 @@
       height: 60px
       border-radius: 50%
 
+@media (max-width: 1025px)
+  .banner
+    &__wrapper
+      height: 400px
+    img
+      height: 400px
+
+@media (max-width: 770px)
+  .banner
+    &__wrapper
+      height: 330px
+    img
+      height: 340px
+    &__nav
+      &_before , &_after
+        width: 40px
+        height: 40px
+@media (max-width: 482px)
+  .banner
+    margin-top: 0
+    &__wrapper
+      height: 250px
+    img
+      height: 262px
+    &__nav
+      &_before , &_after
+        display: none
+@media (max-width: 394px)
+  .banner
+    &__wrapper
+      height: 230px

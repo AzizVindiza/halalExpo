@@ -56,7 +56,7 @@ const ZoneSection = ({item,img}) => {
                         </div>
                         <ul className="zona__list">
                             {item.li.map((item,idx)=>(
-                                <li key={idx} className="zona__li"><div className={'zona__circle'}>{idx+1}</div>{item}</li>
+                                <li key={idx} className="zona__li"><div className={'zona__circle'}>{idx+1}</div><span className="zona__span">{item}</span></li>
                             ))}
 
                         </ul>

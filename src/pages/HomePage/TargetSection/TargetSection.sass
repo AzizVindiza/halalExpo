@@ -34,7 +34,7 @@
       @include text(400,30px,40px,#000)
       width: 560px
     &__h2
-      @include text(800,25px,42px,#40A865)
+      @include text(800,22px,42px,#40A865)
     &__txt
       padding: 25px
 
@@ -48,14 +48,13 @@
 
 @media (max-width: 770px)
   .target
-
     &__container
       background: #FFFFFF
       row-gap: 0
       width: 90%
-      &__img
-        svg
-          width: 250px
+    &__img
+      svg
+        width: 250px
     &__txt
       box-shadow: none
       text-align: center
@@ -66,6 +65,25 @@
     &__p
       width: 100%
       display: flex
-      @include text(400,20px,40px,#000)
+      @include text(400,17px,40px,#000)
 
       margin:  0 auto
+@media (max-width: 482px)
+  .target
+    &__img
+      padding: 10px 0
+      svg
+        width: 152px
+        height: 180px
+    &__h2
+      @include text(800,22px,42px,#40A865)
+      margin-bottom: 0
+    &__p
+      @include text(400,15px,40px,#000)
+@media (max-width: 394px)
+  .target
+    &__h2
+      @include text(800,20px,42px,#40A865)
+    &__p
+      @include text(400,14px,40px,#000)
+

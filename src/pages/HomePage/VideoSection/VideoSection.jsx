@@ -5,7 +5,7 @@ import Banner from "./VideoBanner/Banner";
 const VideoSection = () => {
     return (
         <section className="video">
-            <div className="video__container container_fluid">
+            <div className="video__container container">
                 <div className="video__iframe">
 
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/FlE9rRQKqcM"
