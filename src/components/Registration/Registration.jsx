@@ -21,11 +21,13 @@ import axios from "axios";
 
 
 const Registration = () => {
+
     const methods = useForm({mode: "onBlur"});
     // использую переменную methods чтобы передавать вложенным инпутам
     const {setClose, role, members} = useContext(CustomContext)
 
     const onSubmit = (data) => {
+        const id = toast.loading("Please wait...")
         try {
             data = {
                 ...data,
@@ -33,47 +35,40 @@ const Registration = () => {
                 image_id_two: data.image_id_two[0],
                 image_id_three: data.image_id_three[0],
             }
-            axios.post('https://shark-app-65hkc.ondigitalocean.app/registration/', data, {
+            axios('https://shark-app-65hkc.ondigitalocefsdfan.app/registration/', data, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
             }).then((res) => {
+
                 console.log(res)
-                toast.success('Заявка отпралена!', {
-                    position: "top-center",
-                    autoClose: 5000,
-                    hideProgressBar: false,
-                    closeOnClick: false,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "colored",
-                });
+
                 setClose(false)
             }).catch((err) => {
-                console.log(err.response.data)
-                toast.error(err.response.data.email.length === 0 ? 'Ошибка в сервере!' : err.response.data.email[0] , {
+                toast.update(id, {
+                    render: !err.response.data.email ? 'Ошибка в сервере!' : err.response.data.email[0], type: "error", isLoading: false,
                     position: "top-center",
                     autoClose: 5000,
                     hideProgressBar: false,
-                    closeOnClick: false,
+                    closeOnClick: true,
                     pauseOnHover: true,
                     draggable: true,
                     progress: undefined,
-                    theme: "colored",
+                    theme: "light"
                 });
             })
 
         } catch (error) {
-            toast.error('Ошибка в сервере!', {
+            toast.update(id, {
+                render: 'Ошибка в сервере!', type: "error", isLoading: false,
                 position: "top-center",
                 autoClose: 5000,
                 hideProgressBar: false,
-                closeOnClick: false,
+                closeOnClick: true,
                 pauseOnHover: true,
                 draggable: true,
                 progress: undefined,
-                theme: "light",
+                theme: "light"
             });
         }
 
@@ -86,6 +81,7 @@ const Registration = () => {
                 <div className="registration__wrapper">
                     <form className='registration__form'
                           onSubmit={methods.handleSubmit(onSubmit)}>{/*форма*/}{/*беру функцию handleSubmit из rhf и передаю onSubmit*/}
+
 
                         <div onClick={() => setClose(false)} className="registration__close">
                             <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
@@ -142,21 +138,23 @@ const Registration = () => {
                                         }
                                         {<ParticipantForm/>}
                                     </>
-                                    : role === "СМИ" ? <MasMediaForm/> : role === "Эксперта" ? ""
-                                        : role === "Представитель государственных органов" ?
-                                            <RegistrationInput type={"text"} title={"Должность"}
-                                                               name={"position_main"}/> : ""
-                        }
-
-                        <RegistrationInput type={"email"} title={"Электронная почта"} name={"email"}/>
 
 
-                        <Btn text={"Зарегистрироваться"} type={"submit"}/>{/*главная кнопка отправки type submit*/}
-                    </form>
-                </div>
+                            : role === "СМИ" ? <MasMediaForm/> : role === "Эксперта" ? ""
+                            : role === "Представитель государственных органов" ?
+                            <RegistrationInput type={"text"} title={"Должность"}
+                          name={"position_main"}/> : ""
+                    }
+
+                    <RegistrationInput type={"email"} title={"Электронная почта"} name={"email"}/>
+
+
+                    <Btn text={"Зарегистрироваться"} type={"submit"}/>{/*главная кнопка отправки type submit*/}
+                </form>
             </div>
-        </FormProvider>
-    );
+        </div>
+</FormProvider>
+);
 };
 
 export default Registration;
