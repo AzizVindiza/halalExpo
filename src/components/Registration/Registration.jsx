@@ -21,11 +21,6 @@ import axios from "axios";
 
 
 const Registration = () => {
-<<<<<<< HEAD
-     const dispatch = useDispatch()
-
-=======
->>>>>>> 876d195deba2b452f54f8f2bf98ec3b6a7791d13
     const methods = useForm({mode: "onBlur"});
     // использую переменную methods чтобы передавать вложенным инпутам
     const {setClose, role, members} = useContext(CustomContext)
