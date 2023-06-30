@@ -42,11 +42,11 @@ const Header = () => {
                 </div>
             </div>
             <ToastContainer
-                position="top-left"
+                position="top-center"
                 autoClose={5000}
                 hideProgressBar={false}
                 newestOnTop={false}
-                closeOnClick={false}
+                closeOnClick
                 rtl={false}
                 pauseOnFocusLoss
                 draggable

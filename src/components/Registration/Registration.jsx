@@ -21,16 +21,13 @@ import axios from "axios";
 
 
 const Registration = () => {
-<<<<<<< HEAD
-     const dispatch = useDispatch()
 
-=======
->>>>>>> 876d195deba2b452f54f8f2bf98ec3b6a7791d13
     const methods = useForm({mode: "onBlur"});
     // использую переменную methods чтобы передавать вложенным инпутам
     const {setClose, role, members} = useContext(CustomContext)
 
     const onSubmit = (data) => {
+        const id = toast.loading("Please wait...")
         try {
             data = {
                 ...data,
@@ -38,47 +35,49 @@ const Registration = () => {
                 image_id_two: data.image_id_two[0],
                 image_id_three: data.image_id_three[0],
             }
-            axios.post('https://shark-app-65hkc.ondigitalocean.app/registration/', data, {
+            axios.post('https://shark-app-65hkc.ondigitalocefsdfan.app/registration/', data, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
             }).then((res) => {
                     console.log(res)
-                    toast.success('Заявка отпралена!', {
+                    toast.update(id, {
+                        render: "Вы зарегистрированы", type: "success", isLoading: false,
                         position: "top-center",
                         autoClose: 5000,
                         hideProgressBar: false,
-                        closeOnClick: false,
+                        closeOnClick: true,
                         pauseOnHover: true,
                         draggable: true,
                         progress: undefined,
-                        theme: "colored",
+                        theme: "light"
                     });
                     setClose(false)
                 }).catch((err) => {
-                    console.log(err.response.data)
-                    toast.error(err.response.data.email.length === 0 ? 'Ошибка в сервере!' : err.response.data.email[0] , {
+                    toast.update(id, {
+                        render: !err.response.data.email ? 'Ошибка в сервере!' : err.response.data.email[0], type: "error", isLoading: false,
                         position: "top-center",
                         autoClose: 5000,
                         hideProgressBar: false,
-                        closeOnClick: false,
+                        closeOnClick: true,
                         pauseOnHover: true,
                         draggable: true,
                         progress: undefined,
-                        theme: "colored",
+                        theme: "light"
                     });
                 })
 
         } catch (error) {
-            toast.error('Ошибка в сервере!', {
+            toast.update(id, {
+                render: 'Ошибка в сервере!', type: "error", isLoading: false,
                 position: "top-center",
                 autoClose: 5000,
                 hideProgressBar: false,
-                closeOnClick: false,
+                closeOnClick: true,
                 pauseOnHover: true,
                 draggable: true,
                 progress: undefined,
-                theme: "light",
+                theme: "light"
             });
         }
 
