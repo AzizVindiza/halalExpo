@@ -20,6 +20,7 @@ import {toast} from "react-toastify";
 import {useDispatch, useSelector} from "react-redux";
 import store from "../../redux/store";
 import {fillRegister} from "../../redux/reducers/userSlice";
+import img from "./information 1.png"
 import RegistrationPassword from "./RegistrationPassword/RegistrationPassword";
 
 
@@ -102,17 +103,11 @@ const Registration = () => {
                         <h2 className="registration__h2">Регистрация</h2>
 
                         <p className="registration__p">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been
-                            the industry's standard dummy text ever since the 1500s, when Lorem Ipsum is simply dummy
-                            text
-                            of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-                            text ever since the 1500s, when Lorem Ipsum is simply dummy text of the printing and
-                            typesetting
-                            industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                            when.
+                            <img src={img} alt="" className="registration__img"/>
+                            <span className="registration__span">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                            </span>
                         </p>
-
                         <RegistrationInput type={"text"} title={"ФИО"} name={"name"}/>
 
                         <RegistrationInput type={"text"} title={"Страна"} name={"country"}/>
@@ -144,16 +139,16 @@ const Registration = () => {
                                                     :
                                                     members === "Investment" ?
                                                         <ChooseIndustry/>
-
                                                         : ""
                                         }
-                                        {<ParticipantForm/>}/
+                                        {<ParticipantForm/>}
                                     </>
                                     : role === "СМИ" ? <MasMediaForm/> : role === "Эксперта" ? ""
                                         : role === "Представитель государственных органов" ? <RegistrationInput type={"text"} title={"Должность"} name={"position_main"}/> : ""
                         }
 
                             <RegistrationInput type={"email"} title={"Электронная почта"} name={"email"}/>
+
 
 
                         <Btn text={"Зарегистрироваться"} type={"submit"}/>{/*главная кнопка отправки type submit*/}

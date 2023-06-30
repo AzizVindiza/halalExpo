@@ -8,10 +8,10 @@ const CheckBox = () => {
             <div className="checkBox__wrapper">
                 <div  className="checkBox__box" >
                     <h2 className="checkBox__name" >Я заинтересован в</h2>
-                    <InvestorCheck title={'Посещение на HIT EXPO'} name={'visit'}/>
-                    <InvestorCheck title={'Участие на HIT EXPO'} name={'participation'}/>
-                    <InvestorCheck title={'Поиске проектов'} name={'projects'}/>
-                    <InvestorCheck title={'Другое'} name={'other_one'}/>
+                    <InvestorCheck theme={'label'} title={'Посещение на HIT EXPO'} name={'visit'}/>
+                    <InvestorCheck theme={'label'} title={'Участие на HIT EXPO'} name={'participation'}/>
+                    <InvestorCheck theme={'label'} title={'Поиске проектов'} name={'projects'}/>
+                    <InvestorCheck theme={'label'} title={'Другое'} name={'other_one'}/>
                 </div>
                 <div  className="checkBox__box" >
                     <h2 className="checkBox__name" >Как вы узнали о мероприятие?</h2>
