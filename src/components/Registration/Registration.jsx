@@ -15,33 +15,35 @@ import RegistrationSelectFashion from "./RegistrationSelectFashion/RegistrationS
 import RegistrationSelectFood from "./RegistrationSelectFood/RegistrationSelectFood";
 import ChooseIndustry from "./ChooseIndustry/ChooseIndustry";
 import RegistrationUploadInput from "./RegistrationUploadInput/RegistrationUploadInput";
-import {useAddUserMutation} from "../../redux/ApiSlice";
 import {toast} from "react-toastify";
-import {useDispatch, useSelector} from "react-redux";
-import store from "../../redux/store";
-import {fillRegister} from "../../redux/reducers/userSlice";
 import img from "./information 1.png"
-import RegistrationPassword from "./RegistrationPassword/RegistrationPassword";
+import axios from "axios";
 
 
 const Registration = () => {
-    const {user} = useSelector((store) => store.user)
-    const dispatch = useDispatch()
+<<<<<<< HEAD
+     const dispatch = useDispatch()
 
+=======
+>>>>>>> 876d195deba2b452f54f8f2bf98ec3b6a7791d13
     const methods = useForm({mode: "onBlur"});
     // использую переменную methods чтобы передавать вложенным инпутам
-    const [addUser]= useAddUserMutation()
-
     const {setClose, role, members} = useContext(CustomContext)
 
     const onSubmit = (data) => {
         try {
-            addUser(data)
-
-                .unwrap()
-                .then(() => {
-                    dispatch(fillRegister(data))
-                    console.log(data)
+            data = {
+                ...data,
+                image_id_one: data.image_id_one[0],
+                image_id_two: data.image_id_two[0],
+                image_id_three: data.image_id_three[0],
+            }
+            axios.post('https://shark-app-65hkc.ondigitalocean.app/registration/', data, {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
+            }).then((res) => {
+                    console.log(res)
                     toast.success('Заявка отпралена!', {
                         position: "top-center",
                         autoClose: 5000,
@@ -53,10 +55,9 @@ const Registration = () => {
                         theme: "colored",
                     });
                     setClose(false)
-                })
-                .catch(() => {
-                    console.log(data)
-                    toast.error('Ошибка в сервере!', {
+                }).catch((err) => {
+                    console.log(err.response.data)
+                    toast.error(err.response.data.email.length === 0 ? 'Ошибка в сервере!' : err.response.data.email[0] , {
                         position: "top-center",
                         autoClose: 5000,
                         hideProgressBar: false,
@@ -119,7 +120,8 @@ const Registration = () => {
                         <RegistrationPhoneNumber title={"Телефон"} name={"workPhone"}/>
                         <RegistrationPhoneNumber title={"WhatsApp"} name={"personalPhone"}/>
                         <CheckBox/>
-                        <RegistrationSelect title={"В качестве кого вы хотите посетить HIT EXPO?"} name={"participant_sector"}/>
+                        <RegistrationSelect title={"В качестве кого вы хотите посетить HIT EXPO?"}
+                                            name={"participant_sector"}/>
                         {
                             role === "Посетитель" ?
                                 ""
@@ -132,10 +134,12 @@ const Registration = () => {
                                             <RegistrationSelectIndustry title={'Выберите отрасль'} name={'trade'}/>
                                             :
                                             members === "Fashion" ?
-                                                <RegistrationSelectFashion title={'Выберите направление'} name={'choose_direction_fashion'}/>
+                                                <RegistrationSelectFashion title={'Выберите направление'}
+                                                                           name={'choose_direction_fashion'}/>
                                                 :
                                                 members === 'Food' ?
-                                                    <RegistrationSelectFood title={'Выберите направление'} name={'choose_direction_food'}/>
+                                                    <RegistrationSelectFood title={'Выберите направление'}
+                                                                            name={'choose_direction_food'}/>
                                                     :
                                                     members === "Investment" ?
                                                         <ChooseIndustry/>
@@ -144,11 +148,12 @@ const Registration = () => {
                                         {<ParticipantForm/>}
                                     </>
                                     : role === "СМИ" ? <MasMediaForm/> : role === "Эксперта" ? ""
-                                        : role === "Представитель государственных органов" ? <RegistrationInput type={"text"} title={"Должность"} name={"position_main"}/> : ""
+                                        : role === "Представитель государственных органов" ?
+                                            <RegistrationInput type={"text"} title={"Должность"}
+                                                               name={"position_main"}/> : ""
                         }
 
-                            <RegistrationInput type={"email"} title={"Электронная почта"} name={"email"}/>
-
+                        <RegistrationInput type={"email"} title={"Электронная почта"} name={"email"}/>
 
 
                         <Btn text={"Зарегистрироваться"} type={"submit"}/>{/*главная кнопка отправки type submit*/}
