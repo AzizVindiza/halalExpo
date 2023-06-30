@@ -19,7 +19,7 @@ const RegistrationUploadInput = ({name, title}) => {
         <label className="registration__label">
             <h3 className="registration__label-title">{title}<span
                 className="registration__error"> {errors[name] && errors[name].message}</span></h3>
-            <input hidden={true}  className="registration__input" type="file" {...register(name, {
+            <input   className="registration__input" type="file" {...register(name, {
                 required: {
                     message: "Это поле обязательно к заполнению!",
                     value: true
