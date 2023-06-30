@@ -33,7 +33,7 @@ const Loader = () =>{
 
     return (
         <div className={'loader'}>
-            <Box  sx={{ width: '30%' }}>
+            <Box  sx={{ width: '50%' }}>
                 <h2 className={'loader__h2'}>Loading...</h2>
                 <LinearProgress  variant="buffer" value={progress} valueBuffer={buffer} />
             </Box>

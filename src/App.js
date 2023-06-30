@@ -61,7 +61,6 @@ const router = createBrowserRouter(
                 <Route path="location" element={<LocationPage/>}/>
                 <Route path="trade" element={<TradePage/>}/>
                 <Route path="invest" element={<InvestPage/>}/>
-                <Route path="loader" element={<Loader/>}/>
 
             </Route>
 
