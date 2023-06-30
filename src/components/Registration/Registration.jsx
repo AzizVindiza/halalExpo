@@ -18,7 +18,6 @@ import RegistrationUploadInput from "./RegistrationUploadInput/RegistrationUploa
 import {toast} from "react-toastify";
 import img from "./information 1.png"
 import axios from "axios";
-import Loader from "./Loading/Loader";
 
 
 const Registration = () => {
@@ -42,22 +41,22 @@ const Registration = () => {
                 }
             }).then((res) => {
 
-                    console.log(res)
+                console.log(res)
 
-                    setClose(false)
-                }).catch((err) => {
-                    toast.update(id, {
-                        render: !err.response.data.email ? 'Ошибка в сервере!' : err.response.data.email[0], type: "error", isLoading: false,
-                        position: "top-center",
-                        autoClose: 5000,
-                        hideProgressBar: false,
-                        closeOnClick: true,
-                        pauseOnHover: true,
-                        draggable: true,
-                        progress: undefined,
-                        theme: "light"
-                    });
-                })
+                setClose(false)
+            }).catch((err) => {
+                toast.update(id, {
+                    render: !err.response.data.email ? 'Ошибка в сервере!' : err.response.data.email[0], type: "error", isLoading: false,
+                    position: "top-center",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light"
+                });
+            })
 
         } catch (error) {
             toast.update(id, {
@@ -78,11 +77,11 @@ const Registration = () => {
     // вытаскиваю функцию setClose из контекста чтобы закрывать форму при клике на крестик
     return (
         <FormProvider {...methods} >{/*передаю все методы из rhf в FormProvider чтобы все вложенные инпуты могли испольозвать*/}
-           <Loader/>
             <div className="registration">
                 <div className="registration__wrapper">
                     <form className='registration__form'
                           onSubmit={methods.handleSubmit(onSubmit)}>{/*форма*/}{/*беру функцию handleSubmit из rhf и передаю onSubmit*/}
+
 
                         <div onClick={() => setClose(false)} className="registration__close">
                             <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
@@ -139,6 +138,8 @@ const Registration = () => {
                                         }
                                         {<ParticipantForm/>}
                                     </>
+
+
                                     : role === "СМИ" ? <MasMediaForm/> : role === "Эксперта" ? ""
                                         : role === "Представитель государственных органов" ?
                                             <RegistrationInput type={"text"} title={"Должность"}
