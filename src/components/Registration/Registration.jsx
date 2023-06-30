@@ -21,11 +21,6 @@ import axios from "axios";
 
 
 const Registration = () => {
-<<<<<<< HEAD
-     const dispatch = useDispatch()
-
-=======
->>>>>>> 876d195deba2b452f54f8f2bf98ec3b6a7791d13
     const methods = useForm({mode: "onBlur"});
     // использую переменную methods чтобы передавать вложенным инпутам
     const {setClose, role, members} = useContext(CustomContext)
@@ -43,31 +38,31 @@ const Registration = () => {
                     'Content-Type': 'multipart/form-data'
                 }
             }).then((res) => {
-                    console.log(res)
-                    toast.success('Заявка отпралена!', {
-                        position: "top-center",
-                        autoClose: 5000,
-                        hideProgressBar: false,
-                        closeOnClick: false,
-                        pauseOnHover: true,
-                        draggable: true,
-                        progress: undefined,
-                        theme: "colored",
-                    });
-                    setClose(false)
-                }).catch((err) => {
-                    console.log(err.response.data)
-                    toast.error(err.response.data.email.length === 0 ? 'Ошибка в сервере!' : err.response.data.email[0] , {
-                        position: "top-center",
-                        autoClose: 5000,
-                        hideProgressBar: false,
-                        closeOnClick: false,
-                        pauseOnHover: true,
-                        draggable: true,
-                        progress: undefined,
-                        theme: "colored",
-                    });
-                })
+                console.log(res)
+                toast.success('Заявка отпралена!', {
+                    position: "top-center",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: false,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "colored",
+                });
+                setClose(false)
+            }).catch((err) => {
+                console.log(err.response.data)
+                toast.error(err.response.data.email.length === 0 ? 'Ошибка в сервере!' : err.response.data.email[0] , {
+                    position: "top-center",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: false,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "colored",
+                });
+            })
 
         } catch (error) {
             toast.error('Ошибка в сервере!', {
