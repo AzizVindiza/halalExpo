@@ -14,14 +14,6 @@ export const apiSlice = createApi({
             })
 
         }),
-        addUser: builder.mutation({
-            query:(body)=>({
-                url:"registration/",
-                method:"POST",
-                body
-            })
-
-        }),
         login : builder.mutation({
             query:(body) => ({
                 url : "login/",
@@ -34,4 +26,4 @@ export const apiSlice = createApi({
 
 })
 
-export const {useAddPartnerMutation,useAddUserMutation,useLoginMutation} = apiSlice
+export const {useAddPartnerMutation,useLoginMutation} = apiSlice
