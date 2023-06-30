@@ -25,8 +25,7 @@ import RegistrationPassword from "./RegistrationPassword/RegistrationPassword";
 
 
 const Registration = () => {
-    const {user} = useSelector((store) => store.user)
-    const dispatch = useDispatch()
+     const dispatch = useDispatch()
 
     const methods = useForm({mode: "onBlur"});
     // использую переменную methods чтобы передавать вложенным инпутам
