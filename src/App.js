@@ -29,6 +29,8 @@ import LocationPage from "./pages/LocationPage/LocationPage";
 import MassPage from "./pages/MassPage/MassPage";
 import TradePage from "./pages/TradePage/TradePage";
 import InvestPage from "./pages/InvestPage/InvestPage";
+import CircularIndeterminate from "./components/Registration/Loading/Loader";
+import Loader from "./components/Registration/Loading/Loader";
 
 
 
