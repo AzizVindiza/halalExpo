@@ -19,7 +19,7 @@ const VideoSection = () => {
 
 
             </div>
-            <Banner/>
+            {/*<Banner/>*/}
 
 
 
