@@ -22,18 +22,15 @@ import ExpectPage from "./pages/ExpectPage/ExpectPage";
 import BenefitsPage from "./pages/BenefitsPage/BenefitsPage";
 import MembersPage from "./pages/MembersPage/MembersPage";
 import Hotel from "./components/Hotel/Hotel";
-import StandPage from "./pages/RasulPage/StandPage";
-
 import LocationPage from "./pages/LocationPage/LocationPage";
-
 import MassPage from "./pages/MassPage/MassPage";
 import TradePage from "./pages/TradePage/TradePage";
 import InvestPage from "./pages/InvestPage/InvestPage";
-import CircularIndeterminate from "./components/Registration/Loading/Loader";
 import Loader from "./components/Registration/Loading/Loader";
 
 
 
+ 
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -61,8 +58,9 @@ const router = createBrowserRouter(
                 <Route path="location" element={<LocationPage/>}/>
                 <Route path="trade" element={<TradePage/>}/>
                 <Route path="invest" element={<InvestPage/>}/>
-
             </Route>
+            <Route path="loader" element={<Loader/>}/>
+
 
 
         </>

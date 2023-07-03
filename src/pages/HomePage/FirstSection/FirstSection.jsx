@@ -12,6 +12,7 @@ import svg from './Vector 140.svg'
 import {CustomContext} from "../../../Context";
 import {useTranslation} from "react-i18next";
 import shater from './shater.svg'
+import video from "../../../components/Registration/Loading/loading.mp4"
 
 
 const textMotion = {
@@ -39,8 +40,7 @@ const FirstSection = () => {
     return (
         <motion.section initial={"hidden"} whileInView={"visible"} className="first">
             <div className="first__block-player">
-                <video className={'first__player'} src={time.slice(0, 2) > 6 && time.slice(0, 2) < 19 ? day : night}
-                       autoPlay={true} muted={true} loop={true}/>
+                <video className={'first__player'} src={video} muted={true}/>
                 <img className={"first__player2"} src={shater} alt=""/>
 
             </div>
