@@ -1,0 +1,59 @@
+@import "src/sass/base/mixins"
+
+
+.tableCard
+  width: 313px
+  height: 385px
+  background: #FFFFFF
+  &__wrapper
+    padding: 0 25px
+    height: 100%
+    position: relative
+  &__box
+    text-align: center
+    display: flex
+    flex-direction: column
+    align-items: center
+  &__img
+    padding: 43px 0 18px 0
+    width: 222px
+    img
+      height: 100px
+  &__h2
+    @include text(400,20px,133%,#000)
+  &__span
+    @include text(700,20px,133%,#40A865)
+  &__bottom
+    svg
+      width: 22px
+    display: flex
+    flex-direction: column
+    row-gap: 10px
+    position: absolute
+    bottom: 20px
+  &__row
+    display: flex
+    column-gap: 5px
+    align-items: center
+  &__row2
+    display: flex
+    column-gap: 5px
+    align-items: center
+
+@media (max-width: 1025px)
+  .tableCard
+    width: 274px
+    height: 337px
+    &__img
+      padding: 10px 0 0 0
+    &__h2
+      @include text(400,17px,133%,#000)
+    &__span
+      @include text(700,17px,133%,#40A865)
+
+@media (max-width: 864px)
+  .tableCard
+    &__h2
+      @include text(400,20px,133%,#000)
+    &__span
+      @include text(700,20px,133%,#40A865)

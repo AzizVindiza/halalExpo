@@ -7,6 +7,7 @@
     justify-content: center
     @include text(800,45px,133%,#FFF)
   &__img
+    margin: 0 auto
     display: flex
     position: relative
     &_text
@@ -22,11 +23,12 @@
   &__box
     margin-top: 80px
     display: flex
+    justify-content: space-between
 
   &__left
     display: flex
     flex-direction: column
-    margin-right: 180px
+    width: 50%
     row-gap: 30px
   &__item
 
@@ -39,13 +41,15 @@
   &__span
     @include text(600,25px,133%,#FFF)
   &__right
+    width: 50%
+    justify-content: right
 
     display: flex
     flex-wrap: wrap
     column-gap: 10px
     row-gap: 25px
   &__col
-    width: 190px
+    width: 160px
     text-align: center
 
     display: flex
@@ -55,13 +59,152 @@
     position: relative
     width: 108px
     height: 108px
-    background: #D9D9D9
+
 
   &__span2
     @include text(600,16px,133%,#FFF)
 
 
+@media (max-width: 1284px)
+  .trade
+    &__h2
+      @include text(800,42px,133%,#FFF)
+    &__img
+      width: 1045px
+      height: 518px
+    &__span
+      @include text(600,23px,133%,#FFF)
+    &__span2
+      @include text(600,16px,133%,#FFF)
+
+    &__col
+      width: 160px
+
+@media (max-width: 1175px)
+  .trade
+    &__container
+      padding: 0 30px
+    &__h2
+      @include text(800,35px,133%,#FFF)
+    &__img
+      width: 881px
+      height: 437px
+      &_text
+        padding: 36px 25px
+
+        @include text(800,23px,133%,#FFFFFF)
+    &__span
+      @include text(600,19px,133%,#FFF)
+    &__span2
+      @include text(600,14px,133%,#FFF)
+    &__col
+      width: 140px
+
+@media (max-width: 1024px)
+  .trade
+    &__container
+      padding: 0
+@media (max-width: 990px)
+  .trade
+    &__container
+      padding: 0 30px
+    &__img
+      width: 780px
+    &__col
+      width: 130px
+    &__square
+      width: 90px
+@media (max-width: 892px)
+  .trade
+    &__container
+      padding: 0 50px
+    &__h2
+      padding: 56px 0 0 0
+    &__img
+      width: 641px
+      &_text
+        top: 30%
+        right: -40px
+        padding: 26px 18px
+        @include text(800,17px,133%,#FFFFFF)
+    &__box
+      margin-top: 0
+      flex-direction: column
+      row-gap: 64px
+    &__left
+      width: 100%
+    &__right
+      width: 100%
+      justify-content: space-between
+    &__square
+      width: 115px
+    &__col
+      width: 190px
+    &__span
+      @include text(600,25px,133%,#FFF)
+    &__span2
+      @include text(600,18px,133%,#FFF)
+@media (max-width: 770px)
+  .trade
+    &__container
+      padding: 0
+
+@media (max-width: 726px)
+  .trade
+    &__container
+      padding: 0 50px
+
+    &__img
+      width: 410px
+      height: 300px
+      &_text
+        top: 30%
+        right: -21px
+        padding: 17px 11px
+        @include text(800,11px,133%,#FFFFFF)
+    &__col
+      width: 140px
+
+@media (max-width: 542px)
+  .trade
+    &__container
+      padding: 0 20px
 
 
 
+@media (max-width: 484px)
+  .trade
+    &__container
+      padding: 0
+    &__col
+      width: 102px
+    &__span2
+      @include text(600,13px,133%,#FFF)
 
+@media (max-width: 452px)
+  .trade
+    &__container
+      padding: 0 15px
+    &__h2
+      padding:  33px 0 0 0
+    &__img
+      width: 334px
+      height: 200px
+      &_text
+        top: 20%
+        @include text(600,9px,133%,#FFF)
+    &__item
+      width: 100%
+      img
+        width: 45px
+    &__span
+      @include text(600,22px,133%,#FFF)
+    &__square
+      width: 90px
+
+
+
+@media (max-width: 395px)
+  .trade
+    &__container
+      padding: 0

@@ -5,7 +5,9 @@ const TradeRegisCard = ({item}) => {
     return (
         <div className="tradeRegisCard">
             <div className="tradeRegisCard__tooltip">
-                <div className="tradeRegisCard__img"></div>
+                <div className="tradeRegisCard__img">
+                    <img src={item.img} alt=""/>
+                </div>
                 <h3 className="tradeRegisCard__h3">{item.name}</h3>
                 <p className="tradeRegisCard__p">{item.p}</p>
             </div>

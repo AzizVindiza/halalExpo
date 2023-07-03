@@ -29,3 +29,49 @@
     margin-top: 40px
     @include text(500,20px,133%,#FFF)
     width: 920px
+
+@media (max-width: 1253px)
+  .tradeStyle
+    &__h2
+      @include text(800,73px,133%,#FFF)
+    &__p
+      @include text(500,18px,133%,#FFF)
+    &__img1
+      left: -20px
+    &__img2
+      right: 20px
+
+
+@media (max-width: 1146px)
+  .tradeStyle
+    &__container
+      padding: 0 30px
+    &__img1
+      margin-left: 5px
+      left: 0
+      width: 90px
+    &__img2
+      right: 60px
+      width: 60px
+
+@media (max-width: 1025px)
+  .tradeStyle
+    &__h2
+      @include text(800,62px,133%,#FFF)
+    &__p
+      @include text(500,15px,133%,#FFF)
+      width: 80%
+    &__img2
+      right: 20px
+@media (max-width: 770px)
+  .tradeStyle
+    &__wrapper
+      row-gap: 30px
+    &__h2
+      @include text(800,45px,133%,#FFF)
+    &__p
+      @include text(500,11px,133%,#FFF)
+@media (max-width: 482px)
+  .tradeStyle
+    &__h2
+      @include text(800,30px,133%,#FFF)
