@@ -20,7 +20,7 @@ const ZoneCard = () => {
          <ZoneCardSmall item={t("zoneSection.investZone",{ returnObjects: true })} img={invest}/>
          <ZoneCardSmall item={t("zoneSection.fashionZone",{ returnObjects: true })} img={fashion}/>
          <ZoneCardSmall item={t("zoneSection.foodZone",{ returnObjects: true })} img={food}/>
-         <ZoneCardSmall item={t("zoneSection.nationalZone",{ returnObjects: true })} img={National}/>
+         <ZoneCardSmall item={t("zoneSection.nationalZone",{ returnObjects: true })} img={pic}/>
         </section>
     );
 };
