@@ -1,92 +1,10 @@
 @import "src/sass/base/mixins"
 .tableSection
   background: #F5F5F5
-  &__container
-    padding: 83px 0
+  padding: 100px 0
+  &__wrapper
     display: flex
-    justify-content: center
-  &__tbody
-    display: flex
-    flex-direction: column
-    row-gap: 3px
-
-  &__tr
-    width: 1170px
-    background: #FFFFFF
-    padding: 16px 30px
-    display: flex
-
-    align-items: center
-  &__td1
-    @include text(400,20px,133%,#000)
-    width: 70%
-    span
-      @include text(600,20px,133%,#40A865)
-
-
-  &__td
-    display: flex
-    align-items: center
-    column-gap: 5px
-    width: 15%
-@media (max-width: 1201px)
-  .tableSection
-    &__tr
-      width: 1100px
-
-@media (max-width: 1110px)
-  .tableSection
-    &__tr
-      width: 1000px
-
-@media (max-width: 1025px)
-  .tableSection
-    &__container
-      padding: 67px 0
-    &__tr
-      width: 921px
-    &__td1
-     @include text(400,16px,133%,#000)
-     width: 60%
-     span
-      @include text(600,16px,133%,#40A865)
-@media (max-width: 930px)
-  .tableSection
-    &__tr
-     width: 830px
-@media (max-width: 830px)
-  .tableSection
-    &__tr
-      width: 750px
-@media (max-width: 768px)
-  .tableSection
-    &__td1
-      width: 100%
-    &__td
-      width: 50%
-    &__tr
-      display: flex
-      flex-wrap: wrap
-      row-gap: 10px
-      justify-content: space-between
-      width: 100%
-      padding: 10px
-
-
-
-@media (max-width: 394px)
-  .tableSection
-    &__container
-      padding: 34px 0
-    &__tr
-      display: flex
-      flex-wrap: wrap
-      row-gap: 10px
-      justify-content: space-between
-      width: 100%
-      padding: 10px
-    &__td1
-      width: 100%
-    &__td
-      width: 50%
-
+    flex-wrap: wrap
+    column-gap: 25px
+    row-gap: 30px
+    justify-content: space-around
