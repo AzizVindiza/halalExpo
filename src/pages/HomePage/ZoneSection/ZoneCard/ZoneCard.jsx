@@ -1,8 +1,11 @@
 import React from 'react';
 import './zoneCard.sass'
 import ZoneCardSmall from "./ZoneCardSmall/ZoneCardSmall";
+
+
 import fashion from  "./fashion.png"
 import food from "./food.png"
+
 import invest from "./invest.png"
 import trade from "./trade.png"
 import pic from './Rectangle 28.png'
