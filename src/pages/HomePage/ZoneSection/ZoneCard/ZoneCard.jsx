@@ -1,12 +1,14 @@
 import React from 'react';
 import './zoneCard.sass'
 import ZoneCardSmall from "./ZoneCardSmall/ZoneCardSmall";
-import fashion from  "./fashionZone.png"
-import food from "./foodZone.png"
-import trade from './tradeZone.png'
-import invest from './investZone.png'
-import National from './National atribute Zone.png'
 
+
+import fashion from  "./fashion.png"
+import food from "./food.png"
+
+import invest from "./invest.png"
+import trade from "./trade.png"
+import pic from './Rectangle 28.png'
 import {useTranslation} from "react-i18next";
 
 const ZoneCard = () => {
