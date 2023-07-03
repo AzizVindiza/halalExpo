@@ -4,24 +4,24 @@
 
 .tradeRegisCard
   position: relative
-  &:nth-child(3n+2)
-    &::after
-      position: absolute
-      content: ""
-      width: 100px
-      height: 1px
-      background: #FFFFFF
-
-      top: 34%
-      right: -55px
-    &::before
-      bottom: 66%
-      left: -55px
-      position: absolute
-      content: ""
-      width: 100px
-      height: 1px
-      background: #FFFFFF
+  //&:nth-child(3n+2)
+  //  &::after
+  //    position: absolute
+  //    content: ""
+  //    width: 100px
+  //    height: 1px
+  //    background: #FFFFFF
+  //
+  //    top: 34%
+  //    right: -55px
+  //  &::before
+  //    bottom: 66%
+  //    left: -55px
+  //    position: absolute
+  //    content: ""
+  //    width: 100px
+  //    height: 1px
+  //    background: #FFFFFF
 
 
   &__tooltip
@@ -37,9 +37,9 @@
   &__img
     display: flex
     margin: 0 auto
-    background: #b0b0b0
-    width: 99px
-    height: 99px
+
+    width: 160px
+    height: 160px
   &__h3
     text-align: center
     @include text(600,30px,133%,#FFF)
@@ -71,4 +71,11 @@
 
       border-color: #00000050 #0000 #0000 #0000
 
-
+@media (max-width: 1025px)
+  .tradeRegisCard
+    &__tooltip
+      width: 260px
+@media (max-width: 547px)
+  .tradeRegisCard
+    &__tooltip
+      width: 240px

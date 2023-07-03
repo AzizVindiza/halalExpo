@@ -20,3 +20,19 @@
     justify-content: space-around
     flex-wrap: wrap
     row-gap: 60px
+
+@media (max-width: 1201px)
+  .tradeStand
+    &__p
+      @include text(500,24px,133%,#FFFFFF)
+@media (max-width: 1025px)
+  .tradeStand
+    &__p
+      @include text(500,20px,133%,#FFFFFF)
+
+@media (max-width: 770px)
+  .tradeStand
+    &__h2
+      @include text(800,26px,133%,#FFFFFF)
+    &__p
+      @include text(500,16px,133%,#FFFFFF)
