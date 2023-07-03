@@ -40,7 +40,8 @@ const FirstSection = () => {
     return (
         <motion.section initial={"hidden"} whileInView={"visible"} className="first">
             <div className="first__block-player">
-                <video className={'first__player'} src={video} muted={true}/>
+                <video className={'first__player'} src={video}
+                       autoPlay={true} muted={true} loop={true}/>
                 <img className={"first__player2"} src={shater} alt=""/>
 
             </div>
