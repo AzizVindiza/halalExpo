@@ -39,7 +39,7 @@ const MapSection = () => {
         <motion.section  viewport={{once:true}} initial={"hidden"} whileInView={"visible"} className="map">
 
             <motion.div custom={1} variants={textMotion}>
-                <h2 className="map__title map__container container">Локации</h2>
+                <h2 className="map__title container">Локации</h2>
             </motion.div>
 
             <div className="map__container container">
