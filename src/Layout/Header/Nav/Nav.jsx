@@ -32,9 +32,6 @@ const Nav = () => {
                 <NavLink onClick={() => setActiveHamburger(false)}  className={'nav__link'} to={'news'}>{t("header.News")}</NavLink>
                 <NavLink onClick={() => setActiveHamburger(false)}  className={'nav__link'} to={'question'}>FQA</NavLink>
                 <NavLink onClick={() => setActiveHamburger(false)}  className={'nav__link nav__btn  '} to={''}>
-                    <button type="button"   className={'nav__btn-second'}>
-                        <span className={'nav__span'}>{t("header.ticket")}</span>
-                    </button>
                 </NavLink>
             </div>
             <div className="nav__wrapper">
