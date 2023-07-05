@@ -10,35 +10,33 @@ import sanarip from './sanarip.svg'
 import trans from './trans.svg'
 import viliage from './viliage.svg'
 
-const PartnersSection = () => {
+const PartnersSection = ({title}) => {
     return (
         <section className="partners">
-            <h2 className="partners__title">
-                Партнеры
-            </h2>
+            <h2 className="partners__title">Официальные Партнеры</h2>
             <div className="container partners__container">
                 <div className="partners__card">
-                    <img src={trade} alt=""/>
+                    <img className={'partners__img'} src={trade} alt=""/>
                     <h2 className="partners__h2">
                         Торгово-промышленная палата <br/>
                         Кыргызской Республики
                     </h2>
                 </div>
                 <div className="partners__card">
-                    <img src={minist} alt=""/>
+                    <img className={'partners__img'}  src={minist} alt=""/>
                     <h2 className="partners__h2">
                         Министерства иностранных дел <br/>
                         Кыргызской Республики
                     </h2>
                 </div>
                 <div className="partners__card">
-                    <img src={sanarip} alt=""/>
+                    <img className={'partners__img'}  src={sanarip} alt=""/>
                     <h2 className="partners__h2">
                         Санарип Кыргызстан
                     </h2>
                 </div>
                 <div className="partners__card">
-                    <img src={halal} alt=""/>
+                    <img className={'partners__img'}  src={halal} alt=""/>
                     <h2 className="partners__h2">
                         Государственный центр по <br/>
                         развитию Халал-индустрии <br/>
@@ -46,14 +44,14 @@ const PartnersSection = () => {
                     </h2>
                 </div>
                 <div className="partners__card">
-                    <img src={rating} alt=""/>
+                    <img className={'partners__img'}  src={rating} alt=""/>
                     <h2 className="partners__h2">
                         Пресс-служба Минэкономики <br/>
                         Кыргызской Республики
                     </h2>
                 </div>
                 <div className="partners__card">
-                    <img src={educ} alt=""/>
+                    <img className={'partners__img'}  src={educ} alt=""/>
                     <h2 className="partners__h2">
                         Министерства образования <br/>
                         Кыргызской Республики
@@ -61,14 +59,14 @@ const PartnersSection = () => {
                     </h2>
                 </div>
                 <div className="partners__card">
-                    <img src={viliage} alt=""/>
+                    <img className={'partners__img'}  src={viliage} alt=""/>
                     <h2 className="partners__h2">
                         Министерства сельского хозяйства <br/>
                         Кыргызской Республики
                     </h2>
                 </div>
                 <div className="partners__card">
-                    <img src={trans} alt=""/>
+                    <img className={'partners__img'} src={trans} alt=""/>
                     <h2 className="partners__h2">
                         Министерства транспорта <br/>и коммуникаций
                     </h2>
