@@ -100,26 +100,26 @@ const LoginForm = () => {
                         />
 
                     </label>
-                    {/*<label className="login__password">*/}
+                    <label className="login__password">
 
-                    {/*   <span>Ведите пороль *</span>*/}
-                    {/*    <input type={`${passwordShown ? "text" : "password"}`}*/}
-                    {/*           {...register("password",{*/}
-                    {/*               required:"obez",*/}
-                    {/*               minLength:{*/}
-                    {/*                   value:5,*/}
-                    {/*                   message: 'min 4 sim'*/}
-                    {/*               }*/}
-                    {/*           } )}/>*/}
-                    {/*    <span  onClick={() => setPasswordShown(!passwordShown)} className="login__eye">*/}
-                    {/*        {*/}
-                    {/*            passwordShown ?   <AiOutlineEye/> :  <AiOutlineEyeInvisible/>*/}
-                    {/*        }*/}
+                       <span>Ведите пороль *</span>
+                        <input type={`${passwordShown ? "text" : "password"}`}
+                               {...register("password",{
+                                   required:"obez",
+                                   minLength:{
+                                       value:5,
+                                       message: 'min 4 sim'
+                                   }
+                               } )}/>
+                        <span  onClick={() => setPasswordShown(!passwordShown)} className="login__eye">
+                            {
+                                passwordShown ?   <AiOutlineEye/> :  <AiOutlineEyeInvisible/>
+                            }
 
-                    {/*    </span>*/}
-                    {/*</label>*/}
+                        </span>
+                    </label>
 
-                    {/*<li className={'login__li'}>Забыли пароль?</li>*/}
+                    <li className={'login__li'}>Забыли пароль?</li>
 
                     <Btn text={' Войти'} m={"login"}/>
                 </form>
