@@ -36,7 +36,7 @@ const Nav = () => {
             </div>
             <div className="nav__wrapper">
                 <Link onClick={activeRegister} className={'nav__user'} to={''}>Регистрация</Link>
-                <Link onClick={activeLogin} className={'nav__user'} to={''}>Войти</Link>
+                {/*<Link onClick={activeLogin} className={'nav__user'} to={''}>Войти</Link>*/}
             </div>
             <p className="nav__txt">
                 29.07.23 - 01.08.23 Иссык-Кульская область Экспо, МВЦ. г. Чолпон-Ата
