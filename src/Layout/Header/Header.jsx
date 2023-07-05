@@ -57,9 +57,9 @@ const Header = () => {
             {
                 close ?  <Registration/> : ''
             }
-            {
-                login ? <LoginForm/> : ''
-            }
+            {/*{*/}
+            {/*    login ? <LoginForm/> : ''*/}
+            {/*}*/}
             {
                 request ? <DemoForm/> : ""
             }
