@@ -1,4 +1,44 @@
 
-.zona:nth-child(even)
-  .zona__wrapper
-    flex-direction: row-reverse
+
+.zoneCard
+  margin-bottom: 100px
+  &__container
+    margin: 0 auto
+    display: flex
+    flex-direction: column
+    row-gap: 100px
+
+
+@media (max-width: 950px)
+  .zoneCard
+    &__container
+      padding: 0 15px
+      row-gap: 70px
+@media (max-width: 770px)
+  .zoneCard
+    &__container
+      padding: 0
+      row-gap: 50px
+
+
+@media (max-width: 700px)
+  .zoneCard
+    margin-bottom: 50px
+    &__container
+      padding: 0 15px
+
+
+@media (max-width: 450px)
+  .zoneCard
+    &__container
+      padding: 0
+
+@media (max-width: 482px)
+  .zoneCard
+    &__container
+      padding: 0 15px
+
+@media (max-width: 394px)
+  .zoneCard
+    &__container
+      padding: 0
