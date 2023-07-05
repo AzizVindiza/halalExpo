@@ -40,6 +40,7 @@ const Header = () => {
                 <div className={`header__menu ${isActiveHamburger ? " header__menu_active" : null} `}>
                     <Nav/>
                 </div>
+                <div className={'header__example'}></div>
             </div>
             <ToastContainer
                 position="top-center"
@@ -56,9 +57,9 @@ const Header = () => {
             {
                 close ?  <Registration/> : ''
             }
-            {
-                login ? <LoginForm/> : ''
-            }
+            {/*{*/}
+            {/*    login ? <LoginForm/> : ''*/}
+            {/*}*/}
             {
                 request ? <DemoForm/> : ""
             }

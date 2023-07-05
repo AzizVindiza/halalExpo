@@ -11,9 +11,9 @@ const EfficiencySection = () => {
     return (
         <section className={"efficiency"}>
             <div className="efficiency__container container">
-                <div className="efficiency__back">
+                {/*<div className="efficiency__back">*/}
 
-                </div>
+                {/*</div>*/}
                 <div className="efficiency__wrapper">
                     <div className="efficiency__box">
                         <h2 className="efficiency__h2">{t("sponsorsPage.title1")}</h2>
