@@ -17,7 +17,7 @@ const Footer = () => {
                         <h2 className="footer__h2">29.07.23 - 01.08.23</h2>
                         <p className="footer__p">Иссык-Кульская область Экспо, МВЦx. <br/> Чолпон-Ата</p>
                         <div className="footer__links">
-                            <a href={'https://instagram.com/hit.expo?igshid=MzRlODBiNWFlZA=='} className="footer__socials">
+                            <a href={'https://www.instagram.com/hitexpo.info/?igshid=MzRlODBiNWFlZA%3D%3D'} className="footer__socials">
                                 <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="18" cy="18" r="18" fill="#40A865"/>
                                     <g clipPath="url(#clip0_775_363)">
