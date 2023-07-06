@@ -57,12 +57,12 @@ const Header = () => {
             {
                 close ?  <Registration/> : ''
             }
-            {/*{*/}
-            {/*    login ? <LoginForm/> : ''*/}
-            {/*}*/}
             {
-                request ? <DemoForm/> : ""
+                login ? <LoginForm/> : ''
             }
+            {/*{*/}
+            {/*    request ? <DemoForm/> : ""*/}
+            {/*}*/}
         </header>
     );
 };
