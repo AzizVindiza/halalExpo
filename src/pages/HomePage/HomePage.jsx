@@ -16,6 +16,8 @@ import OfficeMapSection from "./OfficeMapSection/OfficeMapSection";
 import StartSection from "./StartSection/StartSection";
 import ZoneSection from "./ZoneSection/ZoneSection";
 import DateSection from "./DateSection/DateSection";
+import PartnersInfo from "./PartnersInfo/ParnersInfo";
+import PartnersOfficial from "./PartnersOfficial/PartnersOfficial";
 
 const HomePage = () => {
     return (
@@ -37,6 +39,8 @@ const HomePage = () => {
             {/*<SpeakersSection/>*/}
             <OrganizatorSection/>
             <PartnersSection/>
+            <PartnersOfficial/>
+            <PartnersInfo/>
             <OfficeMapSection/>
 
         </>

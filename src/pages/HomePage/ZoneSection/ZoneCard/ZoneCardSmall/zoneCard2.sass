@@ -2,7 +2,7 @@
 
 
 
-.zona
+.zona2
 
   overflow: hidden
   border-radius: 45px
@@ -10,20 +10,16 @@
   position: relative
   display: flex
   box-shadow: -6px 4px 22px 0px rgba(34, 60, 80, 0.2)
-
-  &__img
-    transition: 1s
-    height: 100%
-    &:hover
-      transform: scale(1.2)
+  flex-direction: row-reverse
 
 
 
   &__left
-    padding: 35px 0 0 30px
+    padding: 35px 30px 0 0
     color: #8c7676
 
   &__h2
+    text-align: end
     @include text(700,38px,133%,#087AFF)
   &__span
     padding: 8px
@@ -39,6 +35,7 @@
     border-radius: 34px
     padding: 8px
     width: fit-content
+    text-align: right
 
 
   &__row
@@ -46,7 +43,9 @@
     display: flex
     flex-direction: column
     row-gap: 10px
+    align-items: flex-end
   &__ul
+    text-align: end
     padding-left: 30px
     margin-top: 30px
     display: flex
@@ -54,7 +53,15 @@
     row-gap: 7px
   &__li
     list-style: disc
+    list-style-position: inside
+
+
+
     @include text(500,20px,133%,#000)
+  &__b
+    display: flex
+    width: 100%
+    justify-content: end
   &__btn
     column-gap: 10px
     align-items: center
@@ -67,10 +74,11 @@
   &__right
     position: relative
     width: 60%
+    left: -45px
     z-index: -1
   &__overlay
     top: -20px
-    left: 27px
+    right: 27px
     position: absolute
     width: 1340px
     height: 611px
@@ -83,8 +91,10 @@
     svg
       width: 24px
 
+
+
 @media (max-width: 1201px)
-  .zona
+  .zona2
     height: fit-content
     padding: 0 0 20px 0
     display: flex
@@ -99,21 +109,21 @@
       @include text(500,17px,133%,#FFF)
     &__li
       @include text(500,15px,133%,#000)
+    &__right
+      left: 0
     &__overlay
-      width: 1130px
       top: -38px
-      left: 43px
+      width: 1130px
+      right: 44px
     &__img
       img
-        width: 722px
+        width: 782px
         height: 449px
 
-
-
 @media (max-width: 1025px)
-  .zona
-
+  .zona2
     &__h2
+      width: 300px
       @include text(700,30px,133%,#087AFF)
     &__row
       margin-top: 15px
@@ -123,27 +133,29 @@
       @include text(500,14px,133%,#FFF)
     &__li
       @include text(500,14px,133%,#000)
+
     &__right
-      left: -45px
+      left: 1px
     &__overlay
       top: -3px
-      left: -34px
+      right: -34px
       width: 1034px
 
     &__img
       img
-        width: 678px
+        width: 721px
+
 
 //@media (max-width: 925px)
-//  .zona
+//  .zona2
 //
 //    &__h2
 //      @include text(700,25px,133%,#087AFF)
 //      width: 270px
 //    &__left
-//      padding: 13px 0 0 19px
+//      padding: 13px 19px 0 0
 //    &__row
-//      margin-top: 5px
+//      margin-top: 15px
 //    &__span
 //      padding: 4px
 //    &__flex
@@ -151,25 +163,22 @@
 //    &__h3
 //      @include text(500,13px,133%,#FFF)
 //    &__ul
-//      margin-top: 10px
-//      padding-left: 15px
+//      text-align: end
 //    &__li
 //      @include text(500,12px,133%,#000)
 //    &__overlay
 //      top: -164px
-//      left: -211px
+//      right: -211px
 //    &__right
-//      left: -72px
+//      left: -3px
 //
 //    &__img
 //      img
-//        width: 678px
-
-
-
+//        width: 700px
 
 @media (max-width: 770px)
-  .zona
+  .zona2
+    height: fit-content
 
 
     &__h2
@@ -188,18 +197,20 @@
 
     &__h3
       @include text(500,11px,133%,#FFF)
+    &__ul
+      padding-left: 0
     &__li
       @include text(500,12px,133%,#000)
     &__overlay
       top: -12px
       width: 776px
-      left: -34px
+      right: -34px
 
 
     &__img
       img
-        width: 478px
         height: 340px
+        width: 478px
     &__btn
       column-gap: 5px
       align-items: center
@@ -212,9 +223,8 @@
       svg
         width: 15px
 
-
 @media (max-width: 555px)
-  .zona
+  .zona2
     flex-direction: column-reverse
 
 
@@ -225,6 +235,7 @@
     &__row
       margin-top: 10px
       row-gap: 5px
+      justify-content: end
     &__span
       padding: 4px 8px
       img
@@ -234,19 +245,17 @@
 
     &__h3
       @include text(500,12px,133%,#FFF)
-    &__ul
-      padding-left: 15px
     &__li
       @include text(500,12px,133%,#000)
     &__left
       padding: 0 15px 0 15px
     &__right
       width: 100%
-      left: 40px
+
     &__overlay
       top: 0
       width: 756px
-      left: -195px
+      right: -195px
     &__row
       display: flex
       flex-direction: row
@@ -256,7 +265,7 @@
 
     &__img
       img
-        width: 478px
+        width: 105%
         height: 340px
     &__btn
       column-gap: 5px
@@ -270,16 +279,12 @@
       svg
         width: 20px
 
-
 @media (max-width: 394px)
-  .zona
+  .zona2
     flex-direction: column-reverse
-
-
     &__h2
       width: 100%
       @include text(700,21px,133%,#087AFF)
-
     &__row
       margin-top: 10px
       row-gap: 5px
@@ -298,11 +303,11 @@
       padding: 0 15px 0 15px
     &__right
       width: 100%
-      left: 40px
+      left: 0
     &__overlay
       top: 0
       width: 680px
-      left: -200px
+      right: -200px
     &__row
       display: flex
       flex-direction: row
@@ -325,5 +330,3 @@
       @include text(500,16px,133%,#FFF)
       svg
         width: 20px
-
-

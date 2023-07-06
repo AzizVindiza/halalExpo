@@ -18,6 +18,7 @@ import RegistrationUploadInput from "./RegistrationUploadInput/RegistrationUploa
 import {toast} from "react-toastify";
 import img from "./information 1.png"
 import axios from "axios";
+import RegistrationPassword from "./RegistrationPassword/RegistrationPassword";
 
 
 const Registration = () => {
@@ -35,14 +36,24 @@ const Registration = () => {
                 image_id_two: data.image_id_two[0],
                 image_id_three: data.image_id_three[0],
             }
-            axios('https://shark-app-65hkc.ondigitalocefsdfan.app/registration/', data, {
+            axios.post('https://shark-app-65hkc.ondigitalocean.app/registration/', data, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
             }).then((res) => {
-
-                console.log(res)
-
+                toast.update(id, {
+                    render: "Вы зарегистрировались",
+                    type: "success",
+                    isLoading: false,
+                    position: "top-center",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light"
+                });
                 setClose(false)
             }).catch((err) => {
                 toast.update(id, {
@@ -147,6 +158,7 @@ const Registration = () => {
                         }
 
                         <RegistrationInput type={"email"} title={"Электронная почта"} name={"email"}/>
+                        <RegistrationPassword/>
 
 
                         <Btn text={"Зарегистрироваться"} type={"submit"}/>{/*главная кнопка отправки type submit*/}
