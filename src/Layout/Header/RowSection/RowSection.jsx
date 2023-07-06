@@ -34,7 +34,7 @@ const RowSection = () => {
                             <button onClick={() => setClose(true)} className={'rowSection__reg'}>{t("header.signUp")}</button>
                         </div>
 
-                        <button onClick={() => setLogin(!login)} className={'rowSection__in'}>{t("header.login")}</button>
+                        {/*<button onClick={() => setLogin(!login)} className={'rowSection__in'}>{t("header.login")}</button>*/}
 
                     </div>
                     <div className="rowSection__change">
