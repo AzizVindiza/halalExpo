@@ -6,6 +6,7 @@ import trade from "./trade.png"
 import invest from "./invest.png"
 import fashion from "./fashion.png"
 import food from "./food.png"
+import bg from "./zonebg.png"
 
 
 import {useTranslation} from "react-i18next";
@@ -16,6 +17,7 @@ const ZoneCard = () => {
 
     return (
         <section className={"zoneCard"}>
+            <img className={"zoneCard__img"} src={bg} alt=""/>
             <div className="zoneCard__container container">
                 <ZoneCardSmall item={t("zoneSection.tradeZone",{ returnObjects: true })} img={trade} />
                 <ZoneCard2 item={t("zoneSection.investZone",{ returnObjects: true })} img={invest}/>

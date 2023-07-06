@@ -35,107 +35,108 @@ const OrganizatorSection = () => {
                 <div className="organizatorSection__line"></div>
                 <h3 className="organizatorSection__h3">ПРИ ПОДДЕРЖКЕ </h3>
                 <SupportAdaptive/>
-
             </div>
-            <Swiper
-                slidesPerView={4}
-                breakpoints={{
-                    1025:{
+            {/*<Swiper*/}
+            {/*    slidesPerView={4}*/}
+            {/*    breakpoints={{*/}
+            {/*        1025:{*/}
 
-                        slidesPerView:4
-                    },
-                    770:{
+            {/*            slidesPerView:4*/}
+            {/*        },*/}
+            {/*        770:{*/}
 
-                        slidesPerView:3
+            {/*            slidesPerView:3*/}
 
-                    }
-                }}
-                autoplay={{
-                    delay: 0,
-                    disableOnInteraction: false
-                }}
-                speed={4000}
-                grabCursor={true}
-                loop={true}
-                freeMode={true}
+            {/*        }*/}
+            {/*    }}*/}
+            {/*    autoplay={{*/}
+            {/*        delay: 0,*/}
+            {/*        disableOnInteraction: false*/}
+            {/*    }}*/}
+            {/*    speed={4000}*/}
+            {/*    grabCursor={true}*/}
+            {/*    loop={true}*/}
+            {/*    freeMode={true}*/}
 
-                modules={[Autoplay]}
-                className="mySwiper"
-            >
-                <SwiperSlide>  <div className="organizatorSection__box">
-                    <div className="organizatorSection__img">
-                        <img src={rebub} alt=""/>
-                    </div>
-                    <span className="organizatorSection__span">
-                                Правительство <br/>
-                                Кыргызской Республики
-                            </span>
-                </div></SwiperSlide>
-                <SwiperSlide><div className="organizatorSection__box">
-                    <div className="organizatorSection__img">
-                        <img src={ibic} alt=""/>
-                    </div>
-                    <span className="organizatorSection__span">
-                                Корпорация IBIC
-                            </span>
+            {/*    modules={[Autoplay]}*/}
+            {/*    className="mySwiper"*/}
+            {/*>*/}
+            {/*    <SwiperSlide>  <div className="organizatorSection__box">*/}
+            {/*        <div className="organizatorSection__img">*/}
+            {/*            <img src={rebub} alt=""/>*/}
+            {/*        </div>*/}
+            {/*        <span className="organizatorSection__span">*/}
+            {/*                    Правительство <br/>*/}
+            {/*                    Кыргызской Республики*/}
+            {/*                </span>*/}
+            {/*    </div></SwiperSlide>*/}
+            {/*    <SwiperSlide><div className="organizatorSection__box">*/}
+            {/*        <div className="organizatorSection__img">*/}
+            {/*            <img src={ibic} alt=""/>*/}
+            {/*        </div>*/}
+            {/*        <span className="organizatorSection__span">*/}
+            {/*                    Корпорация IBIC*/}
+            {/*                </span>*/}
 
-                </div></SwiperSlide>
-                <SwiperSlide><div className="organizatorSection__box">
-                    <div className="organizatorSection__img">
-                        <img src={trade} alt=""/>
-                    </div>
-                    <span className="organizatorSection__span">
-                                Торгово-промышленная палата Кыргызской Республики
-                            </span>
+            {/*    </div></SwiperSlide>*/}
+            {/*    <SwiperSlide><div className="organizatorSection__box">*/}
+            {/*        <div className="organizatorSection__img">*/}
+            {/*            <img src={trade} alt=""/>*/}
+            {/*        </div>*/}
+            {/*        <span className="organizatorSection__span">*/}
+            {/*                    Торгово-промышленная палата Кыргызской Республики*/}
+            {/*                </span>*/}
 
-                </div></SwiperSlide>
-                <SwiperSlide><div className="organizatorSection__box">
-                    <div className="organizatorSection__img">
-                        <img src={skyland} alt=""/>
-                    </div>
-                    <span className="organizatorSection__span">
-                                SKYLAND
-                            </span>
+            {/*    </div></SwiperSlide>*/}
+            {/*    <SwiperSlide><div className="organizatorSection__box">*/}
+            {/*        <div className="organizatorSection__img">*/}
+            {/*            <img src={skyland} alt=""/>*/}
+            {/*        </div>*/}
+            {/*        <span className="organizatorSection__span">*/}
+            {/*                    SKYLAND*/}
+            {/*                </span>*/}
 
-                </div></SwiperSlide>
-                <SwiperSlide><div className="organizatorSection__box">
-                    <div className="organizatorSection__img">
-                        <img src={adm} alt=""/>
-                    </div>
-                    <span className="organizatorSection__span">
-                                ADM GROUP
-                            </span>
+            {/*    </div></SwiperSlide>*/}
+            {/*    <SwiperSlide><div className="organizatorSection__box">*/}
+            {/*        <div className="organizatorSection__img">*/}
+            {/*            <img src={adm} alt=""/>*/}
+            {/*        </div>*/}
+            {/*        <span className="organizatorSection__span">*/}
+            {/*                    ADM GROUP*/}
+            {/*                </span>*/}
 
-                </div></SwiperSlide>
-                <SwiperSlide><div className="organizatorSection__box">
-                    <div className="organizatorSection__img">
-                        <img src={avangard} alt=""/>
-                    </div>
-                    <span className="organizatorSection__span">
-                               ODADMIRAL
-                            </span>
+            {/*    </div></SwiperSlide>*/}
+            {/*    <SwiperSlide><div className="organizatorSection__box">*/}
+            {/*        <div className="organizatorSection__img">*/}
+            {/*            <img src={avangard} alt=""/>*/}
+            {/*        </div>*/}
+            {/*        <span className="organizatorSection__span">*/}
+            {/*                   ODADMIRAL*/}
+            {/*                </span>*/}
 
-                </div></SwiperSlide>
-                <SwiperSlide><div className="organizatorSection__box">
-                    <div className="organizatorSection__img">
-                        <img src={city} alt=""/>
-                    </div>
-                    <span className="organizatorSection__span">
-                                CITY312
-                            </span>
+            {/*    </div></SwiperSlide>*/}
+            {/*    <SwiperSlide><div className="organizatorSection__box">*/}
+            {/*        <div className="organizatorSection__img">*/}
+            {/*            <img src={city} alt=""/>*/}
+            {/*        </div>*/}
+            {/*        <span className="organizatorSection__span">*/}
+            {/*                    CITY312*/}
+            {/*                </span>*/}
 
-                </div></SwiperSlide>
-                <SwiperSlide><div className="organizatorSection__box">
-                    <div className="organizatorSection__img">
-                        <img src={smart} alt=""/>
-                    </div>
-                    <span className="organizatorSection__span">
-                                ITC SMART
-                            </span>
+            {/*    </div></SwiperSlide>*/}
+            {/*    <SwiperSlide><div className="organizatorSection__box">*/}
+            {/*        <div className="organizatorSection__img">*/}
+            {/*            <img src={smart} alt=""/>*/}
+            {/*        </div>*/}
+            {/*        <span className="organizatorSection__span">*/}
+            {/*                    ITC SMART*/}
+            {/*                </span>*/}
 
-                </div></SwiperSlide>
+            {/*    </div></SwiperSlide>*/}
 
-            </Swiper>
+
+            {/*</Swiper>*/}
+
 
 
         </section>

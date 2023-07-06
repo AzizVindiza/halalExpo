@@ -1,7 +1,7 @@
 import React from 'react';
 import Btn from "../../../components/Btn/Btn";
 import '../PartnersSection/PartnersSection.sass'
-import img from './official.PNG'
+import car from './car.svg'
 import cit from "./cit.svg"
 import newline from "./newline.svg"
 
@@ -18,16 +18,16 @@ const PartnersOfficial = () => {
                     </h2>
                 </div>
                 <div className="partners__card">
-                    <img className={'partners__img'}  src={cit} alt=""/>
+                        <img className={'partners__img'}  src={cit} alt=""/>
                     <h2 className="partners__h2">
                         Conference
                         International & Translation
                     </h2>
                 </div>
-                <div className="partners__card">
-                    <img className={'partners__img'}  src={img} alt=""/>
+                <div className="partners__card ">
+                    <img className={'partners__img car'}  src={car} alt=""/>
                     <h2 className="partners__h2">
-                        Компания “VIP KORTEGE”по доступной цене предоставляет  <br/>
+                        Vip kortege
                     </h2>
                 </div>
             </div>
