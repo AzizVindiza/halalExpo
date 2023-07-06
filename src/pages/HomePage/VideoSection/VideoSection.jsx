@@ -8,10 +8,10 @@ const VideoSection = () => {
             <div className="video__container container">
                 <div className="video__iframe">
 
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/FlE9rRQKqcM"
-                                title="YouTube video player"
-                                allow="accelerometer;   clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowFullScreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/idwPzjnaEJI"
+                            title="YouTube video player" frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowFullScreen></iframe>
                     
                 </div>
 
@@ -19,7 +19,7 @@ const VideoSection = () => {
 
 
             </div>
-            {/*<Banner/>*/}
+            <Banner/>
 
 
 
