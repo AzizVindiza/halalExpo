@@ -1,15 +1,18 @@
 import React from 'react';
 import AssociationSection from "./AssociationSection/AssociationSection";
-import TableSection from "./TableSection.jsx/TableSection";
-import GallerySection from "./GallerySection/GallerySection";
+import IslamicSection from "./IslamicSection/IslamicSection";
+import PictureSection from "./PictureSection/PictureSection";
+
+
 
 
 const OrganizationPage = () => {
     return (
         <>
             <AssociationSection/>
-            <TableSection/>
-            <GallerySection/>
+            <IslamicSection/>
+            <PictureSection/>
+
 
         </>
     );
