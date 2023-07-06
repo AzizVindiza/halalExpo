@@ -1,14 +1,34 @@
-import React, {useRef} from 'react';
+import React, {useEffect, useRef} from 'react';
 import './UserTicket.sass'
-import QRCode from "react-qr-code";
+import QRCodeStyling from "qr-code-styling";
 import { useReactToPrint } from 'react-to-print';
 import logo from './header__logo.png'
+const qrCode = new QRCodeStyling({
+    width: 400,
+    height: 400,
+    data: "https://hit-expo.org/",
+    image:
+        "https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg",
+    dotsOptions: {
+        color: "#4267b2",
+        type: "classy"
+    },
+    imageOptions: {
+        crossOrigin: "anonymous",
+        margin: 20
+    }
+});
 const UserTicket = () => {
     const componentRef = useRef(null);
 
     const handlePrint = useReactToPrint({
         content: () => componentRef.current,
     });
+    const ref = useRef(null);
+
+    useEffect(() => {
+        qrCode.append(ref.current);
+    }, []);
 
     return (
         <div className="userticket">
@@ -19,7 +39,7 @@ const UserTicket = () => {
                 <div className="box" style={{background:"red"}}>
                     БИЛЕТ
                 </div>
-                <QRCode size={"400"} value={"https://hit-expo.org/"}/>
+                <div ref={ref} />
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci atque consequatur corporis ducimus eligendi, est exercitationem fugiat harum inventore iure, libero molestias nam neque nisi nobis odit officia omnis possimus qui quod repellendus saepe sed similique sit soluta sunt veritatis voluptatem? Atque ea et expedita nisi nobis! Aperiam, est quod?
                 </p>
