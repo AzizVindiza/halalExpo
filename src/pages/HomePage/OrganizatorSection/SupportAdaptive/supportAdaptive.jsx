@@ -4,7 +4,7 @@ import rebub from "../image/Rebub.svg";
 import trade from "../image/trade.svg";
 import skyland from "../image/skyland.svg";
 import ibic from "../image/IBIC.svg";
-import bawada from "../image/bawaba.svg"
+import Jogorku from "../image/Jogorku.svg"
 import avangard from "../image/avangard.svg";
 import city from "../image/city.svg";
 import smart from "../image/smart.svg";
@@ -43,10 +43,10 @@ const SupportAdaptive = () => {
                     </div>
                     <div className="organizatorSection__box">
                         <div className="organizatorSection__img">
-                            <img src={bawada} alt=""/>
+                            <img src={Jogorku} alt=""/>
                         </div>
                         <span className="organizatorSection__span">
-                                Интегрированный портал - ОАЭ
+                                Верховный Совет Кыргызской Республики
                             </span>
 
                     </div>
