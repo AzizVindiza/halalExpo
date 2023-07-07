@@ -60,9 +60,9 @@ const Header = () => {
             {
                 login ? <LoginForm/> : ''
             }
-            {/*{*/}
-            {/*    request ? <DemoForm/> : ""*/}
-            {/*}*/}
+            {
+                request ? <DemoForm/> : ""
+            }
         </header>
     );
 };

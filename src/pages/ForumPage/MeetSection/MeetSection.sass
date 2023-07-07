@@ -2,16 +2,13 @@
 .meet
 
   &__time
-    padding: 30px 22px
+
     margin-top: 67px
-    background: #FFFFFF
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1)
+
     border-radius: 8px
   &__h2
-    @include text(700,30px,120%,#000000)
-    width: 163px
-    height: 36px
-    margin-bottom: 51px
+    @include text(700,36px,120%,#000000)
+
   &__wrapper
 
     width: 100%
@@ -23,8 +20,24 @@
     justify-content: center
     align-items: center
     row-gap: 22px
+    background: #3378C9
+    padding: 23px 9px
+    width: 245px
   &__h3
-    @include text(600,22px,120%,#10923E)
+    @include text(600,22px,120%,#ffffff)
+    text-align: center
+  &__text
+    @include text(700,36px,120%,#00862D)
+    padding: 105px 0 18px 0
+  &__p
+    @include text(500,30px,120%,#000000)
+    padding-bottom: 32px
+    list-style: disc
+  &__block
+    padding: 105px 0 92px 0
+
+
+
 
 @media (max-width: 1201px)
   .meet
