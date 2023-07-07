@@ -12,7 +12,7 @@ const RegistrationInputTextarea = ({type,title,name}) => {
             <label className="registration__label">
                 <h3 className="registration__label-title">{title}<span className="registration__star">*</span> <span
                     className="registration__error"> {errors[name] && errors[name].message}</span></h3>
-                <textarea autoFocus={true} className="registration__input" name={type} {...register(name, {
+                <textarea className="registration__input" name={type} {...register(name, {
                     required: {
                         message: "Это поле обязательно к заполнению!",
                         value: true
