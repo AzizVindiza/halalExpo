@@ -25,8 +25,6 @@ const ContactData = () => {
             <RegistrationInput type={'text'} name={'name_contact_person'} title={'ФИО'}/>
             <RegistrationInput type={'text'} name={'position_contact_person'} title={'Должность'}/>
             <RegistrationPhoneNumber title={'Телефон'} name={'phone_contact_person'}/>
-            <RegistrationPhoneNumber title={'WhatsApp'} name={'whatsapp_contact_person'}/>
-
         </div>
     );
 };
