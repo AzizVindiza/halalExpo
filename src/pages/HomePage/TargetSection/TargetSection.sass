@@ -4,8 +4,10 @@
 .target
   position: relative
   padding: 158px 0
+  overflow: hidden
+
   &__container
-    overflow: hidden
+
     position: relative
     z-index: 1
     display: flex
@@ -21,7 +23,7 @@
   &__txt
     background: linear-gradient(#40A865 ,#3888BC 100%)
     padding: 50px
-    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.1)
+    box-shadow: 0px 38px 62px 0px rgba(0, 0, 0, 0.30), 0px 1.8353102207183838px 3.6706204414367676px 0px rgba(255, 255, 255, 0.25) inset
     border-radius: 61px
 
 @media (max-width: 1025px)
@@ -36,6 +38,7 @@
     &__h2
       @include text(800,30px,42px,#FFF)
     &__txt
+
       padding: 25px
 
 @media (max-width: 955px)
@@ -61,7 +64,7 @@
       svg
         width: 250px
     &__txt
-      box-shadow: none
+
       text-align: center
       justify-content: center
       display: flex

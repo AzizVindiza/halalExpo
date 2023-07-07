@@ -65,13 +65,16 @@
     height: 699px
 
   &__h3
+    display: flex
+    justify-content: right
+    left: -60%
+    position: relative
     background: linear-gradient(270deg, rgba(0, 134, 45, 0.2) -41.85%, rgba(0, 51, 204, 0.2) 134.44%)
     backdrop-filter: blur(1.5px)
     border-radius: 40px 0
-    width: 390px
     padding: 24px 29.5px
     margin-bottom: 27px
-    @include text(800,20px,133%,#565656)
+    @include text(800,22px,133%,#FFF)
 
 
   &__h2
@@ -105,12 +108,18 @@
     &__circle-small
       right: 41%
     &__h3
-      @include text(800,18px,133%,#565656)
+      @include text(800,18px,133%,#FFF)
     &__h2
       @include text(700,50px,110%, #00862D)
     &__p
       @include text(400,16px,133%,#000)
       max-width: 500px
+
+@media (max-width: 830px)
+  .first
+    &__h3
+      left: -55%
+
 @media (max-width: 770px)
   .first
     &__overlay
@@ -128,20 +137,26 @@
     &__circle-small
       width: 100px
     &__h3
-      @include text(800,14px,133%,#565656)
+      @include text(800,14px,133%,#FFF)
       padding: 18px 20px
-      width: 300px
+
     &__h2
       @include text(700,40px,110%, #00862D)
     &__p
       @include text(400,12px,133%,#000)
       max-width: 380px
+
+@media (max-width: 580px)
+  .first
+    &__h3
+      @include text(800,12px,133%,#FFF)
+      padding: 18px 20px
 @media (max-width: 482px)
   .first
     &__h3
-      @include text(800,13px,133%,#565656)
+      @include text(800,9px,133%,#FFF)
       padding: 18px 20px
-      width: 200px
+
     &__h2
       width: 280px
 

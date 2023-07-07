@@ -47,7 +47,7 @@ const FirstSection = () => {
             </div>
             <motion.div custom={1} variants={textMotion} className="first__txt">
                 <h3 className="first__h3">
-                    ИННОВАЦИЯ НАЧИНАЮТСЯ ЗДЕСЬ
+                    ИННОВАЦИЯ НАЧИНАЮТСЯ ЗДЕСЬ!
                 </h3>
                 <h1 className="first__h2">
                     Halal Investment<br/>
@@ -55,7 +55,7 @@ const FirstSection = () => {
                 </h1>
                 <p className="first__p">{t("firstSection.text")}</p>
                 <div onClick={() => setRequest(true)}  className="first__btn">
-                    <Btn type="button" text="Оставить заявку"/>
+                    <Btn type="button" text="Забронировать стенд "/>
                 </div>
                 <div className="first__circle-small">
                     <img src={small} alt="small circle"/>
