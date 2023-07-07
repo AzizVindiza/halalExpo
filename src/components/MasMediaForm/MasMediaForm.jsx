@@ -44,7 +44,6 @@ const MasMediaForm = () => {
                     <RegistrationInput type={'text'} name={"smi_team"} title={'Сколько у вас человек в команде?'}/>
                 </div>
             </div>
-            <Btn text={"Зарегистрироваться"} type={"submit"}/>
         </div>
     );
 };

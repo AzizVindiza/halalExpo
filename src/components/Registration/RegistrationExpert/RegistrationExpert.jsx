@@ -14,7 +14,6 @@ const RegistrationExpert = () => {
             <RegistrationPhoneNumber title={"Телефон"} name={"workPhone"}/>
             <RegistrationPassword/>
             <CheckBox/>
-            <Btn text={"Зарегистрироваться"} type={"submit"}/>
         </>
     );
 };

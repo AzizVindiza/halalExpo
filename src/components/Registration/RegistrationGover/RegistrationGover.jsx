@@ -25,7 +25,6 @@ const RegistrationGover = () => {
             <RegistrationUploadInput name={"image_id_two"} title={"Загрузите паспорт с обратной стороны"}/>
             <RegistrationUploadInput name={"image_id_three"} title={"Сделайте селфи с паспортом"}/>
             <CheckBox/>
-            <Btn text={"Зарегистрироваться"} type={"submit"}/>
         </>
     );
 };

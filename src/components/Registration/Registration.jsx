@@ -125,6 +125,7 @@ const Registration = () => {
                                                 : ""
                         }
 
+                        <Btn text={"Зарегистрироваться"} type={"submit"}/>
                         {/*главная кнопка отправки type submit*/}
                     </form>
                 </div>

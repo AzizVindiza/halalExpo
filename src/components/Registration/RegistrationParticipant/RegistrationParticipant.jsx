@@ -66,7 +66,6 @@ const RegistrationParticipant = () => {
                 <RegistrationInput type={'url'} name={'web_site'} title={'Веб-сайт '}/>
                 <SocialSection/>
                 <ContactFace/>
-            <Btn text={"Зарегистрироваться"} type={"submit"}/>
         </>
               );
 };
