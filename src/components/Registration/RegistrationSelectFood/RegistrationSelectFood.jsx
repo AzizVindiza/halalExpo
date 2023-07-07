@@ -17,12 +17,13 @@ const RegistrationSelectFood = ({title,name}) => {
                 }
             })}  onChange={(event)=> setFood(event.target.value)}>
                 <option hidden={true}  className="registration__option" value="">Выберите</option>
-                <option className="registration__option" value="Европейская">Европейская</option>
-                <option  className="registration__option" value="Национальная">Национальная</option>
+                <option className="registration__option" value="Кафе">Кафе</option>
+                <option  className="registration__option" value="Ресторан">Ресторан</option>
                 <option  className="registration__option" value="Fast food">Fast food</option>
-                <option  className="registration__option" value="Азиатская">Азиатская</option>
-                <option  className="registration__option" value="Турецкая">Турецкая</option>
+                <option  className="registration__option" value="Чайхана">Чайхана</option>
                 <option  className="registration__option" value="Кофейня">Кофейня</option>
+                <option  className="registration__option" value="Кейтеринг">Кейтеринг</option>
+                <option  className="registration__option" value="Take and GO (На вынос)">Take and GO (На вынос)</option>
             </select>
         </label>
     );
