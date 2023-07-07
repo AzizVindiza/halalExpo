@@ -13,16 +13,16 @@
     align-items: center
     column-gap: 30px
   &__h2
-    @include text(800,30px,42px,#40A865)
+    @include text(900,30px,133%,#FFF)
     margin-bottom: 15px
   &__p
-    @include text(400,30px,40px,#000)
+    @include text(400,30px,40px,#FFF)
     width: 615px
   &__txt
-    background: #FFFFFF
+    background: linear-gradient(#40A865 ,#3888BC 100%)
     padding: 50px
     box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.1)
-    border-radius: 4px
+    border-radius: 61px
 
 @media (max-width: 1025px)
   .target
@@ -31,10 +31,10 @@
         width: 300px
 
     &__p
-      @include text(400,30px,40px,#000)
+      @include text(400,30px,40px,#FFF)
       width: 560px
     &__h2
-      @include text(800,22px,42px,#40A865)
+      @include text(800,30px,42px,#FFF)
     &__txt
       padding: 25px
 
@@ -45,11 +45,16 @@
       display: flex
       row-gap: 25px
       flex-direction: column
+    &__h2
+      text-align: center
+      @include text(800,26px,42px,#FFF)
+    &__p
+      @include text(400,22px,40px,#FFF)
 
 @media (max-width: 770px)
   .target
     &__container
-      background: #FFFFFF
+
       row-gap: 0
       width: 90%
     &__img
@@ -65,7 +70,7 @@
     &__p
       width: 100%
       display: flex
-      @include text(400,17px,40px,#000)
+      @include text(400,17px,40px,#FFF)
 
       margin:  0 auto
 @media (max-width: 482px)
@@ -76,14 +81,14 @@
         width: 152px
         height: 180px
     &__h2
-      @include text(800,22px,42px,#40A865)
+      @include text(800,22px,42px,#FFF)
       margin-bottom: 0
     &__p
-      @include text(400,15px,40px,#000)
+      @include text(400,15px,40px,#FFF)
 @media (max-width: 394px)
   .target
     &__h2
-      @include text(800,20px,42px,#40A865)
+      @include text(800,20px,42px,#FFF)
     &__p
-      @include text(400,14px,40px,#000)
+      @include text(400,14px,40px,#FFF)
 
