@@ -11,7 +11,7 @@ const CardSection = () => {
                 <div className="card__lists">
 
                     <div className="card__text">
-                        <h2 className="card__h2">25.08 Первый день выставки </h2>
+                        <h2 className="card__h2">26.08 Первый день выставки </h2>
 
                         <div className="card__wrapper">
                             <div className="card__block">
