@@ -19,6 +19,9 @@ import {toast} from "react-toastify";
 import img from "./information 1.png"
 import axios from "axios";
 import RegistrationPassword from "./RegistrationPassword/RegistrationPassword";
+import RegistrationParticipant from "./RegistrationParticipant/RegistrationParticipant";
+import RegistrationGover from "./RegistrationGover/RegistrationGover";
+import RegistrationExpert from "./RegistrationExpert/RegistrationExpert";
 
 
 const Registration = () => {
@@ -111,57 +114,19 @@ const Registration = () => {
                                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
                             </span>
                         </p>
-                        <RegistrationInput type={"text"} title={"ФИО"} name={"name"}/>
-
-                        <RegistrationInput type={"text"} title={"Страна"} name={"country"}/>
-                        <RegistrationInput type={"text"} title={"Город"} name={"city"}/>
-                        <RegistrationInput type={"date"} title={"Дата рождения"} name={"birth"}/>
-                        <RegistrationUploadInput name={"image_id_one"} title={"Загрузите паспорт с лицевой стороны*"}/>
-                        <RegistrationUploadInput name={"image_id_two"} title={"Загрузите паспорт с обратной стороны*"}/>
-                        <RegistrationUploadInput name={"image_id_three"} title={"Сделайте селфи с паспортом*"}/>
-                        <RegistrationPhoneNumber title={"Телефон"} name={"workPhone"}/>
-                        <RegistrationPhoneNumber title={"WhatsApp"} name={"personalPhone"}/>
-                        <CheckBox/>
                         <RegistrationSelect title={"В качестве кого вы хотите посетить HIT EXPO?"}
                                             name={"participant_sector"}/>
                         {
-                            role === "Посетитель" ?
-                                ""
-                                : role === "Участник" ?
-                                    <>
-                                        <RegistrationSelectMember
-                                            title={'Выберите сектор участия (с условиями участия каждого сектора можно ознакомится)'}
-                                            name={'participation_sector'}/>
-                                        {members === 'Trade' ?
-                                            <RegistrationSelectIndustry title={'Выберите отрасль'} name={'trade'}/>
-                                            :
-                                            members === "Fashion" ?
-                                                <RegistrationSelectFashion title={'Выберите направление'}
-                                                                           name={'choose_direction_fashion'}/>
-                                                :
-                                                members === 'Food' ?
-                                                    <RegistrationSelectFood title={'Выберите направление'}
-                                                                            name={'choose_direction_food'}/>
-                                                    :
-                                                    members === "Investment" ?
-                                                        <ChooseIndustry/>
-                                                        : ""
-                                        }
-                                        {<ParticipantForm/>}
-                                    </>
-
-
-                                    : role === "СМИ" ? <MasMediaForm/> : role === "Эксперта" ? ""
-                                        : role === "Представитель государственных органов" ?
-                                            <RegistrationInput type={"text"} title={"Должность"}
-                                                               name={"position_main"}/> : ""
+                            role === "Посетитель" ? <RegistrationExpert/>
+                                : role === "Участник" ? <RegistrationParticipant/>
+                                    : role === "СМИ" ? <MasMediaForm/>
+                                        : role === "Эксперта" ? <RegistrationExpert/>
+                                            : role === "Представитель государственных органов" ? <RegistrationGover/>
+                                                : ""
                         }
 
-                        <RegistrationInput type={"email"} title={"Электронная почта"} name={"email"}/>
-                        <RegistrationPassword/>
-
-
-                        <Btn text={"Зарегистрироваться"} type={"submit"}/>{/*главная кнопка отправки type submit*/}
+                        <Btn text={"Зарегистрироваться"} type={"submit"}/>
+                        {/*главная кнопка отправки type submit*/}
                     </form>
                 </div>
             </div>

@@ -8,12 +8,13 @@
     padding: 0 135px
   &__container
     display: flex
-  &__left,&__right
+  &__left
     position: relative
     width: 50%
   &__right
     position: absolute
     padding-top: 100px
+    width: 55%
     right: 0
 
   &__cards
@@ -30,11 +31,18 @@
     text-align: center
   &__card
     text-align: center
+    display: flex
+    flex-direction: column
+    align-items: center
     width: 130px
-    img
-      width: 80px
-      height: 80px
-      transition: 0.5s
+    height: 170px
+  &__img
+    width: 110px
+    height: 110px
+    border-radius: 12px
+    box-shadow: 0px 32.793701171875px 53.50551223754883px 0px rgba(0, 0, 0, 0.30), 0px 1.5838582515716553px 3.1677165031433105px 0px rgba(255, 255, 255, 0.25) inset
+
+    transition: 0.5s
     img:hover
       transform: scale(1.3)
 
@@ -76,10 +84,18 @@
 @media (max-width: 1201px)
   .type
     &__card
-      img
-       width: 70px
+    &__right
+      right: -100px
+      width: 65%
+    &__img
+      width: 96px
+      height: 96px
+
+
 @media (max-width: 1025px)
   .type
+
+
     &__container
       display: flex
       flex-direction: column
@@ -89,15 +105,17 @@
       width: 100%
       justify-content: space-around
     &__right
-      display: contents
-      position: initial
+      right: -50px
+      display: flex
+      width: 100%
+
+      position: relative
+
 
 
 @media (max-width: 482px)
   .type
     &__cards
       row-gap: 30px
-      img
-        width: 60px
     &__h3
       margin-top: 0

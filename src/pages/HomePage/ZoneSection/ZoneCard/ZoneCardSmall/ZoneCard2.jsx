@@ -1,6 +1,6 @@
 import React from 'react';
 import "./zoneCard2.sass"
-import calendar from "../calendar.svg";
+import calendar from "../calender2.svg";
 import part from "../part.svg";
 import trade from "../trade.png";
 import lineL from "../line2.png";

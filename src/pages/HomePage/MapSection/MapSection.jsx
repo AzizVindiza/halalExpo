@@ -3,6 +3,7 @@ import './MapSection.sass'
 import Location from "./Location/Location";
 import Btn from "../../../components/Btn/Btn";
 import {motion} from "framer-motion";
+import img from "./img.png"
 
 const textMotion = {
     hidden: {
@@ -48,11 +49,9 @@ const MapSection = () => {
 
                 </motion.div>
                 <motion.div custom={2} variants={cartMotion} className="map__wrapper">
-                    <iframe
-                        title="map"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.5387248185575!2d77.12513972164737!3d42.64993794410837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3884f6e7dde5c071%3A0x6dbdfe25c037c89d!2z0JjQv9C_0L7QtNGA0L7QvCDQsy7Qp9C-0LvQv9C-0L0t0JDRgtCw!5e0!3m2!1sru!2skg!4v1686032967680!5m2!1sru!2skg"
-                        allowFullScreen="" loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade"></iframe>
+                    <div className="map__img">
+                        <img src={img} alt=""/>
+                    </div>
                     <a href="" className="map__a">
                         <Btn m={"big"} type="button" text="Подробнее"/>
                     </a>

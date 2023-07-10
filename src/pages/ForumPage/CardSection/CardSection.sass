@@ -5,8 +5,9 @@
 
   &__container
     padding: 30px 22px
+    background: #3378C9
 
-    background: #FFFFFF
+
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1)
   &__lists
     display: flex
@@ -14,12 +15,16 @@
   &__block
     width: 127px
     height: 26px
-    background: #FFFFFF
+
     border-radius: 2px
     display: flex
     justify-content: center
     align-items: center
-    @include text(600, 22px, 180%, #40A865)
+    @include text(600, 22px, 180%, #fff)
+  &__h3
+    @include text(400,22,120%,#ffffff)
+    width: 60%
+
   &__wrapper
     display: flex
     align-items: center
@@ -28,8 +33,10 @@
     width: 100%
     border-bottom: 1px solid #D9D9D9
     padding-bottom: 18px
+
   &__h2
-    @include text(700, 40px,120%,#000000 )
+    @include text(700, 30px,120%,#ffffff )
+    display: flex
 
     margin-bottom: 31px
 
@@ -45,14 +52,14 @@
 @media (max-width: 1201px)
   .card
     &__h2
-      @include text(700,27px,120%,#000000)
+      @include text(700,27px,120%,#ffffff)
       margin-bottom: 28px
     &__block
       width: 116px
       height: 24px
       @include text(600,20px,120%,#00862D)
     &__h3
-      @include text(400,20px,120%,#000000)
+      @include text(400,20px,120%,#ffffff)
 @media (max-width: 1025px)
   .card
     &__h2

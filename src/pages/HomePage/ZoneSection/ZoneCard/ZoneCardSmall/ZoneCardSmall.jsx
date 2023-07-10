@@ -2,7 +2,7 @@ import React from 'react';
 import './zoneCardSmall.sass'
 import trade from "../trade.png"
 import lineR from "../line1.png"
-import calendar from "../calendar.svg"
+import calendar from "../calender2.svg"
 import part from "../part.svg"
 
 import {HiOutlineArrowRight} from "react-icons/hi"

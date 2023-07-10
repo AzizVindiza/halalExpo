@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 
 import "swiper/css/effect-creative";
-import banner from './banner.svg'
+import banner from './banner.png'
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 

@@ -1,26 +1,25 @@
     import React from 'react';
 import './TypeSection.sass'
-import icon1 from './type__1.svg'
-import icon2 from './type__2.svg'
-import icon3 from './type__3.svg'
-import icon4 from './type__4.svg'
-import icon5 from './type__5.svg'
-import icon6 from './type__6.svg'
-import icon7 from './type__7.svg'
-import icon8 from './type__8.svg'
-import icon9 from './type__9.svg'
-import icon10 from './type__10.svg'
-import icon11 from './type__11.svg'
-import national from "./national.svg"
-import cars from "./cars.svg"
-import innovation from "./innovation.svg"
-import energy from "./energy.svg"
-import flowers from './flowers.svg'
-import special from "./special.svg"
-import cloth from "./clothes.svg"
+import icon1 from './cube1.svg'
+import icon2 from './cube2.svg'
+import icon3 from './cube3.svg'
+import icon4 from './cube4.svg'
+import icon5 from './cube5.svg'
+import icon6 from './cube6.svg'
+import icon7 from './cube7.svg'
+import icon8 from './cube8.svg'
+import icon9 from './cube9.svg'
+import icon10 from './cube10.svg'
+import icon11 from './cube11.svg'
+import icon12 from './cube12.svg'
+import icon13 from './cube13.svg'
+import icon14 from './cube14.svg'
+import icon15 from './cube15.svg'
+import icon16 from './cube16.svg'
+import icon17 from './cube17.svg'
 
-import bg from './type__bg.svg'
-import right from './right.png'
+
+import right from './R.png'
 import {motion} from "framer-motion";
 
 
@@ -89,77 +88,146 @@ import {motion} from "framer-motion";
             initial={"hidden"}
             whileInView={"visible"} className="type">
             <div className="type__container container">
-                <div className="type__left">
+                <div className="type__left ">
                     <div className="type__cards">
                         <div className="type__card">
-                            <img src={icon1} alt="type"/>
+                            <div className="type__img">
+                                <img src={icon1} alt="type"/>
+                            </div>
+
+
                             <h3 className="type__h3">Машиностроение и автоматизация производства</h3>
                         </div>
                         <div className="type__card">
-                            <img src={icon2} alt="type"/>
+                            <div className="type__img">
+                                <img src={icon2} alt="type"/>
+                            </div>
+
+
                             <h3 className="type__h3">Строительство  и недвижимость</h3>
                         </div>
                         <div className="type__card">
-                            <img src={icon3} alt="type"/>
+                            <div className="type__img">
+                                <img src={icon3} alt="type"/>
+                            </div>
+
+
+
                             <h3 className="type__h3">Инвестиционные проекты </h3>
                         </div>
 
                         <div className="type__card">
-                            <img src={icon5} alt="type"/>
+                            <div className="type__img">
+                                <img src={icon4} alt="type"/>
+                            </div>
+
+
                             <h3 className="type__h3">Информационные технологии и программное обеспечение</h3>
                         </div>
                         <div className="type__card">
-                            <img src={icon7} alt="type"/>
+                            <div className="type__img">
+                                <img src={icon5} alt="type"/>
+                            </div>
+
+
                             <h3 className="type__h3">Медицинская и фармацевтическая промышленность</h3>
                         </div>
 
 
                         <div className="type__card">
-                            <img src={flowers} alt="type"/>
+                            <div className="type__img">
+                                <img src={icon6} alt="type"/>
+                            </div>
+
+
                             <h3 className="type__h3">Пищевая и сельскохозяйственная промышленность</h3>
                         </div>
                         <div className="type__card">
-                            <img src={icon4} alt="type"/>
+                            <div className="type__img">
+                                <img src={icon7} alt="type"/>
+                            </div>
+
+
                             <h3 className="type__h3">Экотовары</h3>
                         </div>
                         <div className="type__card">
-                            <img src={icon8} alt="type"/>
+                            <div className="type__img">
+                                <img src={icon8} alt="type"/>
+                            </div>
+
+
                             <h3 className="type__h3">Образовательные продукты и услуги</h3>
                         </div>
                         <div className="type__card">
-                            <img src={icon9} alt="type"/>
+                            <div className="type__img">
+                                <img src={icon9} alt="type"/>
+                            </div>
+
+
                             <h3 className="type__h3">Искусство</h3>
                         </div>
                         <div className="type__card">
-                            <img src={icon10} alt="type"/>
+                            <div className="type__img">
+
+                                <img src={icon10} alt="type"/>
+                            </div>
+
                             <h3 className="type__h3">Финансовые и банковские продукты и услуги</h3>
                         </div>
                         <div className="type__card">
-                            <img src={icon11} alt="type"/>
+                            <div className="type__img">
+                                <img src={icon11} alt="type"/>
+                            </div>
+
+
                             <h3 className="type__h3">Туризм и гостеприимство</h3>
                         </div>
                         <div className="type__card">
-                            <img src={cars} alt="type"/>
+                            <div className="type__img">
+                                <img src={icon12} alt="type"/>
+                            </div>
+
+
                             <h3 className="type__h3">Транспорт и логистика.</h3>
                         </div>
                         <div className="type__card">
-                            <img src={energy} alt="type"/>
+                            <div className="type__img">
+                                <img src={icon13} alt="type"/>
+                            </div>
+
+
                             <h3 className="type__h3">Энергетика и альтернативные источники энергии</h3>
                         </div>
                         <div className="type__card">
-                            <img src={cloth} alt="type"/>
+                            <div className="type__img">
+                                <img src={icon14} alt="type"/>
+                            </div>
+
+
                             <h3 className="type__h3">Мода и текстиль</h3>
                         </div>
                         <div className="type__card">
-                            <img src={innovation} alt="type"/>
+                            <div className="type__img">
+                                <img src={icon15} alt="type"/>
+                            </div>
+
+
                             <h3 className="type__h3">Инновации в области экологии и устойчивого развития</h3>
                         </div>
                         <div className="type__card">
-                            <img src={special} alt="type"/>
+                            <div className="type__img">
+                                <img src={icon16} alt="type"/>
+                            </div>
+
+
                             <h3 className="type__h3">Техника и спецтехника</h3>
                         </div>
                         <div className="type__card">
-                            <img src={national} alt="type"/>
+                            <div className="type__img">
+                                <img src={icon17} alt="type"/>
+                            </div>
+
+
                             <h3 className="type__h3">Национальные товары, рукоделие, сувенирная продукция</h3>
                         </div>
                     </div>

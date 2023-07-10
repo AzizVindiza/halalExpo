@@ -1,13 +1,30 @@
 
 
 .mapContacts
+
   iframe
-    width: 600px
+    width: 653px
     height: 346px
+
+@media (max-width: 1201px)
+  .mapContacts
+    iframe
+      width: 582px
+      height: 327px
+@media (max-width: 1110px)
+  .mapContacts
+    iframe
+      width: 500px
+      height: 300px
+
+
 
 
 @media (max-width: 1025px)
   .mapContacts
     &__map
       display: flex
+      width: 100%
       justify-content: center
+      iframe
+        width: 100%

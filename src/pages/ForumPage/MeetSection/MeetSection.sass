@@ -2,29 +2,45 @@
 .meet
 
   &__time
-    padding: 30px 22px
+
     margin-top: 67px
-    background: #FFFFFF
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1)
+
     border-radius: 8px
   &__h2
-    @include text(700,30px,120%,#000000)
-    width: 163px
-    height: 36px
-    margin-bottom: 51px
+    @include text(700,36px,120%,#000000)
+
   &__wrapper
 
     width: 100%
     display: flex
-    justify-content: space-between
+
+
   &__card
     display: flex
     flex-direction: column
     justify-content: center
     align-items: center
-    row-gap: 22px
+    margin-right: 27px
+    padding: 23px 9px
+    width: 245px
+    border-radius: 16px
+    background: radial-gradient(117.45% 97.70% at 17.63% 30.50%, rgba(255, 255, 255, 0.18) 0.73%, rgba(255, 255, 255, 0.00) 69.19%), #3378C9
+    box-shadow: 0px 41.5922737121582px 67.861083984375px 0px rgba(0, 0, 0, 0.30), 0px 2.0088086128234863px 4.017617225646973px 0px rgba(255, 255, 255, 0.25) inset
   &__h3
-    @include text(600,22px,120%,#10923E)
+    @include text(600,22px,120%,#ffffff)
+    text-align: center
+  &__text
+    @include text(700,36px,120%,#00862D)
+    padding: 105px 0 18px 0
+  &__p
+    @include text(500,30px,120%,#000000)
+    padding-bottom: 32px
+    list-style: disc
+  &__block
+    padding: 105px 0 92px 0
+
+
+
 
 @media (max-width: 1201px)
   .meet
