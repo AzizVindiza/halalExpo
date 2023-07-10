@@ -30,7 +30,29 @@
   &__txt
     position: relative
     z-index: 100
-    padding: 102px 135px 0
+    padding: 30px 135px 0
+  &__box
+    width: 340px
+  .words2
+    width: 100%
+
+    display: flex
+    justify-content: flex-end
+  &__h3
+    font-family: Gilroy,sans-serif
+    line-height: 133%
+    font-weight: 800
+    font-size: 41px
+    background: linear-gradient(#31B07D, #3378C9)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    width: fit-content
+    text-shadow: 0px 57.814815521240234px 94.32942962646484px 0px rgba(0, 0, 0, 0.30)
+
+
+
+
+
 
   &__bg
     position: absolute
@@ -64,20 +86,11 @@
     width: 699px
     height: 699px
 
-  &__h3
-    display: flex
-    justify-content: right
-    left: -60%
-    position: relative
-    background: linear-gradient(270deg, rgba(0, 134, 45, 0.2) -41.85%, rgba(0, 51, 204, 0.2) 134.44%)
-    backdrop-filter: blur(1.5px)
-    border-radius: 40px 0
-    padding: 24px 29.5px
-    margin-bottom: 27px
-    @include text(800,22px,133%,#FFF)
+
 
 
   &__h2
+    margin-top: 36px
     @include text(700,66px,110%, #00862D)
     margin-bottom: 11px
     span
@@ -98,27 +111,44 @@
     &__overlay
       right: -70px
     &__txt
-      padding: 73px 50px 0
+      padding: 32px 50px 0
+    &__h2
+      @include text(700,60px,110%, #00862D)
+    &__p
+      font-size: 16px
+      max-width: 488px
+    &__box
+      width: 310px
+
+
+    &__h3
+      font-size: 38px
+
 @media (max-width: 1025px)
   .first
+    &__txt
+      padding: 42px 50px 0
+
     &__player
       width: 900px
     &__overlay
       right: -170px
     &__circle-small
       right: 41%
-    &__h3
-      @include text(800,18px,133%,#FFF)
+
     &__h2
       @include text(700,50px,110%, #00862D)
+    &__box
+      width: 270px
+    &__h3
+      font-size: 33px
     &__p
-      @include text(400,16px,133%,#000)
-      max-width: 500px
+      @include text(400,15px,133%,#000)
+      max-width: 400px
 
 @media (max-width: 830px)
   .first
-    &__h3
-      left: -55%
+
 
 @media (max-width: 770px)
   .first
@@ -136,26 +166,29 @@
       padding: 30px 30px
     &__circle-small
       width: 100px
-    &__h3
-      @include text(800,14px,133%,#FFF)
-      padding: 18px 20px
+
 
     &__h2
       @include text(700,40px,110%, #00862D)
+    &__box
+      width: 212px
+    &__h3
+      font-size: 26px
     &__p
       @include text(400,12px,133%,#000)
       max-width: 380px
 
-@media (max-width: 580px)
+@media (max-width: 700px)
   .first
-    &__h3
-      @include text(800,12px,133%,#FFF)
-      padding: 18px 20px
+
 @media (max-width: 482px)
   .first
+    &__box
+      width: 165px
     &__h3
-      @include text(800,9px,133%,#FFF)
-      padding: 18px 20px
+
+      font-size: 23px
+
 
     &__h2
       width: 280px
@@ -174,12 +207,18 @@
     &__txt
       padding: 15px
     &__circle-small
-      display: none
+      top: 5px
+      display: flex
     &__player2
       display: flex
       position: absolute
       width: 282px
       height: 355px
+    &__box
+      margin-top: 50px
     &__h3
-      padding: 9px 15px
+
+      font-size: 20px
+
+
 

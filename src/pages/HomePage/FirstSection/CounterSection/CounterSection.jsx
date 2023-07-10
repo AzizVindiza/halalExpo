@@ -13,7 +13,7 @@ const CounterSection = () => {
     let interval = useRef()
 
     const startDate = () => {
-        const countTimeDate = new Date("august 25, 2023 08:00:00").getTime()
+        const countTimeDate = new Date("august 26, 2023 08:00:00").getTime()
 
         interval =  setInterval(() => {
             const now = new Date().getTime()
