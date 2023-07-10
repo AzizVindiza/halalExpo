@@ -22,8 +22,29 @@
     @include text(500,18px,180%,#000000)
   &__h3
     @include text(500,18px,180%,#000000)
+  &__close
+    display: none
 @media (min-width: 320px)
+  .membersCard
+    &__content
+     display: none
+    &__close
+     display: block
+    &__wrapper
+     display: flex
+     justify-content: space-between
+     width: 100%
+
 @media (min-width: 481px)
 @media (min-width: 769px)
+  .membersCard
+    .membersCard
+     &__content
+      display: flex
+     &__wrapper
+       justify-content: flex-start
+     &__close
+      display: none
 @media (min-width: 1025px)
+
 @media (min-width: 1201px)

@@ -17,6 +17,7 @@
 
   &__block-component
     display: flex
+    flex-wrap: wrap
     column-gap: 24px
   &__txt
     @include text(500,18px,180%,#00000070)
@@ -74,10 +75,11 @@
     column-gap: 10px
 
 
-@media (max-width: 1023px)
+@media (max-width: 1025px)
   .members
     &__wrapper
       flex-direction: column
+
     &__txt
       margin-bottom: 34px
 @media (max-width: 770px)
@@ -89,4 +91,6 @@
       margin-bottom: 30px
     &__h2
       font-size: 32px
+    &__h3
+      display: none
 @media (max-width: 394px )

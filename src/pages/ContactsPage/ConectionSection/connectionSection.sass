@@ -1,7 +1,7 @@
 @import "src/sass/base/mixins"
 .connectionSection
   &__container
-    padding: 56px 0 100px 0
+    padding: 45px 0 80px 0
   &__box
     display: flex
     column-gap: 30px
@@ -19,32 +19,64 @@
     justify-content: center
     align-items: center
 
+
   &__block
     display: flex
     align-items: center
     column-gap: 20px
   &__p
-    @include text(800,22px,120%,#000)
+    @include text(500,22px,120%,#000)
+
+
+
+@media (max-width: 1201px)
+  .connectionSection
+    &__title
+      @include text(800,25px,133%,#10923E)
+    &__p
+      @include text(500,20px,120%,#000)
+    &__oval
+      width: 55px
+      height: 55px
+    &__svg
+      width: 24px
+      height: 24px
 
 
 
 @media (max-width: 1025px)
   .connectionSection
+    &__container
+      padding: 65px 0 104px 0
     &__wrapper
       display: flex
       justify-content: center
     &__box
+      width: 100%
       display: flex
       flex-direction: column
+      align-items: flex-start
       row-gap: 33px
+    &__oval
+      width: 60px
+      height: 60px
+    &__p
+      @include text(500,30px,120%,#000)
+
+
 
 @media (max-width: 482px)
   .connectionSection
+    &__container
+      padding: 45px 0 74px 0
     &__title
       @include text(800,20px,133%,#00862D)
     &__oval
       width: 55px
       height: 55px
+    &__svg
+      width: 22px
+      height: 22px
     &__p
       @include text(500,23px,120%,#000)
 @media (max-width: 394px)
