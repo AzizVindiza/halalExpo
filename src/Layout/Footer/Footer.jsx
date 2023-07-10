@@ -14,8 +14,8 @@ const Footer = () => {
             <div className="footer__container container">
                 <div className="footer__wrapp">
                     <div className="footer__left">
-                        <h2 className="footer__h2">29.07.23 - 01.08.23</h2>
-                        <p className="footer__p">Иссык-Кульская область Экспо, МВЦx. <br/> Чолпон-Ата</p>
+                        <h2 className="footer__h2">Дата: 25.08.2023-27-08.2023</h2>
+                        <p className="footer__p">Адрес : : Иссык-Кульская область, Экспо, Музей Чингиза Айтматова (г. Чолпон-Ата, Кыргызская Республика) <br/> Чолпон-Ата</p>
                         <div className="footer__links">
                             <a href={'https://www.instagram.com/hitexpo.info/?igshid=MzRlODBiNWFlZA%3D%3D'} className="footer__socials">
                                 <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
