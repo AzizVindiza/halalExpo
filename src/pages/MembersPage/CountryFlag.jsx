@@ -12,7 +12,6 @@ const CountryFlag = () =>  {
                 className={'country__flags'}
                 selected={select}
                 onSelect={onSelect}
-
             />
         </div>
     );

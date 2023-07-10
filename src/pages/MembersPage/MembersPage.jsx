@@ -43,12 +43,11 @@ const MembersPage = () => {
                     </div>
                 </div>
                 <div className="members__cards">
-                    Список участников пока недоступен
-                    {/*<MembersCard/>*/}
-                    {/*<MembersCard/>*/}
-                    {/*<MembersCard/>*/}
-                    {/*<MembersCard/>*/}
-                    {/*<MembersCard/>*/}
+                    <MembersCard/>
+                    <MembersCard/>
+                    <MembersCard/>
+                    <MembersCard/>
+                    <MembersCard/>
 
                 </div>
             </div>
