@@ -2,6 +2,8 @@ import React, {useEffect, useRef, useState} from 'react';
 import "./TerritorySection.sass"
 import "swiper/css";
 import "swiper/css/navigation";
+import bg from "./bg.png"
+import bg2 from "./bg2.png"
 import { Swiper, SwiperSlide } from "swiper/react";
 import img from './location.png'
 import img2  from './location2.png'
@@ -23,30 +25,32 @@ const TerritorySection = () => {
 
         return (
         <section className={'territory'}>
-            <div className="territory__container ">
+            <div className="territory__container">
 
 
 
 
                 <div className={"territory__wrapper"}>
-                    <Swiper navigation={
-                        {
-                            prevEl:prevRef.current,
-                            nextEl:nextRef.current,
-                        }
-                    }
-                            onInit={()=> setClickBtn(true)}
-                            modules={[Navigation]} className="mySwiper"  >
-                        <SwiperSlide>
+
 
                             <div className="territory__box">
                                 <h2 className="territory__h2">
-                                    Локация: ​Культурный центр «Рух Ордо», г. Чолпон-Ата, Иссык-Кульская область
+                                    Локация HIT Expo 2023
                                 </h2>
-                                <p  className="territory__p">HIT Expo 2023, развернувшаяся на просторах ипподрома города Чолпон-Аты, раскроет перед нами новые горизонты возможностей, идей и партнерства. Это место, пропитанное духом свободы кочевников, олицетворяет энтузиазм и решимость в развитии халяльной индустрии, которая объединяет миры и культуры.
-                                </p>
-                                <p  className="territory__p">Здесь встретятся эксперты халяльного рынка, бизнес-лидеры, инвесторы и предприниматели, стремящиеся превзойти ожидания и внести существенный вклад в развитие процветающей отрасли. Каждая деталь мероприятия вдохновлена желанием создать мощную платформу для роста, обмена опытом и укрепления связей в халяльном бизнесе.
-                                </p>
+                                <div className="territory__row">
+                                    <p  className="territory__p"><span className={"territory__span"}>Озеро Иссык-Куль</span> – это райский уголок для глаз и души. Его чистые воды и окружающая горная красота создают захватывающую картину, которую невозможно описать словами. Раскройте глаза и сердце – Иссык-Куль вам дарит неповторимые моменты и вдохновение.
+
+                                    </p>
+                                    <p  className="territory__p"><span className={"territory__span"}>А культурный центр "Рух Ордо"</span>  – это место, где сливаются традиция и современность. Его уникальная архитектура и теплая атмосфера создают особую энергетику, которая окутывает с первых шагов. "Рух Ордо" – это место, где каждая деталь имеет значение и каждый уголок приносит вам вдохновение и радость.
+                                    </p>
+                                    <p className={"territory__p"}>
+                                        Приготовьтесь к встречам с новыми людьми, к увлекательным разговорам и к новым открытиям. Вас ждут моменты, которые запомнятся навсегда!
+
+                                    </p>
+                                    <p className={"territory__p"}>Не упустите возможность погрузиться в красоту природы и культурного обмена на выставке Halal Investment and Trade Expo 2023. Станьте частью этого уникального события!
+                                    </p>
+                                </div>
+
 
 
 
@@ -57,17 +61,32 @@ const TerritorySection = () => {
 
                             </div>
                             <div className={"territory__img"}>
-                                <img  src={img} alt=""/>
+                                <img className={"territory__img1"} src={bg} alt=""/>
+                                <img className={"territory__img2"} src={bg2} alt=""/>
                             </div>
+                    <div className="territory__maps">
+                        <div className="territory__map container">
+                            <h3 className={"territory__h3"}>Как добраться?</h3>
+                            <span className="territory__span2">
+                                    Культурный центр «Рух Ордо», г. Чолпон-Ата, Иссык-Кульская область
+                                </span>
 
 
-                            <div className="territory__square ">
 
 
-                            </div>
+                        </div>
+                        <div className="territory__iframe">
+                            <iframe
+                                title="map"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3318.1337121784723!2d77.09300377127472!3d42.64880369381159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3884f13c35ead9dd%3A0x788e7fd907d170c8!2z0KDRg9GFINCe0YDQtNC-!5e0!3m2!1sru!2skg!4v1688971306673!5m2!1sru!2skg"
+                                allowFullScreen="" loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"></iframe>
+
+                        </div>
+                    </div>
 
 
-                        </SwiperSlide>
+
 
                         {/*<div className="territory__nav">*/}
                         {/*    <button  ref={prevRef} className="territory__nav_after">*/}
@@ -94,7 +113,7 @@ const TerritorySection = () => {
 
 
 
-                    </Swiper>
+
 
 
                 </div>

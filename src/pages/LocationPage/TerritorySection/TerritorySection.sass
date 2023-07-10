@@ -2,9 +2,9 @@
 
 
 .territory
-
-  margin-top: 38px
   .swiper-button-next ,  .swiper-button-prev
+    display: none
+  &__img2
     display: none
   &__box
     position: relative
@@ -15,41 +15,78 @@
     padding: 18px 35px 20px 25px
     row-gap: 7px
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15)
-  &__h2
-    margin-bottom: 10px
-    @include text(700px, 25px, 133%, #3378C9)
-  &__p
-    @include text(400px, 17px, 133%, #000000)
-    margin-bottom: 10px
-
-  &__nav
+  &__row
 
     display: flex
-    justify-content: flex-end
-    position: absolute
-    right: 10%
-    column-gap: 5px
-    top: 175px
-    bottom: 5px
-    z-index: 5
-    &_after
-      width: 40px
-      height: 40px
-      border-radius: 50%
-    &_before
-      width: 40px
-      height: 40px
-      border-radius: 50%
+    flex-direction: column
+    row-gap: 20px
+  &__h2
+    margin-bottom: 20px
+    @include text(700, 32px, 133%, #00862D)
+  &__h3
+    @include text(700, 32px, 133%, #000)
+  &__p
+    @include text(500, 20px, 133%, #000000)
 
-  &__square
-    width: 90%
-    margin: 98px auto
-    background: #9FD3B2
-    height: 800px
-    &_iframe
-      text-align: center
+  &__span
+    @include text(500, 20px, 133%, #00862D)
+  &__span2
+    @include text(700, 25px, 133%, #3378C9)
+  &__map
+    margin-top: 70px
+
+  &__iframe
+    margin-top: 10px
+    width: 100%
+    height: fit-content
+    iframe
       width: 100%
-      height: 100%
+      height: 482px
+
+
+
+  //
+  //&__nav
+  //
+  //  display: flex
+  //  justify-content: flex-end
+  //  position: absolute
+  //  right: 10%
+  //  column-gap: 5px
+  //  top: 175px
+  //  bottom: 5px
+  //  z-index: 5
+  //  &_after
+  //    width: 40px
+  //    height: 40px
+  //    border-radius: 50%
+  //  &_before
+  //    width: 40px
+  //    height: 40px
+  //    border-radius: 50%
+
+
+
+@media (max-width: 1201px)
+  .territory
+    &__row
+      display: flex
+      flex-direction: column
+      row-gap: 20px
+    &__h2
+      margin-bottom: 20px
+      @include text(700, 30px, 133%, #00862D)
+    &__p
+      @include text(400, 20px, 133%, #000000)
+
+    &__span
+      @include text(400, 20px, 133%, #00862D)
+    &__iframe
+      iframe
+        height: 400px
+
+
+
 @media (max-width: 1025px)
   .territory
     margin-top: 20px
@@ -57,22 +94,55 @@
 
       width: 90%
       padding: 18px 35px 20px 25px
-    &__square
-      width: 90%
-      margin: 46px auto
-      background: #9FD3B2
-      height: 620px
+    &__iframe
+      iframe
+        height: 350px
+    //&__square
+    //  width: 90%
+    //  margin: 46px auto
+    //  background: #9FD3B2
+    //  height: 620px
+    //
+    //&_iframe
+    //  text-align: center
+    //  width: 100%
+    //  height: 100%
+    //&__nav
+    //  top: 211px
+        &__row
+      display: flex
+      flex-direction: column
+      row-gap: 20px
 
-    &_iframe
-      text-align: center
-      width: 100%
-      height: 100%
-    &__nav
-      top: 211px
+    &__h2
+      margin-bottom: 20px
+      @include text(700, 24px, 133%, #00862D)
+    &__h3
+      @include text(700, 28px, 133%, #000)
+    &__p
+      @include text(400, 16px, 133%, #000000)
+
+    &__span
+      @include text(400, 16px, 133%, #00862D)
+    &__span2
+      @include text(700, 22px, 133%, #3378C9)
+    &__map
+      margin-top: 40px
+
+
+
 @media (max-width: 883px)
   .territory
     &__nav
       top: 218px
+    &__h3
+      @include text(700, 24px, 133%, #000)
+    &__span2
+      @include text(700, 18px, 133%, #3378C9)
+    &__iframe
+      iframe
+        height: 250px
+
 
 @media (max-width: 719px)
   .territory
@@ -90,10 +160,23 @@
 
     &__nav
       top: 205px
-    &__h2
-      @include text(700px, 15px, 133%, #3378C9)
     &__p
       @include text(400px, 13px, 133%, #000000)
+    &__img
+      position: relative
+      z-index: -1
+      top: -150px
+    &__img1
+      display: none
+    &__img2
+      display: flex
+    &__iframe
+      iframe
+        height: 500px
+    &__maps
+      position: relative
+      top: -150px
+
 @media (max-width: 430px)
   .territory
     &__nav
@@ -104,17 +187,15 @@
     &__wrapper
       position: relative
     &__box
-      top: 135px
+
       width: 95%
       z-index: 2
-    &__h2
-      @include text(700px, 15px, 133%, #3378C9)
-
-    &__p
-      @include text(400px, 13px, 133%, #000000)
     &__img
-      top: 0
-      position: absolute
+      top: -170px
+    &__img2
+      height: 700px
+
+
     &__nav
 
       top: 320px
@@ -123,6 +204,9 @@
       width: 90%
       position: relative
       top: 130px
+    &__iframe
+      iframe
+        height: 400px
 
 
 
