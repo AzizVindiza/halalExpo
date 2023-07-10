@@ -22,7 +22,7 @@ const OfficeMapSection = () => {
                         </svg>
 
                         {/*info@ameca.site*/}
-                        hitexpo2023@gmail.com
+                        info@hit-expo.org
                     </a>
                     <a className={"office__link"} href="https://goo.gl/maps/S1gXNZEyAanEQaES8">
                         <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
