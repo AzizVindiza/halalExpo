@@ -34,7 +34,7 @@ const Header = () => {
                 </Link>
 
 
-                    <Burger toogleClass={toggleClass} isActiveHamburger={isActiveHamburger}/>
+                    <Burger toogleClass={toggleClass} isActive  Hamburger={isActiveHamburger}/>
 
 
                 <div className={`header__menu ${isActiveHamburger ? " header__menu_active" : null} `}>
