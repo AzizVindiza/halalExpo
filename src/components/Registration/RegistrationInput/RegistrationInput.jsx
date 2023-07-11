@@ -1,7 +1,7 @@
 import React from 'react';
 import {useFormContext} from "react-hook-form";
 
-const RegistrationInput = ({type, classname, name, title}) => {
+const RegistrationInput = ({type, classname, name, title,notrequired}) => {
     const {
         register, formState: {
             errors
@@ -14,7 +14,7 @@ const RegistrationInput = ({type, classname, name, title}) => {
             <input className="registration__input" type={type} {...register(name, {
                 required: {
                     message: "Это поле обязательно к заполнению!",
-                    value: true
+                    value: !notrequired
                 }
             })}/>
         </label>

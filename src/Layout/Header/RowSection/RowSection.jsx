@@ -1,9 +1,6 @@
 import React, {useContext} from 'react';
 import "./rowSection.sass"
 import {CustomContext} from "../../../Context";
-import LoginForm from "../../../components/LoginForm/LoginForm";
-import Registration from "../../../components/Registration/Registration";
-import DemoForm from "../../../components/DemoRegistraion/DemoForm/DemoForm";
 import {useTranslation} from "react-i18next";
 
 
@@ -31,7 +28,7 @@ const RowSection = () => {
                                 <path d="M10.5 11.375C11.9497 11.375 13.125 10.1997 13.125 8.75C13.125 7.30025 11.9497 6.125 10.5 6.125C9.05025 6.125 7.875 7.30025 7.875 8.75C7.875 10.1997 9.05025 11.375 10.5 11.375Z" stroke="#14181F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                 <path d="M10.5 18.375C14.8492 18.375 18.375 14.8492 18.375 10.5C18.375 6.15076 14.8492 2.625 10.5 2.625C6.15076 2.625 2.625 6.15076 2.625 10.5C2.625 14.8492 6.15076 18.375 10.5 18.375Z" stroke="#14181F" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
-                            {/*<button onClick={() => setClose(true)} className={'rowSection__reg'}>{t("header.signUp")}</button>*/}
+                            <button onClick={() => setClose(true)} className={'rowSection__reg'}>{t("header.signUp")}</button>
 
                             <a href="https://docs.google.com/forms/d/17XpFN-V9fU13Ti2mjurjOXwj34mXDiFHXScDi4oeXHs/edit" className={"'rowSection__reg'"}>{t("header.signUp")}</a>
                         </div>
@@ -46,10 +43,6 @@ const RowSection = () => {
                 </div>
 
             </div>
-            {/*{*/}
-            {/*    close ?  <RegisterForm /> : ''*/}
-            {/*}*/}
-
         </div>
     );
 };
