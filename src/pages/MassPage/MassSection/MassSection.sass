@@ -1,24 +1,44 @@
 @import "src/sass/base/mixins"
 .massSection
+  position: relative
+  background: url("./bg.png") center/cover
+
+
+
+  &__img
+    position: absolute
+    left: 50%
+    transform: translate(-50%, -50%)
+    bottom: -130px
+    img
+      width: 458px
+      height: 458px
   &__h2
-    @include text(700,50px,133%,#FFFFFF)
-    background: url("./img.png")
-    padding: 45px 0
+    @include text(1000,50px,133%,#FFFFFF)
+    background: url("./mass.png") center/cover no-repeat
+    height: 287px
     width: 100vw
+    display: flex
+    align-items: center
+    justify-content: center
     text-align: center
   &__p
-    margin-top: 85px
-    padding: 20px 14px
-    border: 1px solid #00000050
-    @include text(500,20px,133%,#000000)
+    margin-top: 64px
+    text-align: center
+    @include text(500,24px,133%,#000)
+
+    @include text(500,24px,133%,#000000)
   &__wrapper
     margin-top: 50px
+    padding-bottom: 50px
   &__ul
     display: flex
     flex-direction: column
     row-gap: 40px
-    border-left: 1px solid #00000050
+    padding-bottom: 285px
+
   &__li
+
     column-gap: 15px
     display: flex
     position: relative
@@ -33,22 +53,43 @@
     filter: blur(5px)
   &__item
     padding-left: 40px
-    @include text(500,17px,133%,#000000)
+    @include text(500,22px,133%,#000000)
   &__text
-    margin-top: 65px
-    background: #CFE9D8
+    @include text(500,20px,133%,#FFF)
+    margin: 50px auto 0
+    background: linear-gradient(45deg, rgba(16, 146, 62, 0.12) 0%, rgba(255, 255, 255, 0.20) 35.42%, rgba(255, 255, 255, 0.20) 48.25%, rgba(16, 146, 62, 0.12) 100%), radial-gradient(75.67% 66.60% at 9.69% 11.40%, rgba(0, 0, 0, 0.20) 0%, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.00) 100%), #40A865
     padding: 37px 60px
-    border-radius: 50px 0
+    border-radius: 16px 98px
+    box-shadow: 32px 38px 30px 0 rgba(73, 70, 70, 0.20)
+    position: relative
+    z-index: 2
 
 
 
 
-@media (max-width: 1440px)
+
+
 @media (max-width: 1201px)
   .massSection
+    &__img
+      img
+        width: 361px
+        height: 361px
+    &__ul
+      padding-bottom: 162px
+
     &__h2
-      @include text(700,40px,133%,#FFFFFF)
-      padding: 40px 0
+      @include text(1000,41px,133%,#FFFFFF)
+      height: 240px
+    &__p
+
+      @include text(500,20px,133%,#000)
+    &__item
+      padding-left: 40px
+      @include text(500,18px,133%,#000000)
+    &__text
+      @include text(500,16px,133%,#FFF)
+      max-width: 735px
 @media (max-width: 1130px)
   .massSection
     &__container
@@ -58,9 +99,15 @@
   .massSection
     &__container
       padding: 0
+    &__img
+      bottom: -93px
+      img
+        width: 343px
+        height: 343px
     &__h2
-      @include text(700,35px,133%,#FFFFFF)
-      padding: 32px 0
+      @include text(1000,35px,133%,#FFFFFF)
+      height: 212px
+
     &__p
       @include text(500,18px,133%,#000000)
       padding: 15px 10px
@@ -72,22 +119,57 @@
     &__container
       padding: 0 30px
 
-@media (max-width: 769px )
+@media (max-width: 770px )
   .massSection
+    &__img
+      bottom: 0
+      img
+        width: 255px
+        height: 255px
+    &__ul
+      padding-bottom: 132px
     &__container
       padding: 0
     &__h2
-      @include text(700,28px,133%,#FFFFFF)
+      @include text(1000,35px,133%,#FFFFFF)
+      height: 279px
+      background: url("./mass770.png") center/cover no-repeat
     &__item
       @include text(500,15px,133%,#000000)
 
 @media (max-width: 698px)
   .massSection
-    &__h2
-      @include text(700,24px,133%,#FFFFFF)
-
     &__container
       padding: 0 30px
+@media (max-width: 567px)
+  .massSection
+    &__text
+      padding: 27px 50px
+    &__img
+      bottom: 30px
+
+@media (max-width: 482px)
+  .massSection
+    &__img
+      bottom: 0
+      img
+        height: 315px
+        width: 331px
+
+    &__h2
+      height: 197px
+
+      background: url("./mass2.png") center/cover no-repeat
+    &__p
+
+      @include text(500,16px,133%,#000)
+    &__item
+      padding-left: 20px
+      @include text(500,14px,133%,#000000)
+@media (max-width: 411px)
+  .massSection
+    &__img
+      bottom: 28px
 
 @media (max-width: 394px )
   .massSection
