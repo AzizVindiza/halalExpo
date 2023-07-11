@@ -4,6 +4,7 @@ import RegistrationPhoneNumber from "../RegistrationPhoneNumber/RegistrationPhon
 import RegistrationPassword from "../RegistrationPassword/RegistrationPassword";
 import CheckBox from "../../CheckBox/CheckBox";
 import Btn from "../../Btn/Btn";
+import RegistrationCountry from "../RegistrationCountry/RegistrationCountry";
 
 const RegistrationExpert = () => {
     return (
@@ -12,6 +13,7 @@ const RegistrationExpert = () => {
             <RegistrationInput type={'text'} name={'inn'} title={'ИНН'}/>
             <RegistrationInput type={"email"} title={"Электронная почта"} name={"email"}/>
             <RegistrationPhoneNumber title={"Телефон"} name={"workPhone"}/>
+            <RegistrationCountry/>
             <RegistrationPassword/>
             <CheckBox/>
         </>
