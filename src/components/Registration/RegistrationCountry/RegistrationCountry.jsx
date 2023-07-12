@@ -1,7 +1,7 @@
 import React from 'react';
 import {Controller, useFormContext} from "react-hook-form";
 import ReactFlagsSelect from "react-flags-select";
-const RegistrationCountry = () => {
+const RegistrationCountry = ({title, name}) => {
     const {
         register, formState: {
             errors
@@ -9,16 +9,26 @@ const RegistrationCountry = () => {
         control
     } = useFormContext()
     return (
-        <Controller
-            control={control}
-            name="country"
-            render={({ field }) => (
-                <ReactFlagsSelect
-                    selected={field.value}
-                    onSelect={(code) => field.onChange(code)}
-                />
-            )}
-        />
+        <>
+            <h3 className="registration__label-title">{title}<span className="registration__star">*</span> <span className="registration__error"> {errors[name] && errors[name].message}</span></h3>
+            <Controller
+                control={control}
+                rules={{
+                    required : {
+                        message : "Выберите страну",
+                        value: true
+                    }
+                }}
+                name={name}
+                render={({ field }) => (
+                    <ReactFlagsSelect
+                        placeholder={"Выберите Страну"}
+                        selected={field.value}
+                        onSelect={(code) => field.onChange(code)}
+                    />
+                )}
+            />
+        </>
     );
 };
 

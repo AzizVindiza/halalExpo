@@ -18,14 +18,10 @@ const ContactData = () => {
 
 
     return (
-        <div className="contactData">
-            <h2 className="contactData__h2">
-                Введите данные о контактном лице
-            </h2>
+        <>
             <RegistrationInput type={'text'} name={'name_contact_person'} title={'ФИО'}/>
-            <RegistrationInput type={'text'} name={'position_contact_person'} title={'Должность'}/>
             <RegistrationPhoneNumber title={'Телефон'} name={'phone_contact_person'}/>
-        </div>
+        </>
     );
 };
 

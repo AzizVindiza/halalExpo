@@ -24,8 +24,18 @@ const RegistrationParticipant = () => {
             <RegistrationInput type={"text"} title={"Название компании"} name={"Название компании"}/>
             <RegistrationInput type={"text"} title={"Юридическое название компании"} name={"Юридическое название компании"}/>
             <RegistrationInput type={"number"} title={"Количество сотрудников"} name={"Количество сотрудников"}/>
-            <RegistrationInput type={"text"} title={"Другое(Введите свою отрасль если не нашли среди предложенных)"} name={"Другое(Введите свою отрасль если не нашли среди предложенных)"} notrequired={true}/>
-            <RegistrationInput type={"text"} title={"Направление (Напишите свой вид деятельности “Производство кирпичей”)"} name={"Направление (Напишите свой вид деятельности “Производство кирпичей”)"} notrequired={true}/>
+            <RegistrationSelectMember
+                title={'Отрасль (Выберите одну из представленных “Строительство и недвижимость”)'}
+                name={'participation_sector'}/>
+            {
+                members === 'Другое' ?
+                    <>
+                        <RegistrationInput type={"text"} title={"Другое(Введите свою отрасль если не нашли среди предложенных)"} name={"Другое(Введите свою отрасль если не нашли среди предложенных)"}/>
+                    </>
+                    : ""
+            }
+
+            <RegistrationInput type={"text"} title={"Направление (Напишите свой вид деятельности “Производство кирпичей”)"} name={"Направление (Напишите свой вид деятельности “Производство кирпичей”)"}/>
             <RegistrationInputTextarea
                 name={"Опишите свою деятельность (товар или услугу)"}
                 title={"Опишите свою деятельность (товар или услугу)"}
@@ -34,60 +44,54 @@ const RegistrationParticipant = () => {
             />
             <div className="registration__column-wrapper">
                 <div className="registration__column">
-                    <RegistrationInput type={"text"} title={"ФИО"} name={"name"}/>
-                    <RegistrationInput type={"text"} title={"ФИО"} name={"name"}/>
+                    <RegistrationCountry title={"Страна:"} name={"country"}/>
+                    <RegistrationInput type={"text"} title={"Город:"} name={"city"}/>
+                    <RegistrationInput type={"text"} title={"Юридический адрес"} name={"Юридический адрес"}/>
+                    <RegistrationInput type={"text"} title={"Фактический адрес"} name={"Фактический адрес"}/>
                 </div>
                 <div className="registration__column">
-                    <RegistrationInput type={"text"} title={"ФИО"} name={"name"}/>
-                    <RegistrationInput type={"text"} title={"ФИО"} name={"name"}/>
-                    <RegistrationCountry/>
+                    <RegistrationInput type={"email"} title={"Адрес электронной почты"} name={"Адрес электронной почты"}/>
+                    <RegistrationInput type={"text"} title={"Сайт"} name={"Сайт"}/>
+                    <RegistrationInput type={"text"} title={"ФБ"} name={"ФБ"}/>
+                    <RegistrationInput type={"text"} title={"Инстаграм"} name={"Инстаграм"}/>
                 </div>
             </div>
+            <div className="registration__column-wrapper">
+                <div className="registration__column">
+                    <h3 className="registration__h3">Свидетельство о юридической регистрации</h3>
+                    <RegistrationInput type={'text'} name={'ИИН/ИНН(Серия патента компании)'} title={'ИИН/ИНН(Серия патента компании)'}/>
+                    <RegistrationInput type={'text'} name={'ОГРН(Номер патента)*'} title={'ОГРН(Номер патента)'}/>
+                    <RegistrationInput type={'text'} name={'ОКПО*'} title={'ОКПО'}/>
+                    <RegistrationUploadInput name={"Загрузите устав компании в  png или jpg*"} title={"Загрузите устав компании в  png или jpg"}/>
+                </div>
+                <div className="registration__column">
+                    <h3 className="registration__h3">Реквизиты <br/> банковского счета</h3>
+                    <RegistrationInput type={'text'} name={'Наименование банка'} title={'Наименование банка'}/>
+                    <RegistrationInput type={'text'} name={'Р/С*'} title={'Р/С'}/>
+                    <RegistrationInput type={'text'} name={'БИК*'} title={'БИК'}/>
+                    <RegistrationUploadInput name={"Логотип компании в png или jpg"} title={"Логотип компании в  png или jpg"}/>
+                </div>
+            </div>
+            <div className="registration__column-wrapper">
+                <div className="registration__column">
+                    <h3 className="registration__h3">Данные о руководителе</h3>
+                    <RegistrationInput type={'text'} name={'ФИО'} title={'ФИО'}/>
+                    <RegistrationInput type={'text'} name={'Дата рождения'} title={'Дата рождения'}/>
+                    <RegistrationInput type={'text'} name={'ИНН/ИИН руководителя'} title={'ИНН/ИИН руководителя'}/>
+                    <RegistrationInput type={'text'} name={'Должность'} title={'Должность'}/>
+                    <RegistrationInput type={'text'} name={'Действующий на основании'} title={'Действующий на основании'}/>
+                </div>
+                <div className="registration__column">
+                    <h3 className="registration__h3">Контактное лицо</h3>
+                    <ContactFace/>
+                    <RegistrationInput type={"email"} title={"Адрес электронной почты (данная почта указывается как логин для входа)"} name={"email"}/>
+                    <RegistrationPassword/>
 
-            <RegistrationInput type={'text'} name={'inn'} title={'ИНН'}/>
-            <RegistrationInput type={"email"} title={"Электронная почта"} name={"email"}/>
-            <RegistrationPhoneNumber title={"Телефон"} name={"workPhone"}/>
-            <RegistrationPassword/>
+
+                </div>
+            </div>
             <CheckBox/>
-            <RegistrationSelectMember
-                title={'Выберите сектор участия (с условиями участия каждого сектора можно ознакомится)'}
-                name={'participation_sector'}/>
-            {members === 'Trade' ?
-                <RegistrationSelectIndustry title={'Выберите отрасль'} name={'trade'}/>
-                :
-                members === "Fashion" ?
-                    <RegistrationSelectFashion title={'Выберите направление'}
-                                               name={'choose_direction_fashion'}/>
-                    :
-                    members === 'Food' ?
-                        <RegistrationSelectFood title={'Выберите направление'}
-                                                name={'choose_direction_food'}/>
-                        :
-                        members === "Investment" ?
-                            <ChooseIndustry/>
-                            : ""
-            }
-            {/*<RegistrationSelect title={"В качестве кого вы хотите посетить HIT EXPO?"}*/}
-            {/*                    name={"participant_sector"}/>*/}
 
-            <RegistrationInput type={'text'} name={'brand'} title={'Наименование бренда'}/>
-            <RegistrationUploadInput name={"image_logo"} title={"Загрузите логотип компании в png или jpg"}/>
-            {/*далее*/}
-            <RegistrationInput type={'text'} name={'development_name'} title={'Полное юридическое наименование организации'}/>
-            <RegistrationInput type={'text'} name={'address_development'} title={'Юридический адрес'}/>
-            <RegistrationInput type={'text'} name={'p_c'} title={'Р/С'}/>
-            <RegistrationInput type={'text'} name={'bik'} title={'БИК'}/>
-            <RegistrationInput type={'text'} name={'okpo'} title={'ОКПО'}/>
-                {/*далее*/}
-                <RegistrationUploadInput name={"pdf_file"} title={"Загрузите свидетельство регистрации в pdf"}/>
-                <RegistrationInput type={'text'} name={'name_manager'} title={'ФИО руководителя'}/>
-                <RegistrationInput type={'text'} name={'position_participant'} title={'Должность'}/>
-                <RegistrationInput type={'text'} name={'company'} title={'Деятельность компании'}/>
-                <RegistrationInputTextarea  type={'text'} name={'description'} title={'Опишите товары или услуги компании'}/>
-                {/*далее*/}
-                <RegistrationInput type={'url'} name={'web_site'} title={'Веб-сайт '}/>
-                <SocialSection/>
-                <ContactFace/>
         </>
               );
 };
