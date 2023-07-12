@@ -3,22 +3,10 @@ import './Registration.sass'
 import {useForm, FormProvider} from "react-hook-form";
 import {CustomContext} from "../../Context";
 import Btn from "../Btn/Btn";
-import RegistrationInput from "./RegistrationInput/RegistrationInput";
-import RegistrationPhoneNumber from "./RegistrationPhoneNumber/RegistrationPhoneNumber";
 import RegistrationSelect from "./RegistrationSelect/RegistrationSelect";
 import MasMediaForm from "../MasMediaForm/MasMediaForm";
-import ParticipantForm from "../ParticipantForm/ParticipantForm";
-import CheckBox from "../CheckBox/CheckBox";
-import RegistrationSelectMember from "./RegistrationSelectMember/RegistrationSelectMember";
-import RegistrationSelectIndustry from "./RegistrationSelectIndustry/RegistrationSelectIndustry";
-import RegistrationSelectFashion from "./RegistrationSelectFashion/RegistrationSelectFashion";
-import RegistrationSelectFood from "./RegistrationSelectFood/RegistrationSelectFood";
-import ChooseIndustry from "./ChooseIndustry/ChooseIndustry";
-import RegistrationUploadInput from "./RegistrationUploadInput/RegistrationUploadInput";
 import {toast} from "react-toastify";
-import img from "./information 1.png"
 import axios from "axios";
-import RegistrationPassword from "./RegistrationPassword/RegistrationPassword";
 import RegistrationParticipant from "./RegistrationParticipant/RegistrationParticipant";
 import RegistrationGover from "./RegistrationGover/RegistrationGover";
 import RegistrationExpert from "./RegistrationExpert/RegistrationExpert";
@@ -31,6 +19,7 @@ const Registration = () => {
     const {setClose, role, members} = useContext(CustomContext)
 
     const onSubmit = (data) => {
+        console.log(data)
         const id = toast.loading("Please wait...")
         try {
             data = {
@@ -39,6 +28,7 @@ const Registration = () => {
                 image_id_two: data.image_id_two[0],
                 image_id_three: data.image_id_three[0],
             }
+
             axios.post('https://shark-app-65hkc.ondigitalocean.app/registration/', data, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
@@ -60,7 +50,9 @@ const Registration = () => {
                 setClose(false)
             }).catch((err) => {
                 toast.update(id, {
-                    render: !err.response.data.email ? 'Ошибка в сервере!' : err.response.data.email[0], type: "error", isLoading: false,
+                    render: !err.response.data.email ? 'Ошибка в сервере!' : err.response.data.email[0],
+                    type: "error",
+                    isLoading: false,
                     position: "top-center",
                     autoClose: 5000,
                     hideProgressBar: false,
@@ -95,38 +87,34 @@ const Registration = () => {
                 <div className="registration__wrapper">
                     <form className='registration__form'
                           onSubmit={methods.handleSubmit(onSubmit)}>{/*форма*/}{/*беру функцию handleSubmit из rhf и передаю onSubmit*/}
+                        <div className="registration__title">
+                            <h2 className="registration__h2">Регистрация</h2>
+                            <button onClick={() => setClose(false)} className="registration__close">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.16663 1.16675L12.8333 12.8334M1.16663 12.8334L12.8333 1.16675"
+                                          stroke="black"
+                                          strokeOpacity="0.5" strokeWidth="2" strokeLinecap="round"
+                                          strokeLinejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div className="registration__container">
+                            <RegistrationSelect title={"В качестве кого вы хотите посетить HIT EXPO?"}
+                                                name={"participant_sector"}/>
+                            {
+                                role === "Участник" ? <RegistrationParticipant/>
+                                    : role === "Посетитель" ? <RegistrationExpert/>
+                                        : role === "СМИ" ? <MasMediaForm/>
+                                            : role === "Эксперта" ? <RegistrationExpert/>
+                                                : role === "Представитель государственных органов" ? <RegistrationGover/>
+                                                    : ""
+                            }
 
-
-                        <div onClick={() => setClose(false)} className="registration__close">
-                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1.16663 1.16675L12.8333 12.8334M1.16663 12.8334L12.8333 1.16675"
-                                      stroke="black"
-                                      strokeOpacity="0.5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                            </svg>
+                            <Btn text={"Зарегистрироваться"} type={"submit"}/>
+                            {/*главная кнопка отправки type submit*/}
                         </div>
 
-                        <h2 className="registration__h2">Регистрация</h2>
-
-                        <p className="registration__p">
-                            <img src={img} alt="" className="registration__img"/>
-                            <span className="registration__span">
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                            </span>
-                        </p>
-                        <RegistrationSelect title={"В качестве кого вы хотите посетить HIT EXPO?"}
-                                            name={"participant_sector"}/>
-                        {
-                            role === "Посетитель" ? <RegistrationExpert/>
-                                : role === "Участник" ? <RegistrationParticipant/>
-                                    : role === "СМИ" ? <MasMediaForm/>
-                                        : role === "Эксперта" ? <RegistrationExpert/>
-                                            : role === "Представитель государственных органов" ? <RegistrationGover/>
-                                                : ""
-                        }
-
-                        <Btn text={"Зарегистрироваться"} type={"submit"}/>
-                        {/*главная кнопка отправки type submit*/}
                     </form>
                 </div>
             </div>

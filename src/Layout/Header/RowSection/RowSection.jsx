@@ -1,9 +1,6 @@
 import React, {useContext} from 'react';
 import "./rowSection.sass"
 import {CustomContext} from "../../../Context";
-import LoginForm from "../../../components/LoginForm/LoginForm";
-import Registration from "../../../components/Registration/Registration";
-import DemoForm from "../../../components/DemoRegistraion/DemoForm/DemoForm";
 import {useTranslation} from "react-i18next";
 
 
@@ -46,10 +43,6 @@ const RowSection = () => {
                 </div>
 
             </div>
-            {/*{*/}
-            {/*    close ?  <RegisterForm /> : ''*/}
-            {/*}*/}
-
         </div>
     );
 };

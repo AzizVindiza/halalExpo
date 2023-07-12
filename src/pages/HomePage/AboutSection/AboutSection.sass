@@ -2,7 +2,7 @@
 .about
   position: relative
   &__container
-    padding: 48px 0
+    padding: 200px 0 100px 0
     text-align: center
   &__h2
     @include text(800,46px,36px,#10923E)
@@ -16,6 +16,8 @@
     width:  75%
     max-width: 975px
     margin: 12px auto 0
+  &__p2
+    margin-top: 20px
   &__svg
     position: absolute
     width: 348px
@@ -32,6 +34,8 @@
 
 @media (max-width: 1025px)
   .about
+    &__container
+      padding: 150px 0 50px 0
     &__h2
       @include text(800,36px,36px,#10923E)
 

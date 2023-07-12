@@ -1,27 +1,49 @@
 import React, {useContext} from 'react';
+import {CustomContext} from "../../../Context";
+
 import RegistrationSelectMember from "../RegistrationSelectMember/RegistrationSelectMember";
 import RegistrationSelectIndustry from "../RegistrationSelectIndustry/RegistrationSelectIndustry";
 import RegistrationSelectFashion from "../RegistrationSelectFashion/RegistrationSelectFashion";
 import RegistrationSelectFood from "../RegistrationSelectFood/RegistrationSelectFood";
 import ChooseIndustry from "../ChooseIndustry/ChooseIndustry";
-import ParticipantForm from "../../ParticipantForm/ParticipantForm";
-import {CustomContext} from "../../../Context";
 import RegistrationInput from "../RegistrationInput/RegistrationInput";
 import RegistrationUploadInput from "../RegistrationUploadInput/RegistrationUploadInput";
 import RegistrationPhoneNumber from "../RegistrationPhoneNumber/RegistrationPhoneNumber";
 import CheckBox from "../../CheckBox/CheckBox";
-import RegistrationSelect from "../RegistrationSelect/RegistrationSelect";
 import RegistrationPassword from "../RegistrationPassword/RegistrationPassword";
-import Btn from "../../Btn/Btn";
 import RegistrationInputTextarea from "../RegistrationInputTextarea/RegistrationInputTextarea";
 import SocialSection from "../../SocialSection/SocialSection";
 import ContactFace from "../../ParticipantForm/ContactFace/ContactFace";
+import RegistrationCountry from "../RegistrationCountry/RegistrationCountry";
 
 const RegistrationParticipant = () => {
     const {setClose, role, members} = useContext(CustomContext)
     return (
         <>
-            <RegistrationInput type={"text"} title={"ФИО"} name={"name"}/>
+            <h3 className="registration__h3">Данные о компании</h3>
+            <RegistrationInput type={"text"} title={"Название компании"} name={"Название компании"}/>
+            <RegistrationInput type={"text"} title={"Юридическое название компании"} name={"Юридическое название компании"}/>
+            <RegistrationInput type={"number"} title={"Количество сотрудников"} name={"Количество сотрудников"}/>
+            <RegistrationInput type={"text"} title={"Другое(Введите свою отрасль если не нашли среди предложенных)"} name={"Другое(Введите свою отрасль если не нашли среди предложенных)"} notrequired={true}/>
+            <RegistrationInput type={"text"} title={"Направление (Напишите свой вид деятельности “Производство кирпичей”)"} name={"Направление (Напишите свой вид деятельности “Производство кирпичей”)"} notrequired={true}/>
+            <RegistrationInputTextarea
+                name={"Опишите свою деятельность (товар или услугу)"}
+                title={"Опишите свою деятельность (товар или услугу)"}
+                p={"*данная информация будет указана в профиле компании важно для участников выставки более подробно описать*"}
+                placeholder={"Пример: Мы предоставляем различные способы оплаты для наших товаров, чтобы обеспечить удобство и гибкость для наших клиентов. Вы можете выбрать один из следующих способов оплаты при приобретении наших товаров:"}
+            />
+            <div className="registration__column-wrapper">
+                <div className="registration__column">
+                    <RegistrationInput type={"text"} title={"ФИО"} name={"name"}/>
+                    <RegistrationInput type={"text"} title={"ФИО"} name={"name"}/>
+                </div>
+                <div className="registration__column">
+                    <RegistrationInput type={"text"} title={"ФИО"} name={"name"}/>
+                    <RegistrationInput type={"text"} title={"ФИО"} name={"name"}/>
+                    <RegistrationCountry/>
+                </div>
+            </div>
+
             <RegistrationInput type={'text'} name={'inn'} title={'ИНН'}/>
             <RegistrationInput type={"email"} title={"Электронная почта"} name={"email"}/>
             <RegistrationPhoneNumber title={"Телефон"} name={"workPhone"}/>

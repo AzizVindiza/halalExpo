@@ -17,18 +17,33 @@ import video from "../../../components/Registration/Loading/loading.mp4"
 
 const textMotion = {
     hidden: {
-        x: -100,
-        opacity: 0,
+        x: -500,
+        opacity: 1,
     },
     visible: custom => (
         {
             x: 0,
             opacity: 1,
-            transition: {delay: custom * 0.2}
+            transition: {delay: custom * 0.4}
         }
     )
 
 }
+
+const draw = {
+    hidden: {pathLength: 0, opacity: 0 },
+    visible: (i) => {
+        const delay = 1 + i * 0.33;
+        return {
+            pathLength: 1,
+            opacity: 1,
+            transition: {
+                pathLength: { delay, type: "spring", duration: 1.5, bounce: 0 },
+                opacity: { delay, duration: 1 }
+            }
+        };
+    }
+};
 
 const FirstSection = () => {
 
@@ -45,13 +60,22 @@ const FirstSection = () => {
                 <img className={"first__player2"} src={shater} alt=""/>
 
             </div>
-            <motion.div custom={1} variants={textMotion} className="first__txt">
-                <h3 className="first__h3">
-                    ИННОВАЦИЯ НАЧИНАЮТСЯ ЗДЕСЬ!
-                </h3>
+            <div className="first__txt">
+                <div className="first__box">
+                    <motion.h3 variants={textMotion} custom={1} className="first__h3 words">
+                        ИННОВАЦИЯ
+                    </motion.h3>
+                    <motion.h3 variants={textMotion} custom={2} className="first__h3 words2">
+                        НАЧИНАЮТСЯ
+                    </motion.h3>
+                    <motion.h3 variants={textMotion} custom={3} className="first__h3 words2">
+                        ЗДЕСЬ!
+                    </motion.h3>
+                </div>
+
                 <h1 className="first__h2">
                     Halal Investment<br/>
-                    and Trade<span>2023</span>
+                    and Trade <span>2023</span>
                 </h1>
                 <p className="first__p">{t("firstSection.text")}</p>
                 <div onClick={() => setRequest(true)}  className="first__btn">
@@ -60,7 +84,7 @@ const FirstSection = () => {
                 <div className="first__circle-small">
                     <img src={small} alt="small circle"/>
                 </div>
-            </motion.div>
+            </div>
             <div className="first__overlay">
                 <img src={svg} alt=""/>
             </div>

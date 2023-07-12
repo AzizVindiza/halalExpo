@@ -13,27 +13,27 @@ const PartnersSection = () => {
                 Информационные партнеры
             </h2>
             <div className="container partners__container">
-                <div className="partners__card">
+                <a href={"https://10times.com/event/882632"} className="partners__card">
                     <img className={'partners__img'} src={times} alt=""/>
                     <h2 className="partners__h2">
                         Tentimes
 
                     </h2>
-                </div>
-                <div className="partners__card">
+                </a>
+                <a href={"https://generalexpo.ru/cat_exhibition/events/event_info/e17025"} className="partners__card">
                     <img className={'partners__img'} src={general} alt=""/>
                     <h2 className="partners__h2">
                         Generalexpo
 
                     </h2>
-                </div>
-                <div className="partners__card">
+                </a>
+                <a href={"https://expomap.ru/expo/halal-investment-and-trade-expo/"} className="partners__card">
                     <img className={'partners__img'} src={info} alt=""/>
                     <h2 className="partners__h2">
                         Expomap
 
                     </h2>
-                </div>
+                </a>
             </div>
             <a className="speaker__btn partners__btn" href="">
                 <Btn m={"big btn_border"} type="button" text="Стать партнером"/>
