@@ -10,7 +10,9 @@ const AssociationSection = () => {
                     <div className="association__ameca">
                         <img src={Ameca} alt=""/>
                     </div>
-                    <h2 className="association__h2">Ассоциация предпринимателей мусульман Центральной Азии <span className={'associationSection__span'}> «AMECA» </span></h2>
+                    <div className="association__txt">
+                        <h2 className="association__h2">Ассоциация предпринимателей мусульман Центральной Азии <span className={'associationSection__span'}> «AMECA» </span></h2>
+                    </div>
                 </div>
                 <div className="association__text">
                     <h3 className="association__h3">Ассоциация предпринимателей-мусульман Центральной Азии AMECA, являясь организатором выставки Halal Investment and Trade Expo 2023, активно развивает халяль-индустрию в регионе и создает международную площадку для инвесторов, предпринимателей и производителей.</h3>

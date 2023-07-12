@@ -8,10 +8,11 @@
     justify-content: center
     border-bottom: 1px solid #00862D
   &__txt
-    @include text(700,26px,133%,#000000)
-    width: 322px
+    @include text(700,27px,133%,#000000)
+    width: 366px
+
   &__span
-    @include text(700,30px,133%,#00862D)
+    @include text(700,24px,133%,#00862D)
   &__text
     display: flex
     justify-content: center
@@ -24,9 +25,7 @@
 
 
   &__ib
-    @include text(500,30px,133%,#00862D)
-  &__am
-    @include text(500,30px,133%,#00862D)
+    @include text(500,24px,133%,#00862D)
 @media (max-width: 1201px)
   .islamic
     &__ibic
@@ -34,17 +33,55 @@
         width: 300px
     &__txt
       @include text(700,21px,133%,#000000)
+      width: 260px
     &__span
-      @include text(700,25px,133%,#00862D)
+      @include text(700,22px,133%,#00862D)
     &__id
-      @include text(700,25px,133%,#00862D)
+      @include text(700,22px,133%,#00862D)
     &__h2
       @include text(500,22px,133%,#000000)
 
 
 @media (max-width: 1025px)
+  .islamic
+    &__ibic
+      img
+        width: 271px
+    &__txt
+      @include text(700,19px,133%,#000000)
+      width: 238px
+    &__span
+      @include text(700,19px,133%,#00862D)
+    &__id
+      @include text(500,20px,133%,#00862D)
+    &__h2
+      @include text(500,20px,133%,#000000)
 @media (max-width: 769px )
+  .islamic
+    &__ibic
+      img
+        width: 223px
+    &__txt
+      @include text(700,16px,133%,#000000)
+      width: 196px
+      text-align: center
+    &__span
+      @include text(700,16px,133%,#00862D)
+    &__h2
+      @include text(500,20px,133%,#000000)
+    &__id
+      @include text(500,20px,133%,#00862D)
 @media (max-width: 481px )
+  .islamic
+    &__content
+      flex-wrap: wrap
+    &__ibic
+      img
+        width: 223px
+    &__h2
+      @include text(500,16px,133%,#000000)
+    &__id
+      @include text(500,16px,133%,#00862D)
 @media (max-width: 394px )
 
 
