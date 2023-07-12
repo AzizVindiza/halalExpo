@@ -3,6 +3,8 @@
 .zoneCard
   position: relative
   margin-bottom: 100px
+  .mySwiper
+    display: none
   &__container
     margin: 0 auto
     display: flex
@@ -40,10 +42,42 @@
 
 @media (max-width: 482px)
   .zoneCard
+
+
+    .mySwiper
+      display: flex
+      height: 760px
+    .swiper-button-next ,  .swiper-button-prev
+      display: none
+    &__nav
+      &_after
+        background: #087AFF
+        z-index: 5
+        width: 50px
+        height: 50px
+        position: absolute
+        right: 80px
+        bottom: 0
+        border-radius: 50%
+      &_before
+        background: #087AFF
+        z-index: 5
+        position: absolute
+        right: 20px
+        bottom: 0
+
+        width: 50px
+        height: 50px
+        border-radius: 50%
+
     &__container
+      display: none
       padding: 0 15px
 
 @media (max-width: 394px)
   .zoneCard
+    .mySwiper
+      display: flex
+      height: 710px
     &__container
       padding: 0

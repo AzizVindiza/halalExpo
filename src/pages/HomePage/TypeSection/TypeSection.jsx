@@ -19,7 +19,7 @@ import icon16 from './cube16.svg'
 import icon17 from './cube17.svg'
 
 
-import right from './R.png'
+import right from './oval.png'
 import {motion} from "framer-motion";
 
 
