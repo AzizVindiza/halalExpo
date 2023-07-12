@@ -12,19 +12,21 @@
   &__ameca
     img
       width: 444px
-  &__txt
-    width: 412px
+
 
   &__h2
     @include text(400,25px,133%,#000000)
+    width: 412px
     span
-      @include text(500,30px,133%,#00862D)
+
+      @include text(500,25px,133%,#00862D)
   &__text
     display: flex
     flex-direction: column
     padding: 20px 0 28px 0
     text-align: center
     align-items: center
+
 
 
   &__h3
@@ -49,15 +51,15 @@
     margin-left: 10px
 @media (max-width: 1201px)
   .association
-    &__amega
+    &__ameca
       img
         width: 392px
-    &__txt
-      width: 364px
+
     &__h2
       @include text(400,22px,133%,#000000)
-      &__span
-        @include text(400,25px,133%,#00862D)
+      width: 364px
+      span
+        @include text(400,22px,133%,#00862D)
     &__h3
       @include text(500,22px,133%,#000000)
     &__p
@@ -65,31 +67,73 @@
 @media (max-width: 1025px)
   .association
 
-    &__amega
+    &__ameca
       img
         width: 323px
     &__h2
       @include text(400,20px,133%,#000000)
-      &__span
-        @include text(400,22px,133%,#00862D)
+
+      span
+
+        @include text(400,20px,133%,#00862D)
     &__h3
       @include text(500,20px,133%,#000000)
+      width: 740px
     &__p
       @include text(500,20px,133%,#000000)
+      width: 674px
 @media (max-width: 769px )
   .association
 
-    &__amega
+    &__ameca
       img
         width: 266px
     &__h2
-      @include text(400,18px,133%,#000000)
-      &__span
-        @include text(400,20px,133%,#00862D)
+      @include text(500,18px,133%,#000000)
+      width: 274px
+
+
+
+      span
+        @include text(500,18px,133%,#00862D)
     &__h3
       @include text(500,18px,133%,#000000)
+      width: 610px
     &__p
       @include text(500,18px,133%,#000000)
+      width: 555px
 @media (max-width: 481px )
+  .association
+    &__site
+      display: flow-root
+
+    &__link
+      margin-bottom: 12px
+    &__wrapper
+      flex-wrap: wrap
+
+    &__ameca
+      img
+        width: 266px
+    &__h2
+      @include text(700,15px,133%,#000000)
+      text-align: center
+      margin-top: 23px
+      width: 247px
+      span
+        @include text(700,15px,133%,#00862D)
+    &__h3
+      @include text(500,16px,133%,#000000)
+      width: 430px
+    &__p
+      @include text(500,16px,133%,#000000)
+      width: 430px
+
 @media (max-width: 394px )
+  .association
+    &__h3
+      width: 350px
+    &__p
+      width: 350px
+
 

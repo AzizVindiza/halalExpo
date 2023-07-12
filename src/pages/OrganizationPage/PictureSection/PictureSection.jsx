@@ -16,7 +16,7 @@ const PictureSection = () => {
     return (
         <div className={'picture'}>
             <div className="container picture__container">
-                <div className="picturi__text">Галерея</div>
+                <div className="picture__text">Галерея</div>
                 <Swiper
                     slidesPerView={3}
                     breakpoints={{
