@@ -36,11 +36,12 @@ const PictureSection = () => {
                     }}
                     speed={4000}
                     grabCursor={true}
+                    centeredSlides={true}
                     loop={true}
                     freeMode={true}
 
                     modules={[Autoplay]}
-                    className="mySwiper"
+                    className="picture__Swiper"
                 >
                     <SwiperSlide>
                         <div className="picture__img">
