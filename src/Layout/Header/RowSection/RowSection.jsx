@@ -30,7 +30,7 @@ const RowSection = () => {
                             </svg>
                             <button onClick={() => setClose(true)} className={'rowSection__reg'}>{t("header.signUp")}</button>
 
-                            <a href="https://docs.google.com/forms/d/17XpFN-V9fU13Ti2mjurjOXwj34mXDiFHXScDi4oeXHs/edit" className={"'rowSection__reg'"}>{t("header.signUp")}</a>
+                            {/*<a href="https://docs.google.com/forms/d/17XpFN-V9fU13Ti2mjurjOXwj34mXDiFHXScDi4oeXHs/edit" className={"'rowSection__reg'"}>{t("header.signUp")}</a>*/}
                         </div>
 
                         {/*<button onClick={() => setLogin(!login)} className={'rowSection__in'}>{t("header.login")}</button>*/}
