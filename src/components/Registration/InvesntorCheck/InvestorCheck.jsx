@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import "./InvestorCheck.sass"
 import {useFormContext} from "react-hook-form";
-import {CustomContext} from "../../Context";
+import {CustomContext} from "../../../Context";
 const InvestorCheck = ({title, name,theme}) => {
     const {checkBox,setCheckBox} = useContext(CustomContext)
     const handleCheckBox = (event) => {
