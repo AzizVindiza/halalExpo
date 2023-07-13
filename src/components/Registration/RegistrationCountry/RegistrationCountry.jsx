@@ -22,6 +22,7 @@ const RegistrationCountry = ({title, name}) => {
                 name={name}
                 render={({ field }) => (
                     <ReactFlagsSelect
+                        searchable={true}
                         placeholder={"Выберите Страну"}
                         selected={field.value}
                         onSelect={(code) => field.onChange(code)}
