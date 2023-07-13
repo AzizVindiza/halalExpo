@@ -34,7 +34,7 @@ const ContactFace = () => {
                     }
                 </div>
                 {
-                    chooseContact === "Нет" ? <ContactData/> : ""
+                    chooseContact === "Да" ? <ContactData/> : ""
                 }
 
             </div>
