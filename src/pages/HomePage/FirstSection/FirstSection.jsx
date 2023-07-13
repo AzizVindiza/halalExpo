@@ -8,10 +8,10 @@ import small from './first__circle-small.svg'
 import big from './first__circle-big.png'
 import Btn from "../../../components/Btn/Btn";
 import {motion} from "framer-motion"
-import svg from './Vector 140.svg'
+import svg from './circle.png'
 import {CustomContext} from "../../../Context";
 import {useTranslation} from "react-i18next";
-import shater from './shater.svg'
+import shater from './logogo.png'
 import video from "../../../components/Registration/Loading/loading.mp4"
 
 
