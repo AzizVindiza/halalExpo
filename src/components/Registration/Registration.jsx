@@ -101,7 +101,7 @@ const Registration = () => {
                         </div>
                         <div className="registration__container">
                             <RegistrationSelect title={"В качестве кого вы хотите посетить HIT EXPO?"}
-                                                name={"participant_sector"}/>
+                                                name={"type_register"}/>
                             {
                                 role === "Участник" ? <RegistrationParticipant/>
                                     : role === "Посетитель" ? <RegistrationExpert/>

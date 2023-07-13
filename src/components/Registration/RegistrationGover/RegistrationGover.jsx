@@ -2,7 +2,7 @@ import React from 'react';
 import RegistrationInput from "../RegistrationInput/RegistrationInput";
 import RegistrationPhoneNumber from "../RegistrationPhoneNumber/RegistrationPhoneNumber";
 import RegistrationPassword from "../RegistrationPassword/RegistrationPassword";
-import CheckBox from "../../CheckBox/CheckBox";
+import CheckBox from "../CheckBox/CheckBox";
 import RegistrationUploadInput from "../RegistrationUploadInput/RegistrationUploadInput";
 import Btn from "../../Btn/Btn";
 
