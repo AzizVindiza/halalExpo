@@ -7,7 +7,7 @@ const MeetSection = () => {
             <div className="meet__container container">
                 <div className="meet__wrapper">
                     <div className="meet__time">
-                        <h2 className="meet__h2">22-23.08.23</h2>
+                        <h2 className="meet__h2">23-24.08.23</h2>
                         <div className="meet__data">
                             <div className="meet__card">
                                 <div className="meet__card-svg">
@@ -95,7 +95,7 @@ const MeetSection = () => {
                                 </div>
                                 <h3 className="meet__h3">Бронь отеля</h3>
                             </div></div>
-                        <h2 className="meet__h2">22-23.08.23</h2>
+                        <h2 className="meet__h2">23-24.08.23</h2>
                         <div className="meet__data">
 
                             <div className="meet__card">
@@ -214,7 +214,7 @@ const MeetSection = () => {
                     </div>
 
                     <div className="mett__block">
-                        <div className="meet__text">24.07  МФИЭ (Международный форум исламской экономики) </div>
+                        <div className="meet__text">25.08  МФИЭ (Международный форум исламской экономики) </div>
                         <ul className="meet__txt">
                             <li className={'meet__p'}>Выступление органов государственной власти, официальных лиц и инвесторов</li>
                             <li className={'meet__p'}>Обсуждение возможностей и перспектив развития исламских принципов ведения бизнеса и халяль-индустрии </li>

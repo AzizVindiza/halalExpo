@@ -135,7 +135,7 @@ const TimeSection = () => {
                             <div className="time__block">
                                 09:00-10:00
                             </div>
-                            <h3 className="time__h3">Аккредетация СМИ</h3>
+                            <h3 className="time__h3">Аккредитация СМИ</h3>
 
                         </div>
                         <div className="time__date">
