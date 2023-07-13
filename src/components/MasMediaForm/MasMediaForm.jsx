@@ -6,7 +6,7 @@ import RegistrationInput from "../Registration/RegistrationInput/RegistrationInp
 import RegistrationUploadInput from "../Registration/RegistrationUploadInput/RegistrationUploadInput";
 import RegistrationPhoneNumber from "../Registration/RegistrationPhoneNumber/RegistrationPhoneNumber";
 import RegistrationPassword from "../Registration/RegistrationPassword/RegistrationPassword";
-import CheckBox from "../CheckBox/CheckBox";
+import CheckBox from "../Registration/CheckBox/CheckBox";
 import Btn from "../Btn/Btn";
 import ContactFace from "../ParticipantForm/ContactFace/ContactFace";
 

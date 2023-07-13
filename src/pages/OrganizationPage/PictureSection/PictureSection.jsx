@@ -83,6 +83,7 @@ const PictureSection = () => {
                 </Swiper>
             </div>
 
+
         </div>
     );
 };
