@@ -12,7 +12,7 @@ const ContactFace = () => {
     return (
         <>
             <div className="contactFace">
-                <h4 className="contactFace__h4">Вы являетесь контактным лицом <span className={'contactFace__span'}>*</span></h4>
+                <h4 className="contactFace__h4">Вы являетесь контактным лицом ? <span className={'contactFace__span'}>*</span></h4>
                 <div onClick={() => setOpenContact(!openContact)} className="contactFace__row">
                     <h5 className="contactFace__h5">{chooseContact}</h5>
                     <div className={`contactFace__tick ${openContact ? 'contactFace__tick_active' : ''} `}>
