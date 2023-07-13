@@ -10,10 +10,8 @@ const RegistrationExpert = () => {
     return (
         <>
             <RegistrationInput type={"text"} title={"ФИО"} name={"name"}/>
-            <RegistrationInput type={'text'} name={'inn'} title={'ИНН'}/>
             <RegistrationInput type={"email"} title={"Электронная почта"} name={"email"}/>
             <RegistrationPhoneNumber title={"Телефон"} name={"workPhone"}/>
-            <RegistrationCountry/>
             <RegistrationPassword/>
             <CheckBox/>
         </>

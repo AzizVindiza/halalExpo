@@ -51,19 +51,20 @@ const RegistrationParticipant = () => {
                     <RegistrationInput type={"text"} title={"Фактический адрес"} name={"address_two"}/>
                 </div>
                 <div className="registration__column">
-                    <RegistrationInput type={"email"} title={"Адрес электронной почты компании"} name={"workEmail"}/>
-                    <RegistrationInput type={"text"} title={"Сайт"} name={"web_site"}/>
-                    <RegistrationInput type={"text"} title={"Facebook"} name={"facebook"}/>
-                    <RegistrationInput type={"text"} title={"Инстаграм"} name={"instagram"}/>
+                    <RegistrationInput type={"email"} title={"Адрес электронной почты компании"} name={"workEmail"} notrequired={true}/>
+                    <RegistrationPhoneNumber title={'Контактный телефон компании'} name={'work_phone'}/>
+                    <RegistrationInput type={"text"} title={"Сайт"} name={"web_site"} notrequired={true}/>
+                    <RegistrationInput type={"text"} title={"Facebook"} name={"facebook"} notrequired={true}/>
+                    <RegistrationInput type={"text"} title={"Инстаграм"} name={"instagram"} notrequired={true}/>
                 </div>
             </div>
             <div className="registration__column-wrapper">
                 <div className="registration__column">
                     <h3 className="registration__h3">Свидетельство о юридической регистрации</h3>
                     <RegistrationInput type={'text'} name={'inn'} title={'ИИН/ИНН(Серия патента компании)'}/>
-                    <RegistrationInput type={'text'} name={'orgn'} title={'ОГРН(Номер патента)'}/>
+                    <RegistrationInput type={'text'} name={'orgn'} title={'ОГРН/Номер патента'}/>
                     <RegistrationInput type={'text'} name={'okpo'} title={'ОКПО'}/>
-                    <RegistrationUploadInput name={"photo_company"} title={"Загрузите устав компании в  png или jpg"}/>
+                    <RegistrationUploadInput name={"photo_company"} title={"Загрузите устав компании (документ/pdf)"}/>
                 </div>
                 <div className="registration__column">
                     <h3 className="registration__h3">Реквизиты <br/> банковского счета</h3>

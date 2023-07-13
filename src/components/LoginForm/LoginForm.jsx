@@ -7,6 +7,7 @@ import { AiOutlineEyeInvisible,AiOutlineEye} from "react-icons/ai";
 import {useLoginMutation} from "../../redux/ApiSlice";
 import {fillRegister} from "../../redux/reducers/userSlice";
 import {toast} from "react-toastify";
+import axios from "axios";
 
 
 const LoginForm = () => {
@@ -28,23 +29,8 @@ const LoginForm = () => {
 
     const onSubmit = (data) => {
         try {
-            fillLogin(data)
-
-                .unwrap()
-                .then(() => {
-
-                    console.log(data)
-                    toast.success('Заявка отпралена!', {
-                        position: "top-center",
-                        autoClose: 5000,
-                        hideProgressBar: false,
-                        closeOnClick: false,
-                        pauseOnHover: true,
-                        draggable: true,
-                        progress: undefined,
-                        theme: "colored",
-                    });
-                    setLogin(false)
+            axios.post('https://shark-app-65hkc.ondigitalocean.app/auth/token/login/', data).then((res) => {
+                    console.log(res)
                 })
                 .catch(() => {
                     console.log(data)
@@ -84,17 +70,16 @@ const LoginForm = () => {
                         <path d="M8.16699 8.16675L19.8337 19.8334M8.16699 19.8334L19.8337 8.16675" stroke="black" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </div>
-                <h2 className="login__h2">Вход</h2>
+                <h2 className="login__h2">Вход <span className="registration__error"> {errors.email && errors.email.message}</span></h2>
                 <form className={'login__form'} onSubmit={handleSubmit(onSubmit)}>
                     <label className="login__label">
                         <span>Электронная почта   <span className={'login__star'}>*</span></span>
 
                         <input type={''}
                                {...register("email", {
-                                   register: "Поле обязательно у заполнению",
-                                   minLength: {
-                                       value: 5,
-                                       message: 'минимум 5 символов'
+                                   required: {
+                                       message : "Введите почту",
+                                       value: true
                                    }
                                })}
                         />
@@ -102,13 +87,12 @@ const LoginForm = () => {
                     </label>
                     <label className="login__password">
 
-                       <span>Ведите пороль *</span>
+                       <span>Ведите пороль <span className="registration__error"> {errors.password && errors.password.message}</span></span>
                         <input type={`${passwordShown ? "text" : "password"}`}
                                {...register("password",{
-                                   required:"obez",
-                                   minLength:{
-                                       value:5,
-                                       message: 'min 4 sim'
+                                   required: {
+                                       message : "Введите пароль",
+                                       value: true
                                    }
                                } )}/>
                         <span  onClick={() => setPasswordShown(!passwordShown)} className="login__eye">
