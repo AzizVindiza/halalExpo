@@ -19,7 +19,7 @@ const CheckBox = () => {
                     <InvestorCheck title={'Telegram'} name={'telegram_bool'}/>
                     <InvestorCheck title={'Instagram'} name={'instagram_bool'}/>
                     <InvestorCheck title={'Whats App'} name={'whatsapp_bool'}/>
-                    <InvestorCheck title={'Радио реклама'} name={'tv_radio'}/>
+                    <InvestorCheck title={'Радио реклама'} name={'radio_bool'}/>
                 </div>
             </div>
         </div>

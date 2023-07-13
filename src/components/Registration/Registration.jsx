@@ -19,15 +19,14 @@ const Registration = () => {
     const {setClose, role, members} = useContext(CustomContext)
 
     const onSubmit = (data) => {
-        console.log(data)
         const id = toast.loading("Please wait...")
         try {
-            data = {
-                ...data,
-                image_id_one: data.image_id_one[0],
-                image_id_two: data.image_id_two[0],
-                image_id_three: data.image_id_three[0],
-            }
+            // data = {
+            //     ...data,
+            //     image_id_one: data.image_id_one[0],
+            //     image_id_two: data.image_id_two[0],
+            //     image_id_three: data.image_id_three[0],
+            // }
 
             axios.post('https://shark-app-65hkc.ondigitalocean.app/registration/', data, {
                 headers: {
