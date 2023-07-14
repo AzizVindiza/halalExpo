@@ -2,17 +2,12 @@ import React, {useContext} from 'react';
 import {CustomContext} from "../../../Context";
 
 import RegistrationSelectMember from "../RegistrationSelectMember/RegistrationSelectMember";
-import RegistrationSelectIndustry from "../RegistrationSelectIndustry/RegistrationSelectIndustry";
-import RegistrationSelectFashion from "../RegistrationSelectFashion/RegistrationSelectFashion";
-import RegistrationSelectFood from "../RegistrationSelectFood/RegistrationSelectFood";
-import ChooseIndustry from "../ChooseIndustry/ChooseIndustry";
 import RegistrationInput from "../RegistrationInput/RegistrationInput";
 import RegistrationUploadInput from "../RegistrationUploadInput/RegistrationUploadInput";
 import RegistrationPhoneNumber from "../RegistrationPhoneNumber/RegistrationPhoneNumber";
 import CheckBox from "../CheckBox/CheckBox";
 import RegistrationPassword from "../RegistrationPassword/RegistrationPassword";
 import RegistrationInputTextarea from "../RegistrationInputTextarea/RegistrationInputTextarea";
-import SocialSection from "../../SocialSection/SocialSection";
 import ContactFace from "../../ParticipantForm/ContactFace/ContactFace";
 import RegistrationCountry from "../RegistrationCountry/RegistrationCountry";
 import CheckBoxParticipant from "../CheckBoxParticipant/CheckBoxParticipant";
