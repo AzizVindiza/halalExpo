@@ -28,9 +28,9 @@ const StartSection = () => {
                                 <img src={svg} alt="" className="start__img"/>
                             </div>
                             <h3 className="start__h3">
-                                <Link to={"trade"}>
+                                <div>
                                     Trade Zone
-                                </Link>
+                                </div>
                             </h3>
                         </div>
                         <div className="start__block">
@@ -38,9 +38,9 @@ const StartSection = () => {
                                 <img src={svg4} alt="" className="start__img"/>
                             </div>
                             <h3 className="start__h3">
-                                <Link to={"invest"}>
+                                <div>
                                     Invest Zone
-                                </Link>
+                                </div>
                             </h3>
                         </div>
                         <div className="start__block">
