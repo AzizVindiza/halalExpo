@@ -9,6 +9,7 @@ import rating from './rating.svg'
 import sanarip from './sanarip.svg'
 import trans from './trans.svg'
 import viliage from './viliage.svg'
+import ordo from "./ordo.svg"
 
 const PartnersSection = ({title}) => {
     return (
@@ -69,6 +70,12 @@ const PartnersSection = ({title}) => {
                     <img className={'partners__img'} src={trans} alt=""/>
                     <h2 className="partners__h2">
                         Министерства транспорта <br/>и коммуникаций
+                    </h2>
+                </div>
+                <div className="partners__card">
+                    <img className={'partners__img'} src={ordo} alt=""/>
+                    <h2 className="partners__h2">
+                        Культурный Центр «Рух Ордо» им.Ч.Айтматова
                     </h2>
                 </div>
 

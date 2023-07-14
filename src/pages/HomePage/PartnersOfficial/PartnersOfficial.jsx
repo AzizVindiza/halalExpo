@@ -4,6 +4,7 @@ import '../PartnersSection/PartnersSection.sass'
 import car from './car.svg'
 import cit from "./cit.svg"
 import newline from "./newline.svg"
+import battarey from "./battarey.svg"
 
 
 const PartnersOfficial = () => {
@@ -28,6 +29,12 @@ const PartnersOfficial = () => {
                     <img className={'partners__img car'}  src={car} alt=""/>
                     <h2 className="partners__h2">
                         Vip kortege
+                    </h2>
+                </div>
+                <div className="partners__card ">
+                    <img className={'partners__img'}  src={battarey} alt=""/>
+                    <h2 className="partners__h2">
+                        Бери заряд
                     </h2>
                 </div>
             </div>

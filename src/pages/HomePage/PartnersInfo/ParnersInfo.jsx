@@ -4,6 +4,9 @@ import '../PartnersSection/PartnersSection.sass'
 import info from "./info.gif"
 import general from "./general.svg"
 import times from "./times.svg"
+import lets from "./lets.svg"
+import ticket from "./ticket.svg"
+import cashier from "./cashier.svg"
 
 
 const PartnersSection = () => {
@@ -31,6 +34,27 @@ const PartnersSection = () => {
                     <img className={'partners__img'} src={info} alt=""/>
                     <h2 className="partners__h2">
                         Expomap
+
+                    </h2>
+                </a>
+                <a href={"https://sxodim.com/bishkek"} className="partners__card">
+                    <img className={'partners__img'} src={lets} alt=""/>
+                    <h2 className="partners__h2">
+                        Давай сходим
+
+                    </h2>
+                </a>
+                <a href={"https://ticket.kg/"} className="partners__card">
+                    <img className={'partners__img'} src={ticket} alt=""/>
+                    <h2 className="partners__h2">
+                        Ticket.kg
+
+                    </h2>
+                </a>
+                <a href={"https://kassir.kg/"} className="partners__card">
+                    <img className={'partners__img'} src={cashier} alt=""/>
+                    <h2 className="partners__h2">
+                        Kassir.kg
 
                     </h2>
                 </a>
