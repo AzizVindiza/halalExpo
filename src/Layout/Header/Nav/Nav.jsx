@@ -31,7 +31,7 @@ const Nav = () => {
                 <NavLink onClick={() => setActiveHamburger(false)}  className={'nav__link'} to={'meet'}>B2B</NavLink>
                 {/*<NavLink onClick={() => setActiveHamburger(false)}  className={'nav__link'} to={'news'}>{t("header.News")}</NavLink>*/}
 
-                <NavLink onClick={() => setActiveHamburger(false)}  className={'nav__link'} to={'question'}>FQA</NavLink>
+
 
                 <NavLink onClick={() => setActiveHamburger(false)}  className={'nav__link'} to={'question'}>FAQ</NavLink>
                 <NavLink onClick={() => setActiveHamburger(false)}  className={'nav__link nav__btn  '} to={''}>
