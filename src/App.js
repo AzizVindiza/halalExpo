@@ -62,11 +62,9 @@ const router = createBrowserRouter(
                 <Route path="trade" element={<TradePage/>}/>
                 <Route path="invest" element={<InvestPage/>}/>
                 <Route path="test" element={<UserTicket/>}/>
-<<<<<<< HEAD
 
-=======
                 <Route path="account" element={<AccountPage/>}/>
->>>>>>> 1380b56ca8821e9cb4271a6d89c904d82f1ce0f7
+
             </Route>
             <Route path="loader" element={<Loader/>}/>
 
