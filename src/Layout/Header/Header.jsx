@@ -1,5 +1,5 @@
 import React, {useContext, useState} from 'react';
-import logo from './header__logo.png'
+import logo from './logo3.svg'
 import './Header.sass'
 import Nav from "./Nav/Nav";
 import RowSection from "./RowSection/RowSection";

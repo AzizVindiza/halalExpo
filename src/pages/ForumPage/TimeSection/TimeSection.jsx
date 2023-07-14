@@ -7,7 +7,7 @@ const TimeSection = () => {
             <div className="time__container">
                 <div className={'time__wrapper'}>
                     <div className="time__txt">
-                        <h2 className="time__h2">26.08 Второй день выставки </h2>
+                        <h2 className="time__h2">27.08 Второй день выставки </h2>
                         <div className="time__date">
                             <div className="time__block">
                                 07:00-09:00
@@ -86,7 +86,7 @@ const TimeSection = () => {
 
                     </div>
                     <div className="time__txt">
-                        <h2 className="time__h2">27.08 Третий день выставки </h2>
+                        <h2 className="time__h2">28.08 Третий день выставки </h2>
                         <div className="time__date">
                             <div className="time__block">
                                 07:00-09:00
@@ -135,7 +135,7 @@ const TimeSection = () => {
                             <div className="time__block">
                                 09:00-10:00
                             </div>
-                            <h3 className="time__h3">Аккредетация СМИ</h3>
+                            <h3 className="time__h3">Аккредитация СМИ</h3>
 
                         </div>
                         <div className="time__date">

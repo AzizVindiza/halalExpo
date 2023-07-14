@@ -28,6 +28,7 @@ import TradePage from "./pages/TradePage/TradePage";
 import InvestPage from "./pages/InvestPage/InvestPage";
 import Loader from "./components/Registration/Loading/Loader";
 import UserTicket from "./pages/UserTicket/UserTicket";
+import AccountPage from "./pages/AccountPage/AccountPage";
 
 
 
@@ -61,7 +62,11 @@ const router = createBrowserRouter(
                 <Route path="trade" element={<TradePage/>}/>
                 <Route path="invest" element={<InvestPage/>}/>
                 <Route path="test" element={<UserTicket/>}/>
+<<<<<<< HEAD
 
+=======
+                <Route path="account" element={<AccountPage/>}/>
+>>>>>>> 1380b56ca8821e9cb4271a6d89c904d82f1ce0f7
             </Route>
             <Route path="loader" element={<Loader/>}/>
 

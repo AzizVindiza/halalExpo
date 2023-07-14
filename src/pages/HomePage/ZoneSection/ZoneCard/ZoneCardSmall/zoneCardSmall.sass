@@ -6,6 +6,7 @@
 
 
 
+
   overflow: hidden
   border-radius: 45px
   height: 611px
@@ -25,6 +26,7 @@
 
     padding: 35px 0 0 30px
     color: #8c7676
+
 
   &__h2
     @include text(700,38px,133%,#087AFF)
@@ -275,10 +277,24 @@
       svg
         width: 20px
 
+@media (max-width: 482px)
+  .zona
+
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2)
+    justify-content: flex-end
+    height: 680px
+    background: #FFFFFF
+    &__left
+      z-index: 7
+    &__right
+      z-index: 2
+    &__overlay
+      z-index: 5
 
 @media (max-width: 394px)
   .zona
     flex-direction: column-reverse
+    height: 645px
 
 
     &__h2

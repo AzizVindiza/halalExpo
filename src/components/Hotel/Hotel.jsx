@@ -8,8 +8,7 @@ const Hotel = () => {
                 <h2 className="hotel__h2">ГОСТИНИЦЫ</h2>
                 <div className="hotel__wrapper">
                     <HotelCard/>
-                    <HotelCard/>
-                    <HotelCard/>
+
                 </div>
 
             </div>

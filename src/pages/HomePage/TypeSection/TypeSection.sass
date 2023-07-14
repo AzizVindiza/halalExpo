@@ -9,34 +9,34 @@
     padding: 0 135px
   &__container
     display: flex
-  &__left
-    position: relative
-    width: 50%
+
   &__right
     position: absolute
-    padding-top: 100px
-    width: 55%
+    padding-top: 136px
+    width: 46%
     right: 0
+
 
   &__cards
     display: flex
     align-items: center
     justify-content: flex-start
     flex-wrap: wrap
-    width: 638px
-    column-gap: 40px
-    row-gap: 80px
+    row-gap: 12px
+    max-width: 630px
+
+
   &__h3
     @include text(500,14px,16px,#000)
-    margin-top: 20px
+    margin-top: 25px
     text-align: center
   &__card
     text-align: center
     display: flex
     flex-direction: column
     align-items: center
-    width: 130px
-    height: 170px
+    width: 210px
+    height: 190px
   &__img
     width: 110px
     height: 110px
@@ -86,39 +86,80 @@
 
 @media (max-width: 1201px)
   .type
+    &__h3
+      margin-top: 15px
+      @include text(500,13px,16px,#000)
+    &__cards
+      max-width: 534px
+
     &__card
+      width: 178px
+      height: 161px
     &__right
-      right: -100px
-      width: 65%
+      padding-top: 86px
+      width: 52%
+
+
     &__img
-      width: 96px
-      height: 96px
+      width: 93px
+      height: 93px
 
 
 @media (max-width: 1025px)
   .type
 
+    &__h3
+      @include text(500,11px,16px,#000)
 
+
+    &__cards
+      max-width: 465px
+      row-gap: 24px
+    &__card
+      width: 154px
+      height: 170px
+
+    &__right
+      padding-top: 98px
+      width: 57%
+      right: -50px
+
+@media (max-width: 770px)
+  .type
     &__container
       display: flex
       flex-direction: column
-    &__left
-      width: 100%
     &__cards
-      width: 100%
-      justify-content: space-around
+      max-width: 100%
+      justify-content: center
+    &__card
+      width: 163px
+      height: 148px
     &__right
-      right: -50px
-      display: flex
+      padding-top: 0
       width: 100%
-
       position: relative
-
 
 
 @media (max-width: 482px)
   .type
+    &__container
+      display: flex
+      flex-direction: column
     &__cards
       row-gap: 30px
     &__h3
-      margin-top: 0
+      @include text(500,14px,16px,#000)
+      margin-top: 15px
+    &__card
+      width: 140px
+      height: 160px
+    &__img
+      width: 81px
+      height: 81px
+
+@media (max-width: 394px)
+  .type
+    &__card
+      width: 150px
+      height: 173px

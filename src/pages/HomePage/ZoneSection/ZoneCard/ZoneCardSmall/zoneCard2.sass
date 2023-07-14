@@ -21,6 +21,7 @@
     padding: 35px 30px 0 0
     color: #8c7676
 
+
   &__h2
     text-align: end
     @include text(700,38px,133%,#087AFF)
@@ -282,9 +283,22 @@
       @include text(500,16px,133%,#FFF)
       svg
         width: 20px
+@media (max-width: 482px)
+  .zona2
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2)
+    background: #FFFFFF
+    height: 680px
+    justify-content: flex-end
+    &__left
+      z-index: 4
+    &__right
+      z-index: 2
+    &__overlay
+      z-index: 3
 
 @media (max-width: 394px)
   .zona2
+    height: 645px
     flex-direction: column-reverse
     &__h2
       width: 100%

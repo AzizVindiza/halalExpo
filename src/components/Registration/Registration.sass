@@ -14,24 +14,29 @@
     position: relative
     width: 760px
     background: #FFFFFF
-    padding: 50px 30px
     -ms-overflow-style: none
+  &__container
+    padding: 50px 30px
+  &__title
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 125px
+    background: url("./bg.png")
   &__close
+    background: transparent
+    cursor: pointer
     position: absolute
     right: 18px
     top: 18px
   &__h2
     text-align: center
-    @include text(600,30px,133%,#000)
+    @include text(600,30px,133%,#00862D)
     margin-bottom: 20px
-  &__p
-    background: #FDF7E2
-    display: flex
-    column-gap: 10px
-    width: 100%
-    padding: 10px
-    margin: 0 auto 18px auto
-    @include text(400,10px,133%,#000)
+  &__h3
+    @include text(600,18px,133%,#00862D)
+    margin-bottom: 18px
+
   &__star
     color: red
   &__label
@@ -40,10 +45,32 @@
     row-gap: 7px
     margin-bottom: 15px
     position: relative
+  &__label-p
+    @include text(300,12px,133%,#000)
+    width: 455px
   &__label-title
     @include text(600,16px,133%,#000)
   &__error
     @include text(600,16px,133%,red)
+  &__textarea
+    width: 100%
+    border: 1px solid #00000050
+    padding: 12px 14px
+    height: 72px
+    border-radius: 8px
+    @include text(500,16px,133%,#000)
+    &::placeholder
+      @include text(500,13px,133%,#00000050)
+    &:focus
+      border: 1px solid #0033CC
+  &__column-wrapper
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+  &__column
+    display: flex
+    flex-direction: column
+    width: 45%
   &__input
     width: 100%
     border: 1px solid #00000050

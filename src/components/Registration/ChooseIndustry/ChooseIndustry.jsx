@@ -1,5 +1,5 @@
 import React from 'react';
-import InvestorCheck from "../../InvesntorCheck/InvestorCheck";
+import InvestorCheck from "../InvesntorCheck/InvestorCheck";
 import "./chooseIndustry.sass"
 const ChooseIndustry = () => {
     return (

@@ -25,7 +25,7 @@ const ConnectionSection = () => {
 
 
                            </div>
-                           <p className="connectionSection__p">hitexpo2023@gmail.com</p>
+                           <p className="connectionSection__p">info@hit-expo.org</p>
                        </div>
                        <div className="connectionSection__block">
                            <div className="connectionSection__oval">

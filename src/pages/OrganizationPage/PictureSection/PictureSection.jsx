@@ -4,6 +4,7 @@ import img1 from "./img1.png"
 import img2 from "./img2.png"
 import img3 from "./img3.png"
 import img4 from "./img4.png"
+import img5 from "./img5.png"
 
 import { Swiper,SwiperSlide} from "swiper/react";
 import "swiper/css"
@@ -16,7 +17,7 @@ const PictureSection = () => {
     return (
         <div className={'picture'}>
             <div className="container picture__container">
-                <div className="picturi__text">Галерея</div>
+                <div className="picture__text">Галерея</div>
                 <Swiper
                     slidesPerView={3}
                     breakpoints={{
@@ -36,11 +37,12 @@ const PictureSection = () => {
                     }}
                     speed={4000}
                     grabCursor={true}
+                    centeredSlides={true}
                     loop={true}
                     freeMode={true}
 
                     modules={[Autoplay]}
-                    className="mySwiper"
+                    className="picture__Swiper"
                 >
                     <SwiperSlide>
                         <div className="picture__img">
@@ -62,25 +64,21 @@ const PictureSection = () => {
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className="picture__img">
-                            <img src={img2} alt=""/>
+                            <img src={img4} alt=""/>
                         </div>
 
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className="picture__img">
-                            <img src={img2} alt=""/>
+                            <img src={img5} alt=""/>
                         </div>
 
                     </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="picture__img">
-                            <img src={img2} alt=""/>
-                        </div>
 
-                    </SwiperSlide>
 
                 </Swiper>
             </div>
+
 
         </div>
     );

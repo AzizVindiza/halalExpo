@@ -11,14 +11,15 @@
 
   &__ameca
     img
-      width: 444px
-  &__txt
-    width: 412px
+      max-width: 444px
+
 
   &__h2
-    @include text(400,25px,133%,#000000)
+    @include text(700,25px,133%,#000000)
+    max-width: 412px
     span
-      @include text(500,30px,133%,#00862D)
+
+      @include text(700,25px,133%,#00862D)
   &__text
     display: flex
     flex-direction: column
@@ -27,14 +28,15 @@
     align-items: center
 
 
+
   &__h3
     @include text(500,25px,133%,#000000)
     margin-bottom: 8px
-    width: 885px
+    max-width: 885px
 
   &__p
     @include text(500,25px,133%,#000000)
-    width: 870px
+    max-width: 870px
   &__site
     display: flex
     align-items: center
@@ -49,15 +51,15 @@
     margin-left: 10px
 @media (max-width: 1201px)
   .association
-    &__amega
+    &__ameca
       img
-        width: 392px
-    &__txt
-      width: 364px
+        max-width: 392px
+
     &__h2
-      @include text(400,22px,133%,#000000)
-      &__span
-        @include text(400,25px,133%,#00862D)
+      @include text(700,22px,133%,#000000)
+      max-width: 364px
+    &__span
+      @include text(700,22px,133%,#00862D)
     &__h3
       @include text(500,22px,133%,#000000)
     &__p
@@ -65,31 +67,73 @@
 @media (max-width: 1025px)
   .association
 
-    &__amega
+    &__ameca
       img
-        width: 323px
+        max-width: 323px
     &__h2
-      @include text(400,20px,133%,#000000)
-      &__span
-        @include text(400,22px,133%,#00862D)
+      @include text(700,20px,133%,#000000)
+
+      span
+
+        @include text(700,20px,133%,#00862D)
     &__h3
       @include text(500,20px,133%,#000000)
+      max-width: 740px
     &__p
       @include text(500,20px,133%,#000000)
+      max-width: 674px
 @media (max-width: 769px )
   .association
 
-    &__amega
+    &__ameca
       img
-        width: 266px
+        max-width: 266px
     &__h2
-      @include text(400,18px,133%,#000000)
-      &__span
-        @include text(400,20px,133%,#00862D)
+      @include text(700,18px,133%,#000000)
+      max-width: 274px
+
+
+
+      span
+        @include text(700,18px,133%,#00862D)
     &__h3
       @include text(500,18px,133%,#000000)
+      max-width: 610px
     &__p
       @include text(500,18px,133%,#000000)
+      max-width: 555px
 @media (max-width: 481px )
+  .association
+    &__site
+      display: flow-root
+
+    &__link
+      margin-bottom: 12px
+    &__wrapper
+      flex-wrap: wrap
+
+    &__ameca
+      img
+        max-width: 266px
+    &__h2
+      @include text(700,15px,133%,#000000)
+      text-align: center
+      margin-top: 23px
+      max-width: 247px
+      span
+        @include text(700,15px,133%,#00862D)
+    &__h3
+      @include text(500,16px,133%,#000000)
+      max-width: 430px
+    &__p
+      @include text(500,16px,133%,#000000)
+      max-width: 430px
+
 @media (max-width: 394px )
+  .association
+    &__h3
+      max-width: 350px
+    &__p
+      max-width: 350px
+
 
