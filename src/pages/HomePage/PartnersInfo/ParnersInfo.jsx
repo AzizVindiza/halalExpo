@@ -1,12 +1,14 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import Btn from "../../../components/Btn/Btn";
 import '../PartnersSection/PartnersSection.sass'
 import info from "./info.gif"
 import general from "./general.svg"
 import times from "./times.svg"
+import {CustomContext} from "../../../Context";
 
 
 const PartnersSection = () => {
+    const {setRequest}=useContext(CustomContext)
     return (
         <section className="partners">
             <h2 className="partners__title">
@@ -35,9 +37,9 @@ const PartnersSection = () => {
                     </h2>
                 </a>
             </div>
-            <a className="speaker__btn partners__btn" href="">
+            <div onClick={() => setRequest(true)}  className="speaker__btn partners__btn">
                 <Btn m={"big btn_border"} type="button" text="Стать партнером"/>
-            </a>
+            </div>
 
         </section>
     );
