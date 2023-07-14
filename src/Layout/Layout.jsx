@@ -15,8 +15,8 @@ const Layout = () => {
             <main>
                     <Outlet/>
                     {/*<Advertising/>*/}
-                    <div className="smooth-scroll" style={{padding: '100px'}}></div>
-                    <ScrollRestoration/>
+                    {/*<div className="smooth-scroll" style={{padding: '100px'}}></div>*/}
+                    {/*<ScrollRestoration/>*/}
             </main>
 
 

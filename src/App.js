@@ -31,6 +31,7 @@ import UserTicket from "./pages/UserTicket/UserTicket";
 
 
 
+
  
 
 const router = createBrowserRouter(
@@ -60,6 +61,7 @@ const router = createBrowserRouter(
                 <Route path="trade" element={<TradePage/>}/>
                 <Route path="invest" element={<InvestPage/>}/>
                 <Route path="test" element={<UserTicket/>}/>
+
             </Route>
             <Route path="loader" element={<Loader/>}/>
 
