@@ -8,6 +8,7 @@ const MembersCard = () => {
     return (
         <>
             <section onClick={() => setOpenModal(true)}  className="membersCard">
+                <div className="container membersCard__container">
                 <div className="membersCard__wrapper">
                     <div className="membersCard__img">
                         <img src={pic} alt=""/>
@@ -23,6 +24,7 @@ const MembersCard = () => {
                 <div className="membersCard__content">
                     <h3 className="membersCard__h3">Китай</h3>
                     <h4 className="membersCard__h3">Техника</h4>
+                </div>
                 </div>
             </section>
             {

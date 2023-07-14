@@ -101,9 +101,10 @@ const TaskSection = () => {
                     <h2 className="task__h2">{t("taskSection.title")}</h2>
                 </div>
                 <div className="task__wrapper">
-                    <motion.div  custom={1} variants={textMotion}>
-                        <TaskCard number={1} text={t("taskSection.text1")}/>
-                    </motion.div>
+                            <motion.div  custom={1} variants={textMotion}>
+                                <TaskCard number={1} text={t("taskSection.text1")}/>
+                            </motion.div>
+
                     <motion.div  custom={2} variants={cartMotion}>
                         <TaskCard number={2} text={t("taskSection.text2")}/>
                     </motion.div>

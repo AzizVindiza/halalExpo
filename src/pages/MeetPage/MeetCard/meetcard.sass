@@ -1,0 +1,110 @@
+@import "src/sass/base/mixins"
+.meetcard
+  &__container
+    padding-bottom: 140px
+  &__h2
+    @include text(600,32px,133%,#00862D)
+    padding: 10px 0 20px 0
+  &__box
+    position: relative
+    width: 80%
+    height: 140px
+    border-radius: 14px
+    border: 1px solid rgba(0, 0, 0, 0.12)
+    background: rgba(255, 255, 255, 0.40)
+    backdrop-filter: blur(7.5px)
+    padding: 11px 29px
+    margin-left: 30px
+    z-index: 100
+  &__p
+    @include text(400,20px,133%,#000000)
+  &__wrapper
+    display: flex
+    flex-direction: column
+    row-gap: 98px
+  &__h3
+    @include text(600,26px,133%,#00862D)
+    margin-top: 70px
+  &__num
+    width: 70px
+    height: 70px
+    position: absolute
+    left: -50px
+@media (max-width: 1201px)
+  .meetcard
+    &__box
+      height: 104px
+    &__p
+     @include text(400,22px,133%,#000000)
+    &__h2
+     @include text(600,28px,133%,#00862D)
+    &__h3
+     @include text(600,28px,133%,#00862D)
+@media (max-width: 1025px)
+  .meetcard
+    &__container
+      padding-bottom: 54px
+    &__num
+      width: 71px
+      height: 121px
+    &__box
+      height: 120px
+    &__p
+     @include text(400,18px,133%,#000000)
+    &__h2
+     @include text(600,26px,133%,#00862D)
+    &__h3
+     @include text(600,26px,133%,#00862D)
+@media (max-width: 770px)
+  .meetcard
+    &__container
+      padding-bottom: 172px
+    &__num
+      width: 71px
+      height: 140px
+    &__box
+      height: 120px
+    &__wrapper
+      row-gap: 55px
+    &__p
+     @include text(400,16px,133%,#000000)
+    &__h2
+     @include text(600,26px,133%,#00862D)
+    &__h3
+     @include text(600,26px,133%,#00862D)
+@media (max-width: 482px)
+  .meetcard
+    &__container
+      padding-bottom: 109px
+    &__num
+      left: -30px
+      width: 55px
+      height: 95px
+    &__box
+      height: 94px
+    &__wrapper
+      row-gap: 44px
+    &__p
+     @include text(400,12px,133%,#000000)
+    &__h2
+     @include text(600,22px,133%,#00862D)
+    &__h3
+     @include text(600,22px,133%,#00862D)
+@media (max-width: 394px )
+  .meetcard
+    &__container
+      padding-bottom: 89px
+    &__num
+      width: 42px
+      height: 95px
+      left: -30px
+    &__box
+      height: 150px
+    &__wrapper
+      row-gap: 44px
+    &__p
+     @include text(400,12px,133%,#000000)
+    &__h2
+     @include text(600,22px,133%,#00862D)
+    &__h3
+     @include text(600,22px,133%,#00862D)

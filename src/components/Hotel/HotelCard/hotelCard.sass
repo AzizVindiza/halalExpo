@@ -1,7 +1,11 @@
 @import "src/sass/base/mixins"
 .hotelCard
   padding-bottom: 43px
+
   border-bottom: 1px solid rgba(0, 0, 0, 0.2)
+  &:last-child
+    border-bottom: 0
+    padding-bottom: 0
   .row2
     display: none
   &__wrapper
@@ -39,7 +43,7 @@
   //  margin: 0 23px 0 35px
   &__h3
     @include text(700,25px,133%,#000)
-    margin-bottom: 10px
+
   &__row
     display: flex
     align-items: center
@@ -53,7 +57,6 @@
     @include text(500,18px,133%, #0057BC)
   &__text
     @include text(400,18px,133%,#03C)
-    margin-top: 10px
   &__ul
     row-gap: 3px
     display: flex
@@ -61,6 +64,7 @@
     padding: 10px 0
   &__li
     @include text(400,20px,133%,#000)
+    white-space: pre-line
 
 
 
@@ -100,9 +104,10 @@
       column-gap: 15px
 @media (max-width: 482px)
   .hotelCard
-    border-bottom: 0
+
     .row2
       display: flex
+      margin-bottom: 10px
     .row
       display: none
     &__wrapper
@@ -111,13 +116,12 @@
     &__pic
       img
         width: 100%
-        height: 215px
+
     &__text
       transform: rotate(0deg)
       writing-mode: horizontal-tb
       @include text(400,14px,133%, #000)
     &__map
-      margin-top: 20px
       display: flex
       column-gap: 14px
       align-items: center

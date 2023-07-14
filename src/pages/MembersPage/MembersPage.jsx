@@ -13,6 +13,7 @@ const MembersPage = () => {
 
     return (
         <section className="members">
+            <div className="container members__container">
             <h2 className="members__h2">
                 Участники
             </h2>
@@ -51,7 +52,7 @@ const MembersPage = () => {
 
                 </div>
             </div>
-
+            </div>
         </section>
     );
 };
