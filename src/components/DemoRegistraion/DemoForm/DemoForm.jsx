@@ -177,6 +177,8 @@ const DemoForm = () => {
                                 <option value="" className="demoForm__option">Выберите</option>
                                 <option value="Партнер" className="demoForm__option">Партнер</option>
                                 <option value="Участник" className="demoForm__option">Участник</option>
+                                <option value="Сми" className="demoForm__option">Сми</option>
+                                <option value="Спонсор" className="demoForm__option">Спонсор</option>
 
                             </select>
                         </label>
