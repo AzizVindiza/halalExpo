@@ -9,7 +9,7 @@ const RegistrationPassword = ({title , name} ) => {
         errors,
     }} = useFormContext()
     const password = useRef({})
-    password.current = watch('password_user', "")
+    password.current = watch('password', "")
     return (
         <>
             <label className="registration__label">
