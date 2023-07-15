@@ -28,7 +28,7 @@ const Registration = () => {
             //     image_id_three: data.image_id_three[0],
             // }
 
-            axios.post('https://shark-app-65hkc.ondigitalocean.app/registration/', data, {
+            axios.post('https://shark-app-65hkc.ondigitalocean.app/user/', data, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }

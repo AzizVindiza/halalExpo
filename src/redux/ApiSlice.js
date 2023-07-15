@@ -16,14 +16,20 @@ export const apiSlice = createApi({
         }),
         login : builder.mutation({
             query:(body) => ({
-                url : "login/",
+                url : "/login/",
+                method : "POST",
+                body
+            })
+        }),
+        addFeedback: builder.mutation({
+            query :(body) => ({
+                url : "feedback/",
                 method : "POST",
                 body
             })
         })
-
     })
 
 })
 
-export const {useAddPartnerMutation,useLoginMutation} = apiSlice
+export const {useAddPartnerMutation,useLoginMutation,useAddFeedbackMutation} = apiSlice

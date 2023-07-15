@@ -22,17 +22,13 @@ const Nav = () => {
     return (
         <nav className="nav">
             <div className="container nav__container">
-
+                <NavLink onClick={() => setActiveHamburger(false)}  className={'nav__link'} to={'partner'}>{t("header.Partners")}</NavLink>
                 <Dropdown  item={t("header.dropDown",{returnObjects:true})}/>
                 <Dropdown  item={t("header.dropDown1",{returnObjects:true})} />
                 {/*<Dropdown  txt={t("header.Visitors")} arr={arr2}/>*/}
-                <NavLink onClick={() => setActiveHamburger(false)}  className={'nav__link'} to={'partner'}>{t("header.Partners")}</NavLink>
                 <NavLink onClick={() => setActiveHamburger(false)}  className={'nav__link'} to={'mass'}>{t("header.MEDIA")}</NavLink>
                 <NavLink onClick={() => setActiveHamburger(false)}  className={'nav__link'} to={'meet'}>B2B</NavLink>
                 {/*<NavLink onClick={() => setActiveHamburger(false)}  className={'nav__link'} to={'news'}>{t("header.News")}</NavLink>*/}
-
-
-
                 <NavLink onClick={() => setActiveHamburger(false)}  className={'nav__link'} to={'question'}>FAQ</NavLink>
                 <NavLink onClick={() => setActiveHamburger(false)}  className={'nav__link nav__btn  '} to={''}>
                 </NavLink>

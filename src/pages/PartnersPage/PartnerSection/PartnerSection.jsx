@@ -14,15 +14,6 @@ const PartnerSection = () => {
                         <img src={logo} className={'partnerSection__image'} alt=""/>
                     </div>
                 </div>
-                <div className="partnerSection__wrapper">
-                    <div className="partnerSection__block"></div>
-                    <div className="partnerSection__block"></div>
-                    <div className="partnerSection__block"></div>
-                    <div className="partnerSection__block"></div>
-                    <div className="partnerSection__block"></div>
-                    <div className="partnerSection__block"></div>
-
-                </div>
             </div>
 
         </section>

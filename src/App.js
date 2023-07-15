@@ -29,14 +29,29 @@ import TradePage from "./pages/TradePage/TradePage";
 import Loader from "./components/Registration/Loading/Loader";
 import UserTicket from "./pages/UserTicket/UserTicket";
 import AccountPage from "./pages/AccountPage/AccountPage";
+
 import InvestZonePage from "./pages/InvestZonePage/InvestZonePage";
 
+import Aside from "./pages/AccountPage/Aside/Aside";
+import React from "react";
+import Profile from "./pages/AccountPage/ProfileSection/Profile/Profile";
+import Footer from "./Layout/Footer/Footer";
+import Header from "./Layout/Header/Header";
+import ProfileSection from "./pages/AccountPage/ProfileSection/ProfileSection";
+
+import TradeZonePage from "./pages/TradeZonePage/TradeZonePage";
+import {useSelector} from "react-redux";
+import store from "./redux/store";
 
 
 
- 
+
+
 
 const router = createBrowserRouter(
+
+
+
     createRoutesFromElements(
         <>
 
@@ -62,12 +77,27 @@ const router = createBrowserRouter(
                 <Route path="location" element={<LocationPage/>}/>
                 <Route path="trade" element={<TradePage/>}/>
                 <Route path="invest" element={<InvestZonePage/>}/>
+                <Route path="account" element={<AccountPage/>}>
+                    <Route path="test" element={<UserTicket/>}/>
+                </Route>
+
+                        <Route path={'account'} element={<AccountPage/>}>
+                            <Route path={'profile'} element={<ProfileSection/>}/>
+                            <Route path={'stand'} element={<NotFoundPage/>}/>
+                            <Route path={'tickets'} element={<NotFoundPage/>}/>
+                            <Route path={'notification'} element={<NotFoundPage/>}/>
+                            <Route path={'meet'} element={<NotFoundPage/>}/>
+                            <Route path={'chat'} element={<NotFoundPage/>}/>
+                            <Route path={'sittings'} element={<NotFoundPage/>}/>
+                        </Route>
 
                 <Route path="test" element={<UserTicket/>}/>
+                <Route path="tradezone" element={<TradeZonePage/>}/>
 
                 <Route path="account" element={<AccountPage/>}/>
 
             </Route>
+
             <Route path="loader" element={<Loader/>}/>
 
 
@@ -78,6 +108,7 @@ const router = createBrowserRouter(
 );
 
 function App() {
+
     return (
         <>
 

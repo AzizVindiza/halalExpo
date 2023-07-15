@@ -57,7 +57,7 @@ const RegistrationParticipant = () => {
                 <div className="registration__column">
                     <h3 className="registration__h3">Свидетельство о юридической регистрации</h3>
                     <RegistrationInput type={'text'} name={'inn'} title={'ИИН/ИНН(Серия патента компании)'}/>
-                    <RegistrationInput type={'text'} name={'orgn'} title={'ОГРН/Номер патента'}/>
+                    {/*<RegistrationInput type={'text'} name={'orgn'} title={'ОГРН/Номер патента'}/>*/}
                     <RegistrationInput type={'text'} name={'okpo'} title={'ОКПО'}/>
                     <RegistrationUploadInput name={"photo_company"} title={"Загрузите устав компании (документ/pdf)"}/>
                 </div>
@@ -74,7 +74,7 @@ const RegistrationParticipant = () => {
                     <h3 className="registration__h3">Данные о руководителе</h3>
                     <RegistrationInput type={'text'} name={'name_manager'} title={'ФИО'}/>
                     <RegistrationInput type={'date'} name={'birth_manager'} title={'Дата рождения'}/>
-                    <RegistrationInput type={'text'} name={'inn_manager'} title={'ИНН/ИИН руководителя'}/>
+                    {/*<RegistrationInput type={'text'} name={'inn_manager'} title={'ИНН/ИИН руководителя'}/>*/}
                     <RegistrationInput type={'text'} name={'position_manager'} title={'Должность'}/>
                     <RegistrationInput type={'text'} name={'active_manager'} title={'Действующий на основании'}/>
                 </div>
