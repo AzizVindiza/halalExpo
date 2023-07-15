@@ -25,10 +25,11 @@ import Hotel from "./components/Hotel/Hotel";
 import LocationPage from "./pages/LocationPage/LocationPage";
 import MassPage from "./pages/MassPage/MassPage";
 import TradePage from "./pages/TradePage/TradePage";
-import InvestPage from "./pages/InvestPage/InvestPage";
+
 import Loader from "./components/Registration/Loading/Loader";
 import UserTicket from "./pages/UserTicket/UserTicket";
 import AccountPage from "./pages/AccountPage/AccountPage";
+import InvestZonePage from "./pages/InvestZonePage/InvestZonePage";
 
 
 
@@ -60,7 +61,8 @@ const router = createBrowserRouter(
                 <Route path="mass" element={<MassPage/>}/>
                 <Route path="location" element={<LocationPage/>}/>
                 <Route path="trade" element={<TradePage/>}/>
-                <Route path="invest" element={<InvestPage/>}/>
+                <Route path="invest" element={<InvestZonePage/>}/>
+
                 <Route path="test" element={<UserTicket/>}/>
 
                 <Route path="account" element={<AccountPage/>}/>
