@@ -29,11 +29,21 @@ import InvestPage from "./pages/InvestPage/InvestPage";
 import Loader from "./components/Registration/Loading/Loader";
 import UserTicket from "./pages/UserTicket/UserTicket";
 import AccountPage from "./pages/AccountPage/AccountPage";
+<<<<<<< HEAD
+import Aside from "./pages/AccountPage/Aside/Aside";
+import React from "react";
+import Profile from "./pages/AccountPage/ProfileSection/Profile/Profile";
+import Footer from "./Layout/Footer/Footer";
+import Header from "./Layout/Header/Header";
+import ProfileSection from "./pages/AccountPage/ProfileSection/ProfileSection";
+=======
+import TradeZonePage from "./pages/TradeZonePage/TradeZonePage";
 
 
 
 
  
+>>>>>>> 4f3ad6c999f7eaed54eae3398db9066734ec3099
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -61,11 +71,29 @@ const router = createBrowserRouter(
                 <Route path="location" element={<LocationPage/>}/>
                 <Route path="trade" element={<TradePage/>}/>
                 <Route path="invest" element={<InvestPage/>}/>
+<<<<<<< HEAD
+                <Route path="account" element={<AccountPage/>}>
+                    <Route path="test" element={<UserTicket/>}/>
+                </Route>
+                <Route path={'account'} element={<AccountPage/>}>
+
+                    <Route path={'profile'} element={<ProfileSection/>}/>
+                    <Route path={'stand'} element={<NotFoundPage/>}/>
+                    <Route path={'tickets'} element={<NotFoundPage/>}/>
+                    <Route path={'notification'} element={<NotFoundPage/>}/>
+                    <Route path={'meet'} element={<NotFoundPage/>}/>
+                    <Route path={'chat'} element={<NotFoundPage/>}/>
+                    <Route path={'sittings'} element={<NotFoundPage/>}/>
+                </Route>
+=======
                 <Route path="test" element={<UserTicket/>}/>
+                <Route path="tradezone" element={<TradeZonePage/>}/>
 
                 <Route path="account" element={<AccountPage/>}/>
 
+>>>>>>> 4f3ad6c999f7eaed54eae3398db9066734ec3099
             </Route>
+
             <Route path="loader" element={<Loader/>}/>
 
 

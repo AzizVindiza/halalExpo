@@ -9,13 +9,13 @@ const RegistrationPassword = ({title , name} ) => {
         errors,
     }} = useFormContext()
     const password = useRef({})
-    password.current = watch('password_user', "")
+    password.current = watch('password', "")
     return (
         <>
             <label className="registration__label">
                 <h3 className="registration__label-title">Придумайте пароль<span className="registration__star">*</span> <span
                     className="registration__error"> {errors.password_user && errors.password_user.message}</span></h3>
-                <input className="registration__input" ref={password} type={passwordShown ? "text" : 'password'} {...register('password_user', {
+                <input className="registration__input" ref={password} type={passwordShown ? "text" : 'password'} {...register('password', {
                     required: {
                         message: "Это поле обязательно к заполнению!",
                         value: true

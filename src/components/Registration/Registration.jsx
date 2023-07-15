@@ -21,6 +21,7 @@ const Registration = () => {
     const onSubmit = (data) => {
         const id = toast.loading("Please wait...")
         try {
+            console.log(data)
             // data = {
             //     ...data,
             //     image_id_one: data.image_id_one[0],
@@ -28,7 +29,7 @@ const Registration = () => {
             //     image_id_three: data.image_id_three[0],
             // }
 
-            axios.post('https://shark-app-65hkc.ondigitalocean.app/registration/', data, {
+            axios.post('https://shark-app-65hkc.ondigitalocean.app/user/', data, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
