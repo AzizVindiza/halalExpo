@@ -1,0 +1,66 @@
+@import "src/sass/base/mixins"
+.trade-first
+  &__container
+    display: flex
+    justify-content: center
+    align-items: center
+    column-gap: 120px
+  &__h2
+    @include text(800,45px,133%,#000)
+    text-align: center
+    margin-bottom: 50px
+  &__img
+    width: 520px
+    height: 520px
+  &__txt
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    row-gap: 32px
+  &__h3
+    @include text(800,30px,133%,#03C)
+  &__ul
+    padding: 45px 40px
+    background: #D0DCFE50
+    border-radius: 15px
+    border: 1px solid #D0DCFE
+    display: flex
+    flex-direction: column
+
+  &__li
+    display: flex
+    align-items: center
+    column-gap: 20px
+    @include text(600,22px,133%,#2E2E2E)
+    &::before
+      content: url("./Check_Double.svg")
+      position: relative
+  &__badges
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-top: 100px
+
+  &__badge
+    width: 220px
+    height: 227px
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    flex-direction: column
+    text-align: center
+  &__badge-img
+    width: 130px
+    height: 130px
+    margin-bottom: 16px
+  &__h4
+    @include text(600,20px,133%,#03C)
+    text-transform: uppercase
+
+@media (max-width: 1201px)
+@media (max-width: 1025px)
+@media (max-width: 770px)
+@media (max-width: 482px)
+@media (max-width: 394px)
+

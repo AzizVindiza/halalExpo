@@ -7,19 +7,20 @@
     justify-content: space-around
     align-items: baseline
     flex-wrap: wrap
-    row-gap: 85px
+    row-gap: 66px
   &__title
     @include text(800,35px,120%, #10923E)
     margin-bottom: 55px
     text-align: center
   &__img
-    width: 100px
+    width: 200px
     height: 100px
   &__h2
     @include text(500,14px,133%, #000000)
     text-align: center
+    margin-top: 10px
   &__card
-    width: 170px
+    width: 225px
     display: flex
     flex-direction: column
     justify-content: center
@@ -36,12 +37,14 @@
     &__container
       column-gap: 0
     &__card
+      width: 168px
       row-gap: 10px
       img
         width: 75px
         height: 75px
     &__h2
       @include text(500,12px,133%, #000000)
+      margin-top: 0
 
 
 @media (max-width: 394px )

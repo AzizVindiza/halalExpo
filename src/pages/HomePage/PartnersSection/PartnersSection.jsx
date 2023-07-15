@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import Btn from "../../../components/Btn/Btn";
 import './PartnersSection.sass'
 import trade from './trade.svg'
@@ -10,7 +10,13 @@ import sanarip from './sanarip.svg'
 import trans from './trans.svg'
 import viliage from './viliage.svg'
 
+import ordo from "./ordo.svg"
+
+import {CustomContext} from "../../../Context";
+
+
 const PartnersSection = ({title}) => {
+    const {setRequest}=useContext(CustomContext)
     return (
         <section className="partners">
             <h2 className="partners__title">Официальные Партнеры</h2>
@@ -71,11 +77,17 @@ const PartnersSection = ({title}) => {
                         Министерства транспорта <br/>и коммуникаций
                     </h2>
                 </div>
+                <div className="partners__card">
+                    <img className={'partners__img'} src={ordo} alt=""/>
+                    <h2 className="partners__h2">
+                        Культурный Центр «Рух Ордо» им.Ч.Айтматова
+                    </h2>
+                </div>
 
             </div>
-            <a className="speaker__btn partners__btn" href="">
-                <Btn m={"big btn_border"} type="button" text="Стать партнером"/>
-            </a>
+            <div onClick={() => setRequest(true)}  className="speaker__btn partners__btn">
+                <Btn type="button" m={"big btn_border"} text="Стать партнером"/>
+            </div>
 
         </section>
     );

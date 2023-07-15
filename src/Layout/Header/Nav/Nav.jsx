@@ -30,7 +30,12 @@ const Nav = () => {
                 <NavLink onClick={() => setActiveHamburger(false)}  className={'nav__link'} to={'mass'}>{t("header.MEDIA")}</NavLink>
                 <NavLink onClick={() => setActiveHamburger(false)}  className={'nav__link'} to={'meet'}>B2B</NavLink>
                 {/*<NavLink onClick={() => setActiveHamburger(false)}  className={'nav__link'} to={'news'}>{t("header.News")}</NavLink>*/}
+<<<<<<< HEAD
                 <NavLink onClick={() => setActiveHamburger(false)}  className={'nav__link'} to={'question'}>FQA</NavLink>
+=======
+
+
+>>>>>>> 4f3ad6c999f7eaed54eae3398db9066734ec3099
 
                 <NavLink onClick={() => setActiveHamburger(false)}  className={'nav__link'} to={'question'}>FAQ</NavLink>
                 <NavLink onClick={() => setActiveHamburger(false)}  className={'nav__link nav__btn  '} to={''}>
