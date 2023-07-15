@@ -20,7 +20,7 @@ const Layout = () => {
                     {/*<ScrollRestoration/>*/}
             </main>
             {
-                location.pathname !== "/account" ? <Footer/> : ""
+                location.pathname.includes('account') ?  "" : <Footer/>
             }
 
         </>

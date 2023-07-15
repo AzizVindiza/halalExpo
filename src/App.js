@@ -37,14 +37,17 @@ import Header from "./Layout/Header/Header";
 import ProfileSection from "./pages/AccountPage/ProfileSection/ProfileSection";
 
 import TradeZonePage from "./pages/TradeZonePage/TradeZonePage";
+import {useSelector} from "react-redux";
+import store from "./redux/store";
 
 
 
-
- 
 
 
 const router = createBrowserRouter(
+
+
+
     createRoutesFromElements(
         <>
 
@@ -73,18 +76,20 @@ const router = createBrowserRouter(
                 <Route path="account" element={<AccountPage/>}>
                     <Route path="test" element={<UserTicket/>}/>
                 </Route>
-                <Route path={'account'} element={<AccountPage/>}>
-                    <Route path={'profile'} element={<ProfileSection/>}/>
-                    <Route path={'stand'} element={<NotFoundPage/>}/>
-                    <Route path={'tickets'} element={<NotFoundPage/>}/>
-                    <Route path={'notification'} element={<NotFoundPage/>}/>
-                    <Route path={'meet'} element={<NotFoundPage/>}/>
-                    <Route path={'chat'} element={<NotFoundPage/>}/>
-                    <Route path={'sittings'} element={<NotFoundPage/>}/>
-                </Route>
+
+                        <Route path={'account'} element={<AccountPage/>}>
+                            <Route path={'profile'} element={<ProfileSection/>}/>
+                            <Route path={'stand'} element={<NotFoundPage/>}/>
+                            <Route path={'tickets'} element={<NotFoundPage/>}/>
+                            <Route path={'notification'} element={<NotFoundPage/>}/>
+                            <Route path={'meet'} element={<NotFoundPage/>}/>
+                            <Route path={'chat'} element={<NotFoundPage/>}/>
+                            <Route path={'sittings'} element={<NotFoundPage/>}/>
+                        </Route>
 
                 <Route path="test" element={<UserTicket/>}/>
                 <Route path="tradezone" element={<TradeZonePage/>}/>
+
                 <Route path="account" element={<AccountPage/>}/>
 
             </Route>
@@ -99,6 +104,7 @@ const router = createBrowserRouter(
 );
 
 function App() {
+
     return (
         <>
 

@@ -3,33 +3,44 @@ import {useForm} from "react-hook-form";
 import "./LoginForm.sass"
 import Btn from "../Btn/Btn";
 import {CustomContext} from "../../Context";
-import { AiOutlineEyeInvisible,AiOutlineEye} from "react-icons/ai";
+import {AiOutlineEyeInvisible, AiOutlineEye} from "react-icons/ai";
 import {useLoginMutation} from "../../redux/ApiSlice";
 import {fillRegister} from "../../redux/reducers/userSlice";
 import {toast} from "react-toastify";
 import axios from "axios";
+import {useDispatch} from "react-redux";
+import {useNavigate} from "react-router-dom";
 
 
 const LoginForm = () => {
-    const {setLogin,passwordShown, setPasswordShown} = useContext(CustomContext)
+    const {setLogin, passwordShown, setPasswordShown} = useContext(CustomContext)
     //closeLogin and toggle password
 
-
-    const [fillLogin] = useLoginMutation()
+    const navigate = useNavigate() // send to accountPage
+    const [fillLogin, {
+        data: loginData,
+        isSuccess: isLoginSuccess,
+        isError: isLoginError,
+        error: loginError
+    }] = useLoginMutation()
     const {
         register,
         formState: {
             errors
 
-    },
+        },
         handleSubmit,
 
     } = useForm();
 
+    const dispatch = useDispatch()
 
     const onSubmit = (data) => {
         try {
-             fillLogin(data)
+            fillLogin(data)
+                .unwrap()
+                .then((payload) =>
+                    dispatch(fillRegister(payload)))
                 .catch(() => {
                     console.log(data)
                     toast.error('Ошибка в сервере!', {
@@ -43,9 +54,11 @@ const LoginForm = () => {
                         theme: "colored",
                     });
                 })
+            setLogin(false)
+
 
         } catch (error) {
-            toast.error('Ошибка в сервере!', {
+            toast.error('Неправильный вход!', {
                 position: "top-center",
                 autoClose: 5000,
                 hideProgressBar: false,
@@ -65,18 +78,20 @@ const LoginForm = () => {
             <div className="login__wrapper">
                 <div onClick={() => setLogin(false)} className="login__close">
                     <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8.16699 8.16675L19.8337 19.8334M8.16699 19.8334L19.8337 8.16675" stroke="black" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M8.16699 8.16675L19.8337 19.8334M8.16699 19.8334L19.8337 8.16675" stroke="black"
+                              stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </div>
-                <h2 className="login__h2">Вход <span className="registration__error"> {errors.email && errors.email.message}</span></h2>
+                <h2 className="login__h2">Вход <span
+                    className="registration__error"> {errors.email && errors.email.message}</span></h2>
                 <form className={'login__form'} onSubmit={handleSubmit(onSubmit)}>
                     <label className="login__label">
                         <span>Электронная почта   <span className={'login__star'}>*</span></span>
 
-                        <input type={''}
+                        <input type={'email'}
                                {...register("email", {
                                    required: {
-                                       message : "Введите почту",
+                                       message: "Введите почту",
                                        value: true
                                    }
                                })}
@@ -85,17 +100,18 @@ const LoginForm = () => {
                     </label>
                     <label className="login__password">
 
-                       <span>Ведите пороль <span className="registration__error"> {errors.password && errors.password.message}</span></span>
+                        <span>Ведите пороль <span
+                            className="registration__error"> {errors.password && errors.password.message}</span></span>
                         <input type={`${passwordShown ? "text" : "password"}`}
-                               {...register("password",{
+                               {...register("password", {
                                    required: {
-                                       message : "Введите пароль",
+                                       message: "Введите пароль",
                                        value: true
                                    }
-                               } )}/>
-                        <span  onClick={() => setPasswordShown(!passwordShown)} className="login__eye">
+                               })}/>
+                        <span onClick={() => setPasswordShown(!passwordShown)} className="login__eye">
                             {
-                                passwordShown ?   <AiOutlineEye/> :  <AiOutlineEyeInvisible/>
+                                passwordShown ? <AiOutlineEye/> : <AiOutlineEyeInvisible/>
                             }
 
                         </span>
