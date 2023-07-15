@@ -74,7 +74,6 @@ const router = createBrowserRouter(
                     <Route path="test" element={<UserTicket/>}/>
                 </Route>
                 <Route path={'account'} element={<AccountPage/>}>
-
                     <Route path={'profile'} element={<ProfileSection/>}/>
                     <Route path={'stand'} element={<NotFoundPage/>}/>
                     <Route path={'tickets'} element={<NotFoundPage/>}/>
