@@ -31,7 +31,7 @@ const Footer = () => {
                                 </svg>
 
                             </a>
-                            <a href={'#'} className="footer__socials">
+                            <a href={'https://www.facebook.com/Hit.expo'} className="footer__socials">
                                 <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="18" cy="18" r="18" fill="#40A865"/>
                                     <g clipPath="url(#clip0_775_368)">
@@ -97,7 +97,7 @@ const Footer = () => {
                                 </svg>
 
                             </a>
-                            <a href={'#'} className="footer__socials">
+                            <a href={'https://api.whatsapp.com/send/?phone=996502022220&text&type=phone_number&app_absent=0'} className="footer__socials">
                                 <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g clipPath="url(#clip0_775_396)">
                                         <circle cx="18" cy="18" r="16" fill="white"/>
