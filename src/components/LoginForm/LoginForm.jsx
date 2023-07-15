@@ -29,9 +29,7 @@ const LoginForm = () => {
 
     const onSubmit = (data) => {
         try {
-            axios.post('https://shark-app-65hkc.ondigitalocean.app/auth/token/login/', data).then((res) => {
-                    console.log(res)
-                })
+             fillLogin(data)
                 .catch(() => {
                     console.log(data)
                     toast.error('Ошибка в сервере!', {

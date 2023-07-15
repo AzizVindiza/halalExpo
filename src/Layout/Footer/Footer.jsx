@@ -3,11 +3,9 @@ import './Footer.sass'
 
 const Footer = () => {
 
-
     const handleScrollToTop = () => {
         window.scrollTo({top: 0 , behavior: "smooth"})
     }
-
 
     return (
         <footer className={'footer'}>
