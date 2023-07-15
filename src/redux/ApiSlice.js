@@ -20,10 +20,16 @@ export const apiSlice = createApi({
                 method : "POST",
                 body
             })
+        }),
+        addFeedback: builder.mutation({
+            query :(body) => ({
+                url : "feedback/",
+                method : "POST",
+                body
+            })
         })
-
     })
 
 })
 
-export const {useAddPartnerMutation,useLoginMutation} = apiSlice
+export const {useAddPartnerMutation,useLoginMutation,useAddFeedbackMutation} = apiSlice
