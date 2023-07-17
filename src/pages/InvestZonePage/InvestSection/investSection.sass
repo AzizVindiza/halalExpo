@@ -1,0 +1,80 @@
+@import "src/sass/base/mixins"
+
+
+.invest
+  margin-top: 50px
+  &__h2
+    @include text(800,45px,133%,#000)
+    text-align: center
+  &__row
+    margin-top: 50px
+    display: flex
+    justify-content: space-around
+
+
+  &__column
+    margin-top: 20px
+    padding: 45px 27px
+    max-width: 423px
+    max-height: 327px
+    background: linear-gradient(#D0DCFE -50% , #F2F7FF 100%)
+    display: flex
+    flex-direction: column
+    row-gap: 25px
+    border-radius: 20px
+  &__h3
+    @include text(800,30px,133%,#03C)
+    text-align: center
+  &__row2
+    align-items: center
+
+    display: flex
+    column-gap: 20px
+
+  &__span
+    @include text(600,22px,133%,#2E2E2E)
+
+@media (max-width: 1025px)
+  .invest
+    &__h2
+      @include text(800,40px,133%,#000)
+    &__h3
+      @include text(800,26px,133%,#03C)
+    &__column
+      padding: 40px 24px
+    &__span
+      @include text(600,19px,133%,#2E2E2E)
+
+
+    &__img
+      width: 452px
+      height: 452px
+@media (max-width: 770px)
+  .invest
+    margin-top: 45px
+    &__row
+      display: flex
+      flex-direction: column
+      align-items: center
+    &__box
+      margin-top: 80px
+    &__h3
+      @include text(800,32px,133%,#03C)
+    &__span
+      @include text(600,23px,133%,#2E2E2E)
+    &__column
+      max-width: 456px
+      max-height: 352px
+
+@media (max-width: 460px)
+  .invest
+    margin-top: 35px
+    &__img
+      width: 370px
+      height: 370px
+    &__column
+      padding: 35px 25px
+    &__box
+      margin-top: 50px
+    &__span
+      @include text(600,18px,133%,#2E2E2E)

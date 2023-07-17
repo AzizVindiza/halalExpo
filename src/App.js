@@ -25,10 +25,13 @@ import Hotel from "./components/Hotel/Hotel";
 import LocationPage from "./pages/LocationPage/LocationPage";
 import MassPage from "./pages/MassPage/MassPage";
 import TradePage from "./pages/TradePage/TradePage";
-import InvestPage from "./pages/InvestPage/InvestPage";
+
 import Loader from "./components/Registration/Loading/Loader";
 import UserTicket from "./pages/UserTicket/UserTicket";
 import AccountPage from "./pages/AccountPage/AccountPage";
+
+import InvestZonePage from "./pages/InvestZonePage/InvestZonePage";
+
 import Aside from "./pages/AccountPage/Aside/Aside";
 import React from "react";
 import Profile from "./pages/AccountPage/ProfileSection/Profile/Profile";
@@ -39,6 +42,7 @@ import ProfileSection from "./pages/AccountPage/ProfileSection/ProfileSection";
 import TradeZonePage from "./pages/TradeZonePage/TradeZonePage";
 import {useSelector} from "react-redux";
 import store from "./redux/store";
+
 
 
 
@@ -70,7 +74,7 @@ const router = createBrowserRouter(
                 <Route path="mass" element={<MassPage/>}/>
                 <Route path="location" element={<LocationPage/>}/>
                 <Route path="trade" element={<TradePage/>}/>
-                <Route path="invest" element={<InvestPage/>}/>
+                <Route path="invest" element={<InvestZonePage/>}/>
                 <Route path="account" element={<AccountPage/>}>
                     <Route path="test" element={<UserTicket/>}/>
                 </Route>
