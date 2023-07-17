@@ -42,6 +42,7 @@ import ProfileSection from "./pages/AccountPage/ProfileSection/ProfileSection";
 import TradeZonePage from "./pages/TradeZonePage/TradeZonePage";
 import {useSelector} from "react-redux";
 import store from "./redux/store";
+import FoodZone from "./pages/FoodZonePage/FoodZone";
 
 
 
@@ -91,6 +92,7 @@ const router = createBrowserRouter(
 
                 <Route path="test" element={<UserTicket/>}/>
                 <Route path="tradezone" element={<TradeZonePage/>}/>
+                <Route path="foodZone" element={<FoodZone/>}/>
 
             </Route>
 

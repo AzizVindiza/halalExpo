@@ -1,0 +1,45 @@
+@import "src/sass/base/mixins"
+.foodCard
+  &__wrapper
+    display: flex
+    justify-content: space-between
+    padding: 134px 0 45px 0
+  &__block
+    background: url("./fon.svg")
+    max-width: 580px
+    height: 410px
+    padding: 25px 24px 24px 20px
+
+    border-radius: 20px
+  &__h2
+    @include text(700,30px,133%,#000000)
+  &__card
+    display: flex
+    justify-content: space-between
+
+    margin-top: 26px
+  &__span
+    @include text(500,15px,133%,#000)
+    max-width: 252px
+    padding: 13px 12px
+    border-radius: 5px
+    border: 1px solid #FFF
+  &__h3
+    @include text(700,18px,133%,#000)
+  &__text
+    display: flex
+    justify-content: space-between
+    text-align: center
+    align-items: center
+    margin-top: 20px
+  &__p
+    @include text(700,18px,133%,#fff)
+    padding: 8px 26px
+    border-radius: 4px
+    background: var(--100, #00862D)
+  &__txt
+    @include text(600,20px,133%,#FF2E13)
+    text-align: center
+  &__btn
+    text-align: center
+    padding: 45px 0 126px 0
