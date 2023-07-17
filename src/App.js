@@ -46,8 +46,6 @@ import store from "./redux/store";
 
 const router = createBrowserRouter(
 
-
-
     createRoutesFromElements(
         <>
 
@@ -90,8 +88,6 @@ const router = createBrowserRouter(
                 <Route path="test" element={<UserTicket/>}/>
                 <Route path="tradezone" element={<TradeZonePage/>}/>
 
-                <Route path="account" element={<AccountPage/>}/>
-
             </Route>
 
             <Route path="loader" element={<Loader/>}/>
@@ -107,9 +103,7 @@ function App() {
 
     return (
         <>
-
             <RouterProvider router={router}/>
-
         </>
     );
 }

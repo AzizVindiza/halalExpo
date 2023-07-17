@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect} from 'react';
 import {useForm} from "react-hook-form";
 import "./LoginForm.sass"
 import Btn from "../Btn/Btn";
@@ -39,8 +39,21 @@ const LoginForm = () => {
         try {
             fillLogin(data)
                 .unwrap()
-                .then((payload) =>
-                    dispatch(fillRegister(payload)))
+                .then((payload) => {
+                    dispatch(fillRegister(payload))
+                    navigate('account')
+                    toast.success('Вы вошли в личный кабинет', {
+                        position: "top-center",
+                        autoClose: 5000,
+                        hideProgressBar: false,
+                        closeOnClick: false,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "colored",
+                    });
+                    }
+                )
                 .catch(() => {
                     console.log(data)
                     toast.error('Ошибка в сервере!', {
@@ -73,13 +86,15 @@ const LoginForm = () => {
 
     }
 
+
+
     return (
         <div className="login">
             <div className="login__wrapper">
                 <div onClick={() => setLogin(false)} className="login__close">
                     <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M8.16699 8.16675L19.8337 19.8334M8.16699 19.8334L19.8337 8.16675" stroke="black"
-                              stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              strokeOpacity="0.5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                 </div>
                 <h2 className="login__h2">Вход <span
