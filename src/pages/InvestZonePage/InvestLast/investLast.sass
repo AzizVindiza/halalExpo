@@ -1,0 +1,50 @@
+@import "src/sass/base/mixins"
+
+
+
+.investLast
+  margin: 150px 0 50px 0
+  &__wrapper
+    display: flex
+    flex-wrap: wrap
+    row-gap: 40px
+  &__img
+    width: 168px
+    height: 168px
+    img
+      width: inherit
+      height: inherit
+  &__row
+    display: flex
+    width: 50%
+  &__h2
+    @include text(700,24px,133%,#000)
+  &__p
+    margin-top: 10px
+    @include text(500,18px,133%,#000)
+
+@media (max-width: 1025px)
+  .investLast
+    margin-top: 100px
+    &__img
+      width: 140px
+      height: 140px
+    &__h2
+      font-size: 22px
+    &__p
+      font-size: 16px
+
+@media (max-width: 770px)
+  .investLast
+    margin-top: 50px
+    &__row
+      width: 100%
+
+@media (max-width: 482px)
+  .investLast
+    &__img
+      margin: 0 auto
+    &__row
+      text-align: center
+      display: flex
+      flex-direction: column
