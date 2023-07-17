@@ -22,7 +22,7 @@ const ContactsForm = () => {
             addFeedback(data)
                 .unwrap()
                 .then(() => {
-                    toast.success('Заявка отпралена!', {
+                    toast.success('Заявка отпралена!Мы свяжемся с Вами в близжайшее время!', {
                         position: "top-center",
                         autoClose: 5000,
                         hideProgressBar: false,
