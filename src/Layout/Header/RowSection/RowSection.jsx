@@ -43,6 +43,11 @@ const RowSection = () => {
             <div className="container rowSection__container">
                 <h2 className="rowSection__h2">{t("header.text")}</h2>
                 <div className="rowSection__wrapper">
+
+                    <div className="rowSection__change">
+                        <button onClick={() => changeLanguages('ru')} className={`rowSection__lang ${i18n.language === "ru" ? 'rowSection__lang_active' : "" }`}>RU</button>
+                        <button onClick={() => changeLanguages('en')} className={`rowSection__lang ${i18n.language === "en" ?  'rowSection__lang_active' : ""}`}>EN</button>
+                    </div>
                     {
                         Object.keys(user).length === 0 ?
                             <div className="rowSection__user">
@@ -64,18 +69,18 @@ const RowSection = () => {
 
                             <div className="rowSection__profile">
                                 <div className="rowSection__notice">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M13.4222 8.00886C13.7339 8.29105 13.8333 8.59485 13.8333 8.82857C13.8333 10.6089 14.0559 12.1644 14.3967 13.5H9.60332C9.9441 12.1644 10.1667 10.6089 10.1667 8.82857C10.1667 8.59486 10.2661 8.29105 10.5778 8.00886C10.901 7.71623 11.4077 7.5 12 7.5C12.5923 7.5 13.099 7.71623 13.4222 8.00886Z" stroke="#2948A7" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round"/>
-                                        <path d="M14 19C13.7968 19.3042 13.505 19.5566 13.154 19.7321C12.803 19.9076 12.4051 20 12 20C11.5949 20 11.197 19.9076 10.846 19.7321C10.495 19.5566 10.2032 19.3042 10 19" stroke="#2948A7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                        <circle cx="17" cy="7" r="3" fill="#FF2E13"/>
+                                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.42219 4.00886C9.73387 4.29105 9.83333 4.59485 9.83333 4.82857C9.83333 6.6089 10.0559 8.16437 10.3967 9.5H5.60332C5.9441 8.16437 6.16667 6.6089 6.16667 4.82857C6.16667 4.59486 6.26612 4.29105 6.57781 4.00886C6.90104 3.71623 7.40766 3.5 8 3.5C8.59234 3.5 9.09897 3.71623 9.42219 4.00886Z" stroke="#2948A7" strokeWidth="7" strokeLinecap="round" stroke-linejoin="round"/>
+                                        <path d="M10 15C9.79675 15.3042 9.50502 15.5566 9.15402 15.7321C8.80302 15.9076 8.40506 16 8 16C7.59494 16 7.19698 15.9076 6.84598 15.7321C6.49498 15.5566 6.20325 15.3042 6 15" stroke="#2948A7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                                     </svg>
+
                                 </div>
                                 <Link to={'account/profile'} className="rowSection__account">
                                     <div className="rowSection__logo">
                                         <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M6.12109 16.625C6.12109 15.1753 8.07849 14 10.4931 14C12.9076 14 14.865 15.1753 14.865 16.625" stroke="#14181F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                                            <path d="M10.4923 11.375C11.9411 11.375 13.1155 10.1997 13.1155 8.75C13.1155 7.30025 11.9411 6.125 10.4923 6.125C9.04358 6.125 7.86914 7.30025 7.86914 8.75C7.86914 10.1997 9.04358 11.375 10.4923 11.375Z" stroke="#14181F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <path d="M10.4926 18.375C14.8388 18.375 18.3621 14.8492 18.3621 10.5C18.3621 6.15076 14.8388 2.625 10.4926 2.625C6.14636 2.625 2.62305 6.15076 2.62305 10.5C2.62305 14.8492 6.14636 18.375 10.4926 18.375Z" stroke="#14181F" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M10.4923 11.375C11.9411 11.375 13.1155 10.1997 13.1155 8.75C13.1155 7.30025 11.9411 6.125 10.4923 6.125C9.04358 6.125 7.86914 7.30025 7.86914 8.75C7.86914 10.1997 9.04358 11.375 10.4923 11.375Z" stroke="#14181F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                            <path d="M10.4926 18.375C14.8388 18.375 18.3621 14.8492 18.3621 10.5C18.3621 6.15076 14.8388 2.625 10.4926 2.625C6.14636 2.625 2.62305 6.15076 2.62305 10.5C2.62305 14.8492 6.14636 18.375 10.4926 18.375Z" stroke="#14181F" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" stroke-linejoin="round"/>
                                         </svg>
                                     </div>
                                     <h5 className="rowSection__h5">Профиль</h5>
@@ -84,10 +89,6 @@ const RowSection = () => {
 
                     }
 
-                    <div className="rowSection__change">
-                        <button onClick={() => changeLanguages('ru')} className={`rowSection__lang ${i18n.language === "ru" ? 'rowSection__lang_active' : "" }`}>RU</button>
-                        <button onClick={() => changeLanguages('en')} className={`rowSection__lang ${i18n.language === "en" ?  'rowSection__lang_active' : ""}`}>EN</button>
-                    </div>
 
                 </div>
 
