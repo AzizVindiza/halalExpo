@@ -42,6 +42,8 @@ import ProfileSection from "./pages/AccountPage/ProfileSection/ProfileSection";
 import TradeZonePage from "./pages/TradeZonePage/TradeZonePage";
 import {useSelector} from "react-redux";
 import store from "./redux/store";
+import Participant from "./pages/AccountPage/Participant/Participant";
+import Ticket from "./pages/AccountPage/Ticket/Ticket";
 
 
 
@@ -81,9 +83,10 @@ const router = createBrowserRouter(
 
                         <Route path={'account'} element={<AccountPage/>}>
                             <Route path={'profile'} element={<ProfileSection/>}/>
-                            <Route path={'stand'} element={<NotFoundPage/>}/>
+                            <Route path={'stand'} element={<Ticket/>}/>
+                            <Route path={'reserve'} element={<Participant/>}/>
                             <Route path={'tickets'} element={<NotFoundPage/>}/>
-                            <Route path={'notification'} element={<NotFoundPage/>}/>
+                            <Route path={'document'} element={<NotFoundPage/>}/>
                             <Route path={'meet'} element={<NotFoundPage/>}/>
                             <Route path={'chat'} element={<NotFoundPage/>}/>
                             <Route path={'sittings'} element={<NotFoundPage/>}/>

@@ -11,7 +11,12 @@ import {toast} from "react-toastify";
 const AccountPage = () => {
 
     const {user} = useSelector((store) => store.user)
-
+   const dispatch = useDispatch()
+    const navigate = useNavigate()
+    const clickLogOut = () => {
+        dispatch(logOut())
+        navigate('/')
+    }
 
     // useEffect(() => {
     //     if (Object.keys(user).length === 0) {
@@ -26,10 +31,9 @@ const AccountPage = () => {
                         <div className="account__container">
                             <aside className="account__nav">
                                 <Aside/>
-
+                                <button onClick={clickLogOut}>Выйти</button>
                             </aside>
                             <div className="account__wrapper">
-                                {user.name}
                                 <Outlet/>
                             </div>
                         </div>
