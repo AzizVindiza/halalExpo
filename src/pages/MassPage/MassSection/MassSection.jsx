@@ -1,10 +1,14 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import "./MassSection.sass"
 
 import camera from "./camera2.png"
+import Btn from "../../../components/Btn/Btn";
+import {CustomContext} from "../../../Context";
 
 
 const MassSection = ({item}) => {
+    const {setRequest}=useContext(CustomContext)
+
     return (
         <div className="massSection">
             <h2 className="massSection__h2">{item.title}</h2>
@@ -13,6 +17,7 @@ const MassSection = ({item}) => {
             </div>
 
             <div className="massSection__container container">
+
                 <p className={"massSection__p"}>Спасибо за ваш интерес к Halal Investment and Trade Expo 2023. Мы готовы предоставить вам возможность аккредитации на наше мероприятие, чтобы вы могли освещать его и сообщать о ключевых событиях и развитии халяльной индустрии. Пожалуйста, ознакомьтесь с правилами аккредитации и соблюдайте следующие требования:</p>
 
                 <div className="massSection__wrapper">
@@ -32,7 +37,11 @@ const MassSection = ({item}) => {
 
                         Мы ценим ваше участие и поддержку в освещении Halal Investment and Trade Expo 2023. Просим вас соблюдать данные правила и быть аккуратными при осуществлении своей профессиональной деятельности во время мероприятия.
                     </p>
+                    <div onClick={() => setRequest(true)}  className="speaker__btn partners__btn">
+                        <Btn m={"big btn_border"} type="button" text="Стать партнером"/>
+                    </div>
                 </div>
+
             </div>
         </div>
 

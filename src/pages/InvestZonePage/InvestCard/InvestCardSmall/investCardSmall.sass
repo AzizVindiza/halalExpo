@@ -31,7 +31,7 @@
     align-items: center
   &__h2
     text-transform: uppercase
-    @include text(700,36px,133%,#000)
+    @include text(700,32px,133%,#000)
   &__span
     @include text(700,18px,133%,#fff)
     padding: 10px 38px
@@ -60,9 +60,9 @@
 @media (max-width: 1025px)
   .investCardSmall
     &__wrapper
-      width: 320px
+      width: 366px
     &__h2
-      @include text(700,33px,133%,#000)
+      @include text(700,30px,133%,#000)
     &__span
       @include text(700,16px,133%,#fff)
       padding: 9px 30px
@@ -71,16 +71,36 @@
     &__li
       @include text(700,14px,133%,#FFF)
     &__row
+      max-width: 322px
       top: 54px
     &__img
       height: 300px
       width: 80%
       justify-content: center
-    &__row
-      max-width: 280px
     &__box2
       height: 300px
       padding: 68px 45px 106px 25px
+
+@media (max-width: 770px)
+  .investCardSmall
+    &__h2
+      @include text(700,26px,133%,#000)
+    &__span
+      @include text(700,14px,133%,#fff)
+    &__box2
+      height: 250px
+    &__wrapper
+      width: 320px
+    &__row
+      max-width: 280px
+    &__span2
+      @include text(700,12px,133%,#fff)
+    &__span3
+      @include text(700,12px,133%,#fff)
+    &__li
+      @include text(700,12px,133%,#fff)
+
+
 
 
 

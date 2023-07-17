@@ -1,0 +1,74 @@
+@import "src/sass/base/mixins"
+
+
+.investBenefits
+  margin-bottom: 140px
+  &__h2
+    padding: 95px 0 45px 0
+    text-align: center
+    @include text(700,40px,133%,#000)
+  &__row
+    display: flex
+
+  &__svg
+    width: 160px
+    height: 160px
+    img
+      width: inherit
+      height: inherit
+  &__h3
+    @include text(600,32px,133%,#000)
+  &__p
+    margin-top: 15px
+    @include text(500,20px,133%,#000)
+  &__wrapper
+    display: flex
+    flex-direction: column
+    row-gap: 60px
+
+@media (max-width: 1202px)
+  .investBenefits
+    margin-bottom: 100px
+    &__svg
+      width: 146px
+    &__h3
+      @include text(600,30px,133%,#000)
+    &__p
+      @include text(500,18px,133%,#000)
+@media (max-width: 1025px)
+  .investBenefits
+    margin-bottom: 50px
+    &__h2
+      font-size: 38px
+    &__h3
+      @include text(600,28px,133%,#000)
+    &__p
+      @include text(500,16px,133%,#000)
+@media (max-width: 770px)
+  .investBenefits
+    &__h2
+      font-size: 30px
+    &__svg
+      width: 160px
+    &__h3
+      @include text(600,22px,133%,#000)
+    &__p
+      @include text(500,16px,133%,#000)
+@media (max-width: 482px)
+  .investBenefits
+    &__row
+      display: flex
+      flex-direction: column
+      text-align: center
+    &__svg
+      margin: 0 auto
+      width: 110px
+      height: 110px
+    &__h3
+      @include text(600,16px,133%,#000)
+    &__p
+      @include text(500,12px,133%,#000)
+
+
+
+
