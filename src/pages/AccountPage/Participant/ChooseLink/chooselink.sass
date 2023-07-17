@@ -1,0 +1,19 @@
+@import "src/sass/base/mixins"
+
+.chooseLink
+  padding-top: 92px
+  display: flex
+  justify-content: center
+  flex-direction: column
+  align-items: center
+  &__img
+    width: 90px
+    height: 90px
+    margin-bottom: 25px
+  &__p
+    @include text(500,22px,133%,#14181F)
+    text-align: center
+  &__link
+    @include text(500,22px,133%,#2489FF)
+    &:hover
+      text-decoration: underline

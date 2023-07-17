@@ -41,7 +41,7 @@ const LoginForm = () => {
                 .unwrap()
                 .then((payload) => {
                     dispatch(fillRegister(payload))
-                    navigate('account')
+                    navigate('account/profile')
                     toast.success('Вы вошли в личный кабинет', {
                         position: "top-center",
                         autoClose: 5000,
