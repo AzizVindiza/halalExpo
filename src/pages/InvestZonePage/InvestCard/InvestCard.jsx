@@ -1,14 +1,16 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import "./investCard.sass"
 import InvestCardSmall from "./InvestCardSmall/InvestCardSmall";
 import promo from "../img/promo.png"
 import comfort from "../img/comfort.png"
 import vip from "../img/vip.png"
 import premium from "../img/premium.png"
+import {CustomContext} from "../../../Context";
 
 
 
 const InvestCard = () => {
+    const {setRequest, request} = useContext(CustomContext)
     return (
         <div className={" investCard investCard__container container"}>
             <InvestCardSmall item={{img:promo,h2:"PROMO",price:"$900",num:"15",li:["Промо-стойка\n","Стул\n","B2B-встречах"]}}/>
@@ -19,7 +21,7 @@ const InvestCard = () => {
                 <p className="investCard__p">
                     Стоимость участия с учетом раннего бронивания актуальна до 20 июля
                 </p>
-                <button className="investCard__btn">
+                <button onClick={() => setRequest(true)} className="investCard__btn">
                     Перейти к пакетам
                 </button>
             </div>
