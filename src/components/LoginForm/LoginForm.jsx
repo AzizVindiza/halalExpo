@@ -56,7 +56,7 @@ const LoginForm = () => {
                 )
                 .catch(() => {
                     console.log(data)
-                    toast.error('Ошибка в сервере!', {
+                    toast.error('Вы ввели некорректные данные', {
                         position: "top-center",
                         autoClose: 5000,
                         hideProgressBar: false,
@@ -71,7 +71,7 @@ const LoginForm = () => {
 
 
         } catch (error) {
-            toast.error('Неправильный вход!', {
+            toast.error('Вы ввели некорректные данные', {
                 position: "top-center",
                 autoClose: 5000,
                 hideProgressBar: false,
