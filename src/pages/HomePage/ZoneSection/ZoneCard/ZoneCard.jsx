@@ -40,11 +40,11 @@ const ZoneCard = () => {
         <section className={"zoneCard"}>
             <img className={"zoneCard__img"} src={bg} alt=""/>
             <div className="zoneCard__container container">
-                <ZoneCardSmall item={t("zoneSection.tradeZone",{ returnObjects: true })} img={trade} />
-                <ZoneCard2 item={t("zoneSection.investZone",{ returnObjects: true })} img={invest}/>
-                <ZoneCardSmall item={t("zoneSection.fashionZone",{ returnObjects: true })} img={fashion} />
-                <ZoneCard2 item={t("zoneSection.foodZone",{ returnObjects: true })} img={food}/>
-                <ZoneCardSmall item={t("zoneSection.nationalZone",{ returnObjects: true })} img={fashion} />
+                <ZoneCardSmall link={"tradezone"} item={t("zoneSection.tradeZone",{ returnObjects: true })} img={trade} />
+                <ZoneCard2 link={"invest"}  item={t("zoneSection.investZone",{ returnObjects: true })} img={invest}/>
+                <ZoneCardSmall link={"fashionzone"} item={t("zoneSection.fashionZone",{ returnObjects: true })} img={fashion} />
+                <ZoneCard2 link={"FoodZone"} item={t("zoneSection.foodZone",{ returnObjects: true })} img={food}/>
+                <ZoneCardSmall link={"#"} item={t("zoneSection.nationalZone",{ returnObjects: true })} img={fashion} />
             </div>
             <Swiper modules={[Navigation]}
                     navigation={

@@ -17,7 +17,7 @@ const Layout = () => {
                     <Outlet/>
                     {/*<Advertising/>*/}
                     {/*<div className="smooth-scroll" style={{padding: '100px'}}></div>*/}
-                    {/*<ScrollRestoration/>*/}
+                    <ScrollRestoration/>
             </main>
             {
                 location.pathname.includes('account') ?  "" : <Footer/>

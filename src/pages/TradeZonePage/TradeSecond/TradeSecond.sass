@@ -1,0 +1,37 @@
+@import "src/sass/base/mixins"
+.trade-second
+  &__container
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    padding: 120px 0
+  &__h2
+    @include text(800,40px,133%,#00862D)
+    text-align: center
+    margin-bottom: 50px
+  &__p
+    @include text(500,25px,133%,#2E2E2E)
+    width: 1105px
+    text-align: center
+
+  &__img
+    width: 1050px
+  &__txt
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    row-gap: 32px
+  &__h3
+    @include text(800,30px,133%,#03C)
+  &__h4
+    @include text(600,20px,133%,#03C)
+    text-transform: uppercase
+
+@media (max-width: 1201px)
+@media (max-width: 1025px)
+@media (max-width: 770px)
+@media (max-width: 482px)
+@media (max-width: 394px)
+
