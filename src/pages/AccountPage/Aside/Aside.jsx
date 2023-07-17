@@ -7,8 +7,13 @@ const props = [
         path : 'profile'
     },
     {
-        title: 'Забронировать стенд',
+        title: "Управление участием",
         svg: "second.svg",
+        path: "reserve",
+    },
+    {
+        title: 'Забронировать билет',
+        svg: "pen.svg",
         path : 'stand'
     },
     {
@@ -17,9 +22,9 @@ const props = [
         path : 'tickets'
     },
     {
-        title: 'Уведомления',
-        svg: "Group 151695.svg",
-        path : 'notification'
+        title: 'Документы',
+        svg: "document.svg",
+        path : 'document'
     },
     {
         title: 'B2B встречи',

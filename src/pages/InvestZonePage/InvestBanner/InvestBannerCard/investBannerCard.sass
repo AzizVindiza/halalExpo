@@ -1,0 +1,84 @@
+@import "src/sass/base/mixins"
+
+
+.investBannerCard
+  width: 100%
+  max-width: 1024px
+  height: 395px
+  position: relative
+  &__img
+    position: absolute
+    z-index: -1
+  .img2
+    right: 0
+  .img3
+    left: 0
+    bottom: 0
+  &__img12, &__img22, &__img32, &__img121,&__img221,&__img321
+    display: none
+
+  &__h2
+    padding-top: 20px
+    text-align: center
+    @include text(800,40px,133%,#082476)
+  &__p
+    @include text(600,30px,133%,#3C3C3C)
+    white-space: pre-line
+    text-align: center
+    margin: 0 auto
+    width: 80%
+@media (max-height: 1201px)
+  .investBannerCard
+
+    max-width: 1064px
+    &__h2
+      font-size: 38px
+    &__p
+      font-size: 29px
+
+@media (max-width: 1025px)
+  .investBannerCard
+    max-width: 920px
+    height: 387px
+    &__h2
+      font-size: 36px
+    &__p
+      font-size: 26px
+@media (max-width: 840px) //770px
+  .investBannerCard
+    max-width: 670px
+    height: 387px
+    &__h2
+      font-size: 32px
+    &__p
+      font-size: 22px
+    &__img11, &__img21, &__img31
+      display: none
+    &__img12, &__img22, &__img32
+      display: flex
+
+@media (max-width: 607px) //482px
+  .investBannerCard
+    max-width: 430px
+    height: 248px
+    &__h2
+      font-size: 20px
+    &__p
+      font-size: 14px
+    &__img12, &__img22, &__img32
+      display: none
+    &__img121,&__img221,&__img321
+      display: flex
+
+@media (max-width: 394px)
+  .investBannerCard
+    &__h2
+      font-size: 18px
+    &__p
+      font-size: 14px
+
+
+
+
+
+

@@ -26,9 +26,11 @@ const InvestCardSmall = ({item}) => {
                     <span className="investCardSmall__span2">Количество мест: {item.num}</span>
                     <span className="investCardSmall__span3">Условия участия:</span>
                     <ul className="investCardSmall__ul">
-                        <li className="investCardSmall__li">
-                            {item.li}
-                        </li>
+                        {item.li.map((item,i)=>(
+                            <li className={"investCardSmall__li"} key={i}>{item}</li>
+                            )
+
+                        )}
 
                     </ul>
 

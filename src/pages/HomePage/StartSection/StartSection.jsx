@@ -23,7 +23,7 @@ const StartSection = () => {
                     </div>
 
                     <div className="start__content">
-                        <div className="start__block">
+                        <Link to={"tradezone"} className="start__block">
                             <div className="start__svg">
                                 <img src={svg} alt="" className="start__img"/>
                             </div>
@@ -32,8 +32,8 @@ const StartSection = () => {
                                     Trade Zone
                                 </div>
                             </h3>
-                        </div>
-                        <div className="start__block">
+                        </Link>
+                        <Link to={"invest"} className="start__block">
                             <div className="start__svg">
                                 <img src={svg4} alt="" className="start__img"/>
                             </div>
@@ -42,19 +42,19 @@ const StartSection = () => {
                                     Invest Zone
                                 </div>
                             </h3>
-                        </div>
-                        <div className="start__block">
+                        </Link>
+                        <Link to={"FoodZone"} className="start__block">
                             <div className="start__svg">
                                 <img src={svg3} alt="" className="start__img"/>
                             </div>
                             <h3 className="start__h3">Food Zone</h3>
-                        </div>
-                        <div className="start__block">
+                        </Link>
+                        <Link to={"fashionzone"} className="start__block">
                             <div className="start__svg">
                                 <img src={svg2} alt="" className="start__img"/>
                             </div>
                             <h3 className="start__h3">Fashion Zone</h3>
-                        </div>
+                        </Link>
                         <div className="start__block">
                             <div className="start__svg">
                                 <img src={svg5} alt="" className="start__img"/>

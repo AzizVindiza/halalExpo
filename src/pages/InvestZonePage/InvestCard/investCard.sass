@@ -1,5 +1,27 @@
+@import "src/sass/base/mixins"
+
+
 .investCard
   &__container
     display: flex
     flex-wrap: wrap
     justify-content: space-around
+  &__p
+    @include text(600,20px,133%,#FF2E13)
+    padding: 40px 0
+    text-align: center
+  &__box
+    display: flex
+    flex-direction: column
+  &__btn
+    border-radius: 4px
+    background: #03C
+    @include text(600,20px,133%,#FFF)
+    padding: 25px 50px
+    margin: 0 auto
+    width: fit-content
+@media (max-width: 770px)
+  .investCard
+    &__p
+      @include text(600,18px,133%,#FF2E13)
+

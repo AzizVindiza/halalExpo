@@ -1,0 +1,19 @@
+@import "src/sass/base/mixins"
+.certification
+  padding: 31px 11px 31px 31px
+  border-radius: 4px
+  border: 1px solid rgba(0, 0, 0, 0.20)
+  margin-top: 33px
+  &__wrapper
+    display: flex
+  &__h2
+    @include text(600,15px,133%,#237EE8)
+    margin-bottom: 25px
+  &__h3
+    @include text(500,15px,133%,rgba(0, 0, 0, 0.60))
+    margin-bottom: 25px
+  &__left , &__right
+    width: 50%
+  &__inner
+    justify-content: space-between
+    display: flex
