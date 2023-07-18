@@ -44,7 +44,9 @@ const ZoneCard = () => {
                 <ZoneCard2 link={"invest"}  item={t("zoneSection.investZone",{ returnObjects: true })} img={invest}/>
                 <ZoneCardSmall link={"fashionzone"} item={t("zoneSection.fashionZone",{ returnObjects: true })} img={fashion} />
                 <ZoneCard2 link={"FoodZone"} item={t("zoneSection.foodZone",{ returnObjects: true })} img={food}/>
-                <ZoneCardSmall link={"#"} item={t("zoneSection.nationalZone",{ returnObjects: true })} img={fashion} />
+                <div id="national">
+                    <ZoneCardSmall link={"#"} item={t("zoneSection.nationalZone",{ returnObjects: true })} img={fashion} />
+                </div>
             </div>
             <Swiper modules={[Navigation]}
                     navigation={

@@ -1,30 +1,26 @@
 import React, {useContext, useState} from 'react';
 import "./MembersCard.sass"
-import pic from "../picture.png"
 import MembersModal from "../MembersModal/MembersModal";
 import {CustomContext} from "../../../Context";
-const MembersCard = () => {
+const MembersCard = ({obj}) => {
     const  {setOpenModal,openModal} = useContext(CustomContext)
+    // onClick={() => setOpenModal(true)}
     return (
         <>
-            <section onClick={() => setOpenModal(true)}  className="membersCard">
-                <div className="container membersCard__container">
-                <div className="membersCard__wrapper">
-                    <div className="membersCard__img">
-                        <img src={pic} alt=""/>
+            <section   className="membersCard">
+                <div className="membersCard__container">
+                    <div className="membersCard__first">
+                        <div className="membersCard__img">
+                            <img src={obj.photo_company} alt={obj.company_one}/>
+                        </div>
+                        <h2 className="membersCard__h2">{obj.company_one}</h2>
                     </div>
-                    <h2 className="membersCard__h2">Allchips Limited</h2>
-                    <div className="membersCard__close">
-                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 9H9M9 9H17M9 9V17M9 9V1" stroke="black" strokeLinecap="round" strokeLinejoin="round"/>
-                        </svg>
 
+                    <div className="membersCard__second">
+                        <h3 className="membersCard__h3">{obj.country}</h3>
+                        <h4 className="membersCard__h4">{obj.trade || obj.other_trade}</h4>
                     </div>
-                </div>
-                <div className="membersCard__content">
-                    <h3 className="membersCard__h3">Китай</h3>
-                    <h4 className="membersCard__h3">Техника</h4>
-                </div>
+
                 </div>
             </section>
             {

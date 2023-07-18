@@ -1,29 +1,37 @@
 @import "src/sass/base/mixins"
 .membersCard
-  display: flex
-  align-items: center
-  justify-content: space-between
   border-bottom: 1px solid #00000050
   padding-bottom: 11px
   width: 100%
   &__container
-    padding-bottom: 140px
-  &__wrapper
     display: flex
+    align-items: center
+    justify-content: flex-start
+    width: 1170px
+  &__first
+    display: flex
+    align-items: center
     column-gap: 50px
-    align-items: center
-  &__content
+  &__second
     display: flex
-    column-gap: 157px
     align-items: center
-    @include text(400, 18px, 133%, #40A865)
   &__img
     width: 50px
     height: 50px
+    img
+      width: 100%
+      height: 100%
+
   &__h2
-    @include text(500,18px,180%,#000000)
+    width: 473px
+    margin-right: 14px
+    @include text(500,14px,180%,#000000)
   &__h3
-    @include text(500,18px,180%,#000000)
+    width: 242px
+    @include text(500,14px,180%,#000000)
+  &__h4
+    width: 300px
+    @include text(500,14px,180%,#000000)
   &__close
     display: none
 @media (min-width: 320px)

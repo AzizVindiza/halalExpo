@@ -1,0 +1,32 @@
+@import "src/sass/base/mixins"
+.advantages
+  &__wrapper
+    display: flex
+    flex-wrap: wrap
+
+
+  &__h2
+    text-align: center
+    @include text(800,40px,120%,#000000)
+    padding-bottom: 44px
+  &__card
+    display: flex
+    width: 50%
+    margin-bottom: 60px
+
+  &__txt
+    display: flex
+    flex-direction: column
+  &__h3
+    @include text(700,24px,133%,#000000)
+    margin-bottom: 7px
+
+  &__p
+    @include text(500,18px,133%,#000000)
+    max-width: 361px
+  &__img
+    width: 160px
+    height: 160px
+    img
+      width: inherit
+      height: inherit

@@ -1,0 +1,39 @@
+@import "src/sass/base/mixins"
+.requirement
+  &__h2
+    display: flex
+    max-width: 633px
+
+
+    text-align: center
+    margin: auto
+    @include text(800,30px,133%,#000)
+  &__wrapper
+
+
+    padding: 51px 0 127px 0
+  &__text
+    display: flex
+    padding-bottom: 20px
+
+  &__txt
+    margin-top: 115px
+    margin-left: 20px
+  &__h3
+    @include text(600,40px,133%,#000)
+
+  &__p
+    @include text(500,20px,133%,#000)
+    margin-top: 20px
+  .task-card__numb
+    z-index: -1
+    @include text(900,250px,133%,#000)
+    font-family: "Gilroy",sans-serif
+    background: linear-gradient(180deg, #FFF 5.54%, #F5B41D 69.04%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    margin-right: 0
+    width: 120px
+    display: flex
+    justify-content: center
+    position: relative
