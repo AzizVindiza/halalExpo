@@ -175,7 +175,7 @@ const TimeSection = () => {
                                 14:00-18:00
 
                             </div>
-                            <h3 className="time__h3">Пресс-конференция по итогам Форума</h3>
+                            <h3 className="time__h3">Показ мод/Fashion zone         (Парадная: мужская,женская и детская)</h3>
 
                         </div>
 
