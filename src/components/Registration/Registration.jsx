@@ -21,12 +21,12 @@ const Registration = () => {
     const onSubmit = (data) => {
         const id = toast.loading("Please wait...")
         try {
-            // data = {
-            //     ...data,
-            //     image_id_one: data.image_id_one[0],
-            //     image_id_two: data.image_id_two[0],
-            //     image_id_three: data.image_id_three[0],
-            // }
+            data = {
+                ...data,
+                photo_company: data.photo_company[0],
+                image_id_two: data.image_logo[0],
+                image_certificate_smi: data.image_certificate_smi[0],
+            }
 
             axios.post('https://shark-app-65hkc.ondigitalocean.app/user/', data, {
                 headers: {
