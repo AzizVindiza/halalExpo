@@ -30,6 +30,10 @@
           "link": "investor"
         },
         {
+          "name": "Партнеры",
+          "link": "partner"
+        },
+        {
           "name": "Спонсоры",
           "link": "sponsors"
         },
@@ -52,8 +56,20 @@
           "link": "benefits"
         },
         {
-          "name": "Стенды",
-          "link": "#"
+          "name": "Trade Zone",
+          "link": "TradeZone"
+        },
+        {
+          "name": "Invest Zone",
+          "link": "invest"
+        },
+        {
+          "name": "Food Zone",
+          "link": "FoodZone"
+        },
+        {
+          "name": "Fashion Zone",
+          "link": "fashionzone"
         },
         {
           "name": "Гостиницы",

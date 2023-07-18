@@ -55,12 +55,12 @@ const StartSection = () => {
                             </div>
                             <h3 className="start__h3">Fashion Zone</h3>
                         </Link>
-                        <div className="start__block">
+                        <a href={"#national"} className="start__block">
                             <div className="start__svg">
                                 <img src={svg5} alt="" className="start__img"/>
                             </div>
                             <h3 className="start__h3">National attribute zone</h3>
-                        </div>
+                        </a>
                         {/*<div className="start__block">*/}
                         {/*    <div className="start__svg">*/}
                         {/*        <img src={svg6} alt="" className="start__img"/>*/}
