@@ -21,6 +21,11 @@ const Context = (props) => {
     const [isActiveHamburger, setActiveHamburger] = useState(false); // open and close hamburger
     const [isActiveHamburgerMenu, setActiveHamburgerMenu] = useState(false); //open burger menu
     const [openModal,setOpenModal] = useState(false)// open modal in members card
+    const [chooseZone,setChooseZone] = useState('') // get zone in account
+    const [other,setOther] = useState(false) // choose others activity
+    const [checkBoxZone,setCheckBoxZone] = useState(false) // choose others activity
+    const [state,setState] = useState("default") // next in formZone
+
 
 
     const valueContext = {
@@ -29,7 +34,9 @@ const Context = (props) => {
         passwordShown2, setPasswordShown2,
         value,setValue,burger,setBurger,members,setMembers,fashion,setFashion,food,setFood
         ,checkBox,setCheckBox,request,setRequest,demo,setDemo,isActiveHamburger,setActiveHamburger,isActiveHamburgerMenu,
-        setActiveHamburgerMenu,openModal,setOpenModal
+        setActiveHamburgerMenu,openModal,setOpenModal,chooseZone,setChooseZone,other,setOther,
+        checkBoxZone,setCheckBoxZone,state,setState
+
     }
     return <CustomContext.Provider value={valueContext}>
         {props.children}
