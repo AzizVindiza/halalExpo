@@ -25,8 +25,8 @@ const Registration = () => {
                 ...data,
                 photo_company: data.photo_company[0],
                 image_logo: data.image_logo[0],
-                image_certificate_smi: data.image_certificate_smi[0],
             }
+            console.log(data)
 
             axios.post('https://shark-app-65hkc.ondigitalocean.app/user/', data, {
                 headers: {
