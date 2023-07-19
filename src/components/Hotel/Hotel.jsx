@@ -6,10 +6,13 @@ import img2 from "./HotelCard/img2.png"
 
 
 import HotelCard from "./HotelCard/HotelCard";
+import {Route} from "react-router-dom";
+import DearSection from "./DearSection/DearSection";
 const Hotel = () => {
     return (
         <div className={'hotel'}>
             <div className="hotel__container container ">
+                <DearSection/>
                 <h2 className="hotel__h2">ГОСТИНИЦЫ</h2>
                 <div className="hotel__wrapper">
                     <HotelCard item={{a2:"https://goo.gl/maps/Lk4yEgw72Emc2RGC8",a:"https://silence-hotel-ik.com/",img:img1,h3:"Отель “Silence”",li:["Мы находимся в старом советском пансионате,вокруг дикая местность и уединение...\n","Концепция отеля Silence \"Тишина\"\n","Для тех кто хочет сбежать от шума и суеты !\n","Своего рода Digital detox!\n","Для тех кто устал на работе 24/7"]}}/>
