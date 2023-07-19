@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import {CustomContext} from "../../../../../Context";
 import {useForm} from "react-hook-form";
 
-const FormCheckZone = ({name,title}) => {
+const FormCheckZone = ({name,title,id}) => {
     const {checkBoxZone,setCheckBoxZone} = useContext(CustomContext)
     const {
         register, formState: {
@@ -18,14 +18,15 @@ const FormCheckZone = ({name,title}) => {
         }
     }
     return (
-        <div>
-            <label
-                htmlFor="" className="formZone__label formZone__label_second">
-                <input
-                    value={checkBoxZone}
-                    onChange={handleCheckZone}
-                    {...register(name)}
-                    className="formZone__input" type="checkbox"/>
+        <div className={'formZone__single'}>
+            <input
+                id={id}
+                value={checkBoxZone}
+                onChange={handleCheckZone}
+                {...register(name)}
+                className="formZone__input" type="checkbox"/>
+            <label htmlFor={id} className="formZone__label formZone__label_second">
+
                 <h2 className="formZone__h3 formZone__h3_second">{title}</h2>
             </label>
 
