@@ -1,0 +1,83 @@
+@import "src/sass/base/mixins"
+
+
+.fashionBenefits
+  margin: 120px 0 140px 0
+  &__wrapper
+    justify-content: space-between
+    display: flex
+    flex-wrap: wrap
+    row-gap: 50px
+  &__h2
+
+    text-align: center
+    @include text(800,48px,120%,#000)
+  &__h3
+    @include text(700,24px,133%,#000)
+  &__p
+
+    @include text(500,18px,133%,#000)
+  &__row
+    margin-top: 40px
+    display: flex
+
+  &__img
+    width: 160px
+    height: 160px
+    img
+      width: inherit
+      height: inherit
+
+  &__row
+    width: 48%
+
+
+@media (max-width: 1202px)
+  .fashionBenefits
+    &__img
+      width: 148px
+      height: 148px
+    &__h3
+      font-size: 22px
+    &__p
+      font-size: 16px
+@media (max-width: 1025px)
+  .fashionBenefits
+    margin: 100px 0 100px 0
+    &__img
+      width: 122px
+      height: 122px
+    &__h3
+      font-size: 18px
+    &__p
+      font-size: 13px
+
+@media (max-width: 770px)
+  .fashionBenefits
+    &__h2
+      font-size: 34px
+    &__row
+      display: flex
+      text-align: center
+      flex-direction: column
+    &__h3
+      font-size: 13px
+    &__p
+      font-size: 9px
+
+    &__img
+      margin: 0 auto
+      width: 88px
+      height: 88px
+@media (max-width: 482px)
+  .fashionBenefits
+    margin: 50px 0 100px 0
+
+    &__wrapper
+      display: flex
+      justify-content: center
+      row-gap: 20px
+    &__row
+      width: 80%
+
+
