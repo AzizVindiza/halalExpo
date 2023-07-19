@@ -1,20 +1,23 @@
 import React from 'react';
 import "./dataBoss.sass"
 import BtnProfile from "../../../../components/BtnProfile/BtnProfile";
+import {useSelector} from "react-redux";
 
 const DataBoss = () => {
+    const {user} = useSelector((store) => store.user)
+
     return (
         <div className={'dataBoss'}>
             <div className="dataBoss__wrapper">
                 <div className="dataBoss__left">
                     <h2 className="dataBoss__h2">Данные о руководителя</h2>
                     <div className="dataBoss__block">
-                        <h3 className="dataBoss__h3">Темиров Арсен Акматович</h3>
+                        <h3 className="dataBoss__h3">{user.name_manager && user.name_manager}</h3>
                         <span className="dataBoss__span">(Руководитель)</span>
                     </div>
                     <div className="dataBoss__block">
                         <h4 className="dataBoss__h4">Дата рождения</h4>
-                        <span className="dataBoss__span">20.02.1990</span>
+                        <span className="dataBoss__span">{user.birth_manager && user.birth_manager}</span>
                     </div>
                     <div className="dataBoss__block">
                         <h4 className="dataBoss__h4">ИНН</h4>
