@@ -1,0 +1,59 @@
+@import "src/sass/base/mixins"
+
+.fashionLast
+  margin-bottom: 100px
+  svg
+    position: relative
+    top: 20px
+  &__wrapper
+    display: flex
+    flex-direction: column
+    row-gap: 50px
+  &__text
+    display: flex
+    column-gap: 15px
+  &__h2
+    @include text(600,40px,133%,#000)
+  &__p
+    margin-top: 25px
+    @include text(500,20px,133%,#000)
+
+
+@media (max-width: 1025px)
+  .fashionLast
+    &__wrapper
+      row-gap: 30px
+    svg
+      top: 10px
+      width: 46px
+    &__h2
+      font-size: 33px
+    &__p
+      margin-top: 15px
+      font-size: 16px
+
+@media (max-width: 770px)
+  .fashionLast
+    svg
+      top: 2px
+      width: 33px
+    &__text
+      column-gap: 7px
+    &__h2
+      font-size: 24px
+    &__p
+      margin-top: 0
+      font-size: 12px
+
+@media (max-width: 482px)
+  .fashionLast
+    svg
+      top: 10px
+      width: 24px
+      height: 24px
+    &__h2
+
+      font-size: 18px
+    &__p
+      margin-top: 10px
+      font-size: 9px

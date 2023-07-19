@@ -21,12 +21,22 @@ const Registration = () => {
     const onSubmit = (data) => {
         const id = toast.loading("Please wait...")
         try {
-            data = {
-                ...data,
-                photo_company: data.photo_company[0],
-                image_logo: data.image_logo[0],
+            if(data.type_register === "Участник"){
+                data = {
+                    ...data,
+                    photo_company: data.photo_company[0],
+                    image_logo: data.image_logo[0],
+                }
+            }else if (data.type_register === "СМИ"){
+                data = {
+                    ...data,
+                    image_certificate_smi: data.image_certificate_smi[0],
+                    image_logo: data.image_logo[0],
+                }
             }
             console.log(data)
+
+            // console.log(data)
 
             axios.post('https://shark-app-65hkc.ondigitalocean.app/user/', data, {
                 headers: {
@@ -48,8 +58,9 @@ const Registration = () => {
                 });
                 setClose(false)
             }).catch((err) => {
+                console.log(err)
                 toast.update(id, {
-                    render: !err.response.data.email ? 'Ошибка в сервере!' : err.response.data.email[0],
+                    render: err.response.data.email ? err.response.data.email[0] : err.response.data.workEmail ? err.response.data.workEmail[0] :'Ошибка в сервере!' ,
                     type: "error",
                     isLoading: false,
                     position: "top-center",

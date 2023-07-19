@@ -1,0 +1,69 @@
+@import "src/sass/base/mixins"
+
+.investorPeople
+  margin-top: 150px
+  &__wrapper
+
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+    row-gap: 10px
+  &__card
+    position: relative
+    width: 380px
+    height: 410px
+    img
+      position: absolute
+      width: inherit
+      height: inherit
+  &__p
+    color: #FFFFFF
+    width: 85%
+    top: 66%
+    text-align: center
+    position: relative
+    margin: 0 auto
+    z-index: 1
+    @include text(500,20px,133%,#FFF)
+
+@media (max-width: 1201px)
+  .investorPeople
+    &__card
+      width: 362px
+      height: 385px
+    &__p
+      font-size: 18px
+
+
+@media (max-width: 1025px)
+  .investorPeople
+    &__card
+      width: 302px
+      height: 320px
+    &__p
+      font-size: 16px
+
+@media (max-width: 770px)
+  .investorPeople
+    margin-top: 32px
+    &__card
+      width: 221px
+      height: 235px
+    &__p
+      font-size: 11px
+
+
+
+
+
+
+@media (max-width: 482px)
+  .investorPeople
+    margin-top: 0
+    &__wrapper
+      justify-content: space-between
+    &__card
+      width: 180px
+      height: 192px
+    &__p
+      font-size: 9px
