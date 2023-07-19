@@ -13,6 +13,7 @@ import bah from "./bahr.svg"
 import katar from "./katar.svg"
 import egipet from "./egipet.svg"
 import oa from "./Oae.svg"
+import InvestorPeople from "../InvestorPeople/InvestorPeople";
 
 
 
@@ -110,6 +111,9 @@ const MapSection = () => {
                         {/*<img src={pic} alt="" className="mapSection__img"/>*/}
 
                 </div>
+                <InvestorPeople/>
+
+
                 <div className={"mapSection__box"}>
                     <p className="mapSection__p">Выставка <span className={"mapSection__span"}> Halal Investment and Trade Expo 2023</span> соберет представителей инвестиционных фондов из стран арабского мира. Специалисты, топ-менеджеры и главы крупнейших компаний мира прибудут на мероприятие для поиска и отбора перспективных проектов из различных областей деятельности.</p>
                     <p className="mapSection__p">Присутствие представителей инвестиционных фондов из арабских стран подчеркивает важность проведения <span className={"mapSection__span"}>HIT Expo-2023</span>, так как мероприятия окажет содействие в развитии экономического сотрудничества и укреплении связей на международном уровне. Также их участие является выражением намерения исследовать новые возможности, придерживаясь исламских ценностей. </p>
