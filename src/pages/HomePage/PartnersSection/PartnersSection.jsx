@@ -84,12 +84,7 @@ const PartnersSection = ({title}) => {
                         Культурный Центр «Рух Ордо» им.Ч.Айтматова
                     </h2>
                 </div>
-                <div className="partners__card">
-                    <img className={'partners__img'} src={lalafo} alt="Lalafo"/>
-                    <h2 className="partners__h2">
-                        LaLaFo
-                    </h2>
-                </div>
+
 
             </div>
             <div onClick={() => setRequest(true)}  className="speaker__btn partners__btn">
