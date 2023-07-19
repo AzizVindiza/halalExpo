@@ -87,8 +87,6 @@ const Registration = () => {
                 theme: "light"
             });
         }
-
-
     }
     // вытаскиваю функцию setClose из контекста чтобы закрывать форму при клике на крестик
     return (
@@ -110,8 +108,8 @@ const Registration = () => {
                             </button>
                         </div>
                         <div className="registration__container">
-                            <RegistrationSelect title={"В качестве кого вы хотите посетить HIT EXPO?"}
-                                                name={"type_register"}/>
+                            <RegistrationSelect title={"В качестве кого вы хотите посетить HIT EXPO?"} name={"type_register"}/>
+
                             {
                                 role === "Участник" ? <RegistrationParticipant/>
                                     : role === "Посетитель" ? <RegistrationExpert/>

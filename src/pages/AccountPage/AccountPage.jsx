@@ -25,8 +25,8 @@ const AccountPage = () => {
     // },[navigate,user])
     return (
         <>
-            {
-                Object.keys(user).length === 0 ? <HomePage/> :
+            {/*{*/}
+            {/*    Object.keys(user).length === 0 ? <HomePage/> :*/}
                     <div className={'account'}>
                         <div className="account__container">
                             <aside className="account__nav">
@@ -38,7 +38,7 @@ const AccountPage = () => {
                             </div>
                         </div>
                     </div>
-            }
+            {/*}*/}
         </>
     );
 };
