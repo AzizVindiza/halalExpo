@@ -63,9 +63,7 @@ const FormZone = ({setState}) => {
                         <FormCheckZone id={"check12"} name={"zone"} title={"Национальные товары, рукоделие, сувенирная продукция"}/>
                         <FormCheckZone id={"check13"} name={"zone"} title={"Экотовары"}/>
                         <FormCheckZone id={"check14"} name={"zone"} title={"Инвестиционные проекты"}/>
-                        <label htmlFor={"#check"} className={'formZone__click'} onClick={() => {
-                            return setOther(!other)
-                        }}>
+                        <label htmlFor={"#check"} className={'formZone__click'} onClick={() => setOther(!other)} >
                             <FormCheckZone id={"check15"} name={"zone"} title={"Другое"}/>
                         </label>
                     </div>
