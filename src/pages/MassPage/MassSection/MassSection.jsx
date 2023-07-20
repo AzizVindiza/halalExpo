@@ -38,7 +38,7 @@ const MassSection = ({item}) => {
                         Мы ценим ваше участие и поддержку в освещении Halal Investment and Trade Expo 2023. Просим вас соблюдать данные правила и быть аккуратными при осуществлении своей профессиональной деятельности во время мероприятия.
                     </p>
                     <div onClick={() => setRequest(true)}  className="speaker__btn partners__btn">
-                        <Btn m={"big btn_border"} type="button" text="Стать партнером"/>
+                        <Btn m={"big btn_border"} type="button" text="Оставить заявку"/>
                     </div>
                 </div>
 
