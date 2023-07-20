@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.sass'
+import {Link, NavLink} from "react-router-dom";
 
 const Footer = () => {
 
@@ -118,6 +119,9 @@ const Footer = () => {
 
                             </a>
                         </div>
+                        <Link className={"footer__link"} to={"privacy"}>Обработка персональных данных</Link>
+
+
                     </div>
                     <div className="footer__center">
                         <p className="footer__txt">© HIT Expo 2023 Developed by ADM group</p>

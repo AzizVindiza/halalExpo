@@ -54,6 +54,11 @@
     column-gap: 65px
     display: flex
     justify-content: space-between
+  &__link
+    @include text(500,12px,120%,rgba(255, 255, 255, 0.50))
+    border-bottom: 1px solid rgba(255, 255, 255, 0.50)
+    position: relative
+    top: 20px
 @media (max-width: 1024px)
   .footer
     &__links
@@ -131,6 +136,8 @@
     &__btn
       right: 20px
       bottom: 50px
+    &__link
+      top: 65px
 
 
 
