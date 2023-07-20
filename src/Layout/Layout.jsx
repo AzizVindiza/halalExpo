@@ -6,6 +6,7 @@ import {ScrollRestoration} from "react-router-dom";
 import DemoForm from "../components/DemoRegistraion/DemoForm/DemoForm";
 import Advertising from "./Advertising/Advertising";
 import Whatsapp from "./Whatsapp/Whatsapp";
+import TopBtn from "./TopBtn/TopBtn";
 
 const Layout = () => {
     const location = useLocation()
@@ -20,6 +21,7 @@ const Layout = () => {
                     {/*<div className="smooth-scroll" style={{padding: '100px'}}></div>*/}
                     <ScrollRestoration/>
             </main>
+            <TopBtn/>
             <Whatsapp/>
             {
                 location.pathname.includes('account') ?  "" : <Footer/>
