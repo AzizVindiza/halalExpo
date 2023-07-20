@@ -1,18 +1,22 @@
-import React, {useContext} from 'react';
+import React, {useContext, useRef, useState} from 'react';
 import {CustomContext} from "../../../../../Context";
 import "./componentZone.sass"
 import Btn from "../../../../../components/Btn/Btn";
-import SwiperFirst from "./SwiperFirst/SwiperFirst";
+import SwiperFirst from "./SwiperFirst/SwiperZone";
+import SwiperInvest from "./SwiperInvest/SwiperInvest";
+import SwiperZone from "./SwiperFirst/SwiperZone";
+import {useNavigate} from "react-router-dom";
 
 const ComponentZone = () => {
-    const {chooseZone} = useContext(CustomContext)
+    const {chooseZone,setState,chooseIndustry} = useContext(CustomContext)
+
 
 
     return (
         <div className={'componentZone'}>
             <div className="componentZone__wrapper">
                 <div className="componentZone__left">
-                    <div className="componentZone__line">
+                    <div onClick={() => setState('default')} className="componentZone__line">
                         <svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g opacity="0.2">
                                 <path fillRule="evenodd" clipRule="evenodd"
@@ -48,7 +52,7 @@ const ComponentZone = () => {
                     </div>
                 </div>
                 <div className="componentZone__right">
-                    <h2 className="componentZone__h2">Информационные технологии и программное обеспечение.</h2>
+                    <h2 className="componentZone__h2">{chooseIndustry}</h2>
                     <div className="componentZone__">
                         <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 11L6 6L1 1" stroke="#3962D1" strokeWidth="2" strokeLinecap="round"
@@ -75,11 +79,17 @@ const ComponentZone = () => {
                 </p>
             </div>
             {
-                chooseZone === "Trade" ?  <SwiperFirst/> : ""
+                chooseZone === "Trade" ?  <SwiperZone/> : chooseZone === "Invest" ? <SwiperInvest/> : ""
             }
 
             <div className="componentZone__box">
                 <div className="componentZone__content">
+                    <div  className="componentZone__oval">
+                        <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 1.5L2.49976 8.3753C2.20758 8.74052 2.20758 9.25948 2.49976 9.62469L8 16.5" stroke="#A1CB5C" strokeWidth="3" strokeLinecap="round"/>
+                        </svg>
+
+                    </div>
                     <div className="componentZone__block">
                         <button className="componentZone__click">
                             STANDART
@@ -91,7 +101,7 @@ const ComponentZone = () => {
                             GOLD
                         </button>
                     </div>
-                    <div className="componentZone__oval">
+                    <div  className="componentZone__oval">
                         <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M2 1.5L7.50024 8.3753C7.79242 8.74052 7.79242 9.25948 7.50024 9.62469L2 16.5"
                                   stroke="#A1CB5C" strokeWidth="3" strokeLinecap="round"/>
