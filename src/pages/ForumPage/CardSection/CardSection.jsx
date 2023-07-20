@@ -75,7 +75,7 @@ const CardSection = () => {
                         <h2 className="card__h2">Параллельные мероприятия</h2>
                         <div className="card__wrapper">
                             <div className="card__block">
-                                12:00-13:00
+                                10:30-17:00
 
                             </div>
                             <h3 className="card__h3">Презентация инвестиционных проектов</h3>
@@ -83,7 +83,7 @@ const CardSection = () => {
                         </div>
                         <div className="card__wrapper">
                             <div className="card__block">
-                                14:00-15:00
+                                13:30-14:20
 
                             </div>
                             <h3 className="card__h3">Время намаза</h3>
@@ -91,7 +91,7 @@ const CardSection = () => {
                         </div>
                         <div className="card__wrapper">
                             <div className="card__block">
-                                15:00-16:00
+                                14:00-17:00
 
                             </div>
                             <h3 className="card__h3">Показ мод/Fashion zone</h3>
