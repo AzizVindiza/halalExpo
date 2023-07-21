@@ -74,7 +74,12 @@
         {
           "name": "Гостиницы",
           "link": "hotel"
+        },
+        {
+          "name": "Трансфер",
+          "link": "transfer"
         }
+
       ]
     },
     "dropDown2":{
