@@ -50,6 +50,7 @@ import FashionZonePage from "./pages/FashionZonePage/FashionZonePage";
 import Participant from "./pages/AccountPage/Participant/Participant";
 import Ticket from "./pages/AccountPage/Ticket/Ticket";
 import PrivacyPolicy from "./pages/PrivacyPolicyPage/PrivacyPolicy";
+import TransferPage from "./pages/TransferPage/TransferPage";
 
 
 
@@ -84,6 +85,8 @@ const router = createBrowserRouter(
                 <Route path="trade" element={<TradePage/>}/>
                 <Route path="invest" element={<InvestZonePage/>}/>
                 <Route path="privacy" element={<PrivacyPolicy/>}/>
+                <Route path="transfer" element={<TransferPage/>}/>
+
 
                 <Route path="account" element={<AccountPage/>}>
                     <Route path="test" element={<UserTicket/>}/>

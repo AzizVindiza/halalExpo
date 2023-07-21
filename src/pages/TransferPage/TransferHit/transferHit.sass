@@ -1,0 +1,95 @@
+@import "src/sass/base/mixins"
+
+
+
+.transferHit
+  &__box
+    display: flex
+    justify-content: space-between
+  &__span
+    @include text(400,32px,133%,#AEAEAE)
+    margin-top: 100px
+  &__column
+    display: flex
+    align-items: center
+    flex-direction: column
+  &__img
+    width: 423px
+    height: 323px
+    img
+      width: inherit
+      height: inherit
+  &__p
+    text-align: center
+    @include text(600,32px,133%,#000)
+    margin: 0 auto
+    max-width: 730px
+    background: linear-gradient(180deg, #0075FF 0%, #40A865 100%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+  &__span2
+    @include text(500,24px,133%,#00000050)
+    padding: 50px 0 100px 0
+    text-align: center
+
+
+
+@media (max-width: 1202px)
+  .transferHit
+    &__span
+      font-size: 30px
+    &__img
+      width: 458px
+      height: 303px
+    &__p
+      font-size: 30px
+    &__span2
+      font-size: 22px
+
+@media (max-width: 1025px)
+  .transferHit
+    &__box
+      margin-top: 40px
+    &__span
+      font-size: 29px
+    &__img
+      width: 393px
+      height: 260px
+    &__p
+      font-size: 28px
+    &__span2
+      font-size: 20px
+
+@media (max-width: 770px)
+  .transferHit
+    &__box
+      margin-top: 100px
+    &__span
+      font-size: 22px
+    &__img
+      width: 330px
+      height: 218px
+    &__p
+      max-width: 676px
+      font-size: 24px
+    &__span2
+      font-size: 16px
+      padding: 30px 0 50px 0
+@media (max-width: 482px)
+  .transferHit
+
+    &__box
+      margin-top: 40px
+      flex-direction: column
+      align-items: center
+    &__span
+      margin: 40px 0
+    &__column
+      margin-top: 40px
+    &__img
+      width: 272px
+      height: 180px
+    &__p
+      font-size: 20px
+    &__span2
+      font-size: 16px
