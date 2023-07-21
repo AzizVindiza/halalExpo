@@ -18,11 +18,6 @@ const AccountPage = () => {
         navigate('/')
     }
 
-    // useEffect(() => {
-    //     if (Object.keys(user).length === 0) {
-    //         navigate('/')
-    //     }
-    // },[navigate,user])
     return (
         <>
             {

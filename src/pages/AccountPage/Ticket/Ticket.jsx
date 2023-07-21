@@ -8,11 +8,11 @@ import {CustomContext} from "../../../Context";
 
 const Ticket = () => {
 
-    const methods = useForm({mode: "onBlur"});
-    const [state,setState] = useState('default')
+
+    const  {state,setState} = useContext(CustomContext)
 
     return (
-        <FormProvider {...methods}>
+
         <div className={'ticket'}>
             {
                 state === "default" ?
@@ -22,7 +22,7 @@ const Ticket = () => {
             }
 
         </div>
-        </FormProvider>
+
     );
 };
 

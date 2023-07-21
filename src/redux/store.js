@@ -17,10 +17,11 @@ import {
 const persistConfig = {
     key: 'root',
     storage,
-    blacklist:["user"]
+    blacklist:["user"],
+
 }
 const rootReducer = combineReducers({
-     user,
+    user,
     [apiSlice.reducerPath]:apiSlice.reducer
 })
 const persistedReducer = persistReducer(persistConfig, rootReducer)
