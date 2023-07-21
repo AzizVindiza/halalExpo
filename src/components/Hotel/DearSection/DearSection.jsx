@@ -16,23 +16,23 @@ const DearSection = () => {
                     </div>
                     <h3 className="dear__h3">При бронировании укажите следующую информацию:</h3>
                     <div className="dear__card">
-                        <div className="dear__block">
+                        <div className="dear__block block3">
                             <div className="dear__img">
                                 <img src={img1} alt=""/>
                             </div>
-                            <span className="dear__span">Название компании</span>
+                            <div className="dear__span">Название компании</div>
                         </div>
                         <div className="dear__block block2">
                             <div className="dear__img">
                                 <img src={img2} alt=""/>
                             </div>
-                            <span className="dear__span">Ваше имя</span>
+                            <div className="dear__span">Ваше имя</div>
                         </div>
                         <div className="dear__block">
                             <div className="dear__img">
                                 <img src={img3} alt=""/>
                             </div>
-                            <span className="dear__span">Цель: посещение выставки HIT Expo 2023</span>
+                            <div className="dear__span">Цель: посещение выставки HIT Expo 2023</div>
                         </div>
                     </div>
                     <div className="dear__right">
