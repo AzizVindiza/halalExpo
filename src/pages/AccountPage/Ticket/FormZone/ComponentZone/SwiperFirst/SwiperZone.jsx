@@ -16,7 +16,7 @@ import FirstSelver from "./FirstSelver";
 import SecondSelver from "./SecondSelver";
 import {CustomContext} from "../../../../../../Context";
 
-export default function App() {
+const SwiperZone = () =>{
 
 
     return (
@@ -28,6 +28,8 @@ export default function App() {
                 }}
                 modules={[Pagination]}
                 className="mySwiper-first__box"
+
+
             >
                 <SwiperSlide className={'mySwiper-first__block mySwiper-first__block_second'}>
                     <div className="mySwiper-first__slide">
@@ -48,3 +50,4 @@ export default function App() {
         </div>
     );
 }
+export default SwiperZone

@@ -1,33 +1,23 @@
 import React, {useContext} from 'react';
 import {CustomContext} from "../../../../../Context";
-import {useForm} from "react-hook-form";
+import {useForm, useFormContext} from "react-hook-form";
+import {objectIndustry} from "../ObjectIndustry/ObjectIndustry";
 
-const FormCheckZone = ({name,title,id}) => {
-    const {checkBoxZone,setCheckBoxZone} = useContext(CustomContext)
-    const {
-        register, formState: {
-            errors
-        },
-        handleSubmit
-    } = useForm()
+const FormCheckZone = ({item}) => {
+    const {checkBoxZone,setCheckBoxZone,chooseIndustry,setChooseIndustry} = useContext(CustomContext)
 
-    const handleCheckZone = (event) => {
-        const {value,checked} = event.target
-        if (checked){
-            setCheckBoxZone(value)
-        }
-    }
+   console.log(chooseIndustry)
+
     return (
         <div className={'formZone__single'}>
             <input
-                id={id}
-                value={checkBoxZone}
-                onChange={handleCheckZone}
-                {...register(name)}
-                className="formZone__input" type="checkbox"/>
-            <label htmlFor={id} className="formZone__label formZone__label_second">
+                name={"radio"}
+                value={item}
+                onChange={(event) => setChooseIndustry(event.target.value)}
 
-                <h2 className="formZone__h3 formZone__h3_second">{title}</h2>
+                className="formZone__input" type="radio"/>
+            <label  className="formZone__label formZone__label_second">
+                <h2 className="formZone__h3 formZone__h3_second">{item}</h2>
             </label>
 
         </div>

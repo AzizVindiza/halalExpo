@@ -25,6 +25,8 @@ const Context = (props) => {
     const [other,setOther] = useState(false) // choose others activity
     const [checkBoxZone,setCheckBoxZone] = useState(false) // choose others activity
     const [state,setState] = useState("default") // next in formZone
+    const [chooseIndustry,setChooseIndustry] = useState("") // choose industry
+
 
 
 
@@ -35,7 +37,7 @@ const Context = (props) => {
         value,setValue,burger,setBurger,members,setMembers,fashion,setFashion,food,setFood
         ,checkBox,setCheckBox,request,setRequest,demo,setDemo,isActiveHamburger,setActiveHamburger,isActiveHamburgerMenu,
         setActiveHamburgerMenu,openModal,setOpenModal,chooseZone,setChooseZone,other,setOther,
-        checkBoxZone,setCheckBoxZone,state,setState
+        checkBoxZone,setCheckBoxZone,state,setState,chooseIndustry,setChooseIndustry
 
     }
     return <CustomContext.Provider value={valueContext}>
