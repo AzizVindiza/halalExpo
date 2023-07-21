@@ -6,17 +6,23 @@ import {CustomContext} from "../../../../Context";
 
 import FormCheckZone from "./FormCheckZone/FormCheckZone";
 import {objectIndustry} from "./ObjectIndustry/ObjectIndustry";
+import {queryAllByAltText} from "@testing-library/react";
 
 
 const FormZone = () => {
 
 
+
     const {setChooseZone,other,setOther,chooseZone,chooseIndustry,setChooseIndustry,setState} = useContext(CustomContext)
 
 
-    const clickOpenNextPage = () => {
+    const clickOpenNextPage = () => { //Function let to go next page
         if (chooseZone.length === 0 || chooseIndustry.length === 0)
-            setState("default")
+            return (
+                 setState("default")
+
+            )
+
         else {
             setState("zone")
         }
@@ -24,7 +30,7 @@ const FormZone = () => {
 
 
 
-    const zona = ['Trade', 'Invest', 'Fashion', 'Food', 'National']
+    const zona = ['Trade', 'Invest', 'Fashion', 'Food']
 
 
     return (
@@ -46,7 +52,7 @@ const FormZone = () => {
                     }
 
                 </div>
-                <h2 className="formZone__h2">Пожалуйста выберите отрасль</h2>
+                <h2 className="formZone__h2 .h2">Пожалуйста выберите отрасль</h2>
                 <div className="formZone__second">
                     {
                         objectIndustry.map((item) => (
@@ -65,7 +71,7 @@ const FormZone = () => {
 
                 {
                     other ?
-                        <>
+                        <div className={'formZone__industry'}>
                             <h2 className="formZone__h2">Впишите деятельность, которую будете представлять</h2>
                             <label className="formZone__border">
                                 <input
@@ -73,7 +79,7 @@ const FormZone = () => {
                                     onChange={(event) => setChooseIndustry(event.target.value)}
                                     type="text" className="formZone__text"/>
                             </label>
-                        </> : ""
+                        </div> : ""
 
                 }
 
