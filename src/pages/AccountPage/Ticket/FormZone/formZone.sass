@@ -1,31 +1,40 @@
 @import "src/sass/base/mixins"
 .formZone
   &__h2
-    @include text(600,20px,133%,#000)
+    @include text(600, 20px, 133%, #000)
     margin-bottom: 17px
+
   &__h3
-    @include text(600,16px,133%,#000)
+    @include text(600, 16px, 133%, #000)
+
     &_second
       margin-left: 10px
+
   &__block
     display: flex
     flex-direction: column
     row-gap: 20px
+
   &__industry
     margin-top: 30px
+
   &__label
     display: flex
     align-items: center
+
   &__zona
     display: flex
     column-gap: 10px
     margin-bottom: 25px
     align-items: center
+
     &_second
       width: 310px
+
   &__second
     display: flex
     flex-wrap: wrap
+
   &__border
     border-radius: 8px
     border: 0.5px solid rgba(0, 0, 0, 0.30)
@@ -34,25 +43,53 @@
 
   &__text
     width: 100%
-    @include text(600,16px,133%,#000)
+    @include text(600, 16px, 133%, #000)
+
   &__last
     display: flex
     justify-content: space-between
     margin-top: 30px
+
   &__circle
     width: 16px
     height: 16px
     display: block
     border: 1px solid #000
     border-radius: 50%
+
   &__click
     width: 50px
+
   &__single
     width: 50%
     display: flex
     margin-top: 10px
-  .h2
-    color: red
+
+  &__next
+    background: #8F8F8F
+    border-radius: 4px
+    display: flex
+    width: 194px
+    height: 46px
+    padding: 10px
+    justify-content: center
+    align-items: center
+    gap: 10px
+    flex-shrink: 0
+    color: #fff
+    &_active
+      background: #3E69EC
+      border-radius: 4px
+      display: flex
+      width: 194px
+      height: 46px
+      padding: 10px
+      justify-content: center
+      align-items: center
+      gap: 10px
+      flex-shrink: 0
+      color: #fff
+
 
 
 
