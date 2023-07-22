@@ -7,6 +7,8 @@ import {CustomContext} from "../../../../Context";
 import FormCheckZone from "./FormCheckZone/FormCheckZone";
 import {objectIndustry} from "./ObjectIndustry/ObjectIndustry";
 import {queryAllByAltText} from "@testing-library/react";
+import {toast} from "react-toastify";
+import {useForm, useFormContext} from "react-hook-form";
 
 
 const FormZone = () => {
@@ -23,17 +25,33 @@ const FormZone = () => {
     } = useContext(CustomContext)
 
 
-    const clickOpenNextPage = () => { //Function let to go next page
-        if (chooseZone.length === 0 || chooseIndustry.length === 0){
-            setState("default")
-            alert("Заполните поля")
-        }
 
-        else {
+    const thrownError = () => {
+        toast.error('Запоните все поля', {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+        });
+    } // function show error
+
+
+    const clickOpenNextPage = () => { //Function let to go next page
+        if (chooseZone.length === 0 || chooseIndustry.length === 0) {
+            setState("default")
+            thrownError()
+
+        } else {
             setState("zone")
         }
-    }
+    } // function fill fields
 
+
+    const {register,handleSubmit, formState : {errors}} = useForm({mode : "onBlur"})
 
     const zona = ['Trade', 'Invest', 'Fashion', 'Food']
 
@@ -42,13 +60,14 @@ const FormZone = () => {
 
         <div className={'formZone'}>
 
-            <h2 className="formZone__h2">Пожалуйста выберите зону </h2>
+            <h2 className="formZone__h2">Пожалуйста выберите зону</h2>
             <div className="formZone__first">
                 {
                     zona.map((item) => {
                         return (
                             <div key={item} className="formZone__zona">
-                                <input value={item} onChange={(e) => setChooseZone(e.target.value)}
+                                <input value={item}
+                                       onChange={(e) => setChooseZone(e.target.value)}
                                        type={"radio"} name={'range'} className="formZone__circle"/>
                                 <h2 className="formZone__h3">{item}</h2>
                             </div>
@@ -57,11 +76,11 @@ const FormZone = () => {
                 }
 
             </div>
-            <h2 className="formZone__h2 .h2">Пожалуйста выберите отрасль</h2>
+            <h2 className="formZone__h2">Пожалуйста выберите отрасль</h2>
             <div className="formZone__second">
                 {
                     objectIndustry.map((item) => (
-                        <FormCheckZone key={item} item={item}/>
+                        <FormCheckZone   name={"industry"} key={item} item={item}/>
                     ))
                 }
                 <div style={{width: "80px"}} onClick={() => setOther(!other)} className={'formZone__single'}>
@@ -90,12 +109,14 @@ const FormZone = () => {
 
             <div className="formZone__last">
                 <div></div>
-
-                <div className={`${chooseZone.length === 0 || chooseIndustry.length === 0 ? "formZone__next" : "formZone__next_active"} `}  onClick={clickOpenNextPage}>
+                <div
+                    className={`${chooseZone.length === 0 || chooseIndustry.length === 0 ? "formZone__next" : "formZone__next_active"} `}
+                    onClick={clickOpenNextPage}>
                     Далее
                 </div>
 
             </div>
+
         </div>
 
 
