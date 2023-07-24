@@ -51,6 +51,7 @@ import Participant from "./pages/AccountPage/Participant/Participant";
 import Ticket from "./pages/AccountPage/Ticket/Ticket";
 import PrivacyPolicy from "./pages/PrivacyPolicyPage/PrivacyPolicy";
 import TransferPage from "./pages/TransferPage/TransferPage";
+import Chat from "./pages/AccountPage/Chat/Chat";
 
 
 
@@ -99,7 +100,7 @@ const router = createBrowserRouter(
                             <Route path={'tickets'} element={<NotFoundPage/>}/>
                             <Route path={'document'} element={<NotFoundPage/>}/>
                             <Route path={'meet'} element={<NotFoundPage/>}/>
-                            <Route path={'chat'} element={<NotFoundPage/>}/>
+                            <Route path={'chat'} element={<Chat/>}/>
                             <Route path={'sittings'} element={<NotFoundPage/>}/>
                         </Route>
 
