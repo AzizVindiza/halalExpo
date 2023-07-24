@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useRef, useState} from 'react';
 import {createContext} from "react";
 export  const CustomContext = createContext()
 const Context = (props) => {
@@ -26,6 +26,8 @@ const Context = (props) => {
     const [checkBoxZone,setCheckBoxZone] = useState(false) // choose others activity
     const [state,setState] = useState("default") // next in formZone
     const [chooseIndustry,setChooseIndustry] = useState("") // choose industry
+    const [_,setClickZone] = useState() //  do swiper true
+
 
 
 
@@ -37,7 +39,7 @@ const Context = (props) => {
         value,setValue,burger,setBurger,members,setMembers,fashion,setFashion,food,setFood
         ,checkBox,setCheckBox,request,setRequest,demo,setDemo,isActiveHamburger,setActiveHamburger,isActiveHamburgerMenu,
         setActiveHamburgerMenu,openModal,setOpenModal,chooseZone,setChooseZone,other,setOther,
-        checkBoxZone,setCheckBoxZone,state,setState,chooseIndustry,setChooseIndustry
+        checkBoxZone,setCheckBoxZone,state,setState,chooseIndustry,setChooseIndustry,setClickZone
 
     }
     return <CustomContext.Provider value={valueContext}>

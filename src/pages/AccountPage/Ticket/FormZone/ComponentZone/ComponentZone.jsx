@@ -19,8 +19,20 @@ import food from "./Picture/food-1.png"
 import foo2 from "./Picture/food-2.png"
 const ComponentZone = () => {
     const {chooseZone,setState,chooseIndustry} = useContext(CustomContext)
+    const [clickTrade,setClickTrade] = useState()
+    const [ClickInvest,setClickInvest] = useState()
+    const [ClickFashion,setClickFashion] = useState()
+    const [ClickFood,setClickFood] = useState()
+    const prevRefTrade = useRef(null)
+    const nextRefTrade = useRef(null)
+    const prevRefInvest = useRef(null)
+    const nextRefInvest = useRef(null)
+    const prevRefFashion = useRef(null)
+    const nextRefFashion = useRef(null)
+    const prevRefFood = useRef(null)
+    const nextRefFood = useRef(null)
 
-
+    // create custom navigation buttons for swiper in react
 
     return (
         <div className={'componentZone'}>
@@ -89,40 +101,13 @@ const ComponentZone = () => {
                 </p>
             </div>
             {
-                chooseZone === "Trade" ?  <TradeZone trade1={trade1} trade2={trade2}/> :
-                    chooseZone === "Invest" ? <InvestZone invest={invest} invest2={invest2} invest3={invest3} invest4={invest4}/> :
-                        chooseZone === 'Fashion' ? <FashionZone fashion={fashion}/> :
-                            chooseZone === "Food" ? <FoodZone food={food} food2={foo2}/>  : ""
+                chooseZone === "Trade" ?  <TradeZone setClickTrade={setClickTrade} prevRefTrade={prevRefTrade} nextRefTrade={nextRefTrade} trade1={trade1} trade2={trade2}/> :
+                    chooseZone === "Invest" ? <InvestZone setClickInvest={setClickInvest} prevRefInvest={prevRefInvest} nextRefInvest={nextRefInvest} invest={invest} invest2={invest2} invest3={invest3} invest4={invest4}/> :
+                        chooseZone === 'Fashion' ? <FashionZone setClickFashion={setClickFashion} prevRefFashion={prevRefFashion} nextRefFashion={nextRefFashion}   fashion={fashion}/> :
+                            chooseZone === "Food" ? <FoodZone setClickFood={setClickFood} prevRefFood={prevRefFood} nextRefFood={nextRefFood} food={food} food2={foo2}/>  : ""
             }
 
-            <div className="componentZone__box">
-                <div className="componentZone__content">
-                    <div  className="componentZone__oval">
-                        <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8 1.5L2.49976 8.3753C2.20758 8.74052 2.20758 9.25948 2.49976 9.62469L8 16.5" stroke="#A1CB5C" strokeWidth="3" strokeLinecap="round"/>
-                        </svg>
 
-                    </div>
-                    <div className="componentZone__block">
-                        <button className="componentZone__click">
-                            STANDART
-                        </button>
-                        <button className="componentZone__click">
-                            SILVER
-                        </button>
-                        <button className="componentZone__click">
-                            GOLD
-                        </button>
-                    </div>
-                    <div  className="componentZone__oval">
-                        <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M2 1.5L7.50024 8.3753C7.79242 8.74052 7.79242 9.25948 7.50024 9.62469L2 16.5"
-                                  stroke="#A1CB5C" strokeWidth="3" strokeLinecap="round"/>
-                        </svg>
-                    </div>
-                </div>
-                <Btn text={'Забронировать'}/>
-            </div>
         </div>
     );
 };
