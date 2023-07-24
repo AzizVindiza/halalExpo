@@ -49,7 +49,7 @@ const RowSection = () => {
                         <button onClick={() => changeLanguages('en')} className={`rowSection__lang ${i18n.language === "en" ?  'rowSection__lang_active' : ""}`}>EN</button>
                     </div>
                     {
-                        Object.keys(user).length === 0 ?
+                        Object.keys(user).length === 0  ?
                             <div className="rowSection__user">
                                 <div className="rowSection__box">
                                     <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
