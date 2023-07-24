@@ -2,11 +2,21 @@ import React, {useContext, useRef, useState} from 'react';
 import {CustomContext} from "../../../../../Context";
 import "./componentZone.sass"
 import Btn from "../../../../../components/Btn/Btn";
-import SwiperFirst from "./SwiperFirst/SwiperZone";
-import SwiperInvest from "./SwiperInvest/SwiperInvest";
-import SwiperZone from "./SwiperFirst/SwiperZone";
-import {useNavigate} from "react-router-dom";
+import InvestZone from "./InvestZone/InvestZone";
+import SwiperZone from "./SwiperZone/SwiperZone";
+import FoodZone from "./FoodZone/FoodZone";
 
+import FashionZone from "./FahionZone/FashionZone";
+import TradeZone from "./TradeZone/TradeZone";
+import trade1 from "./Picture/trade-1.png"
+import trade2 from "./Picture/trade-2.png"
+import invest from  "./Picture/invest-1.png"
+import invest2 from  "./Picture/invest-2.png"
+import invest3 from  "./Picture/invest-3.png"
+import invest4 from  "./Picture/invest-4.png"
+import fashion from "./Picture/fashion.png"
+import food from "./Picture/food-1.png"
+import foo2 from "./Picture/food-2.png"
 const ComponentZone = () => {
     const {chooseZone,setState,chooseIndustry} = useContext(CustomContext)
 
@@ -79,7 +89,10 @@ const ComponentZone = () => {
                 </p>
             </div>
             {
-                chooseZone === "Trade" ?  <SwiperZone/> : chooseZone === "Invest" ? <SwiperInvest/> : ""
+                chooseZone === "Trade" ?  <TradeZone trade1={trade1} trade2={trade2}/> :
+                    chooseZone === "Invest" ? <InvestZone invest={invest} invest2={invest2} invest3={invest3} invest4={invest4}/> :
+                        chooseZone === 'Fashion' ? <FashionZone fashion={fashion}/> :
+                            chooseZone === "Food" ? <FoodZone food={food} food2={foo2}/>  : ""
             }
 
             <div className="componentZone__box">

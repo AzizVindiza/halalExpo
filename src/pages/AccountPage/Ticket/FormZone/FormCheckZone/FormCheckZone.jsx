@@ -3,7 +3,7 @@ import {CustomContext} from "../../../../../Context";
 import {useForm, useFormContext} from "react-hook-form";
 import {objectIndustry} from "../ObjectIndustry/ObjectIndustry";
 
-const FormCheckZone = ({item}) => {
+const FormCheckZone = ({item,name,onBlur}) => {
     const {checkBoxZone,setCheckBoxZone,chooseIndustry,setChooseIndustry} = useContext(CustomContext)
 
    console.log(chooseIndustry)
@@ -11,7 +11,8 @@ const FormCheckZone = ({item}) => {
     return (
         <div className={'formZone__single'}>
             <input
-                name={"radio"}
+                onBlur={(e) => onBlur(e)}
+                name={name}
                 value={item}
                 onChange={(event) => setChooseIndustry(event.target.value)}
 

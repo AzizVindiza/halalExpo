@@ -52,6 +52,8 @@ import Ticket from "./pages/AccountPage/Ticket/Ticket";
 import PrivacyPolicy from "./pages/PrivacyPolicyPage/PrivacyPolicy";
 import TransferPage from "./pages/TransferPage/TransferPage";
 import B2b from "./pages/AccountPage/B2b/B2b";
+import Chat from "./pages/AccountPage/Chat/Chat";
+
 
 
 
@@ -101,6 +103,8 @@ const router = createBrowserRouter(
                             <Route path={'document'} element={<NotFoundPage/>}/>
                             <Route path={'meet'} element={<B2b/>}/>
                             <Route path={'chat'} element={<NotFoundPage/>}/>
+                            <Route path={'meet'} element={<NotFoundPage/>}/>
+                            <Route path={'chat'} element={<Chat/>}/>
                             <Route path={'sittings'} element={<NotFoundPage/>}/>
                         </Route>
 
