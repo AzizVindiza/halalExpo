@@ -32,12 +32,12 @@ const FoodCard = () => {
 
                         <h2 className="foodCard__h2">Количество мест: 10 павильонов формата Take&Go</h2>
                         <div className="foodCard__card">
-                            <div className="foodCard__img">
+                            <div className="foodCard__img img2">
                                 <img src={img2} alt=""/>
                             </div>
                             <span className="foodCard__span">В Food zone доступно 10 павильонов формата Take&Go для участников. Забронируйте место сейчас и позвольте гостям выставки насладиться вашими кулинарными изысками в удобном формате быстрого питания.</span>
                         </div>
-                        <div className="foodCard__text">
+                        <div className="foodCard__price">
                             <h3 className="foodCard__h3">Площадь одного павильона: 2м*2м</h3>
                             <p className="foodCard__p">$200</p>
                         </div>

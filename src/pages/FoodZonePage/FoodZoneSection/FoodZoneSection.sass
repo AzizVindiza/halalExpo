@@ -1,7 +1,5 @@
 @import "src/sass/base/mixins"
 .foodZone
-  &__img
-    border-radius: 20px
 
   &__h2
     @include text(800,45px,133%,#000)
@@ -10,7 +8,7 @@
   &__row
     display: flex
     justify-content: space-between
-  &__h4
+  &__p
     @include text(600,25px,133%,#000000)
     max-width: 590px
     margin-bottom: 169px
@@ -19,3 +17,59 @@
   &__h3
     @include text(600,18px,133%,#000000)
     max-width: 604px
+@media (max-width: 1201px)
+  .foodZone
+    &__p
+      @include text(600,20px,133%,#000)
+      max-width: 518px
+      margin-bottom: 214px
+    &__h3
+      max-width: 504px
+@media (max-width: 1025px)
+  .foodZone
+    &__img
+      width: 431px
+      height: 431px
+    &__p
+      @include text(600,18px,133%,#000)
+      max-width: 463px
+      margin-bottom: 198px
+    &__h3
+      @include text(600,14px,133%,#000)
+      max-width: 461px
+
+@media (max-width: 769px)
+  .foodZone
+    &__img
+      width: 342px
+      height: 342px
+    &__p
+      @include text(600,15px,133%,#000)
+      max-width: 303px
+      margin-bottom: 50px
+    &__h3
+      @include text(600,12px,133%,#000)
+      max-width: 303px
+@media (max-width: 481px)
+  .foodZone
+    &__row
+      flex-wrap: wrap
+    &__img
+      display: flex
+      margin: auto
+      padding-bottom: 38px
+    &__p
+      max-width: 430px
+      margin-bottom: 38px
+    &__h3
+      max-width: 430px
+
+@media (max-width: 369px)
+  .foodZone
+    &__p
+      @include text(600,14px,133%,#000)
+      max-width: 350px
+      margin-bottom: 20px
+    &__h3
+      @include text(600,12px,133%,#000)
+      max-width: 350px

@@ -10,12 +10,14 @@
     height: 410px
     padding: 25px 24px 24px 20px
 
+
     border-radius: 20px
   &__h2
     @include text(700,30px,133%,#000000)
   &__card
     display: flex
     justify-content: space-between
+
 
     margin-top: 26px
   &__span
@@ -24,6 +26,7 @@
     padding: 13px 12px
     border-radius: 5px
     border: 1px solid #FFF
+    height: fit-content
   &__h3
     @include text(700,18px,133%,#000)
   &__text
@@ -31,7 +34,14 @@
     justify-content: space-between
     text-align: center
     align-items: center
-    margin-top: 20px
+    margin-top: 25px
+  &__price
+    display: flex
+    justify-content: space-between
+    text-align: center
+    align-items: center
+    margin-top: 30px
+
   &__p
     @include text(700,18px,133%,#fff)
     padding: 8px 26px
@@ -43,3 +53,138 @@
   &__btn
     text-align: center
     padding: 45px 0 126px 0
+@media (max-width: 1201px)
+  .foodCard
+    &__price
+      margin-top: -10px
+    &__block
+      max-width: 545px
+      max-height: 384px
+      padding: 23px 22px
+    &__h2
+      @include text(700,28px,133%,#000)
+    &__img
+      width: 234px
+      height: 216px
+    &__span
+      @include text(500,14px,133%,#000)
+      max-width: 236px
+      padding: 12.2px 11.26px
+    &__h3
+      @include text(700,16px,133%,#000)
+    &__p
+      @include text(700,16px,133%,#000)
+      max-width: 98px
+    &__txt
+      @include text(600,20px,133%,#FF2E13)
+
+@media (max-width: 1025px)
+  .foodCard
+    &__text
+      margin-top: 15px
+    &__price
+      margin-top: 20px
+    &__block
+      max-width: 456px
+      max-height: 322px
+      padding: 19px 17px
+    &__h2
+      @include text(700,23px,133%,#000)
+    &__img
+      width: 196px
+      height: 181px
+    .img2
+      height: 143px
+    &__span
+      @include text(500,11px,133%,#000)
+      max-width: 198px
+      padding: 10.23px 9.45px
+    &__h3
+      @include text(700,14px,133%,#000)
+    &__p
+      @include text(700,14px,133%,#000)
+      max-width: 81px
+    &__txt
+      @include text(600,20px,133%,#FF2E13)
+@media (max-width: 769px)
+  .foodCard
+    &__wrapper
+      flex-wrap: wrap
+      display: flex
+      justify-content: center
+      padding: 74px 0 30px 0
+    &__price
+      margin-top: 10px
+
+    &__block
+      max-width: 67%
+      max-height: 322px
+      margin-bottom: 50px
+
+    &__h2
+      @include text(700,23px,133%,#000)
+    &__img
+      width: 196px
+      height: 181px
+    &__span
+      @include text(500,12px,133%,#000)
+      max-width: 200px
+    &__text
+      margin-top: 10px
+    &__h3
+      @include text(700,14px,133%,#000)
+
+    &__p
+      @include text(700,14px,133%,#000)
+      max-width: 98px
+    &__txt
+      @include text(600,20px,133%,#FF2E13)
+      max-width: 386px
+      margin: auto
+@media (max-width: 481px)
+  .foodCard
+    &__text
+      margin-top: -10px
+    &__price
+      margin-top: 15px
+
+    &__block
+      max-width: 80%
+      max-height: 322px
+
+    &__h2
+      @include text(700,20px,133%,#000)
+    &__img
+      width: 196px
+      height: 181px
+    &__span
+      @include text(500,11px,133%,#000)
+      max-width: 180px
+    &__h3
+      @include text(700,12px,133%,#000)
+    &__p
+      @include text(700,12px,133%,#000)
+      max-width: 98px
+    &__txt
+      @include text(600,20px,133%,#FF2E13)
+@media (max-width: 396px)
+  .foodCard
+    &__block
+      max-width: 100%
+    &__h2
+      @include text(700,16px,133%,#000)
+    &__img
+      width: 141px
+      height: 136px
+    &__text
+      flex-wrap: wrap
+      margin-top: 28px
+    &__price
+      flex-wrap: wrap
+      margin-top: auto
+
+    &__h3
+      @include text(700,15px,133%,#000)
+      margin-bottom: 12px
+
+
