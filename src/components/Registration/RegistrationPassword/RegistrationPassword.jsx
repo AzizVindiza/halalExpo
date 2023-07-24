@@ -21,9 +21,6 @@ const RegistrationPassword = ({title , name} ) => {
                         value: true
                     },
                     pattern: {
-
-
-
                         message : "Используйте только буквы и цифры^[a-zA-Z0-9]+$",
                         value :  /^[a-zA-Z0-9]+$/,
                     },
