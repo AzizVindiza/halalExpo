@@ -1,0 +1,27 @@
+@import "src/sass/base/mixins"
+
+.B2bCard
+  &__wrapper
+    width: 524px
+    height: 386px
+    background: #FFFFFF
+    border-radius: 4px
+  &__row
+    padding: 16px 16px 0 16px
+    display: flex
+    justify-content: space-between
+  &__status
+    border-radius: 28px
+    padding: 0 5px
+    background: #00CC45
+    display: flex
+    align-items: center
+    column-gap: 5px
+  &__span
+    @include text(600,13px,180%,#FFF)
+  &__date
+    @include text(500,14px,180%,#00000040)
+  &__box
+    padding: 17px 30px 30px 30px
+    display: flex
+    column-gap: 15px

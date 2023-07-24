@@ -21,9 +21,9 @@ const InvestCard = () => {
                 <p className="investCard__p">
                     Стоимость участия с учетом раннего бронивания актуальна до 20 июля
                 </p>
-                <button onClick={() => setRequest(true)} className="investCard__btn">
-                    Перейти к пакетам
-                </button>
+                {/*<button onClick={() => setRequest(true)} className="investCard__btn">*/}
+                {/*    Перейти к пакетам*/}
+                {/*</button>*/}
             </div>
 
 
