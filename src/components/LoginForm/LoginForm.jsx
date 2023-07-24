@@ -8,13 +8,15 @@ import {useLoginMutation} from "../../redux/ApiSlice";
 import {fillRegister} from "../../redux/reducers/userSlice";
 import {toast} from "react-toastify";
 import axios from "axios";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {useNavigate} from "react-router-dom";
+import {use} from "i18next";
 
 
 const LoginForm = () => {
     const {setLogin, passwordShown, setPasswordShown} = useContext(CustomContext)
     //closeLogin and toggle password
+    const {user} = useSelector((store) => store.user)
 
     const navigate = useNavigate() // send to accountPage
     const [fillLogin, {
@@ -33,14 +35,14 @@ const LoginForm = () => {
 
     } = useForm();
 
-    const dispatch = useDispatch()
+        const dispatch = useDispatch()
 
     const onSubmit = (data) => {
         try {
             fillLogin(data)
                 .unwrap()
                 .then((payload) => {
-                    dispatch(fillRegister(payload))
+                        dispatch(fillRegister(payload))
                     navigate('account/profile')
                     toast.success('Вы вошли в личный кабинет', {
                         position: "top-center",
