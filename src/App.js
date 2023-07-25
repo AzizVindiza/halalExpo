@@ -34,7 +34,7 @@ import InvestZonePage from "./pages/InvestZonePage/InvestZonePage";
 
 import Aside from "./pages/AccountPage/Aside/Aside";
 import React from "react";
-import Profile from "./pages/AccountPage/ProfileSection/Profile/Profile";
+import Profile from "./pages/AccountPage/ProfileSection/PaticipantSectionAside/Profile/Profile";
 import Footer from "./Layout/Footer/Footer";
 import Header from "./Layout/Header/Header";
 import ProfileSection from "./pages/AccountPage/ProfileSection/ProfileSection";
