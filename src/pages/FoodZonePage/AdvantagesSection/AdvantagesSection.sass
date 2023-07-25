@@ -37,5 +37,28 @@
       flex-direction: column
 @media (max-width: 1025px)
 @media (max-width: 769px)
+  .advantages
+    &__h3
+      @include text(700,20px,133%,#000)
+    &__p
+      @include text(500,15px,133%,#000)
+    &__card
+      width: 47%
+
+    &__wrapper
+      display: flex
+      justify-content: space-between
+
+
 @media (max-width: 481px)
+  .advantages
+    &__h3
+      @include text(700,18px,133%,#000)
+
+    &__card
+      width: 100%
+      flex-direction: revert
+    &__wrapper
+      flex-direction: column
+
 @media (max-width: 396px)
