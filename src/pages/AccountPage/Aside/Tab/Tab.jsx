@@ -12,7 +12,7 @@ const Tab = ({item}) => {
                     user.type_register === "Посетитель"  ?
                     item.filter((el) => el.title !== "Управление участием" && el.title !== 'Документы').map((item) => {
                         return (
-                            <NavLink className={({isActive}) => (
+                            <NavLink key={item} className={({isActive}) => (
                                 !isActive ? "tab__links" : "tab__links_active"
                             )} to={item.path}>
                                 <div className="tab__svg">
@@ -28,7 +28,7 @@ const Tab = ({item}) => {
                             {
                                 item.map((item) => {
                                     return (
-                                        <NavLink className={({isActive}) => (
+                                        <NavLink key={item} className={({isActive}) => (
                                             !isActive ? "tab__links" : "tab__links_active"
                                         )} to={item.path}>
                                             <div className="tab__svg">

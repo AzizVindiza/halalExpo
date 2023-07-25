@@ -90,7 +90,6 @@ const RegistrationParticipant = () => {
                 </span>
             </span>
                     </label>
-                    {/*<RegistrationUploadInput name={"photo_company"} title={"Загрузите устав компании (документ/pdf)"}/>*/}
                 </div>
                 <div className="registration__column">
                     <h3 className="registration__h3">Реквизиты <br/> банковского счета</h3>
