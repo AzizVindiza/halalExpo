@@ -1,6 +1,6 @@
 import React from 'react';
 import "./dataBoss.sass"
-import BtnProfile from "../../../../components/BtnProfile/BtnProfile";
+import BtnProfile from "../../../../../components/BtnProfile/BtnProfile";
 import {useSelector} from "react-redux";
 
 const DataBoss = () => {
@@ -12,16 +12,16 @@ const DataBoss = () => {
                 <div className="dataBoss__left">
                     <h2 className="dataBoss__h2">Данные о руководителя</h2>
                     <div className="dataBoss__block">
-                        <h3 className="dataBoss__h3">{user.name_manager && user.name_manager}</h3>
+                        <h3 className="dataBoss__h3">{user.name_manager}</h3>
                         <span className="dataBoss__span">(Руководитель)</span>
                     </div>
                     <div className="dataBoss__block">
                         <h4 className="dataBoss__h4">Дата рождения</h4>
-                        <span className="dataBoss__span">{user.birth_manager && user.birth_manager}</span>
+                        <span className="dataBoss__span">{user.birth_manager}</span>
                     </div>
                     <div className="dataBoss__block">
                         <h4 className="dataBoss__h4">ИНН</h4>
-                        <div className="dataBoss__span">2132435457688990</div>
+                        <div className="dataBoss__span">{user.inn}</div>
                     </div>
 
                     <div className="dataBoss__block">
@@ -42,7 +42,7 @@ const DataBoss = () => {
                     </div>
                     <div className="dataBoss__block">
                         <h4 className="dataBoss__h4">Email</h4>
-                        <div className="dataBoss__span">Kaybekovakyzzhibek@gmail.com</div>
+                        <div className="dataBoss__span">{user.email}</div>
                     </div>
                     <BtnProfile text={'Отправить запрос на редактирование'}/>
 
