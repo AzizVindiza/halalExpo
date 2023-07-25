@@ -1,9 +1,8 @@
 @import "src/sass/base/mixins"
 
-.B2bParticipant
-
+.B2bVisitor
   width: 524px
-  height: fit-content
+  height: 386px
   background: #FFF
   &__row
     padding: 16px
@@ -39,16 +38,19 @@
   &__zone
     margin-top: 20px
     display: flex
-    background: #F4F7FF
-    padding: 10px
-  &__place
-    width: 200px
+  &__country
+    width: 240px
+
+
   &__h3
-    @include text(800,13px,150%,#000)
+    @include text(500,16px,180%,#00000050)
   &__span3
-    @include text(600,18px,150%,#00000070)
+    @include text(600,18px,150%,#000000)
   &__box
-    margin-top: 25px
+    margin-top: 33px
+    display: flex
+    align-items: center
+
   &__flex
     display: flex
     column-gap: 5px
@@ -56,6 +58,9 @@
     @include text(600,14px,180%,#000)
   &__span4
     @include text(500,14px,180%,#03C)
+  &__date
+    width: 240px
+
   &__btn
     @include text(600,16px,180%,#FF2E13)
     border-radius: 4px
