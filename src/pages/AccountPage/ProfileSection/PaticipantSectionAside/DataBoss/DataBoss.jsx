@@ -26,7 +26,7 @@ const DataBoss = () => {
 
                     <div className="dataBoss__block">
                         <h4 className="dataBoss__h4">Действующий на основании</h4>
-                        <span className={'dataBoss__span'}>+78978987878</span>
+                        <span className={'dataBoss__span'}>{user.active_manager}</span>
                     </div>
                     <h4 className="dataBoss__h4">+Добавить номер телефона</h4>
                 </div>
@@ -34,11 +34,11 @@ const DataBoss = () => {
                     <h2 className="dataBoss__h2">Контактное лицо</h2>
                     <div className="dataBoss__block">
                         <h4 className="dataBoss__h4">ФИО</h4>
-                        <span className="dataBoss__span">Каныбекова Кызжибек</span>
+                        <span className="dataBoss__span">{user.name_face}</span>
                     </div>
                     <div className="dataBoss__block">
                         <h4 className="dataBoss__h4">Номер телефона</h4>
-                        <span className="dataBoss__span">+996 770777777</span>
+                        <span className="dataBoss__span">{user.phone_face}</span>
                     </div>
                     <div className="dataBoss__block">
                         <h4 className="dataBoss__h4">Email</h4>

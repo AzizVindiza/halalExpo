@@ -15,22 +15,18 @@ const DataCompany = () => {
                     <li className="datacompany__li">Направление</li>
                 </ul>
                 <div className="datacompany__list">
-                    <label htmlFor="" className="datacompany__label">
-                        <span>{user.company_one}</span>
-                        <input type="text" className="datacompany__input"/>
-                    </label>
-                      <label htmlFor="" className="datacompany__label">
-                          <span>{user.company_two}</span>
-                        <input type="text" className="datacompany__input"/>
-                     </label>
-                      <label htmlFor="" className="datacompany__label">
-                          <span>{user.number_of_employees}</span>
-                        <input type="text" className="datacompany__input"/>
-                    </label>
-                      <label htmlFor="" className="datacompany__label">
-                          <span>{user.other_trade}</span>
-                        <input type="text" className="datacompany__input"/>
-                    </label>
+                    <div  className="datacompany__label">
+                        <span className={'datacompany__span'}>{user.company_one}</span>
+                    </div>
+                      <div  className="datacompany__label">
+                          <span className={'datacompany__span'}>{user.company_two}</span>
+                     </div>
+                      <div  className="datacompany__label">
+                          <span className={'datacompany__span'}>{user.number_of_employees}</span>
+                    </div>
+                      <div  className="datacompany__label">
+                          <span className={'datacompany__span'}>{user.other_trade}</span>
+                    </div>
                 </div>
                 <ul className="datacompany__list">
                     <li className="datacompany__li">Страна</li>
@@ -40,22 +36,18 @@ const DataCompany = () => {
                 </ul>
                 <div className="datacompany__list">
 
-                    <label htmlFor="" className="datacompany__label">
-                        <span>{user.country}</span>
-                        <input type="text" className="datacompany__input"/>
-                    </label>
-                      <label htmlFor="" className="datacompany__label">
-                          <span>{user.city}</span>
-                        <input type="text" className="datacompany__input"/>
-                    </label>
-                      <label htmlFor="" className="datacompany__label">
-                          <span>{user.address_one}</span>
-                        <input type="text" className="datacompany__input"/>
-                    </label>
-                      <label htmlFor="" className="datacompany__label">
-                          <span>{user.address_two}</span>
-                        <input type="text" className="datacompany__input"/>
-                    </label>
+                    <div  className="datacompany__label">
+                        <span className={'datacompany__span'}>{user.country}</span>
+                    </div>
+                      <div  className="datacompany__label">
+                          <span className={'datacompany__span'}>{user.city}</span>
+                    </div>
+                      <div  className="datacompany__label">
+                          <span className={'datacompany__span'}>{user.address_one}</span>
+                    </div>
+                      <div  className="datacompany__label">
+                          <span className={'datacompany__span'}>{user.address_two}</span>
+                    </div>
                 </div>
             </div>
             <h3 className="datacompany__h3">Описание</h3>
