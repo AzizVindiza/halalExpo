@@ -27,6 +27,7 @@ const Context = (props) => {
     const [state,setState] = useState("default") // next in formZone
     const [chooseIndustry,setChooseIndustry] = useState("") // choose industry
     const [_,setClickZone] = useState() //  do swiper true
+    const [fileCompany,setFileCompany ] = useState(null)
 
 
 
@@ -39,7 +40,8 @@ const Context = (props) => {
         value,setValue,burger,setBurger,members,setMembers,fashion,setFashion,food,setFood
         ,checkBox,setCheckBox,request,setRequest,demo,setDemo,isActiveHamburger,setActiveHamburger,isActiveHamburgerMenu,
         setActiveHamburgerMenu,openModal,setOpenModal,chooseZone,setChooseZone,other,setOther,
-        checkBoxZone,setCheckBoxZone,state,setState,chooseIndustry,setChooseIndustry,setClickZone
+        checkBoxZone,setCheckBoxZone,state,setState,chooseIndustry,setChooseIndustry,setClickZone,
+        fileCompany,setFileCompany
 
     }
     return <CustomContext.Provider value={valueContext}>
