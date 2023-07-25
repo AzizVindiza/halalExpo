@@ -10,6 +10,20 @@
     display: flex
   &__link
     @include text(600,16px,180%,#000)
+    border-bottom: 2px solid transparent
+    transition: 0.5s
+    &:hover
+      border-bottom: 2px solid blue
+
+    &.active
+      border-bottom: 2px solid blue
+      color: #03C
+
+
+
+
+
   &__box
     display: flex
     margin-top: 35px
+
