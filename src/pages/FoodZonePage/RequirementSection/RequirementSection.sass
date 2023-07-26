@@ -37,3 +37,26 @@
     display: flex
     justify-content: center
     position: relative
+@media (max-width: 769px)
+  .requirement
+    &__h2
+      @include text(800,25px,133%,#000)
+    &__h3
+      @include text(600,18px,133%,#000)
+    &__p
+      @include text(500,14px,133%,#000)
+    .task-card__numb
+      @include text(900,180px,133%,#000)
+    &__txt
+      margin-top: 70px
+
+@media (max-width: 481px)
+  .requirement
+    &__h2
+      @include text(800,20px,133%,#000)
+@media (max-width: 396px)
+  .requirement
+    &__h2
+      @include text(800,16px,133%,#000)
+    &__h3
+      @include text(600,20px,133%,#000)
