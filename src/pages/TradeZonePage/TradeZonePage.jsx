@@ -6,11 +6,9 @@ import img from "./TRADE ZONE.png";
 const TradeZonePage = () => {
     return (
         <>
-            {/*<TradeFirst/>*/}
-            {/*<TradeSecond/>*/}
-            <div style={{width: "1440px"}}>
-                <img src={img} alt="fashion"/>
-            </div>
+            <TradeFirst/>
+            <TradeSecond/>
+
         </>
     );
 };
