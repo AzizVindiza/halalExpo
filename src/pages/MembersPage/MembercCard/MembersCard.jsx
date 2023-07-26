@@ -4,10 +4,10 @@ import MembersModal from "../MembersModal/MembersModal";
 import {CustomContext} from "../../../Context";
 const MembersCard = ({obj}) => {
     const  {setOpenModal,openModal} = useContext(CustomContext)
-    // onClick={() => setOpenModal(true)}
+
     return (
         <>
-            <section   className="membersCard">
+            <section  onClick={() => setOpenModal(true)}  className="membersCard">
                 <div className="membersCard__container">
                     <div className="membersCard__first">
                         <div className="membersCard__img">
