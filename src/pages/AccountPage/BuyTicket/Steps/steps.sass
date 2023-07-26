@@ -1,0 +1,38 @@
+@import "/src/sass/base/mixins"
+
+
+
+.steps
+  margin-top: 84px
+  &__wrapper
+    display: flex
+    flex-direction: column
+    row-gap: 80px
+  &__row
+    display: flex
+    align-items: center
+    column-gap: 10px
+  &__img
+    width: 80px
+    height: 80px
+    img
+      width: inherit
+      height: inherit
+  &__p
+    @include text(500,22px,133%,#000)
+  &__btn
+    margin-top: 10px
+    padding: 10px 30px
+    background: #2489FF
+    @include text(500,18px,133%,#FFF)
+    border-radius: 8px
+  &__notice
+    display: flex
+    column-gap: 5px
+  &__span
+    @include text(500,22px,133%,#2489FF)
+  &__span2
+    @include text(500,18px,133%,#616060)
+
+
+

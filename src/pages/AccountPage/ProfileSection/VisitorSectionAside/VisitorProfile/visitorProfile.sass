@@ -1,0 +1,42 @@
+@import "/src/sass/base/mixins"
+
+.VisitorProfile
+
+  &__wrapper
+    display: flex
+    flex-direction: column
+    row-gap: 25px
+
+  &__box
+    display: flex
+    flex-direction: column
+    row-gap: 25px
+    border: 1px solid rgba(0, 0, 0, 0.20)
+    padding: 30px 20px
+
+  &__h2
+    @include text(600,22px,133%,#000)
+  &__h3
+    margin-top: 5px
+    @include text(500,15px,133%,#237EE8)
+  &__span
+    @include text(400,18px,133%,#00000060)
+    text-decoration-line: underline
+  &__row
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &__edit
+
+    border-radius: 4px
+    column-gap: 5px
+    display: flex
+    align-items: center
+    width: fit-content
+    padding: 10px
+    background: #2489FF
+  &__btn
+    background: inherit
+    color: #FFFFFF
+
+

@@ -53,6 +53,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicyPage/PrivacyPolicy";
 import TransferPage from "./pages/TransferPage/TransferPage";
 import B2b from "./pages/AccountPage/B2b/B2b";
 import Chat from "./pages/AccountPage/Chat/Chat";
+import BuyTicket from "./pages/AccountPage/BuyTicket/BuyTicket";
 
 
 
@@ -106,6 +107,8 @@ const router = createBrowserRouter(
                             <Route path={'meet'} element={<NotFoundPage/>}/>
                             <Route path={'chat'} element={<Chat/>}/>
                             <Route path={'sittings'} element={<NotFoundPage/>}/>
+                            <Route path={'buyTicket'} element={<BuyTicket/>}/>
+
                         </Route>
 
                 <Route path="test" element={<UserTicket/>}/>
