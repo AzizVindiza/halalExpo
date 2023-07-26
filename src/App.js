@@ -53,11 +53,9 @@ import PrivacyPolicy from "./pages/PrivacyPolicyPage/PrivacyPolicy";
 import TransferPage from "./pages/TransferPage/TransferPage";
 import B2b from "./pages/AccountPage/B2b/B2b";
 import Chat from "./pages/AccountPage/Chat/Chat";
-<<<<<<< HEAD
 import MembersUser from "./pages/MembersPage/MembersUser/MembersUser";
-=======
 import BuyTicket from "./pages/AccountPage/BuyTicket/BuyTicket";
->>>>>>> c0fb549672b277f143d0e8a5951ed9908c2b68ff
+
 
 
 

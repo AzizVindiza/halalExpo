@@ -14,7 +14,7 @@ const MembersCard = ({obj}) => {
                     <div className="membersCard__container">
                         <div className="membersCard__first">
                             <div className="membersCard__img">
-                                <img src={obj.photo_company} alt={obj.company_one}/>
+                                <img src={obj.image_logo} alt={obj.company_one}/>
                             </div>
                             <h2 className="membersCard__h2">{obj.company_one}</h2>
                         </div>

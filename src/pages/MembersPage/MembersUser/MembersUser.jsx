@@ -6,6 +6,7 @@ import {useLocation, useNavigate, useParams} from "react-router-dom";
 import axios from "axios";
 import {useGetMemberUserQuery} from "../../../redux/ApiSlice";
 import excludeVariablesFromRoot from "@mui/material/styles/excludeVariablesFromRoot";
+import MemberLoading from "./MemberLoading";
 
 const MembersUser = () => {
     const params = useParams()
@@ -32,7 +33,7 @@ const MembersUser = () => {
                         <div className="membersUser__wrapper">
                             <div className="membersUser__left">
                                 <div className="membersUser__logo">
-                                    <img src={memberUser.photo_company} className={'membersUser__img'} alt=""/>
+                                    <img src={memberUser.image_logo} className={'membersUser__img'} alt=""/>
                                 </div>
                                 <h3 className="membersUser__nameCompany">{memberUser.company_one}</h3>
                                 <div className="membersUser__wrapp">
@@ -72,7 +73,7 @@ const MembersUser = () => {
                                         <p className="membersUser__text">{memberUser.web_site}</p>
                                     </div>
                                     <div className="membersUser__social">
-                                        <a href={memberUser.instagram} className="membersUser__socialLink">
+                                        <a href={memberUser.instagram ? memberUser.instagram : "#"} className="membersUser__socialLink">
                                             <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -81,7 +82,7 @@ const MembersUser = () => {
                                             </svg>
 
                                         </a>
-                                        <a href={memberUser.facebook} className="membersUser__socialLink">
+                                        <a href={memberUser?.facebook} className="membersUser__socialLink">
                                             <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -90,7 +91,7 @@ const MembersUser = () => {
                                             </svg>
 
                                         </a>
-                                        <a href={memberUser.twitter} className="membersUser__socialLink">
+                                        <a href={"https://www.youtube.com/watch?v=ujDESWcCaio"} className="membersUser__socialLink">
                                             <svg width="27" height="28" viewBox="0 0 27 28" fill="none"
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <g clipPath="url(#clip0_4084_5688)">
@@ -131,7 +132,7 @@ const MembersUser = () => {
                     </div>
                 </div> :
                     error ? "error" :
-                        isLoading ? "loading..." :
+                        isLoading ? <> <MemberLoading/> </> :
                             null
             }
         </>
