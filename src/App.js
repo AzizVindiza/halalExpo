@@ -53,6 +53,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicyPage/PrivacyPolicy";
 import TransferPage from "./pages/TransferPage/TransferPage";
 import B2b from "./pages/AccountPage/B2b/B2b";
 import Chat from "./pages/AccountPage/Chat/Chat";
+import MembersUser from "./pages/MembersPage/MembersUser/MembersUser";
 
 
 
@@ -114,7 +115,7 @@ const router = createBrowserRouter(
                 <Route path="foodZone" element={<FoodZone/>}/>
 
                 <Route path="fashionzone" element={<FashionZonePage/>}/>
-
+                <Route path="members/:id" element={<MembersUser/>}/>
 
             </Route>
 

@@ -27,9 +27,15 @@ export const apiSlice = createApi({
                 method : "POST",
                 body
             })
+        }),
+        getMemberUser : builder.query({
+            query : (arg) => ({
+                url : `user/${arg}`,
+                method : "GET"
+            })
         })
     })
 
 })
 
-export const {useAddPartnerMutation,useLoginMutation,useAddFeedbackMutation} = apiSlice
+export const {useAddPartnerMutation,useLoginMutation,useAddFeedbackMutation,useGetMemberUserQuery} = apiSlice
