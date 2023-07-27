@@ -4,11 +4,11 @@ import {createApi,fetchBaseQuery} from "@reduxjs/toolkit/query/react";
 
 export const apiSlice = createApi({
     reducerPath : "apiSlice",
-    baseQuery :fetchBaseQuery({baseUrl:"https://shark-app-65hkc.ondigitalocean.app/"}),
+    baseQuery :fetchBaseQuery({baseUrl: process.env.REACT_APP_URL}),
     endpoints:(builder)=> ({
         addPartner: builder.mutation({
             query:(body)=>({
-                url:"application/",
+                url:"/application/",
                 method:"POST",
                 body
             })
@@ -23,13 +23,19 @@ export const apiSlice = createApi({
         }),
         addFeedback: builder.mutation({
             query :(body) => ({
-                url : "feedback/",
+                url : "/feedback/",
                 method : "POST",
                 body
+            })
+        }),
+        getMemberUser : builder.query({
+            query : (arg) => ({
+                url : `/user/${arg}`,
+                method : "GET"
             })
         })
     })
 
 })
 
-export const {useAddPartnerMutation,useLoginMutation,useAddFeedbackMutation} = apiSlice
+export const {useAddPartnerMutation,useLoginMutation,useAddFeedbackMutation,useGetMemberUserQuery} = apiSlice

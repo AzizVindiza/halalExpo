@@ -3,7 +3,6 @@ import ReactFlagsSelect from "react-flags-select";
 import "./country.sass"
 const CountryFlag = () =>  {
     const [select, setSelect] = useState("kg");
-    const onSelect = (code) => setSelect(code);
 
     return (
         <div className="country">
@@ -11,7 +10,7 @@ const CountryFlag = () =>  {
                 searchable={true}
                 className={'country__flags'}
                 selected={select}
-                onSelect={onSelect}
+                onSelect={(code) => setSelect(code)}
             />
         </div>
     );

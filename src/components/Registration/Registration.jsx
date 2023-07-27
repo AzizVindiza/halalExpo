@@ -10,91 +10,17 @@ import axios from "axios";
 import RegistrationParticipant from "./RegistrationParticipant/RegistrationParticipant";
 import RegistrationGover from "./RegistrationGover/RegistrationGover";
 import RegistrationExpert from "./RegistrationExpert/RegistrationExpert";
+import ChooseIndustry from "./ChooseIndustry/ChooseIndustry";
+import ChooseTypeRegistration from "./ChooseTypeRegistration/ChooseTypeRegistration";
 
 
 const Registration = () => {
-
-    const methods = useForm({mode: "onBlur"});
-    // использую переменную methods чтобы передавать вложенным инпутам
     const {setClose, role, members} = useContext(CustomContext)
 
-    const onSubmit = (data) => {
-        const id = toast.loading("Please wait...")
-        try {
-            if(data.type_register === "Участник"){
-                data = {
-                    ...data,
-                    photo_company: data.photo_company[0],
-                    image_logo: data.image_logo[0],
-                }
-            }else if (data.type_register === "СМИ"){
-                data = {
-                    ...data,
-                    image_certificate_smi: data.image_certificate_smi[0],
-                    image_logo: data.image_logo[0],
-                }
-            }
-            console.log(data)
-
-            // console.log(data)
-
-            axios.post('https://shark-app-65hkc.ondigitalocean.app/user/', data, {
-                headers: {
-                    'Content-Type': 'multipart/form-data'
-                }
-            }).then((res) => {
-                toast.update(id, {
-                    render: "Вы зарегистрировались",
-                    type: "success",
-                    isLoading: false,
-                    position: "top-center",
-                    autoClose: 5000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "light"
-                });
-                setClose(false)
-            }).catch((err) => {
-                console.log(err)
-                toast.update(id, {
-                    render: err.response.data.email ? err.response.data.email[0] : err.response.data.workEmail ? err.response.data.workEmail[0] :'Ошибка в сервере!' ,
-                    type: "error",
-                    isLoading: false,
-                    position: "top-center",
-                    autoClose: 5000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "light"
-                });
-            })
-
-        } catch (error) {
-            toast.update(id, {
-                render: 'Ошибка в сервере!', type: "error", isLoading: false,
-                position: "top-center",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light"
-            });
-        }
-    }
-    // вытаскиваю функцию setClose из контекста чтобы закрывать форму при клике на крестик
     return (
-        <FormProvider {...methods} >{/*передаю все методы из rhf в FormProvider чтобы все вложенные инпуты могли испольозвать*/}
             <div className="registration">
                 <div className="registration__wrapper">
-                    <form className='registration__form'
-                          onSubmit={methods.handleSubmit(onSubmit)}>{/*форма*/}{/*беру функцию handleSubmit из rhf и передаю onSubmit*/}
+                    <div className='registration__form'>
                         <div className="registration__title">
                             <h2 className="registration__h2">Регистрация</h2>
                             <button onClick={() => setClose(false)} className="registration__close">
@@ -108,8 +34,7 @@ const Registration = () => {
                             </button>
                         </div>
                         <div className="registration__container">
-                            <RegistrationSelect title={"В качестве кого вы хотите посетить HIT EXPO?"} name={"type_register"}/>
-
+                            <ChooseTypeRegistration title={"В качестве кого вы хотите посетить HIT EXPO?"} name={"type_register"}/>
                             {
                                 role === "Участник" ? <RegistrationParticipant/>
                                     : role === "Посетитель" ? <RegistrationExpert/>
@@ -118,15 +43,11 @@ const Registration = () => {
                                                 : role === "Представитель государственных органов" ? <RegistrationGover/>
                                                     : ""
                             }
-
-                            <Btn text={"Зарегистрироваться"} type={"submit"}/>
-                            {/*главная кнопка отправки type submit*/}
                         </div>
 
-                    </form>
+                    </div>
                 </div>
             </div>
-        </FormProvider>
     );
 };
 

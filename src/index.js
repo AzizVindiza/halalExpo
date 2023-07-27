@@ -11,31 +11,28 @@ import Loader from "./components/Registration/Loading/Loader";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-let fullfilled = false;
-let promise = null;
+// let fullfilled = false;
+// let promise = null;
 
-const useTimeout = (ms) => {
-    if (!fullfilled) {
-        throw promise = new Promise((res) => {
-            setTimeout(() => {
-                fullfilled = true;
-                res();
-            }, ms);
-        });
-    }
-};
-
-const Main = () => {
-    useTimeout(4000);
-};
+// const useTimeout = (ms) => {
+//     if (!fullfilled) {
+//         throw promise = new Promise((res) => {
+//             setTimeout(() => {
+//                 fullfilled = true;
+//                 res();
+//             }, ms);
+//         });
+//     }
+// };
+//
+// const Main = () => {
+//     useTimeout(4000);
+// };
 root.render(
     <Provider store={store}>
         <PersistGate loading={null} persistor={persist}>
             <Context>
-                <Suspense fallback={<Loader/>}>
-                    <Main>
-                        <App/>
-                    </Main>
+                <Suspense fallback={null}>
                     <App/>
                 </Suspense>
             </Context>

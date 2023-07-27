@@ -19,7 +19,8 @@ const PictureSection = () => {
             <div className="container picture__container">
                 <div className="picture__text">Галерея</div>
                 <Swiper
-                    slidesPerView={3}
+                    slidesPerView={5}
+                    spaceBetween={10}
                     breakpoints={{
                         1025:{
 
@@ -40,7 +41,7 @@ const PictureSection = () => {
                     centeredSlides={true}
                     loop={true}
                     freeMode={true}
-
+                    initialSlide={2}
                     modules={[Autoplay]}
                     className="picture__Swiper"
                 >
