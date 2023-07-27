@@ -38,7 +38,7 @@ const Registration = () => {
 
             // console.log(data)
 
-            axios.post('https://shark-app-65hkc.ondigitalocean.app/user/', data, {
+            axios.post(`${process.env.REACT_APP_REST}/user/`, data, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
