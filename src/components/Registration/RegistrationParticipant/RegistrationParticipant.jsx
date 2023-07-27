@@ -19,7 +19,6 @@ import Btn from "../../Btn/Btn";
 const RegistrationParticipant = () => {
     const methods = useForm({mode: "onBlur"});
 
-
     const onSubmit = (data) => {
         const id = toast.loading("Please wait...")
         try {
@@ -47,6 +46,7 @@ const RegistrationParticipant = () => {
                     progress: undefined,
                     theme: "light"
                 });
+                console.log(data)
                 setClose(false)
             }).catch((err) => {
                 console.log(err)

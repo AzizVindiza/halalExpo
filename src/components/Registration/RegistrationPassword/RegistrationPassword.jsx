@@ -13,17 +13,20 @@ const RegistrationPassword = ({title , name} ) => {
     return (
         <>
             <label className="registration__label">
-                <h3 className="registration__label-title">Придумайте пароль<span className="registration__star">*</span> <span
-                    className="registration__error"> {errors.password && errors.password.message}</span></h3>
+                <h3 className="registration__label-title">Придумайте пароль<span className="registration__star">*</span></h3>
                 <input className="registration__input" ref={password} type={passwordShown ? "text" : 'password'} {...register('password', {
                     required: {
                         message: "Это поле обязательно к заполнению!",
                         value: true
                     },
                     pattern: {
-                        message : "Используйте только буквы и цифры^[a-zA-Z0-9]+$",
+                        message : "Должен содержать комбинацию из цифр и латинских букв ^[a-zA-Z0-9]+$",
                         value :  /^[a-zA-Z0-9]+$/,
                     },
+                    minLength : {
+                        message : "Должен состоять не менее чем из 5 символов",
+                        value : 5,
+                    }
                 })}/>
                 <span  onClick={() => setPasswordShown(!passwordShown)} className="registration__eye">
                             {
@@ -31,6 +34,9 @@ const RegistrationPassword = ({title , name} ) => {
                             }
                         </span>
             </label>
+            <div className={'registration__errorPassword'}>
+                {errors.password && errors.password.message}
+            </div>
             <label className="registration__label">
                 <h3 className="registration__label-title">Подтвердите пароль<span className="registration__star">*</span> <span
                     className="registration__error"> {errors.confirm_password && errors.confirm_password.message}</span></h3>

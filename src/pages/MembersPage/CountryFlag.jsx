@@ -7,6 +7,7 @@ const CountryFlag = () =>  {
     return (
         <div className="country">
             <ReactFlagsSelect
+                value={'asad'}
                 searchable={true}
                 className={'country__flags'}
                 selected={select}

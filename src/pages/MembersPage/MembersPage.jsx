@@ -9,8 +9,8 @@ import ChooseZone from "./ZoneSection/ZoneSection";
 import axios from "axios";
 const MembersPage = () => {
     const [phoneSelect,setPhoneSelect] = useState('')
-    const [category,setCategory] = useState('Выберите') // choose category
-    const [zone,setZone] = useState('Выберите') // choose
+    const [category,setCategory] = useState('- Категории -') // choose category
+    const [zone,setZone] = useState('- Зоны -') // choose
     const [users,setUsers] = useState([])
     useEffect(() => {
         axios
@@ -57,7 +57,6 @@ const MembersPage = () => {
                         users.filter((obj)=> obj.type_register === "Участник").map((obj)=>(
                             <MembersCard obj={obj}/>
                         ))
-
                     }
 
                 </div>
