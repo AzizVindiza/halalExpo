@@ -11,8 +11,9 @@
     text-align: center
     margin-bottom: 50px
   &__p
+    margin-bottom: 50px
     @include text(500,25px,133%,#2E2E2E)
-    width: 1105px
+    max-width: 1105px
     text-align: center
 
   &__img
@@ -28,10 +29,108 @@
   &__h4
     @include text(600,20px,133%,#03C)
     text-transform: uppercase
+  &__box
+    display: flex
+    width: 100%
+    justify-content: space-around
+    padding: 100px 0 145px 0
+  &__img2
+    padding-bottom: 80px
+  &__span
+    @include text(600,20px,133%,#FF2E13)
+    margin-top: 150px
+    text-align: center
 
 @media (max-width: 1201px)
+  .trade-second
+    &__h2
+      font-size: 38px
+    &__p
+      max-width: 1105px
+      font-size: 24px
+    &__img1
+      width: 893px
+      height: 489px
+    &__img2
+      width: 762px
+      height: 498px
+
+
 @media (max-width: 1025px)
+  .trade-second
+    &__h2
+      font-size: 36px
+    &__p
+      max-width: 926px
+      font-size: 22px
+    &__img1
+      max-width: 836px
+      height: 429px
+    &__img2
+      width: 636px
+      height: 416px
+
+@media (max-width: 830px)
+  .trade-second
+    &__img1
+      width: 666px
+
 @media (max-width: 770px)
+  .trade-second
+    &__p
+      max-width: 671px
+    &__img1
+      width: 666px
+      height: 412px
+    &__img2
+      width: 525px
+      height: 344px
+    &__span
+      margin-top: 50px
+
+
+@media (max-width: 667px)
+  .trade-second
+    &__img1
+      width: 445px
+      height: 284px
+    &__img2
+      width: 449px
+      height: 294px
+
+
 @media (max-width: 482px)
+  .trade-second
+    &__p
+      max-width: 430px
+    &__img1
+      width: 445px
+      height: 284px
+    &__img2
+      width: 449px
+      height: 294px
+
+@media (max-width: 446px)
+  .trade-second
+    &__img1
+      width: 393px
+      height: 226px
+    &__img2
+      width: 350px
+      height: 232px
+
+
 @media (max-width: 394px)
+  .trade-second
+    &__h2
+      font-size: 32px
+    &__p
+      max-width: 350px
+      font-size: 20px
+    &__img1
+      width: 399px
+      height: 226px
+    &__img2
+      width: 350px
+      height: 232px
 

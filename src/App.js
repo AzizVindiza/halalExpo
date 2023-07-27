@@ -55,6 +55,7 @@ import B2b from "./pages/AccountPage/B2b/B2b";
 import Chat from "./pages/AccountPage/Chat/Chat";
 import MembersUser from "./pages/MembersPage/MembersUser/MembersUser";
 import BuyTicket from "./pages/AccountPage/BuyTicket/BuyTicket";
+import B2BCard from "./pages/AccountPage/B2b/B2bCard/B2bCard";
 
 
 
@@ -104,7 +105,12 @@ const router = createBrowserRouter(
                             <Route path={'reserve'} element={<Participant/>}/>
                             <Route path={'tickets'} element={<NotFoundPage/>}/>
                             <Route path={'document'} element={<NotFoundPage/>}/>
-                            <Route path={'meet'} element={<B2b/>}/>
+                            <Route  path={'meet'} element={<B2b/>}>
+                                <Route path={'inbox2'} element={<NotFoundPage/>}/>
+                                <Route path={'inbox'} element={<NotFoundPage/>}/>
+                                <Route path={'sent'} element={<NotFoundPage/>}/>
+                            </Route>
+
                             <Route path={'chat'} element={<NotFoundPage/>}/>
                             <Route path={'meet'} element={<NotFoundPage/>}/>
                             <Route path={'chat'} element={<Chat/>}/>

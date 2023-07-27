@@ -11,20 +11,81 @@ import RegistrationInputTextarea from "../RegistrationInputTextarea/Registration
 import ContactFace from "../../ParticipantForm/ContactFace/ContactFace";
 import RegistrationCountry from "../RegistrationCountry/RegistrationCountry";
 import CheckBoxParticipant from "../CheckBoxParticipant/CheckBoxParticipant";
-import {useFormContext} from "react-hook-form";
+import {FormProvider, useForm, useFormContext} from "react-hook-form";
+import axios from "axios";
+import {toast} from "react-toastify";
+import Btn from "../../Btn/Btn";
 
 const RegistrationParticipant = () => {
-    const {
-        register, formState: {
-            errors
+    const methods = useForm({mode: "onBlur"});
+
+
+    const onSubmit = (data) => {
+        const id = toast.loading("Please wait...")
+        try {
+                data = {
+                    ...data,
+                    photo_company: data.photo_company[0],
+                    image_logo: data.image_logo[0],
+                }
+
+            axios.post(`${process.env.REACT_APP_REST}/user-participant/`, data, {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
+            }).then((res) => {
+                toast.update(id, {
+                    render: "Вы зарегистрировались",
+                    type: "success",
+                    isLoading: false,
+                    position: "top-center",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light"
+                });
+                setClose(false)
+            }).catch((err) => {
+                console.log(err)
+                toast.update(id, {
+                    render: err.response.data.email ? err.response.data.email[0] : err.response.data.workEmail ? err.response.data.workEmail[0] :'Ошибка в сервере!' ,
+                    type: "error",
+                    isLoading: false,
+                    position: "top-center",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light"
+                });
+            })
+
+        } catch (error) {
+            toast.update(id, {
+                render: 'Ошибка в сервере!', type: "error", isLoading: false,
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light"
+            });
         }
-    } = useFormContext()
+    }
     const {setClose, role, members, fileCompany, setFileCompany} = useContext(CustomContext)
     const handleFileCompanyChange = (e) => {
         setFileCompany(e.target.files[0])
     }
     return (
-        <>
+        <FormProvider {...methods} >
+            <form onSubmit={methods.handleSubmit(onSubmit)}>
             <h3 className="registration__h3">Данные о компании</h3>
             <RegistrationInput type={"text"} title={"Название компании"} name={"company_one"}/>
             <RegistrationInput type={"text"} title={"Юридическое название компании"} name={"company_two"}/>
@@ -75,7 +136,7 @@ const RegistrationParticipant = () => {
                     <RegistrationInput type={'text'} name={'okpo'} title={'ОКПО'}/>
                     <label className="registration__label">
                         <h3 className="registration__label-title">Загрузите устав компании (документ/pdf)</h3>
-                        <input className="registration__input" type="file" {...register("photo_company",)}
+                        <input className="registration__input" type="file" {...methods.register("photo_company",)}
                                onChange={handleFileCompanyChange}/>
                         <span className="unploud">
                 <h2 className="unploud__title">{
@@ -121,8 +182,9 @@ const RegistrationParticipant = () => {
             </div>
             <CheckBox/>
             <CheckBoxParticipant/>
-
-        </>
+                <Btn text={"Зарегистрироваться"} type={"submit"}/>
+            </form>
+        </FormProvider>
     );
 };
 
