@@ -1,0 +1,68 @@
+@import "src/sass/base/mixins"
+.lalafo
+  &__wrapper
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 58px 0 150px 0
+  &__img
+    margin-right: 35px
+  &__h2
+    @include text(700,30px,133%,#000)
+    margin-bottom: 13px
+  &__h3
+    @include text(500,20px,133%,#000)
+    max-width: 675px
+    margin-bottom: 19px
+  &__p
+    @include text(500,20px,133%,#000)
+    max-width: 623px
+@media (max-width: 1201px)
+  .lalafo
+    &__img
+      width: 254px
+      height: 100px
+    &__h2
+      @include text(700,28px,133%,#000)
+
+    &__h3
+      @include text(500,18px,133%,#000)
+      max-width: 632px
+    &__p
+      @include text(500,18px,133%,#000)
+      max-width: 594px
+@media (max-width: 1025px)
+  .lalafo
+    &__h2
+      @include text(700,26px,133%,#000)
+    &__h3
+      @include text(500,16px,133%,#000)
+      max-width: 555px
+    &__p
+      @include text(500,16px,133%,#000)
+      max-width: 555px
+
+@media (max-width: 769px)
+  .lalafo
+    &__img
+      width: 178px
+      height: 70px
+    &__h2
+      @include text(700,22px,133%,#000)
+    &__h3
+      @include text(500,15px,133%,#000)
+      max-width: 432px
+    &__p
+      @include text(500,15px,133%,#000)
+      max-width: 432px
+
+@media (max-width: 481px)
+  .lalafo
+    &__wrapper
+      flex-wrap: wrap
+      padding: 0 0 60px 0
+    &__img
+      margin-bottom: 27px
+
+
+@media (max-width: 396px)
