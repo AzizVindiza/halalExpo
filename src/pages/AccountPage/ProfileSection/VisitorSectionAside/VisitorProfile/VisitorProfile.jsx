@@ -10,34 +10,30 @@ const VisitorProfile = () => {
             <div className="VisitorProfile__container">
                 <div className="VisitorProfile__wrapper">
                     <div className="VisitorProfile__box">
+
                         <h2 className="VisitorProfile__h2">
                             Данные о поситителе
                         </h2>
-                        <div className="VisitorProfile__column">
-                            <h3 className="VisitorProfile__h3">
+
+                            <label className="VisitorProfile__label">
                                 ФИО
-                            </h3>
-                            <span className="VisitorProfile__span">
-                                {user.name}
-                            </span>
-                        </div>
-                        <div className="VisitorProfile__column">
-                            <h3 className="VisitorProfile__h3">
+                                <input className={"VisitorProfile__input"} type="text" value={user.name}/>
+                            </label>
+
+
+                            <label className="VisitorProfile__label">
                                 Номер телефона
-                            </h3>
-                            <span className="VisitorProfile__span">
-                                +{user.workPhone}
-                            </span>
-                        </div>
+                                <input className={"VisitorProfile__input"} type="text" value={user.workPhone}/>
+                            </label>
+
                         <div className="VisitorProfile__row">
-                            <div className="VisitorProfile__column">
-                                <h3 className="VisitorProfile__h3">
+
+                                <label className="VisitorProfile__label">
                                     Email
-                                </h3>
-                                <span className="VisitorProfile__span">
-                               {user.email}
-                            </span>
-                            </div>
+                                    <input className={"VisitorProfile__input"} type="text" value={user.email}/>
+                                </label>
+
+
                             <div className="VisitorProfile__edit">
                                 <button className="VisitorProfile__btn">
                                     Редактирование

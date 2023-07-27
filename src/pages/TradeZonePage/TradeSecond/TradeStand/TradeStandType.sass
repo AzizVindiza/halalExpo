@@ -1,7 +1,7 @@
 @import "src/sass/base/mixins"
 .tradeStandType
   position: relative
-  width: 400px
+  width: 398px
   padding: 25px
   border-radius: 8px
   background: linear-gradient(45deg, rgba(16, 146, 62, 0.12) 0%, rgba(255, 255, 255, 0.20) 35.42%, rgba(255, 255, 255, 0.20) 48.25%, rgba(16, 146, 62, 0.12) 100%), radial-gradient(75.67% 66.60% at 9.69% 11.40%, rgba(0, 0, 0, 0.20) 0%, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.00) 100%), #40A865
@@ -50,3 +50,22 @@
     @include text(500,25px,133%,#2E2E2E)
     width: 1105px
     text-align: center
+
+
+@media (max-width: 1201px)
+  .tradeStandType
+    width: 392px
+
+@media (max-width: 1025px)
+  .tradeStandType
+    width: 334px
+    &__h5
+      font-size: 15px
+    &__h2
+      font-size: 27px
+    &__h3
+      font-size: 13px
+    &__ul-title
+      font-size: 13px
+    &__li
+      font-size: 12px

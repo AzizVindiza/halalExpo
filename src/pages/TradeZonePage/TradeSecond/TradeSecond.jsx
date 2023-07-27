@@ -88,13 +88,19 @@ const TradeSecond = () => {
                     <div className="trade-second__img1">
                         <img src={stand} alt="stand sample"/>
                     </div>
-                    <div className="trade-second__img2">
-                        <img src={stand2} alt="stand sample"/>
-                    </div>
                 </div>
-                <TradeStandType stand={standart}/>
-                <TradeStandType stand={silver}/>
+                <div className="trade-second__box">
+                    <TradeStandType stand={standart}/>
+                    <TradeStandType stand={silver}/>
+                </div>
+
+                <div className="trade-second__img2">
+                    <img src={stand2} alt="stand sample"/>
+                </div>
                 <TradeStandType stand={gold}/>
+                <span className="trade-second__span">
+                    Стоимость участия с учетом раннего бронивания актуальна до 20 июля
+                </span>
 
 
             </div>

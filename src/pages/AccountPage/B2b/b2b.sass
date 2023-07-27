@@ -14,10 +14,13 @@
     transition: 0.5s
     &:hover
       border-bottom: 2px solid blue
-
-    &.active
+      @include text(600,16px,180%,#03C)
+    &_active
+      @include text(600,16px,180%,#03C)
       border-bottom: 2px solid blue
-      color: #03C
+
+
+
 
 
 
