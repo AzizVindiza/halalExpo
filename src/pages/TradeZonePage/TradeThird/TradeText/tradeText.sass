@@ -1,0 +1,17 @@
+@import "src/sass/base/mixins"
+
+
+.tradeText
+  &__box
+    display: flex
+    flex-direction: column
+  &__h2
+
+    @include text(800,80px,120%,#00862D)
+    white-space: pre-line
+  &__p
+    display: flex
+    align-self: flex-end
+    width: 78%
+    margin-top: 40px
+    @include text(500,22px,133%,#000)

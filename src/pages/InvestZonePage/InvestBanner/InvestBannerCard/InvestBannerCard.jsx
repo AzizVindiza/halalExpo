@@ -32,7 +32,7 @@ const InvestBannerCard = ({item}) => {
             </div>
 
 
-            <h2 className="investBannerCard__h2">
+            <h2 className={`investBannerCard__h2 investBannerCard__${item.name}`}>
                 {item.h2}
             </h2>
             <p className="investBannerCard__p">

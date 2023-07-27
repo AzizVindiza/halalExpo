@@ -16,10 +16,12 @@
 
   &__h2
     @include text(600,22px,133%,#000)
-  &__h3
-    margin-top: 5px
+  &__label
+    display: flex
+    flex-direction: column
+    row-gap: 5px
     @include text(500,15px,133%,#237EE8)
-  &__span
+  &__input
     @include text(400,18px,133%,#00000060)
     text-decoration-line: underline
   &__row
@@ -27,7 +29,6 @@
     align-items: center
     justify-content: space-between
   &__edit
-
     border-radius: 4px
     column-gap: 5px
     display: flex
@@ -38,5 +39,8 @@
   &__btn
     background: inherit
     color: #FFFFFF
+  &__h3
+    @include text(500,15px,133%,#237EE8)
+
 
 
