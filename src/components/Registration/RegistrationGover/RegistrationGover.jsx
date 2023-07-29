@@ -9,6 +9,7 @@ import {toast} from "react-toastify";
 import axios from "axios";
 import {CustomContext} from "../../../Context";
 import Btn from "../../Btn/Btn";
+import SelectFromArray from "../SelectFromArray/SelectFromArray";
 
 const RegistrationGover = () => {
 
@@ -22,6 +23,7 @@ const RegistrationGover = () => {
                 ...data,
                 user_type: 4,
             }
+            console.log(data)
             axios.post(`${process.env.REACT_APP_REST}/user/user-gos/`, data, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
@@ -77,16 +79,15 @@ const RegistrationGover = () => {
     return (
         <FormProvider {...methods}>
             <form onSubmit={methods.handleSubmit(onSubmit)}>
-                <RegistrationInput type={"text"} title={"ФИО"} name={"name"}/>
+                <RegistrationInput type={"text"} title={"ФИО"} name={"full_name"}/>
                 <RegistrationInput type={"email"} title={"Электронная почта"} name={"email"}/>
-                <RegistrationPhoneNumber title={"Телефон"} name={"workPhone"}/>
-                <RegistrationInput type={"text"} title={"Организация"}
-                                   name={"gos_organization"}/>
+                <RegistrationPhoneNumber title={"Телефон"} name={"phone"}/>
+                <SelectFromArray array={[ "Министерство иностранных дел", "Министерство внутренних дел", "Министерство образования и науки", "Министерство финансов", "Министерство экономики", "Министерство труда и социального развития", "Министерство транспорта и дорожного хозяйства", "Министерство сельского хозяйства", "водного хозяйства и регионального развития", "Государственный комитет национальной безопасности", "Государственная налоговая служба", "Государственная таможенная служба", "Государственная служба по борьбе с экономической преступностью" ]} name={"oganization"} title={"Организация"}/>
                 <RegistrationInput type={"text"} title={"Отделение"}
                                    name={"branch"}/>
                 {/*Бэк*/}
                 <RegistrationInput type={"text"} title={"Должность"}
-                                   name={"position_main"}/>
+                                   name={"position"}/>
                 <RegistrationPassword/>
                 <CheckBox/>
                 <CheckBoxGover/>

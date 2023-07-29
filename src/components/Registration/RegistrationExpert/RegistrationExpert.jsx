@@ -22,6 +22,7 @@ const RegistrationExpert = ({userType, urlReg}) => {
                 ...data,
                 user_type: userType
             }
+            console.log(data)
             axios.post(`${process.env.REACT_APP_REST}${urlReg}`, data, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
@@ -77,11 +78,12 @@ const RegistrationExpert = ({userType, urlReg}) => {
     return (
         <FormProvider {...methods} >
             <form onSubmit={methods.handleSubmit(onSubmit)}>
-                <RegistrationInput type={"text"} title={"ФИО"} name={"name"}/>
+                <RegistrationInput type={"text"} title={"ФИО"} name={"full_name"}/>
                 <RegistrationInput type={"email"} title={"Электронная почта"} name={"email"}/>
-                <RegistrationPhoneNumber title={"Телефон"} name={"workPhone"}/>
+                <RegistrationPhoneNumber title={"Телефон"} name={"phone"}/>
                 <RegistrationPassword/>
-                <CheckBox/>
+                {userType === 3 ? <CheckBox/> : null}
+
                 <Btn text={"Зарегистрироваться"} type={"submit"}/>
             </form>
         </FormProvider>

@@ -28,6 +28,7 @@ const RegistrationParticipant = () => {
                     photo_company: data.photo_company[0],
                     image_logo: data.image_logo[0],
                 }
+            console.log(data)
 
             axios.post(`${process.env.REACT_APP_REST}user/user-participant/`, data, {
                 headers: {
@@ -90,7 +91,7 @@ const RegistrationParticipant = () => {
             <h3 className="registration__h3">Данные о компании</h3>
             <RegistrationInput type={"text"} title={"Название компании"} name={"company_one"}/>
             <RegistrationInput type={"text"} title={"Юридическое название компании"} name={"company_two"}/>
-            <RegistrationInput type={"number"} title={"Количество сотрудников"} name={"number_of_employees"}/>
+            <RegistrationInput type={"number"} title={"Количество сотрудников"} name={"personnel"}/>
             <RegistrationSelectMember
                 title={'Отрасль (Выберите одну из представленных “Строительство и недвижимость”)'}
                 name={'trade'}/>

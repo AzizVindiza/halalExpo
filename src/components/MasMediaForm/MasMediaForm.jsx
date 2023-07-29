@@ -26,10 +26,11 @@ const MasMediaForm = () => {
         try {
             data = {
                 ...data,
-                image_certificate_smi: data.image_certificate_smi[0],
+                image_certificate: data.image_certificate[0],
                 image_logo: data.image_logo[0],
                 user_type: 1,
             }
+            console.log(data)
 
             axios.post(`${process.env.REACT_APP_REST}/user/user-smi/`, data, {
                 headers: {
@@ -92,20 +93,20 @@ const MasMediaForm = () => {
                         <h3 className="registration__h3">Заполните данные о компании</h3>
                         <div className="registration__column-wrapper">
                             <div className="registration__column">
-                                <RegistrationUploadInput name={"image_certificate_smi"}
+                                <RegistrationUploadInput name={"image_certificate"}
                                                          title={"Загрузите вашего журналистского удостоверения"}/>
                                 <RegistrationUploadInput name={"image_logo"}
                                                          title={"Загрузите логотип компании в  png или jpg*"}/>
-                                <RegistrationInput type={'text'} name={"quantity_person_smi"}
+                                <RegistrationInput type={'text'} name={"quantity_person"}
                                                    title={'Сколько у вас человек в команде?'}/>
-                                <RegistrationPhoneNumber title={"Телефон"} name={"workPhone"}/>
+                                <RegistrationPhoneNumber title={"Телефон"} name={"phone"}/>
                             </div>
                             <div className="registration__column">
-                                <RegistrationInput type={'text'} name={'organization_smi'}
+                                <RegistrationInput type={'text'} name={'name_organization'}
                                                    title={'Полное юридическое наименование организации'}/>
-                                <RegistrationInput type={'text'} name={'address_one'} title={'Юридический адрес'}/>
+                                <RegistrationInput type={'text'} name={'address'} title={'Юридический адрес'}/>
                                 <RegistrationInput type={'text'} name={'web_site'} title={'Веб-сайт'}/>
-                                <RegistrationInput type={'email'} name={'email_smi'} title={'Email  компании'}/>
+                                <RegistrationInput type={'email'} name={'email_company'} title={'Email  компании'}/>
                             </div>
                         </div>
                         <h3 className="registration__h3">Социальные сети</h3>
