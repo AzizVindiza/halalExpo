@@ -9,9 +9,8 @@ import {FormProvider, useForm} from "react-hook-form";
 import {toast} from "react-toastify";
 import axios from "axios";
 import {CustomContext} from "../../../Context";
-import * as url from "url";
 
-const RegistrationExpert = ({userType, url}) => {
+const RegistrationExpert = ({userType, urlReg}) => {
     const methods = useForm({mode: "onBlur"});
     const {setClose} = useContext(CustomContext)
 
@@ -23,7 +22,7 @@ const RegistrationExpert = ({userType, url}) => {
                 ...data,
                 user_type: userType
             }
-            axios.post(`${process.env.REACT_APP_REST}${url}`, data, {
+            axios.post(`${process.env.REACT_APP_REST}${urlReg}`, data, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
