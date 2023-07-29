@@ -28,9 +28,10 @@ const MasMediaForm = () => {
                 ...data,
                 image_certificate_smi: data.image_certificate_smi[0],
                 image_logo: data.image_logo[0],
+                user_type: 1,
             }
 
-            axios.post(`${process.env.REACT_APP_REST}/user-smi/`, data, {
+            axios.post(`${process.env.REACT_APP_REST}/user/user-smi/`, data, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
