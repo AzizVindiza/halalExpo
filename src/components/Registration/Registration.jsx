@@ -37,9 +37,9 @@ const Registration = () => {
                             <ChooseTypeRegistration title={"В качестве кого вы хотите посетить HIT EXPO?"} name={"type_register"}/>
                             {
                                 role === "Участник" ? <RegistrationParticipant/>
-                                    : role === "Посетитель" ? <RegistrationExpert/>
+                                    : role === "Посетитель" ? <RegistrationExpert userType={2} url={"user/user-visitor/"}/>
                                         : role === "СМИ" ? <MasMediaForm/>
-                                            : role === "Эксперта" ? <RegistrationExpert/>
+                                            : role === "Эксперта" ? <RegistrationExpert userType={3} url={"/user/user-expert/"}/>
                                                 : role === "Представитель государственных органов" ? <RegistrationGover/>
                                                     : ""
                             }

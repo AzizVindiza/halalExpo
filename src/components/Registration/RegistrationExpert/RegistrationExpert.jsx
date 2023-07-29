@@ -9,8 +9,9 @@ import {FormProvider, useForm} from "react-hook-form";
 import {toast} from "react-toastify";
 import axios from "axios";
 import {CustomContext} from "../../../Context";
+import * as url from "url";
 
-const RegistrationExpert = () => {
+const RegistrationExpert = ({userType, url}) => {
     const methods = useForm({mode: "onBlur"});
     const {setClose} = useContext(CustomContext)
 
@@ -18,8 +19,11 @@ const RegistrationExpert = () => {
         const id = toast.loading("Please wait...")
 
         try {
-
-            axios.post(`${process.env.REACT_APP_REST}/user-expert/`, data, {
+            data = {
+                ...data,
+                user_type: userType
+            }
+            axios.post(`${process.env.REACT_APP_REST}${url}`, data, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
