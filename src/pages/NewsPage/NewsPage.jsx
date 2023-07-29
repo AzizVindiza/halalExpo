@@ -3,18 +3,16 @@ import CartNewsSection from "./CartNewsSection/CartNewsSection";
 import "./newdPage.sass"
 import {useGetNewsInNewsPageQuery} from "../../redux/ApiSlice";
 import axios from "axios";
+import Btn from "../../components/Btn/Btn";
+import {useNavigate} from "react-router-dom";
 
 const NewsPage = () => {
-    // const [data, setData] = useState([])
+
+    const navigate = useNavigate()
+
     const {data: data = []} = useGetNewsInNewsPageQuery()
-    // useEffect(() => {
-    //     axios.get("http://143.110.188.124:8000/other/news/")
-    //         .then((res) => {
-    //             setData(res.data)
-    //             console.log(res.data)
-    //         })
-    //         .catch((error) => console.log(error))
-    // }, []);
+    console.log(data)
+
     return (
         <section className={'newsPage'}>
             <div className="newsPage__content">
