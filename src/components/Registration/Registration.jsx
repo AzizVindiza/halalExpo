@@ -15,7 +15,7 @@ import ChooseTypeRegistration from "./ChooseTypeRegistration/ChooseTypeRegistrat
 
 
 const Registration = () => {
-    const {setClose, role, members} = useContext(CustomContext)
+    const {setClose, role,} = useContext(CustomContext)
 
     return (
             <div className="registration">
