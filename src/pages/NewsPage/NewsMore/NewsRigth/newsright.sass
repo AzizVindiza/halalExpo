@@ -1,0 +1,24 @@
+@import "src/sass/base/mixins"
+
+.newsRight
+  width: 30%
+  padding: 40px
+  border-radius: 4px
+  background: linear-gradient(180deg, #03C 0%, #017AAE 100%)
+  &__pic
+    height: 250px
+    background: white
+    margin-bottom: 12px
+  &__date
+    @include text(500,14px,120%,#fff)
+    margin-bottom: 7px
+  &__h3
+    @include text(700,16px,133%,#fff)
+    margin-bottom: 4px
+  &__p
+    @include text(400,14px,133%,#fff)
+    margin-bottom: 4px
+  &__next
+    @include text(600,13px,133%,#000)
+    padding: 9px 29px
+    background: #fff

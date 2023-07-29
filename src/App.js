@@ -56,6 +56,7 @@ import Chat from "./pages/AccountPage/Chat/Chat";
 import MembersUser from "./pages/MembersPage/MembersUser/MembersUser";
 import BuyTicket from "./pages/AccountPage/BuyTicket/BuyTicket";
 import B2BCard from "./pages/AccountPage/B2b/B2bCard/B2bCard";
+import NewsMore from "./pages/NewsPage/NewsMore/NewsMore";
 
 
 
@@ -126,6 +127,7 @@ const router = createBrowserRouter(
 
                 <Route path="fashionzone" element={<FashionZonePage/>}/>
                 <Route path="members/:id" element={<MembersUser/>}/>
+                <Route path="news/:id" element={<NewsMore/>}/>
 
             </Route>
 

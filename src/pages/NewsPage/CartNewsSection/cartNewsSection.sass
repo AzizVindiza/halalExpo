@@ -1,7 +1,11 @@
 @import "src/sass/base/mixins"
 .cartNewsSection
+  display: flex
+  flex-direction: column
   word-break: break-all
   width: 340px
+  height: 600px
+  position: relative
   &__pic
     width: 340px
     height: 250px
@@ -15,12 +19,16 @@
     @include text(500,14px,120%,#00000060)
     margin-bottom: 10px
   &__h3
-    @include text(400,18px,133%,#000000)
+    @include text(700,18px,133%,#000000)
+
     margin-bottom: 5px
   &__p
     @include text(400,15px,133%,#000000)
     margin-bottom: 30px
     width: 340px
+  &__btn
+    position: absolute
+    bottom: 0
 
 @media (max-width: 1440px)
 @media (max-width: 1201px)
