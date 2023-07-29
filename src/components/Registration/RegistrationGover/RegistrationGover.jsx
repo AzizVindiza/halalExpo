@@ -8,6 +8,7 @@ import {FormProvider, useForm} from "react-hook-form";
 import {toast} from "react-toastify";
 import axios from "axios";
 import {CustomContext} from "../../../Context";
+import Btn from "../../Btn/Btn";
 
 const RegistrationGover = () => {
 
@@ -85,7 +86,7 @@ const RegistrationGover = () => {
                 <RegistrationPassword/>
                 <CheckBox/>
                 <CheckBoxGover/>
-
+                <Btn text={"Зарегистрироваться"} type={"submit"}/>
             </form>
         </FormProvider>
     );

@@ -16,6 +16,7 @@ const RegistrationExpert = () => {
 
     const onSubmit = (data) => {
         const id = toast.loading("Please wait...")
+
         try {
 
             axios.post(`${process.env.REACT_APP_REST}/user-expert/`, data, {
