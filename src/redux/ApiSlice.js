@@ -30,7 +30,7 @@ export const apiSlice = createApi({
         }),
         getMemberUser : builder.query({
             query : (arg) => ({
-                url : `/user/${arg}`,
+                url : `/user/user-participant/${arg}`,
                 method : "GET"
             }),
         }),

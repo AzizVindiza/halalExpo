@@ -7,7 +7,7 @@ const MeetSection = () => {
             <div className="meet__container container">
                 <div className="meet__wrapper">
                     <div className="meet__time">
-                        <h2 className="meet__h2">23-24.08.23</h2>
+                        <h2 className="meet__h2">10-12.10.23</h2>
                         <div className="meet__data">
                             <div className="meet__card">
                                 <div className="meet__card-svg">

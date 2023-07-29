@@ -24,11 +24,12 @@ const RegistrationParticipant = () => {
         try {
                 data = {
                     ...data,
+                    user_type: 5,
                     photo_company: data.photo_company[0],
                     image_logo: data.image_logo[0],
                 }
 
-            axios.post(`${process.env.REACT_APP_REST}/user-participant/`, data, {
+            axios.post(`${process.env.REACT_APP_REST}user/user-participant/`, data, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }

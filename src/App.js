@@ -81,7 +81,7 @@ const router = createBrowserRouter(
                 <Route path="question" element={<Question/>}/>
                 <Route path="news" element={<NewsPage/>}/>
                 <Route path="meet" element={<MeetPage/>}/>
-                <Route path="forum" element={<ForumPage/>}/>
+                {/*<Route path="forum" element={<ForumPage/>}/>*/}
                 <Route path="expect" element={<ExpectPage/>}/>
                 <Route path="benefits" element={<BenefitsPage/>}/>
                 <Route path="members" element={<MembersPage/>}/>

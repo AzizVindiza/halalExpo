@@ -18,7 +18,11 @@ const RegistrationGover = () => {
     const onSubmit = (data) => {
         const id = toast.loading("Please wait...")
         try {
-            axios.post(`${process.env.REACT_APP_REST}/user-gos/`, data, {
+            data = {
+                ...data,
+                user_type: 4,
+            }
+            axios.post(`${process.env.REACT_APP_REST}/user/user-gos/`, data, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
