@@ -4,7 +4,7 @@ import {createApi,fetchBaseQuery} from "@reduxjs/toolkit/query/react";
 
 export const apiSlice = createApi({
     reducerPath : "apiSlice",
-    baseQuery :fetchBaseQuery({baseUrl: process.env.REACT_APP_URL}),
+    baseQuery :fetchBaseQuery({baseUrl: process.env.REACT_APP_REST}),
     endpoints:(builder)=> ({
         addPartner: builder.mutation({
             query:(body)=>({
@@ -32,10 +32,17 @@ export const apiSlice = createApi({
             query : (arg) => ({
                 url : `/user/${arg}`,
                 method : "GET"
+            }),
+        }),
+        getNewsInNewsPage : builder.query({
+            query : (arg) => ({
+                url :"/other/news/",
+                method : "GET"
             })
         })
+
     })
 
 })
 
-export const {useAddPartnerMutation,useLoginMutation,useAddFeedbackMutation,useGetMemberUserQuery} = apiSlice
+export const {useAddPartnerMutation,useLoginMutation,useAddFeedbackMutation,useGetMemberUserQuery,useGetNewsInNewsPageQuery} = apiSlice
