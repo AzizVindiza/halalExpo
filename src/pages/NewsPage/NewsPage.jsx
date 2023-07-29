@@ -6,7 +6,7 @@ import axios from "axios";
 
 const NewsPage = () => {
     // const [data, setData] = useState([])
-    const {data:data=[]} = useGetNewsInNewsPageQuery()
+    const {data: data = []} = useGetNewsInNewsPageQuery()
     // useEffect(() => {
     //     axios.get("http://143.110.188.124:8000/other/news/")
     //         .then((res) => {
@@ -23,14 +23,7 @@ const NewsPage = () => {
             <div className="container newsPage__container">
                 {
                     data.map((item) => (
-                        <>
-                            <CartNewsSection key={item.id} item={item}/>
-                            <CartNewsSection key={item.id} item={item}/>
-                            <CartNewsSection key={item.id} item={item}/>
-                            <CartNewsSection key={item.id} item={item}/>
-                            <CartNewsSection key={item.id} item={item}/>
-                            <CartNewsSection key={item.id} item={item}/>
-                        </>
+                        <CartNewsSection key={item.id} item={item}/>
                     ))
                 }</div>
         </section>
