@@ -9,8 +9,7 @@ const CartNewsSection = ({item}) => {
             </div>
             <h2 className="cartNewsSection__h2">{item.date}</h2>
             <h3 className="cartNewsSection__h3">{item.title}</h3>
-            <p className="cartNewsSection__p">sddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddsdsd
-            </p>
+            <p className="cartNewsSection__p">{item.description.slice(0,100) + "..."}</p>
             <Btn m={'card'} text={'Читать далее'}/>
         </div>
     );
