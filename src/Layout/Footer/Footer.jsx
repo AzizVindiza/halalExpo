@@ -10,8 +10,8 @@ const Footer = () => {
             <div className="footer__container container">
                 <div className="footer__wrapp">
                     <div className="footer__left">
-                        <h2 className="footer__h2">Дата: 26.08.2023-28-08.2023</h2>
-                        <p className="footer__p">Культурный центр «Рух Ордо», г.Чолпон-Ата, Иссык-Кульская область, Кыргызская Республика</p>
+                        <h2 className="footer__h2">Дата: 10.10.2023-12-10.2023</h2>
+                        <p className="footer__p">Старая площадь г.Бишкек</p>
                         <div className="footer__links">
                             <a href={'https://www.instagram.com/hitexpo.info/?igshid=MzRlODBiNWFlZA%3D%3D'} className="footer__socials">
                                 <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
