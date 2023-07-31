@@ -7,23 +7,13 @@ import {arr,arr2,arr4,arr3,arr5} from "../../utils/arr";
 import CountryFlag from "./CountryFlag";
 import ChooseZone from "./ZoneSection/ZoneSection";
 import axios from "axios";
+import {useGetUserParticipantQuery} from "../../redux/ApiSlice";
 const MembersPage = () => {
+    const {data: users  = []} = useGetUserParticipantQuery()
     const [phoneSelect,setPhoneSelect] = useState('')
     const [category,setCategory] = useState('- Категории -') // choose category
     const [zone,setZone] = useState('- Зоны -') // choose
-    const [users,setUsers] = useState([])
-    useEffect(() => {
-        axios
-            .get(`${process.env.REACT_APP_REST}/user/user-participant/`)
-            .then((res) => {
-                setUsers(res.data)
-                console.log(users)
-            })
 
-            .catch(err => {
-                console.log(err.message);
-            });
-    }, []);
     return (
         <section className="members">
             <div className="container members__container">
