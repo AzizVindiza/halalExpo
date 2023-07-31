@@ -12,7 +12,7 @@ const VisitorProfile = () => {
                     <div className="VisitorProfile__box">
 
                         <h2 className="VisitorProfile__h2">
-                            Данные о поситителе
+                            Данные о посетителе
                         </h2>
 
                             <label className="VisitorProfile__label">
