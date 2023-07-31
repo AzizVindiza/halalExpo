@@ -3,6 +3,7 @@ import "./start.sass"
 import svg from "./1.svg"
 import svg2 from "./2.svg"
 import svg3 from "./3.svg"
+import invest from "./invest.svg"
 import svg4 from "./svg4.png"
 import svg5 from "./svg5.png"
 import svg6 from "./svg6.png"
@@ -35,7 +36,7 @@ const StartSection = () => {
                         </Link>
                         <Link to={"invest"} className="start__block">
                             <div className="start__svg">
-                                <img src={svg4} alt="" className="start__img"/>
+                                <img src={invest} alt="" className="start__img"/>
                             </div>
                             <h3 className="start__h3">
                                 <div>
