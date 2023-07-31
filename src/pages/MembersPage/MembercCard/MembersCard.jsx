@@ -18,10 +18,9 @@ const MembersCard = ({obj}) => {
                             </div>
                             <h2 className="membersCard__h2">{obj.company_one}</h2>
                         </div>
-
                         <div className="membersCard__second">
                             <h3 className="membersCard__h3">{obj.country}</h3>
-                            <h4 className="membersCard__h4">{obj.trade || obj.other_trade}</h4>
+                            <h4 className="membersCard__h4">{obj.direction || obj.other_trade}</h4>
                         </div>
 
                     </div>

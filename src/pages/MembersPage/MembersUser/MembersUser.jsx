@@ -13,7 +13,6 @@ const MembersUser = () => {
     const navigate = useNavigate()
     const {data: memberUser, isLoading,error} = useGetMemberUserQuery(params.id)
 
-
     return (
         <>
             {
@@ -51,7 +50,7 @@ const MembersUser = () => {
                                     <p className="membersUser__text">{memberUser.direction}</p>
                                 </div>
                                 <h4 className="membersUser__h4">Описание компании</h4>
-                                <p className="membersUser__text">{memberUser.describe_company}</p>
+                                <p className="membersUser__text">{memberUser.description}</p>
                                 <div className="membersUser__sign-in">
                                     <Btn text={'Записаться на встречу'}/>
                                 </div>
@@ -66,14 +65,14 @@ const MembersUser = () => {
                                     </div>
                                     <div className="membersUser__inner">
                                         <h4 className="membersUser__h4">Номер телефона</h4>
-                                        <p className="membersUser__text">{memberUser.work_phone}</p>
+                                        <p className="membersUser__text">{memberUser.number_cont_person}</p>
                                     </div>
                                     <div className="membersUser__inner">
                                         <h4 className="membersUser__h4">Сайт</h4>
-                                        <p className="membersUser__text">{memberUser.web_site}</p>
+                                        <p className="membersUser__text">{memberUser.site_company}</p>
                                     </div>
                                     <div className="membersUser__social">
-                                        <a href={memberUser.instagram ? memberUser.instagram : "#"} className="membersUser__socialLink">
+                                        <a href={memberUser.instagram} className="membersUser__socialLink">
                                             <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -82,7 +81,7 @@ const MembersUser = () => {
                                             </svg>
 
                                         </a>
-                                        <a href={memberUser?.facebook} className="membersUser__socialLink">
+                                        <a href={memberUser.facebook} className="membersUser__socialLink">
                                             <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -91,7 +90,7 @@ const MembersUser = () => {
                                             </svg>
 
                                         </a>
-                                        <a href={"https://www.youtube.com/watch?v=ujDESWcCaio"} className="membersUser__socialLink">
+                                        <a href={memberUser.twitter} className="membersUser__socialLink">
                                             <svg width="27" height="28" viewBox="0 0 27 28" fill="none"
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <g clipPath="url(#clip0_4084_5688)">

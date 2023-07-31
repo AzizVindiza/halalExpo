@@ -14,8 +14,12 @@ const MembersPage = () => {
     const [users,setUsers] = useState([])
     useEffect(() => {
         axios
-            .get("https://shark-app-65hkc.ondigitalocean.app/user/")
-            .then((res) => setUsers(res.data))
+            .get(`${process.env.REACT_APP_REST}/user/user-participant/`)
+            .then((res) => {
+                setUsers(res.data)
+                console.log(users)
+            })
+
             .catch(err => {
                 console.log(err.message);
             });
@@ -40,7 +44,7 @@ const MembersPage = () => {
                 </div>
                 <div className="members__content">
                     <h3 className="members__h3">Список участников</h3>
-                    <h4 className="members__h4">Участников {users.filter((obj)=> obj.type_register === "Участник").length} </h4>
+                    <h4 className="members__h4">Участников {users.length} </h4>
                 </div>
                 <div className="members__wrapp">
                     <div className="members__inner">
@@ -54,7 +58,7 @@ const MembersPage = () => {
                 </div>
                 <div className="members__cards">
                     {
-                        users.filter((obj)=> obj.type_register === "Участник").map((obj)=>(
+                        users.map((obj)=>(
                             <MembersCard obj={obj}/>
                         ))
                     }

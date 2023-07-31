@@ -19,7 +19,7 @@ const Ticket = () => {
 
         <div className={'ticket'}>
 
-            {   user.type_register === "Участник" ?
+            {   user.user_type === 5 ?
                     state === "default" ?
                     <FormZone setState={setState}/>
                     : <ComponentZone/> : ""
