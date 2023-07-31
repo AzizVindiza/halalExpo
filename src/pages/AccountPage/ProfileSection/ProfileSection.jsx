@@ -14,7 +14,7 @@ const ProfileSection = () => {
                 {
                     user.user_type === 5 ?
                         <ParticipantSectionAside/> :  
-                    user.user_type === "Посетитель" ?
+                    user.user_type === 2 ?
                     <VisitorSectionAside/> : ""
                 }
 

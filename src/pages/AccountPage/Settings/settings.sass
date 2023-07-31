@@ -1,0 +1,21 @@
+@import "./src/sass/base/mixins"
+
+
+.settings
+  background: #FFFFFF
+  height: 90%
+  padding: 30px
+  &__row
+    cursor: pointer
+    display: flex
+    align-items: center
+    justify-content: space-between
+    border-bottom: 1px solid #00000010
+    padding: 25px 0
+  &__box
+    column-gap: 10px
+    display: flex
+  &__h3
+    @include text(600,18px,133%,#000)
+  &__span
+    @include text(500,15px,133%,#00000070)

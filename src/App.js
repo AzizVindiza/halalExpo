@@ -57,6 +57,8 @@ import MembersUser from "./pages/MembersPage/MembersUser/MembersUser";
 import BuyTicket from "./pages/AccountPage/BuyTicket/BuyTicket";
 import B2BCard from "./pages/AccountPage/B2b/B2bCard/B2bCard";
 import NewsMore from "./pages/NewsPage/NewsMore/NewsMore";
+import Settings from "./pages/AccountPage/Settings/Settings";
+import InfoSettings from "./pages/AccountPage/Settings/InfoSettings/InfoSettings";
 
 
 
@@ -115,7 +117,12 @@ const router = createBrowserRouter(
                             <Route path={'chat'} element={<NotFoundPage/>}/>
                             <Route path={'meet'} element={<NotFoundPage/>}/>
                             <Route path={'chat'} element={<Chat/>}/>
-                            <Route path={'sittings'} element={<NotFoundPage/>}/>
+                            <Route path={'sittings'} element={<Settings/>}>
+                                <Route path={'infoAcc'} element={<InfoSettings/>}/>
+
+
+                            </Route>
+
                             <Route path={'buyTicket'} element={<BuyTicket/>}/>
 
                         </Route>
