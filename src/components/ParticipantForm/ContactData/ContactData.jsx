@@ -19,8 +19,8 @@ const ContactData = () => {
 
     return (
         <>
-            <RegistrationInput type={'text'} name={'name_face'} title={'ФИО'}/>
-            <RegistrationPhoneNumber title={'Телефон'} name={'phone_face'}/>
+            <RegistrationInput type={'text'} name={'name_cont_person'} title={'ФИО'}/>
+            <RegistrationPhoneNumber title={'Телефон'} name={'number_cont_person'}/>
         </>
     );
 };

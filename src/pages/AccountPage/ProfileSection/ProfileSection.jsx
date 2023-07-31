@@ -12,9 +12,9 @@ const ProfileSection = () => {
         <div className={'profileSection '}>
             <div className="profileSection__container">
                 {
-                    user.type_register === "Участник" ?
-                        <ParticipantSectionAside/> :
-                    user.type_register === "Посетитель" ?
+                    user.user_type === 5 ?
+                        <ParticipantSectionAside/> :  
+                    user.user_type === "Посетитель" ?
                     <VisitorSectionAside/> : ""
                 }
 

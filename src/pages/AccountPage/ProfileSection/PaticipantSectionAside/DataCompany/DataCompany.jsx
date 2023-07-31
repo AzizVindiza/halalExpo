@@ -22,13 +22,13 @@ const DataCompany = () => {
                 </div>
                 <div className="datacompany__row">
                     <h3 className={"datacompany__h3"}>Количество сотрудников</h3>
-                    <h4 className={"datacompany__span"}>{user.number_of_employees}</h4>
+                    <h4 className={"datacompany__span"}>{user.personnel}</h4>
                     <h2 className={"datacompany__h3"}>Юридический адрес</h2>
                     <h2 className={"datacompany__span"}>{user.address_one}</h2>
                 </div>
                 <div className="datacompany__row">
                     <h3 className={"datacompany__h3"}>Направление</h3>
-                    <h4 className={"datacompany__span"}>{user.other_trade}</h4>
+                    <h4 className={"datacompany__span"}>{user.direction}</h4>
                     <h2 className={"datacompany__h3"}>Фактический адрес</h2>
                     <h2 className={"datacompany__span"}>{user.address_two}</h2>
                 </div>
@@ -76,7 +76,7 @@ const DataCompany = () => {
             </div>
             <h3 className="datacompany__h3">Описание</h3>
 
-                <p className="datacompany__p">{user.describe_company}</p>
+                <p className="datacompany__p">{user.description}</p>
             <div className="datacompany__inner">
                 <div></div>
                 <BtnProfile text={'Редактировать'}/>

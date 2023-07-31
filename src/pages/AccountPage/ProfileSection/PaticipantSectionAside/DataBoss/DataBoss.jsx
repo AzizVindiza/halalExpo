@@ -17,16 +17,16 @@ const DataBoss = () => {
                     </div>
                     <div className="dataBoss__block">
                         <h4 className="dataBoss__h4">Дата рождения</h4>
-                        <span className="dataBoss__span">{user.birth_manager}</span>
+                        <span className="dataBoss__span">{user.date_of_birth}</span>
                     </div>
                     <div className="dataBoss__block">
                         <h4 className="dataBoss__h4">ИНН</h4>
-                        <div className="dataBoss__span">{user.inn}</div>
+                        <div className="dataBoss__span">{user.iin_inn}</div>
                     </div>
 
                     <div className="dataBoss__block">
                         <h4 className="dataBoss__h4">Действующий на основании</h4>
-                        <span className={'dataBoss__span'}>{user.active_manager}</span>
+                        <span className={'dataBoss__span'}>{user.effective}</span>
                     </div>
                     <h4 className="dataBoss__h4">+Добавить номер телефона</h4>
                 </div>
@@ -34,11 +34,11 @@ const DataBoss = () => {
                     <h2 className="dataBoss__h2">Контактное лицо</h2>
                     <div className="dataBoss__block">
                         <h4 className="dataBoss__h4">ФИО</h4>
-                        <span className="dataBoss__span">{user.name_face}</span>
+                        <span className="dataBoss__span">{user.name_cont_person}</span>
                     </div>
                     <div className="dataBoss__block">
                         <h4 className="dataBoss__h4">Номер телефона</h4>
-                        <span className="dataBoss__span">{user.phone_face}</span>
+                        <span className="dataBoss__span">{user.number_cont_person}</span>
                     </div>
                     <div className="dataBoss__block">
                         <h4 className="dataBoss__h4">Email</h4>

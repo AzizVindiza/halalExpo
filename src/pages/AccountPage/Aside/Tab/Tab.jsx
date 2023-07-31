@@ -21,7 +21,7 @@ const Tab = ({item}) => {
                                 <h2 className="tab__h2">{item.title}</h2>
                             </NavLink>
                         )
-                    })  :  user.type_register === "Участник" ?
+                    })  :  user.user_type === 5 ?
 
                             <>
 

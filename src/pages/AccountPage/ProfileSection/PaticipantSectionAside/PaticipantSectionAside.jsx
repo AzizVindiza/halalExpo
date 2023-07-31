@@ -12,7 +12,7 @@ const ParticipantSectionAside = () => {
             <Profile/>
             <DataBoss/>
             <DataCompany/>
-            <Certification text={"ИНН"}  text2={"ОКПО"} title={user.inn} title2={user.orgn} title3={user.okpo}/>
+            <Certification text={"ИНН"}  text2={"ОКПО"} title={user.iin_inn} title2={user.orgn} title3={user.okpo}/>
             <Certification text={"Наименование банка"} text2={"Расчетный счет"} text3={"БИК"} title={user.name_bank} title2={user.p_c} title3={user.bik}/>
         </div>
     );
