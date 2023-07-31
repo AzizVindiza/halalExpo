@@ -24,7 +24,7 @@ const Ticket = () => {
                     <FormZone setState={setState}/>
                     : <ComponentZone/> : ""
             }
-            {   user.type_register === "Посетитель" ?
+            {   user.user_type === 2 ?
                 <BuyTicket/> : ""
             }
 
