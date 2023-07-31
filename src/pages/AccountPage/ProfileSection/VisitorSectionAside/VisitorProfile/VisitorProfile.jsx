@@ -17,13 +17,13 @@ const VisitorProfile = () => {
 
                             <label className="VisitorProfile__label">
                                 ФИО
-                                <input className={"VisitorProfile__input"} type="text" value={user.name}/>
+                                <input className={"VisitorProfile__input"} type="text" value={user.full_name}/>
                             </label>
 
 
                             <label className="VisitorProfile__label">
                                 Номер телефона
-                                <input className={"VisitorProfile__input"} type="text" value={user.workPhone}/>
+                                <input className={"VisitorProfile__input"} type="text" value={user.phone}/>
                             </label>
 
                         <div className="VisitorProfile__row">

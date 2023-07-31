@@ -9,7 +9,7 @@ const Tab = ({item}) => {
         <div className={'tab'}>
             <div className="container tab__container">
                 {
-                    user.type_register === "Посетитель"  ?
+                    user.user_type === 2 ?
                     item.filter((el) => el.title !== "Управление участием" && el.title !== 'Документы').map((item) => {
                         return (
                             <NavLink key={item} className={({isActive}) => (
