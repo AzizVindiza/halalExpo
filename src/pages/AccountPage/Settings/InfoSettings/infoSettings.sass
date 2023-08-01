@@ -1,0 +1,90 @@
+@import "src/sass/base/mixins"
+
+
+.infoSettings
+  background: #FFFFFF
+  height: 90vh
+  &__wrapper
+    padding: 25px 30px
+    display: flex
+    flex-direction: column
+    row-gap: 34px
+
+  &__h2
+    @include text(600,25px,133%,#000)
+  &__box
+    display: flex
+    align-items: center
+    column-gap: 10px
+  &__row
+    display: flex
+    align-items: center
+    column-gap: 15px
+  &__h3
+    @include text(400,14px,133%,#000)
+  &__h4
+    @include text(600,18px,133%,#000)
+  &__span
+    @include text(500,15px,133%,#00000050)
+  &__h5
+    @include text(600,20px,150%,#000)
+  &__btn
+    display: flex
+    align-items: center
+    column-gap: 10px
+    padding: 10px 0
+    justify-content: center
+    max-width: 225px
+    width: 100%
+    background: #FFFFFF
+    border: 1px solid #FF7766
+  &__p
+    @include text(500,16px,133%,#FF7766)
+.modal
+  position: fixed
+  z-index: 1000
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  display: flex
+  justify-content: center
+  align-items: center
+
+  width: 100%
+  height: 100%
+
+  &__overlay
+    position: absolute
+    background: #00000050
+    width: 100%
+    height: 100%
+
+  &__window
+    border-radius: 8px
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    row-gap: 10px
+    background: #FFFFFF
+    height: 113px
+    z-index: 100000000
+    width: 300px
+    border: 2px solid white
+  &__h2
+    @include text(500,16px,133%,#000)
+  &__box
+    display: flex
+    column-gap: 26px
+  &__btn1 , &__btn2
+    padding: 5px 0
+    width: 100px
+    border-radius: 4px
+    border: 2px solid #3378C9
+  &__btn1
+    color: #FFFFFF
+    background: #3378C9
+  &__btn2
+    background: transparent
+    color: #3378C9

@@ -117,11 +117,9 @@ const router = createBrowserRouter(
                             <Route path={'chat'} element={<NotFoundPage/>}/>
                             <Route path={'meet'} element={<NotFoundPage/>}/>
                             <Route path={'chat'} element={<Chat/>}/>
-                            <Route path={'sittings'} element={<Settings/>}>
-                                <Route path={'infoAcc'} element={<InfoSettings/>}/>
+                            <Route path={'sittings'} element={<Settings/>}/>
+                            <Route path={'sittings/info'} element={<InfoSettings/>}/>
 
-
-                            </Route>
 
                             <Route path={'buyTicket'} element={<BuyTicket/>}/>
 

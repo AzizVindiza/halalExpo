@@ -1,13 +1,16 @@
 import React from 'react';
 import "./settings.sass"
-import {NavLink} from "react-router-dom";
+import {NavLink, Link, useNavigate} from "react-router-dom";
+import {useSelector} from "react-redux";
 
 const Settings = () => {
+    const navigate = useNavigate()
+    const {user} = useSelector((store) => store.user)
     return (
         <section className={"settings"}>
             <div className="settings__container">
                 <div className="settings__wrapper">
-                    <NavLink to={'sittings/infoAcc'} className="settings__row">
+                    <div onClick={()=> navigate("info")} className="settings__row">
                         <div className="settings__box">
                             <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clipPath="url(#clip0_5269_6266)">
@@ -27,7 +30,7 @@ const Settings = () => {
                         <svg width="28" height="15" viewBox="0 0 28 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1.25 6.5C0.697715 6.5 0.25 6.94772 0.25 7.5C0.25 8.05228 0.697715 8.5 1.25 8.5V6.5ZM26.9571 8.20711C27.3476 7.81658 27.3476 7.18342 26.9571 6.79289L20.5931 0.428932C20.2026 0.0384078 19.5695 0.0384078 19.1789 0.428932C18.7884 0.819457 18.7884 1.45262 19.1789 1.84315L24.8358 7.5L19.1789 13.1569C18.7884 13.5474 18.7884 14.1805 19.1789 14.5711C19.5695 14.9616 20.2026 14.9616 20.5931 14.5711L26.9571 8.20711ZM1.25 8.5H26.25V6.5H1.25V8.5Z" fill="black" fill-opacity="0.7"/>
                         </svg>
-                    </NavLink>
+                    </div>
                     <div className="settings__row">
                         <div className="settings__box">
                             <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
