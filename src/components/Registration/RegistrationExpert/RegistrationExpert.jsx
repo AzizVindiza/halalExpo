@@ -42,7 +42,7 @@ const RegistrationExpert = ({userType, urlReg}) => {
                     theme: "light"
                 });
                 setClose(false)
-                console.log(data)
+                console.log(res)
 
             }).catch((err) => {
                 console.log(err)
