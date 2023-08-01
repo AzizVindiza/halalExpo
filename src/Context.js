@@ -33,6 +33,7 @@ const Context = (props) => {
 
 
 
+
     const valueContext = {
         role,setRole,close,setClose,stake,setStake,branch,setBranch,login,setLogin,passwordShown,
         setPasswordShown,

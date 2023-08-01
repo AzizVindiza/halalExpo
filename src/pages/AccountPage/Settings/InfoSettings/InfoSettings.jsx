@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import "./infoSettings.sass"
 import {useNavigate} from "react-router-dom";
 import ava from "../img/ava.png"
 import {useDispatch, useSelector} from "react-redux";
-import {toggleModal} from "../../../../redux/reducers/userSlice";
-import {logOut} from "../../../../redux/reducers/userSlice";
+import {logOut, toggleModal} from "../../../../redux/reducers/userSlice";
+import {toast} from "react-toastify";
 
 
 const InfoSettings = () => {
@@ -12,10 +12,26 @@ const InfoSettings = () => {
     const navigate = useNavigate()
     const {user,open} = useSelector((store) => store.user)
     const dispatch = useDispatch()
+
+    const logOutOfAccount = () => {
+        toast.success('Вы вышли из аккаунта', {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+        })
+        dispatch(logOut())
+        dispatch(toggleModal())
+    }
+
+
     return (
         <section className={"infoSettings"}>
             <div className="infoSettings__container">
-
                 <div className="infoSettings__wrapper">
                     <div className="infoSettings__box">
                         <svg onClick={()=>navigate(-1)} width="31" height="22" viewBox="0 0 31 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -28,7 +44,7 @@ const InfoSettings = () => {
                     </div>
                     <div className="infoSettings__row">
                         <div className="infoSettings__img">
-                            <img src={ava} alt=""/>
+                            <img  src={`${process.env.REACT_APP_REST}${user.image_logo}`} className={'infoSettings__img'} alt=""/>
                         </div>
                         <div className="infoSettings__col">
                             <h3 className="infoSettings__h3">
@@ -59,13 +75,13 @@ const InfoSettings = () => {
                         </p>
                     </button>
                     {
-                        open && <div className="modal">
+                        open ?  <div className="modal">
                             <div className="modal__window">
                                 <h2 className="modal__h2">
                                     Вы действительно хотите выйти?
                                 </h2>
                                 <div className="modal__box">
-                                    <button onClick={()=> dispatch(logOut())} className="modal__btn1">Да</button>
+                                    <button onClick={logOutOfAccount} className="modal__btn1">Да</button>
                                     <button onClick={() => dispatch(toggleModal())}  className="modal__btn2">Нет</button>
                                 </div>
 
@@ -75,7 +91,7 @@ const InfoSettings = () => {
                             </div>
 
 
-                        </div>
+                        </div> : null
                     }
 
 

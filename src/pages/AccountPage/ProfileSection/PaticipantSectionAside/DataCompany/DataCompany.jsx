@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "./datacompany.sass"
 import BtnProfile from "../../../../../components/BtnProfile/BtnProfile";
 import {useSelector} from "react-redux";
+import ModalData from "./ModalData/ModalData";
 const DataCompany = () => {
     const  {user} = useSelector((store) => store.user)
+    const [openModalData,setOpenModalData] = useState(true)
     return (
         <div className={'datacompany'}>
             <h2 className="datacompany__h2">Данные о компании</h2>
@@ -79,9 +81,13 @@ const DataCompany = () => {
                 <p className="datacompany__p">{user.description}</p>
             <div className="datacompany__inner">
                 <div></div>
-                <BtnProfile text={'Редактировать'}/>
+                <div onClick={() => setOpenModalData(true)}>
+                    <BtnProfile text={'Редактировать'}/>
+                </div>
             </div>
-
+            {
+                openModalData && <ModalData setOpenModal={setOpenModalData}/>
+            }
         </div>
     );
 };

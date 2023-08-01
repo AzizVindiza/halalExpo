@@ -1,0 +1,45 @@
+@import "src/sass/base/mixins"
+
+.modaldata
+  position: fixed
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  display: flex
+  justify-content: center
+  align-items: center
+  background: #00000080
+  z-index: 1000
+  &__wrapper
+    position: relative
+    background: #fff
+    width: 522px
+    padding: 31px 34px 42px 28px
+    overflow-y: scroll
+    height: 534px
+  &__close
+    position: absolute
+    right: 10px
+    top: 10px
+  &__title
+    @include text(600,22px,133%,#000)
+    margin-bottom: 28px
+  &__form
+    display: flex
+    flex-direction: column
+    row-gap: 25px
+  &__span
+    @include text(800,16px,133%,#000)
+    opacity: 0.699999988079071
+    margin-bottom: 11px
+  &__label
+    display: flex
+    flex-direction: column
+    row-gap: 11px
+    border-bottom: 1.5px solid rgba(0, 0, 0, 0.60)
+    padding-bottom: 4px
+  &__input
+    @include text(400,16px,133%,#000)
+    opacity: 0.699999988079071
+
