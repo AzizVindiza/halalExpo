@@ -45,10 +45,16 @@ export const apiSlice = createApi({
                 url :`/other/news/${arg}`,
                 method : "GET"
             })
+        }),
+        getUserParticipant : builder.query({
+            query : ()  => ({
+                url : "/user/user-participant/",
+                method : "GET"
+            })
         })
 
     })
 
 })
 
-export const {useAddPartnerMutation,useLoginMutation,useAddFeedbackMutation,useGetMemberUserQuery,useGetNewsInNewsPageQuery,useGetNewsMoreQuery} = apiSlice
+export const {useAddPartnerMutation,useLoginMutation,useAddFeedbackMutation,useGetMemberUserQuery,useGetNewsInNewsPageQuery,useGetNewsMoreQuery,useGetUserParticipantQuery} = apiSlice
