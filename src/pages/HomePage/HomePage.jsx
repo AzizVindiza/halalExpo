@@ -32,7 +32,7 @@ const HomePage = () => {
             </div>
             <TaskSection/>
             <TypeSection/>
-            <VideoSection/>
+            {/*<VideoSection/>*/}
             <StartSection/>
             <ZoneSection/>
             <OpportunitySection/>
