@@ -1,0 +1,44 @@
+@import "src/sass/base/mixins"
+.edge
+  &__h2
+    @include text(700,35px,133%,#000)
+    text-align: center
+    margin-top: 44px
+  &__text
+    padding: 37px 0 94px 0
+
+
+  &__h3
+    @include text(700,22px,133%,#00862D)
+    margin-bottom: 8px
+
+  &__p
+    @include text(500,22px,133%,#000)
+    margin-bottom: 30px
+@media (max-width: 1201px)
+  .edge
+    &__h2
+      @include text(700,30px,133%,#000)
+    &__p
+      @include text(500,18px,133%,#000)
+@media (max-width: 1025px)
+  .edge
+    &__h2
+      @include text(700,26px,133%,#000)
+    &__h3
+      @include text(700,20px,133%,#00862D)
+    &__p
+      @include text(500,16px,133%,#000)
+@media (max-width: 769px)
+  .edge
+    &__p
+      @include text(500,15px,133%,#000)
+@media (max-width: 481px)
+  .edge
+    &__h2
+      @include text(700,20px,133%,#000)
+    &__h3
+      @include text(700,18px,133%,#00862D)
+    &__p
+      @include text(500,14px,133%,#000)
+@media (max-width: 396px)
