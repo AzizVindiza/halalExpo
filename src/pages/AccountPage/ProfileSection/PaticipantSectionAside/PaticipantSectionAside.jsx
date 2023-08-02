@@ -4,6 +4,7 @@ import DataBoss from "./DataBoss/DataBoss";
 import DataCompany from "./DataCompany/DataCompany";
 import Certification from "./Certification/Certification";
 import {useSelector} from "react-redux";
+import BankProfile from "./BankProfile/BankProfile";
 
 const ParticipantSectionAside = () => {
     const {user} = useSelector((store) => store.user)
@@ -12,8 +13,8 @@ const ParticipantSectionAside = () => {
             <Profile/>
             <DataBoss/>
             <DataCompany/>
-            <Certification text={"ИНН"}  text2={"ОКПО"} title={user.iin_inn} title2={user.orgn} title3={user.okpo}/>
-            <Certification text={"Наименование банка"} text2={"Расчетный счет"} text3={"БИК"} title={user.name_bank} title2={user.p_c} title3={user.bik}/>
+            <Certification/>
+            <BankProfile/>
         </div>
     );
 };

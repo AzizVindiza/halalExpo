@@ -1,10 +1,12 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from "./logo.png"
 import "./profile.sass"
 import {useSelector} from "react-redux";
+import ModalProfile from "./ModalProfile/ModalProfile";
 
 const Profile = () => {
     const {user} = useSelector((store) => store.user)
+    const [modalProfile,setModalProfile] = useState(false)
     return (
         <section className={'profile'}>
             <div className="profile__container">
@@ -40,6 +42,9 @@ const Profile = () => {
                         </div>
                     </div>
                 </div>
+                {
+                    modalProfile && <ModalProfile setModalProfile={setModalProfile}/>
+                }
             </div>
         </section>
     );

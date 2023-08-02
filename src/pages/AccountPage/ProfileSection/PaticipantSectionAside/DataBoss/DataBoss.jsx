@@ -1,11 +1,12 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "./dataBoss.sass"
 import BtnProfile from "../../../../../components/BtnProfile/BtnProfile";
 import {useSelector} from "react-redux";
+import ModalDataBoss from "./ModalDataBoss/ModalDataBoss";
 
 const DataBoss = () => {
     const {user} = useSelector((store) => store.user)
-
+    const [modalDataBoss,setModalDataBoss] = useState(false)
     return (
         <div className={'dataBoss'}>
             <div className="dataBoss__wrapper">
@@ -44,10 +45,14 @@ const DataBoss = () => {
                         <h4 className="dataBoss__h4">Email</h4>
                         <div className="dataBoss__span">{user.email}</div>
                     </div>
-                    <BtnProfile text={'Отправить запрос на редактирование'}/>
-
+                    <div onClick={() => setModalDataBoss(true) }>
+                        <BtnProfile text={'Отправить запрос на редактирование'}/>
+                    </div>
                 </div>
             </div>
+            {
+                modalDataBoss && <ModalDataBoss setModalDataBoss={setModalDataBoss}/>
+            }
         </div>
     );
 };
