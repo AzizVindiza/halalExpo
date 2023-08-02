@@ -34,7 +34,6 @@ const AccountPage = () => {
                         <div className="account__container">
                             <aside className="account__nav">
                                 <Aside/>
-                                <button onClick={clickLogOut}>Выйти</button>
                             </aside>
                             <div className="account__wrapper">
                                 <Outlet/>
