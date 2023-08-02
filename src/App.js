@@ -59,6 +59,8 @@ import B2BCard from "./pages/AccountPage/B2b/B2bCard/B2bCard";
 import NewsMore from "./pages/NewsPage/NewsMore/NewsMore";
 import Settings from "./pages/AccountPage/Settings/Settings";
 import InfoSettings from "./pages/AccountPage/Settings/InfoSettings/InfoSettings";
+
+import AdvantagesPage from "./pages/AdvantagesPage/AdvantagesPage";
 import PasswordSettings from "./pages/AccountPage/Settings/PasswordSettings/PasswordSettings";
 import NotificationSettings from "./pages/AccountPage/Settings/NotificationSettings/NotificationSettings";
 
@@ -137,6 +139,7 @@ const router = createBrowserRouter(
                 <Route path="fashionzone" element={<FashionZonePage/>}/>
                 <Route path="members/:id" element={<MembersUser/>}/>
                 <Route path="news/:id" element={<NewsMore/>}/>
+                <Route path="advantages" element={<AdvantagesPage/>}/>
 
             </Route>
 
