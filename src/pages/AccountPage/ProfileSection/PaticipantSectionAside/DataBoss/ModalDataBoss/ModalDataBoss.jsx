@@ -1,7 +1,31 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Btn from "../../../../../../components/Btn/Btn";
+import {useDispatch, useSelector} from "react-redux";
+import {useForm} from "react-hook-form";
+import {fillRegister} from "../../../../../../redux/reducers/userSlice";
+import {toast} from "react-toastify";
 
 const ModalDataBoss = ({setModalDataBoss}) => {
+    const {user} = useSelector((store) => store.user)
+    const {register,handleSubmit} = useForm()
+    const dispatch = useDispatch()
+    const onSubmit = (data) => {
+        console.log(data)
+        dispatch(fillRegister({...user,...data}))
+        // upDateUser(data)
+        setModalDataBoss(false)
+        toast.success('Ваши данные изменены', {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+        })
+
+    }
     return (
         <div className={'modaldata'}>
             <div className="modaldata__wrapper">
@@ -11,37 +35,37 @@ const ModalDataBoss = ({setModalDataBoss}) => {
                     </svg>
                 </div>
                 <h2 className="modaldata__title">Данные о руководителя</h2>
-                <form className="modaldata__form">
+                <form onSubmit={handleSubmit(onSubmit)} className="modaldata__form">
                     <label htmlFor="" className="modaldata__label">
                         <span className="openModalData__span">ФИО</span>
-                        <input type="text" className="modaldata__input"/>
+                        <input {...register("name_manager")} defaultValue={user.name_manager} type="text" className="modaldata__input"/>
                     </label>
                     <label htmlFor="" className="modaldata__label">
                         <span className="openModalData__span">Дата рождения</span>
-                        <input type="text" className="modaldata__input"/>
+                        <input {...register("date_of_birth")} defaultValue={user.date_of_birth} type="text" className="modaldata__input"/>
                     </label>
                     <label htmlFor="" className="modaldata__label">
                         <span className="openModalData__span">ИНН</span>
-                        <input type="text" className="modaldata__input"/>
+                        <input {...register("iin_inn")} defaultValue={user.iin_inn} type="text" className="modaldata__input"/>
                     </label>
                     <label htmlFor="" className="modaldata__label">
                         <span className="openModalData__span">Действующий на основании</span>
-                        <input type="text" className="modaldata__input"/>
+                        <input {...register("effective")} defaultValue={user.effective} type="text" className="modaldata__input"/>
                     </label>
                     <h2 className="modaldata__title">Контактное лицо</h2>
-                    <label htmlFor="" className="modaldata__label">
+                    <label htmlFor="lname" className="modaldata__label">
                         <span className="openModalData__span">ФИО</span>
-                        <input type="text" className="modaldata__input"/>
+                        <input name={"lname"} id={"lname"} {...register("name_cont_person")} defaultValue={user.name_cont_person} type="text" className="modaldata__input"/>
                     </label>
                     <label htmlFor="" className="modaldata__label">
                         <span className="openModalData__span">Номер телефона</span>
-                        <input type="text" className="modaldata__input"/>
+                        <input {...register("number_cont_person")} defaultValue={user.number_cont_person} type="text" className="modaldata__input"/>
                     </label>
                     <label htmlFor="" className="modaldata__label">
                         <span className="openModalData__span">Электронная почта</span>
-                        <input type="text" className="modaldata__input"/>
+                        <input {...register("email")} defaultValue={user.email} type="email" className="modaldata__input"/>
                     </label>
-                    <Btn text={'Подтвердить'}/>
+                    <Btn type={'submit'} text={'Подтвердить'}/>
                 </form>
             </div>
         </div>

@@ -1,7 +1,31 @@
 import React from 'react';
 import Btn from "../../../../../../components/Btn/Btn";
+import {useDispatch, useSelector} from "react-redux";
+import {useForm} from "react-hook-form";
+import {fillRegister} from "../../../../../../redux/reducers/userSlice";
+import {toast} from "react-toastify";
 
 const ModalCertification = ({setModalCertification}) => {
+    const {user} = useSelector((store) => store.user)
+    const {register,handleSubmit} = useForm()
+    const dispatch = useDispatch()
+    const onSubmit = (data) => {
+        console.log(data)
+        dispatch(fillRegister({...user,...data}))
+        // upDateUser(data)
+        setModalCertification(false)
+        toast.success('Ваши данные изменены', {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+        })
+
+    }
     return (
         <div className={'modaldata'}>
             <div className="modaldata__wrapper">
@@ -12,20 +36,20 @@ const ModalCertification = ({setModalCertification}) => {
                     </svg>
                 </div>
                 <h2 className="modaldata__title">Свидетельство о юридической регистарации</h2>
-                <form className="modaldata__form">
+                <form onSubmit={handleSubmit(onSubmit)} className="modaldata__form">
                     <label htmlFor="" className="modaldata__label">
                         <span className="openModalData__span">ИНН</span>
-                        <input type="text" className="modaldata__input"/>
+                        <input {...register("iin_inn")} defaultValue={user.iin_inn} type="text" className="modaldata__input"/>
                     </label>
                     <label htmlFor="" className="modaldata__label">
                         <span className="openModalData__span">ОГРН </span>
-                        <input type="text" className="modaldata__input"/>
+                        <input {...register("iin_orgn")} defaultValue={user.iin_orgn} type="text" className="modaldata__input"/>
                     </label>
                     <label htmlFor="" className="modaldata__label">
                         <span className="openModalData__span">ОКПО</span>
-                        <input type="text" className="modaldata__input"/>
+                        <input {...register("okpo")} defaultValue={user.okpo} type="text" className="modaldata__input"/>
                     </label>
-                    <Btn text={'Подтвердить'}/>
+                    <Btn type={"submit"} text={'Подтвердить'}/>
                 </form>
             </div>
         </div>

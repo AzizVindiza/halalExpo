@@ -1,7 +1,31 @@
 import React from 'react';
 import Btn from "../../../../../../components/Btn/Btn";
+import {useForm} from "react-hook-form";
+import {useDispatch, useSelector} from "react-redux";
+import {fillRegister} from "../../../../../../redux/reducers/userSlice";
+import {toast} from "react-toastify";
 
 const ModalBank = ({setModalBank}) => {
+    const {user} = useSelector((store) => store.user)
+    const {register,handleSubmit} = useForm()
+    const dispatch = useDispatch()
+    const onSubmit = (data) => {
+        console.log(data)
+        dispatch(fillRegister({...user,...data}))
+        // upDateUser(data)
+        setModalBank(false)
+        toast.success('Ваши данные изменены', {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+        })
+
+    }
     return (
         <div className={'modaldata'}>
             <div className="modaldata__wrapper">
@@ -12,20 +36,20 @@ const ModalBank = ({setModalBank}) => {
                     </svg>
                 </div>
                 <h2 className="modaldata__title">Реквизиты</h2>
-                <form className="modaldata__form">
+                <form onSubmit={handleSubmit(onSubmit)} className="modaldata__form">
                     <label htmlFor="" className="modaldata__label">
                         <span className="openModalData__span">Наименование банка</span>
-                        <input type="text" className="modaldata__input"/>
+                        <input defaultValue={user.name_bank} {...register("name_bank")} type="text" className="modaldata__input"/>
                     </label>
                     <label htmlFor="" className="modaldata__label">
                         <span className="openModalData__span">Расчетный счет </span>
-                        <input type="text" className="modaldata__input"/>
+                        <input defaultValue={user.p_c} {...register("p_c")} type="text" className="modaldata__input"/>
                     </label>
                     <label htmlFor="" className="modaldata__label">
                         <span className="openModalData__span">БИК</span>
-                        <input type="text" className="modaldata__input"/>
+                        <input defaultValue={user.bik} {...register("bik")} type="text" className="modaldata__input"/>
                     </label>
-                    <Btn text={'Подтвердить'}/>
+                    <Btn  text={'Подтвердить'}/>
                 </form>
             </div>
         </div>

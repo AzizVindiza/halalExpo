@@ -23,7 +23,7 @@ const BankProfile = () => {
             </div>
             <div className="certification__inner">
                 <div></div>
-                <div onClick={() => setModalBank(true)}>
+                <div onClick={  ()  =>   setModalBank(true)}>
                     <BtnProfile text={'Отправить запрос на редактирование'}/>
                 </div>
             </div>

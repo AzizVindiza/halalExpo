@@ -51,10 +51,17 @@ export const apiSlice = createApi({
                 url : "/user/user-participant/",
                 method : "GET"
             })
+        }),
+        upDateUser : builder.mutation({
+            query : ({id, ...rest}) => ({
+                url : `/user/user-participant/${id}`,
+                method : "PATCH",
+                body : rest
+            })
         })
 
     })
 
 })
 
-export const {useAddPartnerMutation,useLoginMutation,useAddFeedbackMutation,useGetMemberUserQuery,useGetNewsInNewsPageQuery,useGetNewsMoreQuery,useGetUserParticipantQuery} = apiSlice
+export const {useAddPartnerMutation,useLoginMutation,useAddFeedbackMutation,useGetMemberUserQuery,useGetNewsInNewsPageQuery,useGetNewsMoreQuery,useGetUserParticipantQuery,useUpDateUserMutation} = apiSlice

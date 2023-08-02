@@ -5,6 +5,7 @@ import ModalCertification from "./ModalCertification/ModalCertification";
 import {useSelector} from "react-redux";
 
 const Certification = ({title, title2, title3, text2, text}) => {
+
     const  {user} = useSelector((store) => store.user)
     const [modalCertification,setModalCertification] = useState(false)
     return (

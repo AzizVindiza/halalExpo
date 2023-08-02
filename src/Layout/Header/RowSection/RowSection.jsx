@@ -45,6 +45,9 @@ const RowSection = () => {
                 <div className="rowSection__wrapper">
 
                     <div className="rowSection__change">
+                        <label htmlFor="id">
+                            click
+                        </label>
                         <button onClick={() => changeLanguages('ru')} className={`rowSection__lang ${i18n.language === "ru" ? 'rowSection__lang_active' : "" }`}>RU</button>
                         <button onClick={() => changeLanguages('en')} className={`rowSection__lang ${i18n.language === "en" ?  'rowSection__lang_active' : ""}`}>EN</button>
                     </div>

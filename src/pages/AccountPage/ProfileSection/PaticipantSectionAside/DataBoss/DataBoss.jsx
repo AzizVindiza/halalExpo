@@ -3,9 +3,11 @@ import "./dataBoss.sass"
 import BtnProfile from "../../../../../components/BtnProfile/BtnProfile";
 import {useSelector} from "react-redux";
 import ModalDataBoss from "./ModalDataBoss/ModalDataBoss";
+import {useForm} from "react-hook-form";
 
 const DataBoss = () => {
     const {user} = useSelector((store) => store.user)
+   const {register,handleSubmit} = useForm()
     const [modalDataBoss,setModalDataBoss] = useState(false)
     return (
         <div className={'dataBoss'}>
