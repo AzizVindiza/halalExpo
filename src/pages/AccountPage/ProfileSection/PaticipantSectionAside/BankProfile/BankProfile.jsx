@@ -25,8 +25,8 @@ const BankProfile = () => {
             </div>
             <div className="certification__inner">
                 <div></div>
-                <div onClick={  ()  =>   setModalBank(true)}>
-                    <BtnProfile text={'Отправить запрос на редактирование'}/>
+                <div className={'datacompany__btn'}  onClick={  ()  =>   setModalBank(true)}>
+                    <BtnProfile text={'Редактировать'}/>
                 </div>
             </div>
             {

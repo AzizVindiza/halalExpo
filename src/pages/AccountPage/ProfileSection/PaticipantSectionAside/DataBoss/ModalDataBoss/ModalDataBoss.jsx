@@ -4,15 +4,18 @@ import {useDispatch, useSelector} from "react-redux";
 import {useForm} from "react-hook-form";
 import {fillRegister} from "../../../../../../redux/reducers/userSlice";
 import {toast} from "react-toastify";
+import {useUpDateUserMutation} from "../../../../../../redux/ApiSlice";
 
 const ModalDataBoss = ({setModalDataBoss}) => {
     const {user} = useSelector((store) => store.user)
     const {register,handleSubmit} = useForm()
     const dispatch = useDispatch()
+    const [upDateUser] = useUpDateUserMutation()
+
     const onSubmit = (data) => {
         console.log(data)
         dispatch(fillRegister({...user,...data}))
-        // upDateUser(data)
+        upDateUser({...user, ...data})
         setModalDataBoss(false)
         toast.success('Ваши данные изменены', {
             position: "top-center",

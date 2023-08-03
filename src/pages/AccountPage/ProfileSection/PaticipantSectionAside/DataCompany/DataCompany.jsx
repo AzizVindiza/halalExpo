@@ -15,9 +15,9 @@ const DataCompany = () => {
             <div className="datacompany__wrapper">
                 <div className="datacompany__row">
                     <h3 className={"datacompany__h3"}>Название компании</h3>
-                    <h4 className={"datacompany__span"}>{item.company_one}</h4>
+                    <h4 className={"datacompany__span"}>{user.company_one}</h4>
                     <h2 className={"datacompany__h3"}>Страна</h2>
-                    <h2 className={"datacompany__span"}>{item.country}</h2>
+                    <h2 className={"datacompany__span"}>{user.country}</h2>
                 </div>
                 <div className="datacompany__row">
                     <h3 className={"datacompany__h3"}>Юридическое название компании</h3>
@@ -42,8 +42,8 @@ const DataCompany = () => {
 
                 <p className="datacompany__p">{item.description}</p>
             <div className="datacompany__inner">
-                <div></div>
-                <div onClick={() => setOpenModalData(true)}>
+                <div>sdfsdfsdf</div>
+                <div className={'datacompany__btn'} onClick={() => setOpenModalData(true)}>
                     <BtnProfile text={'Редактировать'}/>
                 </div>
             </div>

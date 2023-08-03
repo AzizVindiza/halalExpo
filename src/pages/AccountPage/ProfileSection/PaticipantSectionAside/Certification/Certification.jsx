@@ -27,7 +27,7 @@ const Certification = () => {
             </div>
             <div className="certification__inner">
                 <div></div>
-                <div onClick={() => setModalCertification(true)}>
+                <div className={'datacompany__btn'}  onClick={() => setModalCertification(true)}>
                     <BtnProfile text={'Отправить запрос на редактирование'}/>
                 </div>
             </div>

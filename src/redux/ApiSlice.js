@@ -5,7 +5,7 @@ import {createApi,fetchBaseQuery} from "@reduxjs/toolkit/query/react";
 export const apiSlice = createApi({
     reducerPath : "apiSlice",
     baseQuery :fetchBaseQuery({baseUrl: process.env.REACT_APP_REST}),
-
+    tagTypes : ["User"],
     endpoints:(builder)=> ({
         addPartner: builder.mutation({
             query:(body)=>({
@@ -53,19 +53,18 @@ export const apiSlice = createApi({
                 method : "GET"
             })
         }),
-        upDateUser : builder.mutation({
-            query : ({id, ...rest}) => ({
-                url : `/user/user-participant/${id}`,
-                method : "PATCH",
-                body : rest
-            })
-        }),
         getUserDataBoss : builder.query({
             query : (id)  => ({
                 url : `/user/user-participant/${id}`,
             }),
         }),
-
+        upDateUser : builder.mutation({
+            query : (user) => ({
+                url : `/user/user-participant/${user.uniqueId}/`,
+                method : "PATCH",
+                body : user
+            }),
+        }),
     })
 
 })

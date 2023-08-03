@@ -61,7 +61,7 @@ const DataBoss = () => {
                         <h4 className="dataBoss__h4">Email</h4>
                         <div className="dataBoss__span">{item.email}</div>
                     </div>
-                    <div onClick={() => setModalDataBoss(true) }>
+                    <div className={'datacompany__btn'}  onClick={() => setModalDataBoss(true) }>
                         <BtnProfile text={'Отправить запрос на редактирование'}/>
                     </div>
                 </div>

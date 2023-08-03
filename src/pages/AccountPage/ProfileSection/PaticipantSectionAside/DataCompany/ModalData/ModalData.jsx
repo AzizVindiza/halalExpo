@@ -3,7 +3,7 @@ import Btn from "../../../../../../components/Btn/Btn";
 import "./modaldata.sass"
 import {useDispatch, useSelector} from "react-redux";
 import {useForm} from "react-hook-form";
-import {useUpDateUserMutation} from "../../../../../../redux/ApiSlice";
+import {useGetUserDataBossQuery, useUpDateUserMutation} from "../../../../../../redux/ApiSlice";
 import {fillRegister} from "../../../../../../redux/reducers/userSlice";
 import {toast} from "react-toastify";
 const ModalData = ({setOpenModal}) => {
@@ -13,8 +13,8 @@ const ModalData = ({setOpenModal}) => {
 
     const [upDateUser] = useUpDateUserMutation()
     const onSubmit = (data) => {
-        dispatch(fillRegister({...user,...data}))
-        // upDateUser(data)
+        dispatch(fillRegister({...user, ...data}))
+        upDateUser({...user,...data})
         setOpenModal(false)
         toast.success('Ваши данные изменены', {
             position: "top-center",
