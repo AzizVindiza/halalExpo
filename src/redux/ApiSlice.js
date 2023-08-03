@@ -5,6 +5,7 @@ import {createApi,fetchBaseQuery} from "@reduxjs/toolkit/query/react";
 export const apiSlice = createApi({
     reducerPath : "apiSlice",
     baseQuery :fetchBaseQuery({baseUrl: process.env.REACT_APP_REST}),
+
     endpoints:(builder)=> ({
         addPartner: builder.mutation({
             query:(body)=>({
@@ -58,10 +59,15 @@ export const apiSlice = createApi({
                 method : "PATCH",
                 body : rest
             })
-        })
+        }),
+        getUserDataBoss : builder.query({
+            query : (id)  => ({
+                url : `/user/user-participant/${id}`,
+            }),
+        }),
 
     })
 
 })
 
-export const {useAddPartnerMutation,useLoginMutation,useAddFeedbackMutation,useGetMemberUserQuery,useGetNewsInNewsPageQuery,useGetNewsMoreQuery,useGetUserParticipantQuery,useUpDateUserMutation} = apiSlice
+export const {useAddPartnerMutation,useLoginMutation,useAddFeedbackMutation,useGetMemberUserQuery,useGetNewsInNewsPageQuery,useGetNewsMoreQuery,useGetUserParticipantQuery,useUpDateUserMutation,useGetUserDataBossQuery} = apiSlice

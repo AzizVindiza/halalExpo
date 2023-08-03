@@ -3,9 +3,11 @@ import BtnProfile from "../../../../../components/BtnProfile/BtnProfile";
 import ModalCertification from "../Certification/ModalCertification/ModalCertification";
 import ModalBank from "./ModalBank/ModalBank";
 import {useSelector} from "react-redux";
+import {useGetUserDataBossQuery} from "../../../../../redux/ApiSlice";
 
 const BankProfile = () => {
     const  {user} = useSelector((store) => store.user)
+    const {data : item = {}} = useGetUserDataBossQuery(user.uniqueId)
     const [modalBank,setModalBank] = useState(false)
     return (
         <div className={'certification'}>
@@ -16,9 +18,9 @@ const BankProfile = () => {
                     <h2 className="certification__h2">Расчетный счет</h2>
                 </div>
                 <div className="certification__right">
-                    <h3 className="certification__h3">{user.name_bank}</h3>
-                    <h3 className="certification__h3">{user.p_c}</h3>
-                    <h3 className="certification__h3">{user.bik}</h3>
+                    <h3 className="certification__h3">{item.name_bank}</h3>
+                    <h3 className="certification__h3">{item.p_c}</h3>
+                    <h3 className="certification__h3">{item.bik}</h3>
                 </div>
             </div>
             <div className="certification__inner">
