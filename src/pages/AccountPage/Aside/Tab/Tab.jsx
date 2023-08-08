@@ -41,7 +41,7 @@ const Tab = ({item}) => {
                             }
 
                             </>
-                            : user.type_register === "Представитель государственных органов" || user.type_register === "Представитель государственных органов" || user.type_register === "Эксперта" ?
+                            : user.user_type === 1 || user.user_type === 3 || user.user_type === 4 ?
 
                             <>
                             {

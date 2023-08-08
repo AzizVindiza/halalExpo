@@ -92,15 +92,14 @@ const router = createBrowserRouter(
                 <Route path="benefits" element={<BenefitsPage/>}/>
                 <Route path="members" element={<MembersPage/>}/>
                 <Route path="members" element={<MembersPage/>}/>
-                <Route path="hotel" element={<Hotel/>}/>
+                {/*<Route path="hotel" element={<Hotel/>}/>*/}
                 {/*<Route path="stand" element={<StandPage/>}/>*/}
                 <Route path="mass" element={<MassPage/>}/>
-                <Route path="location" element={<LocationPage/>}/>
+                {/*<Route path="location" element={<LocationPage/>}/>*/}
                 <Route path="trade" element={<TradePage/>}/>
                 <Route path="invest" element={<InvestZonePage/>}/>
                 <Route path="privacy" element={<PrivacyPolicy/>}/>
                 <Route path="transfer" element={<TransferPage/>}/>
-
 
                 <Route path="account" element={<AccountPage/>}>
                     <Route path="test" element={<UserTicket/>}/>

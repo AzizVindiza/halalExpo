@@ -23,12 +23,12 @@ const Requisites = () => {
                             <h3 className="requisites__h3">
                                 Загрузите чек за оплату билета
                             </h3>
-                            <label htmlFor="" className="requisites__label">
-                                <input type="file" className={"requisites__input"} />
+                            <label htmlFor="file" className="requisites__label">
+                                <input type="file" id={"file"} className={"requisites__input"} />
 
 
                             </label>
-                        </div>
+ `                       </div>
                     </div>
                     <div className="requisites__box">
                         <h4 className="requisites__h4">

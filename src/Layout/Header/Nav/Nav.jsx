@@ -33,7 +33,7 @@ const Nav = () => {
                 {/*<Link onClick={activeLogin} className={'nav__user'} to={''}>Войти</Link>*/}
             </div>
             <p className="nav__txt">
-                26.08.23 - 28.08.23 Иссык-Кульская область Экспо, г.Чолпон-Ата ,Рух Ордо
+                10.10.23 - 12.10.23 Старая площадь г.Бишкек
             </p>
         </nav>
     );

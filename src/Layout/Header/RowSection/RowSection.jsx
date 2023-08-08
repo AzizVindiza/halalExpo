@@ -44,10 +44,10 @@ const RowSection = () => {
                 <h2 className="rowSection__h2">{t("header.text")}</h2>
                 <div className="rowSection__wrapper">
 
-                    <div className="rowSection__change">
-                        <button onClick={() => changeLanguages('ru')} className={`rowSection__lang ${i18n.language === "ru" ? 'rowSection__lang_active' : "" }`}>RU</button>
-                        <button onClick={() => changeLanguages('en')} className={`rowSection__lang ${i18n.language === "en" ?  'rowSection__lang_active' : ""}`}>EN</button>
-                    </div>
+                    {/*<div className="rowSection__change">*/}
+                    {/*    <button onClick={() => changeLanguages('ru')} className={`rowSection__lang ${i18n.language === "ru" ? 'rowSection__lang_active' : "" }`}>RU</button>*/}
+                    {/*    <button onClick={() => changeLanguages('en')} className={`rowSection__lang ${i18n.language === "en" ?  'rowSection__lang_active' : ""}`}>EN</button>*/}
+                    {/*</div>*/}
                     {
                         Object.keys(user).length === 0  ?
                             <div className="rowSection__user">

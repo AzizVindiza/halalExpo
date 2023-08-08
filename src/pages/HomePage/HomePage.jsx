@@ -36,7 +36,7 @@ const HomePage = () => {
             <StartSection/>
             <ZoneSection/>
             <OpportunitySection/>
-            <MapSection/>
+            {/*<MapSection/>*/}
             {/*<SpeakersSection/>*/}
             <OrganizatorSection/>
             <PartnersSponsors/>

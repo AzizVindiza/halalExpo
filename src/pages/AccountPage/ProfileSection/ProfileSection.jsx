@@ -5,6 +5,7 @@ import ParticipantSectionAside from "./PaticipantSectionAside/PaticipantSectionA
 import {useSelector} from "react-redux";
 import store from "../../../redux/store";
 import VisitorSectionAside from "./VisitorSectionAside/VisitorSectionAside";
+import GovernmentSectionAside from "./GovernmentSectionAside/GovernmentSectionAside";
 
 const ProfileSection = () => {
     const {user} = useSelector((store) => store.user)
@@ -15,7 +16,9 @@ const ProfileSection = () => {
                     user.user_type === 5 ?
                         <ParticipantSectionAside/> :  
                     user.user_type === 2 ?
-                    <VisitorSectionAside/> : ""
+                    <VisitorSectionAside/> :
+                        user.user_type === 4 ?
+                            <GovernmentSectionAside/> : ""
                 }
 
 
