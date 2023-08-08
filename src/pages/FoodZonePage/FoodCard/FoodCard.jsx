@@ -23,7 +23,7 @@ const FoodCard = () => {
                         </div>
                         <div className="foodCard__text">
                             <h3 className="foodCard__h3">Площадь для одного участника: 5м*5м</h3>
-                            <p className="foodCard__p">$550</p>
+
                         </div>
 
 
@@ -39,7 +39,7 @@ const FoodCard = () => {
                         </div>
                         <div className="foodCard__price">
                             <h3 className="foodCard__h3">Площадь одного павильона: 2м*2м</h3>
-                            <p className="foodCard__p">$200</p>
+
                         </div>
 
                     </div>
