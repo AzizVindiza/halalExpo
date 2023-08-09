@@ -3,18 +3,31 @@ import "./b2bVisitor.sass"
 import logo from "../../img/defoult.svg";
 import acc from "../../img/accaunt.svg";
 import chat from "../../img/chat.svg";
+import {useLocation} from "react-router-dom";
 
 const B2BVisitor = () => {
+    const location = useLocation()
+    console.log(location)
     return (
         <div className={"B2bVisitor"}>
             <div className="B2bVisitor__row">
-                <div className="B2bVisitor__status">
-                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9 15.75C12.7279 15.75 15.75 12.7279 15.75 9C15.75 5.27208 12.7279 2.25 9 2.25C5.27208 2.25 2.25 5.27208 2.25 9C2.25 12.7279 5.27208 15.75 9 15.75Z" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M11.25 7.5L8.25 10.5L6.75 9" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
+                <div className={location.pathname === "/account/meet/inbox2" ? "B2bVisitor__status" : "B2bVisitor__status2"}>
+                    {
+                        location.pathname === "/account/meet/inbox2" ?
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 15.75C12.7279 15.75 15.75 12.7279 15.75 9C15.75 5.27208 12.7279 2.25 9 2.25C5.27208 2.25 2.25 5.27208 2.25 9C2.25 12.7279 5.27208 15.75 9 15.75Z" stroke="white" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+                                <path d="M11.25 7.5L8.25 10.5L6.75 9" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg> : <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="9" cy="9" r="6.75" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                <path d="M8.25 6V9.75H12" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
+                    }
                     <span className="B2bVisitor__span">
-                        Активно
+                          {
+                              location.pathname === "/account/meet/inbox2" ? "Активно" :
+                                  location.pathname === "/account/meet/inbox" ? "Ждет ответа" :
+                                      location.pathname === "/account/meet/sent" ? "В ожидании" : ""
+                          }
                     </span>
 
                 </div>
@@ -56,7 +69,7 @@ const B2BVisitor = () => {
 
                 </div>
                 <div className="B2bVisitor__box">
-                    <div className="B2bVisitor__date">
+                    <div className="B2bVisitor__time">
                         <div className="B2bVisitor__flex">
                             <h4 className="B2bVisitor___h4">
                                 Дата:
@@ -84,9 +97,14 @@ const B2BVisitor = () => {
                     </div>
 
                 </div>
-                <button className="B2bVisitor__btn">
-                    Отказаться
-                </button>
+                <div className="B2bVisitor__btns">
+                    <button className={location.pathname === "/account/meet/inbox" ? "B2bVisitor__btn" : "B2bVisitor__btn1"}>
+                        Принять
+                    </button>
+                    <button className="B2bVisitor__btn">
+                        Отказаться
+                    </button>
+                </div>
                 <div className="B2bVisitor__icons">
                     <img src={chat} alt=""/>
 

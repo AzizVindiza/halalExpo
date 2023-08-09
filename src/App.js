@@ -63,6 +63,7 @@ import InfoSettings from "./pages/AccountPage/Settings/InfoSettings/InfoSettings
 import AdvantagesPage from "./pages/AdvantagesPage/AdvantagesPage";
 import PasswordSettings from "./pages/AccountPage/Settings/PasswordSettings/PasswordSettings";
 import NotificationSettings from "./pages/AccountPage/Settings/NotificationSettings/NotificationSettings";
+import ChatMessage from "./pages/AccountPage/Chat/ChatMessage/ChatMessage";
 
 
 
@@ -112,14 +113,20 @@ const router = createBrowserRouter(
                             <Route path={'tickets'} element={<NotFoundPage/>}/>
                             <Route path={'document'} element={<NotFoundPage/>}/>
                             <Route  path={'meet'} element={<B2b/>}>
-                                <Route path={'inbox2'} element={<NotFoundPage/>}/>
-                                <Route path={'inbox'} element={<NotFoundPage/>}/>
-                                <Route path={'sent'} element={<NotFoundPage/>}/>
+                                <Route path={'inbox2'} element={<B2BCard/>}/>
+                                <Route path={'inbox'} element={<B2BCard/>}/>
+                                <Route path={'sent'} element={<B2BCard/>}/>
+                            </Route>
+                            <Route  path={'chat'} element={<Chat/>}>
+                                <Route path={"allMessage"} element={<ChatMessage/>}/>
+                                <Route path={"incoming"} element={<ChatMessage/>}/>
+                                <Route path={"send"} element={<ChatMessage/>}/>
+                                <Route path={"draft"} element={<ChatMessage/>}/>
+                                <Route path={"favorite"} element={<ChatMessage/>}/>
                             </Route>
 
-                            <Route path={'chat'} element={<NotFoundPage/>}/>
                             <Route path={'meet'} element={<NotFoundPage/>}/>
-                            <Route path={'chat'} element={<Chat/>}/>
+
                             <Route path={'sittings'} element={<Settings/>}/>
                             <Route path={'sittings/info'} element={<InfoSettings/>}/>
                             <Route path={'sittings/password'} element={<PasswordSettings/>}/>

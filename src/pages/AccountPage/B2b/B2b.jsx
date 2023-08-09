@@ -1,5 +1,5 @@
 import React, {useContext, useState} from 'react';
-import {Link,NavLink} from "react-router-dom"
+import {Link, NavLink, Outlet} from "react-router-dom"
 import "./b2b.sass"
 import B2BCard from "./B2bCard/B2bCard";
 import {CustomContext} from "../../../Context";
@@ -24,7 +24,8 @@ const B2B = () => {
                                 !isActive ? "B2b__link" : "B2b__link_active")}  to={"sent"}>Отправленные</NavLink>
                     </div>
                     <div className="B2b__box">
-                        {/*<B2BCard/>*/}
+                        <Outlet/>
+
                     </div>
 
                 </div>

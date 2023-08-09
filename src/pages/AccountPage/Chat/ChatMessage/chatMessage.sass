@@ -1,0 +1,28 @@
+@import "src/sass/base/mixins"
+
+
+.chatMessage
+  padding-bottom: 25px
+  &__wrapper
+    display: flex
+    padding: 30px 30px 20px 30px
+    justify-content: space-between
+    border-bottom: 1px solid #00000010
+  &__box
+    display: flex
+    column-gap: 15px
+  &__row
+    display: flex
+    column-gap: 11px
+    align-items: center
+  &__h2
+    @include text(600,20px,180%,#000)
+  &__p
+    @include text(600,15px,150%,#00000050)
+  &__h3
+    @include text(500,12px,133%,#FF2E13)
+  &__span
+    @include text(500,12px,133%,#00000060)
+
+
+

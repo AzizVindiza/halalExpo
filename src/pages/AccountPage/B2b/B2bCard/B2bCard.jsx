@@ -15,8 +15,6 @@ const B2BCard = () => {
                         <B2bParticipant/>
                         <B2bVisitor/>
 
-
-
                     </div>
 
 

@@ -1,0 +1,48 @@
+@import "src/sass/base/mixins"
+
+
+.chatHeader
+  &__wrapper
+    display: flex
+    justify-content: space-between
+    width: 100%
+    border-bottom: 1px solid #2489FF
+  &__img
+    width: 22px
+    height: 22px
+  &__navlink
+    width: 190px
+    padding: 17px 0
+    column-gap: 10px
+    display: flex
+    align-items: center
+    justify-content: center
+
+    &_active
+      width: 190px
+      border-radius: 6px
+      padding: 17px 0
+      column-gap: 10px
+      display: flex
+      align-items: center
+      justify-content: center
+      background: #2489FF
+      span
+        color: #FFFFFF
+      h2
+        color: #FFFFFF
+      svg
+        path
+          stroke: #FFFFFF
+          fill: #FFFFFF
+
+
+
+
+  &__h2
+    @include text(500,16px,172%,#000)
+    font-family: Monserat,sans-serif
+  &__span
+    @include text(500,16px,172%,#03C)
+
+
