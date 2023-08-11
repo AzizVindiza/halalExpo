@@ -11,20 +11,20 @@ const BankProfile = () => {
     const [modalBank,setModalBank] = useState(false)
     return (
         <div className={'certification'}>
-            <h2 className="certification__h2"></h2>
+            <h2 className="certification__h2">Реквизиты</h2>
             <div className="certification__wrapper">
                 <div className="certification__left">
-                    <h2 className="certification__h2">Наименование банка</h2>
-                    <h2 className="certification__h2">Расчетный счет</h2>
+                    <h3 className="certification__h3">Наименование банка</h3>
+                    <h3 className="certification__h3">Расчетный счет</h3>
+                    <h3 className="certification__h3">БИК</h3>
                 </div>
                 <div className="certification__right">
-                    <h3 className="certification__h3">{item.name_bank}</h3>
-                    <h3 className="certification__h3">{item.p_c}</h3>
-                    <h3 className="certification__h3">{item.bik}</h3>
+                    <h3 className="certification__span">{item.name_bank}</h3>
+                    <h3 className="certification__span">{item.p_c}</h3>
+                    <h3 className="certification__span">{item.bik}</h3>
                 </div>
             </div>
             <div className="certification__inner">
-                <div></div>
                 <div className={'datacompany__btn'}  onClick={  ()  =>   setModalBank(true)}>
                     <BtnProfile text={'Редактировать'}/>
                 </div>

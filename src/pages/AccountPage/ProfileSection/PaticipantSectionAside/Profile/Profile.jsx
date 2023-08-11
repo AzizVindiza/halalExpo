@@ -19,30 +19,33 @@ const Profile = () => {
                         </div>
                         <h2 className="profile__h2">{user.company_one}</h2>
                     </div>
-                    <div className="profile__center">
-                        <h3 className="profile__h3">Отрасль</h3>
-                        <p className="profile__p profile__p_first">{user.industry}</p>
-                        <h3 className="profile__h3">Направление</h3>
-                        <p className="profile__p">{user.direction}</p>
+                    <div className="profile__box">
+                        <div className="profile__center">
+                            <h3 className="profile__h3">Отрасль</h3>
+                            <p className="profile__p profile__p_first">{user.industry}</p>
+                            <h3 className="profile__h3">Направление</h3>
+                            <p className="profile__p">{user.direction}</p>
+                        </div>
+                        <div className="profile__right">
+                            <div className="profile__links">
+                                <h4 className="profile__h4">Email:</h4>
+                                <a href="#" className="profile__link">{user.workEmail}</a>
+                            </div>
+                            <div className="profile__links">
+                                <h4 className="profile__h4">Website:</h4>
+                                <a href="#" className="profile__link">{user.site_company}</a>
+                            </div>
+                            <div className="profile__links">
+                                <h4 className="profile__h4">Facebook:</h4>
+                                <a href="#" className="profile__link">{user.facebook}</a>
+                            </div>
+                            <div className="profile__links">
+                                <h4 className="profile__h4">Instagram</h4>
+                                <a href="#" className="profile__link">{user.instagram}</a>
+                            </div>
+                        </div>
                     </div>
-                    <div className="profile__right">
-                        <div className="profile__links">
-                            <h4 className="profile__h4">Email:</h4>
-                            <a href="#" className="profile__link">{user.workEmail}</a>
-                        </div>
-                        <div className="profile__links">
-                            <h4 className="profile__h4">Website:</h4>
-                            <a href="#" className="profile__link">{user.site_company}</a>
-                        </div>
-                        <div className="profile__links">
-                            <h4 className="profile__h4">Facebook:</h4>
-                            <a href="#" className="profile__link">{user.facebook}</a>
-                        </div>
-                        <div className="profile__links">
-                            <h4 className="profile__h4">Instagram</h4>
-                            <a href="#" className="profile__link">{user.instagram}</a>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </section>

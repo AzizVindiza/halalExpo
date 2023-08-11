@@ -14,6 +14,7 @@ const AccountPage = () => {
         setOther,
         setChooseZone,
         setChooseIndustry,
+        openAside
     } = useContext(CustomContext)
     const {user} = useSelector((store) => store.user)
    const dispatch = useDispatch()
@@ -32,7 +33,7 @@ const AccountPage = () => {
                 Object.keys(user).length === 0 ? <HomePage/> :
                     <div className={'account'}>
                         <div className="account__container">
-                            <aside className="account__nav">
+                            <aside className={ `account__nav ${openAside ? 'account__nav_active' : ''  }`}>
                                 <Aside/>
                             </aside>
                             <div className="account__wrapper">

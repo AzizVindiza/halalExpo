@@ -48,7 +48,11 @@ const RowSection = () => {
                     {/*    <button onClick={() => changeLanguages('ru')} className={`rowSection__lang ${i18n.language === "ru" ? 'rowSection__lang_active' : "" }`}>RU</button>*/}
                     {/*    <button onClick={() => changeLanguages('en')} className={`rowSection__lang ${i18n.language === "en" ?  'rowSection__lang_active' : ""}`}>EN</button>*/}
                     {/*</div>*/}
+
+
                     {
+
+
                         Object.keys(user).length === 0  ?
                             <div className="rowSection__user">
                                 <div className="rowSection__box">
@@ -75,6 +79,7 @@ const RowSection = () => {
                                     </svg>
 
                                 </div>
+
                                 <Link to={'account/profile'} className="rowSection__account">
                                     <div className="rowSection__logo">
                                         <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">

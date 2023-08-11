@@ -18,6 +18,10 @@
     height: 55px
   &__container
     padding: 10px 0
+  &__box
+    display: flex
+    svg
+      display: none
 
 
 
@@ -50,7 +54,12 @@
         right: 0
 
 
-
+@media (max-width: 482px)
+  .header
+    &__box
+      column-gap: 15px
+      svg
+        display: flex
 
 @media (max-width: 392px)
   .header

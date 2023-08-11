@@ -28,6 +28,7 @@ const Context = (props) => {
     const [chooseIndustry,setChooseIndustry] = useState("") // choose industry
     const [_,setClickZone] = useState() //  do swiper true
     const [fileCompany,setFileCompany ] = useState(null)
+    const [openAside,setOpenAside] = useState(false)
 
 
 
@@ -42,7 +43,7 @@ const Context = (props) => {
         ,checkBox,setCheckBox,request,setRequest,demo,setDemo,isActiveHamburger,setActiveHamburger,isActiveHamburgerMenu,
         setActiveHamburgerMenu,openModal,setOpenModal,chooseZone,setChooseZone,other,setOther,
         checkBoxZone,setCheckBoxZone,state,setState,chooseIndustry,setChooseIndustry,setClickZone,
-        fileCompany,setFileCompany
+        fileCompany,setFileCompany,openAside,setOpenAside
 
     }
     return <CustomContext.Provider value={valueContext}>

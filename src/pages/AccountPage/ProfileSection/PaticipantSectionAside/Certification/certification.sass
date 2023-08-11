@@ -7,9 +7,12 @@
   &__wrapper
     display: flex
   &__h2
-    @include text(600,15px,133%,#237EE8)
+    @include text(600,22px,133%,#000)
     margin-bottom: 25px
   &__h3
+    @include text(600,15px,133%,#237EE8)
+    margin-bottom: 25px
+  &__span
     @include text(500,15px,133%,rgba(0, 0, 0, 0.60))
     margin-bottom: 25px
   &__left , &__right
@@ -18,3 +21,13 @@
     justify-content: space-between
     display: flex
     margin-top: 95px
+
+
+@media (max-width: 1201px)
+  .certification
+    &__h2
+      font-size: 17px
+    &__h3
+      font-size: 11px
+    &__span
+      font-size: 11px

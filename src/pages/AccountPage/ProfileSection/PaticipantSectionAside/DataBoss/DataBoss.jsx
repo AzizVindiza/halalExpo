@@ -45,7 +45,6 @@ const DataBoss = () => {
                         <h4 className="dataBoss__h4">Действующий на основании</h4>
                         <span className={'dataBoss__span'}>{item.effective}</span>
                     </div>
-                    <h4 className="dataBoss__h4">+Добавить номер телефона</h4>
                 </div>
                 <div className="dataBoss__right">
                     <h2 className="dataBoss__h2">Контактное лицо</h2>

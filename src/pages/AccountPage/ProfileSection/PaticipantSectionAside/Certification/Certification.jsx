@@ -13,16 +13,17 @@ const Certification = () => {
     const [modalCertification,setModalCertification] = useState(false)
     return (
         <div className={'certification'}>
-            <h2 className="certification__h2"></h2>
+            <h2 className="certification__h2">Свидетельство о юридической регистарации</h2>
             <div className="certification__wrapper">
                 <div className="certification__left">
-                    <h2 className="certification__h2">ИНН</h2>
-                    <h2 className="certification__h2">ОКПО</h2>
+                    <h2 className="certification__h3">ИНН</h2>
+                    <h2 className="certification__h3">ОГРН</h2>
+                    <h2 className="certification__h3">ОКПО</h2>
                 </div>
                 <div className="certification__right">
-                    <h3 className="certification__h3">{item.iin_inn}</h3>
-                    <h3 className="certification__h3">{item.orgn}</h3>
-                    <h3 className="certification__h3">{item.okpo}</h3>
+                    <h3 className="certification__span">{item.iin_inn}</h3>
+                    <h3 className="certification__span">{item.orgn}</h3>
+                    <h3 className="certification__span">{item.okpo}</h3>
                 </div>
             </div>
             <div className="certification__inner">
