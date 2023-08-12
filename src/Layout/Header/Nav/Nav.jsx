@@ -17,6 +17,8 @@ const Nav = () => {
     }
     return (
         <nav className="nav">
+            <div className={"nav__close"} onClick={()=>setActiveHamburger(false)}>X</div>
+
             <div className="container nav__container">
                 <Dropdown  item={t("header.dropDown",{returnObjects:true})}/>
                 <Dropdown  item={t("header.dropDown1",{returnObjects:true})} />
@@ -30,7 +32,7 @@ const Nav = () => {
             </div>
             <div className="nav__wrapper">
                 <Link onClick={activeRegister} className={'nav__user'} to={''}>Регистрация</Link>
-                {/*<Link onClick={activeLogin} className={'nav__user'} to={''}>Войти</Link>*/}
+                <Link onClick={activeLogin} className={'nav__user'} to={''}>Войти</Link>
             </div>
             <p className="nav__txt">
                 10.10.23 - 12.10.23 Старая площадь г.Бишкек

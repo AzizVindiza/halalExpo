@@ -1,8 +1,9 @@
 @import "src/sass/base/mixins"
 
 .B2bVisitor
-  width: 524px
-  height: 386px
+  width: 100%
+  max-width: 524px
+  height: fit-content
   background: #FFF
   &__row
     padding: 16px
@@ -95,3 +96,96 @@
     bottom: 30px
 
 
+@media (max-width: 1201px)
+  .B2bVisitor
+    width: 100%
+    max-width: 411px
+    &__span
+      font-size: 12px
+    &__date
+      font-size: 15px
+    &__status
+      svg
+        width: 14px
+        height: 14px
+    &__span2
+      font-size: 11px
+    &__h2
+      font-size: 18px
+    &__img
+      width: 54px
+      height: 54px
+    &__h3
+      font-size: 12px
+    &__span3
+      font-size: 14px
+    &__h4 ,&__span4
+      font-size: 11px
+    &__btn
+      width: 80%
+    &__icons
+      bottom: 40px
+      img
+        width: 31px
+        height: 31px
+
+
+@media (max-width: 1025px)
+  .B2bVisitor
+    max-width: 351px
+    width: 100%
+    &__span
+      font-size: 10px
+    &__date
+      font-size: 11px
+
+@media (max-width: 770px)
+  .B2bVisitor
+    max-width: 498px
+    width: 100%
+    &__span
+      font-size: 13px
+    &__date
+      font-size: 14px
+    &__img
+      width: 66px
+      height: 66px
+    &__span2
+      font-size: 14px
+    &__h2
+      font-size: 23px
+    &__h3
+      font-size: 16px
+    &__span3
+      font-size: 18px
+    &__h4 , &__span4
+      font-size: 14px
+    &__icons
+      img
+        width: 40px
+        height: 40px
+@media (max-width: 482px)
+  .B2bVisitor
+    max-width: 351px
+    width: 100%
+    &__span
+      font-size: 10px
+    &__date
+      font-size: 15px
+    &__status
+      img
+        width: 18px
+        height: 18px
+    &__img
+      width: 54px
+      height: 54px
+    &__span2
+      font-size: 11px
+    &__h2
+      font-size: 18px
+    &__h3
+      font-size: 12px
+    &__span3
+      font-size: 14px
+    &__h4, &__span4
+      font-size: 11px

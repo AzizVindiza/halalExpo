@@ -107,7 +107,6 @@ const B2BVisitor = () => {
                 </div>
                 <div className="B2bVisitor__icons">
                     <img src={chat} alt=""/>
-
                 </div>
 
 

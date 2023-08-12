@@ -73,7 +73,7 @@ const B2bParticipant = () => {
                 </div>
                 <div className="B2bParticipant__box">
                     <div className="B2bParticipant__flex">
-                        <h4 className="B2bParticipant___h4">
+                        <h4 className="B2bParticipant__h4">
                             Дата:
                         </h4>
                         <span className="B2bParticipant__span4">
@@ -81,7 +81,7 @@ const B2bParticipant = () => {
                         </span>
                     </div>
                     <div className="B2bParticipant__flex">
-                        <h4 className="B2bParticipant___h4">
+                        <h4 className="B2bParticipant__h4">
                             Время:
                         </h4>
                         <span className="B2bParticipant__span4">
@@ -101,13 +101,7 @@ const B2bParticipant = () => {
                     <img src={acc} alt=""/>
                     <img src={chat} alt=""/>
                 </div>
-
-
-
             </div>
-
-
-
         </div>
     );
 };
