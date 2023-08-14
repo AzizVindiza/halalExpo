@@ -2,24 +2,27 @@
 .account
   background: #F3F3F3
   &__wrapper
-    width: 67%
+    width: 100%
+    background: #F3F3F3
     padding: 15px 0 133px 0
 
 
   &__nav
-    padding: 35px 15px 0 25px
+    padding: 35px 15px 0 15px
     background: #ffffff
     height: 1300px
-    width: 28%
-
+    max-width: 300px
   &__container
     display: flex
     column-gap: 20px
-    flex-wrap: wrap
+
 
 
 @media (max-width: 482px)
   .account
+    &__container
+      display: block
+      column-gap: 0
     &__wrapper
       width: 100%
     &__nav
