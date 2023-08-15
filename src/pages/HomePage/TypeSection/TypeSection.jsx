@@ -18,6 +18,7 @@ import icon15 from './cube15.svg'
 import icon16 from './cube16.svg'
 import icon17 from './cube17.svg'
 
+import Rnew from "./Rnew.png"
 
 import right from './oval.png'
 import {motion} from "framer-motion";
@@ -233,7 +234,7 @@ import {motion} from "framer-motion";
                     </div>
                 </div>
                 <div className="type__right">
-                    <img src={right} alt=""/>
+                    <img src={Rnew} alt=""/>
                     {/*   <motion.div custom={1} variants={textMotion} className="type__row">*/}
                     {/*       <h4 className="type__h4">Компаний</h4>*/}
                     {/*       <div className="type__line type__line_middle"></div>*/}
