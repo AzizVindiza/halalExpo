@@ -4,15 +4,33 @@
   &__wrapper
     width: 100%
     background: #F3F3F3
-    padding: 15px 0 133px 0
+    padding: 30px 15px 133px 0
   &__nav
     padding: 35px 15px 0 15px
     background: #ffffff
     height: 1300px
-    max-width: 300px
+    min-width: 300px
   &__container
     display: flex
-    column-gap: 20px
+    column-gap: 40px
+
+@media (max-width: 1201px)
+  .account
+    &__container
+      column-gap: 30px
+
+@media (max-width: 1025px)
+  .account
+    &__container
+      column-gap: 20px
+    &__nav
+      min-width: 271px
+
+
+@media (max-width: 770px)
+  .account
+    &__nav
+      min-width: 227px
 
 @media (max-width: 482px)
   .account
@@ -21,6 +39,7 @@
       column-gap: 0
     &__wrapper
       width: 100%
+      padding: 0 0 100px 0
     &__nav
       display: none
       padding: 0
@@ -29,3 +48,4 @@
       height: fit-content
       &_active
         display: flex
+@media (max-width: 393px)
