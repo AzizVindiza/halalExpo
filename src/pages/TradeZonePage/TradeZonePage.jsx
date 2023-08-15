@@ -10,7 +10,7 @@ const TradeZonePage = () => {
         <>
             <TradeFirst/>
             <TradeSecond/>
-            {/*<TradeThird/>*/}
+            <TradeThird/>
             {/*<TradeFourth/>*/}
             {/*<div style={{width: "1440px"}}>*/}
             {/*    <img src={img} alt="fashion"/>*/}

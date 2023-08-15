@@ -8,8 +8,6 @@ import {useLocation} from "react-router-dom";
 const B2bParticipant = () => {
     const location = useLocation()
     console.log(location.pathname)
-
-
     return (
         <div className={"B2bParticipant"}>
             <div className="B2bParticipant__row">

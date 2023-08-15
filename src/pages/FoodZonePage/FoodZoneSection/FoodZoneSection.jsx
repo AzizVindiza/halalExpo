@@ -1,6 +1,9 @@
 import React from 'react';
 import "./FoodZoneSection.sass"
 import food from "./food.svg"
+import zones from "./zones.png"
+
+
 
 const FoodZoneSection = () => {
     return (
@@ -10,7 +13,7 @@ const FoodZoneSection = () => {
                     <h2 className="foodZone__h2">FOOD ZONE</h2>
                     <div className="foodZone__row">
                         <div className="foodZone__img">
-                            <img src={food} alt=""/>
+                            <img src={zones} alt=""/>
                         </div>
                         <div className="foodZone__text">
                             <p className="foodZone__p">Отправляйтесь в эту зону, когда захотите насладиться богатством халяльных блюд. Позвольте себе познакомиться с различными вкусами и кулинарными традициями, встретиться с представителями пищевой промышленности и сферы гостеприимства. Вы не останетесь равнодушны!</p>

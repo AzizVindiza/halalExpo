@@ -4,15 +4,14 @@
     display: flex
     justify-content: space-between
     align-items: center
+    flex-direction: column
 
   &__h2
     padding: 50px 0
     @include text(800,45px,133%,#000)
     text-align: center
 
-  &__img
-    width: 520px
-    height: 520px
+
   &__txt
     display: flex
     flex-direction: column
@@ -72,9 +71,7 @@
       font-size: 18px
 @media (max-width: 1025px)
   .trade-first
-    &__img
-      width: 468px
-      height: 468px
+
     &__h3
       font-size: 30px
     &__ul
@@ -109,9 +106,7 @@
 
 @media (max-width: 482px)
   .trade-first
-    &__img
-      width: 384px
-      height: 384px
+
     &__badges
       display: flex
       justify-content: space-around
@@ -121,9 +116,7 @@
   .trade-first
     &__h2
       font-size: 43px
-    &__img
-      width: 369px
-      height: 369px
+
     &__h3
       font-size: 26px
     &__ul

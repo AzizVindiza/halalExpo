@@ -1,7 +1,7 @@
 import React from 'react';
 import "./investSection.sass"
 import invest from "../img/logo.png"
-
+import zones from "../img/Zones.png"
 
 
 
@@ -14,7 +14,7 @@ const InvestSection = () => {
                     <h2 className="invest__h2">INVEST ZONE</h2>
                     <div className="invest__row">
                         <div className="invest__img">
-                            <img src={invest} alt=""/>
+                            <img src={zones} alt=""/>
                         </div>
                         <div className="invest__box">
                             <div className="invest__h3">50+ участников</div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import './TradeFirst.sass'
-import seats from './trade-first__seats.png'
+import seats from '../img/zones.png'
 import badge1 from './Frame 901.svg'
 import badge2 from './Frame 902.svg'
 import badge3 from './Frame 903.svg'

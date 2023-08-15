@@ -1,8 +1,6 @@
 import React from 'react';
 import "./fashionSection.sass"
-import fashion from "../img/logo.png";
-
-
+import fashion from "../img/zones.png";
 
 
 const FashionSection = () => {

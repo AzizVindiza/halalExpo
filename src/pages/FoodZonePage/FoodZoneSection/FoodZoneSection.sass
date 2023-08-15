@@ -8,6 +8,8 @@
   &__row
     display: flex
     justify-content: space-between
+    align-items: center
+    flex-direction: column
   &__p
     @include text(600,25px,133%,#000000)
     max-width: 590px
@@ -27,9 +29,7 @@
       max-width: 504px
 @media (max-width: 1025px)
   .foodZone
-    &__img
-      width: 431px
-      height: 431px
+
     &__p
       @include text(600,18px,133%,#000)
       max-width: 463px
@@ -40,9 +40,7 @@
 
 @media (max-width: 769px)
   .foodZone
-    &__img
-      width: 342px
-      height: 342px
+
     &__p
       @include text(600,15px,133%,#000)
       max-width: 303px
@@ -54,10 +52,7 @@
   .foodZone
     &__row
       flex-wrap: wrap
-    &__img
-      display: flex
-      margin: auto
-      padding-bottom: 38px
+
     &__p
       max-width: 430px
       margin-bottom: 38px
