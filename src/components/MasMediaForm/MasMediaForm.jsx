@@ -118,7 +118,6 @@ const MasMediaForm = () => {
                                 <RegistrationInput type={"text"} title={"Twitter"} name={"twitter"} notrequired={true}/>
                             </div>
                             <div className="registration__column">
-                                <ContactFace/>
                                 <RegistrationInput type={"email"}
                                                    title={"Адрес электронной почты (данная почта указывается как логин для входа)"}
                                                    name={"email"}/>

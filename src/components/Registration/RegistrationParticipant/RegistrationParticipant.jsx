@@ -21,6 +21,7 @@ const RegistrationParticipant = () => {
 
     const onSubmit = (data) => {
         const id = toast.loading("Please wait...")
+        console.log(data)
         try {
             data = {
                 ...data,
@@ -125,7 +126,7 @@ const RegistrationParticipant = () => {
                         <RegistrationInput type={"email"} title={"Адрес электронной почты компании"}
                                            name={"email_company"}
                                            notrequired={true}/>
-                        <RegistrationPhoneNumber title={'Контактный телефон компании'} name={'work_phone'}/>
+                        <RegistrationPhoneNumber title={'Контактный телефон компании'} name={'phone'}/>
                         <RegistrationInput type={"text"} title={"Сайт"} name={"site_company"} notrequired={true}/>
                         <RegistrationInput type={"text"} title={"Facebook"} name={"facebook"} notrequired={true}/>
                         <RegistrationInput type={"text"} title={"Инстаграм"} name={"instagram"} notrequired={true}/>
