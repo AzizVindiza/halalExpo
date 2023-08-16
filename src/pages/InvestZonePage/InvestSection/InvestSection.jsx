@@ -1,7 +1,6 @@
 import React from 'react';
 import "./investSection.sass"
-import invest from "../img/logo.png"
-import zones from "../img/Zones.png"
+import zones from "../img/zones.png"
 
 
 

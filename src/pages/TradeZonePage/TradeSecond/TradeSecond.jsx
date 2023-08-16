@@ -98,9 +98,9 @@ const TradeSecond = () => {
                     <img src={stand2} alt="stand sample"/>
                 </div>
                 <TradeStandType stand={gold}/>
-                <span className="trade-second__span">
-                    Стоимость участия с учетом раннего бронивания актуальна до 20 июля
-                </span>
+                {/*<span className="trade-second__span">*/}
+                {/*    Стоимость участия с учетом раннего бронивания актуальна до 20 июля*/}
+                {/*</span>*/}
 
 
             </div>
