@@ -19,7 +19,7 @@ const BankProfile = () => {
                     <h3 className="certification__h3">БИК</h3>
                 </div>
                 <div className="certification__right">
-                    <h3 className="certification__span">{item.name_bank}</h3>
+                    <h3 className="certification__span">{item.bank}</h3>
                     <h3 className="certification__span">{item.p_c}</h3>
                     <h3 className="certification__span">{item.bik}</h3>
                 </div>

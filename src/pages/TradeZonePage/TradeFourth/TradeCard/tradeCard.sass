@@ -3,7 +3,7 @@
 
 .tradeCard
   &__box
-    width: 250px
+    width: 300px
     text-align: center
     display: flex
     flex-direction: column
@@ -11,3 +11,26 @@
   &__img
     width: 200px
     height: 180px
+
+@media (max-width: 1201px)
+
+@media (max-width: 1025px)
+  .tradeCard
+    &__box
+      width: 250px
+    &__img
+      width: 180px
+      height: 160px
+@media (max-width: 770px)
+  .tradeCard
+    &__box
+      width: 200px
+
+    &__img
+      width: 150px
+      height: 130px
+
+@media (max-width: 394px)
+  .tradeCard
+    &__box
+      width: 176px

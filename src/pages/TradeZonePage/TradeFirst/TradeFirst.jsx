@@ -4,9 +4,9 @@ import seats from '../img/zones.png'
 import badge1 from './Frame 901.svg'
 import badge2 from './Frame 902.svg'
 import badge3 from './Frame 903.svg'
-import badge4 from './Frame 901.svg'
-import badge5 from './Frame 901.svg'
-import badge6 from './Frame 901.svg'
+import badge4 from './dis.svg'
+import badge5 from './buyers.svg'
+import badge6 from './people.svg'
 import circle from "./circle.png"
 import zones from "../img/zones.png"
 

@@ -22,7 +22,7 @@ const Certification = () => {
                 </div>
                 <div className="certification__right">
                     <h3 className="certification__span">{item.iin_inn}</h3>
-                    <h3 className="certification__span">{item.orgn}</h3>
+                    <h3 className="certification__span">{item.ogrn}</h3>
                     <h3 className="certification__span">{item.okpo}</h3>
                 </div>
             </div>
