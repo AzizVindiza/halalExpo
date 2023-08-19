@@ -136,7 +136,7 @@ const RegistrationParticipant = () => {
                     <div className="registration__column">
                         <h3 className="registration__h3">Свидетельство о юридической регистрации</h3>
                         <RegistrationInput type={'text'} name={'iin_inn'} title={'ИИН/ИНН(Серия патента компании)'}/>
-                        {/*<RegistrationInput type={'text'} name={'orgn'} title={'ОГРН/Номер патента'}/>*/}
+                        {/*<RegistrationInput type={'text'} name={'ogrn'} title={'ОГРН/Номер патента'}/>*/}
                         <RegistrationInput type={'text'} name={'okpo'} title={'ОКПО'}/>
                         <label className="registration__label">
                             <h3 className="registration__label-title">Загрузите устав компании (документ/pdf)</h3>

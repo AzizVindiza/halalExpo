@@ -63,7 +63,7 @@ const CounterSection = () => {
                 <div className="counterSection__dock">:</div>
                 <div className="counterSection__num">
                     <p className="counterSection__time">{timerSeconds < 10 ? "0" + timerSeconds : timerSeconds}</p>
-                    <p className="counterSection__txt">{t("firstSection.seconds")}</p>
+                    <p className="counterSection__txt">{t("firstSection.second")}</p>
                 </div>
             </div>
             <h3 className="counterSection__h3">{t("firstSection.time")}</h3>
