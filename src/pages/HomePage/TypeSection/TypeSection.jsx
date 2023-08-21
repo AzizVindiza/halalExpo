@@ -258,7 +258,7 @@ import {motion} from "framer-motion";
                     {/*   </motion.div>*/}
 
                     {/*<div className="type__bg">*/}
-                    {/*    <img src={bg} alt="circle"/>*/}
+                    {/*    <InvestorImg src={bg} alt="circle"/>*/}
                     {/*</div>*/}
                 </div>
             </div>

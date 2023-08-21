@@ -1,13 +1,13 @@
 import React from 'react';
 import "./CardMembers.sass"
 
-const CardMembers = ({members,svg}) => {
+const CardMembers = ({members}) => {
     return (
         <section className="cardMembers">
 
 
             <div className="cardMembers__img">
-                <img src={svg} alt=""/>
+                <img src={members.svg} alt=""/>
             </div>
 
 

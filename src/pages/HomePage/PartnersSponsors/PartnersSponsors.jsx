@@ -20,20 +20,20 @@ const PartnersSection = ({title}) => {
                     {/*</h2>*/}
                 </div>
                 {/*<div className="partners__card">*/}
-                {/*    <img className={'partners__img'}  src={minist} alt=""/>*/}
+                {/*    <InvestorImg className={'partners__img'}  src={minist} alt=""/>*/}
                 {/*    <h2 className="partners__h2">*/}
                 {/*        Министерства иностранных дел <br/>*/}
                 {/*        Кыргызской Республики*/}
                 {/*    </h2>*/}
                 {/*</div>*/}
                 {/*<div className="partners__card">*/}
-                {/*    <img className={'partners__img'}  src={sanarip} alt=""/>*/}
+                {/*    <InvestorImg className={'partners__img'}  src={sanarip} alt=""/>*/}
                 {/*    <h2 className="partners__h2">*/}
                 {/*        Санарип Кыргызстан*/}
                 {/*    </h2>*/}
                 {/*</div>*/}
                 {/*<div className="partners__card">*/}
-                {/*    <img className={'partners__img'}  src={halal} alt=""/>*/}
+                {/*    <InvestorImg className={'partners__img'}  src={halal} alt=""/>*/}
                 {/*    <h2 className="partners__h2">*/}
                 {/*        Государственный центр по <br/>*/}
                 {/*        развитию Халал-индустрии <br/>*/}
@@ -41,14 +41,14 @@ const PartnersSection = ({title}) => {
                 {/*    </h2>*/}
                 {/*</div>*/}
                 {/*<div className="partners__card">*/}
-                {/*    <img className={'partners__img'}  src={rating} alt=""/>*/}
+                {/*    <InvestorImg className={'partners__img'}  src={rating} alt=""/>*/}
                 {/*    <h2 className="partners__h2">*/}
                 {/*        Пресс-служба Минэкономики <br/>*/}
                 {/*        Кыргызской Республики*/}
                 {/*    </h2>*/}
                 {/*</div>*/}
                 {/*<div className="partners__card">*/}
-                {/*    <img className={'partners__img'}  src={educ} alt=""/>*/}
+                {/*    <InvestorImg className={'partners__img'}  src={educ} alt=""/>*/}
                 {/*    <h2 className="partners__h2">*/}
                 {/*        Министерства образования <br/>*/}
                 {/*        Кыргызской Республики*/}
@@ -56,26 +56,26 @@ const PartnersSection = ({title}) => {
                 {/*    </h2>*/}
                 {/*</div>*/}
                 {/*<div className="partners__card">*/}
-                {/*    <img className={'partners__img'}  src={viliage} alt=""/>*/}
+                {/*    <InvestorImg className={'partners__img'}  src={viliage} alt=""/>*/}
                 {/*    <h2 className="partners__h2">*/}
                 {/*        Министерства сельского хозяйства <br/>*/}
                 {/*        Кыргызской Республики*/}
                 {/*    </h2>*/}
                 {/*</div>*/}
                 {/*<div className="partners__card">*/}
-                {/*    <img className={'partners__img'} src={trans} alt=""/>*/}
+                {/*    <InvestorImg className={'partners__img'} src={trans} alt=""/>*/}
                 {/*    <h2 className="partners__h2">*/}
                 {/*        Министерства транспорта <br/>и коммуникаций*/}
                 {/*    </h2>*/}
                 {/*</div>*/}
                 {/*<div className="partners__card">*/}
-                {/*    <img className={'partners__img'} src={ordo} alt=""/>*/}
+                {/*    <InvestorImg className={'partners__img'} src={ordo} alt=""/>*/}
                 {/*    <h2 className="partners__h2">*/}
                 {/*        Культурный Центр «Рух Ордо» им.Ч.Айтматова*/}
                 {/*    </h2>*/}
                 {/*</div>*/}
                 {/*<div className="partners__card">*/}
-                {/*    <img className={'partners__img'} src={lalafo} alt="Lalafo"/>*/}
+                {/*    <InvestorImg className={'partners__img'} src={lalafo} alt="Lalafo"/>*/}
                 {/*    <h2 className="partners__h2">*/}
                 {/*        LaLaFo*/}
                 {/*    </h2>*/}

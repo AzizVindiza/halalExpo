@@ -50,7 +50,7 @@ const MapSection = () => {
                 </motion.div>
                 <motion.div custom={2} variants={cartMotion} className="map__wrapper">
                     {/*<div className="map__img">*/}
-                    {/*    <img src={img} alt=""/>*/}
+                    {/*    <InvestorImg src={InvestorImg} alt=""/>*/}
                     {/*</div>*/}
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.6298623364282!2d77.0929691154654!3d42.648006179168696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3884f13c35ead9dd%3A0x788e7fd907d170c8!2z0KDRg9GFINCe0YDQtNC-!5e0!3m2!1sru!2skg!4v1689075070223!5m2!1sru!2skg"

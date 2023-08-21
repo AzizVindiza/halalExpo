@@ -64,7 +64,7 @@ const StartSection = () => {
                         </a>
                         {/*<div className="start__block">*/}
                         {/*    <div className="start__svg">*/}
-                        {/*        <img src={svg6} alt="" className="start__img"/>*/}
+                        {/*        <InvestorImg src={svg6} alt="" className="start__img"/>*/}
                         {/*    </div>*/}
                         {/*    <h3 className="start__h3">halal zone</h3>*/}
                         {/*</div>*/}

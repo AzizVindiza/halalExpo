@@ -84,11 +84,11 @@ const ZoneCard = () => {
             </Swiper>
 
 
-            {/*<ZoneCardSmall item={t("zoneSection.tradeZone",{ returnObjects: true })} img={trade}/>*/}
-         {/*<ZoneCardSmall item={t("zoneSection.investZone",{ returnObjects: true })} img={invest}/>*/}
-         {/*<ZoneCardSmall item={t("zoneSection.fashionZone",{ returnObjects: true })} img={fashion}/>*/}
-         {/*<ZoneCardSmall item={t("zoneSection.foodZone",{ returnObjects: true })} img={food}/>*/}
-         {/*<ZoneCardSmall item={t("zoneSection.nationalZone",{ returnObjects: true })} img={pic}/>*/}
+            {/*<ZoneCardSmall item={t("zoneSection.tradeZone",{ returnObjects: true })} InvestorImg={trade}/>*/}
+         {/*<ZoneCardSmall item={t("zoneSection.investZone",{ returnObjects: true })} InvestorImg={invest}/>*/}
+         {/*<ZoneCardSmall item={t("zoneSection.fashionZone",{ returnObjects: true })} InvestorImg={fashion}/>*/}
+         {/*<ZoneCardSmall item={t("zoneSection.foodZone",{ returnObjects: true })} InvestorImg={food}/>*/}
+         {/*<ZoneCardSmall item={t("zoneSection.nationalZone",{ returnObjects: true })} InvestorImg={pic}/>*/}
 
         </section>
     );

@@ -63,7 +63,7 @@ const OrganizatorSection = () => {
             {/*>*/}
             {/*    <SwiperSlide>  <div className="organizatorSection__box">*/}
             {/*        <div className="organizatorSection__img">*/}
-            {/*            <img src={rebub} alt=""/>*/}
+            {/*            <InvestorImg src={rebub} alt=""/>*/}
             {/*        </div>*/}
             {/*        <span className="organizatorSection__span">*/}
             {/*                    Правительство <br/>*/}
@@ -72,7 +72,7 @@ const OrganizatorSection = () => {
             {/*    </div></SwiperSlide>*/}
             {/*    <SwiperSlide><div className="organizatorSection__box">*/}
             {/*        <div className="organizatorSection__img">*/}
-            {/*            <img src={ibic} alt=""/>*/}
+            {/*            <InvestorImg src={ibic} alt=""/>*/}
             {/*        </div>*/}
             {/*        <span className="organizatorSection__span">*/}
             {/*                    Корпорация IBIC*/}
@@ -81,7 +81,7 @@ const OrganizatorSection = () => {
             {/*    </div></SwiperSlide>*/}
             {/*    <SwiperSlide><div className="organizatorSection__box">*/}
             {/*        <div className="organizatorSection__img">*/}
-            {/*            <img src={trade} alt=""/>*/}
+            {/*            <InvestorImg src={trade} alt=""/>*/}
             {/*        </div>*/}
             {/*        <span className="organizatorSection__span">*/}
             {/*                    Торгово-промышленная палата Кыргызской Республики*/}
@@ -90,7 +90,7 @@ const OrganizatorSection = () => {
             {/*    </div></SwiperSlide>*/}
             {/*    <SwiperSlide><div className="organizatorSection__box">*/}
             {/*        <div className="organizatorSection__img">*/}
-            {/*            <img src={skyland} alt=""/>*/}
+            {/*            <InvestorImg src={skyland} alt=""/>*/}
             {/*        </div>*/}
             {/*        <span className="organizatorSection__span">*/}
             {/*                    SKYLAND*/}
@@ -99,7 +99,7 @@ const OrganizatorSection = () => {
             {/*    </div></SwiperSlide>*/}
             {/*    <SwiperSlide><div className="organizatorSection__box">*/}
             {/*        <div className="organizatorSection__img">*/}
-            {/*            <img src={adm} alt=""/>*/}
+            {/*            <InvestorImg src={adm} alt=""/>*/}
             {/*        </div>*/}
             {/*        <span className="organizatorSection__span">*/}
             {/*                    ADM GROUP*/}
@@ -108,7 +108,7 @@ const OrganizatorSection = () => {
             {/*    </div></SwiperSlide>*/}
             {/*    <SwiperSlide><div className="organizatorSection__box">*/}
             {/*        <div className="organizatorSection__img">*/}
-            {/*            <img src={avangard} alt=""/>*/}
+            {/*            <InvestorImg src={avangard} alt=""/>*/}
             {/*        </div>*/}
             {/*        <span className="organizatorSection__span">*/}
             {/*                   ODADMIRAL*/}
@@ -117,7 +117,7 @@ const OrganizatorSection = () => {
             {/*    </div></SwiperSlide>*/}
             {/*    <SwiperSlide><div className="organizatorSection__box">*/}
             {/*        <div className="organizatorSection__img">*/}
-            {/*            <img src={city} alt=""/>*/}
+            {/*            <InvestorImg src={city} alt=""/>*/}
             {/*        </div>*/}
             {/*        <span className="organizatorSection__span">*/}
             {/*                    CITY312*/}
@@ -126,7 +126,7 @@ const OrganizatorSection = () => {
             {/*    </div></SwiperSlide>*/}
             {/*    <SwiperSlide><div className="organizatorSection__box">*/}
             {/*        <div className="organizatorSection__img">*/}
-            {/*            <img src={smart} alt=""/>*/}
+            {/*            <InvestorImg src={smart} alt=""/>*/}
             {/*        </div>*/}
             {/*        <span className="organizatorSection__span">*/}
             {/*                    ITC SMART*/}

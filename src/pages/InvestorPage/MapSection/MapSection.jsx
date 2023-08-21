@@ -1,114 +1,122 @@
 import React from 'react';
 import pic from "./карта3 1.png"
 import "./mapsection.sass"
-import kz from "./kz.svg"
-import kg from "./kg.svg"
-import ru from "./ru.svg"
-import uz from "./uz.svg"
-import vel from "./Un.svg"
-import ku from "./kuveit.svg"
-import tu from "./turk.svg"
-import saud from "./saud.svg"
-import bah from "./bahr.svg"
-import katar from "./katar.svg"
-import egipet from "./egipet.svg"
-import oa from "./Oae.svg"
 import InvestorPeople from "../InvestorPeople/InvestorPeople";
 
 
 
 
+
+
 const MapSection = () => {
+
+    const arr1 = [
+        {
+            img: "../asserts/InvestorImg/country/uz.svg",
+            text: "Узбекистан"
+        },
+        {
+            img: "../asserts/InvestorImg/country/ru.svg",
+            text: "Россия"
+        },
+        {
+            img: "../asserts/InvestorImg/country/kg.svg",
+            text: "Кыргызстан"
+        },
+        {
+            img: "../asserts/InvestorImg/country/kz.svg",
+            text: "Казахстан"
+        }
+    ]
+    const arr2 = [
+        {
+            img: "../asserts/InvestorImg/country/Un.svg",
+            text: "Великобритания"
+        },
+        {
+            img: "../asserts/InvestorImg/country/turk.svg",
+            text: "Турция"
+        },
+        {
+            img: "../asserts/InvestorImg/country/kuveit.svg",
+            text: "Кувейт"
+        },
+        {
+            img: "../asserts/InvestorImg/country/saud.svg",
+            text: "Королевста Саудовской Аравии "
+        }
+    ]
+    const arr3 = [
+        {
+            img: "../asserts/InvestorImg/country/bahr.svg",
+            text: "Бахрейн"
+        },
+        {
+            img: "../asserts/InvestorImg/country/katar.svg",
+            text: "Катар"
+        },
+        {
+            img: "../asserts/InvestorImg/country/egipet.svg",
+            text: "Египет"
+        },
+        {
+            img: "../asserts/InvestorImg/country/Oae.svg",
+            text: "ОАЭ"
+        }
+    ]
+
+
+
     return (
         <section className={'mapSection'}>
             <div className="container mapSection__container">
                 <h2 className="mapSection__h2">инвесторы hit expo 2023</h2>
-
                 <div className="mapSection__block">
                     <div className="mapSection__row">
-                        <div className="mapSection__item">
-                            <div className="mapSection__img">
-                                <img src={uz} alt=""/>
-                            </div>
-                            <h3 className={"mapSection__h3"}>Узбекистан</h3>
-                        </div>
-                        <div className="mapSection__item">
-                            <div className="mapSection__img">
-                                <img src={ru} alt=""/>
-                            </div>
-                            <h3 className={"mapSection__h3"}>Россия</h3>
-                        </div>
-                        <div className="mapSection__item">
-                            <div className="mapSection__img">
-                                <img src={kg} alt=""/>
-                            </div>
-                            <h3 className={"mapSection__h3"}>Кыргызстан</h3>
-                        </div>
-                        <div className="mapSection__item">
-                            <div className="mapSection__img">
-                                <img src={kz} alt=""/>
-                            </div>
-                            <h3 className={"mapSection__h3"}>Казахстан</h3>
-                        </div>
+                        {
+                            arr1.map((item)=>(
+
+                                <div className="mapSection__item">
+                                    <div className="mapSection__img">
+                                        <img src={item.img} alt=""/>
+                                    </div>
+                                    <h3 className={"mapSection__h3"}>{item.text}</h3>
+                                </div>
+                            ))
+                        }
                     </div>
                     <div className="mapSection__row2">
                         <div className="mapSection__column">
-                            <div className="mapSection__item">
-                                <div className="mapSection__img">
-                                    <img src={vel} alt=""/>
-                                </div>
-                                <h3 className={"mapSection__h3"}>Великобритания</h3>
-                            </div>
-                            <div className="mapSection__item">
-                                <div className="mapSection__img">
-                                    <img src={tu} alt=""/>
-                                </div>
-                                <h3 className={"mapSection__h3"}>Турция</h3>
-                            </div>
-                            <div className="mapSection__item">
-                                <div className="mapSection__img">
-                                    <img src={ku} alt=""/>
-                                </div>
-                                <h3 className={"mapSection__h3"}>Кувейт</h3>
-                            </div>
-                            <div className="mapSection__item">
-                                <div className="mapSection__img">
-                                    <img src={saud} alt=""/>
-                                </div>
-                                <h3 className={"mapSection__h3"}>Королевста <br/> Саудовской Аравии </h3>
-                            </div>
+
+                            {
+                                arr2.map((item)=>(
+                                    <div className="mapSection__item">
+                                        <div className="mapSection__img">
+                                            <img src={item.img} alt=""/>
+                                        </div>
+                                        <h3 className={"mapSection__h3"}>{item.text}</h3>
+                                    </div>
+                                ))
+                            }
+
+
                         </div>
                         <div className="mapSection__column  ">
-                            <div className="mapSection__item">
-                                <div className="mapSection__img">
-                                    <img src={bah} alt=""/>
-                                </div>
-                                <h3 className={"mapSection__h3"}>Бахрейн</h3>
-                            </div>
-                            <div className="mapSection__item">
-                                <div className="mapSection__img">
-                                    <img src={katar} alt=""/>
-                                </div>
-                                <h3 className={"mapSection__h3"}>Катар</h3>
-                            </div>
-                            <div className="mapSection__item">
-                                <div className="mapSection__img">
-                                    <img src={egipet} alt=""/>
-                                </div>
-                                <h3 className={"mapSection__h3"}>Египет</h3>
-                            </div>
-                            <div className="mapSection__item">
-                                <div className="mapSection__img">
-                                    <img src={oa} alt=""/>
-                                </div>
-                                <h3 className={"mapSection__h3"}>ОАЭ</h3>
-                            </div>
+                            {
+                                arr3.map((item)=>(
+                                    <div className="mapSection__item">
+                                        <div className="mapSection__img">
+                                            <img src={item.img} alt=""/>
+                                        </div>
+                                        <h3 className={"mapSection__h3"}>{item.text}</h3>
+                                    </div>
+                                ))
+                            }
+
                         </div>
                     </div>
                     <img src={pic} alt="" className="mapSection__img2"/>
 
-
-                        {/*<img src={pic} alt="" className="mapSection__img"/>*/}
 
                 </div>
                 <InvestorPeople/>

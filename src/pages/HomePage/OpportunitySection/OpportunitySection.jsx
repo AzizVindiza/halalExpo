@@ -136,20 +136,20 @@ const OpportunitySection = () => {
 
                     {/*<div className="opportunity__box box tired">*/}
                     {/*    <div className="opportunity__img">*/}
-                    {/*        <img src={img} alt=""/>*/}
+                    {/*        <InvestorImg src={InvestorImg} alt=""/>*/}
                     {/*    </div>*/}
                     {/*    <h3 className="opportunity__h3 er">{t("opportunitySection.Government")}</h3>*/}
                     {/*</div>*/}
                     {/*<div className="opportunity__row">*/}
                     {/*    <div className="opportunity__box box">*/}
                     {/*        <div className="opportunity__img">*/}
-                    {/*            <img src={dis} alt=""/>*/}
+                    {/*            <InvestorImg src={dis} alt=""/>*/}
                     {/*        </div>*/}
                     {/*        <h3 className="opportunity__h3">{t("opportunitySection.Distributors")}</h3>*/}
                     {/*    </div>*/}
                     {/*    <div className="opportunity__box box">*/}
                     {/*        <div className="opportunity__img">*/}
-                    {/*            <img src={science} alt=""/>*/}
+                    {/*            <InvestorImg src={science} alt=""/>*/}
                     {/*        </div>*/}
                     {/*        <h3 className="opportunity__h3">{t("opportunitySection.Scientific")}</h3>*/}
                     {/*    </div>*/}
@@ -159,13 +159,13 @@ const OpportunitySection = () => {
                     {/*<div className="opportunity__row2">*/}
                     {/*    <div className="opportunity__box box">*/}
                     {/*        <div className="opportunity__img">*/}
-                    {/*            <img src={buy} alt=""/>*/}
+                    {/*            <InvestorImg src={buy} alt=""/>*/}
                     {/*        </div>*/}
                     {/*        <h3 className="opportunity__h3">{t("opportunitySection.Buyers")}</h3>*/}
                     {/*    </div>*/}
                     {/*    <div className="opportunity__box box">*/}
                     {/*        <div className="opportunity__img">*/}
-                    {/*            <img src={devel} alt=""/>*/}
+                    {/*            <InvestorImg src={devel} alt=""/>*/}
                     {/*        </div>*/}
                     {/*        <h3 className="opportunity__h3">{t("opportunitySection.Politicians")}</h3>*/}
                     {/*    </div>*/}
@@ -175,13 +175,13 @@ const OpportunitySection = () => {
                     {/*<div className="opportunity__row3">*/}
                     {/*    <div className="opportunity__box box">*/}
                     {/*        <div className="opportunity__img">*/}
-                    {/*            <img src={manu} alt=""/>*/}
+                    {/*            <InvestorImg src={manu} alt=""/>*/}
                     {/*        </div>*/}
                     {/*        <h3 className="opportunity__h3">{t("opportunitySection.Manufacturers")}</h3>*/}
                     {/*    </div>*/}
                     {/*    <div className="opportunity__box box">*/}
                     {/*        <div className="opportunity__img">*/}
-                    {/*            <img src={people} alt=""/>*/}
+                    {/*            <InvestorImg src={people} alt=""/>*/}
                     {/*        </div>*/}
                     {/*        <h3 className="opportunity__h3">{t("opportunitySection.Consumers")}</h3>*/}
                     {/*    </div>*/}
@@ -191,13 +191,13 @@ const OpportunitySection = () => {
                     {/*<div className="opportunity__row4">*/}
                     {/*    <div className="opportunity__box box">*/}
                     {/*        <div className="opportunity__img">*/}
-                    {/*            <img src={lider} alt=""/>*/}
+                    {/*            <InvestorImg src={lider} alt=""/>*/}
                     {/*        </div>*/}
                     {/*        <h3 className="opportunity__h3">{t("opportunitySection.Opinion")}</h3>*/}
                     {/*    </div>*/}
                     {/*    <div className="opportunity__box box">*/}
                     {/*        <div className="opportunity__img">*/}
-                    {/*            <img src={inv} alt=""/>*/}
+                    {/*            <InvestorImg src={inv} alt=""/>*/}
                     {/*        </div>*/}
                     {/*        <h3 className="opportunity__h3">{t("opportunitySection.Investors")}</h3>*/}
                     {/*    </div>*/}
@@ -207,13 +207,13 @@ const OpportunitySection = () => {
                     {/*<div className="opportunity__row5">*/}
                     {/*    <div className="opportunity__box box">*/}
                     {/*        <div className="opportunity__img">*/}
-                    {/*            <img src={novator} alt=""/>*/}
+                    {/*            <InvestorImg src={novator} alt=""/>*/}
                     {/*        </div>*/}
                     {/*        <h3 className="opportunity__h3">{t("opportunitySection.Innovators")}</h3>*/}
                     {/*    </div>*/}
                     {/*    <div className="opportunity__box box">*/}
                     {/*        <div className="opportunity__img">*/}
-                    {/*            <img src={sales} alt=""/>*/}
+                    {/*            <InvestorImg src={sales} alt=""/>*/}
                     {/*        </div>*/}
                     {/*        <h3 className="opportunity__h3">{t("opportunitySection.Retailers")}</h3>*/}
                     {/*    </div>*/}
@@ -228,7 +228,7 @@ const OpportunitySection = () => {
                 {/*    <div className="box ">*/}
                 {/*        <div className="six">*/}
                 {/*            <div className="six__img">*/}
-                {/*                <img src={buy} alt="box img"/>*/}
+                {/*                <InvestorImg src={buy} alt="box InvestorImg"/>*/}
                 {/*            </div>*/}
                 {/*        </div>*/}
                 {/*        <h3 className="six__h3">{t("opportunitySection.Buyers")}</h3>*/}
@@ -236,7 +236,7 @@ const OpportunitySection = () => {
                 {/*    <div className="box box__2">*/}
                 {/*        <div className="six">*/}
                 {/*            <div className="six__img">*/}
-                {/*                <img src={dis} alt="box img"/>*/}
+                {/*                <InvestorImg src={dis} alt="box InvestorImg"/>*/}
                 {/*            </div>*/}
                 {/*        </div>*/}
                 {/*        <h3 className="six__h3">{t("opportunitySection.Distributors")}</h3>*/}
@@ -244,7 +244,7 @@ const OpportunitySection = () => {
                 {/*    <div className="box box__1">*/}
                 {/*        <div className="six">*/}
                 {/*            <div className="six__img">*/}
-                {/*                <img src={img} alt="box img"/>*/}
+                {/*                <InvestorImg src={InvestorImg} alt="box InvestorImg"/>*/}
                 {/*            </div>*/}
                 {/*        </div>*/}
                 {/*        <h3 className="six__h3">{t("opportunitySection.Government")}</h3>*/}
@@ -252,7 +252,7 @@ const OpportunitySection = () => {
                 {/*    <div className="box box__2">*/}
                 {/*        <div className="six">*/}
                 {/*            <div className="six__img">*/}
-                {/*                <img src={science} alt="box img"/>*/}
+                {/*                <InvestorImg src={science} alt="box InvestorImg"/>*/}
                 {/*            </div>*/}
                 {/*        </div>*/}
                 {/*        <h3 className="six__h3">{t("opportunitySection.Scientific")}</h3>*/}
@@ -260,7 +260,7 @@ const OpportunitySection = () => {
                 {/*    <div className="box">*/}
                 {/*        <div className="six">*/}
                 {/*            <div className="six__img">*/}
-                {/*                <img src={devel} alt="box img"/>*/}
+                {/*                <InvestorImg src={devel} alt="box InvestorImg"/>*/}
                 {/*            </div>*/}
                 {/*        </div>*/}
                 {/*        <h3 className="six__h3">{t("opportunitySection.Politicians")}</h3>*/}
@@ -271,7 +271,7 @@ const OpportunitySection = () => {
                 {/*    <div className="box ">*/}
                 {/*        <div className="six">*/}
                 {/*            <div className="six__img">*/}
-                {/*                <img src={manu} alt="box img"/>*/}
+                {/*                <InvestorImg src={manu} alt="box InvestorImg"/>*/}
                 {/*            </div>*/}
                 {/*        </div>*/}
                 {/*        <h3 className="six__h3">{t("opportunitySection.Consumers")}</h3>*/}
@@ -279,7 +279,7 @@ const OpportunitySection = () => {
                 {/*    <div className="box box__1">*/}
                 {/*        <div className="six">*/}
                 {/*            <div className="six__img">*/}
-                {/*                <img src={lider} alt="box img"/>*/}
+                {/*                <InvestorImg src={lider} alt="box InvestorImg"/>*/}
                 {/*            </div>*/}
                 {/*        </div>*/}
                 {/*        <h3 className="six__h3">{t("opportunitySection.Opinion")}</h3>*/}
@@ -287,7 +287,7 @@ const OpportunitySection = () => {
                 {/*    <div className="box box__3">*/}
                 {/*        <div className="six">*/}
                 {/*            <div className="six__img">*/}
-                {/*                <img src={novator} alt="box img"/>*/}
+                {/*                <InvestorImg src={novator} alt="box InvestorImg"/>*/}
                 {/*            </div>*/}
                 {/*        </div>*/}
                 {/*        <h3 className="six__h3">{t("opportunitySection.Innovators")}</h3>*/}
@@ -295,7 +295,7 @@ const OpportunitySection = () => {
                 {/*    <div className="box box__4">*/}
                 {/*        <div className="six">*/}
                 {/*            <div className="six__img">*/}
-                {/*                <img src={sales} alt="box img"/>*/}
+                {/*                <InvestorImg src={sales} alt="box InvestorImg"/>*/}
                 {/*            </div>*/}
                 {/*        </div>*/}
                 {/*        <h3 className="six__h3">{t("opportunitySection.Retailers")}</h3>*/}
@@ -303,7 +303,7 @@ const OpportunitySection = () => {
                 {/*    <div className="box box__2">*/}
                 {/*        <div className="six">*/}
                 {/*            <div className="six__img">*/}
-                {/*                <img src={inv} alt="box img"/>*/}
+                {/*                <InvestorImg src={inv} alt="box InvestorImg"/>*/}
                 {/*            </div>*/}
                 {/*        </div>*/}
                 {/*        <h3 className="six__h3">{t("opportunitySection.Innovators")}</h3>*/}
@@ -311,14 +311,14 @@ const OpportunitySection = () => {
                 {/*    <div className="box">*/}
                 {/*        <div className="six">*/}
                 {/*            <div className="six__img">*/}
-                {/*                <img src={people} alt="box img"/>*/}
+                {/*                <InvestorImg src={people} alt="box InvestorImg"/>*/}
                 {/*            </div>*/}
                 {/*        </div>*/}
                 {/*        <h3 className="six__h3">{t("opportunitySection.Consumers")}</h3>*/}
                 {/*    </div>*/}
                 {/*</div>*/}
                 {/*<div className="six-blue">*/}
-                {/*    <img src={six} alt="polygon"/>*/}
+                {/*    <InvestorImg src={six} alt="polygon"/>*/}
                 {/*    <p className="six__title">{t("opportunitySection.title")}</p>*/}
                 {/*</div>*/}
 

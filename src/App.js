@@ -59,12 +59,10 @@ import B2BCard from "./pages/AccountPage/B2b/B2bCard/B2bCard";
 import NewsMore from "./pages/NewsPage/NewsMore/NewsMore";
 import Settings from "./pages/AccountPage/Settings/Settings";
 import InfoSettings from "./pages/AccountPage/Settings/InfoSettings/InfoSettings";
-
 import AdvantagesPage from "./pages/AdvantagesPage/AdvantagesPage";
 import PasswordSettings from "./pages/AccountPage/Settings/PasswordSettings/PasswordSettings";
 import NotificationSettings from "./pages/AccountPage/Settings/NotificationSettings/NotificationSettings";
 import ChatMessage from "./pages/AccountPage/Chat/ChatMessage/ChatMessage";
-
 
 
 
@@ -94,7 +92,6 @@ const router = createBrowserRouter(
                 <Route path="members" element={<MembersPage/>}/>
                 <Route path="members" element={<MembersPage/>}/>
                 {/*<Route path="hotel" element={<Hotel/>}/>*/}
-                {/*<Route path="stand" element={<StandPage/>}/>*/}
                 <Route path="mass" element={<MassPage/>}/>
                 {/*<Route path="location" element={<LocationPage/>}/>*/}
                 <Route path="trade" element={<TradePage/>}/>
