@@ -107,7 +107,7 @@ const router = createBrowserRouter(
                             <Route path={'profile'} element={<ProfileSection/>}/>
                             <Route path={'stand'} element={<Ticket/>}/>
                             <Route path={'reserve'} element={<Participant/>}/>
-                            <Route path={'tickets'} element={<NotFoundPage/>}/>
+                            <Route path={'tickets'} element={<UserTicket/>}/>
                             <Route path={'document'} element={<NotFoundPage/>}/>
                             <Route  path={'meet'} element={<B2b/>}>
                                 <Route path={'inbox2'} element={<B2BCard/>}/>

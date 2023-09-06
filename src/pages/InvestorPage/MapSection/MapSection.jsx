@@ -10,6 +10,7 @@ import InvestorPeople from "../InvestorPeople/InvestorPeople";
 
 const MapSection = () => {
 
+
     const arr1 = [
         {
             img: "../asserts/InvestorImg/country/uz.svg",
@@ -73,6 +74,7 @@ const MapSection = () => {
                 <h2 className="mapSection__h2">инвесторы hit expo 2023</h2>
                 <div className="mapSection__block">
                     <div className="mapSection__row">
+
                         {
                             arr1.map((item)=>(
 
@@ -84,6 +86,7 @@ const MapSection = () => {
                                 </div>
                             ))
                         }
+
                     </div>
                     <div className="mapSection__row2">
                         <div className="mapSection__column">
@@ -98,7 +101,6 @@ const MapSection = () => {
                                     </div>
                                 ))
                             }
-
 
                         </div>
                         <div className="mapSection__column  ">
